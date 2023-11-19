@@ -24,13 +24,15 @@ def printableSolver(solver):
     sorted_ref = dict(sorted(ref.items()))
     return sorted_ref
 
-def printAllSolutions(s, lastStmt):
+def printAllSolutions(s, lastStmt, writer):
     solver = Solver()
     solver.add(s.assertions())
     numSols = 0
     while solver.check()==sat:
         numSols += 1
         model = printableSolver(solver)
+        writer.write(str(model))
+        writer.write("\n")
         print(model)
         F = []
         for i in range(0, lastStmt):
@@ -77,8 +79,9 @@ def parseTrace(file):
 
     return trace
 
-def addConstraints(fileName):
-    trace = parseTrace(fileName)
+def addConstraints(inputFileName, outputFileName):
+    trace = parseTrace(inputFileName)
+    writer = open(outputFileName, 'w+')
     # print(trace)
     solver = Solver()
     firstStmt = trace[0][0]
@@ -149,10 +152,10 @@ def addConstraints(fileName):
     """
     Printing all posible solutions:
     """
-    blockPrint()
-    numSols = printAllSolutions(solver, lastStmt)
-    enablePrint()
-    print("\nNumber of solutions without PM Constraints:", numSols)
+    # blockPrint()
+    # numSols = printAllSolutions(solver, lastStmt, writer)
+    # enablePrint()
+    # print("\nNumber of solutions without PM Constraints:", numSols)
     
     """
     Concurrency constraints added. 
@@ -176,12 +179,14 @@ def addConstraints(fileName):
     solver.add((Not(And(persist))))
 
     print("\nThe following executions violate PM Properties:")
-    numSols = printAllSolutions(solver, lastStmt)
+    numSols = printAllSolutions(solver, lastStmt, writer)
     print(numSols, " solutions violate PM properties.\n")
+    writer.close()
 
 if __name__ == "__main__":
-    fileName = "../inputFiles/trace-1.txt"
-    addConstraints(fileName)
+    inputFileName = "../inputFiles/"+sys.argv[1]         #"trace-1.txt"
+    outputFileName = "../outputFiles/"+sys.argv[1]   
+    addConstraints(inputFileName, outputFileName)
 
 """
 Conceptual question: 
