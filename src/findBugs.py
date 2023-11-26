@@ -79,32 +79,8 @@ def parseTrace(file):
 
     return trace
 
-def addConstraints(inputFileName, outputFileName):
-    trace = parseTrace(inputFileName)
-    writer = open(outputFileName, 'w+')
-    # print(trace)
-    solver = Solver()
-    firstStmt = trace[0][0]
-    lastStmt = trace[-1][0]
-
-    persist, concurrent, sequential = [], [], [] 
-    """
-    Stores PM, concurrency and sequenctial constrains respectively. At any point in the program, 
-    print these lists to find out which constraints have been added and what is their purpose.
-    """
-
-    constraintStmt = []
-    c = 1
-
-    firstTrace = []
-    secondTrace = []
-
-    for t in trace:
-        if t[-1]==1:
-            firstTrace.append(t[0])
-        else:
-            secondTrace.append(t[0])
-    
+def addSequentialConstraints(firstTrace, secondTrace, firstStmt, lastStmt, trace):
+    constraintStmt, sequential = [], []
 
     for i in range(0, len(firstTrace)):
         var = Int("var_"+str(firstTrace[i]))
@@ -132,13 +108,10 @@ def addConstraints(inputFileName, outputFileName):
                     sequential.append(Int("var_"+str(i+1))<Int("var_"+str(j+1)))
                     # Theses are constraints to maintain property of fences
 
-    solver.add(sequential)
-    """
-    At this point, sequential constraints, 
-    i.e constraints of program statements of a single thread have been added.
-    Now, adding concurrency constraints. 
-    """
+    return sequential, constraintStmt
 
+def addConcurrencyConstraints(trace):
+    concurrent = []
     for i in range(0, len(trace)):
         if trace[i][1]==100:
             for j in range(i-1, 0, -1):
@@ -147,20 +120,9 @@ def addConstraints(inputFileName, outputFileName):
                     # print("Adding ", Int("var_"+str(i+1))>Int("var_"+str(j+1)))
                     break
     
-    solver.add(concurrent)
+    return concurrent
 
-    """
-    Printing all posible solutions:
-    """
-    # blockPrint()
-    # numSols = printAllSolutions(solver, lastStmt, writer)
-    # enablePrint()
-    # print("\nNumber of solutions without PM Constraints:", numSols)
-    
-    """
-    Concurrency constraints added. 
-    Now adding PM constraints. PM constraints have to be negated and then added to the solver to get counter examples.
-    """
+def addPersistencyConstraints(trace, lastStmt):
     persist = []
 
     for i in range(lastStmt):
@@ -174,7 +136,48 @@ def addConstraints(inputFileName, outputFileName):
                         if trace[k][1]==102 and trace[k][2]==trace[i][2]: 
                             #If a clflush is found, we add constraint that the clflush should always take place before the load
                             persist.append(Int("var_"+str(j+1))>Int("var_"+str(k+1)))
+    return persist
 
+def addConstraints(inputFileName, outputFileName):
+    trace = parseTrace(inputFileName)
+    writer = open(outputFileName, 'w+')
+    # print(trace)
+    solver = Solver()
+    firstStmt = trace[0][0]
+    lastStmt = trace[-1][0]
+
+    """
+    Stores PM, concurrency and sequenctial constrains respectively. At any point in the program, 
+    print these lists to find out which constraints have been added and what is their purpose.
+    """
+
+    c = 1
+    firstTrace = []
+    secondTrace = []
+
+    for t in trace:
+        if t[-1]==1:
+            firstTrace.append(t[0])
+        else:
+            secondTrace.append(t[0])
+
+    sequential, constraintStmt = addSequentialConstraints(firstTrace, secondTrace, firstStmt, lastStmt, trace)
+
+    solver.add(sequential)
+    """
+    At this point, sequential constraints, 
+    i.e constraints of program statements of a single thread have been added.
+    Now, adding concurrency constraints. 
+    """
+    concurrent = addConcurrencyConstraints(trace)
+    solver.add(concurrent)
+
+    """
+    Concurrency constraints added. 
+    Now adding PM constraints. PM constraints have to be negated and then added to the solver to get counter examples.
+    """
+    persist = addPersistencyConstraints(trace, lastStmt)
+    
     print("PM Constraints are: ", persist)
     solver.add((Not(And(persist))))
 
