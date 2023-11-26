@@ -177,7 +177,20 @@ def addConstraints(inputFileName, outputFileName):
     Now adding PM constraints. PM constraints have to be negated and then added to the solver to get counter examples.
     """
     persist = addPersistencyConstraints(trace, lastStmt)
+
+    s2 = Solver()
+    s2.add(sequential)
+    s2.add(concurrent)
     
+    print("PM Constraints are: ", persist)
+    s2.add(persist)
+
+    print("\nThe following executions satisfy PM Properties:")
+    numSols = printAllSolutions(s2, lastStmt, writer)
+    print(numSols, " solutions violate PM properties.\n")
+    # writer.close()
+
+
     print("PM Constraints are: ", persist)
     solver.add((Not(And(persist))))
 
