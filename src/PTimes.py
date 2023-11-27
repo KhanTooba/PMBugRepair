@@ -114,7 +114,7 @@ def findPCRanges(outputFileName, trace):
     for c in PCs:
         print(c)
     
-    return PCs, trace
+    return PCs
 
 def findLowerUpperBounds(outputFileName, trace):
     PC_lower, PC_upper = [], []
@@ -142,6 +142,9 @@ def findLowerUpperBounds(outputFileName, trace):
             PC_upper.append(Int("Upper_"+str(stmt+1))>=Int("Stmt_"+str(lower)))
         else:
             PC_upper.append(Int("Upper_"+str(stmt+1))>=999)
+        
+        PC_lower.append(Int("lower_"+str(stmt+1))>=-2)
+        PC_upper.append(Int("Upper_"+str(stmt+1))<=1000)
     
     for i in range(len(PC_lower)):
         print(PC_lower[i], PC_upper[i])
@@ -162,14 +165,42 @@ def durability(outputFileName, trace):
 
 def crashConsistency(outputFileName, trace):
     crash = []
+    for stmt in range(0, len(trace)):
+        if(trace[stmt][1]==101):
+            for j in range(stmt+1, len(trace)):
+                if(trace[j][1]==101 and trace[stmt][2]==trace[j][2]):
+                    break
+                if(trace[j][1]==100 and trace[stmt][2]==trace[j][3]):
+                    crash.append(Not(Int("upper_"+str(stmt+1))<Int("lower_"+str(j+1))))
+    print("Printing crash consistency constraints:")
+    for c in crash:
+        print(c)
     return crash
 
 def constructAllConstraints(inputFileName, outputFileName):
+    writer = open(outputFileName, 'w+')
     trace = parseTrace(inputFileName)
     PCs = findPCRanges(outputFileName, trace)
     PC_lower, PC_upper = findLowerUpperBounds(outputFileName, trace)
     durable = durability(outputFileName, trace)
     crash = crashConsistency(outputFileName, trace)
+
+    solver = Solver()
+    solver.add(PCs)
+    solver.add(PC_lower)
+    solver.add(PC_upper)
+    solver.add(durable)
+    solver.add(crash)
+
+    print("\nThe following executions satisfy PM Properties:")
+
+    if solver.check()==sat:
+        print(solver.model())
+
+    else:
+        print("UNSAT")
+    # numSols = printAllSolutions(solver, 7, writer)
+    # print(numSols, " solutions violate PM properties.\n")
 
 if __name__ == "__main__":
     inputFileName = "../inputFiles/"+sys.argv[1]         #"trace-1.txt"
