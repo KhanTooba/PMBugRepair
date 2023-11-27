@@ -5,4 +5,3 @@
 [SFENCE, 0, 0, 1]
 [LOAD, #t0, x, 2]
 [STORE, y, #t0, 2]
-[CLFLUSH, y, 0, 2]

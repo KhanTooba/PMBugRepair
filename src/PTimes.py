@@ -143,8 +143,8 @@ def findLowerUpperBounds(outputFileName, trace):
         else:
             PC_upper.append(Int("Upper_"+str(stmt+1))>=999)
         
-        PC_lower.append(Int("lower_"+str(stmt+1))>=-2)
-        PC_upper.append(Int("Upper_"+str(stmt+1))<=1000)
+        PC_lower.append(Int("lower_"+str(stmt+1))>=-1)
+        PC_upper.append(Int("Upper_"+str(stmt+1))<=999)
     
     for i in range(len(PC_lower)):
         print(PC_lower[i], PC_upper[i])
@@ -155,7 +155,7 @@ def durability(outputFileName, trace):
     durable = []
     for stmt in range(0, len(trace)):
         if(trace[stmt][1]==101):
-            durable.append(Not(Int("lower_"+str(stmt+1))==-1))
+            durable.append(Int("lower_"+str(stmt+1))==-1)
     
     print("Durability constraints:")
     for d in durable:
@@ -171,7 +171,7 @@ def crashConsistency(outputFileName, trace):
                 if(trace[j][1]==101 and trace[stmt][2]==trace[j][2]):
                     break
                 if(trace[j][1]==100 and trace[stmt][2]==trace[j][3]):
-                    crash.append(Not(Int("upper_"+str(stmt+1))<Int("lower_"+str(j+1))))
+                    crash.append(Not(Int("Upper_"+str(stmt+1))<Int("lower_"+str(j+1))))
     print("Printing crash consistency constraints:")
     for c in crash:
         print(c)
@@ -184,27 +184,85 @@ def constructAllConstraints(inputFileName, outputFileName):
     PC_lower, PC_upper = findLowerUpperBounds(outputFileName, trace)
     durable = durability(outputFileName, trace)
     crash = crashConsistency(outputFileName, trace)
+    violatedConstraints = []
 
     solver = Solver()
     solver.add(PCs)
     solver.add(PC_lower)
     solver.add(PC_upper)
-    solver.add(durable)
-    solver.add(crash)
-
-    print("\nThe following executions satisfy PM Properties:")
-
+    for c in crash:
+        durable.append(c)
+    solver.add(Or(durable))
+    # solver.add(crash)
+    print(solver)
+    print("\nThe following execution violates PM Properties:")
+    # print(solver)
     if solver.check()==sat:
-        print(solver.model())
+        model = solver.model()
+        print(model)
+        print("\nPrinting PM constraints which could be violated:")
+        for a in solver.assertions():
+            if is_or(a):
+                for child in a.children():
+                    print(child)
+                    if is_true(model.eval(child)):
+                        # print("True",child)
+                        violatedConstraints.append(child)
+
 
     else:
         print("UNSAT")
+    
+    print("\nPrinting constraints which were violated:")
+    print(violatedConstraints)
     # numSols = printAllSolutions(solver, 7, writer)
     # print(numSols, " solutions violate PM properties.\n")
 
+def constructAllConstraintsUNSATCoreWay(inputFileName, outputFileName):
+    writer = open(outputFileName, 'w+')
+    trace = parseTrace(inputFileName)
+    PCs = findPCRanges(outputFileName, trace)
+    PC_lower, PC_upper = findLowerUpperBounds(outputFileName, trace)
+    durable = durability(outputFileName, trace)
+    crash = crashConsistency(outputFileName, trace)
+
+    s = Solver()
+    s.set(unsat_core=True)
+    counter = 1
+    for constr in PCs:
+        s.assert_and_track(constr, 'a'+str(counter))
+        counter += 1
+    
+    for constr in PC_upper:
+        s.assert_and_track(constr, 'a'+str(counter))
+        counter += 1
+    
+    for constr in PC_lower:
+        s.assert_and_track(constr, 'a'+str(counter))
+        counter += 1
+
+    # for constr in durable:
+    #     s.assert_and_track(constr, 'a'+str(counter))
+    #     counter += 1
+    
+    for constr in crash:
+        s.assert_and_track(constr, 'a'+str(counter))
+        counter += 1
+    
+    result = s.check()
+    print(s)
+    print(result)
+    print(type(s))
+    if result == unsat : 
+        c = s.unsat_core()
+        print(c)
+        # for x in c:
+        #     print(s.model()[x])
+    
 if __name__ == "__main__":
     inputFileName = "../inputFiles/"+sys.argv[1]         #"trace-1.txt"
     outputFileName = "../outputFiles/"+sys.argv[1]   
     # addConstraints(inputFileName, outputFileName)
     constructAllConstraints(inputFileName, outputFileName)
+    # constructAllConstraintsUNSATCoreWay(inputFileName, outputFileName)
 
