@@ -9,6 +9,7 @@ STORE   101
 CLFLUSH 102
 SFENCE  103
 """
+num_threads = 2
 
 def blockPrint():
     sys.stdout = open(os.devnull, 'w')
@@ -167,8 +168,14 @@ def durability(writer, trace):
 def crashConsistency(writer, trace):
     crash = []
     for stmt in range(0, len(trace)):
+        flag = 0
+        t_id = trace[stmt][-1]
         if(trace[stmt][1]==101):
             for j in range(stmt+1, len(trace)):
+                if(trace[j][1]==103):
+                    flag = 1
+                if(t_id == trace[j][-1] and flag==1):
+                    continue
                 if(trace[j][1]==101 and trace[stmt][2]==trace[j][2]):
                     break
                 if(trace[j][1]==100 and trace[stmt][2]==trace[j][3]):
@@ -192,6 +199,50 @@ def makeAnotherSolver(solver, constr):
                 
     return s
 
+def comprehendViolation(constr, writer, trace):
+
+    if "<" in str(constr):
+        stmts_by_trace = []
+        for i in range(num_threads):
+            stmts_by_trace.append([])
+
+        for t in trace:
+            t_id = t[-1]
+            stmt = t[0]
+            stmts_by_trace[t_id-1].append(stmt)
+        # print(stmts_by_trace)
+
+        stmts_1 = int(str(constr).split("_")[1].split("<")[0])
+        stmts_2 = int(str(constr).split("_")[2].split(")")[0])
+
+        # print(constr, stmts_1, stmts_2)
+
+        # print(constr)
+        t_1, t_2 = 0, 0
+        for i in range(num_threads):
+            if stmts_1 in stmts_by_trace[i]:
+                t_1 = i
+            if stmts_2 in stmts_by_trace[i]:
+                t_2 = i
+
+        if t_1==t_2:
+            writer.write("PM Assesrtion violated: Intra thread crash consistency.")
+            writer.write("\nFence needs to be asserted for STORE of "+str(trace[stmts_1-1][2])+" at Statement: "+str(stmts_1)+" in Thread:"+str(i+1))
+            writer.write("\nTrace element: "+str(trace[stmts_1-1])+"\n")
+        
+        else:
+            writer.write("PM Assesrtion violated: Inter thread crash consistency.")
+            writer.write("\nWait and Signal need to be asserted \nbefore STORE of "+
+                    str(trace[stmts_1-1][2])+" at Statement: "+str(stmts_1)+" in Thread:"+str(t_1)+
+                    " and\nbefore LOAD of "+str(trace[stmts_2-1][3])+
+                    " at Statement: "+str(stmts_2)+" in Thread:"+str(t_2)+" respectively.")
+            writer.write("\nTrace elements: "+str(trace[stmts_1])+"\t"+str(trace[stmts_2])+"\n")
+
+    else:
+        stmt = int(str(constr).split("_")[1].split(" ")[0])
+        trace_element = trace[stmt-1]
+        writer.write("PM Assertion violated: Durability.\nNo clflushopt found for STORE of '"+str(trace_element[2])+"' at Statement: "+str(stmt)+"\nTrace element: "+str(trace_element)+"\n")
+
 def constructAllConstraints(inputFileName, outputFileName):
     writer = open(outputFileName, 'w+')
     trace = parseTrace(inputFileName)
@@ -211,13 +262,15 @@ def constructAllConstraints(inputFileName, outputFileName):
 
     exec = 0
     while solver.check()==sat:
-        exec += 1
         model = solver.model()
         for a in solver.assertions():
             if is_or(a):
                 for child in a.children():
                     if is_true(model.eval(child)):
-                        writer.write("\n\nViolation found! \nConstraint violated:"+str(child)+"\nExecution trace:\n")
+                        writer.write("\n\n\nViolation found! \nConstraint violated:"+str(child)+"\n")
+                        comprehendViolation(child, writer, trace)
+                        writer.write("Execution trace:\n")
+                        exec += 1
                         writer.write(str(model))
                         solver = makeAnotherSolver(solver, child)
                         # print(solver)
@@ -271,4 +324,3 @@ if __name__ == "__main__":
     # addConstraints(inputFileName, outputFileName)
     constructAllConstraints(inputFileName, outputFileName)
     # constructAllConstraintsUNSATCoreWay(inputFileName, outputFileName)
-
