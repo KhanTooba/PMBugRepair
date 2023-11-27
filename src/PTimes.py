@@ -79,7 +79,7 @@ def parseTrace(file):
 
     return trace
 
-def findPCRanges(outputFileName, trace):
+def findPCRanges(writer, trace):
     pc = 1
     current_thread = 1
     lower, upper = 1, 1
@@ -110,13 +110,13 @@ def findPCRanges(outputFileName, trace):
                 #print(j, "\t< PC_", stmt, "\t", non_flush_PC)
                 PCs.append(Int("Stmt_"+str(j))<=Int("Stmt_"+str(stmt)))
                 
-        
+    writer.write("Printing the range of Program counters each statement can take:\n")
     for c in PCs:
-        print(c)
+        writer.write(str(c)+"\n")
     
     return PCs
 
-def findLowerUpperBounds(outputFileName, trace):
+def findLowerUpperBounds(writer, trace):
     PC_lower, PC_upper = [], []
     constraints = []
     for stmt in range(0, len(trace)):
@@ -146,24 +146,25 @@ def findLowerUpperBounds(outputFileName, trace):
         PC_lower.append(Int("lower_"+str(stmt+1))>=-1)
         PC_upper.append(Int("Upper_"+str(stmt+1))<=999)
     
+    writer.write("\nPrinting constraints on Persistent Times upper and lower bounds:\n")
     for i in range(len(PC_lower)):
-        print(PC_lower[i], PC_upper[i])
+        writer.write(str(PC_lower[i])+"\t"+str(PC_upper[i])+"\n")
     
     return PC_lower, PC_upper
 
-def durability(outputFileName, trace):
+def durability(writer, trace):
     durable = []
     for stmt in range(0, len(trace)):
         if(trace[stmt][1]==101):
             durable.append(Int("lower_"+str(stmt+1))==-1)
     
-    print("Durability constraints:")
+    writer.write("\nDurability constraints:\n")
     for d in durable:
-        print(d)
+        writer.write(str(d)+"\n")
     
     return durable
 
-def crashConsistency(outputFileName, trace):
+def crashConsistency(writer, trace):
     crash = []
     for stmt in range(0, len(trace)):
         if(trace[stmt][1]==101):
@@ -172,18 +173,32 @@ def crashConsistency(outputFileName, trace):
                     break
                 if(trace[j][1]==100 and trace[stmt][2]==trace[j][3]):
                     crash.append(Not(Int("Upper_"+str(stmt+1))<Int("lower_"+str(j+1))))
-    print("Printing crash consistency constraints:")
+    writer.write("\nPrinting crash consistency constraints:\n")
     for c in crash:
-        print(c)
+        writer.write(str(c)+"\n")
     return crash
+
+def makeAnotherSolver(solver, constr):
+    s = Solver()
+    for c in solver.assertions():
+        if is_or(c):
+            or_constr = []
+            for child in c.children():
+                if str(child)!=str(constr):
+                    or_constr.append(child)
+            s.add(Or(or_constr))
+        else:
+            s.add(c)
+                
+    return s
 
 def constructAllConstraints(inputFileName, outputFileName):
     writer = open(outputFileName, 'w+')
     trace = parseTrace(inputFileName)
-    PCs = findPCRanges(outputFileName, trace)
-    PC_lower, PC_upper = findLowerUpperBounds(outputFileName, trace)
-    durable = durability(outputFileName, trace)
-    crash = crashConsistency(outputFileName, trace)
+    PCs = findPCRanges(writer, trace)
+    PC_lower, PC_upper = findLowerUpperBounds(writer, trace)
+    durable = durability(writer, trace)
+    crash = crashConsistency(writer, trace)
     violatedConstraints = []
 
     solver = Solver()
@@ -193,30 +208,21 @@ def constructAllConstraints(inputFileName, outputFileName):
     for c in crash:
         durable.append(c)
     solver.add(Or(durable))
-    # solver.add(crash)
-    print(solver)
-    print("\nThe following execution violates PM Properties:")
-    # print(solver)
-    if solver.check()==sat:
+
+    exec = 0
+    while solver.check()==sat:
+        exec += 1
         model = solver.model()
-        print(model)
-        print("\nPrinting PM constraints which could be violated:")
         for a in solver.assertions():
             if is_or(a):
                 for child in a.children():
-                    print(child)
                     if is_true(model.eval(child)):
-                        # print("True",child)
-                        violatedConstraints.append(child)
+                        writer.write("\n\nViolation found! \nConstraint violated:"+str(child)+"\nExecution trace:\n")
+                        writer.write(str(model))
+                        solver = makeAnotherSolver(solver, child)
+                        # print(solver)
 
-
-    else:
-        print("UNSAT")
-    
-    print("\nPrinting constraints which were violated:")
-    print(violatedConstraints)
-    # numSols = printAllSolutions(solver, 7, writer)
-    # print(numSols, " solutions violate PM properties.\n")
+    writer.write("\n\nNumber of violations found: "+str(exec)+"\n")
 
 def constructAllConstraintsUNSATCoreWay(inputFileName, outputFileName):
     writer = open(outputFileName, 'w+')

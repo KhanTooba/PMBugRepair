@@ -1,0 +1,93 @@
+Printing the range of Program counters each statement can take:
+Stmt_1 >= 1
+Stmt_1 <= 1
+Stmt_2 >= 2
+Stmt_2 <= 2
+Stmt_3 >= 3
+Stmt_4 >= 4
+Stmt_5 >= 5
+Stmt_1 <= Stmt_5
+Stmt_2 <= Stmt_5
+Stmt_3 <= Stmt_5
+Stmt_4 <= Stmt_5
+Stmt_6 >= 6
+Stmt_6 <= 6
+Stmt_7 >= 7
+Stmt_7 <= 7
+
+Printing constraints on Persistent Times upper and lower bounds:
+lower_1 >= Stmt_4	Upper_1 >= Stmt_4
+lower_1 >= -1	Upper_1 <= 999
+lower_2 >= Stmt_3	Upper_2 >= Stmt_3
+lower_2 >= -1	Upper_2 <= 999
+lower_3 <= -1	Upper_3 >= 999
+lower_3 >= -1	Upper_3 <= 999
+lower_4 <= -1	Upper_4 >= 999
+lower_4 >= -1	Upper_4 <= 999
+lower_5 <= -1	Upper_5 >= 999
+lower_5 >= -1	Upper_5 <= 999
+lower_6 >= Stmt_6	Upper_6 >= 999
+lower_6 >= -1	Upper_6 <= 999
+lower_7 <= -1	Upper_7 >= 999
+lower_7 >= -1	Upper_7 <= 999
+
+Durability constraints:
+lower_1 == -1
+lower_2 == -1
+lower_7 == -1
+
+Printing crash consistency constraints:
+Not(Upper_2 < lower_6)
+
+
+Violation found! 
+Constraint violated:lower_7 == -1
+Execution trace:
+[lower_1 = 4,
+ Stmt_5 = 5,
+ Stmt_3 = 3,
+ lower_6 = 6,
+ Stmt_4 = 4,
+ lower_2 = 3,
+ Upper_1 = 4,
+ Upper_2 = 3,
+ Stmt_2 = 2,
+ lower_5 = -1,
+ Stmt_6 = 6,
+ Stmt_1 = 1,
+ Upper_4 = 999,
+ Stmt_7 = 7,
+ Upper_7 = 999,
+ Upper_6 = 999,
+ Upper_5 = 999,
+ Upper_3 = 999,
+ lower_3 = -1,
+ lower_7 = -1,
+ lower_4 = -1]
+
+Violation found! 
+Constraint violated:Not(Upper_2 < lower_6)
+Execution trace:
+[lower_1 = 4,
+ Stmt_5 = 5,
+ Stmt_3 = 3,
+ lower_6 = 6,
+ Stmt_4 = 4,
+ lower_2 = 3,
+ Upper_1 = 4,
+ Upper_2 = 6,
+ Stmt_2 = 2,
+ lower_5 = -1,
+ Stmt_6 = 6,
+ Stmt_1 = 1,
+ Upper_4 = 999,
+ Stmt_7 = 7,
+ Upper_7 = 999,
+ Upper_6 = 999,
+ Upper_5 = 999,
+ Upper_3 = 999,
+ lower_3 = -1,
+ lower_7 = -1,
+ lower_4 = -1]
+
+Number of violations found: 2
