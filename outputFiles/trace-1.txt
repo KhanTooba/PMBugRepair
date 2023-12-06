@@ -199,8 +199,8 @@ Execution trace:
 
 Violation found! 
 Constraint violated:Not(Upper_7 < lower_8)
-PM Assesrtion violated: Inter thread crash consistency.
-Wait and Signal need to be asserted 
+PM Assesrtion violated: Atomicity (Inter thread crash consistency).
+Wait and Signal need to be inserted 
 before STORE of y at Statement: 7 in Thread:1 and
 before LOAD of y at Statement: 8 in Thread:0 respectively.
 Trace elements: [8, 100, '#t1', 'y', 1]	[9, 100, '#t2', 'x', 1]
@@ -245,8 +245,8 @@ Execution trace:
 
 Violation found! 
 Constraint violated:Not(Upper_10 < lower_11)
-PM Assesrtion violated: Inter thread crash consistency.
-Wait and Signal need to be asserted 
+PM Assesrtion violated: Atomicity (Inter thread crash consistency).
+Wait and Signal need to be inserted 
 before STORE of z at Statement: 10 in Thread:0 and
 before LOAD of z at Statement: 11 in Thread:1 respectively.
 Trace elements: [11, 100, '#t3', 'z', 2]	[12, 101, 'r', '#t3', 2]
@@ -291,8 +291,8 @@ Execution trace:
 
 Violation found! 
 Constraint violated:Not(Upper_2 < lower_6)
-PM Assesrtion violated: Inter thread crash consistency.
-Wait and Signal need to be asserted 
+PM Assesrtion violated: Atomicity (Inter thread crash consistency).
+Wait and Signal need to be inserted 
 before STORE of x at Statement: 2 in Thread:0 and
 before LOAD of x at Statement: 6 in Thread:1 respectively.
 Trace elements: [3, 102, 'x', '0', 1]	[7, 101, 'y', '#t0', 2]

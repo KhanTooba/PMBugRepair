@@ -231,8 +231,8 @@ def comprehendViolation(constr, writer, trace):
             writer.write("\nTrace element: "+str(trace[stmts_1-1])+"\n")
         
         else:
-            writer.write("PM Assesrtion violated: Inter thread crash consistency.")
-            writer.write("\nWait and Signal need to be asserted \nbefore STORE of "+
+            writer.write("PM Assesrtion violated: Atomicity (Inter thread crash consistency).")
+            writer.write("\nWait and Signal need to be inserted \nbefore STORE of "+
                     str(trace[stmts_1-1][2])+" at Statement: "+str(stmts_1)+" in Thread:"+str(t_1)+
                     " and\nbefore LOAD of "+str(trace[stmts_2-1][3])+
                     " at Statement: "+str(stmts_2)+" in Thread:"+str(t_2)+" respectively.")
