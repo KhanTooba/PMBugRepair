@@ -8,6 +8,8 @@ LOAD    100
 STORE   101
 CLFLUSH 102
 SFENCE  103
+LOCK 104
+UNLOCK 105
 """
 num_threads = 2
 
@@ -52,6 +54,10 @@ def parseTraceHelper(elements, index):
         traceParsed.append(102)
     elif elements[0]=="SFENCE":
         traceParsed.append(103)
+    elif elements[0]=="LOCK":
+        traceParsed.append(104)
+    elif elements[0]=="UNLOCK":
+        traceParsed.append(105)
     
     traceParsed.append(elements[1].strip())
     traceParsed.append(elements[2].strip())
@@ -92,7 +98,7 @@ def findPCRanges(writer, trace):
             #print("Swapping threads")
             current_thread = trace[stmt-1][-1]
         #print(stmt, pc, trace[stmt-1][-1])
-        if(trace[stmt-1][1]==100 or trace[stmt-1][1]==101):
+        if(trace[stmt-1][1]==100 or trace[stmt-1][1]==101 or trace[stmt-1][1]==104 or trace[stmt-1][1]==105):
             #print(stmt,":\t>=", non_flush_PC, ",\t<=", upper, "\t", non_flush_PC)
             PCs.append(Int("Stmt_"+str(stmt))>=non_flush_PC)
             PCs.append(Int("Stmt_"+str(stmt))<=upper)
@@ -124,12 +130,16 @@ def findLowerUpperBounds(writer, trace):
         lower = -1
         upper = 999
         if(trace[stmt][1]==101):
+            # print("For statement STORE at ", stmt)
             for j in range(stmt+1, len(trace)):
+                
                 if(trace[j][1]==102 and trace[stmt][2]==trace[j][2]):
                     lower = j+1
+                    # print(lower)
                 
                 if(trace[j][1]==103):
                     upper = j+1
+                    # print(upper)
                     break
         
         if(trace[stmt][1]==100):
@@ -140,7 +150,7 @@ def findLowerUpperBounds(writer, trace):
         else:
             PC_lower.append(Int("lower_"+str(stmt+1))<=-1)
         if(upper!=999):
-            PC_upper.append(Int("Upper_"+str(stmt+1))>=Int("Stmt_"+str(lower)))
+            PC_upper.append(Int("Upper_"+str(stmt+1))==Int("Stmt_"+str(upper)))
         else:
             PC_upper.append(Int("Upper_"+str(stmt+1))>=999)
         
@@ -232,7 +242,7 @@ def comprehendViolation(constr, writer, trace):
         
         else:
             writer.write("PM Assesrtion violated: Atomicity (Inter thread crash consistency).")
-            writer.write("\nWait and Signal need to be inserted \nbefore STORE of "+
+            writer.write("\nShared varaibles should be locked \nbefore STORE of "+
                     str(trace[stmts_1-1][2])+" at Statement: "+str(stmts_1)+" in Thread:"+str(t_1)+
                     " and\nbefore LOAD of "+str(trace[stmts_2-1][3])+
                     " at Statement: "+str(stmts_2)+" in Thread:"+str(t_2)+" respectively.")
@@ -243,6 +253,24 @@ def comprehendViolation(constr, writer, trace):
         trace_element = trace[stmt-1]
         writer.write("PM Assertion violated: Durability.\nNo clflushopt found for STORE of '"+str(trace_element[2])+"' at Statement: "+str(stmt)+"\nTrace element: "+str(trace_element)+"\n")
 
+def lockSemantics(writer, trace):
+    locks = []
+    for stmt in range(0, len(trace)):
+        flag = 0
+        t_id = trace[stmt][-1]
+        if(trace[stmt][1]==104):
+            counter = 1
+            for j in range(stmt+1, len(trace)):
+                locks.append(Int("Stmt_"+str(j))==Int("Stmt_"+str(stmt))+counter)
+                counter += 1
+                if(trace[j][1]==105):
+                    break
+    writer.write("\nPrinting Lock Semantics constraints:\n")
+    for c in locks:
+        writer.write(str(c)+"\n")
+        # print(str(c)+"\n")
+    return locks
+
 def constructAllConstraints(inputFileName, outputFileName):
     writer = open(outputFileName, 'w+')
     trace = parseTrace(inputFileName)
@@ -250,12 +278,14 @@ def constructAllConstraints(inputFileName, outputFileName):
     PC_lower, PC_upper = findLowerUpperBounds(writer, trace)
     durable = durability(writer, trace)
     crash = crashConsistency(writer, trace)
+    lock = lockSemantics(writer, trace)
     violatedConstraints = []
 
     solver = Solver()
     solver.add(PCs)
     solver.add(PC_lower)
     solver.add(PC_upper)
+    solver.add(lock)
     for c in crash:
         durable.append(c)
     solver.add(Or(durable))
@@ -276,6 +306,8 @@ def constructAllConstraints(inputFileName, outputFileName):
                         # print(solver)
 
     writer.write("\n\nNumber of violations found: "+str(exec)+"\n")
+
+    
 
 def constructAllConstraintsUNSATCoreWay(inputFileName, outputFileName):
     writer = open(outputFileName, 'w+')

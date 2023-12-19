@@ -1,0 +1,233 @@
+Printing the range of Program counters each statement can take:
+Stmt_1 >= 1
+Stmt_1 <= 1
+Stmt_2 >= 2
+Stmt_2 <= 2
+Stmt_3 >= 3
+Stmt_3 <= 3
+Stmt_4 >= 4
+Stmt_5 >= 5
+Stmt_6 >= 6
+Stmt_1 <= Stmt_6
+Stmt_2 <= Stmt_6
+Stmt_3 <= Stmt_6
+Stmt_4 <= Stmt_6
+Stmt_5 <= Stmt_6
+Stmt_7 >= 7
+Stmt_7 <= 7
+Stmt_8 >= 8
+Stmt_8 <= 8
+Stmt_9 >= 9
+Stmt_9 <= 9
+Stmt_10 >= 10
+Stmt_11 >= 11
+Stmt_1 <= Stmt_11
+Stmt_2 <= Stmt_11
+Stmt_3 <= Stmt_11
+Stmt_4 <= Stmt_11
+Stmt_5 <= Stmt_11
+Stmt_6 <= Stmt_11
+Stmt_7 <= Stmt_11
+Stmt_8 <= Stmt_11
+Stmt_9 <= Stmt_11
+Stmt_10 <= Stmt_11
+Stmt_12 >= 12
+Stmt_12 <= 12
+Stmt_13 >= 13
+Stmt_13 <= 13
+Stmt_14 >= 14
+Stmt_14 <= 14
+Stmt_15 >= 15
+Stmt_16 >= 15
+Stmt_16 <= 16
+Stmt_17 >= 16
+Stmt_17 <= 17
+Stmt_18 >= 18
+
+Printing constraints on Persistent Times upper and lower bounds:
+lower_1 >= Stmt_5	Upper_1 == Stmt_6
+lower_1 >= -1	Upper_1 <= 999
+lower_2 <= -1	Upper_2 >= 999
+lower_2 >= -1	Upper_2 <= 999
+lower_3 >= Stmt_4	Upper_3 == Stmt_6
+lower_3 >= -1	Upper_3 <= 999
+lower_4 <= -1	Upper_4 >= 999
+lower_4 >= -1	Upper_4 <= 999
+lower_5 <= -1	Upper_5 >= 999
+lower_5 >= -1	Upper_5 <= 999
+lower_6 <= -1	Upper_6 >= 999
+lower_6 >= -1	Upper_6 <= 999
+lower_7 <= -1	Upper_7 >= 999
+lower_7 >= -1	Upper_7 <= 999
+lower_8 >= Stmt_8	Upper_8 >= 999
+lower_8 >= -1	Upper_8 <= 999
+lower_9 >= Stmt_10	Upper_9 == Stmt_11
+lower_9 >= -1	Upper_9 <= 999
+lower_10 <= -1	Upper_10 >= 999
+lower_10 >= -1	Upper_10 <= 999
+lower_11 <= -1	Upper_11 >= 999
+lower_11 >= -1	Upper_11 <= 999
+lower_12 >= Stmt_12	Upper_12 >= 999
+lower_12 >= -1	Upper_12 <= 999
+lower_13 >= Stmt_13	Upper_13 >= 999
+lower_13 >= -1	Upper_13 <= 999
+lower_14 >= Stmt_15	Upper_14 >= 999
+lower_14 >= -1	Upper_14 <= 999
+lower_15 <= -1	Upper_15 >= 999
+lower_15 >= -1	Upper_15 <= 999
+lower_16 >= Stmt_16	Upper_16 >= 999
+lower_16 >= -1	Upper_16 <= 999
+lower_17 >= Stmt_18	Upper_17 >= 999
+lower_17 >= -1	Upper_17 <= 999
+lower_18 <= -1	Upper_18 >= 999
+lower_18 >= -1	Upper_18 <= 999
+
+Durability constraints:
+lower_1 == -1
+lower_3 == -1
+lower_9 == -1
+lower_14 == -1
+lower_17 == -1
+
+Printing crash consistency constraints:
+Not(Upper_3 < lower_8)
+Not(Upper_9 < lower_12)
+Not(Upper_14 < lower_16)
+
+Printing Lock Semantics constraints:
+Stmt_2 == Stmt_1 + 1
+Stmt_3 == Stmt_1 + 2
+Stmt_4 == Stmt_1 + 3
+Stmt_5 == Stmt_1 + 4
+Stmt_6 == Stmt_1 + 5
+
+
+
+Violation found! 
+Constraint violated:Not(Upper_9 < lower_12)
+PM Assesrtion violated: Atomicity (Inter thread crash consistency).
+Shared varaibles should be locked 
+before STORE of y at Statement: 9 in Thread:1 and
+before LOAD of y at Statement: 12 in Thread:0 respectively.
+Trace elements: [10, 102, 'y', '0', 2]	[13, 100, '#t2', 'x', 1]
+Execution trace:
+[Stmt_18 = 18,
+ lower_3 = 4,
+ lower_17 = 18,
+ lower_16 = 1000,
+ lower_12 = 12,
+ Stmt_11 = 12,
+ lower_1 = 5,
+ lower_14 = 15,
+ lower_13 = 13,
+ Stmt_15 = 15,
+ Stmt_17 = 16,
+ lower_8 = 8,
+ Stmt_16 = 15,
+ lower_9 = 10,
+ Stmt_10 = 10,
+ Upper_3 = 6,
+ lower_5 = -1,
+ Stmt_2 = 2,
+ Stmt_13 = 13,
+ Upper_2 = 999,
+ lower_6 = -1,
+ lower_18 = -1,
+ Upper_8 = 999,
+ Stmt_12 = 12,
+ Upper_17 = 999,
+ Upper_1 = 6,
+ Upper_12 = 999,
+ Upper_9 = 12,
+ Stmt_3 = 3,
+ Stmt_9 = 9,
+ lower_4 = -1,
+ Upper_5 = 999,
+ Stmt_4 = 4,
+ Stmt_6 = 6,
+ Upper_16 = 999,
+ Upper_14 = 999,
+ Upper_4 = 999,
+ Upper_7 = 999,
+ Upper_6 = 999,
+ Stmt_14 = 14,
+ Stmt_5 = 5,
+ Upper_11 = 999,
+ Upper_10 = 999,
+ lower_7 = -1,
+ Stmt_1 = 1,
+ lower_2 = -1,
+ Stmt_7 = 7,
+ lower_11 = -1,
+ lower_15 = -1,
+ lower_10 = -1,
+ Stmt_8 = 8,
+ Upper_18 = 999,
+ Upper_15 = 999,
+ Upper_13 = 999]
+
+
+Violation found! 
+Constraint violated:Not(Upper_14 < lower_16)
+PM Assesrtion violated: Atomicity (Inter thread crash consistency).
+Shared varaibles should be locked 
+before STORE of z at Statement: 14 in Thread:0 and
+before LOAD of z at Statement: 16 in Thread:1 respectively.
+Trace elements: [15, 102, 'z', '0', 1]	[17, 101, 'r', '#t3', 2]
+Execution trace:
+[Stmt_18 = 18,
+ lower_3 = 4,
+ lower_17 = 18,
+ lower_16 = 15,
+ lower_12 = 12,
+ Stmt_11 = 11,
+ lower_1 = 5,
+ lower_14 = 15,
+ lower_13 = 13,
+ Stmt_15 = 15,
+ Stmt_17 = 16,
+ lower_8 = 8,
+ Stmt_16 = 15,
+ lower_9 = 10,
+ Stmt_10 = 10,
+ Upper_3 = 6,
+ lower_5 = -1,
+ Stmt_2 = 2,
+ Stmt_13 = 13,
+ Upper_2 = 999,
+ lower_6 = -1,
+ lower_18 = -1,
+ Upper_8 = 999,
+ Stmt_12 = 12,
+ Upper_17 = 999,
+ Upper_1 = 6,
+ Upper_12 = 999,
+ Upper_9 = 11,
+ Stmt_3 = 3,
+ Stmt_9 = 9,
+ lower_4 = -1,
+ Upper_5 = 999,
+ Stmt_4 = 4,
+ Stmt_6 = 6,
+ Upper_16 = 999,
+ Upper_14 = 999,
+ Upper_4 = 999,
+ Upper_7 = 999,
+ Upper_6 = 999,
+ Stmt_14 = 14,
+ Stmt_5 = 5,
+ Upper_11 = 999,
+ Upper_10 = 999,
+ lower_7 = -1,
+ Stmt_1 = 1,
+ lower_2 = -1,
+ Stmt_7 = 7,
+ lower_11 = -1,
+ lower_15 = -1,
+ lower_10 = -1,
+ Stmt_8 = 8,
+ Upper_18 = 999,
+ Upper_15 = 999,
+ Upper_13 = 999]
+
+Number of violations found: 2

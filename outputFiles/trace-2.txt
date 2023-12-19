@@ -1,625 +1,263 @@
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_13, 12: var_8, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_8, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_8, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_9, 7: var_3, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_9, 7: var_3, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_9, 7: var_3, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_13, 12: var_8, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_9, 7: var_3, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_13, 12: var_8, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_9, 8: var_4, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_13, 12: var_8, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_13, 12: var_8, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_9, 9: var_5, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_9, 10: var_10, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_13, 12: var_8, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_13, 12: var_8, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_9, 11: var_11, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_8, 6: var_3, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_7, 5: var_3, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_6, 4: var_3, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_13, 12: var_8, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_13, 12: var_8, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_9, 11: var_11, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_13, 12: var_8, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_9, 12: var_12, 13: var_13, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_13, 13: var_9, 14: var_14, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_11, 10: var_12, 11: var_8, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_10, 9: var_8, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_16, 16: var_13}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_5, 6: var_6, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_4, 5: var_6, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_8, 7: var_4, 8: var_5, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_7, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_7, 6: var_4, 7: var_5, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_13, 15: var_15, 16: var_16}
-{1: var_1, 2: var_2, 3: var_3, 4: var_6, 5: var_4, 6: var_5, 7: var_7, 8: var_8, 9: var_10, 10: var_11, 11: var_12, 12: var_9, 13: var_14, 14: var_15, 15: var_13, 16: var_16}
+Printing the range of Program counters each statement can take:
+Stmt_1 >= 1
+Stmt_1 <= 1
+Stmt_2 >= 2
+Stmt_2 <= 2
+Stmt_3 >= 3
+Stmt_4 >= 4
+Stmt_5 >= 5
+Stmt_1 <= Stmt_5
+Stmt_2 <= Stmt_5
+Stmt_3 <= Stmt_5
+Stmt_4 <= Stmt_5
+Stmt_6 >= 6
+Stmt_6 <= 6
+Stmt_7 >= 7
+Stmt_7 <= 7
+Stmt_8 >= 8
+Stmt_9 >= 9
+Stmt_1 <= Stmt_9
+Stmt_2 <= Stmt_9
+Stmt_3 <= Stmt_9
+Stmt_4 <= Stmt_9
+Stmt_5 <= Stmt_9
+Stmt_6 <= Stmt_9
+Stmt_7 <= Stmt_9
+Stmt_8 <= Stmt_9
+Stmt_10 >= 10
+Stmt_10 <= 10
+Stmt_11 >= 11
+Stmt_11 <= 11
+Stmt_12 >= 12
+Stmt_12 <= 12
+Stmt_13 >= 13
+Stmt_14 >= 13
+Stmt_14 <= 14
+Stmt_15 >= 14
+Stmt_15 <= 15
+Stmt_16 >= 16
+
+Printing constraints on Persistent Times upper and lower bounds:
+lower_1 >= Stmt_4	Upper_1 >= Stmt_4
+lower_1 >= -1	Upper_1 <= 999
+lower_2 >= Stmt_3	Upper_2 >= Stmt_3
+lower_2 >= -1	Upper_2 <= 999
+lower_3 <= -1	Upper_3 >= 999
+lower_3 >= -1	Upper_3 <= 999
+lower_4 <= -1	Upper_4 >= 999
+lower_4 >= -1	Upper_4 <= 999
+lower_5 <= -1	Upper_5 >= 999
+lower_5 >= -1	Upper_5 <= 999
+lower_6 >= Stmt_6	Upper_6 >= 999
+lower_6 >= -1	Upper_6 <= 999
+lower_7 >= Stmt_8	Upper_7 >= Stmt_8
+lower_7 >= -1	Upper_7 <= 999
+lower_8 <= -1	Upper_8 >= 999
+lower_8 >= -1	Upper_8 <= 999
+lower_9 <= -1	Upper_9 >= 999
+lower_9 >= -1	Upper_9 <= 999
+lower_10 >= Stmt_10	Upper_10 >= 999
+lower_10 >= -1	Upper_10 <= 999
+lower_11 >= Stmt_11	Upper_11 >= 999
+lower_11 >= -1	Upper_11 <= 999
+lower_12 >= Stmt_13	Upper_12 >= 999
+lower_12 >= -1	Upper_12 <= 999
+lower_13 <= -1	Upper_13 >= 999
+lower_13 >= -1	Upper_13 <= 999
+lower_14 >= Stmt_14	Upper_14 >= 999
+lower_14 >= -1	Upper_14 <= 999
+lower_15 >= Stmt_16	Upper_15 >= 999
+lower_15 >= -1	Upper_15 <= 999
+lower_16 <= -1	Upper_16 >= 999
+lower_16 >= -1	Upper_16 <= 999
+
+Durability constraints:
+lower_1 == -1
+lower_2 == -1
+lower_7 == -1
+lower_12 == -1
+lower_15 == -1
+
+Printing crash consistency constraints:
+Not(Upper_2 < lower_6)
+Not(Upper_7 < lower_10)
+Not(Upper_12 < lower_14)
+
+
+
+Violation found! 
+Constraint violated:Not(Upper_2 < lower_6)
+PM Assesrtion violated: Atomicity (Inter thread crash consistency).
+Wait and Signal need to be inserted 
+before STORE of x at Statement: 2 in Thread:0 and
+before LOAD of x at Statement: 6 in Thread:1 respectively.
+Trace elements: [3, 102, 'x', '0', 1]	[7, 101, 'y', '#t0', 2]
+Execution trace:
+[Stmt_9 = 9,
+ Stmt_3 = 3,
+ Stmt_8 = 8,
+ lower_10 = 10,
+ lower_15 = 16,
+ lower_11 = 11,
+ lower_12 = 13,
+ lower_2 = 3,
+ Upper_1 = 4,
+ lower_7 = 8,
+ lower_1 = 4,
+ Stmt_5 = 5,
+ Stmt_14 = 13,
+ lower_14 = 1000,
+ Stmt_15 = 14,
+ Upper_7 = 8,
+ lower_6 = 6,
+ Stmt_4 = 4,
+ Stmt_16 = 16,
+ Upper_2 = 6,
+ Stmt_13 = 13,
+ Stmt_2 = 2,
+ lower_5 = -1,
+ Upper_8 = 999,
+ Upper_3 = 999,
+ lower_13 = -1,
+ Stmt_11 = 11,
+ Stmt_12 = 12,
+ Upper_12 = 999,
+ Upper_9 = 999,
+ lower_3 = -1,
+ Stmt_10 = 10,
+ lower_4 = -1,
+ Upper_5 = 999,
+ Upper_16 = 999,
+ Stmt_6 = 6,
+ Upper_14 = 999,
+ lower_9 = -1,
+ Upper_4 = 999,
+ lower_8 = -1,
+ Upper_6 = 999,
+ Upper_10 = 999,
+ Upper_11 = 999,
+ Stmt_1 = 1,
+ Stmt_7 = 7,
+ lower_16 = -1,
+ Upper_15 = 999,
+ Upper_13 = 999]
+
+
+Violation found! 
+Constraint violated:Not(Upper_7 < lower_10)
+PM Assesrtion violated: Atomicity (Inter thread crash consistency).
+Wait and Signal need to be inserted 
+before STORE of y at Statement: 7 in Thread:1 and
+before LOAD of y at Statement: 10 in Thread:0 respectively.
+Trace elements: [8, 102, 'y', '0', 2]	[11, 100, '#t2', 'x', 1]
+Execution trace:
+[Stmt_9 = 9,
+ Stmt_3 = 3,
+ Stmt_8 = 8,
+ lower_10 = 10,
+ lower_15 = 16,
+ lower_11 = 11,
+ lower_12 = 13,
+ lower_2 = 3,
+ Upper_1 = 4,
+ lower_7 = 8,
+ lower_1 = 4,
+ Stmt_5 = 5,
+ Stmt_14 = 13,
+ lower_14 = 1000,
+ Stmt_15 = 14,
+ Upper_7 = 10,
+ lower_6 = 6,
+ Stmt_4 = 4,
+ Stmt_16 = 16,
+ Upper_2 = 3,
+ Stmt_13 = 13,
+ Stmt_2 = 2,
+ lower_5 = -1,
+ Upper_8 = 999,
+ Upper_3 = 999,
+ lower_13 = -1,
+ Stmt_11 = 11,
+ Stmt_12 = 12,
+ Upper_12 = 999,
+ Upper_9 = 999,
+ lower_3 = -1,
+ Stmt_10 = 10,
+ lower_4 = -1,
+ Upper_5 = 999,
+ Upper_16 = 999,
+ Stmt_6 = 6,
+ Upper_14 = 999,
+ lower_9 = -1,
+ Upper_4 = 999,
+ lower_8 = -1,
+ Upper_6 = 999,
+ Upper_10 = 999,
+ Upper_11 = 999,
+ Stmt_1 = 1,
+ Stmt_7 = 7,
+ lower_16 = -1,
+ Upper_15 = 999,
+ Upper_13 = 999]
+
+
+Violation found! 
+Constraint violated:Not(Upper_12 < lower_14)
+PM Assesrtion violated: Atomicity (Inter thread crash consistency).
+Wait and Signal need to be inserted 
+before STORE of z at Statement: 12 in Thread:0 and
+before LOAD of z at Statement: 14 in Thread:1 respectively.
+Trace elements: [13, 102, 'z', '0', 1]	[15, 101, 'r', '#t3', 2]
+Execution trace:
+[Stmt_9 = 9,
+ Stmt_3 = 3,
+ Stmt_8 = 8,
+ lower_10 = 10,
+ lower_15 = 16,
+ lower_11 = 11,
+ lower_12 = 13,
+ lower_2 = 3,
+ Upper_1 = 4,
+ lower_7 = 8,
+ lower_1 = 4,
+ Stmt_5 = 5,
+ Stmt_14 = 13,
+ lower_14 = 13,
+ Stmt_15 = 14,
+ Upper_7 = 8,
+ lower_6 = 6,
+ Stmt_4 = 4,
+ Stmt_16 = 16,
+ Upper_2 = 3,
+ Stmt_13 = 13,
+ Stmt_2 = 2,
+ lower_5 = -1,
+ Upper_8 = 999,
+ Upper_3 = 999,
+ lower_13 = -1,
+ Stmt_11 = 11,
+ Stmt_12 = 12,
+ Upper_12 = 999,
+ Upper_9 = 999,
+ lower_3 = -1,
+ Stmt_10 = 10,
+ lower_4 = -1,
+ Upper_5 = 999,
+ Upper_16 = 999,
+ Stmt_6 = 6,
+ Upper_14 = 999,
+ lower_9 = -1,
+ Upper_4 = 999,
+ lower_8 = -1,
+ Upper_6 = 999,
+ Upper_10 = 999,
+ Upper_11 = 999,
+ Stmt_1 = 1,
+ Stmt_7 = 7,
+ lower_16 = -1,
+ Upper_15 = 999,
+ Upper_13 = 999]
+
+Number of violations found: 3
+
+Printing Lock Semantics constraints:
