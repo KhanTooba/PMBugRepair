@@ -57,7 +57,7 @@ def getThreads(trace):
     threads = {}
     c = 0
     for t in trace:
-        if t[-1] not in threads.items():
+        if t[2] not in threads.keys():
             threads[t[2]] = c
             c += 1
     return threads
@@ -93,4 +93,6 @@ if __name__ == "__main__":
         file.write(str(t)+"\n")
     file.close()
 
-    print(trace)
+    print("Formatted trace:")
+    for t in trace:
+        print(t)

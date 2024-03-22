@@ -34,8 +34,8 @@ def printAllSolutions(s, lastStmt, writer):
     while solver.check()==sat:
         numSols += 1
         model = printableSolver(solver)
-        # writer.write(str(model))
-        # writer.write("\n")
+        writer.write(str(model))
+        writer.write("\n")
         print(model)
         F = []
         for i in range(0, lastStmt):
@@ -97,12 +97,16 @@ def findPCRanges(writer, trace):
 
     for stmt in range(1, len(trace)+1):
         if(trace[stmt-1][-1]!=current_thread):
+            #print("Swapping threads")
             current_thread = trace[stmt-1][-1]
+        #print(stmt, pc, trace[stmt-1][-1])
         if(trace[stmt-1][1]==100 or trace[stmt-1][1]==101 or trace[stmt-1][1]==104 or trace[stmt-1][1]==105):
+            #print(stmt,":\t>=", non_flush_PC, ",\t<=", upper, "\t", non_flush_PC)
             PCs.append(Int("Stmt_"+str(stmt))>=non_flush_PC)
             PCs.append(Int("Stmt_"+str(stmt))<=upper)
             non_flush_PC += 1
         else:
+            #print(stmt,":\t>=",lower)
             PCs.append(Int("Stmt_"+str(stmt))>=lower)
         
         lower += 1
@@ -114,6 +118,10 @@ def findPCRanges(writer, trace):
             for j in range(1, stmt):
                 #print(j, "\t< PC_", stmt, "\t", non_flush_PC)
                 PCs.append(Int("Stmt_"+str(j))<=Int("Stmt_"+str(stmt)))
+                
+    writer.write("Printing the range of Program counters each statement can take:\n")
+    for c in PCs:
+        writer.write(str(c)+"\n")
     
     return PCs
 
@@ -124,13 +132,16 @@ def findLowerUpperBounds(writer, trace):
         lower = -1
         upper = 999
         if(trace[stmt][1]==101):
+            # print("For statement STORE at ", stmt)
             for j in range(stmt+1, len(trace)):
                 
                 if(trace[j][1]==102 and trace[stmt][2]==trace[j][2]):
                     lower = j+1
+                    # print(lower)
                 
                 if(trace[j][1]==103):
                     upper = j+1
+                    # print(upper)
                     break
         
         if(trace[stmt][1]==100):
@@ -148,34 +159,48 @@ def findLowerUpperBounds(writer, trace):
         PC_lower.append(Int("lower_"+str(stmt+1))>=-1)
         PC_upper.append(Int("Upper_"+str(stmt+1))<=999)
     
+    writer.write("\nPrinting constraints on Persistent Times upper and lower bounds:\n")
+    for i in range(len(PC_lower)):
+        writer.write(str(PC_lower[i])+"\t"+str(PC_upper[i])+"\n")
     
     return PC_lower, PC_upper
 
-def durability(writer, trace):
-    durable = []
-    for stmt in range(0, len(trace)):
-        if(trace[stmt][1]==101):
-            durable.append(Int("Upper_"+str(stmt+1))>=999)
+def getAssertions(writer, trace):
+    # file = open("../inputFiles/"+sys.argv[2]) #assertionsOPT.txt
+    file = open(sys.argv[2]) #assertionsOPT.txt
+    assertions = []
+
+    for line in file:
+        if "DURA" in str(line):
+            add = line.replace("]","").replace("\n","").split(":")[1]
+            for t in trace:
+                if str(t[2])==str(add):
+                    assertions.append(Int("Upper_"+str(t[0]))>=999)
     
-    return durable
+    writer.write("\nDurability constraints:\n")
+    for d in assertions:
+        writer.write(str(d)+"\n")
 
-def crashConsistency(writer, trace):
-    crash = []
-    for stmt in range(0, len(trace)):
-        flag = 0
-        t_id = trace[stmt][-1]
-        if(trace[stmt][1]==101):
-            for j in range(stmt+1, len(trace)):
-                if(trace[j][1]==103):
-                    flag = 1
-                if(t_id == trace[j][-1] and flag==1):
-                    continue
-                if(trace[j][1]==101 and trace[stmt][2]==trace[j][3]):
-                    crash.append(Not(Int("Upper_"+str(stmt+1))<Int("lower_"+str(j+1))))
-                if(trace[j][1]==100 and trace[stmt][2]==trace[j][3]):
-                    crash.append(Not(Int("Upper_"+str(stmt+1))<Int("lower_"+str(j+1))))
+    # file = open("../inputFiles/"+sys.argv[2])
+    file = open(sys.argv[2]) #assertionsOPT.txt
+    writer.write("\nPrinting crash consistency constraints:\n")
+    for line in file:
+        if "MPB" in str(line):
+            add2 = line.replace("]","").replace("\n","").split("<")[1]
+            add1 = line.split("<")[0].split(":")[1]
+            
+            s1, s2 = 0, 0
+            for t in trace:
+                if str(t[2])==str(add1):
+                    s1 = t[0]
+                if str(t[2])==str(add2):
+                    s2 = t[0]
+            
+            c = Not(Int("Upper_"+str(s1))<Int("lower_"+str(s2)))
+            assertions.append(c)
+            writer.write(str(c)+"\n")
 
-    return crash
+    return assertions
 
 def makeAnotherSolver(solver, constr):
     s = Solver()
@@ -203,9 +228,13 @@ def comprehendViolation(constr, writer, trace):
             t_id = t[-1]
             stmt = t[0]
             stmts_by_trace[t_id].append(stmt)
-
+        
         stmts_1 = int(str(constr).split("_")[1].split("<")[0])
         stmts_2 = int(str(constr).split("_")[2].split(")")[0])
+        # print(stmts_1, stmts_2, stmts_by_trace)
+        # print(constr, stmts_1, stmts_2)
+
+        # print(constr)
         t_1, t_2 = 0, 0
         for i in range(num_threads):
             if stmts_1 in stmts_by_trace[i]:
@@ -215,13 +244,23 @@ def comprehendViolation(constr, writer, trace):
         
         if t_1==t_2:
             writer.write("[MPB:"+str(trace[stmts_1-1][2])+"<"+str(trace[stmts_2-1][2])+"]\n")
+            writer.write("PM Assesrtion violated: Intra thread crash consistency.")
+            writer.write("\nFence needs to be asserted for STORE of "+str(trace[stmts_1-1][2])+" at Statement: "+str(stmts_1)+" in Thread:"+str(i+1))
+            writer.write("\nTrace element: "+str(trace[stmts_1-1])+"\n")
         
         else:
+            writer.write("PM Assesrtion violated: Atomicity (Inter thread crash consistency).")
             writer.write("\n[MPB:"+str(trace[stmts_1-1][2])+"<"+str(trace[stmts_2-1][2])+"]")
+            writer.write("\nShared varaibles should be locked \nbefore STORE of "+
+                    str(trace[stmts_1-1][2])+" at Statement: "+str(stmts_1)+" in Thread:"+str(t_1)+
+                    " and\nbefore LOAD of "+str(trace[stmts_2-1][3])+
+                    " at Statement: "+str(stmts_2)+" in Thread:"+str(t_2)+" respectively.")
+            writer.write("\nTrace elements: "+str(trace[stmts_1-1])+"\t"+str(trace[stmts_2-1])+"\n")
 
     else:
         stmt = int(str(constr).split("_")[1].split(" ")[0])
         trace_element = trace[stmt-1]
+        writer.write("PM Assertion violated: Durability.\nNo clflushopt found for STORE of '"+str(trace_element[2])+"' at Statement: "+str(stmt)+"\nTrace element: "+str(trace_element)+"\n")
         writer.write("[DURA:"+str(str(trace_element[2]))+"]\n")
 
 def lockSemantics(writer, trace):
@@ -236,26 +275,28 @@ def lockSemantics(writer, trace):
                 counter += 1
                 if(trace[j][1]==105):
                     break
+    writer.write("\nPrinting Lock Semantics constraints:\n")
+    for c in locks:
+        writer.write(str(c)+"\n")
+        # print(str(c)+"\n")
     return locks
 
 def constructAllConstraints(inputFileName, outputFileName):
     writer = open(outputFileName, 'w+')
     trace = parseTrace(inputFileName)
+    # print(trace)
     PCs = findPCRanges(writer, trace)
     PC_lower, PC_upper = findLowerUpperBounds(writer, trace)
-    durable = durability(writer, trace)
-    crash = crashConsistency(writer, trace)
+
+    constraints = getAssertions(writer, trace)
     lock = lockSemantics(writer, trace)
-    violatedConstraints = []
 
     solver = Solver()
     solver.add(PCs)
     solver.add(PC_lower)
     solver.add(PC_upper)
     solver.add(lock)
-    for c in crash:
-        durable.append(c)
-    solver.add(Or(durable))
+    solver.add(Or(constraints))
 
     exec = 0
     while solver.check()==sat:
@@ -264,56 +305,22 @@ def constructAllConstraints(inputFileName, outputFileName):
             if is_or(a):
                 for child in a.children():
                     if is_true(model.eval(child)):
+                        writer.write("\n\n\nViolation found! \nConstraint violated:"+str(child)+"\n")
                         comprehendViolation(child, writer, trace)
+                        writer.write("Execution trace:\n")
                         exec += 1
+                        writer.write(str(model))
                         solver = makeAnotherSolver(solver, child)
+                        # print(solver)
 
-def constructAllConstraintsUNSATCoreWay(inputFileName, outputFileName):
-    writer = open(outputFileName, 'w+')
-    trace = parseTrace(inputFileName)
-    PCs = findPCRanges(outputFileName, trace)
-    PC_lower, PC_upper = findLowerUpperBounds(outputFileName, trace)
-    durable = durability(outputFileName, trace)
-    crash = crashConsistency(outputFileName, trace)
+    writer.write("\n\nNumber of violations found: "+str(exec)+"\n")
 
-    s = Solver()
-    s.set(unsat_core=True)
-    counter = 1
-    for constr in PCs:
-        s.assert_and_track(constr, 'a'+str(counter))
-        counter += 1
-    
-    for constr in PC_upper:
-        s.assert_and_track(constr, 'a'+str(counter))
-        counter += 1
-    
-    for constr in PC_lower:
-        s.assert_and_track(constr, 'a'+str(counter))
-        counter += 1
-
-    # for constr in durable:
-    #     s.assert_and_track(constr, 'a'+str(counter))
-    #     counter += 1
-    
-    for constr in crash:
-        s.assert_and_track(constr, 'a'+str(counter))
-        counter += 1
-    
-    result = s.check()
-    print(s)
-    print(result)
-    print(type(s))
-    if result == unsat : 
-        c = s.unsat_core()
-        print(c)
-        # for x in c:
-        #     print(s.model()[x])
-    
+        
 if __name__ == "__main__":
     # inputFileName = "../inputFiles/"+sys.argv[1]         #"trace-1.txt"
-    # outputFileName = "../inputFiles/"+sys.argv[2]   
+    # outputFileName = "../outputFiles/"+sys.argv[1] 
     inputFileName = sys.argv[1]         #"trace-1.txt"
-    outputFileName = sys.argv[2] 
+    outputFileName = "../inputFiles/"+"PMConstraintViolations_"+sys.argv[1].split("/")[-1]  
     # addConstraints(inputFileName, outputFileName)
     constructAllConstraints(inputFileName, outputFileName)
     # constructAllConstraintsUNSATCoreWay(inputFileName, outputFileName)
