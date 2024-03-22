@@ -200,7 +200,7 @@ def addConstraints(inputFileName, outputFileName):
     writer.close()
 
 if __name__ == "__main__":
-    inputFileName = "../inputFiles/"+sys.argv[1]         #"trace-1.txt"
+    inputFileName = "../inputFiles/"+sys.argv[1]         # "trace-1.txt"
     outputFileName = "../outputFiles/"+sys.argv[1]   
     addConstraints(inputFileName, outputFileName)
 

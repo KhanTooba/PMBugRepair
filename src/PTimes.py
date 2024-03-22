@@ -46,17 +46,17 @@ def printAllSolutions(s, lastStmt, writer):
 
 def parseTraceHelper(elements, index):
     traceParsed = [index]
-    if elements[0]=="LOAD":
+    if elements[0]=="'LOAD'":
         traceParsed.append(100)
-    elif elements[0]=="STORE":
+    elif elements[0]=="'STORE'":
         traceParsed.append(101)
-    elif elements[0]=="CLFLUSH":
+    elif elements[0]=="'CLFLUSH'":
         traceParsed.append(102)
-    elif elements[0]=="SFENCE":
+    elif elements[0]=="'SFENCE'":
         traceParsed.append(103)
-    elif elements[0]=="LOCK":
+    elif elements[0]=="'LOCK'":
         traceParsed.append(104)
-    elif elements[0]=="UNLOCK":
+    elif elements[0]=="'UNLOCK'":
         traceParsed.append(105)
     
     traceParsed.append(elements[1].strip())
@@ -80,7 +80,9 @@ def parseTrace(file):
     trace = []
     counter = 1
     for line in trace_file:
+        # print(line)
         elements = line.strip("[]\n").split(",")
+        # print(parseTraceHelper(elements, counter))
         trace.append(parseTraceHelper(elements, counter))
         counter += 1
 
@@ -167,7 +169,7 @@ def durability(writer, trace):
     durable = []
     for stmt in range(0, len(trace)):
         if(trace[stmt][1]==101):
-            durable.append(Int("lower_"+str(stmt+1))==-1)
+            durable.append(Int("Upper_"+str(stmt+1))>=999)
     
     writer.write("\nDurability constraints:\n")
     for d in durable:
@@ -186,8 +188,8 @@ def crashConsistency(writer, trace):
                     flag = 1
                 if(t_id == trace[j][-1] and flag==1):
                     continue
-                if(trace[j][1]==101 and trace[stmt][2]==trace[j][2]):
-                    break
+                if(trace[j][1]==101 and trace[stmt][2]==trace[j][3]):
+                    crash.append(Not(Int("Upper_"+str(stmt+1))<Int("lower_"+str(j+1))))
                 if(trace[j][1]==100 and trace[stmt][2]==trace[j][3]):
                     crash.append(Not(Int("Upper_"+str(stmt+1))<Int("lower_"+str(j+1))))
     writer.write("\nPrinting crash consistency constraints:\n")
@@ -274,6 +276,7 @@ def lockSemantics(writer, trace):
 def constructAllConstraints(inputFileName, outputFileName):
     writer = open(outputFileName, 'w+')
     trace = parseTrace(inputFileName)
+    # print(trace)
     PCs = findPCRanges(writer, trace)
     PC_lower, PC_upper = findLowerUpperBounds(writer, trace)
     durable = durability(writer, trace)
@@ -289,6 +292,8 @@ def constructAllConstraints(inputFileName, outputFileName):
     for c in crash:
         durable.append(c)
     solver.add(Or(durable))
+    # print(solver)
+    # print(solver.check())
 
     exec = 0
     while solver.check()==sat:
