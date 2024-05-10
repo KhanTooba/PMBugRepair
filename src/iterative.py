@@ -235,15 +235,27 @@ def buildConstraints(trace):
                             pt.append(Int("pt_"+str(trace[i][0]))<Int("pc_"+str(trace[k][0])))
                         
     #Adding phi_persist
+    for i in range(len(trace)):
+        if trace[i][1]==102:
+            # print("FLUSH", i)
+            for j in range(0, i):
+                if trace[j][1]==101 and trace[j][2]==trace[i][2] and trace[j][-2]==trace[i][-2]:
+                    # print("STORE")
+                    #CLFLUSHOPT cannot be encountered if a STORE hasn't been encountered
+                    persist.append(Int("pc_"+str(trace[j][0]))<Int("pc_"+str(trace[i][0])))
+                    # print(persist)
+                    break
 
     # print("Phi_PCs: ", pcs)
     # print("Phi_seq: ", seq)
     # print("Phi_pts: ", pt)
     # print("Phi_lock:", locks)
+    # print(persist)
     return pcs, seq, pt, persist, locks
 
 def buildSolver(pcs, seq, pt, persist, locks, assertions):
     solver = Solver()
+    writerFile = open("../inputFiles/tempOutput.txt", "w")
 
     for i in itertools.chain(pcs, seq, pt, persist, locks, assertions):
         solver.add(i)
@@ -256,7 +268,8 @@ def buildSolver(pcs, seq, pt, persist, locks, assertions):
             modelAsserts.append(Int(str(m))!=model[m])
 
         solver.add(Or(modelAsserts))
-        print(modelAsserts)
+        writerFile.write(str(modelAsserts)+"\n")
+        # break
         # sorted_ref = printableSolver(solver)
         # print(sorted_ref)
     else:
@@ -273,9 +286,9 @@ if __name__ == "__main__":
     assertions = getAssertions(trace, assertion_file)
     pcs, seq, pt, persist, locks = buildConstraints(trace)
 
+    for t in trace:
+        print(len(t), t)
+
     buildSolver(pcs, seq, pt, persist, locks, assertions)
 
-    print(assertions)
-
-    # for t in trace:
-    #     print(len(t), t)
+    print("Assertions: ", assertions)
