@@ -108,10 +108,10 @@ def getAssertions(trace, fileName):
     for line in file:
         if "DURA" in str(line):
             content = line.replace("]","").replace("\n","").split(":")[1]
-            add = content.split(",")[0]
-            line = content.split(",")[1]
+            # add = content.split(",")[0]
+            # line = content.split(",")[1]
             for t in trace:
-                if str(t[2])==str(add) and t[1]==101:
+                if str(t[2])==str(content) and t[1]==101:
                     d = Int("pt_"+str(t[0]))>=(len(trace)+1)
                     assertions.append(d)
                     # print(str(d)+"\n")

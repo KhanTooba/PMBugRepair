@@ -64,25 +64,28 @@ def getThreads(trace):
 
 def format(trace, threads):
     traceFormatted = []
+    # Store: 0x23fdfb0 Size: 4 ID: 78 @Ln,Col: 31,12 Scope: thread2_function; <Thread ID:139944934520576>
     for t in trace:
+        print(trace)
         element = []
         if t[0]=='LOAD':
             continue
         if t[0] in ['FLUSH', 'FENCE']:
-            element = [t[0], t[1], -1, threads[t[2]]]
+            element = [t[0], t[1], -1, threads[t[2]], -1]
         elif t[0]=='STORE':
             element = [t[0], t[1], -1, threads[t[2]]]
             for t2 in trace:
                 if t2[0]=='LOAD' and t2[-1]==t[-1]:
                     # print('DEP found ',t2, t)
                     element[2] = t2[1]
+            element.append(t[-1])
         # print(element)
         traceFormatted.append(element)
     return traceFormatted
 
 if __name__ == "__main__":
-    inputFileName = sys.argv[1]
-    outputFileName = sys.argv[2]
+    inputFileName = "../inputFiles/"+sys.argv[1]
+    outputFileName = "../inputFiles/"+sys.argv[2]
     trace = fileReader(inputFileName)
     threads = getThreads(trace)
     print(threads)

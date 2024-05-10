@@ -1,0 +1,14 @@
+FUNC_BEGIN: main 1; <Thread ID:139944942917440>
+FUNC_BEGIN: _ZN16PersistentMemoryC2Ev 1; <Thread ID:139944942917440>
+Adding addr: 0x23fdf50 to 0x23fdf54; <Thread ID:139944942917440>
+Adding addr: 0x23fdfb0 to 0x23fdfb4; <Thread ID:139944942917440>
+FUNC_END: _ZN16PersistentMemoryC2Ev 1; <Thread ID:139944942917440>
+FUNC_BEGIN: _ZN16PersistentMemory16thread1_functionEv 1; <Thread ID:139944942913280>
+Store: 0x23fdf50 Size: 4 ID: 67 @Ln,Col: 27,12 Scope: thread1_function; <Thread ID:139944942913280>
+FUNC_END: _ZN16PersistentMemory16thread1_functionEv 1; <Thread ID:139944942913280>
+FUNC_BEGIN: _ZN16PersistentMemory16thread2_functionEv 1; <Thread ID:139944934520576>
+Load: 0x23fdf50 Size: 4 ID: 75 @Ln,Col: 31,14 Scope: thread2_function; <Thread ID:139944934520576>
+Store: 0x23fdfb0 Size: 4 ID: 78 @Ln,Col: 31,12 Scope: thread2_function; <Thread ID:139944934520576>
+CLFLUSHOPT: 0x23fdfb0 LEN: 8; <Thread ID:139944934520576>
+SFENCE;<Thread ID:139944934520576>
+FUNC_END: _ZN16PersistentMemory16thread2_functionEv 1; <Thread ID:139944934520576>

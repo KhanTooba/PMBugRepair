@@ -44,15 +44,16 @@ def printAllSolutions(s, lastStmt, writer):
     
     return numSols
 
+
 def parseTraceHelper(elements, index):
     traceParsed = [index]
     if elements[0]=="'LOAD'":
         traceParsed.append(100)
     elif elements[0]=="'STORE'":
         traceParsed.append(101)
-    elif elements[0]=="'CLFLUSH'":
+    elif elements[0]=="'FLUSH'":
         traceParsed.append(102)
-    elif elements[0]=="'SFENCE'":
+    elif elements[0]=="'FENCE'":
         traceParsed.append(103)
     elif elements[0]=="'LOCK'":
         traceParsed.append(104)
@@ -62,6 +63,8 @@ def parseTraceHelper(elements, index):
     traceParsed.append(elements[1].strip().replace("'",""))
     traceParsed.append(elements[2].strip().replace("'",""))
     traceParsed.append(int(elements[3].strip()))
+
+    # print(traceParsed)
     
     return traceParsed
 
@@ -79,9 +82,11 @@ def parseTrace(file):
     trace_file = open(file)
     trace = []
     counter = 1
+    # print("Printing here")
     for line in trace_file:
         # print(line)
         elements = line.strip("[]\n").split(",")
+        # print(elements)
         # print(parseTraceHelper(elements, counter))
         trace.append(parseTraceHelper(elements, counter))
         counter += 1
@@ -96,24 +101,35 @@ def findPCRanges(writer, trace):
     PCs = []
 
     for stmt in range(1, len(trace)+1):
+        # print(stmt)
         if(trace[stmt-1][-1]!=current_thread):
+            #print("Swapping threads")
             current_thread = trace[stmt-1][-1]
+        #print(stmt, pc, trace[stmt-1][-1])
         if(trace[stmt-1][1]==100 or trace[stmt-1][1]==101 or trace[stmt-1][1]==104 or trace[stmt-1][1]==105):
+            #print(stmt,":\t>=", non_flush_PC, ",\t<=", upper, "\t", non_flush_PC)
             PCs.append(Int("Stmt_"+str(stmt))>=non_flush_PC)
             PCs.append(Int("Stmt_"+str(stmt))<=upper)
             non_flush_PC += 1
         else:
+            #print(stmt,":\t>=",lower)
             PCs.append(Int("Stmt_"+str(stmt))>=lower)
+            PCs.append(Int("Stmt_"+str(stmt))<=upper)
         
         lower += 1
         upper += 1
         
         #Adding fence semantics
         if(trace[stmt-1][1]==103):
+            # print("Adding fence semantics")
             non_flush_PC = stmt+1
-            for j in range(1, stmt):
+            for j in range(1, stmt+1):
                 #print(j, "\t< PC_", stmt, "\t", non_flush_PC)
                 PCs.append(Int("Stmt_"+str(j))<=Int("Stmt_"+str(stmt)))
+                
+    writer.write("Printing the range of Program counters each statement can take:\n")
+    for c in PCs:
+        writer.write(str(c)+"\n")
     
     return PCs
 
@@ -121,35 +137,36 @@ def findLowerUpperBounds(writer, trace):
     PC_lower, PC_upper = [], []
     constraints = []
     for stmt in range(0, len(trace)):
-        lower = -1
+        # print(trace[stmt])
         upper = 999
+        flag = -1
         if(trace[stmt][1]==101):
+            # print("For statement STORE at ", stmt)
             for j in range(stmt+1, len(trace)):
                 
                 if(trace[j][1]==102 and trace[stmt][2]==trace[j][2]):
-                    lower = j+1
+                    flag = 1
                 
-                if(trace[j][1]==103):
+                if(trace[j][1]==103 and flag==1):
                     upper = j+1
+                    # print(upper)
                     break
-        
-        if(trace[stmt][1]==100):
-            lower = stmt+1
 
-        if(lower!=-1):
-            PC_lower.append(Int("lower_"+str(stmt+1))>=Int("Stmt_"+str(lower)))
-        else:
-            PC_lower.append(Int("lower_"+str(stmt+1))<=-1)
+        PC_lower.append(Int("lower_"+str(stmt+1))==Int("Stmt_"+str(stmt+1)))
+
         if(upper!=999):
             PC_upper.append(Int("Upper_"+str(stmt+1))==Int("Stmt_"+str(upper)))
         else:
             PC_upper.append(Int("Upper_"+str(stmt+1))>=999)
-        
-        PC_lower.append(Int("lower_"+str(stmt+1))>=-1)
-        PC_upper.append(Int("Upper_"+str(stmt+1))<=999)
+
+        # PC_upper.append(Int("Upper_"+str(stmt+1))<999)
     
+    writer.write("\nPrinting constraints on Persistent Times upper and lower bounds:\n")
+    for i in range(len(PC_lower)):
+        writer.write(str(PC_lower[i])+"\t"+str(PC_upper[i])+"\n")
     
     return PC_lower, PC_upper
+
 
 def durability(writer, trace):
     durable = []
@@ -310,10 +327,10 @@ def constructAllConstraintsUNSATCoreWay(inputFileName, outputFileName):
         #     print(s.model()[x])
     
 if __name__ == "__main__":
-    # inputFileName = "../inputFiles/"+sys.argv[1]         #"trace-1.txt"
-    # outputFileName = "../inputFiles/"+sys.argv[2]   
-    inputFileName = sys.argv[1]         #"trace-1.txt"
-    outputFileName = sys.argv[2] 
+    inputFileName = "../inputFiles/"+sys.argv[1]         #"trace-1.txt"
+    outputFileName = "../inputFiles/"+sys.argv[2]   
+    # inputFileName = sys.argv[1]         #"trace-1.txt"
+    # outputFileName = sys.argv[2] 
     # addConstraints(inputFileName, outputFileName)
     constructAllConstraints(inputFileName, outputFileName)
     # constructAllConstraintsUNSATCoreWay(inputFileName, outputFileName)

@@ -1,2 +1,4 @@
-['STORE', '0x1e5af50', -1, 0]
-['STORE', '0x1e5afb0', '0x1e5af50', 1]
+['STORE', '0x23fdf50', -1, 0, '27']
+['STORE', '0x23fdfb0', '0x23fdf50', 1, '31']
+['FLUSH', '0x23fdfb0', -1, 1, -1]
+['FENCE', 0, -1, 1, -1]
