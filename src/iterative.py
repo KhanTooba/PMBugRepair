@@ -101,6 +101,7 @@ def parseTrace(file):
 
 def getAssertions(trace, fileName):
     # file = open(sys.argv[2]) #assertionsOPT.txt
+    phi = []
     file = open(fileName)
     assertions = []
 
@@ -135,9 +136,11 @@ def getAssertions(trace, fileName):
             
             c = Not(Int("pt_"+str(s1))<Int("pt_"+str(s2)))
             assertions.append(c)
+            c = Int("pc_"+str(s1))<Int("pc_"+str(s2))
+            phi.append(c)
             # print(str(c)+"\n")
 
-    return assertions
+    return assertions, phi
 
 def appendTrace(trace):
     extra = []
@@ -221,6 +224,7 @@ def buildConstraints(trace):
     Thread 2 should lock on the 2nd variable. How will we know? No idea as of now!
     """
     #Adding phi_pt: to be built on original trace 
+    originalTraceLen = len(trace)
     for i in range(originalTraceLen):
         if trace[i][1]==101: 
         #The persist timing interval for each store statment begins at that store and ends at a corresponding fence
@@ -233,7 +237,10 @@ def buildConstraints(trace):
                         if trace[k][1]==103:
                             #Corresponding sfence found
                             pt.append(Int("pt_"+str(trace[i][0]))<Int("pc_"+str(trace[k][0])))
-                        
+            for j in range(0, originalTraceLen):
+                if trace[j][1]==101 and j!=i:
+                    pt.append(Int("pt_"+str(trace[i][0]))!=Int("pt_"+str(trace[j][0])))
+
     #Adding phi_persist
     for i in range(len(trace)):
         if trace[i][1]==102:
@@ -246,29 +253,218 @@ def buildConstraints(trace):
                     # print(persist)
                     break
 
+        if trace[i][1]==103:
+            # print("FLUSH", i)
+            for j in range(0, i):
+                if trace[j][1]==102 and trace[j][-2]==trace[i][-2]:
+                    # print("STORE")
+                    #SFENCE() cannot be encountered if a CLFLUSHOPT() hasn't been encountered
+                    persist.append(Int("pc_"+str(trace[j][0]))<Int("pc_"+str(trace[i][0])))
+                    # print(persist)
+                    break
+
     # print("Phi_PCs: ", pcs)
     # print("Phi_seq: ", seq)
-    # print("Phi_pts: ", pt)
+    print("Phi_pts: ", pt)
     # print("Phi_lock:", locks)
     # print(persist)
     return pcs, seq, pt, persist, locks
 
-def buildSolver(pcs, seq, pt, persist, locks, assertions):
+def formatModel(model, trace):
+    modelDict = {}
+    for m in model:
+        modelDict[str(m)] = model[m]
+    for t in range(num_threads):
+        print("For thread:", t)
+        for i in range(len(trace)):
+            if trace[i][-2]!=t:
+                continue
+            print("pc_"+str(trace[i][0]), modelDict["pc_"+str(trace[i][0])])
+    return 0
+    
+def buildSolver(pcs, seq, pt, persist, locks, phi, assertions):
     solver = Solver()
     writerFile = open("../inputFiles/tempOutput.txt", "w")
 
-    for i in itertools.chain(pcs, seq, pt, persist, locks, assertions):
+    for i in itertools.chain(pcs, seq, pt, persist, locks, phi):
         solver.add(i)
         # print(i)
+        # print(i)
     
-    while solver.check()==sat:
+    solver.add(Or(assertions))
+    
+    b1 = [  Int("pc_1")<Int("pc_5"),
+            Int("pc_5")<Int("pc_6"),
+            # Int("pc_6")<Int("pc_7"),
+            # Int("pc_7")<Int("pc_8"),
+
+            Int("pc_2")<Int("pc_3"),
+            Int("pc_3")<Int("pc_4"),
+            # Int("pc_4")<Int("pc_9"),
+            # Int("pc_9")<Int("pc_10"),
+
+            Int("pc_4")<Int("pc_5"),
+            Int("pc_3")<Int("pc_6"),
+
+            Int("pc_4")<Int("pc_6"),
+            Int("pc_7")<Int("pc_9"),
+
+            Int("pc_4")<Int("pc_7"),
+            Int("pc_6")<Int("pc_9")
+    ]
+
+    solver.add(Not(And(b1)))
+
+    b2 = [  Int("pc_1")<Int("pc_5"),
+            Int("pc_5")<Int("pc_6"),
+            # Int("pc_6")<Int("pc_7"),
+            # Int("pc_7")<Int("pc_8"),
+
+            Int("pc_2")<Int("pc_3"),
+            Int("pc_3")<Int("pc_4"),
+            # Int("pc_4")<Int("pc_9"),
+            # Int("pc_9")<Int("pc_10"),
+
+            Int("pc_5")<Int("pc_4"), #modified
+            Int("pc_3")<Int("pc_6"),
+
+            Int("pc_4")<Int("pc_6"),
+            Int("pc_7")<Int("pc_9"),
+
+            Int("pc_4")<Int("pc_7"),
+            Int("pc_6")<Int("pc_9")
+    ]
+
+    solver.add(Not(And(b2)))
+
+    b3 = [  Int("pc_1")<Int("pc_5"),
+            Int("pc_5")<Int("pc_6"),
+            # Int("pc_6")<Int("pc_7"),
+            # Int("pc_7")<Int("pc_8"),
+
+            Int("pc_2")<Int("pc_3"),
+            Int("pc_3")<Int("pc_4"),
+            # Int("pc_4")<Int("pc_9"),
+            # Int("pc_9")<Int("pc_10"),
+
+            Int("pc_5")<Int("pc_4"), 
+            Int("pc_3")<Int("pc_6"),
+
+            Int("pc_6")<Int("pc_4"), #modified
+            Int("pc_7")<Int("pc_9"),
+
+            Int("pc_4")<Int("pc_7"),
+            Int("pc_6")<Int("pc_9")
+    ]
+
+    solver.add(Not(And(b3)))
+
+
+    b4 = [  Int("pc_1")<Int("pc_5"),
+            Int("pc_5")<Int("pc_6"),
+            # Int("pc_6")<Int("pc_7"),
+            # Int("pc_7")<Int("pc_8"),
+
+            Int("pc_2")<Int("pc_3"),
+            Int("pc_3")<Int("pc_4"),
+            # Int("pc_4")<Int("pc_9"),
+            # Int("pc_9")<Int("pc_10"),
+
+            Int("pc_5")<Int("pc_4"), 
+            Int("pc_6")<Int("pc_3"),
+
+            Int("pc_6")<Int("pc_4"), 
+            Int("pc_7")<Int("pc_9"),
+
+            Int("pc_7")<Int("pc_4"),
+            Int("pc_6")<Int("pc_9")
+    ]
+
+    solver.add(Not(And(b4)))
+
+
+    b5 = [  Int("pc_1")<Int("pc_5"),
+            Int("pc_5")<Int("pc_6"),
+            # Int("pc_6")<Int("pc_7"),
+            # Int("pc_7")<Int("pc_8"),
+
+            Int("pc_2")<Int("pc_3"),
+            Int("pc_3")<Int("pc_4"),
+            # Int("pc_4")<Int("pc_9"),
+            # Int("pc_9")<Int("pc_10"),
+
+            Int("pc_5")<Int("pc_4"), 
+            Int("pc_3")<Int("pc_6"),
+
+            Int("pc_6")<Int("pc_4"), 
+            Int("pc_7")<Int("pc_9"),
+
+            Int("pc_7")<Int("pc_4"),
+            Int("pc_6")<Int("pc_9")
+    ]
+
+    solver.add(Not(And(b5)))
+
+    b6 = [  Int("pc_1")<Int("pc_5"),
+            Int("pc_5")<Int("pc_6"),
+            # Int("pc_6")<Int("pc_7"),
+            # Int("pc_7")<Int("pc_8"),
+
+            Int("pc_2")<Int("pc_3"),
+            Int("pc_3")<Int("pc_4"),
+            # Int("pc_4")<Int("pc_9"),
+            # Int("pc_9")<Int("pc_10"),
+
+            Int("pc_5")<Int("pc_4"), 
+            Int("pc_3")<Int("pc_6"),
+
+            Int("pc_4")<Int("pc_6"), 
+            Int("pc_7")<Int("pc_9"),
+
+            Int("pc_7")<Int("pc_4"),
+            Int("pc_6")<Int("pc_9")
+    ]
+
+    solver.add(Not(And(b6)))
+
+    b7 = [  Int("pc_1")<Int("pc_5"),
+            Int("pc_5")<Int("pc_6"),
+            # Int("pc_6")<Int("pc_7"),
+            # Int("pc_7")<Int("pc_8"),
+
+            Int("pc_2")<Int("pc_3"),
+            Int("pc_3")<Int("pc_4"),
+            # Int("pc_4")<Int("pc_9"),
+            # Int("pc_9")<Int("pc_10"),
+
+            Int("pc_4")<Int("pc_5"), 
+            Int("pc_3")<Int("pc_6"),
+
+            Int("pc_4")<Int("pc_6"), 
+            Int("pc_7")<Int("pc_9"),
+
+            Int("pc_7")<Int("pc_4"),
+            Int("pc_6")<Int("pc_9")
+    ]
+
+    solver.add(Not(And(b7)))
+
+    
+
+    
+
+                                      
+    if solver.check()==sat:
         model = solver.model()
         modelAsserts = []
         for m in model:
+            # print(m, type(m))
             modelAsserts.append(Int(str(m))!=model[m])
 
         solver.add(Or(modelAsserts))
         writerFile.write(str(modelAsserts)+"\n")
+        print(str(modelAsserts)+"\n")
+        formatModel(model, trace)
         # break
         # sorted_ref = printableSolver(solver)
         # print(sorted_ref)
@@ -283,12 +479,18 @@ if __name__ == "__main__":
     trace = parseTrace(trace_file)
     trace = appendTrace(trace)
 
-    assertions = getAssertions(trace, assertion_file)
+    assertions, phi = getAssertions(trace, assertion_file)
     pcs, seq, pt, persist, locks = buildConstraints(trace)
 
-    for t in trace:
-        print(len(t), t)
+    print("Assertions: ", assertions, phi)
 
-    buildSolver(pcs, seq, pt, persist, locks, assertions)
+    # for t in trace:
+    #     print(len(t), t)
 
-    print("Assertions: ", assertions)
+    buildSolver(pcs, seq, pt, persist, locks, phi, assertions)
+
+    
+
+
+
+    # [11 != pt_1, 7 != pc_8, 4 != pc_5, 3 != pc_4, 8 != pc_3, 1 != pc_2, 5 != pc_6, 9 != pc_9, 2 != pc_1, 2 != pt_2, 6 != pc_7, 10 != pc_10]
