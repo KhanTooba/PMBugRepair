@@ -1,4 +1,8 @@
 from z3 import *
+"""
+Without locks
+"""
+last = 6
 
 def printer(model):
     dict = {}
@@ -6,13 +10,10 @@ def printer(model):
     dict["pc_2"] = ['y=x', '2']
     dict["pc_3"] = ['clflushopt(&y)', '2']
     dict["pc_4"] = ['sfence()', '2']
-    dict["pc_5"] = ['clflush(&x)', '2']
-    dict["pc_6"] = ['Lock(&a)', '1']
-    dict["pc_7"] = ['UNLock(&a)', '1']
-    dict["pc_8"] = ['Lock(&a)', '2']
-    dict["pc_9"] = ['UNLock(&a)', '2']
-    for i in range(1, 10):
+    dict["pc_5"] = ['clflush(&x)', '1']
+    for i in range(1, 6):
         for m in model:
+            # print(m)
             if str(i) in str(model[m]) and not "pt" in str(m):
                 print(i, dict[str(m)])
 
@@ -37,12 +38,12 @@ solver = Solver()
 solver.add(Int("pc_1")<Int("pc_2"))
 pc = []
 
-for i in range(1, 10):
-    pc.append(Int("pc_"+str(i))<10)
+for i in range(1, last):
+    pc.append(Int("pc_"+str(i))<last)
     pc.append(Int("pc_"+str(i))>0)
 
-for i in range(1, 10):
-    for j in range(i+1, 10):
+for i in range(1, last):
+    for j in range(i+1, last):
         pc.append(Int("pc_"+str(i))!=Int("pc_"+str(j)))
 pc.append(Int("pc_4")>Int("pc_3"))
 
@@ -51,9 +52,9 @@ persist.append(Int("pc_3")>Int("pc_2"))
 # persist.append(Int("pc_5")>Int("pc_1"))
 
 lock = []
-lock.append(Or(Int("pc_6")>Int("pc_9"), Int("pc_6")<Int("pc_8")))
-lock.append(Or(Int("pc_8")>Int("pc_7"), Int("pc_8")<Int("pc_6")))
-lock.append(And(Int("pc_7")>Int("pc_6"), Int("pc_9")>Int("pc_8")))
+# lock.append(Or(Int("pc_6")>Int("pc_9"), Int("pc_6")<Int("pc_8")))
+# lock.append(Or(Int("pc_8")>Int("pc_7"), Int("pc_8")<Int("pc_6")))
+# lock.append(And(Int("pc_7")>Int("pc_6"), Int("pc_9")>Int("pc_8")))
 
 pt = []
 pt.append(Int("pt_1")<=Int("pc_5"))
@@ -97,16 +98,15 @@ while solver.check()==sat:
     sai.append(constructConstraint(2, 5, model))
     sai.append(constructConstraint(2, 3, model))
     sai.append(constructConstraint(2, 4, model))
-    sai.append(constructConstraint(1, 5, model))
-    sai.append(constructConstraint(1, 6, model))
-    sai.append(constructConstraint(2, 8, model))
-    sai.append(constructConstraint(1, 8, model))
-    sai.append(constructConstraint(2, 6, model))
+    # sai.append(constructConstraint(1, 5, model))
+    # sai.append(constructConstraint(1, 6, model))
+    # sai.append(constructConstraint(2, 8, model))
+    # sai.append(constructConstraint(1, 8, model))
+    # sai.append(constructConstraint(2, 6, model))
     # sai.append(constructConstraint(3, 5, model))
     # sai.append(constructConstraint(4, 5, model))
     solver.add(Not(And(sai)))
     sais.append(Not(And(sai)))
-    # print("Partial order:", Not(And(sai)))
 
     if solver.check()==sat:
         model = solver.model()
@@ -129,14 +129,12 @@ while s.check()==sat:
     print("\nRepaired program:", r)
     r += 1
     m = s.model()
-    print(m)
     printer(m)
     cons = []
     for mi in m:
         if "pt" not in str(mi):
             cons.append(Int(str(mi))!=m[mi]) 
     s.append(Or(cons))
-    break
 
 """
 s = Solver()
