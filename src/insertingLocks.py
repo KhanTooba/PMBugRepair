@@ -1,6 +1,7 @@
 from z3 import *
 """
-Without locks
+This file takes in the output generated after steps 1 and 2 and process it for step 3 i.e lock insertion. 
+It produces the final repaired program.
 """
 last = 10
 threads = 2
@@ -58,7 +59,7 @@ persist = []
 # persist.append(Int("pc_5")>Int("pc_1"))
 
 sequen = []
-sequen.append(Int("pc_2")<Int("pc_3"))
+sequen.append(Int("pc_1")<Int("pc_2"))
 sequen.append(Int("pc_3")<Int("pc_4"))
 sequen.append(Int("pc_4")<Int("pc_5"))
 
@@ -90,7 +91,7 @@ What I want? That untill my shared variable is written/read and committed to PM,
 Atomicity!
 """
 
-solver.add(Int("pc_1")<Int("pc_2"))
+# solver.add(Int("pc_1")<Int("pc_2"))
 solver.add(pc)
 solver.add(sequen)
 solver.add(persist)
@@ -99,9 +100,9 @@ solver.add(pt)
 solver.add(Or(bug))
 #
 
-for a in solver.assertions():
-    print("("+str(a)+") \land ", end="")
-print(solver.assertions())
+# for a in solver.assertions():
+#     print("("+str(a)+") \land ", end="")
+# print(solver.assertions())
 print()
 print("Initial configuration:")
 model = ''
@@ -112,7 +113,7 @@ if solver.check()==sat:
 
 
 s = Solver()
-s.add(Int("pc_1")<Int("pc_2"))
+# s.add(Int("pc_1")<Int("pc_2"))
 s.add(pc)
 s.add(persist)
 s.add(sequen)
@@ -122,20 +123,21 @@ s.add(pt)
 
 i = 1
 while solver.check()==sat:
-    print("After blocking constraint ", i, ":")
-    i += 1
+    # print("After blocking constraint ", i, ":")
+    # i += 1
     sai = []
     """
     Somehow explain to the solver via constraints that thread switching is not allowed in case of locks. 
     And that the scenario of [Store -> clflushopt-> Dependent Store] is UNSAFE.
     """
-    sai.append(constructConstraint(6, 8, model))
     sai.append(constructConstraint(1, 6, model))
     sai.append(constructConstraint(3, 8, model))
     sai.append(constructConstraint(2, 7, model))
     sai.append(constructConstraint(5, 9, model))
 
-    print(sai)
+    print("Blocking constraint ", i, ":", sai)
+    print("---------------------------------------------------------------------------------------------------------")
+    i += 1
     solver.add(Not(And(sai)))
     s.add(Not(And(sai)))
 
@@ -146,7 +148,7 @@ while solver.check()==sat:
         print()
         
 
-print(s.assertions())
+# print(s.assertions())
 r = 1
 while s.check()==sat:
     print("\nRepaired program:", r)
