@@ -4,6 +4,13 @@ V1:
 This file takes in the output generated after steps 1 and 2 and process it for step 3 i.e lock insertion. 
 It produces the final repaired program.
 Output in ../outputFiles/locksBasedEncoding.txt
+
+V2:
+Modified version of insertingLocks.py
+What are the modifications?
+The bug encoding works on elimnating faulty encodings instead of enforcing locks. 
+Thus, the encoding can automatically figure out the need of a lock.
+Output in ../outputFile/interleaveBasedOutput.txt
 """
 last = 10
 threads = 2
@@ -24,7 +31,7 @@ def printer(model):
     for i in range(1, last):
         for m in model:
             # print(m)
-            if str(i) in str(model[m]) and not "pt" in str(m):
+            if str(i) in str(model[m]) and not "pt" in str(m) and not "interleave" in str(m):
                 print(i, dict[str(m)])
 
 
@@ -50,12 +57,15 @@ pc = []
 for i in range(1, last):
     pc.append(Int("pc_"+str(i))<last)
     pc.append(Int("pc_"+str(i))>0)
+    pc.append(Int("interleave_"+str(i))<last)
+    pc.append(Int("interleave_"+str(i))>0)
 
 for i in range(1, last):
     for j in range(i+1, last):
         pc.append(Int("pc_"+str(i))!=Int("pc_"+str(j)))
-pc.append(Int("pc_4")>Int("pc_3"))
-
+        pc.append(Int("interleave_"+str(i))!=Int("interleave_"+str(j)))
+# pc.append(Int("pc_4")>Int("pc_3"))
+pc.append(Int("pc_1")<Int("pc_3"))
 persist = []
 # persist.append(Int("pc_3")>Int("pc_2"))
 # persist.append(Int("pc_5")>Int("pc_1"))
@@ -81,12 +91,29 @@ bug = []
 """
 Bugs should say that either read on x is not atomic or write on x is not atomic. 
 Give me all traces where either is not atomic.
+Either 1, 2 should execute before 3, 4, 5 or entirely after that.
+Define a symbolic variable called "interleave". 
+Interleave can have values that are possible for statements.
+Find the configuration in which interleave is not possible.
+Which interleavings are erroneous?
+1-3-4-5-2
+1-3-2-4-5
+1-3-4-2-5
 """
 
-bug.append(Or(Int("pc_7")<Int("pc_2"), Int("pc_6")>Int("pc_1")))
-bug.append(Or(Int("pc_9")<Int("pc_5"), Int("pc_8")>Int("pc_3")))
-# bug.append(Or(Int("pc_4")>Int("pc_2"), Int("pc_4")<Int("pc_1")))
-# bug.append(Or(Int("pc_5")>Int("pc_2"), Int("pc_5")<Int("pc_1")))
+bug.append(Or(Int("interleave_1")<Int("pc_8"),Int("interleave_1")>Int("pc_9")))
+bug.append(Or(Int("interleave_2")<Int("pc_8"),Int("interleave_2")>Int("pc_9")))
+bug.append(Or(Int("interleave_3")<Int("pc_6"),Int("interleave_3")>Int("pc_7")))
+bug.append(Or(Int("interleave_4")<Int("pc_6"),Int("interleave_4")>Int("pc_7")))
+bug.append(Or(Int("interleave_5")<Int("pc_6"),Int("interleave_5")>Int("pc_7")))
+
+bug.append(Or(
+            And(Int("interleave_1")<Int("interleave_3"), Int("interleave_3")<Int("interleave_4"), 
+                  Int("interleave_4")<Int("interleave_2"), Int("interleave_2")<Int("interleave_5")),
+            And(Int("interleave_1")<Int("interleave_3"), Int("interleave_3")<Int("interleave_4"), 
+                  Int("interleave_4")<Int("interleave_5"), Int("interleave_5")<Int("interleave_2")),
+            And(Int("interleave_1")<Int("interleave_3"), Int("interleave_3")<Int("interleave_2"), 
+                  Int("interleave_2")<Int("interleave_4"), Int("interleave_4")<Int("interleave_5"))))
 
 """
 What I want? That untill my shared variable is written/read and committed to PM, I shouldn't be able to release lock. 
@@ -99,7 +126,7 @@ solver.add(sequen)
 solver.add(persist)
 solver.add(lock)
 solver.add(pt)
-solver.add(Or(bug))
+solver.add(And(bug))
 #
 
 # for a in solver.assertions():
@@ -157,8 +184,9 @@ while s.check()==sat:
     r += 1
     m = s.model()
     printer(m)
+    print(m)
     cons = []
     for mi in m:
-        if "pt" not in str(mi):
+        if "pc" in str(mi):
             cons.append(Int(str(mi))!=m[mi]) 
     s.append(Or(cons))
