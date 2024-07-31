@@ -115,6 +115,9 @@ bug.append(Or(
             And(Int("interleave_1")<Int("interleave_3"), Int("interleave_3")<Int("interleave_2"), 
                   Int("interleave_2")<Int("interleave_4"), Int("interleave_4")<Int("interleave_5"))))
 
+for b in bug:
+    print(b)
+
 """
 What I want? That untill my shared variable is written/read and committed to PM, I shouldn't be able to release lock. 
 Atomicity!

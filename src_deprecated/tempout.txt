@@ -1,0 +1,510 @@
+Or(interleave_1 < pc_8, interleave_1 > pc_9)
+Or(interleave_2 < pc_8, interleave_2 > pc_9)
+Or(interleave_3 < pc_6, interleave_3 > pc_7)
+Or(interleave_4 < pc_6, interleave_4 > pc_7)
+Or(interleave_5 < pc_6, interleave_5 > pc_7)
+Or(And(interleave_1 < interleave_3,
+       interleave_3 < interleave_4,
+       interleave_4 < interleave_2,
+       interleave_2 < interleave_5),
+   And(interleave_1 < interleave_3,
+       interleave_3 < interleave_4,
+       interleave_4 < interleave_5,
+       interleave_5 < interleave_2),
+   And(interleave_1 < interleave_3,
+       interleave_3 < interleave_2,
+       interleave_2 < interleave_4,
+       interleave_4 < interleave_5))
+
+Initial configuration:
+1 ['x=10', '1']
+2 ['clflush(&x)', '1']
+3 ['y=x', '2']
+4 ['clflushopt(&y)', '2']
+5 ['sfence()', '2']
+6 ['Lock(&a)', '1']
+7 ['UNLock(&a)', '1']
+8 ['Lock(&a)', '2']
+9 ['UNLock(&a)', '2']
+
+Blocking constraint  1 : [pc_1 < pc_6, pc_3 < pc_8, pc_2 < pc_7, pc_5 < pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 5,
+ pt_1 = 3,
+ pc_5 = 9,
+ interleave_1 = 1,
+ interleave_7 = 6,
+ pc_4 = 7,
+ pc_3 = 6,
+ interleave_3 = 3,
+ pc_6 = 1,
+ pt_2 = 6,
+ pc_1 = 3,
+ interleave_9 = 8,
+ interleave_4 = 7,
+ interleave_5 = 9,
+ interleave_8 = 2,
+ pc_2 = 4,
+ interleave_6 = 5,
+ pc_9 = 8,
+ pc_7 = 2,
+ interleave_2 = 4]
+1 ['Lock(&a)', '1']
+2 ['UNLock(&a)', '1']
+3 ['x=10', '1']
+4 ['clflush(&x)', '1']
+5 ['Lock(&a)', '2']
+6 ['y=x', '2']
+7 ['clflushopt(&y)', '2']
+8 ['UNLock(&a)', '2']
+9 ['sfence()', '2']
+
+Blocking constraint  2 : [pc_1 > pc_6, pc_3 > pc_8, pc_2 > pc_7, pc_5 > pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 5,
+ pt_1 = 3,
+ pc_5 = 8,
+ interleave_1 = 1,
+ interleave_7 = 6,
+ pc_4 = 7,
+ pc_3 = 6,
+ interleave_3 = 3,
+ pc_6 = 1,
+ pt_2 = 6,
+ pc_1 = 3,
+ interleave_9 = 8,
+ interleave_4 = 7,
+ interleave_5 = 9,
+ interleave_8 = 2,
+ pc_2 = 4,
+ interleave_6 = 5,
+ pc_9 = 9,
+ pc_7 = 2,
+ interleave_2 = 4]
+1 ['Lock(&a)', '1']
+2 ['UNLock(&a)', '1']
+3 ['x=10', '1']
+4 ['clflush(&x)', '1']
+5 ['Lock(&a)', '2']
+6 ['y=x', '2']
+7 ['clflushopt(&y)', '2']
+8 ['sfence()', '2']
+9 ['UNLock(&a)', '2']
+
+Blocking constraint  3 : [pc_1 > pc_6, pc_3 > pc_8, pc_2 > pc_7, pc_5 < pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 5,
+ pt_1 = 1,
+ pc_5 = 9,
+ interleave_1 = 1,
+ interleave_7 = 6,
+ pc_4 = 7,
+ pc_3 = 6,
+ interleave_3 = 2,
+ pc_6 = 3,
+ pt_2 = 6,
+ pc_1 = 1,
+ interleave_9 = 8,
+ interleave_4 = 7,
+ interleave_5 = 9,
+ interleave_8 = 5,
+ pc_2 = 2,
+ interleave_6 = 4,
+ pc_9 = 8,
+ pc_7 = 4,
+ interleave_2 = 3]
+1 ['x=10', '1']
+2 ['clflush(&x)', '1']
+3 ['Lock(&a)', '1']
+4 ['UNLock(&a)', '1']
+5 ['Lock(&a)', '2']
+6 ['y=x', '2']
+7 ['clflushopt(&y)', '2']
+8 ['UNLock(&a)', '2']
+9 ['sfence()', '2']
+
+Blocking constraint  4 : [pc_1 < pc_6, pc_3 > pc_8, pc_2 < pc_7, pc_5 > pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 2,
+ pt_1 = 1,
+ pc_5 = 8,
+ interleave_1 = 1,
+ interleave_7 = 2,
+ pc_4 = 4,
+ pc_3 = 3,
+ interleave_3 = 3,
+ pc_6 = 6,
+ pt_2 = 3,
+ pc_1 = 1,
+ interleave_9 = 7,
+ interleave_4 = 8,
+ interleave_5 = 9,
+ interleave_8 = 5,
+ pc_2 = 9,
+ interleave_6 = 4,
+ pc_9 = 5,
+ pc_7 = 7,
+ interleave_2 = 6]
+1 ['x=10', '1']
+2 ['Lock(&a)', '2']
+3 ['y=x', '2']
+4 ['clflushopt(&y)', '2']
+5 ['UNLock(&a)', '2']
+6 ['Lock(&a)', '1']
+7 ['UNLock(&a)', '1']
+8 ['sfence()', '2']
+9 ['clflush(&x)', '1']
+
+Blocking constraint  5 : [pc_1 < pc_6, pc_3 > pc_8, pc_2 > pc_7, pc_5 > pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 5,
+ pt_1 = 2,
+ pc_5 = 9,
+ interleave_1 = 1,
+ interleave_7 = 2,
+ pc_4 = 7,
+ pc_3 = 6,
+ interleave_3 = 5,
+ pc_6 = 1,
+ pt_2 = 6,
+ pc_1 = 2,
+ interleave_9 = 6,
+ interleave_4 = 7,
+ interleave_5 = 8,
+ interleave_8 = 4,
+ pc_2 = 3,
+ interleave_6 = 3,
+ pc_9 = 8,
+ pc_7 = 4,
+ interleave_2 = 9]
+1 ['Lock(&a)', '1']
+2 ['x=10', '1']
+3 ['clflush(&x)', '1']
+4 ['UNLock(&a)', '1']
+5 ['Lock(&a)', '2']
+6 ['y=x', '2']
+7 ['clflushopt(&y)', '2']
+8 ['UNLock(&a)', '2']
+9 ['sfence()', '2']
+
+Blocking constraint  6 : [pc_1 > pc_6, pc_3 > pc_8, pc_2 < pc_7, pc_5 > pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 3,
+ pt_1 = 1,
+ pc_5 = 6,
+ interleave_1 = 1,
+ interleave_7 = 8,
+ pc_4 = 5,
+ pc_3 = 4,
+ interleave_3 = 4,
+ pc_6 = 8,
+ pt_2 = 4,
+ pc_1 = 1,
+ interleave_9 = 5,
+ interleave_4 = 6,
+ interleave_5 = 7,
+ interleave_8 = 3,
+ pc_2 = 2,
+ interleave_6 = 2,
+ pc_9 = 7,
+ pc_7 = 9,
+ interleave_2 = 9]
+1 ['x=10', '1']
+2 ['clflush(&x)', '1']
+3 ['Lock(&a)', '2']
+4 ['y=x', '2']
+5 ['clflushopt(&y)', '2']
+6 ['sfence()', '2']
+7 ['UNLock(&a)', '2']
+8 ['Lock(&a)', '1']
+9 ['UNLock(&a)', '1']
+
+Blocking constraint  7 : [pc_1 < pc_6, pc_3 > pc_8, pc_2 < pc_7, pc_5 < pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 2,
+ pt_1 = 1,
+ pc_5 = 5,
+ interleave_1 = 1,
+ interleave_7 = 9,
+ pc_4 = 4,
+ pc_3 = 3,
+ interleave_3 = 4,
+ pc_6 = 7,
+ pt_2 = 3,
+ pc_1 = 1,
+ interleave_9 = 8,
+ interleave_4 = 5,
+ interleave_5 = 6,
+ interleave_8 = 3,
+ pc_2 = 9,
+ interleave_6 = 2,
+ pc_9 = 6,
+ pc_7 = 8,
+ interleave_2 = 7]
+1 ['x=10', '1']
+2 ['Lock(&a)', '2']
+3 ['y=x', '2']
+4 ['clflushopt(&y)', '2']
+5 ['sfence()', '2']
+6 ['UNLock(&a)', '2']
+7 ['Lock(&a)', '1']
+8 ['UNLock(&a)', '1']
+9 ['clflush(&x)', '1']
+
+Blocking constraint  8 : [pc_1 < pc_6, pc_3 > pc_8, pc_2 > pc_7, pc_5 < pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 3,
+ pt_1 = 1,
+ pc_5 = 5,
+ interleave_1 = 1,
+ interleave_7 = 9,
+ pc_4 = 4,
+ pc_3 = 2,
+ interleave_3 = 4,
+ pc_6 = 7,
+ pt_2 = 2,
+ pc_1 = 1,
+ interleave_9 = 8,
+ interleave_4 = 5,
+ interleave_5 = 6,
+ interleave_8 = 3,
+ pc_2 = 9,
+ interleave_6 = 2,
+ pc_9 = 6,
+ pc_7 = 8,
+ interleave_2 = 7]
+1 ['x=10', '1']
+2 ['y=x', '2']
+3 ['Lock(&a)', '2']
+4 ['clflushopt(&y)', '2']
+5 ['sfence()', '2']
+6 ['UNLock(&a)', '2']
+7 ['Lock(&a)', '1']
+8 ['UNLock(&a)', '1']
+9 ['clflush(&x)', '1']
+
+Blocking constraint  9 : [pc_1 < pc_6, pc_3 < pc_8, pc_2 > pc_7, pc_5 < pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 3,
+ pt_1 = 1,
+ pc_5 = 6,
+ interleave_1 = 1,
+ interleave_7 = 9,
+ pc_4 = 4,
+ pc_3 = 2,
+ interleave_3 = 4,
+ pc_6 = 7,
+ pt_2 = 2,
+ pc_1 = 1,
+ interleave_9 = 8,
+ interleave_4 = 5,
+ interleave_5 = 6,
+ interleave_8 = 3,
+ pc_2 = 9,
+ interleave_6 = 2,
+ pc_9 = 5,
+ pc_7 = 8,
+ interleave_2 = 7]
+1 ['x=10', '1']
+2 ['y=x', '2']
+3 ['Lock(&a)', '2']
+4 ['clflushopt(&y)', '2']
+5 ['UNLock(&a)', '2']
+6 ['sfence()', '2']
+7 ['Lock(&a)', '1']
+8 ['UNLock(&a)', '1']
+9 ['clflush(&x)', '1']
+
+Blocking constraint  10 : [pc_1 < pc_6, pc_3 < pc_8, pc_2 > pc_7, pc_5 > pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 3,
+ pt_1 = 1,
+ pc_5 = 6,
+ interleave_1 = 1,
+ interleave_7 = 6,
+ pc_4 = 4,
+ pc_3 = 2,
+ interleave_3 = 4,
+ pc_6 = 8,
+ pt_2 = 2,
+ pc_1 = 1,
+ interleave_9 = 9,
+ interleave_4 = 5,
+ interleave_5 = 7,
+ interleave_8 = 3,
+ pc_2 = 7,
+ interleave_6 = 2,
+ pc_9 = 5,
+ pc_7 = 9,
+ interleave_2 = 8]
+1 ['x=10', '1']
+2 ['y=x', '2']
+3 ['Lock(&a)', '2']
+4 ['clflushopt(&y)', '2']
+5 ['UNLock(&a)', '2']
+6 ['sfence()', '2']
+7 ['clflush(&x)', '1']
+8 ['Lock(&a)', '1']
+9 ['UNLock(&a)', '1']
+
+Blocking constraint  11 : [pc_1 < pc_6, pc_3 < pc_8, pc_2 < pc_7, pc_5 > pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 5,
+ pt_1 = 2,
+ pc_5 = 8,
+ interleave_1 = 1,
+ interleave_7 = 3,
+ pc_4 = 7,
+ pc_3 = 4,
+ interleave_3 = 6,
+ pc_6 = 1,
+ pt_2 = 4,
+ pc_1 = 2,
+ interleave_9 = 2,
+ interleave_4 = 8,
+ interleave_5 = 9,
+ interleave_8 = 5,
+ pc_2 = 9,
+ interleave_6 = 4,
+ pc_9 = 6,
+ pc_7 = 3,
+ interleave_2 = 7]
+1 ['Lock(&a)', '1']
+2 ['x=10', '1']
+3 ['UNLock(&a)', '1']
+4 ['y=x', '2']
+5 ['Lock(&a)', '2']
+6 ['UNLock(&a)', '2']
+7 ['clflushopt(&y)', '2']
+8 ['sfence()', '2']
+9 ['clflush(&x)', '1']
+
+Blocking constraint  12 : [pc_1 > pc_6, pc_3 < pc_8, pc_2 > pc_7, pc_5 > pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 7,
+ pt_1 = 2,
+ pc_5 = 8,
+ interleave_1 = 1,
+ interleave_7 = 8,
+ pc_4 = 6,
+ pc_3 = 5,
+ interleave_3 = 5,
+ pc_6 = 1,
+ pt_2 = 5,
+ pc_1 = 2,
+ interleave_9 = 2,
+ interleave_4 = 7,
+ interleave_5 = 9,
+ interleave_8 = 4,
+ pc_2 = 3,
+ interleave_6 = 3,
+ pc_9 = 9,
+ pc_7 = 4,
+ interleave_2 = 6]
+1 ['Lock(&a)', '1']
+2 ['x=10', '1']
+3 ['clflush(&x)', '1']
+4 ['UNLock(&a)', '1']
+5 ['y=x', '2']
+6 ['clflushopt(&y)', '2']
+7 ['Lock(&a)', '2']
+8 ['sfence()', '2']
+9 ['UNLock(&a)', '2']
+
+Blocking constraint  13 : [pc_1 > pc_6, pc_3 < pc_8, pc_2 < pc_7, pc_5 < pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 7,
+ pt_1 = 2,
+ pc_5 = 8,
+ interleave_1 = 1,
+ interleave_7 = 8,
+ pc_4 = 6,
+ pc_3 = 5,
+ interleave_3 = 5,
+ pc_6 = 1,
+ pt_2 = 5,
+ pc_1 = 2,
+ interleave_9 = 2,
+ interleave_4 = 7,
+ interleave_5 = 9,
+ interleave_8 = 4,
+ pc_2 = 4,
+ interleave_6 = 3,
+ pc_9 = 9,
+ pc_7 = 3,
+ interleave_2 = 6]
+1 ['Lock(&a)', '1']
+2 ['x=10', '1']
+3 ['UNLock(&a)', '1']
+4 ['clflush(&x)', '1']
+5 ['y=x', '2']
+6 ['clflushopt(&y)', '2']
+7 ['Lock(&a)', '2']
+8 ['sfence()', '2']
+9 ['UNLock(&a)', '2']
+
+Blocking constraint  14 : [pc_1 > pc_6, pc_3 < pc_8, pc_2 > pc_7, pc_5 < pc_9]
+---------------------------------------------------------------------------------------------------------
+[pc_8 = 7,
+ pt_1 = 2,
+ pc_5 = 9,
+ interleave_1 = 1,
+ interleave_7 = 8,
+ pc_4 = 6,
+ pc_3 = 5,
+ interleave_3 = 5,
+ pc_6 = 1,
+ pt_2 = 5,
+ pc_1 = 2,
+ interleave_9 = 2,
+ interleave_4 = 7,
+ interleave_5 = 9,
+ interleave_8 = 4,
+ pc_2 = 3,
+ interleave_6 = 3,
+ pc_9 = 8,
+ pc_7 = 4,
+ interleave_2 = 6]
+1 ['Lock(&a)', '1']
+2 ['x=10', '1']
+3 ['clflush(&x)', '1']
+4 ['UNLock(&a)', '1']
+5 ['y=x', '2']
+6 ['clflushopt(&y)', '2']
+7 ['Lock(&a)', '2']
+8 ['UNLock(&a)', '2']
+9 ['sfence()', '2']
+
+Blocking constraint  15 : [pc_1 > pc_6, pc_3 < pc_8, pc_2 < pc_7, pc_5 > pc_9]
+---------------------------------------------------------------------------------------------------------
+
+Repaired program: 1
+1 ['Lock(&a)', '1']
+2 ['x=10', '1']
+3 ['clflush(&x)', '1']
+4 ['UNLock(&a)', '1']
+5 ['Lock(&a)', '2']
+6 ['y=x', '2']
+7 ['clflushopt(&y)', '2']
+8 ['sfence()', '2']
+9 ['UNLock(&a)', '2']
+[pt_1 = 2,
+ interleave_2 = 1,
+ pc_5 = 8,
+ interleave_1 = 3,
+ interleave_7 = 7,
+ pc_4 = 7,
+ pc_3 = 6,
+ interleave_3 = 2,
+ pc_6 = 1,
+ pt_2 = 6,
+ pc_1 = 2,
+ interleave_9 = 9,
+ interleave_4 = 4,
+ interleave_5 = 5,
+ interleave_8 = 8,
+ pc_2 = 3,
+ interleave_6 = 6,
+ pc_9 = 9,
+ pc_8 = 5,
+ pc_7 = 4]
