@@ -2,11 +2,17 @@
 
 int main() {
     PersistentMemory pm;
-    std::thread t1(&PersistentMemory::thread1_function, &pm);
-    std::thread t2(&PersistentMemory::thread2_function, &pm);
+    pthread_t t1, t2;
 
-    t1.join();
-    t2.join();
+    PersistentMemory_init(&pm);
+
+    // Create and run threads
+    pthread_create(&t1, NULL, thread1_function, &pm);
+    pthread_create(&t2, NULL, thread2_function, &pm);
+
+    // Wait for threads to finish
+    pthread_join(t1, NULL);
+    pthread_join(t2, NULL);
 
     return 0;
 }
