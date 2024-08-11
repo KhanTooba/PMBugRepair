@@ -14,7 +14,7 @@ make -f benchmarkMake -s -B
 To execute step1 (repair individual traces) for all benchmarks in the benchmark folder: 
 ```
 #########################################################################
-# Generate traces: 
+# Execute step 1: 
 #########################################################################
 cd repair
 make -f makeRepair -s -B
