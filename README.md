@@ -2,13 +2,22 @@
 
 ## Ongoing work: Baseline version.
 
+To build the trace generator llvm opt pass: 
+```
+#########################################################################
+# Build opt pass: 
+#########################################################################
+sh builder.sh
+# Results will be saved in PMBugRepair/build
+```
+
 To generate trace for all benchmarks in the benchmark folder: 
 ```
 #########################################################################
 # Generate traces: 
 #########################################################################
 make -f benchmarkMake -s -B
-# Results will be saved in PMC/benchmark/bcFiles/outputs
+# Results will be saved in PMBugRepair/benchmark/bcFiles/outputs
 ```
 
 To execute step1 (repair individual traces) for all benchmarks in the benchmark folder: 
@@ -18,6 +27,6 @@ To execute step1 (repair individual traces) for all benchmarks in the benchmark 
 #########################################################################
 cd repair
 make -f makeRepair -s -B
-# Results will be saved in PMC/benchmark/bcFiles/results
+# Results will be saved in PMBugRepair/benchmark/bcFiles/results
 ```
 
