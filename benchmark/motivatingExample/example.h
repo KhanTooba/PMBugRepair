@@ -1,37 +1,28 @@
-#include <iostream>
-#include <thread>
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
 #include "pm.h"
 
-/*chao: don't do this -- it will lead to infinite recursion
-void *operator new(size_t size) {
-    void *ret;
-    ret = pmalloc(size);
-    return ret;
-}
-*/
-
-class PersistentMemory {
-private:
+typedef struct {
     int *x;
     int *y;
+} PersistentMemory;
 
-public:
-    PersistentMemory() {
-      //x = new int;
-      //y = new int;
-      x = (int*) pmalloc(sizeof(int));
-      y = (int*) pmalloc(sizeof(int));
-    }
+void PersistentMemory_init(PersistentMemory *pm) {
+    pm->x = (int*) pmalloc(sizeof(int));
+    pm->y = (int*) pmalloc(sizeof(int));
+}
 
-    void thread1_function() {
-        *x = 10;
-    }
+void* thread1_function(void *arg) {
+    PersistentMemory *pm = (PersistentMemory*) arg;
+    *(pm->x) = 10;
+    return NULL;
+}
 
-    void thread2_function() {
-        *y = *x;
-	simuFlushOpt(y, sizeof(y));
-	simuSfence();
-    }
-};
-
-
+void* thread2_function(void *arg) {
+    PersistentMemory *pm = (PersistentMemory*) arg;
+    *(pm->y) = *(pm->x);
+    simuFlushOpt(pm->y, sizeof(*(pm->y)));
+    simuSfence();
+    return NULL;
+}
