@@ -1,9 +1,21 @@
 # PMBugRepair
 
-To run the code, execute the following commands:
+To generate trace for all benchmarks in the benchmark folder: 
 ```
-    cd src
-    python3 PTimes.py "fileName.txt"
+#########################################################################
+# Generate traces: 
+#########################################################################
+make -f benchmarkMake -s -B
+# Results will be saved in PMC/benchmark/bcFiles/outputs
 ```
 
-The fileName.txt file should be present within the folder "inputFiles". The output for this execution will be saved under the folder "outputFiles" with the name "fileName.txt".
+To execute step1 (repair individual traces) for all benchmarks in the benchmark folder: 
+```
+#########################################################################
+# Generate traces: 
+#########################################################################
+cd repair
+make -f makeRepair -s -B
+# Results will be saved in PMC/benchmark/bcFiles/results
+```
+
