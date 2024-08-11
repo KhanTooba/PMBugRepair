@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/toobak/PMBugRepair/Transform/PM/pm.cpp
+stdio.h
+-
+stdlib.h
+-
+map
+-
+set
+-
+thread
+-
+iostream
+-
+mutex
+-
+cstdio
+-
+cstdarg
+-
+pthread.h
+-
+string.h
+-
+pm.h
+/home/toobak/PMBugRepair/Transform/PM/pm.h
+
+/home/toobak/PMBugRepair/Transform/PM/pm.h
+stdio.h
+-
+stdlib.h
+-
+
