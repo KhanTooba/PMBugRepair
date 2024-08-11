@@ -1,4 +1,4 @@
-l1 = list  
+l1 = list motivatingExample
 
 process_files:
 	$(foreach file_name,$(l1), \
