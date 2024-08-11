@@ -1,0 +1,21 @@
+##### automatically set up PMInvGen_DIR ####
+PMInvGen_DIR=$(dirname "$0")/../../build/Transform
+
+#PMInvGen_DIR=/home/rss/src/PMC/build/Transform
+
+#########################################################################
+# Step-1  Compiling (Program-Under-Test) to *.bc
+#########################################################################
+clang -g -I./ -I../../Transform/PM/pm.h -emit-llvm -c test_1.c -o test_1.bc -I$PMInvGen_DIR/../../Transform/PM
+
+
+#########################################################################
+# Step-2  opt --pmtracegen
+#########################################################################
+opt -load $PMInvGen_DIR/PMTraceGen/libLLVMPMTraceGen.so --pmtracegen  test_1.bc  -o test_tracegen.bc
+
+
+#########################################################################
+# Step-4  Linking  (Program-Under-Test) with (Zunchen's Library) 
+#########################################################################
+clang -g test_tracegen.bc -pthread -L/usr/lib/x86_64-linux-gnu -lstdc++ -lCppUTest -lCppUTestExt -lm -L$PMInvGen_DIR/PM  -Wl,-rpath=$PMInvGen_DIR/PM -lLLVMPMC 

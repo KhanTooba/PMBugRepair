@@ -1,0 +1,432 @@
+FUNC_BEGIN: main 1; <Thread ID:139993038702400>
+FUNC_BEGIN: stack_new 1; <Thread ID:139993038702400>
+FUNC_BEGIN: stack_conf_init 1; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_conf_init 1; <Thread ID:139993038702400>
+TX_BEGIN; <Thread ID:139993038702400>
+TX_ADD: 0x7ffd36406088; <Thread ID:139993038702400>
+TX_ADD: 0x7ffd36406080; <Thread ID:139993038702400>
+TX_ADD: 0x7ffd36406090; <Thread ID:139993038702400>
+TX_ADD: 0x7ffd36406098; <Thread ID:139993038702400>
+TX_ADD: 0x7ffd364060a0; <Thread ID:139993038702400>
+TX_END; <Thread ID:139993038702400>
+FUNC_END: cc_array_conf_init 1; <Thread ID:139993038702400>
+FUNC_END: stack_conf_init 1; <Thread ID:139993038702400>
+FUNC_BEGIN: stack_new_conf 1; <Thread ID:139993038702400>
+Adding addr: 0x22a0140 to 0x22a0160; <Thread ID:139993038702400>
+Store: 0x22a0148 Size: 8 ID: 39 @Ln,Col: 83,23 Scope: stack_new_conf; <Thread ID:139993038702400>
+Store: 0x22a0150 Size: 8 ID: 42 @Ln,Col: 84,23 Scope: stack_new_conf; <Thread ID:139993038702400>
+DEP: SrcID: 39 DestID: 42; <Thread ID:139993038702400>
+Store: 0x22a0158 Size: 8 ID: 45 @Ln,Col: 85,23 Scope: stack_new_conf; <Thread ID:139993038702400>
+DEP: SrcID: 42 DestID: 45; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_new_conf 1; <Thread ID:139993038702400>
+Adding addr: 0x22a5620 to 0x22a5658; <Thread ID:139993038702400>
+Adding addr: 0x22a56a0 to 0x22a56e0; <Thread ID:139993038702400>
+TX_BEGIN; <Thread ID:139993038702400>
+TX_ADD: 0x22a5638; <Thread ID:139993038702400>
+TX_ADD: 0x22a5630; <Thread ID:139993038702400>
+TX_ADD: 0x22a5628; <Thread ID:139993038702400>
+TX_ADD: 0x22a5640; <Thread ID:139993038702400>
+TX_ADD: 0x22a5648; <Thread ID:139993038702400>
+TX_ADD: 0x22a5650; <Thread ID:139993038702400>
+Store: 0x22a5638 Size: 8 ID: 150 @Ln,Col: 107,20 Scope: cc_array_new_conf; <Thread ID:139993038702400>
+Store: 0x22a5630 Size: 4 ID: 154 @Ln,Col: 108,20 Scope: cc_array_new_conf; <Thread ID:139993038702400>
+DEP: SrcID: 150 DestID: 154; <Thread ID:139993038702400>
+Store: 0x22a5628 Size: 8 ID: 160 @Ln,Col: 109,20 Scope: cc_array_new_conf; <Thread ID:139993038702400>
+DEP: SrcID: 154 DestID: 160; <Thread ID:139993038702400>
+Store: 0x22a5640 Size: 8 ID: 166 @Ln,Col: 111,20 Scope: cc_array_new_conf; <Thread ID:139993038702400>
+DEP: SrcID: 160 DestID: 166; <Thread ID:139993038702400>
+Store: 0x22a5648 Size: 8 ID: 172 @Ln,Col: 112,20 Scope: cc_array_new_conf; <Thread ID:139993038702400>
+DEP: SrcID: 166 DestID: 172; <Thread ID:139993038702400>
+Store: 0x22a5650 Size: 8 ID: 178 @Ln,Col: 113,20 Scope: cc_array_new_conf; <Thread ID:139993038702400>
+DEP: SrcID: 172 DestID: 178; <Thread ID:139993038702400>
+TX_END; <Thread ID:139993038702400>
+FUNC_END: cc_array_new_conf 1; <Thread ID:139993038702400>
+Store: 0x22a0140 Size: 8 ID: 56 @Ln,Col: 90,18 Scope: stack_new_conf; <Thread ID:139993038702400>
+FUNC_END: stack_new_conf 1; <Thread ID:139993038702400>
+FUNC_END: stack_new 1; <Thread ID:139993038702400>
+FUNC_BEGIN: stack_push 1; <Thread ID:139993038702400>
+Load: 0x22a0140 Size: 8 ID: 111 @Ln,Col: 136,32 Scope: stack_push; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_add 1; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 247 @Ln,Col: 183,13 Scope: cc_array_add; <Thread ID:139993038702400>
+Load: 0x22a5628 Size: 8 ID: 250 @Ln,Col: 183,25 Scope: cc_array_add; <Thread ID:139993038702400>
+Load: 0x22a5638 Size: 8 ID: 267 @Ln,Col: 189,9 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 267; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 267; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 270 @Ln,Col: 189,20 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 270; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 270; <Thread ID:139993038702400>
+Store: 0x22a56a0 Size: 8 ID: 272 @Ln,Col: 189,26 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 272; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 272; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 275 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 275; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 275; <Thread ID:139993038702400>
+DEP: SrcID: 272 DestID: 275; <Thread ID:139993038702400>
+Store: 0x22a5620 Size: 8 ID: 277 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 277; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 277; <Thread ID:139993038702400>
+DEP: SrcID: 272 DestID: 277; <Thread ID:139993038702400>
+Load: 0x22a5638 Size: 8 ID: 280 @Ln,Col: 191,23 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 280; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 280; <Thread ID:139993038702400>
+DEP: SrcID: 277 DestID: 280; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 283 @Ln,Col: 191,34 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 283; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 283; <Thread ID:139993038702400>
+DEP: SrcID: 277 DestID: 283; <Thread ID:139993038702400>
+CLFLUSHOPT: 0x22a56a8 LEN: 8; <Thread ID:139993038702400>
+SFENCE;<Thread ID:139993038702400>
+CLFLUSHOPT: 0x22a5620 LEN: 8; <Thread ID:139993038702400>
+SFENCE;<Thread ID:139993038702400>
+FUNC_END: cc_array_add 1; <Thread ID:139993038702400>
+FUNC_END: stack_push 1; <Thread ID:139993038702400>
+FUNC_BEGIN: stack_peek 1; <Thread ID:139993038702400>
+Load: 0x22a0140 Size: 8 ID: 123 @Ln,Col: 151,37 Scope: stack_peek; <Thread ID:139993038702400>
+DEP: SrcID: 111 DestID: 123; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_get_last 1; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 908 @Ln,Col: 435,13 Scope: cc_array_get_last; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 916 @Ln,Col: 438,36 Scope: cc_array_get_last; <Thread ID:139993038702400>
+DEP: SrcID: 908 DestID: 916; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_get_at 1; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 882 @Ln,Col: 416,22 Scope: cc_array_get_at; <Thread ID:139993038702400>
+Load: 0x22a5638 Size: 8 ID: 889 @Ln,Col: 419,16 Scope: cc_array_get_at; <Thread ID:139993038702400>
+DEP: SrcID: 882 DestID: 889; <Thread ID:139993038702400>
+Load: 0x22a56a0 Size: 8 ID: 892 @Ln,Col: 419,12 Scope: cc_array_get_at; <Thread ID:139993038702400>
+DEP: SrcID: 882 DestID: 892; <Thread ID:139993038702400>
+FUNC_END: cc_array_get_at 1; <Thread ID:139993038702400>
+FUNC_END: cc_array_get_last 1; <Thread ID:139993038702400>
+FUNC_END: stack_peek 1; <Thread ID:139993038702400>
+FUNC_BEGIN: stack_push 2; <Thread ID:139993038702400>
+Load: 0x22a0140 Size: 8 ID: 111 @Ln,Col: 136,32 Scope: stack_push; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_add 2; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 247 @Ln,Col: 183,13 Scope: cc_array_add; <Thread ID:139993038702400>
+Load: 0x22a5628 Size: 8 ID: 250 @Ln,Col: 183,25 Scope: cc_array_add; <Thread ID:139993038702400>
+Load: 0x22a5638 Size: 8 ID: 267 @Ln,Col: 189,9 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 267; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 267; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 270 @Ln,Col: 189,20 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 270; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 270; <Thread ID:139993038702400>
+Store: 0x22a56a8 Size: 8 ID: 272 @Ln,Col: 189,26 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 272; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 272; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 275 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 275; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 275; <Thread ID:139993038702400>
+DEP: SrcID: 272 DestID: 275; <Thread ID:139993038702400>
+Store: 0x22a5620 Size: 8 ID: 277 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 277; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 277; <Thread ID:139993038702400>
+DEP: SrcID: 272 DestID: 277; <Thread ID:139993038702400>
+Load: 0x22a5638 Size: 8 ID: 280 @Ln,Col: 191,23 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 280; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 280; <Thread ID:139993038702400>
+DEP: SrcID: 277 DestID: 280; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 283 @Ln,Col: 191,34 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 283; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 283; <Thread ID:139993038702400>
+DEP: SrcID: 277 DestID: 283; <Thread ID:139993038702400>
+CLFLUSHOPT: 0x22a56b0 LEN: 8; <Thread ID:139993038702400>
+SFENCE;<Thread ID:139993038702400>
+CLFLUSHOPT: 0x22a5620 LEN: 8; <Thread ID:139993038702400>
+SFENCE;<Thread ID:139993038702400>
+FUNC_END: cc_array_add 2; <Thread ID:139993038702400>
+FUNC_END: stack_push 2; <Thread ID:139993038702400>
+FUNC_BEGIN: stack_peek 2; <Thread ID:139993038702400>
+Load: 0x22a0140 Size: 8 ID: 123 @Ln,Col: 151,37 Scope: stack_peek; <Thread ID:139993038702400>
+DEP: SrcID: 111 DestID: 123; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_get_last 2; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 908 @Ln,Col: 435,13 Scope: cc_array_get_last; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 916 @Ln,Col: 438,36 Scope: cc_array_get_last; <Thread ID:139993038702400>
+DEP: SrcID: 908 DestID: 916; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_get_at 2; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 882 @Ln,Col: 416,22 Scope: cc_array_get_at; <Thread ID:139993038702400>
+Load: 0x22a5638 Size: 8 ID: 889 @Ln,Col: 419,16 Scope: cc_array_get_at; <Thread ID:139993038702400>
+DEP: SrcID: 882 DestID: 889; <Thread ID:139993038702400>
+Load: 0x22a56a8 Size: 8 ID: 892 @Ln,Col: 419,12 Scope: cc_array_get_at; <Thread ID:139993038702400>
+DEP: SrcID: 882 DestID: 892; <Thread ID:139993038702400>
+FUNC_END: cc_array_get_at 2; <Thread ID:139993038702400>
+FUNC_END: cc_array_get_last 2; <Thread ID:139993038702400>
+FUNC_END: stack_peek 2; <Thread ID:139993038702400>
+FUNC_BEGIN: stack_push 3; <Thread ID:139993038702400>
+Load: 0x22a0140 Size: 8 ID: 111 @Ln,Col: 136,32 Scope: stack_push; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_add 3; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 247 @Ln,Col: 183,13 Scope: cc_array_add; <Thread ID:139993038702400>
+Load: 0x22a5628 Size: 8 ID: 250 @Ln,Col: 183,25 Scope: cc_array_add; <Thread ID:139993038702400>
+Load: 0x22a5638 Size: 8 ID: 267 @Ln,Col: 189,9 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 267; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 267; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 270 @Ln,Col: 189,20 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 270; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 270; <Thread ID:139993038702400>
+Store: 0x22a56b0 Size: 8 ID: 272 @Ln,Col: 189,26 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 272; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 272; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 275 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 275; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 275; <Thread ID:139993038702400>
+DEP: SrcID: 272 DestID: 275; <Thread ID:139993038702400>
+Store: 0x22a5620 Size: 8 ID: 277 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 277; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 277; <Thread ID:139993038702400>
+DEP: SrcID: 272 DestID: 277; <Thread ID:139993038702400>
+Load: 0x22a5638 Size: 8 ID: 280 @Ln,Col: 191,23 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 280; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 280; <Thread ID:139993038702400>
+DEP: SrcID: 277 DestID: 280; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 283 @Ln,Col: 191,34 Scope: cc_array_add; <Thread ID:139993038702400>
+DEP: SrcID: 247 DestID: 283; <Thread ID:139993038702400>
+DEP: SrcID: 250 DestID: 283; <Thread ID:139993038702400>
+DEP: SrcID: 277 DestID: 283; <Thread ID:139993038702400>
+CLFLUSHOPT: 0x22a56b8 LEN: 8; <Thread ID:139993038702400>
+SFENCE;<Thread ID:139993038702400>
+CLFLUSHOPT: 0x22a5620 LEN: 8; <Thread ID:139993038702400>
+SFENCE;<Thread ID:139993038702400>
+FUNC_END: cc_array_add 3; <Thread ID:139993038702400>
+FUNC_END: stack_push 3; <Thread ID:139993038702400>
+FUNC_BEGIN: stack_peek 3; <Thread ID:139993038702400>
+Load: 0x22a0140 Size: 8 ID: 123 @Ln,Col: 151,37 Scope: stack_peek; <Thread ID:139993038702400>
+DEP: SrcID: 111 DestID: 123; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_get_last 3; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 908 @Ln,Col: 435,13 Scope: cc_array_get_last; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 916 @Ln,Col: 438,36 Scope: cc_array_get_last; <Thread ID:139993038702400>
+DEP: SrcID: 908 DestID: 916; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_get_at 3; <Thread ID:139993038702400>
+Load: 0x22a5620 Size: 8 ID: 882 @Ln,Col: 416,22 Scope: cc_array_get_at; <Thread ID:139993038702400>
+Load: 0x22a5638 Size: 8 ID: 889 @Ln,Col: 419,16 Scope: cc_array_get_at; <Thread ID:139993038702400>
+DEP: SrcID: 882 DestID: 889; <Thread ID:139993038702400>
+Load: 0x22a56b0 Size: 8 ID: 892 @Ln,Col: 419,12 Scope: cc_array_get_at; <Thread ID:139993038702400>
+DEP: SrcID: 882 DestID: 892; <Thread ID:139993038702400>
+FUNC_END: cc_array_get_at 3; <Thread ID:139993038702400>
+FUNC_END: cc_array_get_last 3; <Thread ID:139993038702400>
+FUNC_END: stack_peek 3; <Thread ID:139993038702400>
+FUNC_BEGIN: stack_destroy 1; <Thread ID:139993038702400>
+Load: 0x22a0140 Size: 8 ID: 79 @Ln,Col: 107,29 Scope: stack_destroy; <Thread ID:139993038702400>
+DEP: SrcID: 56 DestID: 79; <Thread ID:139993038702400>
+FUNC_BEGIN: cc_array_destroy 1; <Thread ID:139993038702400>
+Load: 0x22a5650 Size: 8 ID: 192 @Ln,Col: 148,9 Scope: cc_array_destroy; <Thread ID:139993038702400>
+Load: 0x22a5638 Size: 8 ID: 195 @Ln,Col: 148,22 Scope: cc_array_destroy; <Thread ID:139993038702400>
+Adding addr: 0x22a56a0; <Thread ID:139993038702400>
+Load: 0x22a5650 Size: 8 ID: 200 @Ln,Col: 149,9 Scope: cc_array_destroy; <Thread ID:139993038702400>
+Adding addr: 0x22a5620; <Thread ID:139993038702400>
+FUNC_END: cc_array_destroy 1; <Thread ID:139993038702400>
+Load: 0x22a0158 Size: 8 ID: 83 @Ln,Col: 108,12 Scope: stack_destroy; <Thread ID:139993038702400>
+Adding addr: 0x22a0140; <Thread ID:139993038702400>
+FUNC_END: stack_destroy 1; <Thread ID:139993038702400>
+FUNC_END: main 1; <Thread ID:139993038702400>
+FUNC_BEGIN: main 1; <Thread ID:140445980895040>
+FUNC_BEGIN: stack_new 1; <Thread ID:140445980895040>
+FUNC_BEGIN: stack_conf_init 1; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_conf_init 1; <Thread ID:140445980895040>
+TX_BEGIN; <Thread ID:140445980895040>
+TX_ADD: 0x7fff68911898; <Thread ID:140445980895040>
+TX_ADD: 0x7fff68911890; <Thread ID:140445980895040>
+TX_ADD: 0x7fff689118a0; <Thread ID:140445980895040>
+TX_ADD: 0x7fff689118a8; <Thread ID:140445980895040>
+TX_ADD: 0x7fff689118b0; <Thread ID:140445980895040>
+TX_END; <Thread ID:140445980895040>
+FUNC_END: cc_array_conf_init 1; <Thread ID:140445980895040>
+FUNC_END: stack_conf_init 1; <Thread ID:140445980895040>
+FUNC_BEGIN: stack_new_conf 1; <Thread ID:140445980895040>
+Adding addr: 0x2377140 to 0x2377160; <Thread ID:140445980895040>
+Store: 0x2377148 Size: 8 ID: 39 @Ln,Col: 83,23 Scope: stack_new_conf; <Thread ID:140445980895040>
+Store: 0x2377150 Size: 8 ID: 42 @Ln,Col: 84,23 Scope: stack_new_conf; <Thread ID:140445980895040>
+DEP: SrcID: 39 DestID: 42; <Thread ID:140445980895040>
+Store: 0x2377158 Size: 8 ID: 45 @Ln,Col: 85,23 Scope: stack_new_conf; <Thread ID:140445980895040>
+DEP: SrcID: 42 DestID: 45; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_new_conf 1; <Thread ID:140445980895040>
+Adding addr: 0x237c620 to 0x237c658; <Thread ID:140445980895040>
+Adding addr: 0x237c6a0 to 0x237c6e0; <Thread ID:140445980895040>
+TX_BEGIN; <Thread ID:140445980895040>
+TX_ADD: 0x237c638; <Thread ID:140445980895040>
+TX_ADD: 0x237c630; <Thread ID:140445980895040>
+TX_ADD: 0x237c628; <Thread ID:140445980895040>
+TX_ADD: 0x237c640; <Thread ID:140445980895040>
+TX_ADD: 0x237c648; <Thread ID:140445980895040>
+TX_ADD: 0x237c650; <Thread ID:140445980895040>
+Store: 0x237c638 Size: 8 ID: 150 @Ln,Col: 107,20 Scope: cc_array_new_conf; <Thread ID:140445980895040>
+Store: 0x237c630 Size: 4 ID: 154 @Ln,Col: 108,20 Scope: cc_array_new_conf; <Thread ID:140445980895040>
+DEP: SrcID: 150 DestID: 154; <Thread ID:140445980895040>
+Store: 0x237c628 Size: 8 ID: 160 @Ln,Col: 109,20 Scope: cc_array_new_conf; <Thread ID:140445980895040>
+DEP: SrcID: 154 DestID: 160; <Thread ID:140445980895040>
+Store: 0x237c640 Size: 8 ID: 166 @Ln,Col: 111,20 Scope: cc_array_new_conf; <Thread ID:140445980895040>
+DEP: SrcID: 160 DestID: 166; <Thread ID:140445980895040>
+Store: 0x237c648 Size: 8 ID: 172 @Ln,Col: 112,20 Scope: cc_array_new_conf; <Thread ID:140445980895040>
+DEP: SrcID: 166 DestID: 172; <Thread ID:140445980895040>
+Store: 0x237c650 Size: 8 ID: 178 @Ln,Col: 113,20 Scope: cc_array_new_conf; <Thread ID:140445980895040>
+DEP: SrcID: 172 DestID: 178; <Thread ID:140445980895040>
+TX_END; <Thread ID:140445980895040>
+FUNC_END: cc_array_new_conf 1; <Thread ID:140445980895040>
+Store: 0x2377140 Size: 8 ID: 56 @Ln,Col: 90,18 Scope: stack_new_conf; <Thread ID:140445980895040>
+FUNC_END: stack_new_conf 1; <Thread ID:140445980895040>
+FUNC_END: stack_new 1; <Thread ID:140445980895040>
+FUNC_BEGIN: stack_push 1; <Thread ID:140445980895040>
+Load: 0x2377140 Size: 8 ID: 111 @Ln,Col: 136,32 Scope: stack_push; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_add 1; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 247 @Ln,Col: 183,13 Scope: cc_array_add; <Thread ID:140445980895040>
+Load: 0x237c628 Size: 8 ID: 250 @Ln,Col: 183,25 Scope: cc_array_add; <Thread ID:140445980895040>
+Load: 0x237c638 Size: 8 ID: 267 @Ln,Col: 189,9 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 267; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 267; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 270 @Ln,Col: 189,20 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 270; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 270; <Thread ID:140445980895040>
+Store: 0x237c6a0 Size: 8 ID: 272 @Ln,Col: 189,26 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 272; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 272; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 275 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 275; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 275; <Thread ID:140445980895040>
+DEP: SrcID: 272 DestID: 275; <Thread ID:140445980895040>
+Store: 0x237c620 Size: 8 ID: 277 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 277; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 277; <Thread ID:140445980895040>
+DEP: SrcID: 272 DestID: 277; <Thread ID:140445980895040>
+Load: 0x237c638 Size: 8 ID: 280 @Ln,Col: 191,23 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 280; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 280; <Thread ID:140445980895040>
+DEP: SrcID: 277 DestID: 280; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 283 @Ln,Col: 191,34 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 283; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 283; <Thread ID:140445980895040>
+DEP: SrcID: 277 DestID: 283; <Thread ID:140445980895040>
+CLFLUSHOPT: 0x237c6a8 LEN: 8; <Thread ID:140445980895040>
+SFENCE;<Thread ID:140445980895040>
+CLFLUSHOPT: 0x237c620 LEN: 8; <Thread ID:140445980895040>
+SFENCE;<Thread ID:140445980895040>
+FUNC_END: cc_array_add 1; <Thread ID:140445980895040>
+FUNC_END: stack_push 1; <Thread ID:140445980895040>
+FUNC_BEGIN: stack_peek 1; <Thread ID:140445980895040>
+Load: 0x2377140 Size: 8 ID: 123 @Ln,Col: 151,37 Scope: stack_peek; <Thread ID:140445980895040>
+DEP: SrcID: 111 DestID: 123; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_get_last 1; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 908 @Ln,Col: 435,13 Scope: cc_array_get_last; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 916 @Ln,Col: 438,36 Scope: cc_array_get_last; <Thread ID:140445980895040>
+DEP: SrcID: 908 DestID: 916; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_get_at 1; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 882 @Ln,Col: 416,22 Scope: cc_array_get_at; <Thread ID:140445980895040>
+Load: 0x237c638 Size: 8 ID: 889 @Ln,Col: 419,16 Scope: cc_array_get_at; <Thread ID:140445980895040>
+DEP: SrcID: 882 DestID: 889; <Thread ID:140445980895040>
+Load: 0x237c6a0 Size: 8 ID: 892 @Ln,Col: 419,12 Scope: cc_array_get_at; <Thread ID:140445980895040>
+DEP: SrcID: 882 DestID: 892; <Thread ID:140445980895040>
+FUNC_END: cc_array_get_at 1; <Thread ID:140445980895040>
+FUNC_END: cc_array_get_last 1; <Thread ID:140445980895040>
+FUNC_END: stack_peek 1; <Thread ID:140445980895040>
+FUNC_BEGIN: stack_push 2; <Thread ID:140445980895040>
+Load: 0x2377140 Size: 8 ID: 111 @Ln,Col: 136,32 Scope: stack_push; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_add 2; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 247 @Ln,Col: 183,13 Scope: cc_array_add; <Thread ID:140445980895040>
+Load: 0x237c628 Size: 8 ID: 250 @Ln,Col: 183,25 Scope: cc_array_add; <Thread ID:140445980895040>
+Load: 0x237c638 Size: 8 ID: 267 @Ln,Col: 189,9 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 267; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 267; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 270 @Ln,Col: 189,20 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 270; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 270; <Thread ID:140445980895040>
+Store: 0x237c6a8 Size: 8 ID: 272 @Ln,Col: 189,26 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 272; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 272; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 275 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 275; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 275; <Thread ID:140445980895040>
+DEP: SrcID: 272 DestID: 275; <Thread ID:140445980895040>
+Store: 0x237c620 Size: 8 ID: 277 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 277; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 277; <Thread ID:140445980895040>
+DEP: SrcID: 272 DestID: 277; <Thread ID:140445980895040>
+Load: 0x237c638 Size: 8 ID: 280 @Ln,Col: 191,23 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 280; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 280; <Thread ID:140445980895040>
+DEP: SrcID: 277 DestID: 280; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 283 @Ln,Col: 191,34 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 283; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 283; <Thread ID:140445980895040>
+DEP: SrcID: 277 DestID: 283; <Thread ID:140445980895040>
+CLFLUSHOPT: 0x237c6b0 LEN: 8; <Thread ID:140445980895040>
+SFENCE;<Thread ID:140445980895040>
+CLFLUSHOPT: 0x237c620 LEN: 8; <Thread ID:140445980895040>
+SFENCE;<Thread ID:140445980895040>
+FUNC_END: cc_array_add 2; <Thread ID:140445980895040>
+FUNC_END: stack_push 2; <Thread ID:140445980895040>
+FUNC_BEGIN: stack_peek 2; <Thread ID:140445980895040>
+Load: 0x2377140 Size: 8 ID: 123 @Ln,Col: 151,37 Scope: stack_peek; <Thread ID:140445980895040>
+DEP: SrcID: 111 DestID: 123; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_get_last 2; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 908 @Ln,Col: 435,13 Scope: cc_array_get_last; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 916 @Ln,Col: 438,36 Scope: cc_array_get_last; <Thread ID:140445980895040>
+DEP: SrcID: 908 DestID: 916; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_get_at 2; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 882 @Ln,Col: 416,22 Scope: cc_array_get_at; <Thread ID:140445980895040>
+Load: 0x237c638 Size: 8 ID: 889 @Ln,Col: 419,16 Scope: cc_array_get_at; <Thread ID:140445980895040>
+DEP: SrcID: 882 DestID: 889; <Thread ID:140445980895040>
+Load: 0x237c6a8 Size: 8 ID: 892 @Ln,Col: 419,12 Scope: cc_array_get_at; <Thread ID:140445980895040>
+DEP: SrcID: 882 DestID: 892; <Thread ID:140445980895040>
+FUNC_END: cc_array_get_at 2; <Thread ID:140445980895040>
+FUNC_END: cc_array_get_last 2; <Thread ID:140445980895040>
+FUNC_END: stack_peek 2; <Thread ID:140445980895040>
+FUNC_BEGIN: stack_push 3; <Thread ID:140445980895040>
+Load: 0x2377140 Size: 8 ID: 111 @Ln,Col: 136,32 Scope: stack_push; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_add 3; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 247 @Ln,Col: 183,13 Scope: cc_array_add; <Thread ID:140445980895040>
+Load: 0x237c628 Size: 8 ID: 250 @Ln,Col: 183,25 Scope: cc_array_add; <Thread ID:140445980895040>
+Load: 0x237c638 Size: 8 ID: 267 @Ln,Col: 189,9 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 267; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 267; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 270 @Ln,Col: 189,20 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 270; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 270; <Thread ID:140445980895040>
+Store: 0x237c6b0 Size: 8 ID: 272 @Ln,Col: 189,26 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 272; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 272; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 275 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 275; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 275; <Thread ID:140445980895040>
+DEP: SrcID: 272 DestID: 275; <Thread ID:140445980895040>
+Store: 0x237c620 Size: 8 ID: 277 @Ln,Col: 190,13 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 277; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 277; <Thread ID:140445980895040>
+DEP: SrcID: 272 DestID: 277; <Thread ID:140445980895040>
+Load: 0x237c638 Size: 8 ID: 280 @Ln,Col: 191,23 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 280; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 280; <Thread ID:140445980895040>
+DEP: SrcID: 277 DestID: 280; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 283 @Ln,Col: 191,34 Scope: cc_array_add; <Thread ID:140445980895040>
+DEP: SrcID: 247 DestID: 283; <Thread ID:140445980895040>
+DEP: SrcID: 250 DestID: 283; <Thread ID:140445980895040>
+DEP: SrcID: 277 DestID: 283; <Thread ID:140445980895040>
+CLFLUSHOPT: 0x237c6b8 LEN: 8; <Thread ID:140445980895040>
+SFENCE;<Thread ID:140445980895040>
+CLFLUSHOPT: 0x237c620 LEN: 8; <Thread ID:140445980895040>
+SFENCE;<Thread ID:140445980895040>
+FUNC_END: cc_array_add 3; <Thread ID:140445980895040>
+FUNC_END: stack_push 3; <Thread ID:140445980895040>
+FUNC_BEGIN: stack_peek 3; <Thread ID:140445980895040>
+Load: 0x2377140 Size: 8 ID: 123 @Ln,Col: 151,37 Scope: stack_peek; <Thread ID:140445980895040>
+DEP: SrcID: 111 DestID: 123; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_get_last 3; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 908 @Ln,Col: 435,13 Scope: cc_array_get_last; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 916 @Ln,Col: 438,36 Scope: cc_array_get_last; <Thread ID:140445980895040>
+DEP: SrcID: 908 DestID: 916; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_get_at 3; <Thread ID:140445980895040>
+Load: 0x237c620 Size: 8 ID: 882 @Ln,Col: 416,22 Scope: cc_array_get_at; <Thread ID:140445980895040>
+Load: 0x237c638 Size: 8 ID: 889 @Ln,Col: 419,16 Scope: cc_array_get_at; <Thread ID:140445980895040>
+DEP: SrcID: 882 DestID: 889; <Thread ID:140445980895040>
+Load: 0x237c6b0 Size: 8 ID: 892 @Ln,Col: 419,12 Scope: cc_array_get_at; <Thread ID:140445980895040>
+DEP: SrcID: 882 DestID: 892; <Thread ID:140445980895040>
+FUNC_END: cc_array_get_at 3; <Thread ID:140445980895040>
+FUNC_END: cc_array_get_last 3; <Thread ID:140445980895040>
+FUNC_END: stack_peek 3; <Thread ID:140445980895040>
+FUNC_BEGIN: stack_destroy 1; <Thread ID:140445980895040>
+Load: 0x2377140 Size: 8 ID: 79 @Ln,Col: 107,29 Scope: stack_destroy; <Thread ID:140445980895040>
+DEP: SrcID: 56 DestID: 79; <Thread ID:140445980895040>
+FUNC_BEGIN: cc_array_destroy 1; <Thread ID:140445980895040>
+Load: 0x237c650 Size: 8 ID: 192 @Ln,Col: 148,9 Scope: cc_array_destroy; <Thread ID:140445980895040>
+Load: 0x237c638 Size: 8 ID: 195 @Ln,Col: 148,22 Scope: cc_array_destroy; <Thread ID:140445980895040>
+Adding addr: 0x237c6a0; <Thread ID:140445980895040>
+Load: 0x237c650 Size: 8 ID: 200 @Ln,Col: 149,9 Scope: cc_array_destroy; <Thread ID:140445980895040>
+Adding addr: 0x237c620; <Thread ID:140445980895040>
+FUNC_END: cc_array_destroy 1; <Thread ID:140445980895040>
+Load: 0x2377158 Size: 8 ID: 83 @Ln,Col: 108,12 Scope: stack_destroy; <Thread ID:140445980895040>
+Adding addr: 0x2377140; <Thread ID:140445980895040>
+FUNC_END: stack_destroy 1; <Thread ID:140445980895040>
+FUNC_END: main 1; <Thread ID:140445980895040>

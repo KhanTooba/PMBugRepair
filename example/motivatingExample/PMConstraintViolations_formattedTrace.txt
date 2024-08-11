@@ -1,0 +1,68 @@
+Printing the range of Program counters each statement can take:
+Stmt_1 >= 1
+Stmt_1 <= 1
+Stmt_2 >= 2
+Stmt_2 <= 2
+
+Printing constraints on Persistent Times upper and lower bounds:
+lower_1 == Stmt_1	Upper_1 >= 999
+lower_2 == Stmt_2	Upper_2 >= 999
+
+Durability constraints:
+Upper_1 >= 999
+Upper_2 >= 999
+
+Printing crash consistency constraints:
+Not(Upper_1 < lower_2)
+
+Printing Lock Semantics constraints:
+
+
+
+Violation found! 
+Constraint violated:Upper_1 >= 999
+PM Assertion violated: Durability.
+No clflushopt found for STORE of '0x2194f50' at Statement: 1
+Trace element: [1, 101, '0x2194f50', '-1', 0]
+[DURA:0x2194f50]
+Execution trace:
+[Upper_2 = 999,
+ Upper_1 = 999,
+ Stmt_2 = 2,
+ Stmt_1 = 1,
+ lower_2 = 2,
+ lower_1 = 1]
+
+
+Violation found! 
+Constraint violated:Upper_2 >= 999
+PM Assertion violated: Durability.
+No clflushopt found for STORE of '0x2194fb0' at Statement: 2
+Trace element: [2, 101, '0x2194fb0', '0x2194f50', 1]
+[DURA:0x2194fb0]
+Execution trace:
+[Upper_2 = 999,
+ Upper_1 = 999,
+ Stmt_2 = 2,
+ Stmt_1 = 1,
+ lower_2 = 2,
+ lower_1 = 1]
+
+
+Violation found! 
+Constraint violated:Not(Upper_1 < lower_2)
+PM Assesrtion violated: Atomicity (Inter thread crash consistency).
+[MPB:0x2194f50<0x2194fb0]
+Shared varaibles should be locked 
+before STORE of 0x2194f50 at Statement: 1 in Thread:0 and
+before LOAD of 0x2194f50 at Statement: 2 in Thread:1 respectively.
+Trace elements: [1, 101, '0x2194f50', '-1', 0]	[2, 101, '0x2194fb0', '0x2194f50', 1]
+Execution trace:
+[Upper_2 = 999,
+ Upper_1 = 999,
+ Stmt_2 = 2,
+ Stmt_1 = 1,
+ lower_2 = 2,
+ lower_1 = 1]
+
+Number of violations found: 3

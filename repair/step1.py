@@ -327,8 +327,8 @@ def addConstraints(inputFileName, outputFileName):
     return recombinedTrace
 
 if __name__ == "__main__":
-    inputFileName = "../inputFiles/"+sys.argv[1]         # "trace-1.txt"
-    outputFileName = "../outputFiles/"+sys.argv[2]
+    inputFileName = sys.argv[1]         # "trace-1.txt"
+    outputFileName = sys.argv[2]
 
     step1_result = addConstraints(inputFileName, outputFileName)
 

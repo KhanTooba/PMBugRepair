@@ -1,0 +1,33 @@
+# Compiler and Flags
+CC = clang
+CFLAGS = -g -emit-llvm -c
+PMInvGen_dir = ./build/Transform/
+#PM_dir = ./Transform/PM/
+
+# Include directories
+INCLUDE_GEN = ./Transform/PM/
+
+# List of benchmarks
+l1 = list 
+
+all: compile_and_opt
+
+# Compile and run opt in the same loop
+compile_and_opt:
+	$(foreach file,$(l1), \
+		echo "Processing $(file)"; \
+		$(CC) $(CFLAGS) benchmark/$(file)/$(file).c -o benchmark/bcFiles/$(file).bc -I benchmark/$(file) -I $(INCLUDE_GEN); \
+		opt -load $(PMInvGen_dir)/PMTraceGen/libLLVMPMTraceGen.so --pmtracegen benchmark/bcFiles/$(file).bc -o benchmark/bcFiles/$(file)_tracegen.bc; \
+		$(CC) -g benchmark/bcFiles/$(file)_tracegen.bc -o benchmark/bcFiles/$(file)_exec.o -pthread -L/usr/lib/x86_64-linux-gnu -lm -L$(PMInvGen_dir)/PM -Wl,-rpath=$(PMInvGen_dir)/PM -lLLVMPMC ; \
+		./benchmark/bcFiles/$(file)_exec.o; \
+		mv output.txt ./benchmark/bcFiles/outputs/$(file)_output.txt; \
+		echo "Processed $(file)"; \
+	)
+
+# Clean up
+clean:
+	rm -f $(BC_FILES)
+#all: $(BC_FILES)
+
+#Phony targets
+.PHONY: all clean

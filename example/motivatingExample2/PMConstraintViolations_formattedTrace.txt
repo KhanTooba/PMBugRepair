@@ -1,0 +1,74 @@
+Printing the range of Program counters each statement can take:
+Stmt_1 >= 1
+Stmt_1 <= 1
+Stmt_2 >= 2
+Stmt_2 <= 2
+Stmt_3 >= 3
+Stmt_3 <= 3
+Stmt_4 >= 4
+Stmt_4 <= 4
+Stmt_1 <= Stmt_4
+Stmt_2 <= Stmt_4
+Stmt_3 <= Stmt_4
+Stmt_4 <= Stmt_4
+
+Printing constraints on Persistent Times upper and lower bounds:
+lower_1 == Stmt_1	Upper_1 >= 999
+lower_2 == Stmt_2	Upper_2 == Stmt_4
+lower_3 == Stmt_3	Upper_3 >= 999
+lower_4 == Stmt_4	Upper_4 >= 999
+
+Durability constraints:
+Upper_1 >= 999
+
+Printing crash consistency constraints:
+Not(Upper_1 < lower_2)
+
+Printing Lock Semantics constraints:
+
+
+
+Violation found! 
+Constraint violated:Upper_1 >= 999
+PM Assertion violated: Durability.
+No clflushopt found for STORE of '0x23fdf50' at Statement: 1
+Trace element: [1, 101, '0x23fdf50', '-1', 0]
+[DURA:0x23fdf50]
+Execution trace:
+[Upper_4 = 999,
+ Upper_3 = 999,
+ Upper_1 = 999,
+ lower_4 = 4,
+ Stmt_2 = 2,
+ Upper_2 = 4,
+ Stmt_1 = 1,
+ lower_2 = 2,
+ Stmt_4 = 4,
+ Stmt_3 = 3,
+ lower_3 = 3,
+ lower_1 = 1]
+
+
+Violation found! 
+Constraint violated:Not(Upper_1 < lower_2)
+PM Assesrtion violated: Atomicity (Inter thread crash consistency).
+[MPB:0x23fdf50<0x23fdfb0]
+Shared varaibles should be locked 
+before STORE of 0x23fdf50 at Statement: 1 in Thread:0 and
+before LOAD of 0x23fdf50 at Statement: 2 in Thread:1 respectively.
+Trace elements: [1, 101, '0x23fdf50', '-1', 0]	[2, 101, '0x23fdfb0', '0x23fdf50', 1]
+Execution trace:
+[Upper_4 = 999,
+ Upper_3 = 999,
+ Upper_1 = 999,
+ lower_4 = 4,
+ Stmt_2 = 2,
+ Upper_2 = 4,
+ Stmt_1 = 1,
+ lower_2 = 2,
+ Stmt_4 = 4,
+ Stmt_3 = 3,
+ lower_3 = 3,
+ lower_1 = 1]
+
+Number of violations found: 2

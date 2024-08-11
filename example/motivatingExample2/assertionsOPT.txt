@@ -1,0 +1,22 @@
+Printing the range of Program counters each statement can take:
+Stmt_1 >= 1
+Stmt_1 <= 1
+Stmt_2 >= 2
+Stmt_2 <= 2
+Stmt_3 >= 3
+Stmt_3 <= 3
+Stmt_4 >= 4
+Stmt_4 <= 4
+Stmt_1 <= Stmt_4
+Stmt_2 <= Stmt_4
+Stmt_3 <= Stmt_4
+Stmt_4 <= Stmt_4
+
+Printing constraints on Persistent Times upper and lower bounds:
+lower_1 == Stmt_1	Upper_1 >= 999
+lower_2 == Stmt_2	Upper_2 == Stmt_4
+lower_3 == Stmt_3	Upper_3 >= 999
+lower_4 == Stmt_4	Upper_4 >= 999
+[DURA:0x23fdf50]
+
+[MPB:0x23fdf50<0x23fdfb0]

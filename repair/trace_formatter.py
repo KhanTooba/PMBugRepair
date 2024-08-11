@@ -276,8 +276,8 @@ def format(trace, threads, dependencies, loads):
 
 
 if __name__ == "__main__":
-    inputFileName = "../inputFiles/"+sys.argv[1]
-    outputFileName = "../outputFiles/"+sys.argv[2]
+    inputFileName = sys.argv[1]
+    outputFileName = sys.argv[2]
     trace, dependencies, loads = fileReader(inputFileName)
     threads = getThreads(trace)
     print(threads)
