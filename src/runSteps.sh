@@ -1,1 +1,0 @@
-python3 step1.py trace-OPT.txt runSteps.txt
