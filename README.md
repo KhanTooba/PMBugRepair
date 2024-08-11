@@ -4,7 +4,6 @@
 
 To build the trace generator llvm opt pass: 
 ```
-#########################################################################
 # Build opt pass: 
 #########################################################################
 sh builder.sh
@@ -13,7 +12,6 @@ sh builder.sh
 
 To generate trace for all benchmarks in the benchmark folder: 
 ```
-#########################################################################
 # Generate traces: 
 #########################################################################
 make -f benchmarkMake -s -B
@@ -22,7 +20,6 @@ make -f benchmarkMake -s -B
 
 To execute step1 (repair individual traces) for all benchmarks in the benchmark folder: 
 ```
-#########################################################################
 # Execute step 1: 
 #########################################################################
 cd repair
