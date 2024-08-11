@@ -2,17 +2,13 @@
 CC = clang
 CFLAGS = -g -emit-llvm -c
 PMInvGen_dir = ./build/Transform/
-#PM_dir = ./Transform/PM/
 
-# Include directories
 INCLUDE_GEN = ./Transform/PM/
 
-# List of benchmarks
-l1 = list 
+l1 = list motivatingExample
 
 all: compile_and_opt
 
-# Compile and run opt in the same loop
 compile_and_opt:
 	$(foreach file,$(l1), \
 		echo "Processing $(file)"; \
