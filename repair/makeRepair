@@ -1,4 +1,4 @@
-l1 = list motivatingExample stack
+l1 = list motivatingExample stack queue
 
 process_files:
 	rm -f ../benchmark/bcFiles/results/*.txt

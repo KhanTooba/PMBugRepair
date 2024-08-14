@@ -5,7 +5,7 @@ PMInvGen_dir = ./build/Transform/
 
 INCLUDE_GEN = ./Transform/PM/
 
-l1 = list motivatingExample stack
+l1 = list motivatingExample stack queue
 
 all: compile_and_opt
 

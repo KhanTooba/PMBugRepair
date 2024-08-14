@@ -173,14 +173,14 @@ def repairDURA(thread, bug, previousConstraints):
 
             if "pt_"+str(thread[i][0]) in str(bug):
                 if foundFlush==-1:
-                    flush = [str(thread[i][0])+"_"+str(r), 102, thread[i][2], '-1', thread[i][3]]
+                    flush = [str(thread[i][0])+"_"+str(r), 102, thread[i][2], thread[i][3], thread[i][4], thread[i][5]]
                     r += 1
                     thread.insert(i+1, flush)
                     solver.add(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
                     bugFlag = 1
 
                 if foundFence==-1:
-                    fence = [str(thread[i][0])+"_"+str(r), 103, 0, '-1', thread[i][3]]
+                    fence = [str(thread[i][0])+"_"+str(r), 103, thread[i][3], thread[i][4], thread[i][5]]
                     r += 1
                     constraintsToReturn.append(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
                     thread.append(fence)
