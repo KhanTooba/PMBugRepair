@@ -2,111 +2,6 @@ Returning from parceTrace.py
 Number of stores: 100
 Completed parsing.
 Local variables initialized.
-[2, 101, "'0x7f49d8001f00'", '-1', 0, 20] [3, 101, "'0x7f49d8001f08'", '-1', 0, 23] [4, 101, "'0x7f49d8001fc0'", '-1', 0, 20]
-Number of bugs detected:  2
-pt_2 < 9999
-pt_3 < 9999
-Number of threads:  1
-################################################################################################
-Working on Thread: 0 (Length of thread :  100 ): 
-Repairing for bug: pt_2 < 9999
-The bug flag is: 1
-The number of assertions: 10407
-The number of blocking constraint will be:  1
-Blocking constraints: [[2, '2_0', '2_1']]
-Bug is: Not(pt_2 < 9999)
-ITERATION:  1
-[pc_2 > pc_2_1]
-Previous constraints: []
-
-Repairing for bug: pt_3 < 9999
-The bug flag is: 1
-The number of assertions: 10617
-The number of blocking constraint will be:  2
-Blocking constraints: [[3, '3_0', '2_1'], [3, '3_0', '3_1']]
-Bug is: Not(pt_3 < 9999)
-ITERATION:  1
-[pc_3 > pc_2_1, pc_3 > pc_3_1]
-Previous constraints: [pc_2 == pc_2_0 - 1, pc_2 <= pc_2_1]
-
-Time taken to repair thread  0 :  3.460244655609131  seconds.
-################################################################################################
-Beginning the recombination.
-Time taken to recombine individual threads:  0.0002608299255371094  seconds.
-Returning from parceTrace.py
-Number of stores: 100
-Completed parsing.
-Local variables initialized.
-[2, 101, "'0x7fa6f4001f00'", '-1', 0, 20] [3, 101, "'0x7fa6f4001f08'", '-1', 0, 23] [4, 101, "'0x7fa6f40023d0'", '-1', 0, 20]
-Number of bugs detected:  2
-pt_2 < 9999
-pt_3 < 9999
-Number of threads:  1
-################################################################################################
-Working on Thread: 0 (Length of thread :  100 ): 
-Repairing for bug: pt_2 < 9999
-The bug flag is: 1
-The number of assertions: 10407
-The number of blocking constraint will be:  1
-Blocking constraints: [[2, '2_0', '2_1']]
-Bug is: Not(pt_2 < 9999)
-ITERATION:  1
-[pc_2 > pc_2_1]
-Previous constraints: []
-
-Repairing for bug: pt_3 < 9999
-The bug flag is: 1
-The number of assertions: 10617
-The number of blocking constraint will be:  2
-Blocking constraints: [[3, '3_0', '2_1'], [3, '3_0', '3_1']]
-Bug is: Not(pt_3 < 9999)
-ITERATION:  1
-[pc_3 > pc_2_1, pc_3 > pc_3_1]
-Previous constraints: [pc_2 == pc_2_0 - 1, pc_2 <= pc_2_1]
-
-Time taken to repair thread  0 :  3.7422831058502197  seconds.
-################################################################################################
-Beginning the recombination.
-Time taken to recombine individual threads:  0.00026226043701171875  seconds.
-Returning from parceTrace.py
-Number of stores: 100
-Completed parsing.
-Local variables initialized.
-[2, 101, "'0x7f1624001f00'", '-1', 0, 20] [3, 101, "'0x7f1624001f08'", '-1', 0, 23] [4, 101, "'0x7f16240023d0'", '-1', 0, 20]
-Number of bugs detected:  2
-pt_2 < 9999
-pt_3 < 9999
-Number of threads:  1
-################################################################################################
-Working on Thread: 0 (Length of thread :  100 ): 
-Repairing for bug: pt_2 < 9999
-The bug flag is: 1
-The number of assertions: 10407
-The number of blocking constraint will be:  1
-Blocking constraints: [[2, '2_0', '2_1']]
-Bug is: Not(pt_2 < 9999)
-ITERATION:  1
-[pc_2 > pc_2_1]
-Previous constraints: []
-
-Repairing for bug: pt_3 < 9999
-The bug flag is: 1
-The number of assertions: 10617
-The number of blocking constraint will be:  2
-Blocking constraints: [[3, '3_0', '2_1'], [3, '3_0', '3_1']]
-Bug is: Not(pt_3 < 9999)
-ITERATION:  1
-[pc_3 > pc_2_1, pc_3 > pc_3_1]
-Previous constraints: [pc_2 == pc_2_0 - 1, pc_2 <= pc_2_1]
-
-Time taken to repair thread  0 :  4.038328409194946  seconds.
-################################################################################################
-Beginning the recombination.
-Time taken to recombine individual threads:  0.0002598762512207031  seconds.
-Returning from parceTrace.py
-Number of stores: 100
-Completed parsing.
-Local variables initialized.
 [2, 101, "'0x7f6424001f00'", '-1', 0, 20] [3, 101, "'0x7f6424001f08'", '-1', 0, 23] [4, 101, "'0x7f64240023d0'", '-1', 0, 20]
 Number of bugs detected:  2
 pt_2 < 9999
@@ -126,15 +21,15 @@ Previous constraints: []
 
 Repairing for bug: pt_3 < 9999
 The bug flag is: 1
-The number of assertions: 10617
-The number of blocking constraint will be:  2
-Blocking constraints: [[3, '3_0', '2_1'], [3, '3_0', '3_1']]
+The number of assertions: 10511
+The number of blocking constraint will be:  1
+Blocking constraints: [[3, '3_0', '2_1']]
 Bug is: Not(pt_3 < 9999)
 ITERATION:  1
-[pc_3 > pc_2_1, pc_3 > pc_3_1]
+[pc_3 > pc_2_1]
 Previous constraints: [pc_2 == pc_2_0 - 1, pc_2 <= pc_2_1]
 
-Time taken to repair thread  0 :  3.6241118907928467  seconds.
+Time taken to repair thread  0 :  5.063287019729614  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.0002677440643310547  seconds.
+Time taken to recombine individual threads:  0.0003077983856201172  seconds.

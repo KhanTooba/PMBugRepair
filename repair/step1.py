@@ -156,20 +156,35 @@ def repairDURA(thread, bug, previousConstraints):
     r = 0
 
     bugFlag = -1
+    length = len(thread)
 
     for i in range(len(thread)):
         # print(thread[i])
         if thread[i][1]==101:
+            foundFlush = -1
+            foundFence = -1
+            for j in range(i+1, length):
+                if thread[j][1]==102 and thread[i][2]==thread[j][2]:
+                    foundFlush = j
+            
+            for j in range(i+1, length):
+                if thread[j][1]==103:
+                    foundFence = 1 
+
             if "pt_"+str(thread[i][0]) in str(bug):
-                flush = [str(thread[i][0])+"_"+str(r), 102, thread[i][2], '-1', thread[i][3]]
-                r += 1
-                fence = [str(thread[i][0])+"_"+str(r), 103, 0, '-1', thread[i][3]]
-                r += 1
-                thread.insert(i+1, flush)
-                solver.add(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
-                constraintsToReturn.append(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
-                thread.append(fence)
-                bugFlag = 1
+                if foundFlush==-1:
+                    flush = [str(thread[i][0])+"_"+str(r), 102, thread[i][2], '-1', thread[i][3]]
+                    r += 1
+                    thread.insert(i+1, flush)
+                    solver.add(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
+                    bugFlag = 1
+
+                if foundFence==-1:
+                    fence = [str(thread[i][0])+"_"+str(r), 103, 0, '-1', thread[i][3]]
+                    r += 1
+                    constraintsToReturn.append(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
+                    thread.append(fence)
+                    bugFlag = 1
     
     length = len(thread)
     print("The bug flag is:", bugFlag)
@@ -314,8 +329,9 @@ def addConstraints(inputFileName, outputFileName):
             if str(trace[i][-1]) not in duras:
                 bugs.append(Int("pt_"+str(trace[i][0]))<inf)
                 duras.append(str(trace[i][-1]))
+            
             for j in range(i+1, length):
-                if trace[j][1]==101 and trace[i][1]==trace[j][2]:
+                if trace[j][1]==101 and trace[i][2]==trace[j][3]:
                     if [str(trace[i][-1]), str(trace[j][-1])] not in mpbs:
                         bugs.append(Int("pt_"+str(trace[i][0]))<Int("pt_"+str(trace[j][0])))
                         mpbs.append([str(trace[i][-1]), str(trace[j][-1])])

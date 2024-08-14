@@ -22,7 +22,7 @@ Previous constraints: []
 Repairing for bug: pt_3 < 9999
 The bug flag is: -1
 
-Time taken to repair thread  0 :  0.05352783203125  seconds.
+Time taken to repair thread  0 :  0.03858494758605957  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  3 ): 
@@ -30,16 +30,9 @@ Repairing for bug: pt_2 < 9999
 The bug flag is: -1
 
 Repairing for bug: pt_3 < 9999
-The bug flag is: 1
-The number of assertions: 24
-The number of blocking constraint will be:  2
-Blocking constraints: [[3, 4, 5], [3, 4, '3_1']]
-Bug is: Not(pt_3 < 9999)
-ITERATION:  1
-[pc_3 > pc_5, pc_3 > pc_3_1]
-Previous constraints: []
+The bug flag is: -1
 
-Time taken to repair thread  1 :  0.04912829399108887  seconds.
+Time taken to repair thread  1 :  0.0009620189666748047  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  2.6226043701171875e-05  seconds.
+Time taken to recombine individual threads:  3.0994415283203125e-05  seconds.

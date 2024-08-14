@@ -1,6 +1,7 @@
 l1 = list motivatingExample stack
 
 process_files:
+	rm -f ../benchmark/bcFiles/results/*.txt
 	$(foreach file_name,$(l1), \
 	echo "Repairing program in $(file_name)"; \
 	python3 trace_formatter.py ../benchmark/bcFiles/outputs/$(file_name)_output.txt ../benchmark/bcFiles/outputs/$(file_name)_formatted_output.txt; \
