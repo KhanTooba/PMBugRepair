@@ -9,14 +9,15 @@ inf = 9999
 lastStmt = 0
 threads = {}
 
-def printer(model, map):
+def printer(model, map, thread):
+    # print("Model: ",model)
     last = len(map)
     finalModel = []
     for i in range(1, last+1):
+        # print("Searching for index: ",str(i))
         for m in model:
-            # print(m)
-            if str(i) in str(model[m]) and not "pt" in str(m) and not "interleave" in str(m):
-                # print(map[str(m)])
+            if str(i)==str(model[m]) and not "pt" in str(m) and not "interleave" in str(m):
+                # print(i, m, model[m], map[str(m)])
                 finalModel.append(map[str(m)])
     
     return finalModel
@@ -135,130 +136,150 @@ def constructConstraint(i, j, s):
         return Int("pc_"+str(i))<Int("pc_"+str(j))
     else:
         return Int("pc_"+str(i))>Int("pc_"+str(j))
-    
-def repairThread(thread):
-    # print(thread)
-    solver = Solver()
-    # print(thread[0])
-    map = {}
-    adder = []
-    blocking = []
-    r = 1
 
-    flush = []
-    fence = []
-    print(thread[0])
+def sliceThread(thread):
+    """
+    How to do slicing?
+    Only statements relevant to the bug should be present in the slice:
+
+    How to recombine the slice?
+    ...?
+    """
+    sliced = []
+    return sliced
+
+def repairDURA(thread, bug, previousConstraints):
+    solver = Solver()
+    map = {}
+    blocking = []
+    constraintsToReturn = []
+    r = 0
+
+    bugFlag = -1
 
     for i in range(len(thread)):
         # print(thread[i])
         if thread[i][1]==101:
-            foundFlush = -1
-            foundFence = -1
-            for j in range(i+1, len(thread)):
-                if thread[j][1]==102 and thread[i][2]==thread[j][2]:
-                    foundFlush = 1
-            if foundFlush==1:
-                for j in range(i+1, len(thread)):
-                    if thread[j][1]==103 :
-                        foundFence = 1
-            if foundFlush==-1:
-                if thread[i][-1] not in flush:
-                    flush.append(thread[i][-1])
-                    adder.append([str(thread[i][0])+"_"+str(r), 102, thread[i][2], '-1', thread[i][3]])
+            if "pt_"+str(thread[i][0]) in str(bug):
+                flush = [str(thread[i][0])+"_"+str(r), 102, thread[i][2], '-1', thread[i][3]]
                 r += 1
-            if foundFence==-1:
-                if thread[i][-1] not in fence:
-                    fence.append(thread[i][-1])
-                    adder.append([str(thread[i][0])+"_"+str(r), 103, 0, '-1', thread[i][3]])
+                fence = [str(thread[i][0])+"_"+str(r), 103, 0, '-1', thread[i][3]]
                 r += 1
-    
-    print("Reached milestone 1.")
-    for add in adder:
-        thread.append(add)
-    # print(thread)
-    print(len(thread))
-    print(thread[0])
-    bug = []
-    # print(adder)
-    print("Reached milestone 2.")
-    """
-    Now, we have to build constraints:
-    """
+                thread.insert(i+1, flush)
+                solver.add(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
+                constraintsToReturn.append(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
+                thread.append(fence)
+                bugFlag = 1
     
     length = len(thread)
-    store = 0
+    print("The bug flag is:", bugFlag)
+    if bugFlag==-1:
+        return thread, constraintsToReturn
+    # print(length)
+
     for i in range(length):
-        #building phi_pc
-        # print(i)
-        if i%100==0:
-            print(i)
-        map["pc_"+str(i)] = thread[i]
-        solver.add(Int("pc_"+str(i))>0, Int("pc_"+str(i))<length+1)
+        map["pc_"+str(thread[i][0])] = thread[i]
+        solver.add(Int("pc_"+str(thread[i][0]))>0, Int("pc_"+str(thread[i][0]))<length+1) #(0 <= pc_i <= max_stmt)
+        
         for j in range(i+1, length):
-            solver.add(Int("pc_"+str(i))!=Int("pc_"+str(j)))
-        # print("Reached intermediate milestone a")
-        if thread[i][1]==101:
-            store += 1
-            #building phi_seq
+            solver.add(Int("pc_"+str(thread[i][0]))!=Int("pc_"+str(thread[j][0]))) #(pc_i != pc_j ; if i!=j)
+
+        if thread[i][1]==101: #Do this for all STORES
             for j in range(i+1, length):
                 if thread[j][1]==101:
-                    solver.add(Int("pc_"+str(i))<Int("pc_"+str(j)))
-            solver.add(Int("pt_"+str(i))>=Int("pc_"+str(i)))
-            # print("Reached intermediate milestone b")
-            #building phi_pt
+                    solver.add(Int("pc_"+str(thread[i][0]))<Int("pc_"+str(thread[j][0]))) #All STOREs must follow their original order
+            
+            solver.add(Int("pt_"+str(thread[i][0]))>=Int("pc_"+str(thread[i][0]))) #Persistent time begins at the time of STOREs
+            
+            #This relates to the DURA bugs
+            foundFlush = -1
             for j in range(i+1, len(thread)):
                 if thread[j][1]==102 and thread[i][2]==thread[j][2]:
                     foundFlush = j
             if foundFlush!=-1:
                 for j in range(i+1, len(thread)):
                     if thread[j][1]==103 :
-                        solver.add(Implies((And((Int("pc_"+str(i))<=Int("pc_"+str(foundFlush))),
-                                                (Int("pc_"+str(foundFlush))<=Int("pc_"+str(j))))),
-                                           (Int("pt_"+str(i))<=Int("pc_"+str(j)))))
-                        blocking.append([i, foundFlush, j])
-            # print("Reached intermediate milestone c")
-            #building phi_bug
-            bug.append(Int("pt_"+str(i))<inf)
-            for j in range(i+1, length):
-                if thread[j][1]==101 and thread[i][1]==thread[j][2]:
-                    bug.append(Int("pt_"+str(i))<Int("pt_"+str(j)))
-            # print("Reached intermediate milestone d")
-    print("Total number of stores:", store)
-    print("Reached milestone 3.")
-    print("Length of blocking constraint will be: ", len(blocking)*3)
-    # print(bug)
+                        if "pt_"+str(thread[i][0]) in str(bug):
+                            solver.add(simplify(Implies((Int("pc_"+str(thread[i][0]))<Int("pc_"+str(thread[j][0]))),
+                                                (Int("pt_"+str(thread[i][0]))<=Int("pc_"+str(thread[j][0])))
+                                                )))
+                            blocking.append([thread[i][0], thread[foundFlush][0], thread[j][0]])
+    
+    print("The number of assertions:", len(solver.assertions()))
+    print("The number of blocking constraint will be: ", len(blocking))
+    print("Blocking constraints:", blocking)
+    
     s = Solver()
     for assertion in solver.assertions():
         s.add(assertion)
-    
-    solver.add(Not(And(bug)))
-    print("Printing the bug assertions:", bug)
-    print("Total number of assertions generated:", len(solver.assertions()))
-    # print(solver.assertions())
+        # print(assertion)
+
+    solver.add(Not(bug))
+    print("Bug is:", Not(bug))
+        
     iter1 = 1
     while solver.check()==sat:
         model = solver.model()
 
         sai = []
-        #we want a blocking constraint between every (store, flush, fence) pair
+        #we want a blocking constraint between every (store, fence) pair
         for b in blocking:
-            sai.append(constructConstraint(b[0], b[1], model))
             sai.append(constructConstraint(b[0], b[2], model))
-            sai.append(constructConstraint(b[1], b[2], model))
         
         print("ITERATION: ", iter1)
         print(sai)
         iter1 += 1
-        solver.add(Not(And(sai)))
-        s.add(Not(And(sai)))
-        if solver.check()==sat:
-            model = solver.model()
+        solver.add(simplify(Not(And(sai))))
+        # print(simplify(Not(And(sai))))
+        s.add(simplify(Not(And(sai))))
+        constraintsToReturn.append(simplify(Not(And(sai))))
 
-    if s.check()==sat:
-        m = s.model()
-        repairedThread = printer(m, map)
+        #(STORE(&x)->CLFLUSHOPT(&x))->.........->SFENCE()
     
-    return repairedThread
+    repairedThread = thread
+    s.add(previousConstraints)
+    print("Previous constraints:", previousConstraints)
+    models = []
+
+    while s.check()==sat:
+        model = s.model()
+        repairedThread = printer(model, map, thread)
+        
+        models.append(model)
+        block = []
+        for d in model:
+            block.append(d() != model[d])
+        
+        s.add(Or(block))
+    else:
+        print("No repair possible.")
+    print(f"Total models found: {len(models)}")
+    
+    # for stmt in repairedThread:
+    #     print(stmt)
+    
+    return repairedThread, constraintsToReturn
+    
+def repairThread(thread, bugs):
+
+    """
+    Plan:
+    1. List out all the bugs----Done in previous function
+    2. For each bug:
+        a. Create a solver. 
+        b. Solve it.
+    """
+    cons = []
+    for b in bugs:
+        print("Repairing for bug:", b)
+        if str(inf) in str(b):
+            thread, cons = repairDURA(thread, b, cons)
+            # print("Thread final:")
+            # for stmt in thread:
+            #     print(stmt)
+        print()
+
+    return thread
 
 def addConstraints(inputFileName, outputFileName):
     trace = parseTrace(inputFileName)
@@ -282,33 +303,52 @@ def addConstraints(inputFileName, outputFileName):
         a. Repair MPB, DURA bugs in the individual trace.
     3. Combine the resultant traces.
     """
+    bugs = []
+    length = len(trace)
+    mpbs, duras = [], []
+
+    store = 0
+    print(trace[0], trace[1], trace[2])
+    for i in range(length):
+        if trace[i][1]==101:
+            if str(trace[i][-1]) not in duras:
+                bugs.append(Int("pt_"+str(trace[i][0]))<inf)
+                duras.append(str(trace[i][-1]))
+            for j in range(i+1, length):
+                if trace[j][1]==101 and trace[i][1]==trace[j][2]:
+                    if [str(trace[i][-1]), str(trace[j][-1])] not in mpbs:
+                        bugs.append(Int("pt_"+str(trace[i][0]))<Int("pt_"+str(trace[j][0])))
+                        mpbs.append([str(trace[i][-1]), str(trace[j][-1])])
+    
+    print("Number of bugs detected: ", len(bugs))
+    for b in bugs:
+        print(b)
+    
+    #We have all the unique bugs now
+
     time1 = time.time()
     time2 = time1
     indiThreads = getIndividualThreads(trace) #seperated out the threads
     repaired_threads = []
     for i in range(num_threads):
-        print("Working on Thread:", i)
-        print(len(indiThreads[i]))
-        repaired_threads.append(repairThread(indiThreads[i]))
+        print("################################################################################################")
+        print("Working on Thread:", i, "(Length of thread : ", len(indiThreads[i]), "): ")
+        repaired_threads.append(repairThread(indiThreads[i], bugs))
         time2 = time.time()
-        print("Time taken to repair individual thread ", i, ": ", (time2-time1), " seconds.")
+        print("Time taken to repair thread ", i, ": ", (time2-time1), " seconds.")
+        print("################################################################################################")
         time1 = time2
-    # print(lastStmt)
     
     """
     Finally, now we need to recombine the repaired threads
     """
 
     print("Beginning the recombination.")
-    print()
 
     intermediateTrace = []
-    # print(num_threads, repaired_threads)
     for i in range(num_threads):
-        # print(repaired_threads[i])
         for stmt in repaired_threads[i]:
             intermediateTrace.append(stmt)
-    # print(intermediateTrace)
 
     i = 1
     recombinedTrace = []
@@ -316,12 +356,11 @@ def addConstraints(inputFileName, outputFileName):
         for j in range(len(intermediateTrace)):
             if intermediateTrace[j][0]==i:
                 recombinedTrace.append(intermediateTrace[j])
-
-                while j+1<len(intermediateTrace):
-                    if "_" in str(intermediateTrace[j+1][0]):
+                while j+1<len(intermediateTrace) and "_" in str(intermediateTrace[j+1][0]):
                         recombinedTrace.append(intermediateTrace[j+1])
-                    j+=1
-                i += 1
+                        j+=1
+        i += 1
+            
     time3 = time.time()
     print("Time taken to recombine individual threads: ", (time3-time2), " seconds.")
     return recombinedTrace
@@ -332,20 +371,16 @@ if __name__ == "__main__":
 
     step1_result = addConstraints(inputFileName, outputFileName)
 
-    f = open(outputFileName)
+    f = open(outputFileName, "w")
     for stmt in step1_result:
-        print(stmt)
-        f.write(stmt)
+        f.write(str(stmt))
         f.write("\n")
-      
-"""
-Pending steps:
-1. Automatically reading the number of threads
-2. Automatically reading the bugs from a bug file
-"""
-
+    
+    f.close()
 
 """
-Time exceeding 4 hr limit. Possible issues:
-1. Too many stores. Collapse all stores for one data element in one. 
+Time exceeding 4 hr limit. Optimizations:
+1. Focusing on one bug at a time.
+2. The clflushopt(&x) statement is fixed at the position right after STORE(&x).
+3. 
 """
