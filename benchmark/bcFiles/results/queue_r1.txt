@@ -38,9 +38,9 @@ Blocking constraints: [[12, '12_0', '12_1']]
 Bug is: Not(pt_12 < 9999)
 ITERATION:  1
 [pc_12 > pc_12_1]
-Previous constraints: [pc_3 <= pc_2_1]
+Previous constraints: [pc_2 == pc_2_0 - 1, pc_2 <= pc_2_1, pc_3 == pc_3_0 - 1, pc_3 <= pc_2_1]
 
-Time taken to repair thread  0 :  8.315971612930298  seconds.
+Time taken to repair thread  0 :  12.475425004959106  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.00044155120849609375  seconds.
+Time taken to recombine individual threads:  0.00048089027404785156  seconds.

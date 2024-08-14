@@ -29,7 +29,7 @@ ITERATION:  1
 [pc_3 > pc_2_1]
 Previous constraints: [pc_2 == pc_2_0 - 1, pc_2 <= pc_2_1]
 
-Time taken to repair thread  0 :  3.6609268188476562  seconds.
+Time taken to repair thread  0 :  5.100187063217163  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  100 ): 
@@ -39,7 +39,7 @@ The bug flag is: -1
 Repairing for bug: pt_3 < 9999
 The bug flag is: -1
 
-Time taken to repair thread  1 :  0.023592472076416016  seconds.
+Time taken to repair thread  1 :  0.032756805419921875  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.0009050369262695312  seconds.
+Time taken to recombine individual threads:  0.0010523796081542969  seconds.

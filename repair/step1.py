@@ -177,12 +177,12 @@ def repairDURA(thread, bug, previousConstraints):
                     r += 1
                     thread.insert(i+1, flush)
                     solver.add(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
+                    constraintsToReturn.append(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
                     bugFlag = 1
 
                 if foundFence==-1:
                     fence = [str(thread[i][0])+"_"+str(r), 103, thread[i][3], thread[i][4], thread[i][5]]
                     r += 1
-                    constraintsToReturn.append(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
                     thread.append(fence)
                     bugFlag = 1
     
@@ -288,7 +288,9 @@ def repairThread(thread, bugs):
     for b in bugs:
         print("Repairing for bug:", b)
         if str(inf) in str(b):
-            thread, cons = repairDURA(thread, b, cons)
+            thread, cons_1 = repairDURA(thread, b, cons)
+            for constraint in cons_1:
+                cons.append(constraint)
             # print("Thread final:")
             # for stmt in thread:
             #     print(stmt)
