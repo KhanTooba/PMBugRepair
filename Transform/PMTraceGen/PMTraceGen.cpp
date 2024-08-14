@@ -383,7 +383,7 @@ namespace pminv {
 	  Type *VoidPtrTy = Type::getInt8PtrTy(Context);
     FunctionType *FlushFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt8PtrTy(Context), 
-                                                    Type::getInt32Ty(Context),Type::getInt32Ty(Context),
+                                                    Type::getInt64Ty(Context),Type::getInt32Ty(Context),
                                                     Type::getInt32Ty(Context)}, false);
     FunctionCallee FlushFunc = F.getParent()->getOrInsertFunction("__flush", FlushFuncType);
 
@@ -392,7 +392,7 @@ namespace pminv {
 
         if (CallInst *callInst = dyn_cast<CallInst>(&I)) {
 	        if (const Function *calledFunc = callInst->getCalledFunction()) {
-            if (calledFunc->getName().find("clflush")!=std::string::npos) {
+            if (calledFunc->getName().find("clflush")!=std::string::npos || calledFunc->getName().find("simuFlushOpt")!=std::string::npos) {
 
                 Value *argData = callInst->getArgOperand(0); // Corresponds to char *data
                 Value *argLen = callInst->getArgOperand(1); 

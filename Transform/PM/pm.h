@@ -47,7 +47,7 @@ extern "C" {
 #define pmalloc __pmc_malloc
 #define pcalloc  __pmc_calloc
 #define pfree     __pmc_free
-
+//#define simuFlushOpt clflush
   
 #ifdef __cplusplus
 }

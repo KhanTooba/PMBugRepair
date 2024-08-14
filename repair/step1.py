@@ -241,19 +241,19 @@ def repairDURA(thread, bug, previousConstraints):
     print("Previous constraints:", previousConstraints)
     models = []
 
-    while s.check()==sat:
+    if s.check()==sat:
         model = s.model()
         repairedThread = printer(model, map, thread)
         
-        models.append(model)
-        block = []
-        for d in model:
-            block.append(d() != model[d])
+       # models.append(model)
+       # block = []
+       # for d in model:
+       #     block.append(d() != model[d])
         
-        s.add(Or(block))
-    else:
-        print("No repair possible.")
-    print(f"Total models found: {len(models)}")
+       # s.add(Or(block))
+    #else:
+    #    print("No repair possible.")
+    # print(f"Total models found: {len(models)}")
     
     # for stmt in repairedThread:
     #     print(stmt)

@@ -234,7 +234,7 @@ void __pmc_memClear() {
 void simuSfence() {
   if (my_flag) {
     pthread_mutex_lock(&mtx);
-    my_printf("SFENCE;");
+    my_printf("Simulated F-E-N-C-E;");
     pthread_mutex_unlock(&mtx);
   }
 }
@@ -242,7 +242,7 @@ void simuSfence() {
 void simuFlushOpt(void* ptr, size_t len) {
   if (my_flag) {
     pthread_mutex_lock(&mtx);
-    my_printf("CLFLUSHOPT: %p LEN: %zu; ", ptr, len);
+    my_printf("Simulated F-L-U-S-H: %p LEN: %zu; ", ptr, len);
     pthread_mutex_unlock(&mtx);
   }
 }
@@ -250,7 +250,7 @@ void simuFlushOpt(void* ptr, size_t len) {
 void simuFlush(void* ptr, size_t len) {
   if (my_flag) {
       pthread_mutex_lock(&mtx);
-      my_printf("CLFLUSH: %p LEN: %zu; ", ptr, len);
+      my_printf("Simulated F-L-U-S-H: %p LEN: %zu; ", ptr, len);
       pthread_mutex_unlock(&mtx);
   }
 }
