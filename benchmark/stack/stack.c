@@ -2,12 +2,11 @@
 int main() {
     pthread_t thread1, thread2;
 
-    pthread_mutex_init(&stack_mutex, NULL);  // Initialize the mutex
-
-    // Create one thread for pushing and another for popping
-    int start = 0;
-    pthread_create(&thread1, NULL, push_thread_func, &start);
-    pthread_create(&thread2, NULL, pop_thread_func, NULL);
+    pthread_mutex_init(&stack_mutex, NULL);  
+	int start1 = 0;
+    int start2 = 25;
+    pthread_create(&thread1, NULL, thread_func, &start1);
+    pthread_create(&thread2, NULL, thread_func, &start2);
 
     // Wait for both threads to finish
     pthread_join(thread1, NULL);
