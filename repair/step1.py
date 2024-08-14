@@ -157,6 +157,7 @@ def repairDURA(thread, bug, previousConstraints):
 
     bugFlag = -1
     length = len(thread)
+    print("Before append:", length)
 
     for i in range(len(thread)):
         # print(thread[i])
@@ -171,7 +172,8 @@ def repairDURA(thread, bug, previousConstraints):
                 if thread[j][1]==103:
                     foundFence = 1 
 
-            if "pt_"+str(thread[i][0]) in str(bug):
+            if "pt_"+str(thread[i][0])==str(bug).split("<")[0].replace(" ", ""):
+                # print(bug)
                 if foundFlush==-1:
                     flush = [str(thread[i][0])+"_"+str(r), 102, thread[i][2], thread[i][3], thread[i][4], thread[i][5]]
                     r += 1
@@ -187,6 +189,7 @@ def repairDURA(thread, bug, previousConstraints):
                     bugFlag = 1
     
     length = len(thread)
+    print("After append:", length)
     print("The bug flag is:", bugFlag)
     if bugFlag==-1:
         return thread, constraintsToReturn
@@ -207,6 +210,8 @@ def repairDURA(thread, bug, previousConstraints):
             solver.add(Int("pt_"+str(thread[i][0]))>=Int("pc_"+str(thread[i][0]))) #Persistent time begins at the time of STOREs
             
             #This relates to the DURA bugs
+            if "pt_"+str(thread[i][0])!=str(bug).split("<")[0].replace(" ", ""):
+                continue
             foundFlush = -1
             for j in range(i+1, len(thread)):
                 if thread[j][1]==102 and thread[i][2]==thread[j][2]:
@@ -234,19 +239,20 @@ def repairDURA(thread, bug, previousConstraints):
         
     iter1 = 1
     while solver.check()==sat:
+        print("Num:", len(solver.assertions()))
         model = solver.model()
 
         sai = []
         #we want a blocking constraint between every (store, fence) pair
         for b in blocking:
-            sai.append(constructConstraint(b[0], b[2], model))
+            sai.append(Not(constructConstraint(b[0], b[2], model)))
         
         print("ITERATION: ", iter1)
         print(sai)
         iter1 += 1
-        solver.add(simplify(Not(And(sai))))
-        # print(simplify(Not(And(sai))))
-        s.add(simplify(Not(And(sai))))
+        solver.add(Or(sai))
+        print(Or(sai))
+        s.add(Or(sai))
         constraintsToReturn.append(simplify(Not(And(sai))))
 
         #(STORE(&x)->CLFLUSHOPT(&x))->.........->SFENCE()
