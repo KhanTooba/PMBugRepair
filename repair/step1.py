@@ -495,6 +495,13 @@ def addConstraints(inputFileName, outputFileName):
         print(b)
     
     #We have all the unique bugs now
+    print("Original trace:")
+    storeSeqs = []
+    for stmt in trace:
+        # print(stmt)
+        if stmt[1]==101:
+            storeSeqs.append(stmt[0])
+    # print("\n\n")
     time1 = time.time()
     time2 = time1
     indiThreads = getIndividualThreads(trace) #seperated out the threads
@@ -519,21 +526,41 @@ def addConstraints(inputFileName, outputFileName):
         for stmt in repaired_threads[i]:
             intermediateTrace.append(stmt)
 
-    i = 1
-    for stmt in intermediateTrace:
-        print(stmt)
-    print("\n\n")
+    # for stmt in intermediateTrace:
+    #     print(stmt)
+    # print("\n\n")
     recombinedTrace = []
-    while i<=lastStmt:
+
+    """
+    How can recombination be corrected?
+    Only look at the order of stores because we 
+    ensure that the order of stores must be maintained.
+
+    Print a store and everything after it untill you encounter another store.
+    once you encounter another store,
+    """
+    for i in range(0, len(storeSeqs)):
+        storeToFind = storeSeqs[i]
         for j in range(len(intermediateTrace)):
-            if intermediateTrace[j][0]==i:
+            if intermediateTrace[j][0]==storeToFind:
                 recombinedTrace.append(intermediateTrace[j])
-                print(intermediateTrace[j])
-                while j+1<len(intermediateTrace) and "_" in str(intermediateTrace[j+1][0]):
-                        recombinedTrace.append(intermediateTrace[j+1])
-                        print(intermediateTrace[j+1])
-                        j+=1
-        i += 1
+                # print(intermediateTrace[j])
+                while j+1<len(intermediateTrace) and intermediateTrace[j+1][1]!=101:
+                    recombinedTrace.append(intermediateTrace[j+1])
+                    # print("Int: ", intermediateTrace[j+1])
+                    j+=1
+        
+
+    # while i<=lastStmt:
+    #     for j in range(len(intermediateTrace)):
+    #         if intermediateTrace[j][0]==i:
+    #             recombinedTrace.append(intermediateTrace[j])
+    #             print(intermediateTrace[j])
+    #             while j+1<len(intermediateTrace) and "_" in str(intermediateTrace[j+1][0]):
+    #                     recombinedTrace.append(intermediateTrace[j+1])
+    #                     print(intermediateTrace[j+1])
+    #                     j+=1
+    #     i += 1
             
     time3 = time.time()
     print("Time taken to recombine individual threads: ", (time3-time2), " seconds.")
