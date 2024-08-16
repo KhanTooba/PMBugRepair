@@ -11,6 +11,8 @@ num_threads = 1
 inf = 9999
 lastStmt = 0
 threads = {}
+claimedFlushes = []
+fixedBugs = []
 
 def printer(model, map, thread):
     # print("Model: ",model)
@@ -150,6 +152,7 @@ def sliceThread(thread):
     return sliced
 
 def repairDURA(thread, bug, previousConstraints):
+    global claimedFlushes
     solver = Solver()
     map = {}
     blocking = []
@@ -167,10 +170,14 @@ def repairDURA(thread, bug, previousConstraints):
             foundFence = -1
             if "pt_"+str(thread[i][0])!=str(bug).split("<")[0].replace(" ", ""):
                 continue
-
+            else:
+                print("Bug found: ", "pt_"+str(thread[i][0]), str(bug).split("<")[0].replace(" ", ""))
             for j in range(i+1, length):
-                if thread[j][1]==102 and thread[i][2]==thread[j][2]:
+                if thread[j][1]==102 and thread[i][2]==thread[j][2] and thread[j][0] not in claimedFlushes:
                     foundFlush = j
+                    print("Flush found at:", thread[j][0])
+                    claimedFlushes.append(thread[j][0])
+                    print("Constraint added:", Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[j][0]))-1)
                     solver.add(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[j][0]))-1)
                     constraintsToReturn.append(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[j][0]))-1)
                     break
@@ -187,6 +194,7 @@ def repairDURA(thread, bug, previousConstraints):
                     # print("Adding:", flush)
                     r += 1
                     thread.insert(i+1, flush)
+                    claimedFlushes.append(thread[i+1][0])
                     solver.add(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
                     constraintsToReturn.append(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
                     bugFlag = 1
@@ -202,9 +210,9 @@ def repairDURA(thread, bug, previousConstraints):
     
     length = len(thread)
     print("After append:", length)
-    print("The bug flag is:", bugFlag)
-    if bugFlag==-1:
-        return thread, constraintsToReturn
+    # print("The bug flag is:", bugFlag)
+    # if bugFlag==-1:
+    #     return thread, constraintsToReturn
     # print(length)
 
     for i in range(length):
@@ -427,7 +435,7 @@ def repairMPB(thread, bug, previousConstraints):
     return repairedThread, constraintsToReturn
     
 def repairThread(thread, bugs):
-
+    global fixedBugs
     """
     Plan:
     1. List out all the bugs----Done in previous function
@@ -437,6 +445,8 @@ def repairThread(thread, bugs):
     """
     cons = []
     for b in bugs:
+        if b in fixedBugs:
+            continue
         print("Repairing for bug:", b)
         if str(inf) in str(b):
             thread, cons_1 = repairDURA(thread, b, cons)
@@ -448,6 +458,7 @@ def repairThread(thread, bugs):
             for constraint in cons_1:
                 cons.append(constraint)
         print()
+        fixedBugs.append(b)
 
     return thread
 
