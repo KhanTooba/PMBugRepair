@@ -7,52 +7,47 @@ Number of bugs detected:  3
 pt_2 < 9999
 pt_3 < 9999
 pt_38 < 9999
+Original trace:
 Number of threads:  1
 ################################################################################################
 Working on Thread: 0 (Length of thread :  122 ): 
 Repairing for bug: pt_2 < 9999
 Before append: 122
+Bug found:  pt_2 pt_2
 After append: 124
-The bug flag is: 1
 The number of assertions: 15379
 The number of blocking constraint will be:  1
 Blocking constraints: [[2, '2_0', '2_1']]
 Bug is: Not(pt_2 < 9999)
 Num: 15380
 ITERATION:  1
-[Not(pc_2 > pc_2_1)]
-Or(Not(pc_2 > pc_2_1))
-Previous constraints: []
+Not(And(pc_2 > pc_2_1))
 
 Repairing for bug: pt_3 < 9999
 Before append: 124
+Bug found:  pt_3 pt_3
 After append: 125
-The bug flag is: 1
 The number of assertions: 15505
 The number of blocking constraint will be:  1
 Blocking constraints: [[3, '3_0', '2_1']]
 Bug is: Not(pt_3 < 9999)
 Num: 15506
 ITERATION:  1
-[Not(pc_3 > pc_2_1)]
-Or(Not(pc_3 > pc_2_1))
-Previous constraints: [pc_2 == pc_2_0 - 1, Not(pc_2 <= pc_2_1)]
+Not(And(pc_3 > pc_2_1))
 
 Repairing for bug: pt_38 < 9999
 Before append: 125
+Bug found:  pt_38 pt_38
 After append: 126
-The bug flag is: 1
 The number of assertions: 15632
 The number of blocking constraint will be:  1
 Blocking constraints: [[38, '38_0', '2_1']]
 Bug is: Not(pt_38 < 9999)
 Num: 15633
 ITERATION:  1
-[Not(pc_38 > pc_2_1)]
-Or(Not(pc_38 > pc_2_1))
-Previous constraints: [pc_2 == pc_2_0 - 1, Not(pc_2 <= pc_2_1), pc_3 == pc_3_0 - 1, Not(pc_3 <= pc_2_1)]
+Not(And(pc_38 > pc_2_1))
 
-Time taken to repair thread  0 :  7.0320539474487305  seconds.
+Time taken to repair thread  0 :  8.699285507202148  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.0004775524139404297  seconds.
+Time taken to recombine individual threads:  0.0003600120544433594  seconds.

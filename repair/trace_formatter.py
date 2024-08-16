@@ -1,105 +1,4 @@
-from sys import argv
-import sys
-
-class Graph:
-    def __init__(self):
-        self.graph = {}
-
-    def add_node(self, node):
-        if node not in self.graph:
-            self.graph[node] = []
-
-    def add_edge(self, u, v):
-        if u in self.graph:
-            if v not in self.graph[u]:
-                self.graph[u].append(v)
-        else:
-            self.graph[u] = [v]
-
-    def __str__(self):
-        return str(self.graph)
-
-    def has_cycle_directed(self):
-        visited = set()
-        rec_stack = set()
-        
-        def dfs(v):
-            if v in rec_stack:
-                return True
-            if v in visited:
-                return False
-            
-            visited.add(v)
-            rec_stack.add(v)
-            for neighbor in self.graph.get(v, []):
-                if dfs(neighbor):
-                    return True
-            rec_stack.remove(v)
-            return False
-        
-        for node in self.graph:
-            if node not in visited:
-                if dfs(node):
-                    return True
-        return False
-
-    def has_cycle_undirected(self):
-        visited = set()
-
-        def dfs(v, parent):
-            visited.add(v)
-            for neighbor in self.graph.get(v, []):
-                if neighbor not in visited:
-                    if dfs(neighbor, v):
-                        return True
-                elif neighbor != parent:
-                    return True
-            return False
-
-        for node in self.graph:
-            if node not in visited:
-                if dfs(node, None):
-                    return True
-        return False
-
-    def dfs_traversal(self, start_node):
-        visited = set()
-        traversal_order = []
-
-        def dfs(node):
-            if node not in visited:
-                visited.add(node)
-                traversal_order.append(node)
-                for neighbor in self.graph.get(node, []):
-                    dfs(neighbor)
-
-        dfs(start_node)
-        return traversal_order
-
-    def find_cycles(self):
-        def dfs(node, current_path, visited, cycles):
-            visited[node] = True
-            current_path.append(node)
-            
-            for neighbor in self.graph.get(node, []):
-                if neighbor not in visited:
-                    dfs(neighbor, current_path, visited, cycles)
-                elif neighbor in current_path:
-                    # Found a cycle
-                    cycle_start_index = current_path.index(neighbor)
-                    cycle = current_path[cycle_start_index:]
-                    cycles.append(cycle)
-                    
-            current_path.pop()
-            visited[node] = False
-
-        visited = {}
-        cycles = []
-        for node in self.graph:
-            if node not in visited:
-                dfs(node, [], visited, cycles)
-        return cycles
-    
+import sys    
 
 def format_STOREs(row, r):
     # Store: 0xb82306 Size: 2 ID: 2862 @Ln,Col: 564,22 Scope: insert_key; <Thread ID:140255810307904>
@@ -175,42 +74,6 @@ def getThreads(trace):
             c += 1
     return threads
 
-def condense_cycles(int_list, index_list):
-    seen = {}
-    result_nums = []
-    result_index = []
-    
-    i = 0
-    while i < len(int_list):
-        num = int_list[i]
-        index = index_list[i]
-        if num in seen:
-            cycle_start = seen[num]
-            cycle = int_list[cycle_start:i]
-            
-            # Find the first non-repeating sequence after the cycle ends
-            j = i
-            while j < len(int_list) and int_list[j] in seen:
-                j += 1
-
-            # Add the cycle and the first non-repeating element to the result
-            result_nums += cycle
-            result_index += index_list[cycle_start:i]
-            # print(cycle)
-            if j < len(int_list):
-                result_nums.append(int_list[j])
-                result_index.append(index_list[j])
-                seen[int_list[j]] = len(result_nums) - 1
-            i = j
-        else:
-            seen[num] = len(result_nums)
-            result_nums.append(num)
-            result_index.append(index)
-            i += 1
-
-    print(len(result_nums), len(result_index))
-    return result_nums, result_index
-
 def format(trace, threads, dependencies, loads):
     # print(loads)
     traceFormatted = []
@@ -241,39 +104,18 @@ def format(trace, threads, dependencies, loads):
     print("Total unique dependencies: ", len(dep_set))
     print("Total dependencies: ", dep)
 
-    g = Graph()
-    # for t in traceFormatted:
-    #     print(t)
-    #     g.add_node(int(t[-1]))
-    # for i in range(0, len(traceFormatted)-1):
-    #     g.add_edge(int(traceFormatted[i][-1]), int(traceFormatted[i+1][-1]))
-
+    
     ints = []
     index = []
     for t in traceFormatted:
         ints.append(int(t[-1]))
         index.append(int(t[0]))
-    
-    # print(len(ints))
-    # ints, index = condense_cycles(ints, index)
-    # # print(index)
-    # finalTrace = []
-    # traceDict = {}
-    # for t in traceFormatted:
-    #     traceDict[int(t[0])] = t
-    
-    # for i in index:
-    #     finalTrace.append(traceDict[i][1:])
-    #     print(traceDict[i][1:])
         
     toreturn = []
     for t in traceFormatted:
         toreturn.append(t[1:])
-    # print(g)
-    # print("Has cycle (directed):", g.has_cycle_directed())
-    # print(g.find_cycles())
+    
     return toreturn
-
 
 if __name__ == "__main__":
     inputFileName = sys.argv[1]

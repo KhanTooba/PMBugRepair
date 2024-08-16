@@ -5,7 +5,7 @@ process_files:
 	$(foreach file_name,$(l1), \
 	echo "Repairing program in $(file_name)"; \
 	python3 trace_formatter.py ../benchmark/bcFiles/outputs/$(file_name)_output.txt ../benchmark/bcFiles/outputs/$(file_name)_formatted_output.txt; \
-	python3 step1.py ../benchmark/bcFiles/outputs/$(file_name)_formatted_output.txt ../benchmark/bcFiles/results/$(file_name)_trace_r1.txt>> ../benchmark/bcFiles/results/$(file_name)_r1.txt; \
+	python3 step1.py ../benchmark/bcFiles/outputs/$(file_name)_formatted_output.txt ../benchmark/bcFiles/results/$(file_name)_trace_repaired.txt>> ../benchmark/bcFiles/results/$(file_name)_r1.txt; \
 	echo "Repair of $(file_name) completed."; \
 	)
 
