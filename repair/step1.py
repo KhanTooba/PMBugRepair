@@ -279,8 +279,8 @@ def repairDURA(thread, bug, previousConstraints):
         model = s.model()
         repairedThread = printer(model, map, thread)
     
-    for repaired in repairedThread:
-        print(repaired)
+    # for repaired in repairedThread:
+    #     print(repaired)
     
     return repairedThread, constraintsToReturn
 
@@ -420,8 +420,8 @@ def repairMPB(thread, bug, previousConstraints):
     if s.check()==sat:
         model = s.model()
         repairedThread = printer(model, map, thread)
-    for repaired in repairedThread:
-        print(repaired)
+    # for repaired in repairedThread:
+    #     print(repaired)
     # repairedThread = thread
     return repairedThread, constraintsToReturn
     
