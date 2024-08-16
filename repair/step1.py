@@ -3,8 +3,9 @@ from z3 import *
 """
 Questions to think:
 1. Reading the bugs from a bug file
-2. First repair all DURAs and then MPBs. What benefit does it give?
+2. First repair all DURAs and then MPBs. What benefit does it give?-----No need for this
     It reduces the need to check for CLFLUSHOPT after stores while solving for MPB.
+3. Add constraints for all statements belonging to the same line in the code.
 """
 num_threads = 1
 inf = 9999

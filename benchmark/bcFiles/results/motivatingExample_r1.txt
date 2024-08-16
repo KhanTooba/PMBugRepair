@@ -6,6 +6,7 @@ Local variables initialized.
 Number of bugs detected:  2
 pt_2 < 9999
 pt_3 < 9999
+Original trace:
 Number of threads:  2
 ################################################################################################
 Working on Thread: 0 (Length of thread :  1 ): 
@@ -19,16 +20,14 @@ Blocking constraints: [[2, '2_0', '2_1']]
 Bug is: Not(pt_2 < 9999)
 Num: 13
 ITERATION:  1
-[Not(pc_2 > pc_2_1)]
-Or(Not(pc_2 > pc_2_1))
-Previous constraints: []
+Not(And(pc_2 > pc_2_1))
 
 Repairing for bug: pt_3 < 9999
 Before append: 3
 After append: 3
 The bug flag is: -1
 
-Time taken to repair thread  0 :  0.035429954528808594  seconds.
+Time taken to repair thread  0 :  0.03638720512390137  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  3 ): 
@@ -42,7 +41,7 @@ Before append: 3
 After append: 3
 The bug flag is: -1
 
-Time taken to repair thread  1 :  0.000949859619140625  seconds.
+Time taken to repair thread  1 :  0.006962776184082031  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  1.2159347534179688e-05  seconds.
+Time taken to recombine individual threads:  1.3113021850585938e-05  seconds.
