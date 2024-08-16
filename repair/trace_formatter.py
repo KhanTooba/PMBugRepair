@@ -34,6 +34,7 @@ def fileReader(name):
     for row in f:
         r += 1
         if "Load" in str(row) or "Store" in str(row):
+            # print(row)
             stmt = []
             # Load: 0xb82308 Size: 8 ID: 733 @Ln,Col: 573,11 Scope: store; <Thread ID:140255810307904>
             add = str(row).split(" ")[1]
@@ -41,7 +42,10 @@ def fileReader(name):
             line = row.split("@")[1].split(":")[1].split(",")[0].strip()
             uid = str(row).split(" ")[5]
             stmt = [r, "LOAD", add, tid, line]
-            loads[uid] = stmt
+            if uid not in loads.keys():
+                loads[uid] = stmt
+            # print(stmt)
+            # print()
         
         if "Store" in str(row):
             stmt = format_STOREs(str(row), r)
@@ -60,6 +64,7 @@ def fileReader(name):
             source = str(row).split(" ")[2]
             dest = str(row).split(" ")[4].split(";")[0]
             dependencies[dest] = source
+            # print(source, dest)
     
     print("Total number of lines:", r)
     return contents, dependencies, loads
@@ -79,7 +84,7 @@ def format(trace, threads, dependencies, loads):
     traceFormatted = []
     dep = 0
     dep_set = []
-    print(len(trace))
+    # print(len(trace))
     for i in range(len(trace)):
         element = []
         if trace[i][1]=='LOAD':
@@ -88,9 +93,10 @@ def format(trace, threads, dependencies, loads):
             element = [trace[i][0], trace[i][1], trace[i][2], -1, threads[trace[i][3]], trace[i][-1]]
         elif trace[i][1]=='STORE':
             element = [trace[i][0], trace[i][1], trace[i][2], -1, threads[trace[i][3]]]
+            # print(element, dependencies.keys(), trace[i][-2])
             if trace[i][-2] in dependencies.keys():
                 dest_id = dependencies[trace[i][-2]]
-                element[2] = loads[dest_id][2]
+                element[3] = loads[dest_id][2]
                 dep += 1
                 if [trace[i], loads[dest_id]] not in dep_set:
                     dep_set.append([trace[i], loads[dest_id]])
@@ -121,9 +127,17 @@ if __name__ == "__main__":
     inputFileName = sys.argv[1]
     outputFileName = sys.argv[2]
     trace, dependencies, loads = fileReader(inputFileName)
+    # print("After the fileReader function:")
+    # for t in trace:
+    #     print(t)
+
+    # print(dependencies)
     threads = getThreads(trace)
     print(threads)
+    # print("After format function:")
     trace = format(trace, threads, dependencies, loads)
+    # for t in trace:
+    #     print(t)
 
     file = open(outputFileName, 'w')
     file.write("Threads: ["+str(threads)+"]\n")

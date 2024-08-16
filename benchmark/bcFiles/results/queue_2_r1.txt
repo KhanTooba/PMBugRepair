@@ -2,9 +2,10 @@ Returning from parceTrace.py
 Number of stores: 179
 Completed parsing.
 Local variables initialized.
-[2, 101, "'0xc8db50'", '-1', 0, 22] [3, 101, "'0xc8de80'", '-1', 0, 23] [4, 101, "'0xc8dc10'", '-1', 0, 22]
-Number of bugs detected:  3
+[2, 101, "'0xc8db50'", '-1', 0, 22] [3, 101, "'0xc8db58'", "'0xc8db50'", 0, 23] [4, 101, "'0xc8dc10'", '-1', 0, 22]
+Number of bugs detected:  4
 pt_2 < 9999
+pt_2 < pt_3
 pt_3 < 9999
 pt_6 < 9999
 Original trace:
@@ -23,39 +24,73 @@ Num: 965
 ITERATION:  1
 Not(And(pc_2 > pc_2_1))
 
-Repairing for bug: pt_3 < 9999
+Repairing for bug: pt_2 < pt_3
+MPB Bug found: pt_2 < pt_3
 Before append: 31
-Bug found:  pt_3 pt_3
 After append: 32
+The bug flag is: 1
 The number of assertions: 997
-The number of blocking constraint will be:  1
-Blocking constraints: [[3, '3_0', '2_1']]
-Bug is: Not(pt_3 < 9999)
+The number of blocking constraint will be:  4
+Blocking constraints: [[2, '2_1'], [2, '2_Fence_0'], [3, '2_1'], [3, '2_Fence_0']]
+Bug is: Not(pt_2 < pt_3)
 Num: 998
 ITERATION:  1
-Not(And(pc_3 > pc_2_1))
+Not(And(pc_2 < pc_2_1,
+        pc_2 < pc_2_Fence_0,
+        pc_3 < pc_2_1,
+        pc_3 < pc_2_Fence_0))
+Num: 999
+ITERATION:  2
+Not(And(pc_2 > pc_2_1,
+        pc_2 < pc_2_Fence_0,
+        pc_3 > pc_2_1,
+        pc_3 < pc_2_Fence_0))
+Num: 1000
+ITERATION:  3
+Not(And(pc_2 > pc_2_1,
+        pc_2 > pc_2_Fence_0,
+        pc_3 > pc_2_1,
+        pc_3 > pc_2_Fence_0))
+Num: 1001
+ITERATION:  4
+Not(And(pc_2 < pc_2_1,
+        pc_2 > pc_2_Fence_0,
+        pc_3 < pc_2_1,
+        pc_3 > pc_2_Fence_0))
+
+Repairing for bug: pt_3 < 9999
+Before append: 32
+Bug found:  pt_3 pt_3
+After append: 33
+The number of assertions: 1031
+The number of blocking constraint will be:  1
+Blocking constraints: [[3, '3_0', '2_Fence_0']]
+Bug is: Not(pt_3 < 9999)
+Num: 1032
+ITERATION:  1
+Not(And(pc_3 > pc_2_Fence_0))
 
 Repairing for bug: pt_6 < 9999
-Before append: 32
+Before append: 33
 Bug found:  pt_6 pt_6
 After append: 34
 The number of assertions: 1066
 The number of blocking constraint will be:  1
-Blocking constraints: [[6, '6_0', '6_1']]
+Blocking constraints: [[6, '6_0', '2_Fence_0']]
 Bug is: Not(pt_6 < 9999)
 Num: 1067
 ITERATION:  1
-Not(And(pc_6 > pc_6_1))
+Not(And(pc_6 > pc_2_Fence_0))
 
-Time taken to repair thread  0 :  0.5151307582855225  seconds.
+Time taken to repair thread  0 :  1.1619181632995605  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  75 ): 
-Time taken to repair thread  1 :  0.0002162456512451172  seconds.
+Time taken to repair thread  1 :  0.0005669593811035156  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 2 (Length of thread :  75 ): 
-Time taken to repair thread  2 :  0.0001881122589111328  seconds.
+Time taken to repair thread  2 :  0.0005209445953369141  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.0007464885711669922  seconds.
+Time taken to recombine individual threads:  0.0008678436279296875  seconds.
