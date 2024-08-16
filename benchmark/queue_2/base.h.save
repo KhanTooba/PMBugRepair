@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+// Queue node
+typedef struct Node {
+    int data;
+    struct Node* next;
+} Node;
+
+Node* front = NULL;  // Front of the queue
+Node* rear = NULL;   // Rear of the queue
+pthread_mutex_t queue_mutex;  // Mutex to protect the queue
+
+// Function to enqueue an element
+void enqueue(int data) {
+    Node* new_node = (Node*)malloc(sizeof(Node));
+    if (new_node == NULL) {
+        perror("Failed to allocate memory");
+        exit(EXIT_FAILURE);
+    }
+    new_node->data = data;
+    new_node->next = NULL;
+
+    pthread_mutex_lock(&queue_mutex);  // Lock the mutex
+
+    if (rear == NULL) {  // Queue is empty
+        front = rear = new_node;
+    } else {
+        rear->next = new_node;
+        rear = new_node;
+    }
+
+    pthread_mutex_unlock(&queue_mutex);  // Unlock the mutex
+}
+
+// Function to dequeue an element
+int dequeue() {
+    pthread_mutex_lock(&queue_mutex);  // Lock the mutex
+
+    if (front == NULL) {  // Queue is empty
+        pthread_mutex_unlock(&queue_mutex);
+        return -1;
+    }
+
+    Node* temp = front;
+    int dequeued_value = front->data;
+    front = front->next;
+
+    if (front == NULL) {
+        rear = NULL; 
+    }
+
+    pthread_mutex_unlock(&queue_mutex);  
+
+    free(temp);
+    return dequeued_value;
+}
+
+void* thread_func(void* arg) {
+    for (int i = 0; i < 25; i++) {
+        int value = dequeue();
+        if (value != -1) {
+            printf("Thread %ld dequeued: %d\n", pthread_self(), value);
+            enqueue(value);
+            printf("Thread %ld enqueued: %d\n", pthread_self(), value);
+        } else {
+            printf("Thread %ld found the queue empty\n", pthread_self());
+        }
+    }
+
+    return NULL;
+}

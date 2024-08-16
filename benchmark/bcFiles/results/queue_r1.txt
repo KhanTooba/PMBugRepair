@@ -1,53 +1,53 @@
 Returning from parceTrace.py
-Number of stores: 122
+Number of stores: 119
 Completed parsing.
 Local variables initialized.
-[2, 101, "'0x7f0f1c002860'", '-1', 0, 21] [3, 101, "'0x7f0f1c002e30'", '-1', 0, 22] [4, 101, "'0x7f0f1c002920'", '-1', 0, 21]
+[2, 101, "'0x7f8f54002860'", '-1', 0, 21] [3, 101, "'0x7f8f54002d10'", '-1', 0, 22] [4, 101, "'0x7f8f54002920'", '-1', 0, 21]
 Number of bugs detected:  3
 pt_2 < 9999
 pt_3 < 9999
-pt_38 < 9999
+pt_28 < 9999
 Original trace:
 Number of threads:  1
 ################################################################################################
-Working on Thread: 0 (Length of thread :  122 ): 
+Working on Thread: 0 (Length of thread :  119 ): 
 Repairing for bug: pt_2 < 9999
-Before append: 122
+Before append: 119
 Bug found:  pt_2 pt_2
-After append: 124
-The number of assertions: 15379
+After append: 121
+The number of assertions: 14644
 The number of blocking constraint will be:  1
 Blocking constraints: [[2, '2_0', '2_1']]
 Bug is: Not(pt_2 < 9999)
-Num: 15380
+Num: 14645
 ITERATION:  1
 Not(And(pc_2 > pc_2_1))
 
 Repairing for bug: pt_3 < 9999
-Before append: 124
+Before append: 121
 Bug found:  pt_3 pt_3
-After append: 125
-The number of assertions: 15505
+After append: 122
+The number of assertions: 14767
 The number of blocking constraint will be:  1
 Blocking constraints: [[3, '3_0', '2_1']]
 Bug is: Not(pt_3 < 9999)
-Num: 15506
+Num: 14768
 ITERATION:  1
 Not(And(pc_3 > pc_2_1))
 
-Repairing for bug: pt_38 < 9999
-Before append: 125
-Bug found:  pt_38 pt_38
-After append: 126
-The number of assertions: 15632
+Repairing for bug: pt_28 < 9999
+Before append: 122
+Bug found:  pt_28 pt_28
+After append: 124
+The number of assertions: 15016
 The number of blocking constraint will be:  1
-Blocking constraints: [[38, '38_0', '2_1']]
-Bug is: Not(pt_38 < 9999)
-Num: 15633
+Blocking constraints: [[28, '28_0', '28_1']]
+Bug is: Not(pt_28 < 9999)
+Num: 15017
 ITERATION:  1
-Not(And(pc_38 > pc_2_1))
+Not(And(pc_28 > pc_28_1))
 
-Time taken to repair thread  0 :  8.699285507202148  seconds.
+Time taken to repair thread  0 :  7.696848630905151  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.0003600120544433594  seconds.
+Time taken to recombine individual threads:  0.0003459453582763672  seconds.
