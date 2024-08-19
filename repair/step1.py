@@ -152,7 +152,7 @@ def sliceThread(thread):
     sliced = []
     return sliced
 
-def repairDURA_temp(thread, bug, previousConstraints):
+def repairDURA(thread, bug, previousConstraints):
     global claimedFlushes
     solver = Solver()
     map = {}
@@ -255,7 +255,7 @@ def repairDURA_temp(thread, bug, previousConstraints):
 
     solver.add(Not(bug))
     
-    print("Previous constraints:", previousConstraints)
+    # print("Previous constraints:", previousConstraints)
     print("Bug is:", Not(bug))
         
     iter1 = 1  
@@ -394,7 +394,7 @@ def repairMPB(thread, bug, previousConstraints):
 
     solver.add(Not(bug))
     
-    print("Previous constraints:", previousConstraints)
+    # print("Previous constraints:", previousConstraints)
 
     print("Bug is:", Not(bug))
 
@@ -438,11 +438,11 @@ def repairMPB(thread, bug, previousConstraints):
     else:
         print("Repair not found.")
     
-    for assertion in s.assertions():
-            if "Implies" in str(assertion) and (
-                str(bug).split("<")[0].replace(" ", "") in str(assertion)
-                or str(bug).split("<")[1].replace(" ", "") in str(assertion)):
-                print(assertion)
+    # for assertion in s.assertions():
+    #         if "Implies" in str(assertion) and (
+    #             str(bug).split("<")[0].replace(" ", "") in str(assertion)
+    #             or str(bug).split("<")[1].replace(" ", "") in str(assertion)):
+    #             print(assertion)
     return repairedThread, constraintsToReturn
     
 def repairThread(thread, bugs):
@@ -460,7 +460,7 @@ def repairThread(thread, bugs):
             continue
         print("Repairing for bug:", b)
         if str(inf) in str(b): # and "pt_70" in str(b):
-            thread, cons_1 = repairDURA_temp(thread, b, cons)
+            thread, cons_1 = repairDURA(thread, b, cons)
             for constraint in cons_1:
                 cons.append(constraint)
         else:
