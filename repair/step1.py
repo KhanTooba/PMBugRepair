@@ -91,6 +91,7 @@ def parseTrace(file):
     trace_file = open(file)
     trace = []
     counter = 1
+    infoToSend = ""
     for line in trace_file:
         if counter==1:
             #Reading the thread info####
@@ -98,6 +99,7 @@ def parseTrace(file):
             global threads
             num_threads = 2
             # Threads: [{'140255810307904': 0, '140255801911040': 1, '140255810303744': 2}]
+            infoToSend = line
             threadInfo = line.replace("Threads: [{", "").replace("}]", "")
             for t in threadInfo.split(","):
                 threads[t.split(":")[0].replace("'","").strip()] = int(t.split(":")[1].strip())
@@ -109,7 +111,7 @@ def parseTrace(file):
         counter += 1
 
     print("Returning from parceTrace.py")
-    return trace
+    return trace, infoToSend
 
 def getIndividualThreads(trace):
     #Function to seperate out individual threads from one monolithic trace.
@@ -455,38 +457,42 @@ def repairThread(thread, bugs):
         b. Solve it.        ----Done for DURA
     """
     cons = []
+    timeDura = 0
+    timeMPB = 0
     for b in bugs:
         if b in fixedBugs:
             continue
         print("Repairing for bug:", b)
         if str(inf) in str(b): # and "pt_70" in str(b):
+            t1 = time.time()
             thread, cons_1 = repairDURA(thread, b, cons)
+            timeDura += time.time()-t1
             for constraint in cons_1:
                 cons.append(constraint)
         else:
             print("MPB Bug found:", b)
+            t1 = time.time()
             thread, cons_1 = repairMPB(thread, b, cons)
+            timeMPB += time.time()-t1
             for constraint in cons_1:
                 cons.append(constraint)
         print(thread)
         print("####################################################################################")
         fixedBugs.append(b)
 
-    return thread
+    return thread, timeDura, timeMPB
 
-def addConstraints(inputFileName, outputFileName):
-    trace = parseTrace(inputFileName)
+def addConstraints(inputFileName):
+    trace, threadInfo = parseTrace(inputFileName)
     store = 0
     for t in trace:
         if t[1]==101:
             store += 1
-    print("Number of stores:", store)
     print("Completed parsing.")
-    # writer = open(outputFileName, 'w+')
     global lastStmt
     lastStmt = len(trace)
     
-    lastStmt = trace[-1][0]
+    # lastStmt = trace[-1][0]
     print("Local variables initialized.")
 
     """
@@ -499,10 +505,8 @@ def addConstraints(inputFileName, outputFileName):
     bugs = []
     length = len(trace)
     mpbs, duras = [], []
-
+    timeDura, timeMPB = 0, 0
     store = 0
-    print(trace[0], trace[1], trace[2])
-    # print("Printing trace:")
     for i in range(length):
         # print(trace[i])
         if trace[i][1]==101:
@@ -522,7 +526,6 @@ def addConstraints(inputFileName, outputFileName):
         print(b)
     
     #We have all the unique bugs now
-    print("Original trace:")
     storeSeqs = []
     for stmt in trace:
         # print(stmt)
@@ -536,7 +539,10 @@ def addConstraints(inputFileName, outputFileName):
     for i in range(num_threads):
         print("################################################################################################")
         print("Working on Thread:", i, "(Length of thread : ", len(indiThreads[i]), "): ")
-        repaired_threads.append(repairThread(indiThreads[i], bugs))
+        threadreturned, t1, t2 = repairThread(indiThreads[i], bugs)
+        repaired_threads.append(threadreturned)
+        timeDura += t1
+        timeMPB += t2
         time2 = time.time()
         print("Time taken to repair thread ", i, ": ", (time2-time1), " seconds.")
         print("################################################################################################")
@@ -577,33 +583,33 @@ def addConstraints(inputFileName, outputFileName):
                     # print("Int: ", intermediateTrace[j+1])
                     j+=1
         
-
-    # while i<=lastStmt:
-    #     for j in range(len(intermediateTrace)):
-    #         if intermediateTrace[j][0]==i:
-    #             recombinedTrace.append(intermediateTrace[j])
-    #             print(intermediateTrace[j])
-    #             while j+1<len(intermediateTrace) and "_" in str(intermediateTrace[j+1][0]):
-    #                     recombinedTrace.append(intermediateTrace[j+1])
-    #                     print(intermediateTrace[j+1])
-    #                     j+=1
-    #     i += 1
-            
     time3 = time.time()
     print("Time taken to recombine individual threads: ", (time3-time2), " seconds.")
-    return recombinedTrace
+    return recombinedTrace, len(duras), len(mpbs), threadInfo, timeDura, timeMPB
 
 if __name__ == "__main__":
     inputFileName = sys.argv[1]         # "trace-1.txt"
     outputFileName = sys.argv[2]
 
-    step1_result = addConstraints(inputFileName, outputFileName)
+    time1 = time.time()
+    step1_result, duraCount, mpbCount, threadInfo, timeDURA, timeMPB = addConstraints(inputFileName, outputFileName)
+    timeTaken = time.time()-time1
 
     f = open(outputFileName, "w")
+    f.write(str(threadInfo))
     for stmt in step1_result:
-        f.write(str(stmt))
+        f.write(str(stmt[1:]))
         f.write("\n")
-    
+    f.close()
+
+    f = open("Report.txt", "a")
+    f.write("###########################################################################\n")
+    f.write("Number of DURAS fixed: "+str(duraCount)+"\n")
+    f.write("Number of MPBs fixed: "+str(mpbCount)+"\n")
+    f.write("Total time taken to repair DURA bugs: "+str(timeDURA)+" seconds.\n")
+    f.write("Total time taken to repair MPB bugs: "+str(timeMPB)+" seconds.\n")
+    f.write("Total time taken:"+str(timeTaken)+" seconds.\n")
+    f.write("###########################################################################\n\n")
     f.close()
 
 """
