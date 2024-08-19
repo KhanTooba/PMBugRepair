@@ -13,6 +13,7 @@ lastStmt = 0
 threads = {}
 claimedFlushes = []
 fixedBugs = []
+r = 0
 
 def printer(model, map, thread):
     # print("Model: ",model)
@@ -151,7 +152,7 @@ def sliceThread(thread):
     sliced = []
     return sliced
 
-def repairDURA(thread, bug, previousConstraints):
+def repairDURA_temp(thread, bug, previousConstraints):
     global claimedFlushes
     solver = Solver()
     map = {}
@@ -172,10 +173,11 @@ def repairDURA(thread, bug, previousConstraints):
                 continue
             else:
                 print("Bug found: ", "pt_"+str(thread[i][0]), str(bug).split("<")[0].replace(" ", ""))
-            for j in range(i+1, length):
-                if thread[j][1]==102 and thread[i][2]==thread[j][2] and thread[j][0] not in claimedFlushes:
+            for j in range(i+1, length): #Change this to run from 0 to length so that all clflushopts 
+                #that already exist and might have been reaaranged can be utilized instead of adding new ones
+                if thread[j][1]==102 and thread[i][2]==thread[j][2] and not(thread[j][0] in claimedFlushes):
                     foundFlush = j
-                    print("Flush found at:", thread[j][0])
+                    # print("Flush found at:", thread[j][0])
                     claimedFlushes.append(thread[j][0])
                     print("Constraint added:", Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[j][0]))-1)
                     solver.add(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[j][0]))-1)
@@ -190,19 +192,21 @@ def repairDURA(thread, bug, previousConstraints):
                 # print(bug)
                 if foundFlush==-1:
                     # print("Flush has not been found:", foundFlush)
-                    flush = [str(thread[i][0])+"_"+str(r), 102, thread[i][2], thread[i][3], thread[i][4], thread[i][5]]
-                    # print("Adding:", flush)
+                    flush = [str(thread[i][0])+"_"+str(r), 102, thread[i][2], -1, thread[i][4], thread[i][5]]
+                    print("Adding:", flush)
                     r += 1
                     thread.insert(i+1, flush)
+                    cons = Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1
                     claimedFlushes.append(thread[i+1][0])
-                    solver.add(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
-                    constraintsToReturn.append(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[i+1][0]))-1)
+                    solver.add(cons)
+                    constraintsToReturn.append(cons)
+                    print("Constraint added:", cons)
                     bugFlag = 1
 
                 if foundFence==-1:
                     # print("Fence has not been found.")
                     fence = [str(thread[i][0])+"_"+str(r), 103, '0', -1, thread[i][4], thread[i][5]]
-                    # print("Adding:", fence)
+                    print("Adding:", fence)
                     # print(thread[i])
                     r += 1
                     thread.append(fence)
@@ -210,11 +214,7 @@ def repairDURA(thread, bug, previousConstraints):
     
     length = len(thread)
     print("After append:", length)
-    # print("The bug flag is:", bugFlag)
-    # if bugFlag==-1:
-    #     return thread, constraintsToReturn
-    # print(length)
-
+    
     for i in range(length):
         map["pc_"+str(thread[i][0])] = thread[i]
         solver.add(Int("pc_"+str(thread[i][0]))>0, Int("pc_"+str(thread[i][0]))<length+1) #(0 <= pc_i <= max_stmt)
@@ -226,9 +226,8 @@ def repairDURA(thread, bug, previousConstraints):
             for j in range(i+1, length):
                 if thread[j][1]==101:
                     solver.add(Int("pc_"+str(thread[i][0]))<Int("pc_"+str(thread[j][0]))) #All STOREs must follow their original order
-            
+                    
             solver.add(Int("pt_"+str(thread[i][0]))>=Int("pc_"+str(thread[i][0]))) #Persistent time begins at the time of STOREs
-            
             #This relates to the DURA bugs
             if "pt_"+str(thread[i][0])!=str(bug).split("<")[0].replace(" ", ""):
                 continue
@@ -240,9 +239,9 @@ def repairDURA(thread, bug, previousConstraints):
                 for j in range(i+1, len(thread)):
                     if thread[j][1]==103 :
                         if "pt_"+str(thread[i][0]) in str(bug):
-                            solver.add(simplify(Implies((Int("pc_"+str(thread[i][0]))<Int("pc_"+str(thread[j][0]))),
+                            solver.add(Implies((Int("pc_"+str(thread[i][0]))<Int("pc_"+str(thread[j][0]))),
                                                 (Int("pt_"+str(thread[i][0]))<=Int("pc_"+str(thread[j][0])))
-                                                )))
+                                                ))
                             blocking.append([thread[i][0], thread[foundFlush][0], thread[j][0]])
     
     print("The number of assertions:", len(solver.assertions()))
@@ -250,15 +249,18 @@ def repairDURA(thread, bug, previousConstraints):
     print("Blocking constraints:", blocking)
     
     s = Solver()
+    solver.add(previousConstraints)
     for assertion in solver.assertions():
         s.add(assertion)
-        # print(assertion)
 
     solver.add(Not(bug))
+    
+    print("Previous constraints:", previousConstraints)
     print("Bug is:", Not(bug))
         
-    iter1 = 1
-    
+    iter1 = 1  
+
+    sais = []
     while solver.check()==sat:
         print("Num:", len(solver.assertions()))
         model = solver.model()
@@ -269,27 +271,27 @@ def repairDURA(thread, bug, previousConstraints):
             sai.append(constructConstraint(b[0], b[2], model))
         
         print("ITERATION: ", iter1)
-        # print(sai)
         iter1 += 1
         solver.add(Not(And(sai)))
         print(Not(And(sai)))
-        s.add(Not(And(sai)))
-        constraintsToReturn.append(Not(And(sai)))
+        sais.append(Not(And(sai)))
 
         #(STORE(&x)->CLFLUSHOPT(&x))->.........->SFENCE()
-    
+    else:
+        print("Not running blocking constraint generation because already unsat.")
+
+    s.add(simplify(And(sais)))
+    print("SAIS:", simplify(And(sais)))
+    constraintsToReturn.append(simplify(And(sais)))
     repairedThread = thread
-    s.add(previousConstraints)
-    # print("Constraints to send:", constraintsToReturn)
-    # print("Previous constraints:", previousConstraints)
+    
     models = []
 
     if s.check()==sat:
         model = s.model()
         repairedThread = printer(model, map, thread)
-    
-    # for repaired in repairedThread:
-    #     print(repaired)
+    else:
+        print("Repair not found.")
     
     return repairedThread, constraintsToReturn
 
@@ -298,7 +300,7 @@ def repairMPB(thread, bug, previousConstraints):
     map = {}
     blocking = []
     constraintsToReturn = []
-    r = 0
+    global r
 
     bugFlag = -1
     length = len(thread)
@@ -323,11 +325,14 @@ def repairMPB(thread, bug, previousConstraints):
                     countFence = 0
                     for k in range(j+1, length):
                         if thread[k][1]==103:
-                            # print("Fence found.")
+                            print("Fence found.", thread[k][0])
                             countFence += 1
+                            # blocking.append([thread[i][0], thread[k][0]])
+                    print("Fence count:", countFence)
                     if countFence<2:
                         fence = [str(thread[i][0])+"_Fence_"+str(r), 103, '0', -1, thread[i][4], thread[i][5]]
                         # print("Adding:", fence)
+                        # blocking.append([thread[i][0], str(thread[i][0])+"_Fence_"+str(r)])
                         # print(thread[i])
                         r += 1
                         thread.append(fence)
@@ -340,8 +345,6 @@ def repairMPB(thread, bug, previousConstraints):
     length = len(thread)
     print("After append:", length)
     print("The bug flag is:", bugFlag)
-    if bugFlag==-1:
-        return thread, constraintsToReturn
     
     for i in range(length):
         map["pc_"+str(thread[i][0])] = thread[i]
@@ -358,43 +361,46 @@ def repairMPB(thread, bug, previousConstraints):
             solver.add(Int("pt_"+str(thread[i][0]))>=Int("pc_"+str(thread[i][0]))) #Persistent time begins at the time of STOREs
             
             #This relates to the MPB bugs
-            if not((thread[i][1]==101 and "pt_"+str(thread[i][0])==str(bug).split("<")[0].replace(" ", "")) or (
-                thread[i][1]==101 and "pt_"+str(thread[i][0])==str(bug).split("<")[1].replace(" ", ""))): 
+            if not(thread[i][1]==101 and "pt_"+str(thread[i][0])==str(bug).split("<")[0].replace(" ", "")) and not(
+                thread[i][1]==101 and "pt_"+str(thread[i][0])==str(bug).split("<")[1].replace(" ", "")): 
                 continue
             #How do I construct blocking constraints for MPB Bugs
-            if (thread[i][1]==101 and "pt_"+str(thread[i][0])==str(bug).split("<")[0].replace(" ", "")) or (
-                thread[i][1]==101 and "pt_"+str(thread[i][0])==str(bug).split("<")[1].replace(" ", "")): 
+            print("Did not continue for:", thread[i][0])
+            if (thread[i][1]==101 and "pt_"+str(thread[i][0])==str(bug).split("<")[0].replace(" ", "")): 
+                for j in range(i+1, len(thread)):
+                    if (thread[j][1]==101 and "pt_"+str(thread[j][0])==str(bug).split("<")[1].replace(" ", "")):
                 #Checking if the store is a part of the MPB Bug
                 #If the store is a part of the MPB Bug, then we need to keep all the fences after it in the blocking constraint
-                for j in range(i+1, len(thread)):
-                    if thread[j][1]==103:
-                        blocking.append([thread[i][0], thread[j][0]])
+                        for k in range(j+1, len(thread)):
+                            if thread[k][1]==103:
+                                blocking.append([thread[i][0], thread[k][0]])
+                                blocking.append([thread[j][0], thread[k][0]])
             
-            foundFlush = -1
             for j in range(i+1, len(thread)):
-                if thread[j][1]==102 and thread[i][2]==thread[j][2]:
-                    foundFlush = j
-            if foundFlush!=-1:
-                for j in range(i+1, len(thread)):
                     if thread[j][1]==103 :
                         if "pt_"+str(thread[i][0]) in str(bug):
-                            solver.add(simplify(Implies((Int("pc_"+str(thread[i][0]))<Int("pc_"+str(thread[j][0]))),
+                            solver.add(Implies((Int("pc_"+str(thread[i][0]))<Int("pc_"+str(thread[j][0]))),
                                                 (Int("pt_"+str(thread[i][0]))<=Int("pc_"+str(thread[j][0])))
-                                                )))
+                                                ))
 
     print("The number of assertions:", len(solver.assertions()))
     print("The number of blocking constraint will be: ", len(blocking))
     print("Blocking constraints:", blocking)
     
     s = Solver()
+    solver.add(previousConstraints)
     for assertion in solver.assertions():
         s.add(assertion)
 
     solver.add(Not(bug))
+    
+    print("Previous constraints:", previousConstraints)
+
     print("Bug is:", Not(bug))
 
     iter1 = 1
-    # print("Constraint: ", solver.assertions())
+    
+    sais = []
     while solver.check()==sat:
         print("Num:", len(solver.assertions()))
         model = solver.model()
@@ -405,33 +411,38 @@ def repairMPB(thread, bug, previousConstraints):
             sai.append(constructConstraint(b[0], b[1], model))
         
         print("ITERATION: ", iter1)
-        # print(model)
-        # print(sai)
+
         iter1 += 1
         solver.add(Not(And(sai)))
         print(Not(And(sai)))
-        s.add(Not(And(sai)))
-        constraintsToReturn.append(Not(And(sai)))
+        sais.append(Not(And(sai)))
         """
         Why are the sai constraints not adding up? 
         Why not giving me a different solution?
         """
-        
+
+    else:
+        print("Not running blocking constraint generation because already unsat.")
 
         #(STORE(&x)->CLFLUSHOPT(&x))->.........->SFENCE()
+    s.add(simplify(And(sais)))
+    print("SAIS:", simplify(And(sais)))
+    constraintsToReturn.append(simplify(And(sais)))
 
     repairedThread = thread
-    s.add(previousConstraints)
-    # print("Constraints to send:", constraintsToReturn)
-    # print("Previous constraints:", previousConstraints)
-    models = []
 
     if s.check()==sat:
         model = s.model()
         repairedThread = printer(model, map, thread)
-    # for repaired in repairedThread:
-    #     print(repaired)
-    # repairedThread = thread
+
+    else:
+        print("Repair not found.")
+    
+    for assertion in s.assertions():
+            if "Implies" in str(assertion) and (
+                str(bug).split("<")[0].replace(" ", "") in str(assertion)
+                or str(bug).split("<")[1].replace(" ", "") in str(assertion)):
+                print(assertion)
     return repairedThread, constraintsToReturn
     
 def repairThread(thread, bugs):
@@ -448,8 +459,8 @@ def repairThread(thread, bugs):
         if b in fixedBugs:
             continue
         print("Repairing for bug:", b)
-        if str(inf) in str(b):
-            thread, cons_1 = repairDURA(thread, b, cons)
+        if str(inf) in str(b): # and "pt_70" in str(b):
+            thread, cons_1 = repairDURA_temp(thread, b, cons)
             for constraint in cons_1:
                 cons.append(constraint)
         else:
@@ -457,7 +468,8 @@ def repairThread(thread, bugs):
             thread, cons_1 = repairMPB(thread, b, cons)
             for constraint in cons_1:
                 cons.append(constraint)
-        print()
+        print(thread)
+        print("####################################################################################")
         fixedBugs.append(b)
 
     return thread
@@ -490,7 +502,9 @@ def addConstraints(inputFileName, outputFileName):
 
     store = 0
     print(trace[0], trace[1], trace[2])
+    # print("Printing trace:")
     for i in range(length):
+        # print(trace[i])
         if trace[i][1]==101:
             if str(trace[i][-1]) not in duras:
                 bugs.append(Int("pt_"+str(trace[i][0]))<inf)
@@ -501,6 +515,7 @@ def addConstraints(inputFileName, outputFileName):
                     if [str(trace[i][-1]), str(trace[j][-1])] not in mpbs:
                         bugs.append(Int("pt_"+str(trace[i][0]))<Int("pt_"+str(trace[j][0])))
                         mpbs.append([str(trace[i][-1]), str(trace[j][-1])])
+    # print(1/0)
     
     print("Number of bugs detected: ", len(bugs))
     for b in bugs:
