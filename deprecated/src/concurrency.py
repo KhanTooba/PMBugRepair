@@ -15,7 +15,7 @@ Output in ../outputFile/interleaveBasedOutput.txt
 last = 10
 threads = 2
 """
-To restrict: The interleaving of statements of two threads--> insert locks automaticall there.
+To restrict: The interleaving of statements of two threads--> insert locks automatically there.
 """
 def printer(model):
     dict = {}
@@ -82,10 +82,10 @@ lock.append(Or(Int("pc_8")>Int("pc_7"), Int("pc_8")<Int("pc_6")))
 lock.append(And(Int("pc_7")>Int("pc_6"), Int("pc_9")>Int("pc_8")))
 
 pt = []
-pt.append(Int("pt_1")<=Int("pc_2"))
-pt.append(Int("pt_1")>=Int("pc_1"))
-pt.append(Int("pt_2")<=Int("pc_5"))
-pt.append(Int("pt_2")>=Int("pc_3"))
+# pt.append(Int("pt_1")<=Int("pc_2"))
+# pt.append(Int("pt_1")>=Int("pc_1"))
+# pt.append(Int("pt_2")<=Int("pc_5"))
+# pt.append(Int("pt_2")>=Int("pc_3"))
 
 bug = []
 """
@@ -107,13 +107,20 @@ bug.append(Or(Int("interleave_3")<Int("pc_6"),Int("interleave_3")>Int("pc_7")))
 bug.append(Or(Int("interleave_4")<Int("pc_6"),Int("interleave_4")>Int("pc_7")))
 bug.append(Or(Int("interleave_5")<Int("pc_6"),Int("interleave_5")>Int("pc_7")))
 
-bug.append(Or(
-            And(Int("interleave_1")<Int("interleave_3"), Int("interleave_3")<Int("interleave_4"), 
-                  Int("interleave_4")<Int("interleave_2"), Int("interleave_2")<Int("interleave_5")),
-            And(Int("interleave_1")<Int("interleave_3"), Int("interleave_3")<Int("interleave_4"), 
-                  Int("interleave_4")<Int("interleave_5"), Int("interleave_5")<Int("interleave_2")),
-            And(Int("interleave_1")<Int("interleave_3"), Int("interleave_3")<Int("interleave_2"), 
-                  Int("interleave_2")<Int("interleave_4"), Int("interleave_4")<Int("interleave_5"))))
+# bug.append(Or(
+#             And(Int("interleave_1")<Int("interleave_3"), Int("interleave_3")<Int("interleave_4"), 
+#                   Int("interleave_4")<Int("interleave_2"), Int("interleave_2")<Int("interleave_5")),
+#             And(Int("interleave_1")<Int("interleave_3"), Int("interleave_3")<Int("interleave_4"), 
+#                   Int("interleave_4")<Int("interleave_5"), Int("interleave_5")<Int("interleave_2")),
+#             And(Int("interleave_1")<Int("interleave_3"), Int("interleave_3")<Int("interleave_2"), 
+#                   Int("interleave_2")<Int("interleave_4"), Int("interleave_4")<Int("interleave_5"))))
+
+# bug.append(Or(Int("pc_1")<Int("pc_8"),Int("pc_1")>Int("pc_9")))
+# bug.append(Or(Int("pc_2")<Int("pc_8"),Int("pc_2")>Int("pc_9")))
+# bug.append(Or(Int("pc_3")<Int("pc_6"),Int("pc_3")>Int("pc_7")))
+# bug.append(Or(Int("pc_4")<Int("pc_6"),Int("pc_4")>Int("pc_7")))
+# bug.append(Or(Int("pc_5")<Int("pc_6"),Int("pc_5")>Int("pc_7")))
+bug.append(Int("interleave_1")>Int("interleave_3"))
 
 for b in bug:
     print(b)
