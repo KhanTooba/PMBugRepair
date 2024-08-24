@@ -27,3 +27,7 @@ make -f makeRepair -s -B
 # Results will be saved in PMBugRepair/benchmark/bcFiles/results
 ```
 
+Updates:
+1. DURA, MPB and MPB bug repair has been added.
+2. Results verified on programs under benchmark folder and FAST FAIR benchmark.
+3. Results pending for the remaining ASPLOS benchmarks.
