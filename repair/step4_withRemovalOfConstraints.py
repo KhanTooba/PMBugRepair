@@ -151,35 +151,25 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
         lockedReads.append(int(first))
         lock = ["Lock_"+str(r), 105, "M1", -1, info[ind1][4], str(info[ind1][5])+"_x"]
         unlock = ["UnLock_"+str(r), 106, "M1", -1, info[ind1][4], str(info[ind1][5])+"_x"]
-        fence = ["Fence_Lock_"+str(r), 103, 0, -1, info[ind1][4], str(info[ind1][5])+"_x"]
         r += 1
 
-        foundfirst = -1
+        foundSecond = -1
         i = traceIndex
         while i<len(trace)-1:
-            # print(trace[i])
             if trace[i+1][0]==int(first):
-                # print("Found insertion point for first lock: ", i, i+1, trace[i+1])
+                # print("Found insertion point for first lock: ", i)
                 repairedTrace.append(trace[i])
                 repairedTrace.append(lock)
                 # addCons.append(Int("pc_"+str(trace[i][0]))<Int("pc_"+lock[0]))
-                # addCons.append(Int("pc_"+lock[0])<Int("pc_"+str(trace[i+1][0])))
+                addCons.append(Int("pc_"+lock[0])<Int("pc_"+str(trace[i+1][0])))
                 repairedTrace.append(trace[i+1])
-                foundfirst = 1
+                foundSecond = 1
                 i += 2
             
-            elif foundfirst==1 and (trace[i][1]==105 or trace[i][1]==106):
-                repairedTrace.append(fence)
+            elif foundSecond==1 and trace[i][1]==103:
                 repairedTrace.append(trace[i])
                 repairedTrace.append(unlock)
-                traceIndex = i+1
-                break
-            
-            elif foundfirst==1 and trace[i][1]==103:
-                # print("Found fence:", i, trace[i])
-                repairedTrace.append(trace[i])
-                repairedTrace.append(unlock)
-                # addCons.append(Int("pc_"+str(trace[i][0]))<Int("pc_"+unlock[0]))
+                addCons.append(Int("pc_"+str(trace[i][0]))<Int("pc_"+unlock[0]))
                 # addCons.append(Int("pc_"+unlock[0])<Int("pc_"+str(trace[i+1][0])))
                 
                 traceIndex = i+1
@@ -205,8 +195,8 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
                 repairedTrace.append(trace[i+1])
                 repairedTrace.append(unlock)
                 # addCons.append(Int("pc_"+str(trace[i][0]))<Int("pc_"+lock[0]))
-                # addCons.append(Int("pc_"+lock[0])<Int("pc_"+str(trace[i+1][0])))
-                # addCons.append(Int("pc_"+str(trace[i+1][0]))<Int("pc_"+unlock[0]))
+                addCons.append(Int("pc_"+lock[0])<Int("pc_"+str(trace[i+1][0])))
+                addCons.append(Int("pc_"+str(trace[i+1][0]))<Int("pc_"+unlock[0]))
                 # if i+2<len(trace):
                 #     addCons.append(Int("pc_"+unlock[0])<Int("pc_"+str(trace[i+2][0])))
                 traceIndex = i+2
@@ -220,7 +210,6 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
         lockedReads.append(int(second))
         lock = ["Lock_"+str(r), 105, "M1", -1, info[ind2][4], str(info[ind2][5])+"_x"]
         unlock = ["UnLock_"+str(r), 106, "M1", -1, info[ind2][4], str(info[ind2][5])+"_x"]
-        fence = ["Fence_Lock_"+str(r), 103, 0, -1, info[ind2][4], str(info[ind2][5])+"_x"]
         r += 1
 
         foundSecond = -1
@@ -232,21 +221,14 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
                 repairedTrace.append(lock)
                 repairedTrace.append(trace[i+1])
                 # addCons.append(Int("pc_"+str(trace[i][0]))<Int("pc_"+lock[0]))
-                # addCons.append(Int("pc_"+lock[0])<Int("pc_"+str(trace[i+1][0])))
+                addCons.append(Int("pc_"+lock[0])<Int("pc_"+str(trace[i+1][0])))
                 foundSecond = 1
                 i += 2
-            
-            elif foundSecond==1 and (trace[i][1]==105 or trace[i][1]==106):
-                repairedTrace.append(fence)
-                repairedTrace.append(trace[i])
-                repairedTrace.append(unlock)
-                traceIndex = i+1
-                break
             
             elif foundSecond==1 and trace[i][1]==103:
                 repairedTrace.append(trace[i])
                 repairedTrace.append(unlock)
-                # addCons.append(Int("pc_"+str(trace[i][0]))<Int("pc_"+unlock[0]))
+                addCons.append(Int("pc_"+str(trace[i][0]))<Int("pc_"+unlock[0]))
                 # addCons.append(Int("pc_"+unlock[0])<Int("pc_"+str(trace[i+1][0])))
                 traceIndex = i+1
                 break
@@ -271,8 +253,8 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
                 repairedTrace.append(trace[i+1])
                 repairedTrace.append(unlock)
                 # addCons.append(Int("pc_"+str(trace[i][0]))<Int("pc_"+lock[0]))
-                # addCons.append(Int("pc_"+lock[0])<Int("pc_"+str(trace[i+1][0])))
-                # addCons.append(Int("pc_"+str(trace[i+1][0]))<Int("pc_"+unlock[0]))
+                addCons.append(Int("pc_"+lock[0])<Int("pc_"+str(trace[i+1][0])))
+                addCons.append(Int("pc_"+str(trace[i+1][0]))<Int("pc_"+unlock[0]))
                 # if i+2<len(trace):
                 #     addCons.append(Int("pc_"+unlock[0])<Int("pc_"+str(trace[i+2][0])))
 
@@ -296,13 +278,6 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
     pcs = []
     dicPcs = {}
 
-    indiThreads = getIndividualThreads(trace)
-    for thread in indiThreads:
-        for i in range(len(thread)-1): #Building basic constraints: There has to be a strict dependency between each statement.
-            # Now we can not rearrange statements. Only the Lock statements can be floating
-            cons.append(Int("pc_"+str(thread[i][0])) < Int("pc_"+str(thread[i+1][0])))
-
-
     for i in range(len(trace)):
         dicPcs["pc_"+str(trace[i][0])] = trace[i]
         pcs.append(Int("pc_"+str(trace[i][0])))
@@ -314,9 +289,14 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
                 cons.append(Int("pt_"+str(trace[i][0]))>=Int("pc_"+str(trace[i][0]))) #Persistent time begins at the time of STOREs
                 for j in range(i+1, len(trace)):
                         if trace[j][1]==103 and trace[j][-2]==trace[i][-2]:
+                            # cons.append(Implies((Int("pc_"+str(trace[i][0]))<Int("pc_"+str(trace[j][0]))),
+                            #                     (Int("pt_"+str(trace[i][0]))<=Int("pc_"+str(trace[j][0])))
+                            #                     ))
                             cons.append((Int("pt_"+str(trace[i][0]))<=Int("pc_"+str(trace[j][0]))))
+                            # print("Adding pt constraint: ", Implies((Int("pc_"+str(trace[i][0]))<Int("pc_"+str(trace[j][0]))),
+                            #                     (Int("pt_"+str(trace[i][0]))<=Int("pc_"+str(trace[j][0])))
+                            #                     ))
                             break
-
         if trace[i][1]==105:
             lock = trace[i][0]
             unlock = "UnLock_"+str(trace[i][0]).split("_")[1]
@@ -341,36 +321,19 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
     if solver.check()==sat:
         print("A violation is found. Let us see which bug was being violated in this trace.")
         model = solver.model()
-        for m in model:
-            print(m, model[m])
-        for constraint in bugCons:
-            truth_value = model.eval(constraint, model_completion=True)
-            print(constraint, truth_value)
+
         for constraint in bugCons:
             truth_value = model.eval(constraint, model_completion=True)
             # print(constraint, truth_value)
             if truth_value==True:
                 consToRepair = constraint
-                # bugCons.remove(consToRepair)
+                bugCons.remove(consToRepair)
                 print("Now, we will repair: ", consToRepair)
                 trace, addCons = appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos)
                 return trace, addCons, bugCons, True
     
     else:
         print("Model was unsat. This means all bugs have been repaired.")
-        s = Solver()
-        mapper = {}
-        i = 0
-        # for a in solver.assertions():
-        #     print(i)
-        #     s.assert_and_track(a, 'a'+str(i))
-        #     mapper['a'+str(i)] = a
-        #     i+=1
-        # print("Completed addition.")
-        # if s.check()==unsat:
-        #     print("UNSAT core is: ")
-        #     for a in s.unsat_core():
-        #         print(a, mapper[str(a)])
         # for con in solver.assertions():
         #     print(con)
 
@@ -448,45 +411,43 @@ def generateRepair(inputFileName):
         # print("For: ", first, second)
         for i in range(len(trace)):
             if trace[i][0]==first:
-                # print("\nFirst: ", i, trace[i][0])
+                # print(i, trace[i][0])
                 for j in range(i, len(trace)):
                     trace[j][-2] = tid
                     # print(trace[j][-2], j)
                     if trace[j][1]==103:
-                        # print("Fence at: ", i , trace[i][0])
-                        cons.append(Int("pc_"+str(trace[i][0]))<Int("pc_"+str(trace[j][0])))
-                        # trace[j][-2] = tid
                         tid += 1
                         break
                 
             if trace[i][0]==second:
-                # print("\nSecond: ", i, trace[i][0])
+                # print(i, trace[i][0])
                 for j in range(i, len(trace)):
                     trace[j][-2] = tid
                     # print(trace[j][-2], j)
                     if trace[j][1]==103:
-                        # print("Fence at: ", i , trace[j][0])
-                        cons.append(Int("pc_"+str(trace[i][0]))<Int("pc_"+str(trace[j][0])))
-                        # trace[j][-2] = tid
                         tid += 1
                         break
     
     # print("Num threads: ", tid)
     num_threads = tid
+    indiThreads = getIndividualThreads(trace)
+    for thread in indiThreads:
+        for i in range(len(thread)-1): #Building basic constraints: There has to be a strict dependency between each statement.
+            # Now we can not rearrange statements. Only the Lock statements can be floating
+            cons.append(Int("pc_"+str(thread[i][0])) < Int("pc_"+str(thread[i+1][0])))
+
     print("Number of bugs to be repaired: ", bugCount)
     for b in bugCons:
         print(b)
     truthValue = True
     iterCount = 0
     # print(Or(bugCons))
-    print(set(reads), set(writes))
     while truthValue==True:
         print("\n############################################################################")
         t1 =  time.time()
         print("Iteration: ", iterCount+1)
         
         trace, addCons, bugCons, truthValue = addLocks(trace, reads, writes, cons, bugCons, bugInfos)
-        # trace = removeDeadlocks(trace)
         for add in addCons:
             cons.append(add)
         iterCount += 1
