@@ -73,7 +73,7 @@ def parseTraceHelper(elements, index):
     traceParsed.append(elements[1].strip())
     traceParsed.append(elements[2].strip())
     traceParsed.append(int(elements[3].strip()))
-    traceParsed.append(int(elements[4].replace("'","").strip()))
+    traceParsed.append(elements[4].replace("'","").strip())
     # print(traceParsed)
     return traceParsed
 
@@ -194,7 +194,7 @@ def repairDURA(thread, bug, previousConstraints):
                 # print(bug)
                 if foundFlush==-1:
                     # print("Flush has not been found:", foundFlush)
-                    flush = [str(thread[i][0])+"_"+str(r), 102, thread[i][2], -1, thread[i][4], thread[i][5]]
+                    flush = [str(thread[i][0])+"_"+str(r), 102, thread[i][2], -1, thread[i][4], str(thread[i][5])+"_x"]
                     print("Adding:", flush)
                     r += 1
                     thread.insert(i+1, flush)
@@ -207,7 +207,7 @@ def repairDURA(thread, bug, previousConstraints):
 
                 if foundFence==-1:
                     # print("Fence has not been found.")
-                    fence = [str(thread[i][0])+"_"+str(r), 103, '0', -1, thread[i][4], thread[i][5]]
+                    fence = [str(thread[i][0])+"_"+str(r), 103, '0', -1, thread[i][4], str(thread[i][5])+"_x"]
                     print("Adding:", fence)
                     # print(thread[i])
                     r += 1
@@ -332,7 +332,7 @@ def repairMPB(thread, bug, previousConstraints):
                             # blocking.append([thread[i][0], thread[k][0]])
                     print("Fence count:", countFence)
                     if countFence<2:
-                        fence = [str(thread[i][0])+"_Fence_"+str(r), 103, '0', -1, thread[i][4], thread[i][5]]
+                        fence = [str(thread[i][0])+"_Fence_"+str(r), 103, '0', -1, thread[i][4], str(thread[i][5])+"_x"]
                         # print("Adding:", fence)
                         # blocking.append([thread[i][0], str(thread[i][0])+"_Fence_"+str(r)])
                         # print(thread[i])
@@ -476,7 +476,7 @@ def repairThread(thread, bugs):
             timeMPB += time.time()-t1
             for constraint in cons_1:
                 cons.append(constraint)
-        print(thread)
+        # print(thread)
         print("####################################################################################")
         fixedBugs.append(b)
 
@@ -590,9 +590,10 @@ def addConstraints(inputFileName):
 if __name__ == "__main__":
     inputFileName = sys.argv[1]         # "trace-1.txt"
     outputFileName = sys.argv[2]
+    fileName = sys.argv[3]
 
     time1 = time.time()
-    step1_result, duraCount, mpbCount, threadInfo, timeDURA, timeMPB = addConstraints(inputFileName, outputFileName)
+    step1_result, duraCount, mpbCount, threadInfo, timeDURA, timeMPB = addConstraints(inputFileName)
     timeTaken = time.time()-time1
 
     f = open(outputFileName, "w")
@@ -604,11 +605,12 @@ if __name__ == "__main__":
 
     f = open("Report.txt", "a")
     f.write("###########################################################################\n")
+    f.write("Adding DURA & MPB Repair Report for "+str(fileName)+": \n")
     f.write("Number of DURAS fixed: "+str(duraCount)+"\n")
     f.write("Number of MPBs fixed: "+str(mpbCount)+"\n")
     f.write("Total time taken to repair DURA bugs: "+str(timeDURA)+" seconds.\n")
     f.write("Total time taken to repair MPB bugs: "+str(timeMPB)+" seconds.\n")
-    f.write("Total time taken:"+str(timeTaken)+" seconds.\n")
+    f.write("Total time taken: "+str(timeTaken)+" seconds.\n")
     f.write("###########################################################################\n\n")
     f.close()
 

@@ -1,11 +1,15 @@
 l1 = list motivatingExample stack queue queue_1 queue_2
 
 process_files:
+	rm -f ../repair/Report.txt
 	rm -f ../benchmark/bcFiles/results/*.txt
+	rm -f ../benchmark/bcFiles/repairedFiles/*.txt
 	$(foreach file_name,$(l1), \
+	echo "\n"; \
 	echo "Repairing program in $(file_name)"; \
 	python3 trace_formatter.py ../benchmark/bcFiles/outputs/$(file_name)_output.txt ../benchmark/bcFiles/outputs/$(file_name)_formatted_output.txt; \
-	python3 step1.py ../benchmark/bcFiles/outputs/$(file_name)_formatted_output.txt ../benchmark/bcFiles/results/$(file_name)_trace_repaired.txt>> ../benchmark/bcFiles/results/$(file_name)_r1.txt; \
+	python3 step1.py ../benchmark/bcFiles/outputs/$(file_name)_formatted_output.txt ../benchmark/bcFiles/results/$(file_name)_trace_repaired.txt $(file_name)>> ../benchmark/bcFiles/results/$(file_name)_r1.txt; \
+	python3 step4.py ../benchmark/bcFiles/results/$(file_name)_trace_repaired.txt ../benchmark/bcFiles/repairedFiles/$(file_name)_trace_last_repair.txt $(file_name)>> ../benchmark/bcFiles/results/$(file_name)_r2.txt; \
 	echo "Repair of $(file_name) completed."; \
 	)
 
