@@ -266,20 +266,17 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
     """
     cons = []
     pcs = []
-    dicPcs = {}
-
+    
     openLock = -1
     for i in range(len(trace)-1):
         if trace[i][1]==105:
             openLock = i
         elif trace[i][1]==106:
             cons.append(Int("pc_"+str(trace[i-1][0])) < Int("pc_"+str(trace[i][0])))
-            # print(Int("pc_"+str(trace[i-1][0])) < Int("pc_"+str(trace[i][0])))
             openLock = -1
         elif openLock!=-1:
             cons.append(Int("pc_"+str(trace[i-1][0])) < Int("pc_"+str(trace[i][0])))
-            # print(Int("pc_"+str(trace[i-1][0])) < Int("pc_"+str(trace[i][0])))
-
+            
     indiThreads = getIndividualThreads(trace)
     for thread in indiThreads:
         for i in range(len(thread)-1): #Building basic constraints: There has to be a strict dependency between each statement.
@@ -288,8 +285,6 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
 
     print("Printing trace:")
     for i in range(len(trace)):
-        # print(trace[i])
-        dicPcs["pc_"+str(trace[i][0])] = trace[i]
         pcs.append(Int("pc_"+str(trace[i][0])))
         cons.append(Int("pc_"+str(trace[i][0]))>0)
         cons.append(Int("pc_"+str(trace[i][0]))<len(trace)+1) #(0 <= pc_i <= max_stmt)
@@ -316,13 +311,10 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
     print("Completed building constraints.\nNumber of constraints: ", len(cons))
     
     solver = Solver()
-    # solver.add(AtMost(*bugCons, 3)) # Using the unpacking operator * to use atmost constraint on a list in z3
     solver.add(Or(bugCons))
     solver.add(cons)
     solver.add(prevCons)
-    # for a in solver.assertions():
-    #     print(a)
-
+    
     if solver.check()==sat:
         print("A violation is found. Let us see which bug was being violated in this trace.")
         model = solver.model()
@@ -336,9 +328,6 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
     
     else:
         print("Model was unsat. This means all bugs have been repaired.")
-        s = Solver()
-        mapper = {}
-        i = 0
 
     return trace, [], bugCons, False
 
@@ -360,11 +349,6 @@ def removeDeadlocks(trace):
         else:
             toRemove.append("Lock_"+str(trace[i][0]).split("_")[1])
             print("Removing  ", trace[i], "  for  ", trace[openLock])
-
-    # trace = []
-    # for i in range(len(traceRepaired)):
-    #     if traceRepaired[i][0] not in toRemove:
-    #         trace.append(traceRepaired[i])
 
     return traceRepaired , toRemove
 
@@ -455,7 +439,6 @@ def generateRepair(inputFileName):
         print(b)
     truthValue = True
     iterCount = 0
-    # print(Or(bugCons))
     print(set(reads), set(writes))
     while truthValue==True:
         print("\n############################################################################")
@@ -464,26 +447,14 @@ def generateRepair(inputFileName):
         
         trace, addCons, bugCons, truthValue = addLocks(trace, reads, writes, cons, bugCons, bugInfos)
         trace, toRemove = removeDeadlocks(trace)
-        # print(toRemove)
-        # if len(toRemove)!=0:
-        #     print(1/0)
-        newCons = []
         for add in addCons:
             cons.append(add)
-            # print(add)
-        
-        # for add in cons:
-        #     for rem in toRemove:
-        #         if rem in str(add):
-        #             print("Removing: ", rem)
-        #             continue
-        #     newCons.append(add)
+
         iterCount += 1
         t2 = time.time()
         print("Time taken: ", (t2-t1), " seconds.")
         print("\n############################################################################")
 
-    # trace = removeDeadlocks(trace)
     print("\nTotal number of iterations: ", iterCount)
     return trace, bugCount
 
