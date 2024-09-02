@@ -58,4 +58,7 @@ Updates:
 # Run the "example" executable with:
     ./example
 ```
-#########################################################################
+###################################################################################
+
+### 2. Redis: [redis](https://github.com/redis/redis)
+#### Steps taken to install:
