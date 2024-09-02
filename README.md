@@ -4,30 +4,24 @@
 
 To build the trace generator llvm opt pass: 
 ```
-# Build opt pass: 
-#########################################################################
-sh builder.sh
-# Results will be saved in PMBugRepair/build
+# Build opt pass (Results will be saved in PMBugRepair/build): 
+    sh builder.sh
 ```
 
 To generate trace for all benchmarks in the benchmark folder: 
 ```
-# Generate traces: 
-#########################################################################
-make -f benchmarkMake -s -B
-# Results will be saved in PMBugRepair/benchmark/bcFiles/outputs
+# Generate traces (Results will be saved in PMBugRepair/benchmark/bcFiles/outputs): 
+    make -f benchmarkMake -s -B
 ```
 
 To execute step1 (repair individual traces) for all benchmarks in the benchmark folder: 
 ```
-# Execute step 1: 
-#########################################################################
-cd repair
-make -f makeRepair -s -B
-# Results will be saved in PMBugRepair/benchmark/bcFiles/results
+# Execute step 1 (Results will be saved in PMBugRepair/benchmark/bcFiles/results): 
+    cd repair
+    make -f makeRepair -s -B
 ```
 
-Updates:
+## Updates:
 1. DURA, MPB and MPB bug repair has been added.
 2. Results verified on programs under benchmark folder and FAST FAIR benchmark.
 3. Results pending for the remaining ASPLOS benchmarks.
