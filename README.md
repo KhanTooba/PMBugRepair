@@ -39,6 +39,11 @@ To execute step1 (repair individual traces) for all benchmarks in the benchmark 
     sudo losetup /dev/loop40 /dev/shm/pmem_sim.img
     sudo mkfs -t ext4 /dev/loop40
     sudo mount /dev/loop40 /mnt/pmfs
+
+# Install memcached server
+    ./configure --enable-pslab
+    make
+    sudo make install
 ```
 
 #### Steps to run:
