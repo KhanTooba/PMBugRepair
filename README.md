@@ -34,7 +34,8 @@ Updates:
 
 
 ## Experimental Setup
-### Steps taken to install memcached:
+### 1. Memcached: [memcached_pmem](https://github.com/lenovo/memcached-pmem)
+#### Steps taken to install:
 ```
 # Install memcached client
     sudo apt install libmemcached-dev
@@ -46,7 +47,7 @@ Updates:
     sudo mount /dev/loop40 /mnt/pmfs
 ```
 
-### Steps to run memcached:
+#### Steps to run:
 ```
 # Begin memcached server
     sudo memcached -u root -o pslab_file=/mnt/pmfs/pool,pslab_force
@@ -57,3 +58,4 @@ Updates:
 # Run the "example" executable with:
     ./example
 ```
+#########################################################################
