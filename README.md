@@ -31,3 +31,29 @@ Updates:
 1. DURA, MPB and MPB bug repair has been added.
 2. Results verified on programs under benchmark folder and FAST FAIR benchmark.
 3. Results pending for the remaining ASPLOS benchmarks.
+
+
+## Experimental Setup
+### Steps taken to install memcached:
+```
+# Install memcached client
+    sudo apt install libmemcached-dev
+            
+# Simulate PMEM on Emperor: /dev/loop40 will act as pmem device
+    dd if=/dev/zero of=/dev/shm/pmem_sim.img bs=1M count=2048
+    sudo losetup /dev/loop40 /dev/shm/pmem_sim.img
+    sudo mkfs -t ext4 /dev/loop40
+    sudo mount /dev/loop40 /mnt/pmfs
+```
+
+### Steps to run memcached:
+```
+# Begin memcached server
+    sudo memcached -u root -o pslab_file=/mnt/pmfs/pool,pslab_force
+            
+# Compile the code "example.c" with:
+    gcc -o example example.c -lmemcached
+
+# Run the "example" executable with:
+    ./example
+```
