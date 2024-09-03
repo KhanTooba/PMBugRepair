@@ -40,10 +40,14 @@ To execute step1 (repair individual traces) for all benchmarks in the benchmark 
     sudo mkfs -t ext4 /dev/loop40
     sudo mount /dev/loop40 /mnt/pmfs
 
-# Install memcached server
+# Install memcached server using default settings
     ./configure --enable-pslab
     make
     sudo make install
+
+# Install memcached server with custom compilation designed for LLVM OPT pass
+    ./configure --enable-pslab
+    ./customCompilation
 ```
 
 #### Steps to run:
