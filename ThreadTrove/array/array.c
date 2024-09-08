@@ -10,13 +10,13 @@ void* thread_func(void* arg) {
     insert(arr, thread_id % 100);
     printf("Thread %d inserted: %d into the array\n", thread_id, thread_id % 100);
 
-    int value_read = get(arr, 0);
+    int value_read = get(arr, size(arr)-1);
     if (value_read != -1) {
         printf("Thread %d read: %d from the array\n", thread_id, value_read);
-        delete_element(arr, 0);  // Delete the element after reading
+        // delete_element(arr, 0);  // Delete the element after reading
         insert(arr, value_read+1);
         printf("Thread %d inserted: %d into the array\n", thread_id, value_read+1);
-        printf("Thread %d deleted: %d from the array\n", thread_id, value_read);
+        // printf("Thread %d deleted: %d from the array\n", thread_id, value_read);
     }
 
     return NULL;
