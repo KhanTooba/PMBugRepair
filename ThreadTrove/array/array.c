@@ -1,5 +1,5 @@
 #include<array.h>
-#define N_THREADS 2          // Default number of threads
+#define N_THREADS 4          // Default number of threads
 
 int shared_value = 0;  // Shared value between threads
 
@@ -10,6 +10,7 @@ void* thread_func(void* arg) {
 
     // Insert shared variable
     insert(arr, shared_value);
+    printf("Thread %d inserted: %d into the array\n", thread_id, shared_value);
     shared_value += 1;
 
     int value_read = get(arr, size(arr)-1);
