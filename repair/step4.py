@@ -485,7 +485,7 @@ if __name__ == "__main__":
     f.write("###########################################################################\n")
     f.write("Adding MPA Repair Report for "+str(fileName)+": \n")
     f.write("Number of MPAs fixed: "+str(MPACount)+"\n")
-    f.write("Number of locks() added: ", num_locks)
+    f.write("Number of locks() added: "+str(num_locks)+"\n")
     f.write("Total time taken to repair MPA bugs: "+str(timeTaken)+" seconds.\n")
     f.write("###########################################################################\n\n")
     f.close()

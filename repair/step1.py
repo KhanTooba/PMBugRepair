@@ -300,6 +300,7 @@ def repairMPB(thread, bug, previousConstraints):
     blocking = []
     constraintsToReturn = []
     global r
+    global num_fence
 
     bugFlag = -1
     length = len(thread)
@@ -604,12 +605,14 @@ if __name__ == "__main__":
     f = open("Report.txt", "a")
     f.write("###########################################################################\n")
     f.write("Adding DURA & MPB Repair Report for "+str(fileName)+": \n")
+    # /Users/toobakhan/Downloads/PMBugRepair/results/bcFiles/outputs/array_output.txt
+    # f.write("Length of trace: "+str()+"\n")
     f.write("Number of DURAS fixed: "+str(duraCount)+"\n")
     f.write("Number of MPBs fixed: "+str(mpbCount)+"\n")
     f.write("Total time taken to repair DURA bugs: "+str(timeDURA)+" seconds.\n")
     f.write("Total time taken to repair MPB bugs: "+str(timeMPB)+" seconds.\n")
-    f.write("Number of sfences() added: ", num_fence)
-    f.write("Number of clflushopts() added: ", num_flush)
+    f.write("Number of sfences() added: "+str(num_fence)+"\n")
+    f.write("Number of clflushopts() added: "+str(num_flush)+"\n")
     f.write("Total time taken: "+str(timeTaken)+" seconds.\n")
     f.write("###########################################################################\n\n")
     f.close()
