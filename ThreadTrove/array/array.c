@@ -1,14 +1,16 @@
 #include<array.h>
 #define N_THREADS 2          // Default number of threads
 
+int shared_value = 0;  // Shared value between threads
+
 // Thread function that performs operations on the array
 void* thread_func(void* arg) {
     Array* arr = (Array*)arg;
     int thread_id = pthread_self();
 
-    // Insert elements based on thread ID
-    insert(arr, thread_id % 100);
-    printf("Thread %d inserted: %d into the array\n", thread_id, thread_id % 100);
+    // Insert shared variable
+    insert(arr, shared_value);
+    shared_value += 1;
 
     int value_read = get(arr, size(arr)-1);
     if (value_read != -1) {
