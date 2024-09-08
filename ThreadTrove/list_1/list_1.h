@@ -78,6 +78,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <pthread.h>
 #include <unistd.h>  // For sleep function
 #include "pm.h"

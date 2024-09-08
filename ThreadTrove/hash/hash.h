@@ -75,6 +75,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <string.h>
+#include <stdbool.h>
 #include "pm.h"
 
 #define TABLE_SIZE 10  // Size of the hash table
