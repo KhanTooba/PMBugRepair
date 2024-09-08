@@ -1,40 +1,62 @@
-FUNC_BEGIN_1: main 1; <Thread ID:139839952058176>
-FUNC_BEGIN_1: init_hash_table 1; <Thread ID:139839952058176>
-FUNC_END: init_hash_table 1; <Thread ID:139839952058176>
-FUNC_BEGIN_1: thread_func 1; <Thread ID:139839952054016>
-FUNC_BEGIN_1: insert 1; <Thread ID:139839952054016>
-FUNC_BEGIN_1: hash_function 1; <Thread ID:139839952054016>
-FUNC_END: hash_function 1; <Thread ID:139839952054016>
-FUNC_END: insert 1; <Thread ID:139839952054016>
-FUNC_BEGIN_1: contains 1; <Thread ID:139839952054016>
-FUNC_BEGIN_1: thread_func 1; <Thread ID:139839943661312>
-FUNC_BEGIN_1: insert 2; <Thread ID:139839943661312>
-FUNC_BEGIN_1: hash_function 2; <Thread ID:139839943661312>
-FUNC_END: hash_function 2; <Thread ID:139839943661312>
-FUNC_END: insert 2; <Thread ID:139839943661312>
-FUNC_BEGIN_1: get 1; <Thread ID:139839952054016>
-FUNC_BEGIN_1: hash_function 3; <Thread ID:139839952054016>
-FUNC_END: hash_function 3; <Thread ID:139839952054016>
-FUNC_END: get 1; <Thread ID:139839952054016>
-FUNC_END: contains 1; <Thread ID:139839952054016>
-FUNC_BEGIN_1: contains 2; <Thread ID:139839943661312>
-FUNC_BEGIN_1: delete_from_hash 1; <Thread ID:139839952054016>
-FUNC_BEGIN_1: hash_function 4; <Thread ID:139839952054016>
-FUNC_END: hash_function 4; <Thread ID:139839952054016>
-FUNC_BEGIN_1: get 2; <Thread ID:139839943661312>
-FUNC_BEGIN_1: hash_function 5; <Thread ID:139839943661312>
-FUNC_END: hash_function 5; <Thread ID:139839943661312>
-FUNC_END: delete_from_hash 1; <Thread ID:139839952054016>
-FUNC_END: thread_func 1; <Thread ID:139839952054016>
-FUNC_END: get 2; <Thread ID:139839943661312>
-FUNC_END: contains 2; <Thread ID:139839943661312>
-FUNC_BEGIN_1: delete_from_hash 2; <Thread ID:139839943661312>
-FUNC_BEGIN_1: hash_function 6; <Thread ID:139839943661312>
-FUNC_END: hash_function 6; <Thread ID:139839943661312>
-FUNC_END: delete_from_hash 2; <Thread ID:139839943661312>
-FUNC_END: thread_func 2; <Thread ID:139839943661312>
-FUNC_BEGIN_1: display 1; <Thread ID:139839952058176>
-FUNC_END: display 1; <Thread ID:139839952058176>
-FUNC_BEGIN_1: clear 1; <Thread ID:139839952058176>
-FUNC_END: clear 1; <Thread ID:139839952058176>
-FUNC_END: main 1; <Thread ID:139839952058176>
+FUNC_BEGIN_1: main 1; <Thread ID:139810404951872>
+FUNC_BEGIN_1: init_hash_table 1; <Thread ID:139810404951872>
+FUNC_END: init_hash_table 1; <Thread ID:139810404951872>
+FUNC_BEGIN_1: thread_func 1; <Thread ID:139810396555008>
+FUNC_BEGIN_1: thread_func 1; <Thread ID:139810404947712>
+FUNC_BEGIN_1: insert 1; <Thread ID:139810396555008>
+FUNC_BEGIN_1: hash_function 1; <Thread ID:139810396555008>
+FUNC_END: hash_function 1; <Thread ID:139810396555008>
+FUNC_BEGIN_1: insert 1; <Thread ID:139810404947712>
+FUNC_BEGIN_1: hash_function 2; <Thread ID:139810404947712>
+FUNC_END: hash_function 2; <Thread ID:139810404947712>
+Adding addr: 0x7f2818001d00 to 0x7f2818001d10; <Thread ID:139810396555008>
+Store: 0x7f2818001d00 Size: 4 ID: 59 @Ln,Col: 116,19 Scope: insert; <Thread ID:139810396555008>
+Store: 0x7f2818001d04 Size: 4 ID: 63 @Ln,Col: 117,21 Scope: insert; <Thread ID:139810396555008>
+DEP: SrcID: 59 DestID: 63; <Thread ID:139810396555008>
+Store: 0x7f2818001d08 Size: 8 ID: 72 @Ln,Col: 118,20 Scope: insert; <Thread ID:139810396555008>
+DEP: SrcID: 63 DestID: 72; <Thread ID:139810396555008>
+FUNC_END: insert 1; <Thread ID:139810396555008>
+FUNC_BEGIN_1: contains 1; <Thread ID:139810396555008>
+Adding addr: 0x7f2820002cc0 to 0x7f2820002cd0; <Thread ID:139810404947712>
+Store: 0x7f2820002cc0 Size: 4 ID: 59 @Ln,Col: 116,19 Scope: insert; <Thread ID:139810404947712>
+Store: 0x7f2820002cc4 Size: 4 ID: 63 @Ln,Col: 117,21 Scope: insert; <Thread ID:139810404947712>
+DEP: SrcID: 59 DestID: 63; <Thread ID:139810404947712>
+Store: 0x7f2820002cc8 Size: 8 ID: 72 @Ln,Col: 118,20 Scope: insert; <Thread ID:139810404947712>
+DEP: SrcID: 63 DestID: 72; <Thread ID:139810404947712>
+FUNC_END: insert 2; <Thread ID:139810404947712>
+FUNC_BEGIN_1: contains 1; <Thread ID:139810404947712>
+FUNC_BEGIN_1: get 1; <Thread ID:139810396555008>
+FUNC_BEGIN_1: hash_function 3; <Thread ID:139810396555008>
+FUNC_END: hash_function 3; <Thread ID:139810396555008>
+Load: 0x7f2818001d00 Size: 4 ID: 209 @Ln,Col: 166,22 Scope: get; <Thread ID:139810396555008>
+Load: 0x7f2818001d04 Size: 4 ID: 216 @Ln,Col: 167,34 Scope: get; <Thread ID:139810396555008>
+DEP: SrcID: 209 DestID: 216; <Thread ID:139810396555008>
+FUNC_END: get 1; <Thread ID:139810396555008>
+FUNC_END: contains 1; <Thread ID:139810396555008>
+FUNC_BEGIN_1: get 2; <Thread ID:139810404947712>
+FUNC_BEGIN_1: hash_function 4; <Thread ID:139810404947712>
+FUNC_END: hash_function 4; <Thread ID:139810404947712>
+Load: 0x7f2820002cc0 Size: 4 ID: 209 @Ln,Col: 166,22 Scope: get; <Thread ID:139810404947712>
+Load: 0x7f2820002cc4 Size: 4 ID: 216 @Ln,Col: 167,34 Scope: get; <Thread ID:139810404947712>
+DEP: SrcID: 209 DestID: 216; <Thread ID:139810404947712>
+FUNC_END: get 2; <Thread ID:139810404947712>
+FUNC_END: contains 2; <Thread ID:139810404947712>
+FUNC_BEGIN_1: delete_from_hash 1; <Thread ID:139810396555008>
+FUNC_BEGIN_1: hash_function 5; <Thread ID:139810396555008>
+FUNC_END: hash_function 5; <Thread ID:139810396555008>
+Load: 0x7f2818001d00 Size: 4 ID: 122 @Ln,Col: 134,40 Scope: delete_from_hash; <Thread ID:139810396555008>
+Load: 0x7f2818001d08 Size: 8 ID: 148 @Ln,Col: 145,42 Scope: delete_from_hash; <Thread ID:139810396555008>
+FUNC_END: delete_from_hash 1; <Thread ID:139810396555008>
+FUNC_END: thread_func 1; <Thread ID:139810396555008>
+FUNC_BEGIN_1: delete_from_hash 2; <Thread ID:139810404947712>
+FUNC_BEGIN_1: hash_function 6; <Thread ID:139810404947712>
+FUNC_END: hash_function 6; <Thread ID:139810404947712>
+Load: 0x7f2820002cc0 Size: 4 ID: 122 @Ln,Col: 134,40 Scope: delete_from_hash; <Thread ID:139810404947712>
+Load: 0x7f2820002cc8 Size: 8 ID: 148 @Ln,Col: 145,42 Scope: delete_from_hash; <Thread ID:139810404947712>
+FUNC_END: delete_from_hash 2; <Thread ID:139810404947712>
+FUNC_END: thread_func 2; <Thread ID:139810404947712>
+FUNC_BEGIN_1: display 1; <Thread ID:139810404951872>
+FUNC_END: display 1; <Thread ID:139810404951872>
+FUNC_BEGIN_1: clear 1; <Thread ID:139810404951872>
+FUNC_END: clear 1; <Thread ID:139810404951872>
+FUNC_END: main 1; <Thread ID:139810404951872>

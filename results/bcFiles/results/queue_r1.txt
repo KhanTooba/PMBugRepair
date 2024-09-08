@@ -5,22 +5,22 @@ Number of bugs detected:  4
 pt_2 < 9999
 pt_2 < pt_3
 pt_3 < 9999
-pt_16 < 9999
+pt_20 < 9999
 Number of threads:  1
 ################################################################################################
-Working on Thread: 0 (Length of thread :  115 ): 
+Working on Thread: 0 (Length of thread :  135 ): 
 Repairing for bug: pt_2 < 9999
-Before append: 115
+Before append: 135
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x7fb238002860'", -1, 0, '21_x']
+Adding: ['2_0', 102, "'0x7fc46c002860'", -1, 0, '21_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '21_x']
-After append: 117
-The number of assertions: 13692
+After append: 137
+The number of assertions: 18772
 The number of blocking constraint will be:  1
 Blocking constraints: [[2, '2_0', '2_1']]
 Bug is: Not(pt_2 < 9999)
-Num: 13693
+Num: 18773
 ITERATION:  1
 Not(And(pc_2 > pc_2_1))
 Not running blocking constraint generation because already unsat.
@@ -28,6 +28,6 @@ SAIS: pc_2 <= pc_2_1
 ####################################################################################
 Repairing for bug: pt_2 < pt_3
 MPB Bug found: pt_2 < pt_3
-Before append: 117
+Before append: 137
 Fence found. 2_1
 Fence count: 1
