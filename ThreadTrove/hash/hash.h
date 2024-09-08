@@ -112,7 +112,7 @@ void insert(HashTable* table, int key, int value) {
     
     pthread_mutex_lock(&table->lock);
     
-    Node* new_node = (Node*)malloc(sizeof(Node));
+    Node* new_node = (Node*)pmalloc(sizeof(Node));
     new_node->key = key;
     new_node->value = value;
     new_node->next = table->buckets[index];

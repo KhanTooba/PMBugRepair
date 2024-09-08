@@ -97,7 +97,7 @@ typedef struct {
 
 // Function to initialize the array
 void init_array(Array* arr) {
-    arr->data = (int*)malloc(INITIAL_CAPACITY * sizeof(int));  // Allocate memory
+    arr->data = (int*)pmalloc(INITIAL_CAPACITY * sizeof(int));  // Allocate memory
     arr->size = 0;  // Initialize size to 0
     arr->capacity = INITIAL_CAPACITY;  // Set initial capacity
     pthread_mutex_init(&arr->lock, NULL);  // Initialize the mutex lock

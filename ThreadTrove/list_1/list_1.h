@@ -107,7 +107,7 @@ void init_list(LinkedList* list) {
 void insert(LinkedList* list, int value) {
     pthread_mutex_lock(&list->lock);
 
-    Node* new_node = (Node*)malloc(sizeof(Node));
+    Node* new_node = (Node*)pmalloc(sizeof(Node));
     new_node->data = value;
     new_node->next = list->head;
     list->head = new_node;
@@ -251,7 +251,7 @@ void reverse(LinkedList* list) {
 void append(LinkedList* list, int value) {
     pthread_mutex_lock(&list->lock);
 
-    Node* new_node = (Node*)malloc(sizeof(Node));
+    Node* new_node = (Node*)pmalloc(sizeof(Node));
     new_node->data = value;
     new_node->next = NULL;
 
@@ -276,7 +276,7 @@ void insert_after(LinkedList* list, int target, int value) {
     Node* current = list->head;
     while (current != NULL) {
         if (current->data == target) {
-            Node* new_node = (Node*)malloc(sizeof(Node));
+            Node* new_node = (Node*)pmalloc(sizeof(Node));
             new_node->data = value;
             new_node->next = current->next;
             current->next = new_node;
