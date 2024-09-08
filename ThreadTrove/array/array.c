@@ -10,9 +10,6 @@ void* thread_func(void* arg) {
     insert(arr, thread_id % 100);
     printf("Thread %d inserted: %d into the array\n", thread_id, thread_id % 100);
 
-    // Introduce a write-after-read dependency
-    sleep(1);  // Simulate delay
-
     int value_read = get(arr, 0);
     if (value_read != -1) {
         printf("Thread %d read: %d from the array\n", thread_id, value_read);
