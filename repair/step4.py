@@ -13,6 +13,7 @@ inf = 9999
 lastStmt = 0
 threads = {}
 num_locks = 0
+num_fence = 0
 fixedBugs = []
 num_threads = 1
 lockedReads = []
@@ -132,6 +133,7 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
     global lockedReads
     global lockedWrites
     global num_locks
+    global num_fence
 
     repairedTrace = []
     addCons = []
@@ -162,49 +164,56 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
         i = traceIndex
         while i<len(trace)-1:
             # print(trace[i])
-            if trace[i+1][0]==int(first):
+            if foundfirst==-1 and trace[i+1][0]!=int(first):
+                print("Adding before: ", trace[i])
+                repairedTrace.append(trace[i])
+                i+=1
+                traceIndex = i
+
+            elif trace[i+1][0]==int(first):
                 # print("Found insertion point for first lock: ", i, i+1, trace[i+1])
                 repairedTrace.append(trace[i])
                 repairedTrace.append(lock)
                 num_locks += 1
                 repairedTrace.append(trace[i+1])
-                foundfirst = 1
+                foundfirst = i+1
+                traceIndex = i
                 i += 2
             
-            elif foundfirst==1 and trace[i][1]==103:
+            elif foundfirst!=-1 and (trace[i][0]==int(second) or trace[i][1]==105):
+                print("Adding fence because encountered second before fence.")
+                repairedTrace.append(fence)
+                num_fence += 1
+                repairedTrace.append(unlock)
+                # repairedTrace.append(trace[i])
+                traceIndex = i+1
+                break
+
+            elif foundfirst!=-1 and trace[i][1]==103:
                 # print("Found fence:", i, trace[i])
                 repairedTrace.append(trace[i])
                 repairedTrace.append(unlock)
                 traceIndex = i+1
                 break
+
             else:
-                if trace[i][1]==101 and (int(trace[i][0]) not in lockedWrites) and (int(trace[i][0]) in writes) and foundfirst==1:
-                    lockedWrites.append(trace[i][0])
-                    print("Locking ", trace[i])
+                if trace[i][1]==101 and (int(trace[i][0]) not in lockedWrites) and (
+                    int(trace[i][0]) in writes or int(trace[i][0]) in reads
+                    ) and foundfirst!=-1 and trace[i][-2]==trace[foundfirst][-2]:
+                        lockedWrites.append(trace[i][0])
+                        print("Locking ", trace[i])
                 repairedTrace.append(trace[i])
                 i += 1
-    
-    elif (int(first) not in writes) and (int(first) in reads) and (int(first) not in lockedReads):
-        # Add lock and unlock statements before store and right after store of first
-        # print("Adding very restricted lock for read.", first)
-        lockedReads.append(int(first))
-        lock = ["Lock_"+str(r), 105, "M1", -1, info[ind1][4], str(info[ind1][5])+"_x"]
-        unlock = ["UnLock_"+str(r), 106, "M1", -1, info[ind1][4], str(info[ind1][5])+"_x"]
-        r += 1
-
-        i = traceIndex
+    else:
+        i = traceIndex-1
         while i<len(trace)-1:
-            if trace[i+1][0]==int(first):
-                # print("Found insertion point for second lock: ", i)
+            # print(trace[i], second)
+            if trace[i][0]==int(second):
+                break
+            else:
                 repairedTrace.append(trace[i])
-                repairedTrace.append(lock)
-                num_locks += 1
-                repairedTrace.append(trace[i+1])
-                repairedTrace.append(unlock)
-                traceIndex = i+2
-                i += 2
             i += 1
-
+    
     if int(second) in writes and int(second) not in lockedWrites:
         # Add lock and unlock statements before store and right after sfence of second
         # print("Adding locks for read and taking fence within lock.", second)
@@ -218,26 +227,41 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
         foundSecond = -1
         i = traceIndex
         while i<len(trace)-1:
+            if foundSecond==-1 and trace[i+1][0]!=int(second):
+                # print("Adding before: ", trace[i])
+                repairedTrace.append(trace[i])
+                i+=1
+                traceIndex = i
+
             if trace[i+1][0]==int(second):
-                print("Found insertion point for second lock: ", i)
+                # print("Found insertion point for second lock: ", i)
                 repairedTrace.append(trace[i])
                 repairedTrace.append(lock)
                 num_locks += 1
                 repairedTrace.append(trace[i+1])
-                foundSecond = 1
+                foundSecond = i+1
                 i += 2
             
+            elif foundSecond!=-1 and (trace[i][0]==int(first) or trace[i][1]==105):
+                # print("Adding fence because encountered second before fence.")
+                repairedTrace.append(fence)
+                num_fence += 1
+                repairedTrace.append(unlock)
+                # repairedTrace.append(trace[i])
+                traceIndex = i
+                break
             
-            elif foundSecond==1 and trace[i][1]==103:
-                print("Found fence at ", trace[i])
+            elif foundSecond!=-1 and trace[i][1]==103:
+                # print("Found fence at ", trace[i])
                 repairedTrace.append(trace[i])
                 repairedTrace.append(unlock)
                 traceIndex = i+1
                 break
+
             else:
-                if trace[i][1]==101 and (int(trace[i][0]) not in lockedWrites) and (int(trace[i][0]) in writes) and foundSecond==1:
+                if trace[i][1]==101 and (int(trace[i][0]) not in lockedWrites) and (int(trace[i][0]) in writes) and foundSecond!=-1:
                     lockedWrites.append(trace[i][0])
-                    print("Locking ", trace[i])
+                    # print("Locking ", trace[i])
                 repairedTrace.append(trace[i])
                 i += 1
 
@@ -249,27 +273,32 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
         unlock = ["UnLock_"+str(r), 106, "M1", -1, info[ind2][4], str(info[ind2][5])+"_x"]
         r += 1
 
-        i = traceIndex
+        i = traceIndex-1
         while i<len(trace)-1:
-            if trace[i+1][0]==int(second):
-                print("Found insertion point for second lock: ", i)
-                repairedTrace.append(trace[i])
+            # print(trace[i], second)
+            if trace[i][0]==int(second):
+                # print("Found insertion point for second lock: ", i, trace[i][0])
                 repairedTrace.append(lock)
+                repairedTrace.append(trace[i])
                 num_locks += 1
-                repairedTrace.append(trace[i+1])
                 repairedTrace.append(unlock)
+                repairedTrace.append(trace[i+1])
                 traceIndex = i+2
                 i += 2
+                break
+            else:
+                repairedTrace.append(trace[i])
             i += 1
-
+    # print("Starting from:", trace[traceIndex])
     for i in range(traceIndex, len(trace)):
+        # print("Starting from:")
         repairedTrace.append(trace[i])
         
     return repairedTrace, addCons
 
 def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
     """
-    Construct a constraint which says bug=give a trace in which atmost one of the constraint is satisfied.
+    Construct a constraint which says bug = give a trace in which atmost one of the constraint is satisfied.
     Then find out which constraint is satisfied.
     """
     cons = []
@@ -291,7 +320,7 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
             # Now we can not rearrange statements. Only the Lock statements can be floating
             cons.append(Int("pc_"+str(thread[i][0])) < Int("pc_"+str(thread[i+1][0])))
 
-    print("Printing trace:")
+    # print("Printing trace:")
     for i in range(len(trace)):
         pcs.append(Int("pc_"+str(trace[i][0])))
         cons.append(Int("pc_"+str(trace[i][0]))>0)
@@ -299,7 +328,8 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
 
         if trace[i][1]==101: #Do this for all STORES
             if int(trace[i][0]) in writes:
-                cons.append(Int("pt_"+str(trace[i][0]))>=Int("pc_"+str(trace[i][0]))) #Persistent time begins at the time of STOREs
+                cons.append(Int("pt_"+str(trace[i][0]))>=Int("pc_"+str(trace[i][0]))) 
+                #Persistent time begins at the time of STOREs
                 for j in range(i+1, len(trace)):
                         if trace[j][1]==103 and trace[j][-2]==trace[i][-2]:
                             cons.append((Int("pt_"+str(trace[i][0]))<=Int("pc_"+str(trace[j][0]))))
@@ -322,6 +352,8 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
     solver.add(Or(bugCons))
     solver.add(cons)
     solver.add(prevCons)
+
+    
     
     if solver.check()==sat:
         print("A violation is found. Let us see which bug was being violated in this trace.")
@@ -335,6 +367,18 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
                 return trace, addCons, bugCons, True
     
     else:
+        # s1 = Solver()
+        # a_c = 0
+        # mapper = {}
+        # for a in solver.assertions():
+        #     print(a)
+        #     a_c += 1
+        #     mapper['c'+str(a_c)] = a
+        #     s1.assert_and_track(a, 'c'+str(a_c))
+        # if s1.check()==unsat:
+        #     print(s1.unsat_core())
+        #     for x in s1.unsat_core():
+        #         print(x, mapper[str(x)])
         print("Model was unsat. This means all bugs have been repaired.")
 
     return trace, [], bugCons, False
@@ -387,6 +431,7 @@ def generateRepair(inputFileName):
             for j in range(i+1, length):
                 if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]!=trace[j][-2]:
                     if [str(trace[i][-1]), str(trace[j][-1])] not in mpas:
+                        print(trace[i], trace[j])
                         first = firstOcc[trace[i][-1]][0]
                         second = firstOcc[trace[j][-1]][0]
                         bugInfos[str(first)+"-"+str(second)] = [firstOcc[trace[i][-1]], firstOcc[trace[j][-1]]]
@@ -455,6 +500,7 @@ def generateRepair(inputFileName):
         
         trace, addCons, bugCons, truthValue = addLocks(trace, reads, writes, cons, bugCons, bugInfos)
         trace, toRemove = removeDeadlocks(trace)
+        # print(trace)
         for add in addCons:
             cons.append(add)
 
@@ -485,6 +531,7 @@ if __name__ == "__main__":
     f.write("###########################################################################\n")
     f.write("Adding MPA Repair Report for "+str(fileName)+": \n")
     f.write("Number of MPAs fixed: "+str(MPACount)+"\n")
+    f.write("Number of fences() added: "+str(num_fence)+"\n")
     f.write("Number of locks() added: "+str(num_locks)+"\n")
     f.write("Total time taken to repair MPA bugs: "+str(timeTaken)+" seconds.\n")
     f.write("###########################################################################\n\n")

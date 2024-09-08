@@ -166,12 +166,13 @@ def repairDURA(thread, bug, previousConstraints):
         if thread[i][1]==101:
             foundFlush = -1
             foundFence = -1
+            # print("pt_"+str(thread[i][0]),str(bug).split("<")[0].replace(" ", ""),  "pt_"+str(thread[i][0])!=str(bug).split("<")[0].replace(" ", ""))
             if "pt_"+str(thread[i][0])!=str(bug).split("<")[0].replace(" ", ""):
                 continue
             else:
                 print("Bug found: ", "pt_"+str(thread[i][0]), str(bug).split("<")[0].replace(" ", ""))
             for j in range(i+1, length): #Change this to run from 0 to length so that all clflushopts 
-                #that already exist and might have been reaaranged can be utilized instead of adding new ones
+                # that already exist and might have been reaaranged can be utilized instead of adding new ones
                 if thread[j][1]==102 and thread[i][2]==thread[j][2] and not(thread[j][0] in claimedFlushes):
                     foundFlush = j
                     # print("Flush found at:", thread[j][0])
@@ -184,7 +185,7 @@ def repairDURA(thread, bug, previousConstraints):
             for j in range(i+1, length):
                 if thread[j][1]==103:
                     foundFence = 1 
-
+            # print("pt_"+str(thread[i][0]))
             if "pt_"+str(thread[i][0])==str(bug).split("<")[0].replace(" ", ""):
                 # print(bug)
                 if foundFlush==-1:
@@ -459,8 +460,8 @@ def repairThread(thread, bugs):
     timeDura = 0
     timeMPB = 0
     for b in bugs:
-        if b in fixedBugs:
-            continue
+        # if b in fixedBugs:
+        #     continue
         print("Repairing for bug:", b)
         if str(inf) in str(b): # and "pt_70" in str(b):
             t1 = time.time()
