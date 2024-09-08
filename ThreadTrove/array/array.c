@@ -14,6 +14,8 @@ void* thread_func(void* arg) {
     if (value_read != -1) {
         printf("Thread %d read: %d from the array\n", thread_id, value_read);
         delete_element(arr, 0);  // Delete the element after reading
+        insert(arr, value_read+1);
+        printf("Thread %d inserted: %d into the array\n", thread_id, value_read+1);
         printf("Thread %d deleted: %d from the array\n", thread_id, value_read);
     }
 
