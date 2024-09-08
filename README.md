@@ -8,22 +8,22 @@ To build the trace generator llvm opt pass:
     sh builder.sh
 ```
 
-To generate trace for all benchmarks in the benchmark folder: 
+To generate trace for all benchmarks in the ThreadTrove folder: 
 ```
-# Generate traces (Results will be saved in PMBugRepair/benchmark/bcFiles/outputs): 
+# Generate traces (Results will be saved in PMBugRepair/results/bcFiles/outputs): 
     make -f benchmarkMake -s -B
 ```
 
-To execute step1 (repair individual traces) for all benchmarks in the benchmark folder: 
+To execute step1 (repair individual traces) for all benchmarks in the ThreadTrove folder: 
 ```
-# Execute step 1 (Results will be saved in PMBugRepair/benchmark/bcFiles/results): 
+# Execute step 1 (Results will be saved in PMBugRepair/results/bcFiles/results): 
     cd repair
     make -f makeRepair -s -B
 ```
 
 ## Updates:
 1. DURA, MPB and MPB bug repair has been added.
-2. Results verified on programs under benchmark folder and FAST FAIR benchmark.
+2. Results verified on programs under ThreadTrove folder and FAST FAIR benchmark.
 3. Results pending for the remaining ASPLOS benchmarks.
 
 

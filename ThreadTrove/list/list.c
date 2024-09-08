@@ -1,4 +1,4 @@
-#include <list_1.h>
+#include <list.h>
 
 int main() {
     pthread_t thread1, thread2;

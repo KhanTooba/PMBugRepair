@@ -12,6 +12,7 @@ r = 0
 inf = 9999
 lastStmt = 0
 threads = {}
+num_locks = 0
 fixedBugs = []
 num_threads = 1
 lockedReads = []
@@ -126,9 +127,12 @@ def getIndividualThreads(trace):
     return indiThreads
 
 def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
+    # Globals
     global r
     global lockedReads
     global lockedWrites
+    global num_locks
+
     repairedTrace = []
     addCons = []
     bug = str(consToRepair).split("(")[1].split(",")[0]
@@ -162,6 +166,7 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
                 # print("Found insertion point for first lock: ", i, i+1, trace[i+1])
                 repairedTrace.append(trace[i])
                 repairedTrace.append(lock)
+                num_locks += 1
                 repairedTrace.append(trace[i+1])
                 foundfirst = 1
                 i += 2
@@ -193,6 +198,7 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
                 # print("Found insertion point for second lock: ", i)
                 repairedTrace.append(trace[i])
                 repairedTrace.append(lock)
+                num_locks += 1
                 repairedTrace.append(trace[i+1])
                 repairedTrace.append(unlock)
                 traceIndex = i+2
@@ -216,6 +222,7 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
                 print("Found insertion point for second lock: ", i)
                 repairedTrace.append(trace[i])
                 repairedTrace.append(lock)
+                num_locks += 1
                 repairedTrace.append(trace[i+1])
                 foundSecond = 1
                 i += 2
@@ -248,6 +255,7 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
                 print("Found insertion point for second lock: ", i)
                 repairedTrace.append(trace[i])
                 repairedTrace.append(lock)
+                num_locks += 1
                 repairedTrace.append(trace[i+1])
                 repairedTrace.append(unlock)
                 traceIndex = i+2
@@ -477,6 +485,7 @@ if __name__ == "__main__":
     f.write("###########################################################################\n")
     f.write("Adding MPA Repair Report for "+str(fileName)+": \n")
     f.write("Number of MPAs fixed: "+str(MPACount)+"\n")
+    f.write("Number of locks() added: ", num_locks)
     f.write("Total time taken to repair MPA bugs: "+str(timeTaken)+" seconds.\n")
     f.write("###########################################################################\n\n")
     f.close()

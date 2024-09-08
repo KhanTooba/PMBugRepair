@@ -14,6 +14,8 @@ threads = {}
 claimedFlushes = []
 fixedBugs = []
 r = 0
+num_fence = 0
+num_flush = 0
 
 def printer(model, map, thread):
     # print("Model: ",model)
@@ -143,19 +145,12 @@ def constructConstraint(i, j, s):
     else:
         return Int("pc_"+str(i))>Int("pc_"+str(j))
 
-def sliceThread(thread):
-    """
-    How to do slicing?
-    Only statements relevant to the bug should be present in the slice:
-
-    How to recombine the slice?
-    ...?
-    """
-    sliced = []
-    return sliced
-
 def repairDURA(thread, bug, previousConstraints):
+    # Globals
     global claimedFlushes
+    global num_fence
+    global num_flush
+
     solver = Solver()
     map = {}
     blocking = []
@@ -195,6 +190,7 @@ def repairDURA(thread, bug, previousConstraints):
                 if foundFlush==-1:
                     # print("Flush has not been found:", foundFlush)
                     flush = [str(thread[i][0])+"_"+str(r), 102, thread[i][2], -1, thread[i][4], str(thread[i][5])+"_x"]
+                    num_flush += 1
                     print("Adding:", flush)
                     r += 1
                     thread.insert(i+1, flush)
@@ -208,6 +204,7 @@ def repairDURA(thread, bug, previousConstraints):
                 if foundFence==-1:
                     # print("Fence has not been found.")
                     fence = [str(thread[i][0])+"_"+str(r), 103, '0', -1, thread[i][4], str(thread[i][5])+"_x"]
+                    num_fence += 1
                     print("Adding:", fence)
                     # print(thread[i])
                     r += 1
@@ -333,6 +330,7 @@ def repairMPB(thread, bug, previousConstraints):
                     print("Fence count:", countFence)
                     if countFence<2:
                         fence = [str(thread[i][0])+"_Fence_"+str(r), 103, '0', -1, thread[i][4], str(thread[i][5])+"_x"]
+                        num_fence += 1
                         # print("Adding:", fence)
                         # blocking.append([thread[i][0], str(thread[i][0])+"_Fence_"+str(r)])
                         # print(thread[i])
@@ -610,6 +608,8 @@ if __name__ == "__main__":
     f.write("Number of MPBs fixed: "+str(mpbCount)+"\n")
     f.write("Total time taken to repair DURA bugs: "+str(timeDURA)+" seconds.\n")
     f.write("Total time taken to repair MPB bugs: "+str(timeMPB)+" seconds.\n")
+    f.write("Number of sfences() added: ", num_fence)
+    f.write("Number of clflushopts() added: ", num_flush)
     f.write("Total time taken: "+str(timeTaken)+" seconds.\n")
     f.write("###########################################################################\n\n")
     f.close()

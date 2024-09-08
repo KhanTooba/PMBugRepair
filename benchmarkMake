@@ -5,18 +5,22 @@ PMInvGen_dir = ./build/Transform/
 
 INCLUDE_GEN = ./Transform/PM/
 
-l1 = list motivatingExample stack queue queue_1 queue_2
+# l1 = list motivatingExample stack queue queue_1 queue_2
+
+FOLDER = ThreadTrove
+files = $(shell find $(FOLDER) -maxdepth 1 -type d | sed 's|.*/||' | tail -n +2)
+
 
 all: compile_and_opt
 
 compile_and_opt:
 	$(foreach file,$(l1), \
 		echo "Processing $(file)"; \
-		$(CC) $(CFLAGS) benchmark/$(file)/$(file).c -o benchmark/bcFiles/$(file).bc -I benchmark/$(file) -I $(INCLUDE_GEN); \
-		opt -load $(PMInvGen_dir)/PMTraceGen/libLLVMPMTraceGen.so --pmtracegen benchmark/bcFiles/$(file).bc -o benchmark/bcFiles/$(file)_tracegen.bc; \
-		$(CC) -g benchmark/bcFiles/$(file)_tracegen.bc -o benchmark/bcFiles/$(file)_exec.o -pthread -L/usr/lib/x86_64-linux-gnu -lm -L$(PMInvGen_dir)/PM -Wl,-rpath=$(PMInvGen_dir)/PM -lLLVMPMC ; \
-		./benchmark/bcFiles/$(file)_exec.o; \
-		mv output.txt ./benchmark/bcFiles/outputs/$(file)_output.txt; \
+		$(CC) $(CFLAGS) ThreadTrove/$(file)/$(file).c -o results/bcFiles/$(file).bc -I ThreadTrove/$(file) -I $(INCLUDE_GEN); \
+		opt -load $(PMInvGen_dir)/PMTraceGen/libLLVMPMTraceGen.so --pmtracegen results/bcFiles/$(file).bc -o results/bcFiles/$(file)_tracegen.bc; \
+		$(CC) -g results/bcFiles/$(file)_tracegen.bc -o results/bcFiles/$(file)_exec.o -pthread -L/usr/lib/x86_64-linux-gnu -lm -L$(PMInvGen_dir)/PM -Wl,-rpath=$(PMInvGen_dir)/PM -lLLVMPMC ; \
+		./results/bcFiles/$(file)_exec.o; \
+		mv output.txt ./results/bcFiles/outputs/$(file)_output.txt; \
 		echo "Processed $(file)"; \
 	)
 
