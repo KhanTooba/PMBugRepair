@@ -16,7 +16,7 @@ Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
 Adding locks for write. 2
 Found insertion point for second lock:  2
 Found fence at  [7, 103, '0', '-1', 5, '117_x']
-Time taken:  0.02353191375732422  seconds.
+Time taken:  0.016858339309692383  seconds.
 
 ############################################################################
 
@@ -27,7 +27,7 @@ Printing trace:
 Completed building constraints.
 Number of constraints:  96
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.019083023071289062  seconds.
+Time taken:  0.013501644134521484  seconds.
 
 ############################################################################
 

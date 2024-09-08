@@ -10,7 +10,7 @@ Working on Thread: 0 (Length of thread :  2 ):
 Repairing for bug: pt_2 < 9999
 Before append: 2
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x19cb480'", -1, 0, '121_x']
+Adding: ['2_0', 102, "'0x1846480'", -1, 0, '121_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '121_x']
 After append: 4
@@ -26,25 +26,23 @@ SAIS: pc_2 <= pc_2_1
 ####################################################################################
 Repairing for bug: pt_4 < 9999
 Before append: 4
-Bug found:  pt_4 pt_4
-Adding: ['4_0', 102, "'0x19cb480'", -1, 0, '138_x']
-Constraint added: pc_4 == pc_4_0 - 1
-After append: 5
-The number of assertions: 25
-The number of blocking constraint will be:  1
-Blocking constraints: [[4, '4_0', '2_1']]
+After append: 4
+The number of assertions: 17
+The number of blocking constraint will be:  0
+Blocking constraints: []
 Bug is: Not(pt_4 < 9999)
-Num: 28
+Num: 20
 ITERATION:  1
-Not(And(pc_4 > pc_2_1))
+Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: pc_4 <= pc_2_1
+SAIS: False
+Repair not found.
 ####################################################################################
-Time taken to repair thread  0 :  0.07652926445007324  seconds.
+Time taken to repair thread  0 :  0.0576014518737793  seconds.
 ################################################################################################
 ################################################################################################
-Working on Thread: 1 (Length of thread :  1 ): 
-Time taken to repair thread  1 :  0.00013375282287597656  seconds.
+Working on Thread: 1 (Length of thread :  3 ): 
+Time taken to repair thread  1 :  0.00010609626770019531  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  1.430511474609375e-05  seconds.
+Time taken to recombine individual threads:  1.0967254638671875e-05  seconds.
