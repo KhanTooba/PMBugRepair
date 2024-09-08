@@ -44,7 +44,7 @@ int main() {
     display(&list);
 
     // Clean up the list and destroy the mutex lock
-    free_list(&list);
+    clear(&list);
     pthread_mutex_destroy(&list.lock);
     
     return 0;

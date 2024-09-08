@@ -12,9 +12,6 @@ void* thread_func(void* arg) {
     insert(ht, key_to_insert, value_to_insert);
     printf("Thread %d inserted: (%d, %d) into the hash table\n", thread_id, key_to_insert, value_to_insert);
     
-    // Introduce a write-after-read dependency
-    sleep(1);  // Simulate delay
-    
     int value_read = search(ht, key_to_insert);
     if (value_read != -1) {
         printf("Thread %d read: (%d, %d) from the hash table\n", thread_id, key_to_insert, value_read);
@@ -27,7 +24,7 @@ void* thread_func(void* arg) {
 
 int main() {
     HashTable ht;
-    init_table(&ht);  // Initialize the hash table
+    init_hash_table(&ht);  // Initialize the hash table
 
     pthread_t threads[N_THREADS];  // Array of thread identifiers
     
@@ -45,7 +42,7 @@ int main() {
     display(&ht);
 
     // Clean up the hash table and destroy the mutex locks
-    free_table(&ht);
+    clear(&ht);
     
     return 0;
 }

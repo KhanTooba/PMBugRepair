@@ -8,7 +8,7 @@ INCLUDE_GEN = ./Transform/PM/
 # l1 = list motivatingExample stack queue queue_1 queue_2
 
 FOLDER = ThreadTrove
-files = $(shell find $(FOLDER) -maxdepth 1 -type d | sed 's|.*/||' | tail -n +2)
+l1 = $(shell find $(FOLDER) -maxdepth 1 -type d | sed 's|.*/||' | tail -n +2)
 
 
 all: compile_and_opt
