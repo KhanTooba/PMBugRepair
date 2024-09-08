@@ -1,0 +1,42 @@
+Local variables initialized.
+[2, 101, '0x196abe0', '-1', 0, '99'] [12, 101, '0x196b0b8', '0x196abe0', 1, '100']
+Number of bugs to be repaired:  1
+And(pc_2 < pc_5, pt_2 > pc_5)
+{5} {2}
+
+############################################################################
+Iteration:  1
+Number of threads:  6
+Completed building constraints.
+Number of constraints:  37
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
+2 5 [2] [5] [] []
+Adding locks for write. 2
+Adding before:  [2, 101, '0x196abe0', '-1', 4, '99']
+Adding before:  [3, 102, '0x196abe0', '-1', 4, '99_x']
+Adding before:  [4, 103, '0', '-1', 4, '99_x']
+Adding before:  [5, 101, '0x196abe8', '0x196abe0', 5, '100']
+Adding before:  [6, 102, '0x196abe8', '-1', 5, '100_x']
+Adding before:  [7, 103, '0', '-1', 5, '100_x']
+Adding before:  [8, 103, '0', '-1', 0, '99_x']
+Adding before:  [9, 101, '0x196b0b0', '-1', 0, '99']
+Adding before:  [10, 101, '0x196b0b8', '0x196abe0', 0, '100']
+Adding before:  [11, 101, '0x196b0b0', '-1', 1, '99']
+Adding before:  [12, 101, '0x196b0b8', '0x196abe0', 1, '100']
+Adding before:  [13, 101, '0x196abe0', '-1', 2, '99']
+Time taken:  0.014061689376831055  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  2
+Number of threads:  6
+Completed building constraints.
+Number of constraints:  40
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.009076595306396484  seconds.
+
+############################################################################
+
+Total number of iterations:  2

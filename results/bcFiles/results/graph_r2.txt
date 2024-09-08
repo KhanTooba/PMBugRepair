@@ -1,0 +1,87 @@
+Local variables initialized.
+[12, 101, '0x7ff2f4002740', '-1', 1, '73'] [27, 101, '0x7ff2ec0022b8', '0x7ff2f4002740', 2, '74']
+[14, 101, '0x7ff2f4002748', '0x7ff2f4002740', 1, '74'] [29, 101, '0xa4d9e0', '0x7ff2f4002748', 2, '85']
+[16, 101, '0x7ff2f4002748', '-1', 1, '84'] [29, 101, '0xa4d9e0', '0x7ff2f4002748', 2, '85']
+[21, 101, '0x7ff2f4002958', '0x7ff2f4002740', 1, '74'] [33, 101, '0xa4da10', '0x7ff2f4002958', 2, '94']
+[22, 101, '0x7ff2f4002958', '-1', 1, '93'] [33, 101, '0xa4da10', '0x7ff2f4002958', 2, '94']
+Number of bugs to be repaired:  5
+And(pc_12 < pc_14, pt_12 > pc_14)
+And(pc_14 < pc_18, pt_14 > pc_18)
+And(pc_16 < pc_18, pt_16 > pc_18)
+And(pc_14 < pc_24, pt_14 > pc_24)
+And(pc_22 < pc_24, pt_22 > pc_24)
+{24, 18} {16, 12, 14, 22}
+
+############################################################################
+Iteration:  1
+Number of threads:  14
+Completed building constraints.
+Number of constraints:  199
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_14 < pc_18, pt_14 > pc_18)
+14 18 [12, 14, 16, 22] [24, 18] [] []
+Adding locks for write. 14
+Adding before:  [2, 101, '0xa4d900', '-1', 0, '40']
+Adding before:  [3, 102, '0xa4d900', '-1', 0, '40_x']
+Adding before:  [4, 101, '0xa4d908', '-1', 0, '41']
+Adding before:  [5, 102, '0xa4d908', '-1', 0, '41_x']
+Adding before:  [6, 103, '0', '-1', 0, '40_x']
+Adding before:  [7, 101, '0xa4d9b0', '-1', 0, '45']
+Adding before:  [8, 102, '0xa4d9b0', '-1', 0, '45_x']
+Adding before:  [9, 101, '0xa4d9e0', '-1', 0, '45']
+Adding before:  [10, 101, '0xa4da10', '-1', 0, '45']
+Adding before:  [11, 101, '0xa4da40', '-1', 0, '45']
+Adding before:  [12, 101, '0x7ff2f4002740', '-1', 4, '73']
+Locking  [16, 101, '0x7ff2f4002748', '-1', 10, '84']
+Adding fence because encountered second before fence.
+Time taken:  0.05206704139709473  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  2
+Number of threads:  14
+Completed building constraints.
+Number of constraints:  230
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_12 < pc_14, pt_12 > pc_14)
+12 14 [12, 14, 16, 22] [24, 18] [14, 16] [14, 18]
+Adding locks for write. 12
+Adding before:  [2, 101, '0xa4d900', '-1', 0, '40']
+Adding before:  [3, 102, '0xa4d900', '-1', 0, '40_x']
+Adding before:  [4, 101, '0xa4d908', '-1', 0, '41']
+Adding before:  [5, 102, '0xa4d908', '-1', 0, '41_x']
+Adding before:  [6, 103, '0', '-1', 0, '40_x']
+Adding before:  [7, 101, '0xa4d9b0', '-1', 0, '45']
+Adding before:  [8, 102, '0xa4d9b0', '-1', 0, '45_x']
+Adding before:  [9, 101, '0xa4d9e0', '-1', 0, '45']
+Adding before:  [10, 101, '0xa4da10', '-1', 0, '45']
+Adding fence because encountered second before fence.
+Removing   ['UnLock_0', 106, 'M1', -1, 10, '74_x']   for   [68, 103, '0', '-1', 0, '45_x']
+Time taken:  0.05752921104431152  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  3
+Number of threads:  14
+Completed building constraints.
+Number of constraints:  232
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_14 < pc_24, pt_14 > pc_24)
+14 24 [12, 14, 16, 22] [24, 18] [14, 16, 12] [14, 18, 12]
+Time taken:  0.05766892433166504  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  4
+Number of threads:  14
+Completed building constraints.
+Number of constraints:  374
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.02737259864807129  seconds.
+
+############################################################################
+
+Total number of iterations:  4
