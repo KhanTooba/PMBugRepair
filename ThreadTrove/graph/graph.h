@@ -36,9 +36,9 @@ int hasEdge(Graph* graph, int src, int dest);
 
 // Function to create a graph
 Graph* createGraph(int vertices) {
-    Graph* graph = (Graph*)malloc(sizeof(Graph));
+    Graph* graph = (Graph*)pmalloc(sizeof(Graph));
     graph->numVertices = vertices;
-    graph->array = (AdjList*)malloc(vertices * sizeof(AdjList));
+    graph->array = (AdjList*)pmalloc(vertices * sizeof(AdjList));
 
     // Initialize each adjacency list and mutexes
     for (int i = 0; i < vertices; i++) {
@@ -69,7 +69,7 @@ void destroyGraph(Graph* graph) {
 
 // Function to create a new node
 Node* createNode(int vertex) {
-    Node* newNode = (Node*)malloc(sizeof(Node));
+    Node* newNode = (Node*)pmalloc(sizeof(Node));
     newNode->vertex = vertex;
     newNode->next = NULL;
     return newNode;
