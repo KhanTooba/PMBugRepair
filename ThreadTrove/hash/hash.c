@@ -12,7 +12,7 @@ void* thread_func(void* arg) {
     insert(ht, key_to_insert, value_to_insert);
     printf("Thread %d inserted: (%d, %d) into the hash table\n", thread_id, key_to_insert, value_to_insert);
     
-    int value_read = search(ht, key_to_insert);
+    int value_read = contains(ht, key_to_insert);
     if (value_read != -1) {
         printf("Thread %d read: (%d, %d) from the hash table\n", thread_id, key_to_insert, value_read);
         delete_from_hash(ht, key_to_insert);  // Delete the key after reading
