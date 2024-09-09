@@ -19,6 +19,8 @@ num_threads = 1
 lockedReads = []
 lockedWrites = []
 claimedFlushes = []
+num_solverCalls = 0
+
 
 def printer(model, map):
     # print("Model: ",model)
@@ -300,6 +302,7 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
     return repairedTrace, addCons
 
 def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
+    global num_solverCalls 
     """
     Construct a constraint which says bug = give a trace in which atmost one of the constraint is satisfied.
     Then find out which constraint is satisfied.
@@ -356,9 +359,8 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
     solver.add(cons)
     solver.add(prevCons)
 
-    
-    
     if solver.check()==sat:
+        num_solverCalls += 1
         print("A violation is found. Let us see which bug was being violated in this trace.")
         model = solver.model()
         for constraint in bugCons:
@@ -370,18 +372,7 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
                 return trace, addCons, bugCons, True
     
     else:
-        # s1 = Solver()
-        # a_c = 0
-        # mapper = {}
-        # for a in solver.assertions():
-        #     print(a)
-        #     a_c += 1
-        #     mapper['c'+str(a_c)] = a
-        #     s1.assert_and_track(a, 'c'+str(a_c))
-        # if s1.check()==unsat:
-        #     print(s1.unsat_core())
-        #     for x in s1.unsat_core():
-        #         print(x, mapper[str(x)])
+        num_solverCalls += 1
         print("Model was unsat. This means all bugs have been repaired.")
 
     return trace, [], bugCons, False
@@ -536,6 +527,7 @@ if __name__ == "__main__":
     f.write("Number of MPAs fixed: "+str(MPACount)+"\n")
     f.write("Number of fences() added: "+str(num_fence)+"\n")
     f.write("Number of locks() added: "+str(num_locks)+"\n")
+    f.write("Total number of calls to the Z3 solver: "+str(num_solverCalls)+"\n")
     f.write("Total time taken to repair MPA bugs: "+str(timeTaken)+" seconds.\n")
     f.write("###########################################################################\n\n")
     f.close()

@@ -7,15 +7,17 @@ Questions to think:
     It reduces the need to check for CLFLUSHOPT after stores while solving for MPB.
 3. Add constraints for all statements belonging to the same line in the code.
 """
-num_threads = 1
-inf = 9999
-lastStmt = 0
-threads = {}
-claimedFlushes = []
-fixedBugs = []
+
 r = 0
+inf = 9999
+threads = {}
+lastStmt = 0
 num_fence = 0
 num_flush = 0
+fixedBugs = []
+num_threads = 1
+claimedFlushes = []
+num_solverCalls = 0
 
 def printer(model, map, thread):
     # print("Model: ",model)
@@ -48,6 +50,7 @@ def printAllSolutions(s, lastStmt, writer):
     solver = Solver()
     solver.add(s.assertions())
     numSols = 0
+
     while solver.check()==sat:
         numSols += 1
         model = printableSolver(solver)
@@ -150,6 +153,7 @@ def repairDURA(thread, bug, previousConstraints):
     global claimedFlushes
     global num_fence
     global num_flush
+    global num_solverCalls
 
     solver = Solver()
     map = {}
@@ -262,6 +266,7 @@ def repairDURA(thread, bug, previousConstraints):
 
     sais = []
     while solver.check()==sat:
+        num_solverCalls += 1
         print("Num:", len(solver.assertions()))
         model = solver.model()
         # print(model)
@@ -278,6 +283,7 @@ def repairDURA(thread, bug, previousConstraints):
 
         #(STORE(&x)->CLFLUSHOPT(&x))->.........->SFENCE()
     else:
+        num_solverCalls += 1
         print("Not running blocking constraint generation because already unsat.")
 
     s.add(simplify(And(sais)))
@@ -296,6 +302,8 @@ def repairDURA(thread, bug, previousConstraints):
     return repairedThread, constraintsToReturn
 
 def repairMPB(thread, bug, previousConstraints):
+    global num_solverCalls
+
     solver = Solver()
     map = {}
     blocking = []
@@ -404,6 +412,7 @@ def repairMPB(thread, bug, previousConstraints):
     
     sais = []
     while solver.check()==sat:
+        num_solverCalls += 1
         print("Num:", len(solver.assertions()))
         model = solver.model()
         
@@ -424,6 +433,7 @@ def repairMPB(thread, bug, previousConstraints):
         """
 
     else:
+        num_solverCalls += 1
         print("Not running blocking constraint generation because already unsat.")
 
         #(STORE(&x)->CLFLUSHOPT(&x))->.........->SFENCE()
@@ -614,6 +624,7 @@ if __name__ == "__main__":
     f.write("Total time taken to repair MPB bugs: "+str(timeMPB)+" seconds.\n")
     f.write("Number of sfences() added: "+str(num_fence)+"\n")
     f.write("Number of clflushopts() added: "+str(num_flush)+"\n")
+    f.write("Total number of calls to the Z3 solver: "+str(num_solverCalls)+"\n")
     f.write("Total time taken: "+str(timeTaken)+" seconds.\n")
     f.write("###########################################################################\n\n")
     f.close()
