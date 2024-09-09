@@ -8,10 +8,6 @@
  * mutex locks to control access to shared data, enabling safe concurrent inserts, 
  * deletions, and updates.
  *
- * In this implementation, threads can introduce write-after-read dependencies 
- * through the `thread_func` function and the `main` method. However, the internal 
- * array functions are agnostic to these dependencies, ensuring that the data 
- * structure's core logic remains consistent and robust.
  *
  * Functions:
  * 

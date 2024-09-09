@@ -7,8 +7,7 @@
  * the stack simultaneously. The stack supports various operations such as push, 
  * pop, peek, and size retrieval, while ensuring thread safety through proper 
  * synchronization mechanisms. The internal functions of the stack do not handle 
- * thread dependencies, keeping the design modular and clean. Any write-after-write 
- * dependencies are handled externally within the thread functions.
+ * thread dependencies, keeping the design modular and clean. 
  *
  * Functions:
  * 
