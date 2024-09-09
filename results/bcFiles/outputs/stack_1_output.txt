@@ -1,68 +1,68 @@
-FUNC_BEGIN_1: main 1; <Thread ID:140632037242688>
-FUNC_BEGIN_1: stack_init 1; <Thread ID:140632037242688>
-FUNC_END: stack_init 1; <Thread ID:140632037242688>
-FUNC_BEGIN_1: stack_push 1; <Thread ID:140632037242688>
-Adding addr: 0x196abe0 to 0x196abf0; <Thread ID:140632037242688>
-Store: 0x196abe0 Size: 4 ID: 44 @Ln,Col: 99,20 Scope: stack_push; <Thread ID:140632037242688>
-Store: 0x196abe8 Size: 8 ID: 50 @Ln,Col: 100,20 Scope: stack_push; <Thread ID:140632037242688>
-DEP: SrcID: 44 DestID: 50; <Thread ID:140632037242688>
-FUNC_END: stack_push 1; <Thread ID:140632037242688>
-FUNC_BEGIN_1: stack_push 2; <Thread ID:140632037242688>
-Adding addr: 0x196b0b0 to 0x196b0c0; <Thread ID:140632037242688>
-Store: 0x196b0b0 Size: 4 ID: 44 @Ln,Col: 99,20 Scope: stack_push; <Thread ID:140632037242688>
-Store: 0x196b0b8 Size: 8 ID: 50 @Ln,Col: 100,20 Scope: stack_push; <Thread ID:140632037242688>
-DEP: SrcID: 44 DestID: 50; <Thread ID:140632037242688>
-FUNC_END: stack_push 2; <Thread ID:140632037242688>
-FUNC_BEGIN_1: thread_func 1; <Thread ID:140632037238528>
-FUNC_BEGIN_1: thread_func 1; <Thread ID:140632028845824>
-FUNC_BEGIN_1: stack_pop 1; <Thread ID:140632037238528>
-FUNC_BEGIN_1: stack_is_empty 1; <Thread ID:140632037238528>
-FUNC_END: stack_is_empty 1; <Thread ID:140632037238528>
-Load: 0x196b0b0 Size: 4 ID: 89 @Ln,Col: 118,23 Scope: stack_pop; <Thread ID:140632037238528>
-Load: 0x196b0b8 Size: 8 ID: 93 @Ln,Col: 119,24 Scope: stack_pop; <Thread ID:140632037238528>
-FUNC_END: stack_pop 1; <Thread ID:140632037238528>
-FUNC_BEGIN_1: stack_pop 2; <Thread ID:140632028845824>
-FUNC_BEGIN_1: stack_is_empty 2; <Thread ID:140632028845824>
-FUNC_END: stack_is_empty 2; <Thread ID:140632028845824>
-Load: 0x196abe0 Size: 4 ID: 89 @Ln,Col: 118,23 Scope: stack_pop; <Thread ID:140632028845824>
-Load: 0x196abe8 Size: 8 ID: 93 @Ln,Col: 119,24 Scope: stack_pop; <Thread ID:140632028845824>
-FUNC_END: stack_pop 2; <Thread ID:140632028845824>
-FUNC_BEGIN_1: stack_push 3; <Thread ID:140632037238528>
-Adding addr: 0x196b0b0 to 0x196b0c0; <Thread ID:140632037238528>
-Store: 0x196b0b0 Size: 4 ID: 44 @Ln,Col: 99,20 Scope: stack_push; <Thread ID:140632037238528>
-Store: 0x196b0b8 Size: 8 ID: 50 @Ln,Col: 100,20 Scope: stack_push; <Thread ID:140632037238528>
-DEP: SrcID: 44 DestID: 50; <Thread ID:140632037238528>
-FUNC_END: stack_push 3; <Thread ID:140632037238528>
-FUNC_END: thread_func 1; <Thread ID:140632037238528>
-FUNC_BEGIN_1: stack_push 4; <Thread ID:140632028845824>
-Adding addr: 0x196abe0 to 0x196abf0; <Thread ID:140632028845824>
-Store: 0x196abe0 Size: 4 ID: 44 @Ln,Col: 99,20 Scope: stack_push; <Thread ID:140632028845824>
-Store: 0x196abe8 Size: 8 ID: 50 @Ln,Col: 100,20 Scope: stack_push; <Thread ID:140632028845824>
-DEP: SrcID: 44 DestID: 50; <Thread ID:140632028845824>
-FUNC_END: stack_push 4; <Thread ID:140632028845824>
-FUNC_END: thread_func 2; <Thread ID:140632028845824>
-FUNC_BEGIN_1: stack_size 1; <Thread ID:140632037242688>
-Load: 0x196abe8 Size: 8 ID: 167 @Ln,Col: 152,28 Scope: stack_size; <Thread ID:140632037242688>
-Load: 0x196b0b8 Size: 8 ID: 167 @Ln,Col: 152,28 Scope: stack_size; <Thread ID:140632037242688>
-FUNC_END: stack_size 1; <Thread ID:140632037242688>
-FUNC_BEGIN_1: stack_is_empty 3; <Thread ID:140632037242688>
-FUNC_END: stack_is_empty 3; <Thread ID:140632037242688>
-FUNC_BEGIN_1: stack_pop 3; <Thread ID:140632037242688>
-FUNC_BEGIN_1: stack_is_empty 4; <Thread ID:140632037242688>
-FUNC_END: stack_is_empty 4; <Thread ID:140632037242688>
-Load: 0x196abe0 Size: 4 ID: 89 @Ln,Col: 118,23 Scope: stack_pop; <Thread ID:140632037242688>
-Load: 0x196abe8 Size: 8 ID: 93 @Ln,Col: 119,24 Scope: stack_pop; <Thread ID:140632037242688>
-FUNC_END: stack_pop 3; <Thread ID:140632037242688>
-FUNC_BEGIN_1: stack_is_empty 5; <Thread ID:140632037242688>
-FUNC_END: stack_is_empty 5; <Thread ID:140632037242688>
-FUNC_BEGIN_1: stack_pop 4; <Thread ID:140632037242688>
-FUNC_BEGIN_1: stack_is_empty 6; <Thread ID:140632037242688>
-FUNC_END: stack_is_empty 6; <Thread ID:140632037242688>
-Load: 0x196b0b0 Size: 4 ID: 89 @Ln,Col: 118,23 Scope: stack_pop; <Thread ID:140632037242688>
-Load: 0x196b0b8 Size: 8 ID: 93 @Ln,Col: 119,24 Scope: stack_pop; <Thread ID:140632037242688>
-FUNC_END: stack_pop 4; <Thread ID:140632037242688>
-FUNC_BEGIN_1: stack_is_empty 7; <Thread ID:140632037242688>
-FUNC_END: stack_is_empty 7; <Thread ID:140632037242688>
-FUNC_BEGIN_1: stack_destroy 1; <Thread ID:140632037242688>
-FUNC_END: stack_destroy 1; <Thread ID:140632037242688>
-FUNC_END: main 1; <Thread ID:140632037242688>
+FUNC_BEGIN_1: main 1; <Thread ID:140384663590720>
+FUNC_BEGIN_1: stack_init 1; <Thread ID:140384663590720>
+FUNC_END: stack_init 1; <Thread ID:140384663590720>
+FUNC_BEGIN_1: stack_push 1; <Thread ID:140384663590720>
+Adding addr: 0xaa2be0 to 0xaa2bf0; <Thread ID:140384663590720>
+Store: 0xaa2be0 Size: 4 ID: 44 @Ln,Col: 98,20 Scope: stack_push; <Thread ID:140384663590720>
+Store: 0xaa2be8 Size: 8 ID: 50 @Ln,Col: 99,20 Scope: stack_push; <Thread ID:140384663590720>
+DEP: SrcID: 44 DestID: 50; <Thread ID:140384663590720>
+FUNC_END: stack_push 1; <Thread ID:140384663590720>
+FUNC_BEGIN_1: stack_push 2; <Thread ID:140384663590720>
+Adding addr: 0xaa30b0 to 0xaa30c0; <Thread ID:140384663590720>
+Store: 0xaa30b0 Size: 4 ID: 44 @Ln,Col: 98,20 Scope: stack_push; <Thread ID:140384663590720>
+Store: 0xaa30b8 Size: 8 ID: 50 @Ln,Col: 99,20 Scope: stack_push; <Thread ID:140384663590720>
+DEP: SrcID: 44 DestID: 50; <Thread ID:140384663590720>
+FUNC_END: stack_push 2; <Thread ID:140384663590720>
+FUNC_BEGIN_1: thread_func 1; <Thread ID:140384655193856>
+FUNC_BEGIN_1: thread_func 1; <Thread ID:140384663586560>
+FUNC_BEGIN_1: stack_pop 1; <Thread ID:140384655193856>
+FUNC_BEGIN_1: stack_is_empty 1; <Thread ID:140384655193856>
+FUNC_END: stack_is_empty 1; <Thread ID:140384655193856>
+Load: 0xaa30b0 Size: 4 ID: 89 @Ln,Col: 117,23 Scope: stack_pop; <Thread ID:140384655193856>
+Load: 0xaa30b8 Size: 8 ID: 93 @Ln,Col: 118,24 Scope: stack_pop; <Thread ID:140384655193856>
+FUNC_BEGIN_1: stack_pop 1; <Thread ID:140384663586560>
+FUNC_END: stack_pop 1; <Thread ID:140384655193856>
+FUNC_BEGIN_1: stack_is_empty 2; <Thread ID:140384663586560>
+FUNC_END: stack_is_empty 2; <Thread ID:140384663586560>
+Load: 0xaa2be0 Size: 4 ID: 89 @Ln,Col: 117,23 Scope: stack_pop; <Thread ID:140384663586560>
+Load: 0xaa2be8 Size: 8 ID: 93 @Ln,Col: 118,24 Scope: stack_pop; <Thread ID:140384663586560>
+FUNC_BEGIN_1: stack_push 3; <Thread ID:140384655193856>
+Adding addr: 0xaa30b0 to 0xaa30c0; <Thread ID:140384655193856>
+Store: 0xaa30b0 Size: 4 ID: 44 @Ln,Col: 98,20 Scope: stack_push; <Thread ID:140384655193856>
+Store: 0xaa30b8 Size: 8 ID: 50 @Ln,Col: 99,20 Scope: stack_push; <Thread ID:140384655193856>
+DEP: SrcID: 44 DestID: 50; <Thread ID:140384655193856>
+FUNC_END: stack_pop 2; <Thread ID:140384663586560>
+FUNC_END: stack_push 3; <Thread ID:140384655193856>
+FUNC_END: thread_func 1; <Thread ID:140384655193856>
+FUNC_BEGIN_1: stack_push 4; <Thread ID:140384663586560>
+Adding addr: 0xaa2be0 to 0xaa2bf0; <Thread ID:140384663586560>
+Store: 0xaa2be0 Size: 4 ID: 44 @Ln,Col: 98,20 Scope: stack_push; <Thread ID:140384663586560>
+Store: 0xaa2be8 Size: 8 ID: 50 @Ln,Col: 99,20 Scope: stack_push; <Thread ID:140384663586560>
+DEP: SrcID: 44 DestID: 50; <Thread ID:140384663586560>
+FUNC_END: stack_push 4; <Thread ID:140384663586560>
+FUNC_END: thread_func 2; <Thread ID:140384663586560>
+FUNC_BEGIN_1: stack_size 1; <Thread ID:140384663590720>
+Load: 0xaa2be8 Size: 8 ID: 167 @Ln,Col: 151,28 Scope: stack_size; <Thread ID:140384663590720>
+Load: 0xaa30b8 Size: 8 ID: 167 @Ln,Col: 151,28 Scope: stack_size; <Thread ID:140384663590720>
+FUNC_END: stack_size 1; <Thread ID:140384663590720>
+FUNC_BEGIN_1: stack_is_empty 3; <Thread ID:140384663590720>
+FUNC_END: stack_is_empty 3; <Thread ID:140384663590720>
+FUNC_BEGIN_1: stack_pop 3; <Thread ID:140384663590720>
+FUNC_BEGIN_1: stack_is_empty 4; <Thread ID:140384663590720>
+FUNC_END: stack_is_empty 4; <Thread ID:140384663590720>
+Load: 0xaa2be0 Size: 4 ID: 89 @Ln,Col: 117,23 Scope: stack_pop; <Thread ID:140384663590720>
+Load: 0xaa2be8 Size: 8 ID: 93 @Ln,Col: 118,24 Scope: stack_pop; <Thread ID:140384663590720>
+FUNC_END: stack_pop 3; <Thread ID:140384663590720>
+FUNC_BEGIN_1: stack_is_empty 5; <Thread ID:140384663590720>
+FUNC_END: stack_is_empty 5; <Thread ID:140384663590720>
+FUNC_BEGIN_1: stack_pop 4; <Thread ID:140384663590720>
+FUNC_BEGIN_1: stack_is_empty 6; <Thread ID:140384663590720>
+FUNC_END: stack_is_empty 6; <Thread ID:140384663590720>
+Load: 0xaa30b0 Size: 4 ID: 89 @Ln,Col: 117,23 Scope: stack_pop; <Thread ID:140384663590720>
+Load: 0xaa30b8 Size: 8 ID: 93 @Ln,Col: 118,24 Scope: stack_pop; <Thread ID:140384663590720>
+FUNC_END: stack_pop 4; <Thread ID:140384663590720>
+FUNC_BEGIN_1: stack_is_empty 7; <Thread ID:140384663590720>
+FUNC_END: stack_is_empty 7; <Thread ID:140384663590720>
+FUNC_BEGIN_1: stack_destroy 1; <Thread ID:140384663590720>
+FUNC_END: stack_destroy 1; <Thread ID:140384663590720>
+FUNC_END: main 1; <Thread ID:140384663590720>
