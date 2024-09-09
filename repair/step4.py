@@ -425,7 +425,7 @@ def generateRepair(inputFileName):
             for j in range(i+1, length):
                 if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]!=trace[j][-2]:
                     if [str(trace[i][-1]), str(trace[j][-1])] not in mpas:
-                        print(trace[i], trace[j])
+                        # print(trace[i], trace[j])
                         first = firstOcc[trace[i][-1]][0]
                         second = firstOcc[trace[j][-1]][0]
                         bugInfos[str(first)+"-"+str(second)] = [firstOcc[trace[i][-1]], firstOcc[trace[j][-1]]]
