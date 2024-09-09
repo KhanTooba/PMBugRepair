@@ -1,4 +1,4 @@
-#include <queues.h>
+#include <queue.h>
 
 int main() {
     pthread_t thread1, thread2;

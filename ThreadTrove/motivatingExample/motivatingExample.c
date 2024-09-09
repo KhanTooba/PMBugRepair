@@ -1,4 +1,4 @@
-#include <example.h>
+#include <motivatingExample.h>
 
 int main() {
     PersistentMemory pm;
