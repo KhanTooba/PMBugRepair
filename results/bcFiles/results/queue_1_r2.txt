@@ -1,5 +1,5 @@
 Local variables initialized.
-[2, 101, '0x7f4b1c002bf0', '-1', 0, '21'] [8, 101, '0x7f4b140010a8', '0x7f4b1c002bf0', 1, '22']
+[2, 101, '0x7fbb44002d10', '-1', 0, '21'] [8, 101, '0x7fbb4c000f88', '0x7fbb44002d10', 1, '22']
 Number of bugs to be repaired:  1
 And(pc_2 < pc_5, pt_2 > pc_5)
 {5} {2}
@@ -13,12 +13,12 @@ A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
 2 5 [2] [5] [] []
 Adding locks for write. 2
-Found insertion point for first lock:  0 1 [2, 101, '0x7f4b1c002bf0', '-1', 3, '21']
+Found insertion point for first lock:  0 1 [2, 101, '0x7fbb44002d10', '-1', 3, '21']
 0
 Found fence: 2 [4, 103, '0', '-1', 3, '21_x']
 Adding very restricted lock for read. 5
 1
-Time taken:  0.059697628021240234  seconds.
+Time taken:  0.04430723190307617  seconds.
 
 ############################################################################
 
@@ -28,7 +28,7 @@ Number of threads:  5
 Completed building constraints.
 Number of constraints:  492
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.03606104850769043  seconds.
+Time taken:  0.03016805648803711  seconds.
 
 ############################################################################
 

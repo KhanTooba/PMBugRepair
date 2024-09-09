@@ -22,7 +22,7 @@ Working on Thread: 0 (Length of thread :  22 ):
 Repairing for bug: pt_2 < 9999
 Before append: 22
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x17d5900'", -1, 0, '40_x']
+Adding: ['2_0', 102, "'0x66c900'", -1, 0, '40_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '40_x']
 After append: 24
@@ -39,7 +39,7 @@ SAIS: pc_2 <= pc_2_1
 Repairing for bug: pt_3 < 9999
 Before append: 24
 Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0x17d5908'", -1, 0, '41_x']
+Adding: ['3_0', 102, "'0x66c908'", -1, 0, '41_x']
 Constraint added: pc_3 == pc_3_0 - 1
 After append: 25
 The number of assertions: 605
@@ -55,7 +55,7 @@ SAIS: pc_3 <= pc_2_1
 Repairing for bug: pt_4 < 9999
 Before append: 25
 Bug found:  pt_4 pt_4
-Adding: ['4_0', 102, "'0x17d59b0'", -1, 0, '45_x']
+Adding: ['4_0', 102, "'0x66c9b0'", -1, 0, '45_x']
 Constraint added: pc_4 == pc_4_0 - 1
 Adding: ['4_1', 103, '0', -1, 0, '45_x']
 After append: 27
@@ -203,7 +203,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  0 :  1.1965632438659668  seconds.
+Time taken to repair thread  0 :  1.1178832054138184  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  16 ): 
@@ -246,7 +246,7 @@ Repair not found.
 Repairing for bug: pt_8 < 9999
 Before append: 16
 Bug found:  pt_8 pt_8
-Adding: ['8_0', 102, "'0x7f85b0003cb0'", -1, 1, '73_x']
+Adding: ['8_0', 102, "'0x7f39a4003920'", -1, 1, '73_x']
 Constraint added: pc_8 == pc_8_0 - 1
 Adding: ['8_1', 103, '0', -1, 1, '73_x']
 After append: 18
@@ -278,7 +278,7 @@ Repair not found.
 Repairing for bug: pt_9 < 9999
 Before append: 19
 Bug found:  pt_9 pt_9
-Adding: ['9_0', 102, "'0x7f85b0003cb8'", -1, 1, '74_x']
+Adding: ['9_0', 102, "'0x7f39a4003928'", -1, 1, '74_x']
 Constraint added: pc_9 == pc_9_0 - 1
 After append: 20
 The number of assertions: 369
@@ -310,7 +310,7 @@ Repair not found.
 Repairing for bug: pt_10 < 9999
 Before append: 20
 Bug found:  pt_10 pt_10
-Adding: ['10_0', 102, "'0x7f85b0003cb8'", -1, 1, '84_x']
+Adding: ['10_0', 102, "'0x7f39a4003928'", -1, 1, '84_x']
 Constraint added: pc_10 == pc_10_0 - 1
 After append: 21
 The number of assertions: 391
@@ -342,7 +342,7 @@ Repair not found.
 Repairing for bug: pt_11 < 9999
 Before append: 21
 Bug found:  pt_11 pt_11
-Adding: ['11_0', 102, "'0x17d59b0'", -1, 1, '85_x']
+Adding: ['11_0', 102, "'0x66c9e0'", -1, 1, '85_x']
 Constraint added: pc_11 == pc_11_0 - 1
 After append: 22
 The number of assertions: 414
@@ -374,7 +374,7 @@ Repair not found.
 Repairing for bug: pt_14 < 9999
 Before append: 22
 Bug found:  pt_14 pt_14
-Adding: ['14_0', 102, "'0x7f85b0003ec8'", -1, 1, '93_x']
+Adding: ['14_0', 102, "'0x7f39a4003b38'", -1, 1, '93_x']
 Constraint added: pc_14 == pc_14_0 - 1
 After append: 23
 The number of assertions: 438
@@ -406,7 +406,7 @@ Repair not found.
 Repairing for bug: pt_15 < 9999
 Before append: 23
 Bug found:  pt_15 pt_15
-Adding: ['15_0', 102, "'0x17d59e0'", -1, 1, '94_x']
+Adding: ['15_0', 102, "'0x66ca10'", -1, 1, '94_x']
 Constraint added: pc_15 == pc_15_0 - 1
 After append: 24
 The number of assertions: 463
@@ -417,7 +417,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  1 :  0.7265098094940186  seconds.
+Time taken to repair thread  1 :  0.6825792789459229  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 2 (Length of thread :  16 ): 
@@ -588,7 +588,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  2 :  0.6128618717193604  seconds.
+Time taken to repair thread  2 :  0.5799751281738281  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.00011014938354492188  seconds.
+Time taken to recombine individual threads:  0.00011301040649414062  seconds.

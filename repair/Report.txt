@@ -2,11 +2,11 @@
 Adding DURA & MPB Repair Report for motivatingExample: 
 Number of DURAS fixed: 2
 Number of MPBs fixed: 0
-Total time taken to repair DURA bugs: 0.09348702430725098 seconds.
+Total time taken to repair DURA bugs: 0.08556675910949707 seconds.
 Total time taken to repair MPB bugs: 0 seconds.
 Number of sfences() added: 1
 Number of clflushopts() added: 1
-Total time taken: 0.10141730308532715 seconds.
+Total time taken: 0.0932168960571289 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -14,18 +14,18 @@ Adding MPA Repair Report for motivatingExample:
 Number of MPAs fixed: 0
 Number of fences() added: 0
 Number of locks() added: 0
-Total time taken to repair MPA bugs: 0.017158985137939453 seconds.
+Total time taken to repair MPA bugs: 0.0200345516204834 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for list: 
 Number of DURAS fixed: 2
 Number of MPBs fixed: 0
-Total time taken to repair DURA bugs: 5.521924018859863 seconds.
+Total time taken to repair DURA bugs: 5.541911602020264 seconds.
 Total time taken to repair MPB bugs: 0 seconds.
 Number of sfences() added: 1
 Number of clflushopts() added: 2
-Total time taken: 5.531297922134399 seconds.
+Total time taken: 5.555827856063843 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -33,37 +33,37 @@ Adding MPA Repair Report for list:
 Number of MPAs fixed: 0
 Number of fences() added: 0
 Number of locks() added: 0
-Total time taken to repair MPA bugs: 0.042973995208740234 seconds.
+Total time taken to repair MPA bugs: 0.05320930480957031 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for dqueue: 
 Number of DURAS fixed: 9
-Number of MPBs fixed: 10
-Total time taken to repair DURA bugs: 1.1290583610534668 seconds.
-Total time taken to repair MPB bugs: 1.3883254528045654 seconds.
+Number of MPBs fixed: 11
+Total time taken to repair DURA bugs: 1.1609632968902588 seconds.
+Total time taken to repair MPB bugs: 1.5522432327270508 seconds.
 Number of sfences() added: 9
 Number of clflushopts() added: 9
-Total time taken: 2.5466909408569336 seconds.
+Total time taken: 2.7473692893981934 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding MPA Repair Report for dqueue: 
-Number of MPAs fixed: 12
+Number of MPAs fixed: 14
 Number of fences() added: 0
 Number of locks() added: 5
-Total time taken to repair MPA bugs: 0.168914794921875 seconds.
+Total time taken to repair MPA bugs: 0.22238755226135254 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for queue_1: 
 Number of DURAS fixed: 3
 Number of MPBs fixed: 1
-Total time taken to repair DURA bugs: 3.9917855262756348 seconds.
-Total time taken to repair MPB bugs: 1.4621963500976562 seconds.
+Total time taken to repair DURA bugs: 3.969597101211548 seconds.
+Total time taken to repair MPB bugs: 1.4611737728118896 seconds.
 Number of sfences() added: 3
 Number of clflushopts() added: 3
-Total time taken: 5.4664390087127686 seconds.
+Total time taken: 5.4412617683410645 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -71,37 +71,37 @@ Adding MPA Repair Report for queue_1:
 Number of MPAs fixed: 1
 Number of fences() added: 0
 Number of locks() added: 2
-Total time taken to repair MPA bugs: 0.10446882247924805 seconds.
+Total time taken to repair MPA bugs: 0.08165144920349121 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for heap: 
 Number of DURAS fixed: 7
 Number of MPBs fixed: 6
-Total time taken to repair DURA bugs: 0.6973240375518799 seconds.
-Total time taken to repair MPB bugs: 0.664658784866333 seconds.
+Total time taken to repair DURA bugs: 0.6108665466308594 seconds.
+Total time taken to repair MPB bugs: 0.5784642696380615 seconds.
 Number of sfences() added: 7
 Number of clflushopts() added: 7
-Total time taken: 1.3881735801696777 seconds.
+Total time taken: 1.2130107879638672 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding MPA Repair Report for heap: 
 Number of MPAs fixed: 4
-Number of fences() added: 1
-Number of locks() added: 4
-Total time taken to repair MPA bugs: 0.09299421310424805 seconds.
+Number of fences() added: 0
+Number of locks() added: 3
+Total time taken to repair MPA bugs: 0.07505226135253906 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for queue: 
 Number of DURAS fixed: 3
 Number of MPBs fixed: 1
-Total time taken to repair DURA bugs: 9.48010802268982 seconds.
-Total time taken to repair MPB bugs: 3.178795576095581 seconds.
-Number of sfences() added: 3
+Total time taken to repair DURA bugs: 10.366772413253784 seconds.
+Total time taken to repair MPB bugs: 3.586583137512207 seconds.
+Number of sfences() added: 2
 Number of clflushopts() added: 3
-Total time taken: 12.667667865753174 seconds.
+Total time taken: 13.963681936264038 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -109,37 +109,37 @@ Adding MPA Repair Report for queue:
 Number of MPAs fixed: 0
 Number of fences() added: 0
 Number of locks() added: 0
-Total time taken to repair MPA bugs: 0.031055450439453125 seconds.
+Total time taken to repair MPA bugs: 0.04183149337768555 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for list_1: 
 Number of DURAS fixed: 3
 Number of MPBs fixed: 1
-Total time taken to repair DURA bugs: 0.13192987442016602 seconds.
-Total time taken to repair MPB bugs: 0.04819488525390625 seconds.
-Number of sfences() added: 3
+Total time taken to repair DURA bugs: 0.15669941902160645 seconds.
+Total time taken to repair MPB bugs: 0.05662059783935547 seconds.
+Number of sfences() added: 4
 Number of clflushopts() added: 3
-Total time taken: 0.18799448013305664 seconds.
+Total time taken: 0.2235095500946045 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding MPA Repair Report for list_1: 
-Number of MPAs fixed: 1
+Number of MPAs fixed: 2
 Number of fences() added: 0
 Number of locks() added: 2
-Total time taken to repair MPA bugs: 0.033055782318115234 seconds.
+Total time taken to repair MPA bugs: 0.03751564025878906 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for hash: 
 Number of DURAS fixed: 3
 Number of MPBs fixed: 2
-Total time taken to repair DURA bugs: 0.13239002227783203 seconds.
-Total time taken to repair MPB bugs: 0.0963294506072998 seconds.
+Total time taken to repair DURA bugs: 0.15746426582336426 seconds.
+Total time taken to repair MPB bugs: 0.1163942813873291 seconds.
 Number of sfences() added: 5
 Number of clflushopts() added: 3
-Total time taken: 0.23774409294128418 seconds.
+Total time taken: 0.2844357490539551 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -147,18 +147,18 @@ Adding MPA Repair Report for hash:
 Number of MPAs fixed: 2
 Number of fences() added: 0
 Number of locks() added: 3
-Total time taken to repair MPA bugs: 0.052913665771484375 seconds.
+Total time taken to repair MPA bugs: 0.06530523300170898 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for priorityQueue: 
 Number of DURAS fixed: 6
 Number of MPBs fixed: 6
-Total time taken to repair DURA bugs: 0.669274091720581 seconds.
-Total time taken to repair MPB bugs: 0.7029514312744141 seconds.
+Total time taken to repair DURA bugs: 0.7348222732543945 seconds.
+Total time taken to repair MPB bugs: 0.7758150100708008 seconds.
 Number of sfences() added: 8
 Number of clflushopts() added: 6
-Total time taken: 1.3920679092407227 seconds.
+Total time taken: 1.5337531566619873 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -166,18 +166,37 @@ Adding MPA Repair Report for priorityQueue:
 Number of MPAs fixed: 6
 Number of fences() added: 0
 Number of locks() added: 3
-Total time taken to repair MPA bugs: 0.08144474029541016 seconds.
+Total time taken to repair MPA bugs: 0.07803916931152344 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for doublyList: 
+Number of DURAS fixed: 9
+Number of MPBs fixed: 10
+Total time taken to repair DURA bugs: 1.1243634223937988 seconds.
+Total time taken to repair MPB bugs: 1.3227767944335938 seconds.
+Number of sfences() added: 9
+Number of clflushopts() added: 9
+Total time taken: 2.4760937690734863 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for doublyList: 
+Number of MPAs fixed: 14
+Number of fences() added: 0
+Number of locks() added: 4
+Total time taken to repair MPA bugs: 0.11899232864379883 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for skipLists: 
 Number of DURAS fixed: 9
 Number of MPBs fixed: 3
-Total time taken to repair DURA bugs: 0.9350848197937012 seconds.
-Total time taken to repair MPB bugs: 0.31415891647338867 seconds.
+Total time taken to repair DURA bugs: 0.933236837387085 seconds.
+Total time taken to repair MPB bugs: 0.3143045902252197 seconds.
 Number of sfences() added: 5
 Number of clflushopts() added: 9
-Total time taken: 1.26729154586792 seconds.
+Total time taken: 1.265631914138794 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -185,18 +204,18 @@ Adding MPA Repair Report for skipLists:
 Number of MPAs fixed: 6
 Number of fences() added: 0
 Number of locks() added: 2
-Total time taken to repair MPA bugs: 0.05415940284729004 seconds.
+Total time taken to repair MPA bugs: 0.0566554069519043 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for graph: 
 Number of DURAS fixed: 9
 Number of MPBs fixed: 5
-Total time taken to repair DURA bugs: 1.631669521331787 seconds.
-Total time taken to repair MPB bugs: 0.8889851570129395 seconds.
+Total time taken to repair DURA bugs: 1.5317339897155762 seconds.
+Total time taken to repair MPB bugs: 0.834517240524292 seconds.
 Number of sfences() added: 4
 Number of clflushopts() added: 9
-Total time taken: 2.543248176574707 seconds.
+Total time taken: 2.3876290321350098 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -204,18 +223,18 @@ Adding MPA Repair Report for graph:
 Number of MPAs fixed: 5
 Number of fences() added: 1
 Number of locks() added: 2
-Total time taken to repair MPA bugs: 0.09398555755615234 seconds.
+Total time taken to repair MPA bugs: 0.08551955223083496 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for set: 
 Number of DURAS fixed: 4
 Number of MPBs fixed: 1
-Total time taken to repair DURA bugs: 1.0392017364501953 seconds.
-Total time taken to repair MPB bugs: 0.31013059616088867 seconds.
+Total time taken to repair DURA bugs: 0.8974971771240234 seconds.
+Total time taken to repair MPB bugs: 0.25769543647766113 seconds.
 Number of sfences() added: 3
 Number of clflushopts() added: 4
-Total time taken: 1.3632478713989258 seconds.
+Total time taken: 1.1653995513916016 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -223,18 +242,18 @@ Adding MPA Repair Report for set:
 Number of MPAs fixed: 1
 Number of fences() added: 0
 Number of locks() added: 2
-Total time taken to repair MPA bugs: 0.07561016082763672 seconds.
+Total time taken to repair MPA bugs: 0.07680487632751465 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for stack_1: 
 Number of DURAS fixed: 2
 Number of MPBs fixed: 1
-Total time taken to repair DURA bugs: 0.14124107360839844 seconds.
-Total time taken to repair MPB bugs: 0.07704758644104004 seconds.
+Total time taken to repair DURA bugs: 0.1451554298400879 seconds.
+Total time taken to repair MPB bugs: 0.07798361778259277 seconds.
 Number of sfences() added: 3
 Number of clflushopts() added: 2
-Total time taken: 0.2277204990386963 seconds.
+Total time taken: 0.2341296672821045 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -242,18 +261,18 @@ Adding MPA Repair Report for stack_1:
 Number of MPAs fixed: 1
 Number of fences() added: 0
 Number of locks() added: 2
-Total time taken to repair MPA bugs: 0.03554654121398926 seconds.
+Total time taken to repair MPA bugs: 0.03625822067260742 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for array: 
 Number of DURAS fixed: 1
 Number of MPBs fixed: 0
-Total time taken to repair DURA bugs: 0.08936047554016113 seconds.
+Total time taken to repair DURA bugs: 0.08675241470336914 seconds.
 Total time taken to repair MPB bugs: 0 seconds.
 Number of sfences() added: 1
 Number of clflushopts() added: 1
-Total time taken: 0.0968160629272461 seconds.
+Total time taken: 0.09354782104492188 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -261,18 +280,18 @@ Adding MPA Repair Report for array:
 Number of MPAs fixed: 0
 Number of fences() added: 0
 Number of locks() added: 0
-Total time taken to repair MPA bugs: 0.018928050994873047 seconds.
+Total time taken to repair MPA bugs: 0.01953577995300293 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for stack: 
 Number of DURAS fixed: 2
 Number of MPBs fixed: 0
-Total time taken to repair DURA bugs: 1.5097777843475342 seconds.
+Total time taken to repair DURA bugs: 1.503751277923584 seconds.
 Total time taken to repair MPB bugs: 0 seconds.
 Number of sfences() added: 1
 Number of clflushopts() added: 2
-Total time taken: 1.5174312591552734 seconds.
+Total time taken: 1.5114150047302246 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -280,18 +299,18 @@ Adding MPA Repair Report for stack:
 Number of MPAs fixed: 0
 Number of fences() added: 0
 Number of locks() added: 0
-Total time taken to repair MPA bugs: 0.028327226638793945 seconds.
+Total time taken to repair MPA bugs: 0.03498673439025879 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for queue_2: 
 Number of DURAS fixed: 3
 Number of MPBs fixed: 1
-Total time taken to repair DURA bugs: 3.489309072494507 seconds.
-Total time taken to repair MPB bugs: 1.1088824272155762 seconds.
+Total time taken to repair DURA bugs: 3.6096956729888916 seconds.
+Total time taken to repair MPB bugs: 1.1462104320526123 seconds.
 Number of sfences() added: 3
 Number of clflushopts() added: 3
-Total time taken: 4.609183311462402 seconds.
+Total time taken: 4.768204212188721 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -299,6 +318,6 @@ Adding MPA Repair Report for queue_2:
 Number of MPAs fixed: 1
 Number of fences() added: 0
 Number of locks() added: 2
-Total time taken to repair MPA bugs: 0.2767326831817627 seconds.
+Total time taken to repair MPA bugs: 0.2644643783569336 seconds.
 ###########################################################################
 

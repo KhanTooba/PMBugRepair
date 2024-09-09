@@ -10,7 +10,7 @@ Working on Thread: 0 (Length of thread :  1 ):
 Repairing for bug: pt_2 < 9999
 Before append: 1
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x1867800'", -1, 0, '18_x']
+Adding: ['2_0', 102, "'0x7a6800'", -1, 0, '18_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '18_x']
 After append: 3
@@ -38,7 +38,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: False
 Repair not found.
 ####################################################################################
-Time taken to repair thread  0 :  0.05293440818786621  seconds.
+Time taken to repair thread  0 :  0.047092437744140625  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  3 ): 
@@ -69,7 +69,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  1 :  0.042082786560058594  seconds.
+Time taken to repair thread  1 :  0.03984189033508301  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  2.6464462280273438e-05  seconds.
+Time taken to recombine individual threads:  2.6702880859375e-05  seconds.
