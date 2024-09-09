@@ -26,7 +26,7 @@ int main() {
     pq_insert(&pq, 30, 30);
 
     // Create threads to perform operations with a write-after-write dependency
-    for (int i = 0; i < n_threads; ++i) {
+    for (int i = 0; i < N_THREADS; ++i) {
         pthread_create(&threads[i], NULL, thread_func, (void*)&pq);
     }
 
