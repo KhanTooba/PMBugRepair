@@ -13,7 +13,7 @@ Working on Thread: 0 (Length of thread :  30 ):
 Repairing for bug: pt_2 < 9999
 Before append: 30
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x1756d40'", -1, 0, '56_x']
+Adding: ['2_0', 102, "'0x1302d40'", -1, 0, '56_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '56_x']
 After append: 32
@@ -65,7 +65,7 @@ SAIS: And(Not(And(Not(pc_2_1 <= pc_2),
 Repairing for bug: pt_3 < 9999
 Before append: 33
 Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0x1756d48'", -1, 0, '57_x']
+Adding: ['3_0', 102, "'0x1302d48'", -1, 0, '57_x']
 Constraint added: pc_3 == pc_3_0 - 1
 After append: 34
 The number of assertions: 1096
@@ -81,7 +81,7 @@ SAIS: pc_3 <= pc_2_Fence_0
 Repairing for bug: pt_4 < 9999
 Before append: 34
 Bug found:  pt_4 pt_4
-Adding: ['4_0', 102, "'0x1756d48'", -1, 0, '83_x']
+Adding: ['4_0', 102, "'0x1302d48'", -1, 0, '83_x']
 Constraint added: pc_4 == pc_4_0 - 1
 After append: 35
 The number of assertions: 1132
@@ -108,18 +108,18 @@ Not running blocking constraint generation because already unsat.
 SAIS: False
 Repair not found.
 ####################################################################################
-Time taken to repair thread  0 :  0.879481315612793  seconds.
+Time taken to repair thread  0 :  0.8774209022521973  seconds.
 ################################################################################################
 ################################################################################################
-Working on Thread: 1 (Length of thread :  8 ): 
+Working on Thread: 1 (Length of thread :  16 ): 
 Repairing for bug: pt_2 < 9999
-Before append: 8
-After append: 8
-The number of assertions: 80
+Before append: 16
+After append: 16
+The number of assertions: 288
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < 9999)
-Num: 81
+Num: 289
 ITERATION:  1
 Not(And)
 Not running blocking constraint generation because already unsat.
@@ -128,10 +128,10 @@ Repair not found.
 ####################################################################################
 Repairing for bug: pt_2 < pt_3
 MPB Bug found: pt_2 < pt_3
-Before append: 8
-After append: 8
+Before append: 16
+After append: 16
 The bug flag is: -1
-The number of assertions: 80
+The number of assertions: 288
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_3)
@@ -140,9 +140,9 @@ SAIS: True
 Repair not found.
 ####################################################################################
 Repairing for bug: pt_3 < 9999
-Before append: 8
-After append: 8
-The number of assertions: 80
+Before append: 16
+After append: 16
+The number of assertions: 288
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < 9999)
@@ -151,9 +151,9 @@ SAIS: True
 Repair not found.
 ####################################################################################
 Repairing for bug: pt_4 < 9999
-Before append: 8
-After append: 8
-The number of assertions: 80
+Before append: 16
+After append: 16
+The number of assertions: 288
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_4 < 9999)
@@ -162,13 +162,13 @@ SAIS: True
 Repair not found.
 ####################################################################################
 Repairing for bug: pt_32 < 9999
-Before append: 8
+Before append: 16
 Bug found:  pt_32 pt_32
-Adding: ['32_0', 102, "'0x1756e98'", -1, 1, '111_x']
+Adding: ['32_0', 102, "'0x1302e98'", -1, 1, '111_x']
 Constraint added: pc_32 == pc_32_0 - 1
 Adding: ['32_1', 103, '0', -1, 1, '111_x']
-After append: 10
-The number of assertions: 103
+After append: 18
+The number of assertions: 327
 The number of blocking constraint will be:  1
 Blocking constraints: [[32, '32_0', '32_1']]
 Bug is: Not(pt_32 < 9999)
@@ -176,18 +176,18 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  1 :  0.1226205825805664  seconds.
+Time taken to repair thread  1 :  0.21000146865844727  seconds.
 ################################################################################################
 ################################################################################################
-Working on Thread: 2 (Length of thread :  12 ): 
+Working on Thread: 2 (Length of thread :  4 ): 
 Repairing for bug: pt_2 < 9999
-Before append: 12
-After append: 12
-The number of assertions: 168
+Before append: 4
+After append: 4
+The number of assertions: 24
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < 9999)
-Num: 169
+Num: 25
 ITERATION:  1
 Not(And)
 Not running blocking constraint generation because already unsat.
@@ -196,10 +196,10 @@ Repair not found.
 ####################################################################################
 Repairing for bug: pt_2 < pt_3
 MPB Bug found: pt_2 < pt_3
-Before append: 12
-After append: 12
+Before append: 4
+After append: 4
 The bug flag is: -1
-The number of assertions: 168
+The number of assertions: 24
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_3)
@@ -208,9 +208,9 @@ SAIS: True
 Repair not found.
 ####################################################################################
 Repairing for bug: pt_3 < 9999
-Before append: 12
-After append: 12
-The number of assertions: 168
+Before append: 4
+After append: 4
+The number of assertions: 24
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < 9999)
@@ -219,9 +219,9 @@ SAIS: True
 Repair not found.
 ####################################################################################
 Repairing for bug: pt_4 < 9999
-Before append: 12
-After append: 12
-The number of assertions: 168
+Before append: 4
+After append: 4
+The number of assertions: 24
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_4 < 9999)
@@ -230,9 +230,9 @@ SAIS: True
 Repair not found.
 ####################################################################################
 Repairing for bug: pt_32 < 9999
-Before append: 12
-After append: 12
-The number of assertions: 168
+Before append: 4
+After append: 4
+The number of assertions: 24
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_32 < 9999)
@@ -240,7 +240,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  2 :  0.15771198272705078  seconds.
+Time taken to repair thread  2 :  0.09290409088134766  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.0001628398895263672  seconds.
+Time taken to recombine individual threads:  0.00027441978454589844  seconds.

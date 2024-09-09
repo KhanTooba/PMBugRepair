@@ -1,9 +1,9 @@
 Local variables initialized.
-[12, 101, '0x7f39a4003920', '-1', 1, '73'] [37, 101, '0x7f39ac0010d8', '0x7f39a4003920', 2, '74']
-[14, 101, '0x7f39a4003928', '0x7f39a4003920', 1, '74'] [39, 101, '0x66c9b0', '0x7f39a4003928', 2, '85']
-[16, 101, '0x7f39a4003928', '-1', 1, '84'] [39, 101, '0x66c9b0', '0x7f39a4003928', 2, '85']
-[21, 101, '0x7f39a4003b38', '0x7f39a4003920', 1, '74'] [43, 101, '0x66c9e0', '0x7f39a4003b38', 2, '94']
-[22, 101, '0x7f39a4003b38', '-1', 1, '93'] [43, 101, '0x66c9e0', '0x7f39a4003b38', 2, '94']
+[12, 101, '0x7f867c003b30', '-1', 1, '73'] [27, 101, '0x7f8674000ec8', '0x7f867c003b30', 2, '74']
+[14, 101, '0x7f867c003b38', '0x7f867c003b30', 1, '74'] [29, 101, '0x1f609e0', '0x7f867c003b38', 2, '85']
+[16, 101, '0x7f867c003b38', '-1', 1, '84'] [29, 101, '0x1f609e0', '0x7f867c003b38', 2, '85']
+[21, 101, '0x7f867c003d48', '0x7f867c003b30', 1, '74'] [33, 101, '0x1f60a10', '0x7f867c003d48', 2, '94']
+[22, 101, '0x7f867c003d48', '-1', 1, '93'] [33, 101, '0x1f60a10', '0x7f867c003d48', 2, '94']
 Number of bugs to be repaired:  5
 And(pc_12 < pc_14, pt_12 > pc_14)
 And(pc_14 < pc_18, pt_14 > pc_18)
@@ -21,25 +21,25 @@ A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_14 < pc_18, pt_14 > pc_18)
 14 18 [12, 14, 16, 22] [24, 18] [] []
 Adding locks for write. 14
-Adding before:  [2, 101, '0x66c900', '-1', 0, '40']
-Adding before:  [3, 102, '0x66c900', '-1', 0, '40_x']
-Adding before:  [4, 101, '0x66c908', '-1', 0, '41']
-Adding before:  [5, 102, '0x66c908', '-1', 0, '41_x']
+Adding before:  [2, 101, '0x1f60900', '-1', 0, '40']
+Adding before:  [3, 102, '0x1f60900', '-1', 0, '40_x']
+Adding before:  [4, 101, '0x1f60908', '-1', 0, '41']
+Adding before:  [5, 102, '0x1f60908', '-1', 0, '41_x']
 Adding before:  [6, 103, '0', '-1', 0, '40_x']
-Adding before:  [7, 101, '0x66c9b0', '-1', 0, '45']
-Adding before:  [8, 102, '0x66c9b0', '-1', 0, '45_x']
-Adding before:  [9, 101, '0x66c9e0', '-1', 0, '45']
-Adding before:  [10, 101, '0x66ca10', '-1', 0, '45']
-Adding before:  [11, 101, '0x66ca40', '-1', 0, '45']
-Adding before:  [12, 101, '0x7f39a4003920', '-1', 4, '73']
-Adding before:  [13, 102, '0x7f39a4003920', '-1', 4, '73_x']
-Found insertion point for first lock:  12 13 [14, 101, '0x7f39a4003928', '0x7f39a4003920', 10, '74']
+Adding before:  [7, 101, '0x1f609b0', '-1', 0, '45']
+Adding before:  [8, 102, '0x1f609b0', '-1', 0, '45_x']
+Adding before:  [9, 101, '0x1f609e0', '-1', 0, '45']
+Adding before:  [10, 101, '0x1f60a10', '-1', 0, '45']
+Adding before:  [11, 101, '0x1f60a40', '-1', 0, '45']
+Adding before:  [12, 101, '0x7f867c003b30', '-1', 4, '73']
+Adding before:  [13, 102, '0x7f867c003b30', '-1', 4, '73_x']
+Found insertion point for first lock:  12 13 [14, 101, '0x7f867c003b38', '0x7f867c003b30', 10, '74']
 0
-Locking  [16, 101, '0x7f39a4003928', '-1', 10, '84']
+Locking  [16, 101, '0x7f867c003b38', '-1', 10, '84']
 Adding fence because encountered second before fence.
 Adding very restricted lock for read. 18
 1
-Time taken:  0.05641293525695801  seconds.
+Time taken:  0.05325174331665039  seconds.
 
 ############################################################################
 
@@ -49,7 +49,7 @@ Number of threads:  14
 Completed building constraints.
 Number of constraints:  233
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.018231630325317383  seconds.
+Time taken:  0.017864465713500977  seconds.
 
 ############################################################################
 
