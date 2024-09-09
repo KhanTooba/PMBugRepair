@@ -11,7 +11,7 @@ Working on Thread: 0 (Length of thread :  4 ):
 Repairing for bug: pt_2 < 9999
 Before append: 4
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x1018be0'", -1, 0, '98_x']
+Adding: ['2_0', 102, "'0x18fabe0'", -1, 0, '98_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '98_x']
 After append: 6
@@ -63,7 +63,7 @@ SAIS: And(Not(And(Not(pc_2_1 <= pc_2),
 Repairing for bug: pt_3 < 9999
 Before append: 7
 Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0x1018be8'", -1, 0, '99_x']
+Adding: ['3_0', 102, "'0x18fabe8'", -1, 0, '99_x']
 Constraint added: pc_3 == pc_3_0 - 1
 Adding: ['3_1', 103, '0', -1, 0, '99_x']
 After append: 9
@@ -77,7 +77,7 @@ Not(And(pc_3 > pc_3_1))
 Not running blocking constraint generation because already unsat.
 SAIS: pc_3 <= pc_3_1
 ####################################################################################
-Time taken to repair thread  0 :  0.09055590629577637  seconds.
+Time taken to repair thread  0 :  0.10343432426452637  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  2 ): 
@@ -119,7 +119,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  1 :  0.04923653602600098  seconds.
+Time taken to repair thread  1 :  0.058133602142333984  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 2 (Length of thread :  2 ): 
@@ -161,7 +161,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  2 :  0.04979443550109863  seconds.
+Time taken to repair thread  2 :  0.05847811698913574  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  1.5497207641601562e-05  seconds.
+Time taken to recombine individual threads:  1.8358230590820312e-05  seconds.

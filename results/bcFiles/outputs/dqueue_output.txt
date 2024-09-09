@@ -1,139 +1,139 @@
-FUNC_BEGIN_1: main 1; <Thread ID:140381557819200>
-FUNC_BEGIN_1: deque_init 1; <Thread ID:140381557819200>
-FUNC_END: deque_init 1; <Thread ID:140381557819200>
-FUNC_BEGIN_1: deque_push_back 1; <Thread ID:140381557819200>
-FUNC_BEGIN_1: newNode 1; <Thread ID:140381557819200>
-Adding addr: 0x130b370 to 0x130b388; <Thread ID:140381557819200>
-Store: 0x130b370 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140381557819200>
-Store: 0x130b378 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140381557819200>
-DEP: SrcID: 11 DestID: 14; <Thread ID:140381557819200>
-Store: 0x130b380 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140381557819200>
-DEP: SrcID: 14 DestID: 17; <Thread ID:140381557819200>
-FUNC_END: newNode 1; <Thread ID:140381557819200>
-FUNC_END: deque_push_back 1; <Thread ID:140381557819200>
-FUNC_BEGIN_1: deque_push_back 2; <Thread ID:140381557819200>
-FUNC_BEGIN_1: newNode 2; <Thread ID:140381557819200>
-Adding addr: 0x130b460 to 0x130b478; <Thread ID:140381557819200>
-Store: 0x130b460 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140381557819200>
-Store: 0x130b468 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140381557819200>
-DEP: SrcID: 11 DestID: 14; <Thread ID:140381557819200>
-Store: 0x130b470 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140381557819200>
-DEP: SrcID: 14 DestID: 17; <Thread ID:140381557819200>
-FUNC_END: newNode 2; <Thread ID:140381557819200>
-Store: 0x130b470 Size: 8 ID: 113 @Ln,Col: 102,20 Scope: deque_push_back; <Thread ID:140381557819200>
-Store: 0x130b378 Size: 8 ID: 119 @Ln,Col: 103,27 Scope: deque_push_back; <Thread ID:140381557819200>
-DEP: SrcID: 113 DestID: 119; <Thread ID:140381557819200>
-FUNC_END: deque_push_back 2; <Thread ID:140381557819200>
-FUNC_BEGIN_1: deque_push_back 3; <Thread ID:140381557819200>
-FUNC_BEGIN_1: newNode 3; <Thread ID:140381557819200>
-Adding addr: 0x130b520 to 0x130b538; <Thread ID:140381557819200>
-Store: 0x130b520 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140381557819200>
-Store: 0x130b528 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140381557819200>
-DEP: SrcID: 11 DestID: 14; <Thread ID:140381557819200>
-Store: 0x130b530 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140381557819200>
-DEP: SrcID: 14 DestID: 17; <Thread ID:140381557819200>
-FUNC_END: newNode 3; <Thread ID:140381557819200>
-Store: 0x130b530 Size: 8 ID: 113 @Ln,Col: 102,20 Scope: deque_push_back; <Thread ID:140381557819200>
-Store: 0x130b468 Size: 8 ID: 119 @Ln,Col: 103,27 Scope: deque_push_back; <Thread ID:140381557819200>
-DEP: SrcID: 113 DestID: 119; <Thread ID:140381557819200>
-FUNC_END: deque_push_back 3; <Thread ID:140381557819200>
-FUNC_BEGIN_1: thread_func 1; <Thread ID:140381557815040>
-FUNC_BEGIN_1: thread_func 1; <Thread ID:140381549422336>
-FUNC_BEGIN_1: deque_pop_front 1; <Thread ID:140381549422336>
-Load: 0x130b370 Size: 4 ID: 153 @Ln,Col: 119,30 Scope: deque_pop_front; <Thread ID:140381549422336>
-Load: 0x130b378 Size: 8 ID: 164 @Ln,Col: 121,34 Scope: deque_pop_front; <Thread ID:140381549422336>
-Store: 0x130b470 Size: 8 ID: 181 @Ln,Col: 126,28 Scope: deque_pop_front; <Thread ID:140381549422336>
-DEP: SrcID: 153 DestID: 181; <Thread ID:140381549422336>
-DEP: SrcID: 164 DestID: 181; <Thread ID:140381549422336>
-FUNC_END: deque_pop_front 1; <Thread ID:140381549422336>
-FUNC_BEGIN_1: deque_pop_front 2; <Thread ID:140381557815040>
-Load: 0x130b460 Size: 4 ID: 153 @Ln,Col: 119,30 Scope: deque_pop_front; <Thread ID:140381557815040>
-Load: 0x130b468 Size: 8 ID: 164 @Ln,Col: 121,34 Scope: deque_pop_front; <Thread ID:140381557815040>
-Store: 0x130b530 Size: 8 ID: 181 @Ln,Col: 126,28 Scope: deque_pop_front; <Thread ID:140381557815040>
-DEP: SrcID: 153 DestID: 181; <Thread ID:140381557815040>
-DEP: SrcID: 164 DestID: 181; <Thread ID:140381557815040>
-FUNC_END: deque_pop_front 2; <Thread ID:140381557815040>
-FUNC_BEGIN_1: deque_push_back 4; <Thread ID:140381549422336>
-FUNC_BEGIN_1: newNode 4; <Thread ID:140381549422336>
-Adding addr: 0x130b370 to 0x130b388; <Thread ID:140381549422336>
-Store: 0x130b370 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140381549422336>
-Store: 0x130b378 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140381549422336>
-DEP: SrcID: 11 DestID: 14; <Thread ID:140381549422336>
-Store: 0x130b380 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140381549422336>
-DEP: SrcID: 14 DestID: 17; <Thread ID:140381549422336>
-FUNC_END: newNode 4; <Thread ID:140381549422336>
-Store: 0x130b380 Size: 8 ID: 113 @Ln,Col: 102,20 Scope: deque_push_back; <Thread ID:140381549422336>
-Store: 0x130b528 Size: 8 ID: 119 @Ln,Col: 103,27 Scope: deque_push_back; <Thread ID:140381549422336>
-DEP: SrcID: 113 DestID: 119; <Thread ID:140381549422336>
-FUNC_END: deque_push_back 4; <Thread ID:140381549422336>
-FUNC_BEGIN_1: deque_push_back 5; <Thread ID:140381557815040>
-FUNC_BEGIN_1: newNode 5; <Thread ID:140381557815040>
-Adding addr: 0x130b460 to 0x130b478; <Thread ID:140381557815040>
-Store: 0x130b460 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140381557815040>
-Store: 0x130b468 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140381557815040>
-DEP: SrcID: 11 DestID: 14; <Thread ID:140381557815040>
-Store: 0x130b470 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140381557815040>
-DEP: SrcID: 14 DestID: 17; <Thread ID:140381557815040>
-FUNC_END: newNode 5; <Thread ID:140381557815040>
-Store: 0x130b470 Size: 8 ID: 113 @Ln,Col: 102,20 Scope: deque_push_back; <Thread ID:140381557815040>
-Store: 0x130b378 Size: 8 ID: 119 @Ln,Col: 103,27 Scope: deque_push_back; <Thread ID:140381557815040>
-DEP: SrcID: 113 DestID: 119; <Thread ID:140381557815040>
-FUNC_END: deque_push_back 5; <Thread ID:140381557815040>
-FUNC_BEGIN_1: deque_push_front 1; <Thread ID:140381549422336>
-FUNC_BEGIN_1: newNode 6; <Thread ID:140381549422336>
-Adding addr: 0x7fad10003b80 to 0x7fad10003b98; <Thread ID:140381549422336>
-Store: 0x7fad10003b80 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140381549422336>
-Store: 0x7fad10003b88 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140381549422336>
-DEP: SrcID: 11 DestID: 14; <Thread ID:140381549422336>
-Store: 0x7fad10003b90 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140381549422336>
-DEP: SrcID: 14 DestID: 17; <Thread ID:140381549422336>
-FUNC_END: newNode 6; <Thread ID:140381549422336>
-Store: 0x7fad10003b88 Size: 8 ID: 65 @Ln,Col: 86,20 Scope: deque_push_front; <Thread ID:140381549422336>
-Store: 0x130b530 Size: 8 ID: 71 @Ln,Col: 87,28 Scope: deque_push_front; <Thread ID:140381549422336>
-DEP: SrcID: 65 DestID: 71; <Thread ID:140381549422336>
-FUNC_END: deque_push_front 1; <Thread ID:140381549422336>
-FUNC_BEGIN_1: deque_push_front 2; <Thread ID:140381557815040>
-FUNC_BEGIN_1: newNode 7; <Thread ID:140381557815040>
-Adding addr: 0x7fad18002a90 to 0x7fad18002aa8; <Thread ID:140381557815040>
-Store: 0x7fad18002a90 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140381557815040>
-Store: 0x7fad18002a98 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140381557815040>
-DEP: SrcID: 11 DestID: 14; <Thread ID:140381557815040>
-Store: 0x7fad18002aa0 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140381557815040>
-DEP: SrcID: 14 DestID: 17; <Thread ID:140381557815040>
-FUNC_END: newNode 7; <Thread ID:140381557815040>
-Store: 0x7fad18002a98 Size: 8 ID: 65 @Ln,Col: 86,20 Scope: deque_push_front; <Thread ID:140381557815040>
-Store: 0x7fad10003b90 Size: 8 ID: 71 @Ln,Col: 87,28 Scope: deque_push_front; <Thread ID:140381557815040>
-DEP: SrcID: 65 DestID: 71; <Thread ID:140381557815040>
-FUNC_END: deque_push_front 2; <Thread ID:140381557815040>
-FUNC_BEGIN_1: deque_pop_back 1; <Thread ID:140381549422336>
-Load: 0x130b460 Size: 4 ID: 218 @Ln,Col: 143,29 Scope: deque_pop_back; <Thread ID:140381549422336>
-Load: 0x130b470 Size: 8 ID: 229 @Ln,Col: 145,32 Scope: deque_pop_back; <Thread ID:140381549422336>
-Store: 0x130b378 Size: 8 ID: 246 @Ln,Col: 150,27 Scope: deque_pop_back; <Thread ID:140381549422336>
-DEP: SrcID: 218 DestID: 246; <Thread ID:140381549422336>
-DEP: SrcID: 229 DestID: 246; <Thread ID:140381549422336>
-FUNC_END: deque_pop_back 1; <Thread ID:140381549422336>
-FUNC_END: thread_func 1; <Thread ID:140381549422336>
-FUNC_BEGIN_1: deque_pop_back 2; <Thread ID:140381557815040>
-Load: 0x130b370 Size: 4 ID: 218 @Ln,Col: 143,29 Scope: deque_pop_back; <Thread ID:140381557815040>
-Load: 0x130b380 Size: 8 ID: 229 @Ln,Col: 145,32 Scope: deque_pop_back; <Thread ID:140381557815040>
-Store: 0x130b528 Size: 8 ID: 246 @Ln,Col: 150,27 Scope: deque_pop_back; <Thread ID:140381557815040>
-DEP: SrcID: 218 DestID: 246; <Thread ID:140381557815040>
-DEP: SrcID: 229 DestID: 246; <Thread ID:140381557815040>
-FUNC_END: deque_pop_back 2; <Thread ID:140381557815040>
-FUNC_END: thread_func 2; <Thread ID:140381557815040>
-FUNC_BEGIN_1: deque_print 1; <Thread ID:140381557819200>
-Load: 0x7fad18002a90 Size: 4 ID: 344 @Ln,Col: 195,32 Scope: deque_print; <Thread ID:140381557819200>
-Load: 0x7fad18002a98 Size: 8 ID: 348 @Ln,Col: 196,28 Scope: deque_print; <Thread ID:140381557819200>
-Load: 0x7fad10003b80 Size: 4 ID: 344 @Ln,Col: 195,32 Scope: deque_print; <Thread ID:140381557819200>
-Load: 0x7fad10003b88 Size: 8 ID: 348 @Ln,Col: 196,28 Scope: deque_print; <Thread ID:140381557819200>
-Load: 0x130b520 Size: 4 ID: 344 @Ln,Col: 195,32 Scope: deque_print; <Thread ID:140381557819200>
-Load: 0x130b528 Size: 8 ID: 348 @Ln,Col: 196,28 Scope: deque_print; <Thread ID:140381557819200>
-FUNC_END: deque_print 1; <Thread ID:140381557819200>
-FUNC_BEGIN_1: deque_destroy 1; <Thread ID:140381557819200>
-FUNC_BEGIN_1: deque_clear 1; <Thread ID:140381557819200>
-Load: 0x7fad18002a98 Size: 8 ID: 300 @Ln,Col: 173,28 Scope: deque_clear; <Thread ID:140381557819200>
-Load: 0x7fad10003b88 Size: 8 ID: 300 @Ln,Col: 173,28 Scope: deque_clear; <Thread ID:140381557819200>
-Load: 0x130b528 Size: 8 ID: 300 @Ln,Col: 173,28 Scope: deque_clear; <Thread ID:140381557819200>
-FUNC_END: deque_clear 1; <Thread ID:140381557819200>
-FUNC_END: deque_destroy 1; <Thread ID:140381557819200>
-FUNC_END: main 1; <Thread ID:140381557819200>
+FUNC_BEGIN_1: main 1; <Thread ID:140699723519808>
+FUNC_BEGIN_1: deque_init 1; <Thread ID:140699723519808>
+FUNC_END: deque_init 1; <Thread ID:140699723519808>
+FUNC_BEGIN_1: deque_push_back 1; <Thread ID:140699723519808>
+FUNC_BEGIN_1: newNode 1; <Thread ID:140699723519808>
+Adding addr: 0x2275370 to 0x2275388; <Thread ID:140699723519808>
+Store: 0x2275370 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140699723519808>
+Store: 0x2275378 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140699723519808>
+DEP: SrcID: 11 DestID: 14; <Thread ID:140699723519808>
+Store: 0x2275380 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140699723519808>
+DEP: SrcID: 14 DestID: 17; <Thread ID:140699723519808>
+FUNC_END: newNode 1; <Thread ID:140699723519808>
+FUNC_END: deque_push_back 1; <Thread ID:140699723519808>
+FUNC_BEGIN_1: deque_push_back 2; <Thread ID:140699723519808>
+FUNC_BEGIN_1: newNode 2; <Thread ID:140699723519808>
+Adding addr: 0x2275460 to 0x2275478; <Thread ID:140699723519808>
+Store: 0x2275460 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140699723519808>
+Store: 0x2275468 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140699723519808>
+DEP: SrcID: 11 DestID: 14; <Thread ID:140699723519808>
+Store: 0x2275470 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140699723519808>
+DEP: SrcID: 14 DestID: 17; <Thread ID:140699723519808>
+FUNC_END: newNode 2; <Thread ID:140699723519808>
+Store: 0x2275470 Size: 8 ID: 113 @Ln,Col: 102,20 Scope: deque_push_back; <Thread ID:140699723519808>
+Store: 0x2275378 Size: 8 ID: 119 @Ln,Col: 103,27 Scope: deque_push_back; <Thread ID:140699723519808>
+DEP: SrcID: 113 DestID: 119; <Thread ID:140699723519808>
+FUNC_END: deque_push_back 2; <Thread ID:140699723519808>
+FUNC_BEGIN_1: deque_push_back 3; <Thread ID:140699723519808>
+FUNC_BEGIN_1: newNode 3; <Thread ID:140699723519808>
+Adding addr: 0x2275520 to 0x2275538; <Thread ID:140699723519808>
+Store: 0x2275520 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140699723519808>
+Store: 0x2275528 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140699723519808>
+DEP: SrcID: 11 DestID: 14; <Thread ID:140699723519808>
+Store: 0x2275530 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140699723519808>
+DEP: SrcID: 14 DestID: 17; <Thread ID:140699723519808>
+FUNC_END: newNode 3; <Thread ID:140699723519808>
+Store: 0x2275530 Size: 8 ID: 113 @Ln,Col: 102,20 Scope: deque_push_back; <Thread ID:140699723519808>
+Store: 0x2275468 Size: 8 ID: 119 @Ln,Col: 103,27 Scope: deque_push_back; <Thread ID:140699723519808>
+DEP: SrcID: 113 DestID: 119; <Thread ID:140699723519808>
+FUNC_END: deque_push_back 3; <Thread ID:140699723519808>
+FUNC_BEGIN_1: thread_func 1; <Thread ID:140699723515648>
+FUNC_BEGIN_1: thread_func 1; <Thread ID:140699715122944>
+FUNC_BEGIN_1: deque_pop_front 1; <Thread ID:140699723515648>
+Load: 0x2275370 Size: 4 ID: 153 @Ln,Col: 119,30 Scope: deque_pop_front; <Thread ID:140699723515648>
+Load: 0x2275378 Size: 8 ID: 164 @Ln,Col: 121,34 Scope: deque_pop_front; <Thread ID:140699723515648>
+Store: 0x2275470 Size: 8 ID: 181 @Ln,Col: 126,28 Scope: deque_pop_front; <Thread ID:140699723515648>
+DEP: SrcID: 153 DestID: 181; <Thread ID:140699723515648>
+DEP: SrcID: 164 DestID: 181; <Thread ID:140699723515648>
+FUNC_END: deque_pop_front 1; <Thread ID:140699723515648>
+FUNC_BEGIN_1: deque_push_back 4; <Thread ID:140699723515648>
+FUNC_BEGIN_1: newNode 4; <Thread ID:140699723515648>
+Adding addr: 0x2275370 to 0x2275388; <Thread ID:140699723515648>
+Store: 0x2275370 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140699723515648>
+Store: 0x2275378 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140699723515648>
+DEP: SrcID: 11 DestID: 14; <Thread ID:140699723515648>
+Store: 0x2275380 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140699723515648>
+DEP: SrcID: 14 DestID: 17; <Thread ID:140699723515648>
+FUNC_END: newNode 4; <Thread ID:140699723515648>
+Store: 0x2275380 Size: 8 ID: 113 @Ln,Col: 102,20 Scope: deque_push_back; <Thread ID:140699723515648>
+Store: 0x2275528 Size: 8 ID: 119 @Ln,Col: 103,27 Scope: deque_push_back; <Thread ID:140699723515648>
+DEP: SrcID: 113 DestID: 119; <Thread ID:140699723515648>
+FUNC_END: deque_push_back 4; <Thread ID:140699723515648>
+FUNC_BEGIN_1: deque_pop_front 2; <Thread ID:140699715122944>
+Load: 0x2275460 Size: 4 ID: 153 @Ln,Col: 119,30 Scope: deque_pop_front; <Thread ID:140699715122944>
+Load: 0x2275468 Size: 8 ID: 164 @Ln,Col: 121,34 Scope: deque_pop_front; <Thread ID:140699715122944>
+Store: 0x2275530 Size: 8 ID: 181 @Ln,Col: 126,28 Scope: deque_pop_front; <Thread ID:140699715122944>
+DEP: SrcID: 153 DestID: 181; <Thread ID:140699715122944>
+DEP: SrcID: 164 DestID: 181; <Thread ID:140699715122944>
+FUNC_END: deque_pop_front 2; <Thread ID:140699715122944>
+FUNC_BEGIN_1: deque_push_front 1; <Thread ID:140699723515648>
+FUNC_BEGIN_1: newNode 5; <Thread ID:140699723515648>
+Adding addr: 0x7ff7300058d0 to 0x7ff7300058e8; <Thread ID:140699723515648>
+Store: 0x7ff7300058d0 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140699723515648>
+Store: 0x7ff7300058d8 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140699723515648>
+DEP: SrcID: 11 DestID: 14; <Thread ID:140699723515648>
+Store: 0x7ff7300058e0 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140699723515648>
+DEP: SrcID: 14 DestID: 17; <Thread ID:140699723515648>
+FUNC_END: newNode 5; <Thread ID:140699723515648>
+Store: 0x7ff7300058d8 Size: 8 ID: 65 @Ln,Col: 86,20 Scope: deque_push_front; <Thread ID:140699723515648>
+Store: 0x2275530 Size: 8 ID: 71 @Ln,Col: 87,28 Scope: deque_push_front; <Thread ID:140699723515648>
+DEP: SrcID: 65 DestID: 71; <Thread ID:140699723515648>
+FUNC_END: deque_push_front 1; <Thread ID:140699723515648>
+FUNC_BEGIN_1: deque_pop_back 1; <Thread ID:140699723515648>
+FUNC_BEGIN_1: deque_push_back 5; <Thread ID:140699715122944>
+Load: 0x2275370 Size: 4 ID: 218 @Ln,Col: 143,29 Scope: deque_pop_back; <Thread ID:140699723515648>
+Load: 0x2275380 Size: 8 ID: 229 @Ln,Col: 145,32 Scope: deque_pop_back; <Thread ID:140699723515648>
+Store: 0x2275528 Size: 8 ID: 246 @Ln,Col: 150,27 Scope: deque_pop_back; <Thread ID:140699723515648>
+DEP: SrcID: 218 DestID: 246; <Thread ID:140699723515648>
+DEP: SrcID: 229 DestID: 246; <Thread ID:140699723515648>
+FUNC_END: deque_pop_back 1; <Thread ID:140699723515648>
+FUNC_END: thread_func 1; <Thread ID:140699723515648>
+FUNC_BEGIN_1: newNode 6; <Thread ID:140699715122944>
+Adding addr: 0x2275460 to 0x2275478; <Thread ID:140699715122944>
+Store: 0x2275460 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140699715122944>
+Store: 0x2275468 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140699715122944>
+DEP: SrcID: 11 DestID: 14; <Thread ID:140699715122944>
+Store: 0x2275470 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140699715122944>
+DEP: SrcID: 14 DestID: 17; <Thread ID:140699715122944>
+FUNC_END: newNode 6; <Thread ID:140699715122944>
+Store: 0x2275470 Size: 8 ID: 113 @Ln,Col: 102,20 Scope: deque_push_back; <Thread ID:140699715122944>
+Store: 0x2275528 Size: 8 ID: 119 @Ln,Col: 103,27 Scope: deque_push_back; <Thread ID:140699715122944>
+DEP: SrcID: 113 DestID: 119; <Thread ID:140699715122944>
+FUNC_END: deque_push_back 5; <Thread ID:140699715122944>
+FUNC_BEGIN_1: deque_push_front 2; <Thread ID:140699715122944>
+FUNC_BEGIN_1: newNode 7; <Thread ID:140699715122944>
+Adding addr: 0x7ff728000d40 to 0x7ff728000d58; <Thread ID:140699715122944>
+Store: 0x7ff728000d40 Size: 4 ID: 11 @Ln,Col: 66,16 Scope: newNode; <Thread ID:140699715122944>
+Store: 0x7ff728000d48 Size: 8 ID: 14 @Ln,Col: 67,16 Scope: newNode; <Thread ID:140699715122944>
+DEP: SrcID: 11 DestID: 14; <Thread ID:140699715122944>
+Store: 0x7ff728000d50 Size: 8 ID: 17 @Ln,Col: 68,16 Scope: newNode; <Thread ID:140699715122944>
+DEP: SrcID: 14 DestID: 17; <Thread ID:140699715122944>
+FUNC_END: newNode 7; <Thread ID:140699715122944>
+Store: 0x7ff728000d48 Size: 8 ID: 65 @Ln,Col: 86,20 Scope: deque_push_front; <Thread ID:140699715122944>
+Store: 0x7ff7300058e0 Size: 8 ID: 71 @Ln,Col: 87,28 Scope: deque_push_front; <Thread ID:140699715122944>
+DEP: SrcID: 65 DestID: 71; <Thread ID:140699715122944>
+FUNC_END: deque_push_front 2; <Thread ID:140699715122944>
+FUNC_BEGIN_1: deque_pop_back 2; <Thread ID:140699715122944>
+Load: 0x2275460 Size: 4 ID: 218 @Ln,Col: 143,29 Scope: deque_pop_back; <Thread ID:140699715122944>
+Load: 0x2275470 Size: 8 ID: 229 @Ln,Col: 145,32 Scope: deque_pop_back; <Thread ID:140699715122944>
+Store: 0x2275528 Size: 8 ID: 246 @Ln,Col: 150,27 Scope: deque_pop_back; <Thread ID:140699715122944>
+DEP: SrcID: 218 DestID: 246; <Thread ID:140699715122944>
+DEP: SrcID: 229 DestID: 246; <Thread ID:140699715122944>
+FUNC_END: deque_pop_back 2; <Thread ID:140699715122944>
+FUNC_END: thread_func 2; <Thread ID:140699715122944>
+FUNC_BEGIN_1: deque_print 1; <Thread ID:140699723519808>
+Load: 0x7ff728000d40 Size: 4 ID: 344 @Ln,Col: 195,32 Scope: deque_print; <Thread ID:140699723519808>
+Load: 0x7ff728000d48 Size: 8 ID: 348 @Ln,Col: 196,28 Scope: deque_print; <Thread ID:140699723519808>
+Load: 0x7ff7300058d0 Size: 4 ID: 344 @Ln,Col: 195,32 Scope: deque_print; <Thread ID:140699723519808>
+Load: 0x7ff7300058d8 Size: 8 ID: 348 @Ln,Col: 196,28 Scope: deque_print; <Thread ID:140699723519808>
+Load: 0x2275520 Size: 4 ID: 344 @Ln,Col: 195,32 Scope: deque_print; <Thread ID:140699723519808>
+Load: 0x2275528 Size: 8 ID: 348 @Ln,Col: 196,28 Scope: deque_print; <Thread ID:140699723519808>
+FUNC_END: deque_print 1; <Thread ID:140699723519808>
+FUNC_BEGIN_1: deque_destroy 1; <Thread ID:140699723519808>
+FUNC_BEGIN_1: deque_clear 1; <Thread ID:140699723519808>
+Load: 0x7ff728000d48 Size: 8 ID: 300 @Ln,Col: 173,28 Scope: deque_clear; <Thread ID:140699723519808>
+Load: 0x7ff7300058d8 Size: 8 ID: 300 @Ln,Col: 173,28 Scope: deque_clear; <Thread ID:140699723519808>
+Load: 0x2275528 Size: 8 ID: 300 @Ln,Col: 173,28 Scope: deque_clear; <Thread ID:140699723519808>
+FUNC_END: deque_clear 1; <Thread ID:140699723519808>
+FUNC_END: deque_destroy 1; <Thread ID:140699723519808>
+FUNC_END: main 1; <Thread ID:140699723519808>

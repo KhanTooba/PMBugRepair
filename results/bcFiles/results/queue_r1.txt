@@ -5,22 +5,22 @@ Number of bugs detected:  4
 pt_2 < 9999
 pt_2 < pt_3
 pt_3 < 9999
-pt_6 < 9999
+pt_14 < 9999
 Number of threads:  1
 ################################################################################################
-Working on Thread: 0 (Length of thread :  149 ): 
+Working on Thread: 0 (Length of thread :  131 ): 
 Repairing for bug: pt_2 < 9999
-Before append: 149
+Before append: 131
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x7f8150002860'", -1, 0, '21_x']
+Adding: ['2_0', 102, "'0x7f1a44002860'", -1, 0, '21_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '21_x']
-After append: 151
-The number of assertions: 22804
+After append: 133
+The number of assertions: 17692
 The number of blocking constraint will be:  1
 Blocking constraints: [[2, '2_0', '2_1']]
 Bug is: Not(pt_2 < 9999)
-Num: 22805
+Num: 17693
 ITERATION:  1
 Not(And(pc_2 > pc_2_1))
 Not running blocking constraint generation because already unsat.
@@ -28,24 +28,24 @@ SAIS: pc_2 <= pc_2_1
 ####################################################################################
 Repairing for bug: pt_2 < pt_3
 MPB Bug found: pt_2 < pt_3
-Before append: 151
+Before append: 133
 Fence found. 2_1
 Fence count: 1
-After append: 152
+After append: 134
 The bug flag is: 1
 Did not continue for: 2
 Did not continue for: 3
-The number of assertions: 22959
+The number of assertions: 17829
 The number of blocking constraint will be:  4
 Blocking constraints: [[2, '2_1'], [3, '2_1'], [2, '2_Fence_0'], [3, '2_Fence_0']]
 Bug is: Not(pt_2 < pt_3)
-Num: 22962
+Num: 17832
 ITERATION:  1
 Not(And(pc_2 < pc_2_1,
         pc_3 < pc_2_1,
         pc_2 < pc_2_Fence_0,
         pc_3 < pc_2_Fence_0))
-Num: 22963
+Num: 17833
 ITERATION:  2
 Not(And(pc_2 < pc_2_1,
         pc_3 < pc_2_1,
@@ -62,38 +62,39 @@ SAIS: And(Not(And(Not(pc_2_1 <= pc_2),
             Not(pc_3 <= pc_2_Fence_0))))
 ####################################################################################
 Repairing for bug: pt_3 < 9999
-Before append: 152
+Before append: 134
 Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0x7f8150002868'", -1, 0, '22_x']
+Adding: ['3_0', 102, "'0x7f1a44002868'", -1, 0, '22_x']
 Constraint added: pc_3 == pc_3_0 - 1
-After append: 153
-The number of assertions: 23111
+Adding: ['3_1', 103, '0', -1, 0, '22_x']
+After append: 136
+The number of assertions: 18100
 The number of blocking constraint will be:  1
-Blocking constraints: [[3, '3_0', '2_Fence_0']]
+Blocking constraints: [[3, '3_0', '3_1']]
 Bug is: Not(pt_3 < 9999)
-Num: 23115
+Num: 18104
 ITERATION:  1
-Not(And(pc_3 > pc_2_Fence_0))
+Not(And(pc_3 > pc_3_1))
 Not running blocking constraint generation because already unsat.
-SAIS: pc_3 <= pc_2_Fence_0
+SAIS: pc_3 <= pc_3_1
 ####################################################################################
-Repairing for bug: pt_6 < 9999
-Before append: 153
-Bug found:  pt_6 pt_6
-Adding: ['6_0', 102, "'0x7f8150002868'", -1, 0, '29_x']
-Constraint added: pc_6 == pc_6_0 - 1
-After append: 154
-The number of assertions: 23266
-The number of blocking constraint will be:  1
-Blocking constraints: [[6, '6_0', '2_Fence_0']]
-Bug is: Not(pt_6 < 9999)
-Num: 23272
+Repairing for bug: pt_14 < 9999
+Before append: 136
+Bug found:  pt_14 pt_14
+Adding: ['14_0', 102, "'0x7f1a44002a48'", -1, 0, '29_x']
+Constraint added: pc_14 == pc_14_0 - 1
+After append: 137
+The number of assertions: 18239
+The number of blocking constraint will be:  2
+Blocking constraints: [[14, '14_0', '2_Fence_0'], [14, '14_0', '3_1']]
+Bug is: Not(pt_14 < 9999)
+Num: 18245
 ITERATION:  1
-Not(And(pc_6 > pc_2_Fence_0))
+Not(And(pc_14 > pc_2_Fence_0, pc_14 > pc_3_1))
 Not running blocking constraint generation because already unsat.
-SAIS: pc_6 <= pc_2_Fence_0
+SAIS: Not(And(Not(pc_14 <= pc_2_Fence_0), Not(pc_14 <= pc_3_1)))
 ####################################################################################
-Time taken to repair thread  0 :  17.72678828239441  seconds.
+Time taken to repair thread  0 :  12.928196430206299  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.0005865097045898438  seconds.
+Time taken to recombine individual threads:  0.0004792213439941406  seconds.

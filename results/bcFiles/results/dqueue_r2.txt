@@ -1,106 +1,75 @@
 Local variables initialized.
-[2, 101, '0x130b370', '-1', 0, '66'] [29, 101, '0x130b378', '0x130b370', 1, '67']
-[5, 101, '0x130b378', '0x130b370', 0, '67'] [25, 101, '0x130b470', '0x130b378', 1, '126']
-[5, 101, '0x130b378', '0x130b370', 0, '67'] [30, 101, '0x130b380', '0x130b378', 1, '68']
-[12, 101, '0x130b470', '0x130b378', 0, '68'] [32, 101, '0x130b528', '0x130b470', 1, '103']
-[12, 101, '0x130b470', '0x130b378', 0, '68'] [50, 101, '0x130b378', '0x130b470', 1, '150']
-[13, 101, '0x130b470', '-1', 0, '102'] [32, 101, '0x130b528', '0x130b470', 1, '103']
-[13, 101, '0x130b470', '-1', 0, '102'] [50, 101, '0x130b378', '0x130b470', 1, '150']
-[16, 101, '0x130b378', '0x130b470', 0, '103'] [25, 101, '0x130b470', '0x130b378', 1, '126']
-[16, 101, '0x130b378', '0x130b470', 0, '103'] [30, 101, '0x130b380', '0x130b378', 1, '68']
-[25, 101, '0x130b470', '0x130b378', 1, '126'] [37, 101, '0x130b378', '0x130b470', 2, '103']
-[25, 101, '0x130b470', '0x130b378', 1, '126'] [54, 101, '0x130b528', '0x130b470', 2, '150']
-[39, 101, '0x7fad10003b88', '0x130b370', 1, '67'] [49, 101, '0x7fad10003b90', '0x7fad10003b88', 2, '87']
-[41, 101, '0x7fad10003b88', '-1', 1, '86'] [49, 101, '0x7fad10003b90', '0x7fad10003b88', 2, '87']
-Number of bugs to be repaired:  13
+Number of bugs to be repaired:  12
 And(pc_2 < pc_5, pt_2 > pc_5)
 And(pc_5 < pc_25, pt_5 > pc_25)
 And(pc_5 < pc_8, pt_5 > pc_8)
+And(pc_8 < pc_40, pt_8 > pc_40)
 And(pc_8 < pc_16, pt_8 > pc_16)
-And(pc_8 < pc_50, pt_8 > pc_50)
 And(pc_13 < pc_16, pt_13 > pc_16)
-And(pc_13 < pc_50, pt_13 > pc_50)
 And(pc_16 < pc_25, pt_16 > pc_25)
 And(pc_16 < pc_8, pt_16 > pc_8)
 And(pc_25 < pc_16, pt_25 > pc_16)
-And(pc_25 < pc_50, pt_25 > pc_50)
-And(pc_5 < pc_43, pt_5 > pc_43)
-And(pc_41 < pc_43, pt_41 > pc_43)
-{50, 43} {2, 5, 8, 41, 13, 16, 25}
+And(pc_13 < pc_40, pt_13 > pc_40)
+And(pc_5 < pc_38, pt_5 > pc_38)
+And(pc_36 < pc_38, pt_36 > pc_38)
+{40, 38} {2, 36, 5, 8, 13, 16, 25}
 
 ############################################################################
 Iteration:  1
-Number of threads:  30
+Number of threads:  28
 Completed building constraints.
-Number of constraints:  168
+Number of constraints:  160
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
-2 5 [2, 5, 8, 13, 16, 25, 41] [50, 43] [] []
+2 5 [2, 5, 8, 13, 16, 25, 36] [40, 38] [] []
 Adding locks for write. 2
-Found insertion point for first lock:  0 1 [2, 101, '0x130b370', '-1', 4, '66']
+Found insertion point for first lock:  0 1 [2, 101, '0x2275370', '-1', 4, '66']
 0
 Found fence: 2 [4, 103, '0', '-1', 4, '66_x']
 Adding locks for read and taking fence within lock. 5
 Found insertion point for second lock:  3
 1
-Found fence at  [7, 103, '0', '-1', 26, '66_x']
-Time taken:  0.039402008056640625  seconds.
+Found fence at  [7, 103, '0', '-1', 24, '66_x']
+Time taken:  0.037996530532836914  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  2
-Number of threads:  30
+Number of threads:  28
 Completed building constraints.
-Number of constraints:  194
+Number of constraints:  186
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_8 < pc_16, pt_8 > pc_16)
-8 16 [2, 5, 8, 13, 16, 25, 41] [50, 43] [2, 5] [2, 5]
+Now, we will repair:  And(pc_8 < pc_40, pt_8 > pc_40)
+8 40 [2, 5, 8, 13, 16, 25, 36] [40, 38] [2, 5] [2, 5]
 Adding locks for write. 8
 Adding before:  ['Lock_0', 105, 'M1', -1, 4, '66_x']
-Adding before:  [2, 101, '0x130b370', '-1', 4, '66']
-Adding before:  [3, 102, '0x130b370', '-1', 4, '66_x']
+Adding before:  [2, 101, '0x2275370', '-1', 4, '66']
+Adding before:  [3, 102, '0x2275370', '-1', 4, '66_x']
 Adding before:  [4, 103, '0', '-1', 4, '66_x']
 Adding before:  ['UnLock_0', 106, 'M1', -1, 4, '66_x']
-Adding before:  ['Lock_1', 105, 'M1', -1, 26, '67_x']
-Adding before:  [5, 101, '0x130b378', '0x130b370', 26, '67']
-Adding before:  [6, 102, '0x130b378', '-1', 26, '67_x']
-Adding before:  [7, 103, '0', '-1', 26, '66_x']
-Adding before:  ['UnLock_1', 106, 'M1', -1, 26, '67_x']
-Found insertion point for first lock:  10 11 [8, 101, '0x130b380', '0x130b378', 20, '68']
+Adding before:  ['Lock_1', 105, 'M1', -1, 24, '67_x']
+Adding before:  [5, 101, '0x2275378', '0x2275370', 24, '67']
+Adding before:  [6, 102, '0x2275378', '-1', 24, '67_x']
+Adding before:  [7, 103, '0', '-1', 24, '66_x']
+Adding before:  ['UnLock_1', 106, 'M1', -1, 24, '67_x']
+Found insertion point for first lock:  10 11 [8, 101, '0x2275380', '0x2275378', 18, '68']
 2
-Locking  [13, 101, '0x130b470', '-1', 20, '102']
-Found fence: 17 [15, 103, '0', '-1', 20, '67_x']
-Adding locks for read and taking fence within lock. 16
-Found insertion point for second lock:  18
+Found fence: 17 [15, 103, '0', '-1', 22, '67_x']
+Adding very restricted lock for read. 40
 3
-Found fence at  [18, 103, '0', '-1', 22, '68_x']
-Time taken:  0.0413668155670166  seconds.
+Time taken:  0.038854360580444336  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  3
-Number of threads:  30
+Number of threads:  28
 Completed building constraints.
-Number of constraints:  241
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_8 < pc_50, pt_8 > pc_50)
-8 50 [2, 5, 8, 13, 16, 25, 41] [50, 43] [2, 5, 8, 13, 16] [2, 5, 8, 16]
-Adding very restricted lock for read. 50
-4
-Time taken:  0.04860973358154297  seconds.
-
-############################################################################
-
-############################################################################
-Iteration:  4
-Number of threads:  30
-Completed building constraints.
-Number of constraints:  562
+Number of constraints:  234
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.04167795181274414  seconds.
+Time taken:  0.02006053924560547  seconds.
 
 ############################################################################
 
-Total number of iterations:  4
+Total number of iterations:  3

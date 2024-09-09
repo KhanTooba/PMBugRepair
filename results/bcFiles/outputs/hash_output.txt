@@ -1,62 +1,42 @@
-FUNC_BEGIN_1: main 1; <Thread ID:140417415538496>
-FUNC_BEGIN_1: init_hash_table 1; <Thread ID:140417415538496>
-FUNC_END: init_hash_table 1; <Thread ID:140417415538496>
-FUNC_BEGIN_1: thread_func 1; <Thread ID:140417407141632>
-FUNC_BEGIN_1: thread_func 1; <Thread ID:140417415534336>
-FUNC_BEGIN_1: insert 1; <Thread ID:140417415534336>
-FUNC_BEGIN_1: hash_function 1; <Thread ID:140417415534336>
-FUNC_END: hash_function 1; <Thread ID:140417415534336>
-Adding addr: 0x7fb56c002050 to 0x7fb56c002060; <Thread ID:140417415534336>
-Store: 0x7fb56c002050 Size: 4 ID: 59 @Ln,Col: 112,19 Scope: insert; <Thread ID:140417415534336>
-Store: 0x7fb56c002054 Size: 4 ID: 63 @Ln,Col: 113,21 Scope: insert; <Thread ID:140417415534336>
-DEP: SrcID: 59 DestID: 63; <Thread ID:140417415534336>
-Store: 0x7fb56c002058 Size: 8 ID: 72 @Ln,Col: 114,20 Scope: insert; <Thread ID:140417415534336>
-DEP: SrcID: 63 DestID: 72; <Thread ID:140417415534336>
-FUNC_END: insert 1; <Thread ID:140417415534336>
-FUNC_BEGIN_1: insert 2; <Thread ID:140417407141632>
-FUNC_BEGIN_1: hash_function 2; <Thread ID:140417407141632>
-FUNC_END: hash_function 2; <Thread ID:140417407141632>
-Adding addr: 0x7fb574002970 to 0x7fb574002980; <Thread ID:140417407141632>
-Store: 0x7fb574002970 Size: 4 ID: 59 @Ln,Col: 112,19 Scope: insert; <Thread ID:140417407141632>
-Store: 0x7fb574002974 Size: 4 ID: 63 @Ln,Col: 113,21 Scope: insert; <Thread ID:140417407141632>
-DEP: SrcID: 59 DestID: 63; <Thread ID:140417407141632>
-Store: 0x7fb574002978 Size: 8 ID: 72 @Ln,Col: 114,20 Scope: insert; <Thread ID:140417407141632>
-DEP: SrcID: 63 DestID: 72; <Thread ID:140417407141632>
-FUNC_BEGIN_1: contains 1; <Thread ID:140417415534336>
-FUNC_END: insert 2; <Thread ID:140417407141632>
-FUNC_BEGIN_1: get 1; <Thread ID:140417415534336>
-FUNC_BEGIN_1: hash_function 3; <Thread ID:140417415534336>
-FUNC_END: hash_function 3; <Thread ID:140417415534336>
-Load: 0x7fb56c002050 Size: 4 ID: 209 @Ln,Col: 162,22 Scope: get; <Thread ID:140417415534336>
-Load: 0x7fb56c002054 Size: 4 ID: 216 @Ln,Col: 163,34 Scope: get; <Thread ID:140417415534336>
-DEP: SrcID: 209 DestID: 216; <Thread ID:140417415534336>
-FUNC_END: get 1; <Thread ID:140417415534336>
-FUNC_END: contains 1; <Thread ID:140417415534336>
-FUNC_BEGIN_1: contains 2; <Thread ID:140417407141632>
-FUNC_BEGIN_1: delete_from_hash 1; <Thread ID:140417415534336>
-FUNC_BEGIN_1: hash_function 4; <Thread ID:140417415534336>
-FUNC_END: hash_function 4; <Thread ID:140417415534336>
-Load: 0x7fb56c002050 Size: 4 ID: 122 @Ln,Col: 130,40 Scope: delete_from_hash; <Thread ID:140417415534336>
-Load: 0x7fb56c002058 Size: 8 ID: 148 @Ln,Col: 141,42 Scope: delete_from_hash; <Thread ID:140417415534336>
-FUNC_END: delete_from_hash 1; <Thread ID:140417415534336>
-FUNC_END: thread_func 1; <Thread ID:140417415534336>
-FUNC_BEGIN_1: get 2; <Thread ID:140417407141632>
-FUNC_BEGIN_1: hash_function 5; <Thread ID:140417407141632>
-FUNC_END: hash_function 5; <Thread ID:140417407141632>
-Load: 0x7fb574002970 Size: 4 ID: 209 @Ln,Col: 162,22 Scope: get; <Thread ID:140417407141632>
-Load: 0x7fb574002974 Size: 4 ID: 216 @Ln,Col: 163,34 Scope: get; <Thread ID:140417407141632>
-DEP: SrcID: 209 DestID: 216; <Thread ID:140417407141632>
-FUNC_END: get 2; <Thread ID:140417407141632>
-FUNC_END: contains 2; <Thread ID:140417407141632>
-FUNC_BEGIN_1: delete_from_hash 2; <Thread ID:140417407141632>
-FUNC_BEGIN_1: hash_function 6; <Thread ID:140417407141632>
-FUNC_END: hash_function 6; <Thread ID:140417407141632>
-Load: 0x7fb574002970 Size: 4 ID: 122 @Ln,Col: 130,40 Scope: delete_from_hash; <Thread ID:140417407141632>
-Load: 0x7fb574002978 Size: 8 ID: 148 @Ln,Col: 141,42 Scope: delete_from_hash; <Thread ID:140417407141632>
-FUNC_END: delete_from_hash 2; <Thread ID:140417407141632>
-FUNC_END: thread_func 2; <Thread ID:140417407141632>
-FUNC_BEGIN_1: display 1; <Thread ID:140417415538496>
-FUNC_END: display 1; <Thread ID:140417415538496>
-FUNC_BEGIN_1: clear 1; <Thread ID:140417415538496>
-FUNC_END: clear 1; <Thread ID:140417415538496>
-FUNC_END: main 1; <Thread ID:140417415538496>
+FUNC_BEGIN_1: main 1; <Thread ID:140393759049536>
+FUNC_BEGIN_1: init_hash_table 1; <Thread ID:140393759049536>
+FUNC_END: init_hash_table 1; <Thread ID:140393759049536>
+FUNC_BEGIN_1: thread_func 1; <Thread ID:140393759045376>
+FUNC_BEGIN_1: insert 1; <Thread ID:140393759045376>
+FUNC_BEGIN_1: hash_function 1; <Thread ID:140393759045376>
+FUNC_END: hash_function 1; <Thread ID:140393759045376>
+Adding addr: 0x7faff0003c80 to 0x7faff0003c90; <Thread ID:140393759045376>
+Store: 0x7faff0003c80 Size: 4 ID: 59 @Ln,Col: 112,19 Scope: insert; <Thread ID:140393759045376>
+Store: 0x7faff0003c84 Size: 4 ID: 63 @Ln,Col: 113,21 Scope: insert; <Thread ID:140393759045376>
+DEP: SrcID: 59 DestID: 63; <Thread ID:140393759045376>
+Store: 0x7faff0003c88 Size: 8 ID: 72 @Ln,Col: 114,20 Scope: insert; <Thread ID:140393759045376>
+DEP: SrcID: 63 DestID: 72; <Thread ID:140393759045376>
+FUNC_END: insert 1; <Thread ID:140393759045376>
+FUNC_BEGIN_1: contains 1; <Thread ID:140393759045376>
+FUNC_BEGIN_1: thread_func 1; <Thread ID:140393750652672>
+FUNC_BEGIN_1: get 1; <Thread ID:140393759045376>
+FUNC_BEGIN_1: hash_function 2; <Thread ID:140393759045376>
+FUNC_END: hash_function 2; <Thread ID:140393759045376>
+Load: 0x7faff0003c80 Size: 4 ID: 209 @Ln,Col: 162,22 Scope: get; <Thread ID:140393759045376>
+Load: 0x7faff0003c84 Size: 4 ID: 216 @Ln,Col: 163,34 Scope: get; <Thread ID:140393759045376>
+DEP: SrcID: 209 DestID: 216; <Thread ID:140393759045376>
+FUNC_END: get 1; <Thread ID:140393759045376>
+FUNC_END: contains 1; <Thread ID:140393759045376>
+FUNC_BEGIN_1: insert 2; <Thread ID:140393750652672>
+FUNC_BEGIN_1: hash_function 3; <Thread ID:140393750652672>
+FUNC_END: hash_function 3; <Thread ID:140393750652672>
+Adding addr: 0x7fafe8000d40 to 0x7fafe8000d50; <Thread ID:140393750652672>
+Store: 0x7fafe8000d40 Size: 4 ID: 59 @Ln,Col: 112,19 Scope: insert; <Thread ID:140393750652672>
+Store: 0x7fafe8000d44 Size: 4 ID: 63 @Ln,Col: 113,21 Scope: insert; <Thread ID:140393750652672>
+DEP: SrcID: 59 DestID: 63; <Thread ID:140393750652672>
+Store: 0x7fafe8000d48 Size: 8 ID: 72 @Ln,Col: 114,20 Scope: insert; <Thread ID:140393750652672>
+DEP: SrcID: 63 DestID: 72; <Thread ID:140393750652672>
+FUNC_END: insert 2; <Thread ID:140393750652672>
+FUNC_BEGIN_1: delete_from_hash 1; <Thread ID:140393759045376>
+FUNC_BEGIN_1: hash_function 4; <Thread ID:140393759045376>
+FUNC_END: hash_function 4; <Thread ID:140393759045376>
+Load: 0x7faff0003c80 Size: 4 ID: 122 @Ln,Col: 130,40 Scope: delete_from_hash; <Thread ID:140393759045376>
+Load: 0x7faff0003c88 Size: 8 ID: 148 @Ln,Col: 141,42 Scope: delete_from_hash; <Thread ID:140393759045376>
+FUNC_END: delete_from_hash 1; <Thread ID:140393759045376>
+FUNC_END: thread_func 1; <Thread ID:140393759045376>
+FUNC_BEGIN_1: contains 2; <Thread ID:140393750652672>
