@@ -23,7 +23,17 @@ Now, we will repair:  And(pc_5 < pc_12, pt_5 > pc_12)
 Adding locks for write. 5
 Adding before:  [2, 101, '0x179dcd0', '-1', 0, '93']
 Adding before:  [3, 102, '0x179dcd0', '-1', 0, '93_x']
-Time taken:  0.0380399227142334  seconds.
+Adding before:  [4, 103, '0', '-1', 0, '93_x']
+Found insertion point for first lock:  3 4 [5, 101, '0x179dcd8', '0x179dcd0', 6, '94']
+0
+Found fence: 5 [7, 103, '0', '-1', 6, '93_x']
+Adding locks for read and taking fence within lock. 12
+Adding before:  [8, 101, '0x179dcdc', '0x179dcd8', 0, '95']
+Adding before:  [10, 101, '0x179dcdc', '0x179dcd8', 5, '118']
+Found insertion point for second lock:  10
+1
+Found fence at  [22, 103, '0', '-1', 13, '120_x']
+Time taken:  0.041461944580078125  seconds.
 
 ############################################################################
 
@@ -38,7 +48,7 @@ Now, we will repair:  And(pc_12 < pc_18, pt_12 > pc_18)
 Removing   ['Lock_0', 105, 'M1', -1, 6, '94_x']   for   ['Lock_1', 105, 'M1', -1, 8, '120_x']
 Removing   ['UnLock_0', 106, 'M1', -1, 6, '94_x']   for   ['Lock_1', 105, 'M1', -1, 8, '120_x']
 Removing   ['Lock_1', 105, 'M1', -1, 8, '120_x']   for   ['Lock_1', 105, 'M1', -1, 8, '120_x']
-Time taken:  0.031075716018676758  seconds.
+Time taken:  0.04481911659240723  seconds.
 
 ############################################################################
 
@@ -46,9 +56,9 @@ Time taken:  0.031075716018676758  seconds.
 Iteration:  3
 Number of threads:  14
 Completed building constraints.
-Number of constraints:  224
+Number of constraints:  221
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.018186330795288086  seconds.
+Time taken:  0.0291593074798584  seconds.
 
 ############################################################################
 

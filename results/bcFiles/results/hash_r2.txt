@@ -15,20 +15,14 @@ A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
 2 5 [2, 5] [8] [] []
 Adding locks for write. 2
-Adding before:  [2, 101, '0x7fcfdc003c80', '-1', 3, '116']
-Adding before:  [3, 102, '0x7fcfdc003c80', '-1', 3, '116_x']
-Adding before:  [4, 103, '0', '-1', 3, '116_x']
-Adding before:  [5, 101, '0x7fcfdc003c84', '0x7fcfdc003c80', 5, '117']
-Adding before:  [6, 102, '0x7fcfdc003c84', '-1', 5, '117_x']
-Adding before:  [7, 103, '0', '-1', 5, '117_x']
-Adding before:  [8, 101, '0x7fcfdc003c88', '0x7fcfdc003c84', 6, '118']
-Adding before:  [9, 102, '0x7fcfdc003c88', '-1', 6, '118_x']
-Adding before:  [10, 103, '0', '-1', 6, '117_x']
-Adding before:  [11, 103, '0', '-1', 0, '116_x']
-Adding before:  [12, 103, '0', '-1', 0, '118_x']
-Adding before:  [13, 101, '0x7fcfd4000d40', '-1', 1, '116']
-Adding before:  [14, 101, '0x7fcfd4000d44', '0x7fcfdc003c80', 1, '117']
-Time taken:  0.014552116394042969  seconds.
+Found insertion point for first lock:  0 1 [2, 101, '0x7fcfdc003c80', '-1', 3, '116']
+0
+Found fence: 2 [4, 103, '0', '-1', 3, '116_x']
+Adding locks for read and taking fence within lock. 5
+Found insertion point for second lock:  3
+1
+Found fence at  [7, 103, '0', '-1', 5, '117_x']
+Time taken:  0.02231621742248535  seconds.
 
 ############################################################################
 
@@ -36,11 +30,13 @@ Time taken:  0.014552116394042969  seconds.
 Iteration:  2
 Number of threads:  7
 Completed building constraints.
-Number of constraints:  42
+Number of constraints:  68
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_5 < pc_8, pt_5 > pc_8)
 5 8 [2, 5] [8] [2, 5] [2, 5]
-Time taken:  0.012928009033203125  seconds.
+Adding very restricted lock for read. 8
+2
+Time taken:  0.024592876434326172  seconds.
 
 ############################################################################
 
@@ -48,9 +44,9 @@ Time taken:  0.012928009033203125  seconds.
 Iteration:  3
 Number of threads:  7
 Completed building constraints.
-Number of constraints:  79
+Number of constraints:  152
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.01060795783996582  seconds.
+Time taken:  0.02622389793395996  seconds.
 
 ############################################################################
 

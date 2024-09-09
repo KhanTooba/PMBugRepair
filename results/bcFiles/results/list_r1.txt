@@ -40,7 +40,7 @@ Not(And(pc_3 > pc_2_1))
 Not running blocking constraint generation because already unsat.
 SAIS: pc_3 <= pc_2_1
 ####################################################################################
-Time taken to repair thread  0 :  3.7903904914855957  seconds.
+Time taken to repair thread  0 :  5.145601987838745  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  100 ): 
@@ -69,7 +69,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  1 :  1.9179601669311523  seconds.
+Time taken to repair thread  1 :  2.873278856277466  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.0009334087371826172  seconds.
+Time taken to recombine individual threads:  0.0010411739349365234  seconds.

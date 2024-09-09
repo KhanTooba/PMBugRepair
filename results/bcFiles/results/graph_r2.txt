@@ -32,9 +32,14 @@ Adding before:  [9, 101, '0xa4d9e0', '-1', 0, '45']
 Adding before:  [10, 101, '0xa4da10', '-1', 0, '45']
 Adding before:  [11, 101, '0xa4da40', '-1', 0, '45']
 Adding before:  [12, 101, '0x7ff2f4002740', '-1', 4, '73']
+Adding before:  [13, 102, '0x7ff2f4002740', '-1', 4, '73_x']
+Found insertion point for first lock:  12 13 [14, 101, '0x7ff2f4002748', '0x7ff2f4002740', 10, '74']
+0
 Locking  [16, 101, '0x7ff2f4002748', '-1', 10, '84']
 Adding fence because encountered second before fence.
-Time taken:  0.05206704139709473  seconds.
+Adding very restricted lock for read. 18
+1
+Time taken:  0.0712881088256836  seconds.
 
 ############################################################################
 
@@ -42,46 +47,10 @@ Time taken:  0.05206704139709473  seconds.
 Iteration:  2
 Number of threads:  14
 Completed building constraints.
-Number of constraints:  230
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_12 < pc_14, pt_12 > pc_14)
-12 14 [12, 14, 16, 22] [24, 18] [14, 16] [14, 18]
-Adding locks for write. 12
-Adding before:  [2, 101, '0xa4d900', '-1', 0, '40']
-Adding before:  [3, 102, '0xa4d900', '-1', 0, '40_x']
-Adding before:  [4, 101, '0xa4d908', '-1', 0, '41']
-Adding before:  [5, 102, '0xa4d908', '-1', 0, '41_x']
-Adding before:  [6, 103, '0', '-1', 0, '40_x']
-Adding before:  [7, 101, '0xa4d9b0', '-1', 0, '45']
-Adding before:  [8, 102, '0xa4d9b0', '-1', 0, '45_x']
-Adding before:  [9, 101, '0xa4d9e0', '-1', 0, '45']
-Adding before:  [10, 101, '0xa4da10', '-1', 0, '45']
-Adding fence because encountered second before fence.
-Removing   ['UnLock_0', 106, 'M1', -1, 10, '74_x']   for   [68, 103, '0', '-1', 0, '45_x']
-Time taken:  0.05752921104431152  seconds.
-
-############################################################################
-
-############################################################################
-Iteration:  3
-Number of threads:  14
-Completed building constraints.
-Number of constraints:  232
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_14 < pc_24, pt_14 > pc_24)
-14 24 [12, 14, 16, 22] [24, 18] [14, 16, 12] [14, 18, 12]
-Time taken:  0.05766892433166504  seconds.
-
-############################################################################
-
-############################################################################
-Iteration:  4
-Number of threads:  14
-Completed building constraints.
-Number of constraints:  374
+Number of constraints:  233
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.02737259864807129  seconds.
+Time taken:  0.030434131622314453  seconds.
 
 ############################################################################
 
-Total number of iterations:  4
+Total number of iterations:  2

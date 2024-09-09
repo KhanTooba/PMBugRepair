@@ -23,7 +23,7 @@ Not(And(pc_2 > pc_2_1))
 Not running blocking constraint generation because already unsat.
 SAIS: pc_2 <= pc_2_1
 ####################################################################################
-Time taken to repair thread  0 :  0.024007558822631836  seconds.
+Time taken to repair thread  0 :  0.03825092315673828  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  2 ): 
@@ -41,7 +41,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: False
 Repair not found.
 ####################################################################################
-Time taken to repair thread  1 :  0.018125057220458984  seconds.
+Time taken to repair thread  1 :  0.03225111961364746  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 2 (Length of thread :  2 ): 
@@ -59,7 +59,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: False
 Repair not found.
 ####################################################################################
-Time taken to repair thread  2 :  0.017902612686157227  seconds.
+Time taken to repair thread  2 :  0.03285503387451172  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 3 (Length of thread :  2 ): 
@@ -77,7 +77,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: False
 Repair not found.
 ####################################################################################
-Time taken to repair thread  3 :  0.01786494255065918  seconds.
+Time taken to repair thread  3 :  0.0312657356262207  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  1.71661376953125e-05  seconds.
+Time taken to recombine individual threads:  2.5272369384765625e-05  seconds.
