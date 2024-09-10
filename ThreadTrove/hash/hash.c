@@ -5,16 +5,19 @@
 void* thread_func(void* arg) {
     HashTable* ht = (HashTable*)arg;
     int thread_id = pthread_self();
-    
-    // Each thread inserts a key-value pair based on its ID
-    int key_to_insert = thread_id % 100;
-    int value_to_insert = key_to_insert * 2;
-    insert(ht, key_to_insert, value_to_insert);
-    printf("Thread %d inserted: (%d, %d) into the hash table\n", thread_id, key_to_insert, value_to_insert);
-    
-    int value_read = contains(ht, key_to_insert);
-    if (value_read != -1) {
-        printf("Thread %d read: (%d, %d) from the hash table\n", thread_id, key_to_insert, value_read);
+    int key_to_insert;
+    int value_to_insert;
+
+    // Each thread inserts 100 random values 
+    for(int i = 0; i < 100; i++){
+        key_to_insert = rand();
+        value_to_insert = rand()%100;
+        insert(ht, key_to_insert, value_to_insert);
+        printf("Thread %d inserted: (%d, %d) into the hash table\n", thread_id, key_to_insert, value_to_insert);
+    }
+
+    if (contains(ht, key_to_insert) != false) {
+        printf("Thread %d read: (%d, %d) from the hash table\n", thread_id, key_to_insert, get(ht, key_to_insert));
         delete_from_hash(ht, key_to_insert);  // Delete the key after reading
         printf("Thread %d deleted: (%d) from the hash table\n", thread_id, key_to_insert);
     }

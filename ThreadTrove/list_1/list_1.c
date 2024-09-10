@@ -5,21 +5,23 @@
 void* thread_func(void* arg) {
     LinkedList* list = (LinkedList*)arg;  // Cast the argument to LinkedList pointer
     int thread_id = pthread_self();  // Get the thread's ID
-    
-    // Each thread inserts a value based on its thread ID (modulo 100 for uniqueness)
-    int value_to_insert = thread_id % 100;
-    insert(list, value_to_insert);
-    printf("Thread %d inserted: %d into the list\n", thread_id, value_to_insert);
-    
-    // Each thread searches for the value it inserted
-    Node* found_node = search(list, value_to_insert);
-    if (found_node != NULL) {
-        printf("Thread %d found value: %d\n", thread_id, found_node->data);
-        
-        // If found, increment the value
-        found_node->data += 1;
-        printf("Thread %d incremented value to: %d\n", thread_id, found_node->data);
+    int value;
+
+    // Each thread inserts 100 random values 
+    for(int i = 0; i < 100; i++){
+        value = rand();
+        insert(list, value);
+        printf("Thread %d inserted: %d into the list\n", thread_id, value);
     }
+
+
+    if (contains(list, value)!=false) {
+        // If found, increment the value and insert after the current value
+        insert_after(list, value, int value+1) 
+        printf("Thread %d incremented value to: %d\n", thread_id, value+1);
+    }
+
+    reverse(list);
     
     return NULL;
 }

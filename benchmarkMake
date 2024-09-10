@@ -21,7 +21,6 @@ compile_and_opt:
 		$(CC) -g results/bcFiles/$(file)_tracegen.bc -o results/bcFiles/$(file)_exec.o -pthread -L/usr/lib/x86_64-linux-gnu -lm -L$(PMInvGen_dir)/PM -Wl,-rpath=$(PMInvGen_dir)/PM -lLLVMPMC ; \
 		./results/bcFiles/$(file)_exec.o; \
 		mv output.txt ./results/outputs/$(file)_output.txt; \
-		rm output.txt; \
 		echo "Processed $(file)"; \
 	)
 
