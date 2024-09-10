@@ -7,7 +7,7 @@ void* thread_func(void* arg) {
     Deque* deque = (Deque*)arg;
 
     // Thread performs multiple operations on the deque
-    for(int i=0; i<50; i++){
+    for(int i=0; i<20; i++){
         int value = deque_pop_front(deque);
         deque_push_back(deque, value + 1);
         deque_push_front(deque, value + 2);
