@@ -7,10 +7,12 @@ void* thread_func(void* arg) {
     Deque* deque = (Deque*)arg;
 
     // Thread performs multiple operations on the deque
-    int value = deque_pop_front(deque);
-    deque_push_back(deque, value + 1);
-    deque_push_front(deque, value + 2);
-    deque_pop_back(deque);
+    for(int i=0; i<50; i++){
+        int value = deque_pop_front(deque);
+        deque_push_back(deque, value + 1);
+        deque_push_front(deque, value + 2);
+        deque_pop_back(deque);
+    }
 
     return NULL;
 }
@@ -20,9 +22,9 @@ int main() {
     deque_init(&deque);
 
     // Insert initial values
-    deque_push_back(&deque, 1);
-    deque_push_back(&deque, 2);
-    deque_push_back(&deque, 3);
+    for(int i=0; i<100; i++){
+        deque_push_back(&deque, rand());
+    }
 
     pthread_t threads[N_THREADS];
 

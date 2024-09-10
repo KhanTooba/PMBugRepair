@@ -17,7 +17,7 @@ void* thread_func(void* arg) {
 
     if (contains(list, value)!=false) {
         // If found, increment the value and insert after the current value
-        insert_after(list, value, int value+1) 
+        insert_after(list, value, value+1) 
         printf("Thread %d incremented value to: %d\n", thread_id, value+1);
     }
 

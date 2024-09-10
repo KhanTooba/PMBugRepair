@@ -6,10 +6,12 @@ void* thread_func(void* arg) {
     DoublyLinkedList* list = (DoublyLinkedList*)arg;
 
     // Thread performs multiple operations on the list
-    int value = dll_remove_start(list);
-    dll_insert_end(list, value + 1);
-    dll_insert_start(list, value + 2);
-    dll_remove_end(list);
+    for(int i=0; i<50; i++){
+        int value = dll_remove_start(list);
+        dll_insert_end(list, value + 1);
+        dll_insert_start(list, value + 2);
+        dll_remove_end(list);
+    }
 
     return NULL;
 }
@@ -19,9 +21,9 @@ int main() {
     dll_init(&list);
 
     // Insert initial values
-    dll_insert_end(&list, 1);
-    dll_insert_end(&list, 2);
-    dll_insert_end(&list, 3);
+    for(int i = 0; i<50; i++){
+        dll_insert_end(&list, rand());
+    }
 
     pthread_t threads[N_THREADS];
 

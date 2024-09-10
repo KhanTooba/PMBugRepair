@@ -6,7 +6,7 @@ void* thread_func(void* arg) {
     Set* set = (Set*)arg;
     
     // Thread will remove an element, modify it, and reinsert it
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 50; i++) {
         int element = i;
         set_remove(set, element);        // Remove element
         element += 10;                   // Modify element

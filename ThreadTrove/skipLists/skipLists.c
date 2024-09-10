@@ -6,11 +6,13 @@ void* threadFunc(void* arg) {
     SkipList* skipList = (SkipList*)arg;
 
     // Write-after-write dependency managed at the thread level
-    insert(skipList, 10);
-    insert(skipList, 20);
-    delete_element(skipList, 10);
-    insert(skipList, 30);
-
+    for(int i = 0; i<50; i++){
+        int value = rand()%100;
+        insert(skipList, value);
+        insert(skipList, value*2);
+        delete_element(skipList, value);
+        insert(skipList, value*3);
+    }
     return NULL;
 }
 
