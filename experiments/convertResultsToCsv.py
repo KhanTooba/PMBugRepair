@@ -15,7 +15,7 @@ def getLoc():
     listOfFiles = {}
     for file in files:
         listOfFiles[file] = count_lines([directory+file+"/"+file+".h", 
-                                         "../results/bcFiles/outputs/"+file+"_output.txt"])
+                                         "../results/outputs/"+file+"_output.txt"])
     return listOfFiles
 
 def getFile():
@@ -69,7 +69,7 @@ def processFile(file, locDetails):
 if __name__ == "__main__":
     headers = ["BenchmarkName", "#DURA", "#MPB", "#MPA", "Repair time in Step 1", 
             "Repair time in Step 2", "#Calls in step 1", "#Calls in step 2", 
-            "#Lock", "#sfence()", "clflushopt()", "LoC", "Trace Length"]
+            "#Lock", "#sfence()", "#clflushopt()", "LoC", "Trace Length"]
     
     locDetails = getLoc()
     file = getFile()

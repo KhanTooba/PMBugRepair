@@ -5,14 +5,14 @@ l1 = $(shell find $(FOLDER) -maxdepth 1 -type d | sed 's|.*/||' | tail -n +2)
 process_files:
 	@echo "Subfolders: $(files)"
 	rm -f ../repair/Report.txt
-	rm -f ../results/bcFiles/results/*.txt
-	rm -f ../results/bcFiles/repairedFiles/*.txt
+	rm -f ../results/results/*.txt
+	rm -f ../results/repairedFiles/*.txt
 	$(foreach file_name,$(l1), \
 	echo "\n"; \
 	echo "Repairing program in $(file_name)"; \
-	python3 trace_formatter.py ../results/bcFiles/outputs/$(file_name)_output.txt ../results/bcFiles/outputs/$(file_name)_formatted_output.txt; \
-	python3 step1.py ../results/bcFiles/outputs/$(file_name)_formatted_output.txt ../results/bcFiles/results/$(file_name)_trace_repaired.txt $(file_name)>> ../results/bcFiles/results/$(file_name)_r1.txt; \
-	python3 step4.py ../results/bcFiles/results/$(file_name)_trace_repaired.txt ../results/bcFiles/repairedFiles/$(file_name)_trace_last_repair.txt $(file_name)>> ../results/bcFiles/results/$(file_name)_r2.txt; \
+	python3 trace_formatter.py ../results/outputs/$(file_name)_output.txt ../results/outputs/$(file_name)_formatted_output.txt; \
+	python3 step1.py ../results/outputs/$(file_name)_formatted_output.txt ../results/results/$(file_name)_trace_repaired.txt $(file_name)>> ../results/results/$(file_name)_r1.txt; \
+	python3 step4.py ../results/results/$(file_name)_trace_repaired.txt ../results/repairedFiles/$(file_name)_trace_last_repair.txt $(file_name)>> ../results/results/$(file_name)_r2.txt; \
 	echo "Repair of $(file_name) completed."; \
 	)
 
