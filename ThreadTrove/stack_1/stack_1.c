@@ -2,7 +2,22 @@
 
 // Thread function to perform stack operations with write-after-write dependency
 void* thread_func(void* arg) {
+    int start = rand();
     Stack* stack = (Stack*)arg;
+
+    for (int i = start; i < start + 100; i++) {
+        stack_push(stack, i);
+        printf("Pushed: %d\n", i);
+    }
+
+    for (int i = 0; i < 25; i++) {
+        int popped_value = stack_pop(stack);
+        if (popped_value != -1) {
+            printf("Popped: %d\n", popped_value);
+        } else {
+            printf("Stack is empty\n");
+        }
+    }
     int value = stack_pop(stack);  // Dependent on what another thread writes
 
     if (value != -1) {  // Check if pop was successful
