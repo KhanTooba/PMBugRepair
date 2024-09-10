@@ -6,7 +6,7 @@ void* threadFunc(void* arg) {
     SkipList* skipList = (SkipList*)arg;
 
     // Write-after-write dependency managed at the thread level
-    for(int i = 0; i<20; i++){
+    for(int i = 0; i<10; i++){
         int value = rand()%100;
         insert(skipList, value);
         insert(skipList, value*2);
