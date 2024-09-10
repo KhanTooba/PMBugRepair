@@ -3,32 +3,34 @@ Completed parsing.
 Local variables initialized.
 Number of bugs detected:  2
 pt_2 < 9999
-pt_5 < 9999
+pt_3 < 9999
 Number of threads:  2
 ################################################################################################
-Working on Thread: 0 (Length of thread :  3 ): 
+Working on Thread: 0 (Length of thread :  1 ): 
 Repairing for bug: pt_2 < 9999
-Before append: 3
+Before append: 1
 Bug found:  pt_2 pt_2
-Constraint added: pc_2 == pc_3 - 1
+Adding: ['2_0', 102, "'0x75e800'", -1, 0, '18_x']
+Constraint added: pc_2 == pc_2_0 - 1
+Adding: ['2_1', 103, '0', -1, 0, '18_x']
 After append: 3
 The number of assertions: 12
 The number of blocking constraint will be:  1
-Blocking constraints: [[2, 3, 4]]
+Blocking constraints: [[2, '2_0', '2_1']]
 Bug is: Not(pt_2 < 9999)
 Num: 13
 ITERATION:  1
-Not(And(pc_2 > pc_4))
+Not(And(pc_2 > pc_2_1))
 Not running blocking constraint generation because already unsat.
-SAIS: pc_2 <= pc_4
+SAIS: pc_2 <= pc_2_1
 ####################################################################################
-Repairing for bug: pt_5 < 9999
+Repairing for bug: pt_3 < 9999
 Before append: 3
 After append: 3
 The number of assertions: 10
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_5 < 9999)
+Bug is: Not(pt_3 < 9999)
 Num: 13
 ITERATION:  1
 Not(And)
@@ -36,40 +38,38 @@ Not running blocking constraint generation because already unsat.
 SAIS: False
 Repair not found.
 ####################################################################################
-Time taken to repair thread  0 :  0.047284841537475586  seconds.
+Time taken to repair thread  0 :  0.08369135856628418  seconds.
 ################################################################################################
 ################################################################################################
-Working on Thread: 1 (Length of thread :  1 ): 
+Working on Thread: 1 (Length of thread :  3 ): 
 Repairing for bug: pt_2 < 9999
-Before append: 1
-After append: 1
-The number of assertions: 3
+Before append: 3
+After append: 3
+The number of assertions: 10
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < 9999)
-Num: 4
+Num: 11
 ITERATION:  1
 Not(And)
 Not running blocking constraint generation because already unsat.
 SAIS: False
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_5 < 9999
-Before append: 1
-Bug found:  pt_5 pt_5
-Adding: ['5_0', 102, "'0xa27800'", -1, 1, '18_x']
-Constraint added: pc_5 == pc_5_0 - 1
-Adding: ['5_1', 103, '0', -1, 1, '18_x']
+Repairing for bug: pt_3 < 9999
+Before append: 3
+Bug found:  pt_3 pt_3
+Constraint added: pc_3 == pc_4 - 1
 After append: 3
 The number of assertions: 12
 The number of blocking constraint will be:  1
-Blocking constraints: [[5, '5_0', '5_1']]
-Bug is: Not(pt_5 < 9999)
+Blocking constraints: [[3, 4, 5]]
+Bug is: Not(pt_3 < 9999)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  1 :  0.03894758224487305  seconds.
+Time taken to repair thread  1 :  0.07013273239135742  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  2.5033950805664062e-05  seconds.
+Time taken to recombine individual threads:  1.7881393432617188e-05  seconds.

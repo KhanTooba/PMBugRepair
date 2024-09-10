@@ -12,12 +12,12 @@ A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
 2 5 [2] [5] [] []
 Adding locks for write. 2
-Found insertion point for first lock:  0 1 [2, 101, '0x1709b50', '-1', 4, '22']
+Found insertion point for first lock:  0 1 [2, 101, '0x42ab50', '-1', 4, '22']
 0
 Found fence: 2 [4, 103, '0', '-1', 4, '22_x']
 Adding very restricted lock for read. 5
 1
-Time taken:  0.2246694564819336  seconds.
+Time taken:  0.2238473892211914  seconds.
 
 ############################################################################
 
@@ -27,7 +27,7 @@ Number of threads:  6
 Completed building constraints.
 Number of constraints:  580
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.03460812568664551  seconds.
+Time taken:  0.034395694732666016  seconds.
 
 ############################################################################
 

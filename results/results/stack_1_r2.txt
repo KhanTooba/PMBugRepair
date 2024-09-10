@@ -7,17 +7,17 @@ And(pc_2 < pc_5, pt_2 > pc_5)
 Iteration:  1
 Number of threads:  6
 Completed building constraints.
-Number of constraints:  37
+Number of constraints:  1237
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
 2 5 [2] [5] [] []
 Adding locks for write. 2
-Found insertion point for first lock:  0 1 [2, 101, '0x18fabe0', '-1', 4, '98']
+Found insertion point for first lock:  0 1 [2, 101, '0x7f3be0', '-1', 4, '98']
 0
 Found fence: 2 [4, 103, '0', '-1', 4, '98_x']
 Adding very restricted lock for read. 5
 1
-Time taken:  0.01848459243774414  seconds.
+Time taken:  3.377530574798584  seconds.
 
 ############################################################################
 
@@ -25,9 +25,9 @@ Time taken:  0.01848459243774414  seconds.
 Iteration:  2
 Number of threads:  6
 Completed building constraints.
-Number of constraints:  64
+Number of constraints:  1264
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.013403892517089844  seconds.
+Time taken:  0.06629538536071777  seconds.
 
 ############################################################################
 

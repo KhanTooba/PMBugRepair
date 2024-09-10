@@ -10,7 +10,7 @@ Working on Thread: 0 (Length of thread :  50 ):
 Repairing for bug: pt_2 < 9999
 Before append: 50
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x7fdb700013e0'", -1, 0, '50_x']
+Adding: ['2_0', 102, "'0x7fa060002410'", -1, 0, '50_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '50_x']
 After append: 52
@@ -27,7 +27,7 @@ SAIS: pc_2 <= pc_2_1
 Repairing for bug: pt_3 < 9999
 Before append: 52
 Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0x7fdb700013e8'", -1, 0, '53_x']
+Adding: ['3_0', 102, "'0x7fa060002418'", -1, 0, '53_x']
 Constraint added: pc_3 == pc_3_0 - 1
 After append: 53
 The number of assertions: 2761
@@ -40,7 +40,7 @@ Not(And(pc_3 > pc_2_1))
 Not running blocking constraint generation because already unsat.
 SAIS: pc_3 <= pc_2_1
 ####################################################################################
-Time taken to repair thread  0 :  1.0195443630218506  seconds.
+Time taken to repair thread  0 :  0.8812294006347656  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  50 ): 
@@ -69,7 +69,7 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  1 :  0.47618889808654785  seconds.
+Time taken to repair thread  1 :  0.4748566150665283  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.0002453327178955078  seconds.
+Time taken to recombine individual threads:  0.000247955322265625  seconds.
