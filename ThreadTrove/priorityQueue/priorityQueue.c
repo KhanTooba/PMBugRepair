@@ -4,12 +4,14 @@
 // Thread function to perform priority queue operations with write-after-write dependency
 void* thread_func(void* arg) {
     PriorityQueue* pq = (PriorityQueue*)arg;
-    int value = pq_extract_min(pq);  // Extract minimum element
+    int value;
 
-    if (value != -1) {  // Check if extraction was successful
-        value += 10;  // Modify the value and insert it back with higher priority
+    for(int i=0;i<30;i++) {  
+        value = rand()%10;
         pq_insert(pq, value, value);
     }
+
+    value = pq_extract_min(pq);  // Extract minimum element
     return NULL;
 }
 

@@ -3,6 +3,7 @@
 #include "graph.h"
 
 #define N_THREADS 2
+#define N_Vertices 50
 
 typedef struct {
     Graph *graph;
@@ -16,12 +17,9 @@ void* threadFunction(void* arg) {
     int thread_id = data->thread_id;
 
     // Example of write-after-write dependency
-    if (thread_id == 0) {
-        addEdge(graph, 0, 1);
-        addEdge(graph, 0, 2);
-    } else {
-        addEdge(graph, 1, 2);
-        addEdge(graph, 2, 3);
+    for(int i=0;i<30;i++){
+        addEdge(graph, rand()%N_Vertices, rand()%N_Vertices);
+        hasEdge(graph, rand()%N_Vertices, rand()%N_Vertices); 
     }
 
     printGraph(graph);
@@ -30,7 +28,7 @@ void* threadFunction(void* arg) {
 }
 
 int main() {
-    Graph* graph = createGraph(4);
+    Graph* graph = createGraph(N_Vertices);
 
     pthread_t threads[N_THREADS];
     ThreadData thread_data[N_THREADS];
@@ -46,10 +44,6 @@ int main() {
     for (int i = 0; i < N_THREADS; i++) {
         pthread_join(threads[i], NULL);
     }
-
-    // Example of write-after-write dependency in main
-    addEdge(graph, 3, 0);
-    addEdge(graph, 1, 3);
 
     printGraph(graph);
 

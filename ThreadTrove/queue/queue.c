@@ -1,18 +1,50 @@
 #include <queue.h>
 
+// Thread function for concurrent queue operations
+void* threadFunc(void* arg) {
+    Queue* queue = (Queue*)arg;
+
+    int start = rand();
+    for (int i = start; i < start + 25; i++) {
+        enqueue(queue, i);
+        printf("Enqueued: %d\n", i);
+    }
+
+    for (int i = 0; i < 15; i++) {
+        int dequeued_value = dequeue(queue);
+        if (dequeued_value != -1) {
+            printf("Dequeued: %d\n", dequeued_value);
+        } else {
+            printf("Queue is empty\n");
+        }
+        int data = front(queue);
+    }
+    
+    printQueue(queue);
+
+    return NULL;
+}
+
 int main() {
-    pthread_t thread1, thread2;
+    // Create a queue
+    Queue* queue = createQueue();
 
-    pthread_mutex_init(&queue_mutex, NULL); 
+    // Create threads
+    int n_threads = 2;
+    pthread_t threads[n_threads];
 
-    int start = 0;
-    pthread_create(&thread1, NULL, enqueue_thread_func, &start);
-    pthread_create(&thread2, NULL, dequeue_thread_func, NULL);
+    for (int i = 0; i < n_threads; ++i) {
+        pthread_create(&threads[i], NULL, threadFunc, (void*)queue);
+    }
 
-    pthread_join(thread1, NULL);
-    pthread_join(thread2, NULL);
+    // Join threads
+    for (int i = 0; i < n_threads; ++i) {
+        pthread_join(threads[i], NULL);
+    }
 
-    pthread_mutex_destroy(&queue_mutex);
+    // Print the final state of the queue
+    printf("Final state of the queue:\n");
+    printQueue(queue);
 
     return 0;
 }

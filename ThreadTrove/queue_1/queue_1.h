@@ -55,21 +55,4 @@ int dequeue() {
     return dequeued_value;
 }
 
-void* thread_func(void* arg) {
-    int start = *((int*)arg);
-    for (int i = start; i < start + 25; i++) {
-        enqueue(i);
-        printf("Enqueued: %d\n", i);
-    }
 
-    for (int i = 0; i < 25; i++) {
-        int dequeued_value = dequeue();
-        if (dequeued_value != -1) {
-            printf("Dequeued: %d\n", dequeued_value);
-        } else {
-            printf("Queue is empty\n");
-        }
-    }
-
-    return NULL;
-}

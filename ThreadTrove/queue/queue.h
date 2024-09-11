@@ -3,76 +3,117 @@
 #include <pthread.h>
 #include "pm.h"
 
+// Node structure for the linked list
 typedef struct Node {
     int data;
     struct Node* next;
 } Node;
 
-Node* front = NULL;  
-Node* rear = NULL;  
-pthread_mutex_t queue_mutex; 
+// Queue structure
+typedef struct Queue {
+    Node* front;
+    Node* rear;
+    pthread_mutex_t lock;  // Lock for concurrent operations
+} Queue;
 
-void enqueue(int data) {
-    Node* new_node = (Node*)pmalloc(sizeof(Node));
-    if (new_node == NULL) {
-        perror("Failed to allocate memory");
-        exit(EXIT_FAILURE);
-    }
-    new_node->data = data;
-    new_node->next = NULL;
-
-    pthread_mutex_lock(&queue_mutex); 
-
-    if (rear == NULL) {  
-        front = rear = new_node;
-    } else {
-        rear->next = new_node;
-        rear = new_node;
-    }
-
-    pthread_mutex_unlock(&queue_mutex); 
+// Function to create a new node
+Node* createNode(int data) {
+    Node* newNode = (Node*)pmalloc(sizeof(Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
 }
 
-int dequeue() {
-    pthread_mutex_lock(&queue_mutex);  
+// Function to initialize a queue
+Queue* createQueue() {
+    Queue* queue = (Queue*)pmalloc(sizeof(Queue));
+    queue->front = queue->rear = NULL;
+    pthread_mutex_init(&queue->lock, NULL);  // Initialize the lock
+    return queue;
+}
 
-    if (front == NULL) {  
-        pthread_mutex_unlock(&queue_mutex);
+// Function to check if the queue is empty
+int isEmpty(Queue* queue) {
+    return queue->front == NULL;
+}
+
+// Function to enqueue an element to the queue
+void enqueue(Queue* queue, int data) {
+    Node* newNode = createNode(data);
+
+    // Lock the queue for thread-safe operation
+    pthread_mutex_lock(&queue->lock);
+
+    if (queue->rear == NULL) {
+        queue->front = queue->rear = newNode;
+    } else {
+        queue->rear->next = newNode;
+        queue->rear = newNode;
+    }
+
+    // Unlock the queue
+    pthread_mutex_unlock(&queue->lock);
+}
+
+// Function to dequeue an element from the queue
+int dequeue(Queue* queue) {
+    if (isEmpty(queue)) {
+        printf("Queue underflow\n");
         return -1;
     }
 
-    Node* temp = front;
-    int dequeued_value = front->data;
-    front = front->next;
+    // Lock the queue for thread-safe operation
+    pthread_mutex_lock(&queue->lock);
 
-    if (front == NULL) {
-        rear = NULL;
+    Node* temp = queue->front;
+    int data = temp->data;
+    queue->front = queue->front->next;
+
+    if (queue->front == NULL) {
+        queue->rear = NULL;
     }
-
-    pthread_mutex_unlock(&queue_mutex);  
 
     free(temp);
-    return dequeued_value;
+
+    // Unlock the queue
+    pthread_mutex_unlock(&queue->lock);
+
+    return data;
 }
 
-void* enqueue_thread_func(void* arg) {
-    int start = *((int*)arg);
-    for (int i = start; i < start + 50; i++) {
-        enqueue(i);
-        printf("Enqueued: %d\n", i);
+// Function to get the front element of the queue
+int front(Queue* queue) {
+    if (isEmpty(queue)) {
+        printf("Queue is empty\n");
+        return -1;
     }
-    return NULL;
+
+    // Lock the queue for thread-safe operation
+    pthread_mutex_lock(&queue->lock);
+    int data = queue->front->data;
+    pthread_mutex_unlock(&queue->lock);
+
+    return data;
 }
 
-void* dequeue_thread_func(void* arg) {
-    for (int i = 0; i < 50; i++) {
-        int dequeued_value = dequeue();
-        if (dequeued_value != -1) {
-            printf("Dequeued: %d\n", dequeued_value);
-        } else {
-            printf("Queue is empty\n");
-        }
+// Function to print the queue elements
+void printQueue(Queue* queue) {
+    if (isEmpty(queue)) {
+        printf("Queue is empty\n");
+        return;
     }
-    return NULL;
-}
 
+    // Lock the queue for thread-safe operation
+    pthread_mutex_lock(&queue->lock);
+
+    Node* temp = queue->front;
+    printf("Queue: ");
+    while (temp != NULL) {
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
+
+    // Unlock the queue
+    pthread_mutex_unlock(&queue->lock);
+}

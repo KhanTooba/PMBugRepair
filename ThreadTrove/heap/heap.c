@@ -16,16 +16,16 @@ void* threadFunction(void* arg) {
     int thread_id = data->thread_id;
 
     // Example of write-after-write dependency
-    if (thread_id == 0) {
-        insertHeap(heap, 3);
-        insertHeap(heap, 1);
-    } else {
-        insertHeap(heap, 2);
-        insertHeap(heap, 4);
+    for(int i=0;i<25;i++){
+        insertHeap(heap, rand());
+    }
+
+    if(!isEmpty(heap)){
+        int min = extractMin(heap);
+        insertHeap(heap, min);
     }
 
     printHeap(heap);
-
     pthread_exit(NULL);
 }
 
