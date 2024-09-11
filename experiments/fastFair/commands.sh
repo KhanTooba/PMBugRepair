@@ -1,6 +1,6 @@
 #!/bin/bash
 ##### automatically set up PMInvGen_DIR ####
-PMInvGen_DIR=$(dirname "$0")/../../../build/Transform
+PMInvGen_DIR=../../build/Transform
 
 #PMInvGen_DIR=/home/rss/src/PMC/build/Transform
 
