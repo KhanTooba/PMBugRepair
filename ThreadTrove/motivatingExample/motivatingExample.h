@@ -22,7 +22,7 @@ void* thread1_function(void *arg) {
 void* thread2_function(void *arg) {
     PersistentMemory *pm = (PersistentMemory*) arg;
     *(pm->y) = *(pm->x);
-    simuFlushOpt(pm->y, sizeof(*(pm->y)));
+    simuFlushOpt(pm->y, (int) sizeof(*(pm->y)));
     simuSfence();
     return NULL;
 }
