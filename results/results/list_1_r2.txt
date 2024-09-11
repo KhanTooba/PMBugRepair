@@ -1,37 +1,36 @@
 Local variables initialized.
-Number of bugs to be repaired:  5
+Number of bugs to be repaired:  4
 And(pc_2 < pc_5, pt_2 > pc_5)
-And(pc_2 < pc_389, pt_2 > pc_389)
-And(pc_389 < pc_391, pt_389 > pc_391)
-And(pc_391 < pc_393, pt_391 > pc_393)
-And(pc_397 < pc_393, pt_397 > pc_393)
-{393, 5} {2, 389, 397, 391}
+And(pc_2 < pc_408, pt_2 > pc_408)
+And(pc_408 < pc_410, pt_408 > pc_410)
+And(pc_410 < pc_412, pt_410 > pc_412)
+{412, 5} {408, 2, 410}
 
 ############################################################################
 Iteration:  1
-Number of threads:  13
+Number of threads:  11
 Completed building constraints.
-Number of constraints:  2438
+Number of constraints:  2464
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
-2 5 [2, 389, 391, 397] [393, 5] [] []
+2 5 [2, 408, 410] [412, 5] [] []
 Adding locks for write. 2
-Found insertion point for first lock:  0 1 [2, 101, '0x7f9300001890', '-1', 5, '107']
+Found insertion point for first lock:  0 1 [2, 101, '0x7f71fc0026d0', '-1', 5, '107']
 0
 Found fence: 2 [4, 103, '0', '-1', 5, '107_x']
 Adding very restricted lock for read. 5
 1
-Time taken:  2.541936159133911  seconds.
+Time taken:  3.361703634262085  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  2
-Number of threads:  13
+Number of threads:  11
 Completed building constraints.
-Number of constraints:  2465
+Number of constraints:  2491
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.12372684478759766  seconds.
+Time taken:  0.16153407096862793  seconds.
 
 ############################################################################
 

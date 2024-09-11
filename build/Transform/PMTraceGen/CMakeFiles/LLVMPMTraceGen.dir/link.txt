@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libLLVMPMTraceGen.so -o libLLVMPMTraceGen.so CMakeFiles/LLVMPMTraceGen.dir/PMTraceGen.cpp.o CMakeFiles/LLVMPMTraceGen.dir/PMDependency.cpp.o 
+/usr/bin/c++ -fPIC -Wno-format-overflow -Wno-format-truncation -g  -shared -Wl,-soname,libLLVMPMTraceGen.so -o libLLVMPMTraceGen.so CMakeFiles/LLVMPMTraceGen.dir/PMTraceGen.cpp.o CMakeFiles/LLVMPMTraceGen.dir/PMDependency.cpp.o 

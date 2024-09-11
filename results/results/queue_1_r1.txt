@@ -12,7 +12,7 @@ Working on Thread: 0 (Length of thread :  74 ):
 Repairing for bug: pt_2 < 9999
 Before append: 74
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x7f7528002e30'", -1, 0, '21_x']
+Adding: ['2_0', 102, "'0x7fa810002f20'", -1, 0, '21_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '21_x']
 ####################################################################################
@@ -74,14 +74,14 @@ SAIS: And(Not(And(Not(pc_2 <= pc_2_1),
 Repairing for bug: pt_3 < 9999
 Before append: 77
 Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0x7f7528002e38'", -1, 0, '22_x']
+Adding: ['3_0', 102, "'0x7fa810002f28'", -1, 0, '22_x']
 Constraint added: pc_3 == pc_3_0 - 1
 Adding: ['3_1', 103, '0', -1, 0, '22_x']
 ####################################################################################
 Repairing for bug: pt_6 < 9999
 Before append: 79
 ####################################################################################
-Time taken to repair thread  0 :  0.5129494667053223  seconds.
+Time taken to repair thread  0 :  0.5550723075866699  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  75 ): 
@@ -110,11 +110,11 @@ Before append: 75
 Repairing for bug: pt_6 < 9999
 Before append: 75
 Bug found:  pt_6 pt_6
-Adding: ['6_0', 102, "'0x7f7528002e38'", -1, 1, '29_x']
+Adding: ['6_0', 102, "'0x7fa810002f28'", -1, 1, '29_x']
 Constraint added: pc_6 == pc_6_0 - 1
 Adding: ['6_1', 103, '0', -1, 1, '29_x']
 ####################################################################################
-Time taken to repair thread  1 :  0.18802762031555176  seconds.
+Time taken to repair thread  1 :  0.20015692710876465  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.0005249977111816406  seconds.
+Time taken to recombine individual threads:  0.0005483627319335938  seconds.

@@ -5,20 +5,20 @@ Number of bugs detected:  10
 pt_2 < 9999
 pt_2 < pt_3
 pt_3 < 9999
-pt_382 < pt_598
-pt_384 < 9999
-pt_384 < pt_385
-pt_385 < 9999
-pt_385 < pt_386
-pt_386 < 9999
-pt_389 < 9999
+pt_400 < pt_405
+pt_402 < 9999
+pt_402 < pt_403
+pt_403 < 9999
+pt_403 < pt_404
+pt_404 < 9999
+pt_408 < 9999
 Number of threads:  2
 ################################################################################################
 Working on Thread: 0 (Length of thread :  405 ): 
 Repairing for bug: pt_2 < 9999
 Before append: 405
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x7f9300001890'", -1, 0, '107_x']
+Adding: ['2_0', 102, "'0x7f71fc0026d0'", -1, 0, '107_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '107_x']
 ####################################################################################
@@ -80,77 +80,77 @@ SAIS: And(Not(And(Not(pc_2 <= pc_2_1),
 Repairing for bug: pt_3 < 9999
 Before append: 408
 Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0x7f9300001898'", -1, 0, '108_x']
+Adding: ['3_0', 102, "'0x7f71fc0026d8'", -1, 0, '108_x']
 Constraint added: pc_3 == pc_3_0 - 1
 Adding: ['3_1', 103, '0', -1, 0, '108_x']
 ####################################################################################
-Repairing for bug: pt_382 < pt_598
-MPB Bug found: pt_382 < pt_598
+Repairing for bug: pt_400 < pt_405
+MPB Bug found: pt_400 < pt_405
 Before append: 410
 Fence found. 3_1
 Fence count: 1
 After append: 411
 The bug flag is: 1
-Did not continue for: 382
-Did not continue for: 598
+Did not continue for: 400
+Did not continue for: 405
 The number of assertions: 1635
 The number of blocking constraint will be:  4
-Blocking constraints: [[382, '3_1'], [598, '3_1'], [382, '382_Fence_1'], [598, '382_Fence_1']]
-Bug is: Not(pt_382 < pt_598)
+Blocking constraints: [[400, '3_1'], [405, '3_1'], [400, '400_Fence_1'], [405, '400_Fence_1']]
+Bug is: Not(pt_400 < pt_405)
 Num: 1640
 ITERATION:  1
-Not(And(pc_382 > pc_3_1,
-        pc_598 > pc_3_1,
-        pc_382 < pc_382_Fence_1,
-        pc_598 < pc_382_Fence_1))
+Not(And(pc_400 > pc_3_1,
+        pc_405 > pc_3_1,
+        pc_400 < pc_400_Fence_1,
+        pc_405 < pc_400_Fence_1))
 Num: 1641
 ITERATION:  2
-Not(And(pc_382 > pc_3_1,
-        pc_598 > pc_3_1,
-        pc_382 > pc_382_Fence_1,
-        pc_598 > pc_382_Fence_1))
+Not(And(pc_400 > pc_3_1,
+        pc_405 > pc_3_1,
+        pc_400 > pc_400_Fence_1,
+        pc_405 > pc_400_Fence_1))
 Num: 1642
 ITERATION:  3
-Not(And(pc_382 < pc_3_1,
-        pc_598 < pc_3_1,
-        pc_382 < pc_382_Fence_1,
-        pc_598 < pc_382_Fence_1))
+Not(And(pc_400 < pc_3_1,
+        pc_405 < pc_3_1,
+        pc_400 > pc_400_Fence_1,
+        pc_405 > pc_400_Fence_1))
 Num: 1643
 ITERATION:  4
-Not(And(pc_382 < pc_3_1,
-        pc_598 < pc_3_1,
-        pc_382 > pc_382_Fence_1,
-        pc_598 > pc_382_Fence_1))
+Not(And(pc_400 < pc_3_1,
+        pc_405 < pc_3_1,
+        pc_400 < pc_400_Fence_1,
+        pc_405 < pc_400_Fence_1))
 Not running blocking constraint generation because already unsat.
-SAIS: And(Not(And(Not(pc_382 <= pc_3_1),
-            Not(pc_598 <= pc_3_1),
-            Not(pc_382_Fence_1 <= pc_382),
-            Not(pc_382_Fence_1 <= pc_598))),
-    Not(And(Not(pc_382 <= pc_3_1),
-            Not(pc_598 <= pc_3_1),
-            Not(pc_382 <= pc_382_Fence_1),
-            Not(pc_598 <= pc_382_Fence_1))),
-    Not(And(Not(pc_3_1 <= pc_382),
-            Not(pc_3_1 <= pc_598),
-            Not(pc_382_Fence_1 <= pc_382),
-            Not(pc_382_Fence_1 <= pc_598))),
-    Not(And(Not(pc_3_1 <= pc_382),
-            Not(pc_3_1 <= pc_598),
-            Not(pc_382 <= pc_382_Fence_1),
-            Not(pc_598 <= pc_382_Fence_1))))
+SAIS: And(Not(And(Not(pc_400 <= pc_3_1),
+            Not(pc_405 <= pc_3_1),
+            Not(pc_400_Fence_1 <= pc_400),
+            Not(pc_400_Fence_1 <= pc_405))),
+    Not(And(Not(pc_400 <= pc_3_1),
+            Not(pc_405 <= pc_3_1),
+            Not(pc_400 <= pc_400_Fence_1),
+            Not(pc_405 <= pc_400_Fence_1))),
+    Not(And(Not(pc_3_1 <= pc_400),
+            Not(pc_3_1 <= pc_405),
+            Not(pc_400 <= pc_400_Fence_1),
+            Not(pc_405 <= pc_400_Fence_1))),
+    Not(And(Not(pc_3_1 <= pc_400),
+            Not(pc_3_1 <= pc_405),
+            Not(pc_400_Fence_1 <= pc_400),
+            Not(pc_400_Fence_1 <= pc_405))))
 ####################################################################################
-Repairing for bug: pt_384 < 9999
+Repairing for bug: pt_402 < 9999
 Before append: 411
 ####################################################################################
-Repairing for bug: pt_384 < pt_385
-MPB Bug found: pt_384 < pt_385
+Repairing for bug: pt_402 < pt_403
+MPB Bug found: pt_402 < pt_403
 Before append: 411
 After append: 411
 The bug flag is: -1
 The number of assertions: 1631
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_384 < pt_385)
+Bug is: Not(pt_402 < pt_403)
 Num: 1637
 ITERATION:  1
 Not(And)
@@ -158,45 +158,45 @@ Not running blocking constraint generation because already unsat.
 SAIS: False
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_385 < 9999
+Repairing for bug: pt_403 < 9999
 Before append: 411
 ####################################################################################
-Repairing for bug: pt_385 < pt_386
-MPB Bug found: pt_385 < pt_386
+Repairing for bug: pt_403 < pt_404
+MPB Bug found: pt_403 < pt_404
 Before append: 411
 After append: 411
 The bug flag is: -1
 The number of assertions: 1631
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_385 < pt_386)
+Bug is: Not(pt_403 < pt_404)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_386 < 9999
+Repairing for bug: pt_404 < 9999
 Before append: 411
 ####################################################################################
-Repairing for bug: pt_389 < 9999
+Repairing for bug: pt_408 < 9999
 Before append: 411
 ####################################################################################
-Time taken to repair thread  0 :  17.49282169342041  seconds.
+Time taken to repair thread  0 :  18.61087417602539  seconds.
 ################################################################################################
 ################################################################################################
-Working on Thread: 1 (Length of thread :  396 ): 
+Working on Thread: 1 (Length of thread :  405 ): 
 Repairing for bug: pt_2 < 9999
-Before append: 396
+Before append: 405
 ####################################################################################
 Repairing for bug: pt_2 < pt_3
 MPB Bug found: pt_2 < pt_3
-Before append: 396
-After append: 396
+Before append: 405
+After append: 405
 The bug flag is: -1
-The number of assertions: 1583
+The number of assertions: 1619
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_3)
-Num: 1585
+Num: 1621
 ITERATION:  1
 Not(And)
 Not running blocking constraint generation because already unsat.
@@ -204,82 +204,82 @@ SAIS: False
 Repair not found.
 ####################################################################################
 Repairing for bug: pt_3 < 9999
-Before append: 396
+Before append: 405
 ####################################################################################
-Repairing for bug: pt_382 < pt_598
-MPB Bug found: pt_382 < pt_598
-Before append: 396
-After append: 396
+Repairing for bug: pt_400 < pt_405
+MPB Bug found: pt_400 < pt_405
+Before append: 405
+After append: 405
 The bug flag is: -1
-The number of assertions: 1583
+The number of assertions: 1619
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_382 < pt_598)
+Bug is: Not(pt_400 < pt_405)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_384 < 9999
-Before append: 396
-Bug found:  pt_384 pt_384
-Adding: ['384_0', 102, "'0x7f9308007500'", -1, 1, '276_x']
-Constraint added: pc_384 == pc_384_0 - 1
-Adding: ['384_1', 103, '0', -1, 1, '276_x']
+Repairing for bug: pt_402 < 9999
+Before append: 405
+Bug found:  pt_402 pt_402
+Adding: ['402_0', 102, "'0x7f71f4005f70'", -1, 1, '276_x']
+Constraint added: pc_402 == pc_402_0 - 1
+Adding: ['402_1', 103, '0', -1, 1, '276_x']
 ####################################################################################
-Repairing for bug: pt_384 < pt_385
-MPB Bug found: pt_384 < pt_385
-Before append: 398
-Fence found. 384_1
+Repairing for bug: pt_402 < pt_403
+MPB Bug found: pt_402 < pt_403
+Before append: 407
+Fence found. 402_1
 Fence count: 1
-After append: 399
+After append: 408
 The bug flag is: 1
-Did not continue for: 384
-Did not continue for: 385
-The number of assertions: 1593
+Did not continue for: 402
+Did not continue for: 403
+The number of assertions: 1629
 The number of blocking constraint will be:  4
-Blocking constraints: [[384, '384_1'], [385, '384_1'], [384, '384_Fence_2'], [385, '384_Fence_2']]
-Bug is: Not(pt_384 < pt_385)
+Blocking constraints: [[402, '402_1'], [403, '402_1'], [402, '402_Fence_2'], [403, '402_Fence_2']]
+Bug is: Not(pt_402 < pt_403)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_385 < 9999
-Before append: 399
-Bug found:  pt_385 pt_385
-Adding: ['385_0', 102, "'0x7f9308007508'", -1, 1, '277_x']
-Constraint added: pc_385 == pc_385_0 - 1
+Repairing for bug: pt_403 < 9999
+Before append: 408
+Bug found:  pt_403 pt_403
+Adding: ['403_0', 102, "'0x7f71f4005f78'", -1, 1, '277_x']
+Constraint added: pc_403 == pc_403_0 - 1
 ####################################################################################
-Repairing for bug: pt_385 < pt_386
-MPB Bug found: pt_385 < pt_386
-Before append: 400
-Fence found. 384_1
-Fence found. 384_Fence_2
+Repairing for bug: pt_403 < pt_404
+MPB Bug found: pt_403 < pt_404
+Before append: 409
+Fence found. 402_1
+Fence found. 402_Fence_2
 Fence count: 2
-After append: 400
+After append: 409
 The bug flag is: 1
-Did not continue for: 385
-Did not continue for: 386
-The number of assertions: 1595
+Did not continue for: 403
+Did not continue for: 404
+The number of assertions: 1631
 The number of blocking constraint will be:  4
-Blocking constraints: [[385, '384_1'], [386, '384_1'], [385, '384_Fence_2'], [386, '384_Fence_2']]
-Bug is: Not(pt_385 < pt_386)
+Blocking constraints: [[403, '402_1'], [404, '402_1'], [403, '402_Fence_2'], [404, '402_Fence_2']]
+Bug is: Not(pt_403 < pt_404)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_386 < 9999
-Before append: 400
-Bug found:  pt_386 pt_386
-Adding: ['386_0', 102, "'0x7f9308004268'", -1, 1, '278_x']
-Constraint added: pc_386 == pc_386_0 - 1
+Repairing for bug: pt_404 < 9999
+Before append: 409
+Bug found:  pt_404 pt_404
+Adding: ['404_0', 102, "'0x7f71f4003428'", -1, 1, '278_x']
+Constraint added: pc_404 == pc_404_0 - 1
 ####################################################################################
-Repairing for bug: pt_389 < 9999
-Before append: 401
-Bug found:  pt_389 pt_389
-Adding: ['389_0', 102, "'0x7f9300003f28'", -1, 1, '237_x']
-Constraint added: pc_389 == pc_389_0 - 1
+Repairing for bug: pt_408 < 9999
+Before append: 410
+Bug found:  pt_408 pt_408
+Adding: ['408_0', 102, "'0x7f71fc005068'", -1, 1, '237_x']
+Constraint added: pc_408 == pc_408_0 - 1
 ####################################################################################
-Time taken to repair thread  1 :  1.5447578430175781  seconds.
+Time taken to repair thread  1 :  1.6712639331817627  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.01570606231689453  seconds.
+Time taken to recombine individual threads:  0.018370866775512695  seconds.
