@@ -38,8 +38,8 @@ extern "C" {
 
 
   void simuSfence();
-  void simuFlushOpt(void *ptr, size_t len);
-  void simuFlush(void *ptr, size_t len);
+  void simuFlushOpt(void *ptr, int len);
+  void simuFlush(void *ptr, int len);
   void simuTX_BEGIN();
   void simuTX_END();
   void simuTX_ADD(void *ptr);
