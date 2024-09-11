@@ -1,0 +1,37 @@
+Returning from parceTrace.py
+Completed parsing.
+Local variables initialized.
+Number of bugs detected:  2
+pt_2 < 9999
+pt_3 < 9999
+Number of threads:  2
+################################################################################################
+Working on Thread: 0 (Length of thread :  100 ): 
+Repairing for bug: pt_2 < 9999
+Before append: 100
+Bug found:  pt_2 pt_2
+Adding: ['2_0', 102, "'0x7fafb4001930'", -1, 0, '17_x']
+Constraint added: pc_2 == pc_2_0 - 1
+Adding: ['2_1', 103, '0', -1, 0, '17_x']
+####################################################################################
+Repairing for bug: pt_3 < 9999
+Before append: 102
+Bug found:  pt_3 pt_3
+Adding: ['3_0', 102, "'0x7fafb4001938'", -1, 0, '20_x']
+Constraint added: pc_3 == pc_3_0 - 1
+Adding: ['3_1', 103, '0', -1, 0, '20_x']
+####################################################################################
+Time taken to repair thread  0 :  0.0460968017578125  seconds.
+################################################################################################
+################################################################################################
+Working on Thread: 1 (Length of thread :  100 ): 
+Repairing for bug: pt_2 < 9999
+Before append: 100
+####################################################################################
+Repairing for bug: pt_3 < 9999
+Before append: 100
+####################################################################################
+Time taken to repair thread  1 :  0.03135371208190918  seconds.
+################################################################################################
+Beginning the recombination.
+Time taken to recombine individual threads:  0.0011429786682128906  seconds.

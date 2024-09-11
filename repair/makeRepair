@@ -1,8 +1,8 @@
 # l1 = list motivatingExample stack queue queue_1 queue_2
 FOLDER = ../ThreadTrove
-# l1 = $(shell find $(FOLDER) -maxdepth 1 -type d | sed 's|.*/||' | tail -n +2)
+l1 = $(shell find $(FOLDER) -maxdepth 1 -type d | sed 's|.*/||' | tail -n +2)
 
-l1 = skipLists
+#l1 = skipLists
 process_files:
 	@echo "Subfolders: $(files)"
 	rm -f ../repair/Report.txt

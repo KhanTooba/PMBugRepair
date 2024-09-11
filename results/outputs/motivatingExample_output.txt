@@ -1,17 +1,17 @@
-FUNC_BEGIN_1: main 1; <Thread ID:139770330670912>
-FUNC_BEGIN_1: PersistentMemory_init 1; <Thread ID:139770330670912>
-Adding addr: 0x160d800 to 0x160d804; <Thread ID:139770330670912>
-Adding addr: 0x160d860 to 0x160d864; <Thread ID:139770330670912>
-FUNC_END: PersistentMemory_init 1; <Thread ID:139770330670912>
-FUNC_BEGIN_1: thread1_function 1; <Thread ID:139770330666752>
-Store: 0x160d800 Size: 4 ID: 25 @Ln,Col: 18,14 Scope: thread1_function; <Thread ID:139770330666752>
-FUNC_END: thread1_function 1; <Thread ID:139770330666752>
-FUNC_BEGIN_1: thread2_function 1; <Thread ID:139770322274048>
-Load: 0x160d800 Size: 4 ID: 38 @Ln,Col: 24,16 Scope: thread2_function; <Thread ID:139770322274048>
-Store: 0x160d860 Size: 4 ID: 42 @Ln,Col: 24,14 Scope: thread2_function; <Thread ID:139770322274048>
-CLFLUSH: 0x160d860 LEN: 4 @Ln,Col: 25,5 ; <Thread ID:139770322274048>
-Simulated F-L-U-S-H: 0x160d860 LEN: 4; <Thread ID:139770322274048>
-SFENCE. @Ln,Col: 26,5 ; <Thread ID:139770322274048>
-Simulated F-E-N-C-E;<Thread ID:139770322274048>
-FUNC_END: thread2_function 1; <Thread ID:139770322274048>
-FUNC_END: main 1; <Thread ID:139770330670912>
+FUNC_BEGIN_1: main 1; <Thread ID:139994116859712>
+FUNC_BEGIN_1: PersistentMemory_init 1; <Thread ID:139994116859712>
+Adding addr: 0x605800 to 0x605804; <Thread ID:139994116859712>
+Adding addr: 0x605860 to 0x605864; <Thread ID:139994116859712>
+FUNC_END: PersistentMemory_init 1; <Thread ID:139994116859712>
+FUNC_BEGIN_1: thread1_function 1; <Thread ID:139994116855552>
+Store: 0x605800 Size: 4 ID: 25 @Ln,Col: 18,14 Scope: thread1_function; <Thread ID:139994116855552>
+FUNC_END: thread1_function 1; <Thread ID:139994116855552>
+FUNC_BEGIN_1: thread2_function 1; <Thread ID:139994108462848>
+Load: 0x605800 Size: 4 ID: 38 @Ln,Col: 24,16 Scope: thread2_function; <Thread ID:139994108462848>
+Store: 0x605860 Size: 4 ID: 42 @Ln,Col: 24,14 Scope: thread2_function; <Thread ID:139994108462848>
+CLFLUSH: 0x605860 LEN: 4 @Ln,Col: 25,5 ; <Thread ID:139994108462848>
+Simulated F-L-U-S-H: 0x605860 LEN: 4; <Thread ID:139994108462848>
+SFENCE. @Ln,Col: 26,5 ; <Thread ID:139994108462848>
+Simulated F-E-N-C-E;<Thread ID:139994108462848>
+FUNC_END: thread2_function 1; <Thread ID:139994108462848>
+FUNC_END: main 1; <Thread ID:139994116859712>

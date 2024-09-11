@@ -1,21 +1,357 @@
 ###########################################################################
+Adding DURA & MPB Repair Report for motivatingExample: 
+Number of DURAS fixed: 2
+Number of MPBs fixed: 0
+Total time taken to repair DURA bugs: 0.024771928787231445 seconds.
+Total time taken to repair MPB bugs: 0 seconds.
+Number of sfences() added: 1
+Number of clflushopts() added: 1
+Total number of calls to the Z3 solver: 0
+Total time taken: 0.03868436813354492 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for motivatingExample: 
+Number of MPAs fixed: 0
+Number of fences() added: 0
+Number of locks() added: 0
+Total number of calls to the Z3 solver: 1
+Total time taken to repair MPA bugs: 0.019073486328125 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for list: 
+Number of DURAS fixed: 2
+Number of MPBs fixed: 0
+Total time taken to repair DURA bugs: 0.07583284378051758 seconds.
+Total time taken to repair MPB bugs: 0 seconds.
+Number of sfences() added: 2
+Number of clflushopts() added: 2
+Total number of calls to the Z3 solver: 0
+Total time taken: 0.08791112899780273 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for list: 
+Number of MPAs fixed: 0
+Number of fences() added: 0
+Number of locks() added: 0
+Total number of calls to the Z3 solver: 1
+Total time taken to repair MPA bugs: 0.05452561378479004 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for dqueue: 
+Number of DURAS fixed: 9
+Number of MPBs fixed: 21
+Total time taken to repair DURA bugs: 0.8199007511138916 seconds.
+Total time taken to repair MPB bugs: 75.54114270210266 seconds.
+Number of sfences() added: 14
+Number of clflushopts() added: 9
+Total number of calls to the Z3 solver: 86
+Total time taken: 76.4466962814331 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for dqueue: 
+Number of MPAs fixed: 21
+Number of fences() added: 0
+Number of locks() added: 3
+Total number of calls to the Z3 solver: 3
+Total time taken to repair MPA bugs: 12.321648120880127 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for queue_1: 
+Number of DURAS fixed: 3
+Number of MPBs fixed: 1
+Total time taken to repair DURA bugs: 0.06520843505859375 seconds.
+Total time taken to repair MPB bugs: 0.6333174705505371 seconds.
+Number of sfences() added: 4
+Number of clflushopts() added: 3
+Total number of calls to the Z3 solver: 7
+Total time taken: 0.7076475620269775 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for queue_1: 
+Number of MPAs fixed: 1
+Number of fences() added: 0
+Number of locks() added: 2
+Total number of calls to the Z3 solver: 2
+Total time taken to repair MPA bugs: 0.11791825294494629 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for heap: 
+Number of DURAS fixed: 11
+Number of MPBs fixed: 14
+Total time taken to repair DURA bugs: 0.14655852317810059 seconds.
+Total time taken to repair MPB bugs: 1.593977928161621 seconds.
+Number of sfences() added: 9
+Number of clflushopts() added: 11
+Total number of calls to the Z3 solver: 53
+Total time taken: 1.7815749645233154 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for heap: 
+Number of MPAs fixed: 16
+Number of fences() added: 1
+Number of locks() added: 3
+Total number of calls to the Z3 solver: 4
+Total time taken to repair MPA bugs: 0.34267711639404297 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for queue: 
+Number of DURAS fixed: 7
+Number of MPBs fixed: 7
+Total time taken to repair DURA bugs: 0.2256031036376953 seconds.
+Total time taken to repair MPB bugs: 2.2261979579925537 seconds.
+Number of sfences() added: 6
+Number of clflushopts() added: 7
+Total number of calls to the Z3 solver: 28
+Total time taken: 2.479383707046509 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for queue: 
+Number of MPAs fixed: 7
+Number of fences() added: 2
+Number of locks() added: 4
+Total number of calls to the Z3 solver: 4
+Total time taken to repair MPA bugs: 0.4271836280822754 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for list_1: 
+Number of DURAS fixed: 6
+Number of MPBs fixed: 4
+Total time taken to repair DURA bugs: 0.5808873176574707 seconds.
+Total time taken to repair MPB bugs: 18.449816703796387 seconds.
+Number of sfences() added: 6
+Number of clflushopts() added: 6
+Total number of calls to the Z3 solver: 18
+Total time taken: 19.083467483520508 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for list_1: 
+Number of MPAs fixed: 5
+Number of fences() added: 0
+Number of locks() added: 2
+Total number of calls to the Z3 solver: 2
+Total time taken to repair MPA bugs: 2.6959078311920166 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for hash: 
+Number of DURAS fixed: 4
+Number of MPBs fixed: 2
+Total time taken to repair DURA bugs: 0.29206395149230957 seconds.
+Total time taken to repair MPB bugs: 9.852787971496582 seconds.
+Number of sfences() added: 5
+Number of clflushopts() added: 4
+Total number of calls to the Z3 solver: 13
+Total time taken: 10.174671173095703 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for hash: 
+Number of MPAs fixed: 2
+Number of fences() added: 0
+Number of locks() added: 3
+Total number of calls to the Z3 solver: 3
+Total time taken to repair MPA bugs: 6.3825976848602295 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for priorityQueue: 
+Number of DURAS fixed: 6
+Number of MPBs fixed: 6
+Total time taken to repair DURA bugs: 0.2406458854675293 seconds.
+Total time taken to repair MPB bugs: 1.8970451354980469 seconds.
+Number of sfences() added: 9
+Number of clflushopts() added: 6
+Total number of calls to the Z3 solver: 38
+Total time taken: 2.1625595092773438 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for priorityQueue: 
+Number of MPAs fixed: 6
+Number of fences() added: 0
+Number of locks() added: 3
+Total number of calls to the Z3 solver: 3
+Total time taken to repair MPA bugs: 1.2093915939331055 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for doublyList: 
+Number of DURAS fixed: 9
+Number of MPBs fixed: 19
+Total time taken to repair DURA bugs: 1.5133109092712402 seconds.
+Total time taken to repair MPB bugs: 37.11339449882507 seconds.
+Number of sfences() added: 12
+Number of clflushopts() added: 9
+Total number of calls to the Z3 solver: 78
+Total time taken: 38.79263377189636 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for doublyList: 
+Number of MPAs fixed: 21
+Number of fences() added: 0
+Number of locks() added: 3
+Total number of calls to the Z3 solver: 3
+Total time taken to repair MPA bugs: 20.857519149780273 seconds.
+###########################################################################
+
+###########################################################################
 Adding DURA & MPB Repair Report for skipLists: 
 Number of DURAS fixed: 10
-Number of MPBs fixed: 9
-Total time taken to repair DURA bugs: 0.722675085067749 seconds.
-Total time taken to repair MPB bugs: 13.248260736465454 seconds.
-Number of sfences() added: 10
+Number of MPBs fixed: 12
+Total time taken to repair DURA bugs: 0.5716714859008789 seconds.
+Total time taken to repair MPB bugs: 12.407577753067017 seconds.
+Number of sfences() added: 9
 Number of clflushopts() added: 10
-Total number of calls to the Z3 solver: 38
-Total time taken: 14.019116878509521 seconds.
+Total number of calls to the Z3 solver: 43
+Total time taken: 13.02290415763855 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding MPA Repair Report for skipLists: 
-Number of MPAs fixed: 8
+Number of MPAs fixed: 10
 Number of fences() added: 0
 Number of locks() added: 2
 Total number of calls to the Z3 solver: 2
-Total time taken to repair MPA bugs: 0.8224911689758301 seconds.
+Total time taken to repair MPA bugs: 0.8207042217254639 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for graph: 
+Number of DURAS fixed: 9
+Number of MPBs fixed: 5
+Total time taken to repair DURA bugs: 0.5859649181365967 seconds.
+Total time taken to repair MPB bugs: 17.01962399482727 seconds.
+Number of sfences() added: 10
+Number of clflushopts() added: 9
+Total number of calls to the Z3 solver: 33
+Total time taken: 17.646665334701538 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for graph: 
+Number of MPAs fixed: 5
+Number of fences() added: 0
+Number of locks() added: 3
+Total number of calls to the Z3 solver: 3
+Total time taken to repair MPA bugs: 38.50489807128906 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for set: 
+Number of DURAS fixed: 4
+Number of MPBs fixed: 1
+Total time taken to repair DURA bugs: 0.12442636489868164 seconds.
+Total time taken to repair MPB bugs: 0.6889522075653076 seconds.
+Number of sfences() added: 5
+Number of clflushopts() added: 4
+Total number of calls to the Z3 solver: 9
+Total time taken: 0.8261113166809082 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for set: 
+Number of MPAs fixed: 1
+Number of fences() added: 0
+Number of locks() added: 2
+Total number of calls to the Z3 solver: 2
+Total time taken to repair MPA bugs: 0.2940797805786133 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for stack_1: 
+Number of DURAS fixed: 2
+Number of MPBs fixed: 1
+Total time taken to repair DURA bugs: 0.1018218994140625 seconds.
+Total time taken to repair MPB bugs: 0.3799762725830078 seconds.
+Number of sfences() added: 3
+Number of clflushopts() added: 2
+Total number of calls to the Z3 solver: 9
+Total time taken: 0.49853014945983887 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for stack_1: 
+Number of MPAs fixed: 1
+Number of fences() added: 0
+Number of locks() added: 2
+Total number of calls to the Z3 solver: 2
+Total time taken to repair MPA bugs: 0.6198031902313232 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for array: 
+Number of DURAS fixed: 1
+Number of MPBs fixed: 0
+Total time taken to repair DURA bugs: 0.008212804794311523 seconds.
+Total time taken to repair MPB bugs: 0 seconds.
+Number of sfences() added: 1
+Number of clflushopts() added: 1
+Total number of calls to the Z3 solver: 0
+Total time taken: 0.015257120132446289 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for array: 
+Number of MPAs fixed: 0
+Number of fences() added: 0
+Number of locks() added: 0
+Total number of calls to the Z3 solver: 1
+Total time taken to repair MPA bugs: 0.020145416259765625 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for stack: 
+Number of DURAS fixed: 2
+Number of MPBs fixed: 0
+Total time taken to repair DURA bugs: 0.04471993446350098 seconds.
+Total time taken to repair MPB bugs: 0 seconds.
+Number of sfences() added: 2
+Number of clflushopts() added: 2
+Total number of calls to the Z3 solver: 0
+Total time taken: 0.05495285987854004 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for stack: 
+Number of MPAs fixed: 0
+Number of fences() added: 0
+Number of locks() added: 0
+Total number of calls to the Z3 solver: 1
+Total time taken to repair MPA bugs: 0.03461027145385742 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for queue_2: 
+Number of DURAS fixed: 3
+Number of MPBs fixed: 1
+Total time taken to repair DURA bugs: 0.0909428596496582 seconds.
+Total time taken to repair MPB bugs: 0.5275125503540039 seconds.
+Number of sfences() added: 4
+Number of clflushopts() added: 3
+Total number of calls to the Z3 solver: 9
+Total time taken: 0.6321048736572266 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for queue_2: 
+Number of MPAs fixed: 1
+Number of fences() added: 0
+Number of locks() added: 2
+Total number of calls to the Z3 solver: 2
+Total time taken to repair MPA bugs: 0.2654118537902832 seconds.
 ###########################################################################
 

@@ -1,0 +1,199 @@
+Returning from parceTrace.py
+Completed parsing.
+Local variables initialized.
+Number of bugs detected:  6
+pt_2 < 9999
+pt_2 < pt_3
+pt_3 < 9999
+pt_3 < pt_4
+pt_4 < 9999
+pt_575 < 9999
+Number of threads:  2
+################################################################################################
+Working on Thread: 0 (Length of thread :  300 ): 
+Repairing for bug: pt_2 < 9999
+Before append: 300
+Bug found:  pt_2 pt_2
+Adding: ['2_0', 102, "'0x7f2c7c0025d0'", -1, 0, '112_x']
+Constraint added: pc_2 == pc_2_0 - 1
+Adding: ['2_1', 103, '0', -1, 0, '112_x']
+####################################################################################
+Repairing for bug: pt_2 < pt_3
+MPB Bug found: pt_2 < pt_3
+Before append: 302
+Fence found. 2_1
+Fence count: 1
+After append: 303
+The bug flag is: 1
+Did not continue for: 2
+Did not continue for: 3
+The number of assertions: 1209
+The number of blocking constraint will be:  4
+Blocking constraints: [[2, '2_1'], [3, '2_1'], [2, '2_Fence_0'], [3, '2_Fence_0']]
+Bug is: Not(pt_2 < pt_3)
+Num: 1212
+ITERATION:  1
+Not(And(pc_2 > pc_2_1,
+        pc_3 > pc_2_1,
+        pc_2 > pc_2_Fence_0,
+        pc_3 > pc_2_Fence_0))
+Num: 1213
+ITERATION:  2
+Not(And(pc_2 > pc_2_1,
+        pc_3 > pc_2_1,
+        pc_2 < pc_2_Fence_0,
+        pc_3 < pc_2_Fence_0))
+Num: 1214
+ITERATION:  3
+Not(And(pc_2 < pc_2_1,
+        pc_3 < pc_2_1,
+        pc_2 < pc_2_Fence_0,
+        pc_3 < pc_2_Fence_0))
+Num: 1215
+ITERATION:  4
+Not(And(pc_2 < pc_2_1,
+        pc_3 < pc_2_1,
+        pc_2 > pc_2_Fence_0,
+        pc_3 > pc_2_Fence_0))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_2 <= pc_2_1),
+            Not(pc_3 <= pc_2_1),
+            Not(pc_2 <= pc_2_Fence_0),
+            Not(pc_3 <= pc_2_Fence_0))),
+    Not(And(Not(pc_2 <= pc_2_1),
+            Not(pc_3 <= pc_2_1),
+            Not(pc_2_Fence_0 <= pc_2),
+            Not(pc_2_Fence_0 <= pc_3))),
+    Not(And(Not(pc_2_1 <= pc_2),
+            Not(pc_2_1 <= pc_3),
+            Not(pc_2_Fence_0 <= pc_2),
+            Not(pc_2_Fence_0 <= pc_3))),
+    Not(And(Not(pc_2_1 <= pc_2),
+            Not(pc_2_1 <= pc_3),
+            Not(pc_2 <= pc_2_Fence_0),
+            Not(pc_3 <= pc_2_Fence_0))))
+####################################################################################
+Repairing for bug: pt_3 < 9999
+Before append: 303
+Bug found:  pt_3 pt_3
+Adding: ['3_0', 102, "'0x7f2c7c0025d4'", -1, 0, '113_x']
+Constraint added: pc_3 == pc_3_0 - 1
+Adding: ['3_1', 103, '0', -1, 0, '113_x']
+####################################################################################
+Repairing for bug: pt_3 < pt_4
+MPB Bug found: pt_3 < pt_4
+Before append: 305
+Fence found. 3_1
+Fence count: 1
+After append: 306
+The bug flag is: 1
+Did not continue for: 3
+Did not continue for: 4
+The number of assertions: 1215
+The number of blocking constraint will be:  4
+Blocking constraints: [[3, '3_1'], [4, '3_1'], [3, '3_Fence_1'], [4, '3_Fence_1']]
+Bug is: Not(pt_3 < pt_4)
+Num: 1220
+ITERATION:  1
+Not(And(pc_3 > pc_3_1,
+        pc_4 > pc_3_1,
+        pc_3 < pc_3_Fence_1,
+        pc_4 < pc_3_Fence_1))
+Num: 1221
+ITERATION:  2
+Not(And(pc_3 < pc_3_1,
+        pc_4 < pc_3_1,
+        pc_3 < pc_3_Fence_1,
+        pc_4 < pc_3_Fence_1))
+Num: 1222
+ITERATION:  3
+Not(And(pc_3 > pc_3_1,
+        pc_4 > pc_3_1,
+        pc_3 > pc_3_Fence_1,
+        pc_4 > pc_3_Fence_1))
+Num: 1223
+ITERATION:  4
+Not(And(pc_3 < pc_3_1,
+        pc_4 < pc_3_1,
+        pc_3 > pc_3_Fence_1,
+        pc_4 > pc_3_Fence_1))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_3 <= pc_3_1),
+            Not(pc_4 <= pc_3_1),
+            Not(pc_3_Fence_1 <= pc_3),
+            Not(pc_3_Fence_1 <= pc_4))),
+    Not(And(Not(pc_3_1 <= pc_3),
+            Not(pc_3_1 <= pc_4),
+            Not(pc_3_Fence_1 <= pc_3),
+            Not(pc_3_Fence_1 <= pc_4))),
+    Not(And(Not(pc_3 <= pc_3_1),
+            Not(pc_4 <= pc_3_1),
+            Not(pc_3 <= pc_3_Fence_1),
+            Not(pc_4 <= pc_3_Fence_1))),
+    Not(And(Not(pc_3_1 <= pc_3),
+            Not(pc_3_1 <= pc_4),
+            Not(pc_3 <= pc_3_Fence_1),
+            Not(pc_4 <= pc_3_Fence_1))))
+####################################################################################
+Repairing for bug: pt_4 < 9999
+Before append: 306
+Bug found:  pt_4 pt_4
+Adding: ['4_0', 102, "'0x7f2c7c0025d8'", -1, 0, '114_x']
+Constraint added: pc_4 == pc_4_0 - 1
+####################################################################################
+Repairing for bug: pt_575 < 9999
+Before append: 307
+####################################################################################
+Time taken to repair thread  0 :  9.528929233551025  seconds.
+################################################################################################
+################################################################################################
+Working on Thread: 1 (Length of thread :  301 ): 
+Repairing for bug: pt_2 < 9999
+Before append: 301
+####################################################################################
+Repairing for bug: pt_2 < pt_3
+MPB Bug found: pt_2 < pt_3
+Before append: 301
+After append: 301
+The bug flag is: -1
+The number of assertions: 1203
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_2 < pt_3)
+Num: 1205
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+SAIS: False
+Repair not found.
+####################################################################################
+Repairing for bug: pt_3 < 9999
+Before append: 301
+####################################################################################
+Repairing for bug: pt_3 < pt_4
+MPB Bug found: pt_3 < pt_4
+Before append: 301
+After append: 301
+The bug flag is: -1
+The number of assertions: 1203
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_3 < pt_4)
+Not running blocking constraint generation because already unsat.
+SAIS: True
+Repair not found.
+####################################################################################
+Repairing for bug: pt_4 < 9999
+Before append: 301
+####################################################################################
+Repairing for bug: pt_575 < 9999
+Before append: 301
+Bug found:  pt_575 pt_575
+Adding: ['575_0', 102, "'0x7f2c7c004c38'", -1, 1, '143_x']
+Constraint added: pc_575 == pc_575_0 - 1
+Adding: ['575_1', 103, '0', -1, 1, '143_x']
+####################################################################################
+Time taken to repair thread  1 :  0.6197245121002197  seconds.
+################################################################################################
+Beginning the recombination.
+Time taken to recombine individual threads:  0.008594036102294922  seconds.

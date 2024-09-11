@@ -1,40 +1,42 @@
 Local variables initialized.
-Number of bugs to be repaired:  8
+Number of bugs to be repaired:  10
 And(pc_2 < pc_41, pt_2 > pc_41)
 And(pc_2 < pc_152, pt_2 > pc_152)
+And(pc_8 < pc_29, pt_8 > pc_29)
 And(pc_8 < pc_54, pt_8 > pc_54)
-And(pc_8 < pc_28, pt_8 > pc_28)
-And(pc_25 < pc_28, pt_25 > pc_28)
-And(pc_28 < pc_54, pt_28 > pc_54)
-And(pc_28 < pc_28, pt_28 > pc_28)
+And(pc_25 < pc_29, pt_25 > pc_29)
+And(pc_25 < pc_54, pt_25 > pc_54)
+And(pc_29 < pc_29, pt_29 > pc_29)
+And(pc_29 < pc_54, pt_29 > pc_54)
 And(pc_54 < pc_54, pt_54 > pc_54)
-{152, 41} {2, 8, 54, 25, 28}
+And(pc_54 < pc_29, pt_54 > pc_29)
+{152, 41} {2, 8, 54, 25, 29}
 
 ############################################################################
 Iteration:  1
-Number of threads:  20
+Number of threads:  24
 Completed building constraints.
-Number of constraints:  1354
+Number of constraints:  1444
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_41, pt_2 > pc_41)
-2 41 [2, 8, 25, 28, 54] [152, 41] [] []
+2 41 [2, 8, 25, 29, 54] [152, 41] [] []
 Adding locks for write. 2
-Found insertion point for first lock:  0 1 [2, 101, '0x7ef280', '-1', 6, '90']
+Found insertion point for first lock:  0 1 [2, 101, '0x238b280', '-1', 6, '90']
 0
 Found fence: 16 [18, 103, '0', '-1', 10, '90_x']
 Adding very restricted lock for read. 41
 1
-Time taken:  0.6985228061676025  seconds.
+Time taken:  0.7270042896270752  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  2
-Number of threads:  20
+Number of threads:  24
 Completed building constraints.
-Number of constraints:  1395
+Number of constraints:  1485
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.10650110244750977  seconds.
+Time taken:  0.07317996025085449  seconds.
 
 ############################################################################
 

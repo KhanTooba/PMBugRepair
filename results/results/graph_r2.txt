@@ -1,0 +1,113 @@
+Local variables initialized.
+Number of bugs to be repaired:  5
+And(pc_60 < pc_64, pt_60 > pc_64)
+And(pc_64 < pc_70, pt_64 > pc_70)
+And(pc_67 < pc_70, pt_67 > pc_70)
+And(pc_64 < pc_78, pt_64 > pc_78)
+And(pc_74 < pc_78, pt_74 > pc_78)
+{78, 70} {64, 74, 67, 60}
+
+############################################################################
+Iteration:  1
+Number of threads:  14
+Completed building constraints.
+Number of constraints:  1653
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_60 < pc_64, pt_60 > pc_64)
+60 64 [60, 64, 67, 74] [70, 78] [] []
+Adding locks for write. 60
+Adding before:  [2, 101, '0x152c780', '-1', 0, '40']
+Adding before:  [3, 102, '0x152c780', '-1', 0, '40_x']
+Adding before:  [4, 101, '0x152c788', '-1', 0, '41']
+Adding before:  [5, 102, '0x152c788', '-1', 0, '41_x']
+Adding before:  [6, 101, '0x152c830', '-1', 0, '45']
+Adding before:  [7, 102, '0x152c830', '-1', 0, '45_x']
+Adding before:  [8, 101, '0x152c860', '-1', 0, '45']
+Adding before:  [9, 101, '0x152c890', '-1', 0, '45']
+Adding before:  [10, 101, '0x152c8c0', '-1', 0, '45']
+Adding before:  [11, 101, '0x152c8f0', '-1', 0, '45']
+Adding before:  [12, 101, '0x152c920', '-1', 0, '45']
+Adding before:  [13, 101, '0x152c950', '-1', 0, '45']
+Adding before:  [14, 101, '0x152c980', '-1', 0, '45']
+Adding before:  [15, 101, '0x152c9b0', '-1', 0, '45']
+Adding before:  [16, 101, '0x152c9e0', '-1', 0, '45']
+Adding before:  [17, 101, '0x152ca10', '-1', 0, '45']
+Adding before:  [18, 101, '0x152ca40', '-1', 0, '45']
+Adding before:  [19, 101, '0x152ca70', '-1', 0, '45']
+Adding before:  [20, 101, '0x152caa0', '-1', 0, '45']
+Adding before:  [21, 101, '0x152cad0', '-1', 0, '45']
+Adding before:  [22, 101, '0x152cb00', '-1', 0, '45']
+Adding before:  [23, 101, '0x152cb30', '-1', 0, '45']
+Adding before:  [24, 101, '0x152cb60', '-1', 0, '45']
+Adding before:  [25, 101, '0x152cb90', '-1', 0, '45']
+Adding before:  [26, 101, '0x152cbc0', '-1', 0, '45']
+Adding before:  [27, 101, '0x152cbf0', '-1', 0, '45']
+Adding before:  [28, 101, '0x152cc20', '-1', 0, '45']
+Adding before:  [29, 101, '0x152cc50', '-1', 0, '45']
+Adding before:  [30, 101, '0x152cc80', '-1', 0, '45']
+Adding before:  [31, 101, '0x152ccb0', '-1', 0, '45']
+Adding before:  [32, 101, '0x152cce0', '-1', 0, '45']
+Adding before:  [33, 101, '0x152cd10', '-1', 0, '45']
+Adding before:  [34, 101, '0x152cd40', '-1', 0, '45']
+Adding before:  [35, 101, '0x152cd70', '-1', 0, '45']
+Adding before:  [36, 101, '0x152cda0', '-1', 0, '45']
+Adding before:  [37, 101, '0x152cdd0', '-1', 0, '45']
+Adding before:  [38, 101, '0x152ce00', '-1', 0, '45']
+Adding before:  [39, 101, '0x152ce30', '-1', 0, '45']
+Adding before:  [40, 101, '0x152ce60', '-1', 0, '45']
+Adding before:  [41, 101, '0x152ce90', '-1', 0, '45']
+Adding before:  [42, 101, '0x152cec0', '-1', 0, '45']
+Adding before:  [43, 101, '0x152cef0', '-1', 0, '45']
+Adding before:  [44, 101, '0x152cf20', '-1', 0, '45']
+Adding before:  [45, 101, '0x152cf50', '-1', 0, '45']
+Adding before:  [46, 101, '0x152cf80', '-1', 0, '45']
+Adding before:  [47, 101, '0x152cfb0', '-1', 0, '45']
+Adding before:  [48, 101, '0x152cfe0', '-1', 0, '45']
+Adding before:  [49, 101, '0x152d010', '-1', 0, '45']
+Adding before:  [50, 101, '0x152d040', '-1', 0, '45']
+Adding before:  [51, 101, '0x152d070', '-1', 0, '45']
+Adding before:  [52, 101, '0x152d0a0', '-1', 0, '45']
+Adding before:  [53, 101, '0x152d0d0', '-1', 0, '45']
+Adding before:  [54, 101, '0x152d100', '-1', 0, '45']
+Adding before:  [55, 101, '0x152d130', '-1', 0, '45']
+Adding before:  [56, 101, '0x152d160', '-1', 0, '45']
+Adding before:  [57, 103, '0', '-1', 0, '40_x']
+Adding before:  [58, 103, '0', '-1', 0, '41_x']
+Adding before:  [59, 103, '0', '-1', 1, '73_x']
+Found insertion point for first lock:  58 59 [60, 101, '0x7f6ecc003470', '-1', 4, '73']
+0
+Found fence: 60 [62, 103, '0', '-1', 4, '73_x']
+Adding locks for read and taking fence within lock. 64
+Adding before:  [63, 103, '0', '-1', 1, '93_x']
+Found insertion point for second lock:  62
+1
+Found fence at  [66, 103, '0', '-1', 10, '74_x']
+Time taken:  37.490134954452515  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  2
+Number of threads:  14
+Completed building constraints.
+Number of constraints:  1679
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_64 < pc_70, pt_64 > pc_70)
+64 70 [60, 64, 67, 74] [70, 78] [60, 64] [60, 64]
+Adding very restricted lock for read. 70
+2
+Time taken:  0.8943603038787842  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  3
+Number of threads:  14
+Completed building constraints.
+Number of constraints:  1951
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.09911251068115234  seconds.
+
+############################################################################
+
+Total number of iterations:  3

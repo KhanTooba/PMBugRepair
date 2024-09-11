@@ -1,0 +1,34 @@
+Local variables initialized.
+Number of bugs to be repaired:  1
+And(pc_2 < pc_6, pt_2 > pc_6)
+{6} {2}
+
+############################################################################
+Iteration:  1
+Number of threads:  6
+Completed building constraints.
+Number of constraints:  556
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_2 < pc_6, pt_2 > pc_6)
+2 6 [2] [6] [] []
+Adding locks for write. 2
+Found insertion point for first lock:  0 1 [2, 101, '0x2037b50', '-1', 4, '22']
+0
+Found fence: 2 [4, 103, '0', '-1', 4, '22_x']
+Adding very restricted lock for read. 6
+1
+Time taken:  0.21486449241638184  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  2
+Number of threads:  6
+Completed building constraints.
+Number of constraints:  583
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.041310787200927734  seconds.
+
+############################################################################
+
+Total number of iterations:  2
