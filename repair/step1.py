@@ -293,6 +293,7 @@ def repairMPB(thread, bug, previousConstraints):
             solver.add(Int("pt_"+str(thread[i][0]))>=Int("pc_"+str(thread[i][0]))) #Persistent time begins at the time of STOREs
             
             #This relates to the MPB bugs
+            # print(bug, thread[i])
             if not(thread[i][1]==101 and "pt_"+str(thread[i][0])==str(bug).split("<")[0].replace(" ", "")) and not(
                 thread[i][1]==101 and "pt_"+str(thread[i][0])==str(bug).split("<")[1].replace(" ", "")): 
                 continue
@@ -415,6 +416,7 @@ def repairThread(thread, bugs):
 
 def addConstraints(inputFileName):
     trace, threadInfo = parseTrace(inputFileName)
+    
     store = 0
     for t in trace:
         if t[1]==101:

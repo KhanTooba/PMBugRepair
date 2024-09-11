@@ -24,7 +24,7 @@ Found insertion point for first lock:  0 1 [2, 101, '0x7ef280', '-1', 6, '90']
 Found fence: 16 [18, 103, '0', '-1', 10, '90_x']
 Adding very restricted lock for read. 41
 1
-Time taken:  0.5484049320220947  seconds.
+Time taken:  0.6985228061676025  seconds.
 
 ############################################################################
 
@@ -34,7 +34,7 @@ Number of threads:  20
 Completed building constraints.
 Number of constraints:  1395
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.08293676376342773  seconds.
+Time taken:  0.10650110244750977  seconds.
 
 ############################################################################
 
