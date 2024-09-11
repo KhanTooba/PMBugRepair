@@ -12,10 +12,13 @@ def count_lines(filesList):
 def getLoc():
     directory = '../ThreadTrove/'
     files = [f for f in os.listdir(directory) ]
+
     listOfFiles = {}
     for file in files:
         listOfFiles[file] = count_lines([directory+file+"/"+file+".h", 
                                          "../results/outputs/"+file+"_output.txt"])
+    listOfFiles['fastFair'] = count_lines(["../experiments/fastFair/btree.h",
+                                           "../results/outputs/fastFair_output.txt"])
     return listOfFiles
 
 def getFile():
@@ -71,6 +74,8 @@ def processFile(file, locDetails):
     dataToSend1 = []
     dataToSend2 = []
     benchmarks = {}
+    name = ""
+    subset = []
 
     while i<len(file):
         if "Adding DURA & MPB Repair Report" in str(file[i]):
@@ -83,6 +88,7 @@ def processFile(file, locDetails):
                 i += 1
                 subset.append(file[j])
         i += 1
+    benchmarks[name] = subset
 
     for key in benchmarks.keys():
         dataToSend1.append(processSubset1(key, benchmarks[key], locDetails))
