@@ -24,7 +24,29 @@ def getFile():
         file.append(str(line).replace("\n", ""))
     return file
 
-def processSubset(name, subset, locDetails):
+def processSubset1(name, subset, locDetails):
+    # headers_1 = ["BenchmarkName", "LoC", "Trace Length", "#Loads", "#Stores", "#Threads", "#PM Vars"]
+    data = []
+    dura = str(subset[0]).split(" ")[-1]
+    mpb = str(subset[1]).split(" ")[-1]
+    t_dura = str(subset[2]).split(" ")[-2]
+    t_mpb = str(subset[3]).split(" ")[-2]
+    num_sfence = float(str(subset[4]).split(" ")[-1]) + float(str(subset[13]).split(" ")[-1])
+    num_flush = str(subset[5]).split(" ")[-1]
+    num_calls_1 = float(str(subset[6]).split(" ")[-1]) 
+    mpa = str(subset[12]).split(" ")[-1]
+    num_locks = str(subset[14]).split(" ")[-1]
+    t_mpa = str(subset[16]).split(" ")[-2]
+    num_calls_2 = float(str(subset[15]).split(" ")[-1])
+    locDetail = locDetails[name]
+
+    data = [name, locDetail[0], locDetail[1], 0, 0, 2, 0]
+    return data
+
+def processSubset2(name, subset, locDetails):
+    # headers_2 = ["BenchmarkName", "#DURA", "#MPB", "#MPA", "Repair time in Step 1", 
+    #         "Repair time in Step 2", "#Calls in step 1", "#Calls in step 2", 
+    #         "#Lock", "#sfence()", "#clflushopt()"]
     data = []
     dura = str(subset[0]).split(" ")[-1]
     mpb = str(subset[1]).split(" ")[-1]
@@ -41,12 +63,13 @@ def processSubset(name, subset, locDetails):
 
     data = [name, int(dura), int(mpb), int(mpa), float(f"{float(t_dura)+float(t_mpb):.4f}"), 
             float(f"{float(t_mpa):.4f}"), int(num_calls_1), int(num_calls_2), int(num_locks), 
-            int(num_sfence), int(num_flush), locDetail[0], locDetail[1]]
+            int(num_sfence), int(num_flush)]
     return data
 
 def processFile(file, locDetails):
     i = 0
-    dataToSend = []
+    dataToSend1 = []
+    dataToSend2 = []
     benchmarks = {}
 
     while i<len(file):
@@ -62,21 +85,29 @@ def processFile(file, locDetails):
         i += 1
 
     for key in benchmarks.keys():
-        dataToSend.append(processSubset(key, benchmarks[key], locDetails))
+        dataToSend1.append(processSubset1(key, benchmarks[key], locDetails))
+        dataToSend2.append(processSubset2(key, benchmarks[key], locDetails))
 
-    return dataToSend
+    return dataToSend1, dataToSend2
 
 if __name__ == "__main__":
-    headers = ["BenchmarkName", "#DURA", "#MPB", "#MPA", "Repair time in Step 1", 
+    headers_1 = ["BenchmarkName", "LoC", "Trace Length", "#Loads", "#Stores", "#Threads", "#PM Vars"]
+    
+    headers_2 = ["BenchmarkName", "#DURA", "#MPB", "#MPA", "Repair time in Step 1", 
             "Repair time in Step 2", "#Calls in step 1", "#Calls in step 2", 
-            "#Lock", "#sfence()", "#clflushopt()", "LoC", "Trace Length"]
+            "#Lock", "#sfence()", "#clflushopt()"]
     
     locDetails = getLoc()
     file = getFile()
-    rows = processFile(file, locDetails)
+    rows_1, rows_2 = processFile(file, locDetails)
 
-    with open('results.csv', 'w', newline='') as file:
+    with open('results_table1.csv', 'w', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(headers)  
-        writer.writerows(rows)  
+        writer.writerow(headers_1)  
+        writer.writerows(rows_1)  
+
+    with open('results_table2.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(headers_2)  
+        writer.writerows(rows_2)  
     
