@@ -1,0 +1,84 @@
+Local variables initialized.
+Number of bugs to be repaired:  6
+And(pc_2 < pc_5, pt_2 > pc_5)
+And(pc_5 < pc_10, pt_5 > pc_10)
+And(pc_5 < pc_13, pt_5 > pc_13)
+And(pc_5 < pc_23, pt_5 > pc_23)
+And(pc_10 < pc_26, pt_10 > pc_26)
+And(pc_23 < pc_26, pt_23 > pc_26)
+{26, 13} {2, 10, 5, 23}
+
+############################################################################
+Iteration:  1
+Number of threads:  16
+Completed building constraints.
+Number of constraints:  111
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
+2 5 [2, 5, 10, 23] [26, 13] [] []
+Adding locks for write. 2
+Found insertion point for first lock:  0 1 [2, 101, '0x1288e40', '-1', 4, '76']
+0
+Found fence: 2 [4, 103, '0', '-1', 4, '76_x']
+Adding locks for read and taking fence within lock. 5
+Found insertion point for second lock:  3
+1
+Found fence at  [7, 103, '0', '-1', 10, '77_x']
+Time taken:  0.03057074546813965  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  2
+Number of threads:  16
+Completed building constraints.
+Number of constraints:  137
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_23 < pc_26, pt_23 > pc_26)
+23 26 [2, 5, 10, 23] [26, 13] [2, 5] [2, 5]
+Adding locks for write. 23
+Adding before:  ['Lock_0', 105, 'M1', -1, 4, '76_x']
+Adding before:  [2, 101, '0x1288e40', '-1', 4, '76']
+Adding before:  [3, 102, '0x1288e40', '-1', 4, '76_x']
+Adding before:  [4, 103, '0', '-1', 4, '76_x']
+Adding before:  ['UnLock_0', 106, 'M1', -1, 4, '76_x']
+Adding before:  ['Lock_1', 105, 'M1', -1, 10, '77_x']
+Adding before:  [5, 101, '0x1288e44', '0x1288e40', 10, '77']
+Adding before:  [6, 102, '0x1288e44', '-1', 10, '77_x']
+Adding before:  [7, 103, '0', '-1', 10, '77_x']
+Adding before:  ['UnLock_1', 106, 'M1', -1, 10, '77_x']
+Adding before:  [8, 103, '0', '-1', 0, '104_x']
+Adding before:  [9, 103, '0', '-1', 0, '76_x']
+Adding before:  [10, 101, '0x1288e48', '0x1288e44', 12, '78']
+Adding before:  [11, 102, '0x1288e48', '-1', 12, '78_x']
+Adding before:  [12, 103, '0', '-1', 12, '77_x']
+Adding before:  [13, 101, '0x1288e48', '0x1288e44', 9, '96']
+Adding before:  [14, 102, '0x1288e48', '-1', 9, '96_x']
+Adding before:  [15, 101, '0x1289370', '-1', 9, '76']
+Adding before:  [16, 101, '0x1289374', '0x1288e40', 9, '77']
+Adding before:  [17, 101, '0x1289378', '0x1288e44', 9, '78']
+Adding before:  [18, 101, '0x1289378', '0x1288e44', 9, '96']
+Adding before:  [19, 101, '0x1289400', '-1', 9, '76']
+Adding before:  [20, 101, '0x1289404', '0x1288e40', 9, '77']
+Adding before:  [21, 101, '0x1289408', '0x1288e44', 9, '78']
+Adding before:  [22, 103, '0', '-1', 9, '78_x']
+Found insertion point for first lock:  25 26 [23, 101, '0x1289408', '0x1288e44', 14, '104']
+2
+Found fence: 27 [25, 103, '0', '-1', 14, '77_x']
+Adding very restricted lock for read. 26
+3
+Time taken:  0.03065776824951172  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  3
+Number of threads:  16
+Completed building constraints.
+Number of constraints:  180
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.020322799682617188  seconds.
+
+############################################################################
+
+Total number of iterations:  3
