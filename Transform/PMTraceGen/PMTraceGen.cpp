@@ -279,8 +279,8 @@ namespace pminv {
             if (auto *uid_cmd = llvm::dyn_cast<llvm::ConstantAsMetadata>(uid_md->getOperand(0))) {
               auto *uid_const = llvm::dyn_cast<llvm::ConstantInt>(uid_cmd->getValue());
               if (uid_const) {
-          int64_t uid_int = uid_const->getSExtValue();
-          InstToIDMap[&i] = uid_int;
+                int64_t uid_int = uid_const->getSExtValue();
+                InstToIDMap[&i] = uid_int;
               }
             }
           }
@@ -305,12 +305,10 @@ namespace pminv {
 
     for (BasicBlock &BB : F) {
       for (Instruction &I : BB) {
-
         if (CallInst *callInst = dyn_cast<CallInst>(&I)) {
 	        if (const Function *calledFunc = callInst->getCalledFunction()) {
-		Function *parentFunc = callInst->getFunction();
+		        Function *parentFunc = callInst->getFunction();
             if (calledFunc->getName().find("fence")!=std::string::npos && parentFunc->getName().find("clflush")==std::string::npos) {
-
                 llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
                   LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
@@ -329,52 +327,6 @@ namespace pminv {
     }
   }
 
-/**
- * Deprecated insertFence function.
- * It finds the assembly line calls to fence
- * void insertFence(Function &F) {
-    
-      LLVMContext &Context = F.getContext();
-      IRBuilder<> Builder(Context);
-
-      FunctionType *FenceFuncType = FunctionType::get(Type::getVoidTy(Context),//false);
-                                                   {Type::getInt32Ty(Context),
-                                                   Type::getInt32Ty(Context)}, false); 
-      FunctionCallee FenceFunc = F.getParent()->getOrInsertFunction("__fence", FenceFuncType);
-
-      for (BasicBlock &BB : F) {
-        for (Instruction &I : BB) {
-          llvm::Constant *LineLoc, *ColLoc;
-	        llvm::DebugLoc debugLoc = I.getDebugLoc();
-    
-          if (auto *Call = dyn_cast<CallInst>(&I)) {
-            if (Call->isInlineAsm()) {
-              InlineAsm *IA = cast<InlineAsm>(Call->getCalledOperand());
-              if (IA->getAsmString().find("fence")!=std::string::npos &&
-                  IA->getConstraintString().find("~{memory}")!=std::string::npos) {
-                    if (I.getDebugLoc().get() != nullptr) {
-                      LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
-                      ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
-                    }
-                    else {
-                      LineLoc = llvm::ConstantInt::get(i32_type, 0);
-                      ColLoc = llvm::ConstantInt::get(i32_type, 0);
-                    }
-                  llvm::ArrayRef<llvm::Value*> args = {LineLoc, ColLoc};
-                  Builder.SetInsertPoint(&I);
-                  Builder.CreateCall(FenceFunc, args);
-              }
-            }
-          }
-        }
-      }
-    }
- * 
- * 
- * 
- */
-
-
   void insertFlush(Function &F) {
 	
     LLVMContext &Context = F.getContext();
@@ -392,9 +344,10 @@ namespace pminv {
 
         if (CallInst *callInst = dyn_cast<CallInst>(&I)) {
 	        if (const Function *calledFunc = callInst->getCalledFunction()) {
-            if (calledFunc->getName().find("clflush")!=std::string::npos || calledFunc->getName().find("simuFlushOpt")!=std::string::npos) {
+            if (calledFunc->getName().find("clflush")!=std::string::npos || 
+                calledFunc->getName().find("simuFlushOpt")!=std::string::npos) {
 
-                Value *argData = callInst->getArgOperand(0); // Corresponds to char *data
+                Value *argData = callInst->getArgOperand(0); 
                 Value *argLen = callInst->getArgOperand(1); 
                 unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
                 Value *argLen64;
@@ -415,6 +368,7 @@ namespace pminv {
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
+                outs() << argLen64;
                 Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
             }
           }          
@@ -423,82 +377,6 @@ namespace pminv {
     }
 }
        
-	
-/** 
- * Deprecated insertFence()
-
-      if (auto *Call = dyn_cast<CallInst>(&I)) {
-          if (Call->isInlineAsm()) {
-              InlineAsm *IA = cast<InlineAsm>(Call->getCalledOperand());
-              
-            if (IA->getAsmString().find("flush")!=std::string::npos){
-                Value *arg;
-                if(Call->getNumArgOperands()>0){
-                    arg = Call->getArgOperand(0);
-                    //outs()<<arg;
-                }
-
-                llvm::Constant *LineLoc, *ColLoc;
-                if (I.getDebugLoc().get() != nullptr) {
-                      LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
-                      ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
-                  }
-                  else {
-                      LineLoc = llvm::ConstantInt::get(i32_type, 0);
-                      ColLoc = llvm::ConstantInt::get(i32_type, 0);
-                  }
-              
-		llvm::ArrayRef<llvm::Value*> args = {arg, LineLoc, ColLoc};
-                Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, args);
-            }
-          }
-        }
-      }
-    }
-  */
- 
-    /*
-    // printing 'InstToIDMap' to a file whose name is given by 'InstIDPath' (initialized to "InstToID.txt")
-    void InstToIDDebug() {
-      
-      std::string statesFilePath = InstIDPath;
-      std::ofstream LogOut;
-      LogOut.open(statesFilePath);
-      assert(LogOut.is_open() && "InstToID Log File not OPEN ERROR!");
-      errs() << "Inst to ID : file path: " << statesFilePath << "\n";
-
-      for (auto pair: InstToIDMap) {
-	Instruction *I = pair.first;
-	if (!isa<StoreInst>(I) && !isa<LoadInst>(I)) continue;
-
-	unsigned LineLoc, ColLoc;
-	if (I->getDebugLoc().get() != nullptr) {
-	  LineLoc = I->getDebugLoc().getLine();
-	  ColLoc = I->getDebugLoc().getCol();
-	}
-	else {
-	  LineLoc = 0;
-	  ColLoc = 0;
-	}
-	
-	StringRef name;
-	if (auto *SI = dyn_cast<StoreInst>(I)) {
-	  name = SI->getPointerOperand()->getName();
-	}
-	else if (auto *LI = dyn_cast<LoadInst>(I)) {
-	  name = LI->getOperand(0)->getName();
-	}
-	std::string str;
-	llvm::raw_string_ostream ss(str);
-	ss << *I;
-	LogOut << str << "\n\tID : " << pair.second << "\t\t| @Ln,Col: " << LineLoc << "," << ColLoc   << "\t\t| Name: " << name.str() << "\n";
-      }
-      
-      LogOut.close();
-    }
-    */
-
     void InstruDepMap(Function &F) {
       
       IRBuilder<> builder(F.getContext());
@@ -508,34 +386,31 @@ namespace pminv {
 
       // MemoryControlDepMap has pairs of the form (dep, [control, control, ...])
       for (auto const &pair: MemoryControlDepMap) {
-	int dep = InstToIDMap[pair.first];
-	for (auto const &i: pair.second) {
-	  int control = InstToIDMap[i];
-	  
-	  auto *dep_const = llvm::ConstantInt::get(i32_type, dep);
-	  auto *control_const = llvm::ConstantInt::get(i32_type, control);
-	  Value *args[] = {control_const, dep_const};
-	  builder.CreateCall(__pmc_depAdd, args);
-	}
+        int dep = InstToIDMap[pair.first];
+        for (auto const &i: pair.second) {
+          int control = InstToIDMap[i];
+          
+          auto *dep_const = llvm::ConstantInt::get(i32_type, dep);
+          auto *control_const = llvm::ConstantInt::get(i32_type, control);
+          Value *args[] = {control_const, dep_const};
+          builder.CreateCall(__pmc_depAdd, args);
+        }
       }
 
       // DataDepMap has pairs of the form (dep, [control, control, ...])
       for (auto const &pair: DataDepMap) {
-	int dep = InstToIDMap[pair.first];
-	for (auto const &i: pair.second) {
-	  int control = InstToIDMap[i];
-	  auto *dep_const = llvm::ConstantInt::get(i32_type, dep);
-	  auto *control_const = llvm::ConstantInt::get(i32_type, control);
-	  Value *args[] = {control_const, dep_const};
-	  builder.CreateCall(__pmc_depAdd, args);
-	}
+        int dep = InstToIDMap[pair.first];
+        for (auto const &i: pair.second) {
+          int control = InstToIDMap[i];
+          auto *dep_const = llvm::ConstantInt::get(i32_type, dep);
+          auto *control_const = llvm::ConstantInt::get(i32_type, control);
+          Value *args[] = {control_const, dep_const};
+          builder.CreateCall(__pmc_depAdd, args);
+        }
       }
-      
       builder.CreateBr(F.begin()->getNextNode());
     }
 
-
-    
     void visitCallInst(CallInst &CALLI) {
       // do nothing
     }
