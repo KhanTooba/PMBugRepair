@@ -16,7 +16,7 @@ extern "C" {
 
 //Tooba's addition:
   void __fence(int line, int col);
-  void __flush(void* ptr, int size, int line, int col);
+  void __flush(void* ptr, long int size, int line, int col);
 
   //void __pmc_memAdd(long long int k, long long int size) ;
   //void __pmc_memRemove(long long int k);
@@ -38,8 +38,8 @@ extern "C" {
 
 
   void simuSfence();
-  void simuFlushOpt(void *ptr, int len);
-  void simuFlush(void *ptr, int len);
+  void simuFlushOpt(void *ptr, long int len);
+  void simuFlush(void *ptr, long int len);
   void simuTX_BEGIN();
   void simuTX_END();
   void simuTX_ADD(void *ptr);
