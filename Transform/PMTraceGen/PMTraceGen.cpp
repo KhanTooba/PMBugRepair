@@ -349,7 +349,7 @@ namespace pminv {
 
                 Value *argData = callInst->getArgOperand(0); 
                 Value *argLen = Builder.CreateTrunc(callInst->getArgOperand(1), 
-                                                    llvm::Type::getInt32Ty(Context);); 
+                                                    llvm::Type::getInt32Ty(Context)); 
                 llvm::Type *type = argLen->getType();
     
                 // Print the type in a human-readable format
