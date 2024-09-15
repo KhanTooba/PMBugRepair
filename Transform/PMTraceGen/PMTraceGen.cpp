@@ -335,7 +335,7 @@ namespace pminv {
 	  Type *VoidPtrTy = Type::getInt8PtrTy(Context);
     FunctionType *FlushFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt8PtrTy(Context), 
-                                                    Type::getInt64Ty(Context),Type::getInt32Ty(Context),
+                                                    Type::getInt32Ty(Context),Type::getInt32Ty(Context),
                                                     Type::getInt32Ty(Context)}, false);
     FunctionCallee FlushFunc = F.getParent()->getOrInsertFunction("__flush", FlushFuncType);
 
