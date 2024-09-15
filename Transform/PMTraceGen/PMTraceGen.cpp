@@ -376,7 +376,7 @@ namespace pminv {
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
-                outs() << argLen64;
+                // outs() << argLen64;
                 Builder.CreateCall(FlushFunc, {argData, argLen, LineLoc, ColLoc});
             }
           }          
