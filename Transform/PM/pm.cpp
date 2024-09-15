@@ -239,28 +239,28 @@ void simuSfence() {
   }
 }
 
-void simuFlushOpt(void* ptr, long len) {
+void simuFlushOpt(void* ptr, int len) {
   if (my_flag) {
     pthread_mutex_lock(&mtx);
-    my_printf("Simulated F-L-U-S-H: %p LEN: %ld; ", ptr, len);
+    my_printf("Simulated F-L-U-S-H: %p LEN: %d; ", ptr, len);
     pthread_mutex_unlock(&mtx);
   }
 }
 
-void simuFlush(void* ptr, long len) {
+void simuFlush(void* ptr, int len) {
   if (my_flag) {
       pthread_mutex_lock(&mtx);
-      my_printf("Simulated F-L-U-S-H: %p LEN: %ld; ", ptr, len);
+      my_printf("Simulated F-L-U-S-H: %p LEN: %d; ", ptr, len);
       pthread_mutex_unlock(&mtx);
   }
 }
 
 //Tooba's addition begins here:
 
-void __flush(void* ptr, long size, int line, int col) {
+void __flush(void* ptr, int size, int line, int col) {
   if (my_flag) {
       pthread_mutex_lock(&mtx);
-      my_printf("CLFLUSH: %p LEN: %ld @Ln,Col: %d,%d ; ", ptr, size, line, col);
+      my_printf("CLFLUSH: %p LEN: %d @Ln,Col: %d,%d ; ", ptr, size, line, col);
       pthread_mutex_unlock(&mtx);
   }
 }
