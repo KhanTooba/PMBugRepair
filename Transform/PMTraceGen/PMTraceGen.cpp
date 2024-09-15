@@ -349,8 +349,13 @@ namespace pminv {
 
                 Value *argData = callInst->getArgOperand(0); 
                 Value *argLen = callInst->getArgOperand(1); 
-                outs()<<"Arg len type: "<<argLen->getType();
-                outs()<<"\n\n";
+                llvm::Type *type = argLen->getType();
+    
+                // Print the type in a human-readable format
+                llvm::outs() << "Type of argLen: ";
+                type->print(llvm::outs());  // Print the type
+                llvm::outs() << "\n";
+                
                 unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
                 Value *argLen64;
 			          if (bitWidth == 64) {
