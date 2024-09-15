@@ -1,0 +1,50 @@
+# Compiler and flags
+CXX = clang++-10
+CXXFLAGS = -g -I./include -I../PMBugRepair/build/Transform/../../Transform/PM -O0 -std=c++11 -emit-llvm
+OPT = opt
+OPTFLAGS = -load ../PMBugRepair/build/Transform/PMTraceGen/libLLVMPMTraceGen.so --pmtracegen
+LDFLAGS = -lrt -lpthread -L../PMBugRepair/build/Transform/PM -Wl,-rpath=../PMBugRepair/build/Transform/PM -lLLVMPMC -O0
+
+# Targets and files
+SRC_DIR = src
+BIN_DIR = bin
+OBJ = $(SRC_DIR)/CCEH_MSB.o
+TEST_BC = $(SRC_DIR)/test.bc
+TRACE_TEST_BC = $(SRC_DIR)/test_trace.bc
+CCEH_MSB_BC = $(SRC_DIR)/cceh_msb.bc
+TRACE_CCEH_MSB_BC = $(SRC_DIR)/cceh_msb_trace.bc
+
+# Default target
+all: $(BIN_DIR)/single_threaded_cceh $(BIN_DIR)/multi_threaded_cceh
+
+# Compile CCEH_MSB.cpp to LLVM bitcode
+$(CCEH_MSB_BC): $(SRC_DIR)/CCEH_MSB.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@ -I./
+
+# Apply pmtracegen pass to CCEH_MSB.bc
+$(TRACE_CCEH_MSB_BC): $(CCEH_MSB_BC)
+	$(OPT) $(OPTFLAGS) $< -o $@
+
+# Compile CCEH_MSB trace bitcode to object
+$(OBJ): $(TRACE_CCEH_MSB_BC)
+	$(CXX) -std=c++17 -I./ -c -o $@ $< $(LDFLAGS) -DINPLACE
+
+# Compile test.cpp to LLVM bitcode
+$(TEST_BC): $(SRC_DIR)/test.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@ -I./
+
+# Apply pmtracegen pass to test.bc
+$(TRACE_TEST_BC): $(TEST_BC)
+	$(OPT) $(OPTFLAGS) $< -o $@
+
+# Link single-threaded binary
+$(BIN_DIR)/single_threaded_cceh: $(TRACE_TEST_BC) $(OBJ)
+	$(CXX) -std=c++17 -I./ -o $@ $^ $(LDFLAGS)
+
+# Link multi-threaded binary
+$(BIN_DIR)/multi_threaded_cceh: $(TRACE_TEST_BC) $(OBJ)
+	$(CXX) -std=c++17 -I./ -o $@ $^ $(LDFLAGS) -DMULTITHREAD
+
+# Clean up
+clean:
+	rm -f $(SRC_DIR)/*.bc $(SRC_DIR)/*.o $(BIN_DIR)/*
