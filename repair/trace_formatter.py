@@ -44,12 +44,14 @@ def fileReader(name):
             stmt = [r, "LOAD", add, tid, line]
             if uid not in loads.keys():
                 loads[uid] = stmt
+            stmt = format_STOREs(str(row), r)
+            contents.append(stmt)
             # print(stmt)
             # print()
         
-        if "Store" in str(row):
-            stmt = format_STOREs(str(row), r)
-            contents.append(stmt)
+        # if "Store" in str(row):
+        #     stmt = format_STOREs(str(row), r)
+        #     contents.append(stmt)
             
         elif "FLUSH" in str(row):
             stmt = format_FLUSH(str(row), r)
