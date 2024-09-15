@@ -402,7 +402,7 @@ namespace pminv {
                     argLen64 = argLen;  
                 }
                 if (bitWidth < 64) {
-                    argLen64 = builder.CreateZExtOrBitCast(argLen, llvm::Type::getInt64Ty(builder.getContext()));
+                    argLen64 = Builder.CreateZExtOrBitCast(argLen, llvm::Type::getInt64Ty(builder.getContext()));
                 }
                         
                 llvm::Constant *LineLoc, *ColLoc;
