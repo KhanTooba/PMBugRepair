@@ -424,7 +424,7 @@ namespace pminv {
 
     void visitLoadInst(LoadInst &LI) {
       if (auto *gv = dyn_cast<GlobalVariable>(LI.getOperand(0))) {
-	return;
+	      return;
       }
       auto &I = cast<Instruction>(LI);
 
@@ -433,14 +433,14 @@ namespace pminv {
 
       // Check loading pmem_(c)alloc
       if (ptr->hasName()) {
-	if (ptr->getName().contains("pmem_calloc")) {
-	  //InstruPmemCalloc(LI);
-	  assert(0); //chao: when does this occur?
-	}
-	else if (ptr->getName().contains("pmem_free")) {
-	  //InstruPmemFree(LI);
-	  assert(0); //chao: when does this occur?
-	}
+        if (ptr->getName().contains("pmem_calloc")) {
+          //InstruPmemCalloc(LI);
+          assert(0); //chao: when does this occur?
+        }
+        else if (ptr->getName().contains("pmem_free")) {
+          //InstruPmemFree(LI);
+          assert(0); //chao: when does this occur?
+        }
       }
       
       // Address printed only if it is in PM
@@ -449,10 +449,11 @@ namespace pminv {
 
     void visitStoreInst(StoreInst &SI) {
       // Skip global counter instrumentation
+      outs()<<"Visiting store instruction for: "<<I<<"\n";
       if (auto *gv = dyn_cast<GlobalVariable>(SI.getOperand(1))) {
-	if (gv->getName() == "Inst_Counter") {
-	  return;
-	}
+        if (gv->getName() == "Inst_Counter") {
+          return;
+        }
       }
 
       auto &I = cast<Instruction>(SI);
@@ -548,10 +549,11 @@ namespace pminv {
       N2C_it = N2C.find(name);
       llvm::Constant *sc;
       if (N2C_it != N2C.end()) {
-	sc = N2C_it->second;
-      } else {
+        sc = N2C_it->second;
+      } 
+      else {
         sc = builder->CreateGlobalStringPtr(name);
-	N2C [ name ]  = sc;
+        N2C [ name ]  = sc;
       }
       return sc;
     }
@@ -565,16 +567,16 @@ namespace pminv {
       int size;
       
       if ((SI = dyn_cast<StoreInst>(&I))) {
-	address = SI->getPointerOperand();
-	Value *memoryPointer = SI->getPointerOperand();
-	PointerType *pointerType = cast<PointerType>(memoryPointer->getType());
-	size = DL.getTypeStoreSize(pointerType->getPointerElementType());
+        address = SI->getPointerOperand();
+        Value *memoryPointer = SI->getPointerOperand();
+        PointerType *pointerType = cast<PointerType>(memoryPointer->getType());
+        size = DL.getTypeStoreSize(pointerType->getPointerElementType());
       }
       else if ((LI = dyn_cast<LoadInst>(&I))) {
-	address = LI->getPointerOperand();
-	Value *memoryPointer = LI->getPointerOperand();
-	PointerType *pointerType = cast<PointerType>(memoryPointer->getType());
-	size = DL.getTypeStoreSize(pointerType->getPointerElementType());
+        address = LI->getPointerOperand();
+        Value *memoryPointer = LI->getPointerOperand();
+        PointerType *pointerType = cast<PointerType>(memoryPointer->getType());
+        size = DL.getTypeStoreSize(pointerType->getPointerElementType());
       }
       assert(address != nullptr);
 
@@ -691,18 +693,18 @@ namespace pminv {
     void SetInstUniqueID(Function &F) {
       for (BasicBlock &bb : F) {
 	
-	for (Instruction &i : bb) {
-	  
-	  llvm::Type* i32_type = llvm::IntegerType::getInt32Ty(F.getContext());
-	  llvm::Type* i64_type = llvm::IntegerType::getInt64Ty(F.getContext());
-	  unsigned IDKind = F.getContext().getMDKindID("__PMC_UniqueID");
-	  Metadata *IDNode = ConstantAsMetadata::get(ConstantInt::get(i32_type, uniqueID));
-	  MDNode *MD = MDNode::get(F.getContext(), IDNode);
-	  // Attach the metadata to the instruction
-	  i.setMetadata(IDKind, MD);
-	  
-	  uniqueID++;
-	}
+      for (Instruction &i : bb) {
+        
+        llvm::Type* i32_type = llvm::IntegerType::getInt32Ty(F.getContext());
+        llvm::Type* i64_type = llvm::IntegerType::getInt64Ty(F.getContext());
+        unsigned IDKind = F.getContext().getMDKindID("__PMC_UniqueID");
+        Metadata *IDNode = ConstantAsMetadata::get(ConstantInt::get(i32_type, uniqueID));
+        MDNode *MD = MDNode::get(F.getContext(), IDNode);
+        // Attach the metadata to the instruction
+        i.setMetadata(IDKind, MD);
+        
+        uniqueID++;
+      }
 	
       }
     }
