@@ -383,7 +383,7 @@ namespace pminv {
 	  Type *VoidPtrTy = Type::getInt8PtrTy(Context);
     FunctionType *FlushFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt8PtrTy(Context), 
-                                                    Type::getInt32Ty(Context),Type::getInt32Ty(Context),
+                                                    Type::getInt32Ty(Context),Type::getInt64Ty(Context),
                                                     Type::getInt32Ty(Context)}, false);
     FunctionCallee FlushFunc = F.getParent()->getOrInsertFunction("__flush", FlushFuncType);
 
@@ -396,7 +396,16 @@ namespace pminv {
 
                 Value *argData = callInst->getArgOperand(0); // Corresponds to char *data
                 Value *argLen = callInst->getArgOperand(1); 
-			          llvm::Constant *LineLoc, *ColLoc;
+                unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
+                Value *argLen64;
+			          if (bitWidth == 64) {
+                    argLen64 = argLen;  
+                }
+                if (bitWidth < 64) {
+                    argLen64 = builder.CreateZExtOrBitCast(argLen, llvm::Type::getInt64Ty(builder.getContext()));
+                }
+                        
+                llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
                   LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
                   ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
@@ -406,7 +415,7 @@ namespace pminv {
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, {argData, argLen, LineLoc, ColLoc});
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
             }
           }          
         }
