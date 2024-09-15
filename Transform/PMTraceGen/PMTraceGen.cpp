@@ -335,7 +335,7 @@ namespace pminv {
 	  Type *VoidPtrTy = Type::getInt8PtrTy(Context);
     FunctionType *FlushFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt8PtrTy(Context), 
-                                                    Type::getInt32Ty(Context),Type::getInt32Ty(Context),
+                                                    Type::getInt64Ty(Context),Type::getInt32Ty(Context),
                                                     Type::getInt32Ty(Context)}, false);
     FunctionCallee FlushFunc = F.getParent()->getOrInsertFunction("__flush", FlushFuncType);
 
@@ -348,22 +348,22 @@ namespace pminv {
                 calledFunc->getName().find("simuFlushOpt")!=std::string::npos) {
 
                 Value *argData = callInst->getArgOperand(0); 
-                Value *argLen = callInst->getArgOperand(1); 
+                Value *argLen = Builder.CreateTrunc(callInst->getArgOperand(1), int32Type); 
                 llvm::Type *type = argLen->getType();
     
                 // Print the type in a human-readable format
                 llvm::outs() << "Type of argLen: ";
                 type->print(llvm::outs());  // Print the type
                 llvm::outs() << "\n";
-                
-                unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
-                Value *argLen64;
-			          if (bitWidth == 64) {
-                    argLen64 = argLen;  
-                }
-                if (bitWidth < 64) {
-                    argLen64 = Builder.CreateZExtOrBitCast(argLen, llvm::Type::getInt64Ty(Builder.getContext()));
-                }
+
+                // unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
+                // Value *argLen64;
+			          // if (bitWidth == 64) {
+                //     argLen64 = argLen;  
+                // }
+                // if (bitWidth < 64) {
+                //     argLen64 = Builder.CreateZExtOrBitCast(argLen, llvm::Type::getInt64Ty(Builder.getContext()));
+                // }
                         
                 llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
