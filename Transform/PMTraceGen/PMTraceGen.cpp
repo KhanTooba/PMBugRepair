@@ -349,7 +349,8 @@ namespace pminv {
 
                 Value *argData = callInst->getArgOperand(0); 
                 Value *argLen = callInst->getArgOperand(1); 
-                outs()<<argLen->getType()<<std::endl;
+                outs()<<argLen->getType();
+                outs()<<"\n\n";
                 unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
                 Value *argLen64;
 			          if (bitWidth == 64) {
