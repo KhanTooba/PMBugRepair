@@ -16,27 +16,27 @@ pt_250 < 9999
 pt_250 < pt_272
 pt_252 < pt_274
 pt_256 < pt_271
-pt_259 < pt_273
-pt_260 < pt_275
-pt_261 < pt_273
-pt_265 < 9999
-pt_265 < pt_266
-pt_266 < 9999
+pt_260 < 9999
+pt_260 < pt_261
+pt_261 < 9999
+pt_264 < pt_273
+pt_265 < pt_275
+pt_266 < pt_273
 pt_272 < 9999
 pt_272 < pt_274
-pt_272 < pt_278
-pt_272 < pt_280
-pt_294 < pt_296
-pt_295 < pt_298
-pt_295 < pt_302
-pt_295 < pt_304
+pt_272 < pt_283
+pt_272 < pt_285
+pt_290 < pt_298
+pt_290 < pt_302
+pt_290 < pt_304
+pt_534 < pt_538
 Number of threads:  3
 ################################################################################################
 Working on Thread: 0 (Length of thread :  248 ): 
 Repairing for bug: pt_2 < 9999
 Before append: 248
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0xcba610'", -1, 0, '66_x']
+Adding: ['2_0', 102, "'0x1268610'", -1, 0, '66_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '66_x']
 ####################################################################################
@@ -98,7 +98,7 @@ SAIS: And(Not(And(Not(pc_2 <= pc_2_1),
 Repairing for bug: pt_3 < 9999
 Before append: 251
 Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0xcba618'", -1, 0, '67_x']
+Adding: ['3_0', 102, "'0x1268618'", -1, 0, '67_x']
 Constraint added: pc_3 == pc_3_0 - 1
 Adding: ['3_1', 103, '0', -1, 0, '67_x']
 ####################################################################################
@@ -184,13 +184,13 @@ SAIS: And(Not(And(Not(pc_3_Fence_2 <= pc_3),
 Repairing for bug: pt_4 < 9999
 Before append: 255
 Bug found:  pt_4 pt_4
-Adding: ['4_0', 102, "'0xcba620'", -1, 0, '68_x']
+Adding: ['4_0', 102, "'0x1268620'", -1, 0, '68_x']
 Constraint added: pc_4 == pc_4_0 - 1
 ####################################################################################
 Repairing for bug: pt_8 < 9999
 Before append: 256
 Bug found:  pt_8 pt_8
-Adding: ['8_0', 102, "'0xcba618'", -1, 0, '86_x']
+Adding: ['8_0', 102, "'0x1268618'", -1, 0, '86_x']
 Constraint added: pc_8 == pc_8_0 - 1
 Adding: ['8_1', 103, '0', -1, 0, '86_x']
 ####################################################################################
@@ -307,7 +307,7 @@ SAIS: And(Not(And(Not(pc_3_Fence_1 <= pc_8),
 Repairing for bug: pt_9 < 9999
 Before append: 260
 Bug found:  pt_9 pt_9
-Adding: ['9_0', 102, "'0xcba710'", -1, 0, '87_x']
+Adding: ['9_0', 102, "'0x1268710'", -1, 0, '87_x']
 Constraint added: pc_9 == pc_9_0 - 1
 ####################################################################################
 Repairing for bug: pt_250 < 9999
@@ -355,63 +355,63 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_259 < pt_273
-MPB Bug found: pt_259 < pt_273
+Repairing for bug: pt_260 < 9999
+Before append: 261
+####################################################################################
+Repairing for bug: pt_260 < pt_261
+MPB Bug found: pt_260 < pt_261
 Before append: 261
 After append: 261
 The bug flag is: -1
 The number of assertions: 1017
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_259 < pt_273)
+Bug is: Not(pt_260 < pt_261)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_260 < pt_275
-MPB Bug found: pt_260 < pt_275
+Repairing for bug: pt_261 < 9999
+Before append: 261
+####################################################################################
+Repairing for bug: pt_264 < pt_273
+MPB Bug found: pt_264 < pt_273
 Before append: 261
 After append: 261
 The bug flag is: -1
 The number of assertions: 1017
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_260 < pt_275)
+Bug is: Not(pt_264 < pt_273)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_261 < pt_273
-MPB Bug found: pt_261 < pt_273
+Repairing for bug: pt_265 < pt_275
+MPB Bug found: pt_265 < pt_275
 Before append: 261
 After append: 261
 The bug flag is: -1
 The number of assertions: 1017
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_261 < pt_273)
+Bug is: Not(pt_265 < pt_275)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_265 < 9999
-Before append: 261
-####################################################################################
-Repairing for bug: pt_265 < pt_266
-MPB Bug found: pt_265 < pt_266
+Repairing for bug: pt_266 < pt_273
+MPB Bug found: pt_266 < pt_273
 Before append: 261
 After append: 261
 The bug flag is: -1
 The number of assertions: 1017
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_265 < pt_266)
+Bug is: Not(pt_266 < pt_273)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
-####################################################################################
-Repairing for bug: pt_266 < 9999
-Before append: 261
 ####################################################################################
 Repairing for bug: pt_272 < 9999
 Before append: 261
@@ -429,85 +429,85 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_272 < pt_278
-MPB Bug found: pt_272 < pt_278
+Repairing for bug: pt_272 < pt_283
+MPB Bug found: pt_272 < pt_283
 Before append: 261
 After append: 261
 The bug flag is: -1
 The number of assertions: 1017
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_272 < pt_278)
+Bug is: Not(pt_272 < pt_283)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_272 < pt_280
-MPB Bug found: pt_272 < pt_280
+Repairing for bug: pt_272 < pt_285
+MPB Bug found: pt_272 < pt_285
 Before append: 261
 After append: 261
 The bug flag is: -1
 The number of assertions: 1017
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_272 < pt_280)
+Bug is: Not(pt_272 < pt_285)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_294 < pt_296
-MPB Bug found: pt_294 < pt_296
+Repairing for bug: pt_290 < pt_298
+MPB Bug found: pt_290 < pt_298
 Before append: 261
 After append: 261
 The bug flag is: -1
 The number of assertions: 1017
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_294 < pt_296)
+Bug is: Not(pt_290 < pt_298)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_295 < pt_298
-MPB Bug found: pt_295 < pt_298
+Repairing for bug: pt_290 < pt_302
+MPB Bug found: pt_290 < pt_302
 Before append: 261
 After append: 261
 The bug flag is: -1
 The number of assertions: 1017
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_295 < pt_298)
+Bug is: Not(pt_290 < pt_302)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_295 < pt_302
-MPB Bug found: pt_295 < pt_302
+Repairing for bug: pt_290 < pt_304
+MPB Bug found: pt_290 < pt_304
 Before append: 261
 After append: 261
 The bug flag is: -1
 The number of assertions: 1017
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_295 < pt_302)
+Bug is: Not(pt_290 < pt_304)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_295 < pt_304
-MPB Bug found: pt_295 < pt_304
+Repairing for bug: pt_534 < pt_538
+MPB Bug found: pt_534 < pt_538
 Before append: 261
 After append: 261
 The bug flag is: -1
 The number of assertions: 1017
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_295 < pt_304)
+Bug is: Not(pt_534 < pt_538)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  0 :  19.910235166549683  seconds.
+Time taken to repair thread  0 :  19.982415437698364  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  600 ): 
@@ -597,7 +597,7 @@ Before append: 600
 Repairing for bug: pt_250 < 9999
 Before append: 600
 Bug found:  pt_250 pt_250
-Adding: ['250_0', 102, "'0xcba710'", -1, 1, '150_x']
+Adding: ['250_0', 102, "'0x1268710'", -1, 1, '150_x']
 Constraint added: pc_250 == pc_250_0 - 1
 Adding: ['250_1', 103, '0', -1, 1, '150_x']
 ####################################################################################
@@ -649,79 +649,79 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_259 < pt_273
-MPB Bug found: pt_259 < pt_273
+Repairing for bug: pt_260 < 9999
 Before append: 603
-After append: 603
-The bug flag is: -1
-The number of assertions: 2405
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_259 < pt_273)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
+Bug found:  pt_260 pt_260
+Adding: ['260_0', 102, "'0x12687d0'", -1, 1, '102_x']
+Constraint added: pc_260 == pc_260_0 - 1
 ####################################################################################
-Repairing for bug: pt_260 < pt_275
-MPB Bug found: pt_260 < pt_275
-Before append: 603
-After append: 603
-The bug flag is: -1
-The number of assertions: 2405
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_260 < pt_275)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_261 < pt_273
-MPB Bug found: pt_261 < pt_273
-Before append: 603
-After append: 603
-The bug flag is: -1
-The number of assertions: 2405
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_261 < pt_273)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_265 < 9999
-Before append: 603
-Bug found:  pt_265 pt_265
-Adding: ['265_0', 102, "'0xcba7d0'", -1, 1, '102_x']
-Constraint added: pc_265 == pc_265_0 - 1
-####################################################################################
-Repairing for bug: pt_265 < pt_266
-MPB Bug found: pt_265 < pt_266
+Repairing for bug: pt_260 < pt_261
+MPB Bug found: pt_260 < pt_261
 Before append: 604
 Fence found. 250_1
 Fence found. 250_Fence_5
 Fence count: 2
 After append: 604
 The bug flag is: 1
-Did not continue for: 265
-Did not continue for: 266
+Did not continue for: 260
+Did not continue for: 261
 The number of assertions: 2411
 The number of blocking constraint will be:  4
-Blocking constraints: [[265, '250_1'], [266, '250_1'], [265, '250_Fence_5'], [266, '250_Fence_5']]
-Bug is: Not(pt_265 < pt_266)
+Blocking constraints: [[260, '250_1'], [261, '250_1'], [260, '250_Fence_5'], [261, '250_Fence_5']]
+Bug is: Not(pt_260 < pt_261)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_266 < 9999
+Repairing for bug: pt_261 < 9999
 Before append: 604
-Bug found:  pt_266 pt_266
-Adding: ['266_0', 102, "'0x7efdcc003b98'", -1, 1, '103_x']
-Constraint added: pc_266 == pc_266_0 - 1
+Bug found:  pt_261 pt_261
+Adding: ['261_0', 102, "'0x7fa0b00050e8'", -1, 1, '103_x']
+Constraint added: pc_261 == pc_261_0 - 1
+####################################################################################
+Repairing for bug: pt_264 < pt_273
+MPB Bug found: pt_264 < pt_273
+Before append: 605
+After append: 605
+The bug flag is: -1
+The number of assertions: 2409
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_264 < pt_273)
+Not running blocking constraint generation because already unsat.
+SAIS: True
+Repair not found.
+####################################################################################
+Repairing for bug: pt_265 < pt_275
+MPB Bug found: pt_265 < pt_275
+Before append: 605
+After append: 605
+The bug flag is: -1
+The number of assertions: 2409
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_265 < pt_275)
+Not running blocking constraint generation because already unsat.
+SAIS: True
+Repair not found.
+####################################################################################
+Repairing for bug: pt_266 < pt_273
+MPB Bug found: pt_266 < pt_273
+Before append: 605
+After append: 605
+The bug flag is: -1
+The number of assertions: 2409
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_266 < pt_273)
+Not running blocking constraint generation because already unsat.
+SAIS: True
+Repair not found.
 ####################################################################################
 Repairing for bug: pt_272 < 9999
 Before append: 605
 Bug found:  pt_272 pt_272
-Adding: ['272_0', 102, "'0xcba618'", -1, 1, '126_x']
+Adding: ['272_0', 102, "'0x1268618'", -1, 1, '126_x']
 Constraint added: pc_272 == pc_272_0 - 1
 ####################################################################################
 Repairing for bug: pt_272 < pt_274
@@ -742,8 +742,8 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_272 < pt_278
-MPB Bug found: pt_272 < pt_278
+Repairing for bug: pt_272 < pt_283
+MPB Bug found: pt_272 < pt_283
 Before append: 606
 Fence found. 250_1
 Fence found. 250_Fence_5
@@ -751,17 +751,17 @@ Fence count: 2
 After append: 606
 The bug flag is: 1
 Did not continue for: 272
-Did not continue for: 278
+Did not continue for: 283
 The number of assertions: 2415
 The number of blocking constraint will be:  4
-Blocking constraints: [[272, '250_1'], [278, '250_1'], [272, '250_Fence_5'], [278, '250_Fence_5']]
-Bug is: Not(pt_272 < pt_278)
+Blocking constraints: [[272, '250_1'], [283, '250_1'], [272, '250_Fence_5'], [283, '250_Fence_5']]
+Bug is: Not(pt_272 < pt_283)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_272 < pt_280
-MPB Bug found: pt_272 < pt_280
+Repairing for bug: pt_272 < pt_285
+MPB Bug found: pt_272 < pt_285
 Before append: 606
 Fence found. 250_1
 Fence found. 250_Fence_5
@@ -769,68 +769,68 @@ Fence count: 2
 After append: 606
 The bug flag is: 1
 Did not continue for: 272
-Did not continue for: 280
+Did not continue for: 285
 The number of assertions: 2415
 The number of blocking constraint will be:  4
-Blocking constraints: [[272, '250_1'], [280, '250_1'], [272, '250_Fence_5'], [280, '250_Fence_5']]
-Bug is: Not(pt_272 < pt_280)
+Blocking constraints: [[272, '250_1'], [285, '250_1'], [272, '250_Fence_5'], [285, '250_Fence_5']]
+Bug is: Not(pt_272 < pt_285)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_294 < pt_296
-MPB Bug found: pt_294 < pt_296
+Repairing for bug: pt_290 < pt_298
+MPB Bug found: pt_290 < pt_298
 Before append: 606
 After append: 606
 The bug flag is: -1
 The number of assertions: 2411
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_294 < pt_296)
+Bug is: Not(pt_290 < pt_298)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_295 < pt_298
-MPB Bug found: pt_295 < pt_298
+Repairing for bug: pt_290 < pt_302
+MPB Bug found: pt_290 < pt_302
 Before append: 606
 After append: 606
 The bug flag is: -1
 The number of assertions: 2411
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_295 < pt_298)
+Bug is: Not(pt_290 < pt_302)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_295 < pt_302
-MPB Bug found: pt_295 < pt_302
+Repairing for bug: pt_290 < pt_304
+MPB Bug found: pt_290 < pt_304
 Before append: 606
 After append: 606
 The bug flag is: -1
 The number of assertions: 2411
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_295 < pt_302)
+Bug is: Not(pt_290 < pt_304)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_295 < pt_304
-MPB Bug found: pt_295 < pt_304
+Repairing for bug: pt_534 < pt_538
+MPB Bug found: pt_534 < pt_538
 Before append: 606
 After append: 606
 The bug flag is: -1
 The number of assertions: 2411
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_295 < pt_304)
+Bug is: Not(pt_534 < pt_538)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  1 :  9.473550081253052  seconds.
+Time taken to repair thread  1 :  9.489088296890259  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 2 (Length of thread :  600 ): 
@@ -962,77 +962,77 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_259 < pt_273
-MPB Bug found: pt_259 < pt_273
+Repairing for bug: pt_260 < 9999
+Before append: 601
+####################################################################################
+Repairing for bug: pt_260 < pt_261
+MPB Bug found: pt_260 < pt_261
+Before append: 601
+After append: 601
+The bug flag is: -1
+The number of assertions: 2401
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_260 < pt_261)
+Not running blocking constraint generation because already unsat.
+SAIS: True
+Repair not found.
+####################################################################################
+Repairing for bug: pt_261 < 9999
+Before append: 601
+####################################################################################
+Repairing for bug: pt_264 < pt_273
+MPB Bug found: pt_264 < pt_273
 Before append: 601
 Fence found. 256_Fence_6
 Fence count: 1
 After append: 602
 The bug flag is: 1
-Did not continue for: 259
+Did not continue for: 264
 Did not continue for: 273
 The number of assertions: 2407
 The number of blocking constraint will be:  4
-Blocking constraints: [[259, '256_Fence_6'], [273, '256_Fence_6'], [259, '259_Fence_7'], [273, '259_Fence_7']]
-Bug is: Not(pt_259 < pt_273)
+Blocking constraints: [[264, '256_Fence_6'], [273, '256_Fence_6'], [264, '264_Fence_7'], [273, '264_Fence_7']]
+Bug is: Not(pt_264 < pt_273)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_260 < pt_275
-MPB Bug found: pt_260 < pt_275
+Repairing for bug: pt_265 < pt_275
+MPB Bug found: pt_265 < pt_275
 Before append: 602
 Fence found. 256_Fence_6
-Fence found. 259_Fence_7
+Fence found. 264_Fence_7
 Fence count: 2
 After append: 602
 The bug flag is: 1
-Did not continue for: 260
+Did not continue for: 265
 Did not continue for: 275
 The number of assertions: 2407
 The number of blocking constraint will be:  4
-Blocking constraints: [[260, '256_Fence_6'], [275, '256_Fence_6'], [260, '259_Fence_7'], [275, '259_Fence_7']]
-Bug is: Not(pt_260 < pt_275)
+Blocking constraints: [[265, '256_Fence_6'], [275, '256_Fence_6'], [265, '264_Fence_7'], [275, '264_Fence_7']]
+Bug is: Not(pt_265 < pt_275)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_261 < pt_273
-MPB Bug found: pt_261 < pt_273
+Repairing for bug: pt_266 < pt_273
+MPB Bug found: pt_266 < pt_273
 Before append: 602
 Fence found. 256_Fence_6
-Fence found. 259_Fence_7
+Fence found. 264_Fence_7
 Fence count: 2
 After append: 602
 The bug flag is: 1
-Did not continue for: 261
+Did not continue for: 266
 Did not continue for: 273
 The number of assertions: 2407
 The number of blocking constraint will be:  4
-Blocking constraints: [[261, '256_Fence_6'], [273, '256_Fence_6'], [261, '259_Fence_7'], [273, '259_Fence_7']]
-Bug is: Not(pt_261 < pt_273)
+Blocking constraints: [[266, '256_Fence_6'], [273, '256_Fence_6'], [266, '264_Fence_7'], [273, '264_Fence_7']]
+Bug is: Not(pt_266 < pt_273)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
-####################################################################################
-Repairing for bug: pt_265 < 9999
-Before append: 602
-####################################################################################
-Repairing for bug: pt_265 < pt_266
-MPB Bug found: pt_265 < pt_266
-Before append: 602
-After append: 602
-The bug flag is: -1
-The number of assertions: 2403
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_265 < pt_266)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_266 < 9999
-Before append: 602
 ####################################################################################
 Repairing for bug: pt_272 < 9999
 Before append: 602
@@ -1050,105 +1050,105 @@ Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_272 < pt_278
-MPB Bug found: pt_272 < pt_278
+Repairing for bug: pt_272 < pt_283
+MPB Bug found: pt_272 < pt_283
 Before append: 602
 After append: 602
 The bug flag is: -1
 The number of assertions: 2403
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_272 < pt_278)
+Bug is: Not(pt_272 < pt_283)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_272 < pt_280
-MPB Bug found: pt_272 < pt_280
+Repairing for bug: pt_272 < pt_285
+MPB Bug found: pt_272 < pt_285
 Before append: 602
 After append: 602
 The bug flag is: -1
 The number of assertions: 2403
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_272 < pt_280)
+Bug is: Not(pt_272 < pt_285)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_294 < pt_296
-MPB Bug found: pt_294 < pt_296
+Repairing for bug: pt_290 < pt_298
+MPB Bug found: pt_290 < pt_298
 Before append: 602
 Fence found. 256_Fence_6
-Fence found. 259_Fence_7
+Fence found. 264_Fence_7
 Fence count: 2
 After append: 602
 The bug flag is: 1
-Did not continue for: 294
-Did not continue for: 296
-The number of assertions: 2407
-The number of blocking constraint will be:  4
-Blocking constraints: [[294, '256_Fence_6'], [296, '256_Fence_6'], [294, '259_Fence_7'], [296, '259_Fence_7']]
-Bug is: Not(pt_294 < pt_296)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_295 < pt_298
-MPB Bug found: pt_295 < pt_298
-Before append: 602
-Fence found. 256_Fence_6
-Fence found. 259_Fence_7
-Fence count: 2
-After append: 602
-The bug flag is: 1
-Did not continue for: 295
+Did not continue for: 290
 Did not continue for: 298
 The number of assertions: 2407
 The number of blocking constraint will be:  4
-Blocking constraints: [[295, '256_Fence_6'], [298, '256_Fence_6'], [295, '259_Fence_7'], [298, '259_Fence_7']]
-Bug is: Not(pt_295 < pt_298)
+Blocking constraints: [[290, '256_Fence_6'], [298, '256_Fence_6'], [290, '264_Fence_7'], [298, '264_Fence_7']]
+Bug is: Not(pt_290 < pt_298)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_295 < pt_302
-MPB Bug found: pt_295 < pt_302
+Repairing for bug: pt_290 < pt_302
+MPB Bug found: pt_290 < pt_302
 Before append: 602
 Fence found. 256_Fence_6
-Fence found. 259_Fence_7
+Fence found. 264_Fence_7
 Fence count: 2
 After append: 602
 The bug flag is: 1
-Did not continue for: 295
+Did not continue for: 290
 Did not continue for: 302
 The number of assertions: 2407
 The number of blocking constraint will be:  4
-Blocking constraints: [[295, '256_Fence_6'], [302, '256_Fence_6'], [295, '259_Fence_7'], [302, '259_Fence_7']]
-Bug is: Not(pt_295 < pt_302)
+Blocking constraints: [[290, '256_Fence_6'], [302, '256_Fence_6'], [290, '264_Fence_7'], [302, '264_Fence_7']]
+Bug is: Not(pt_290 < pt_302)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Repairing for bug: pt_295 < pt_304
-MPB Bug found: pt_295 < pt_304
+Repairing for bug: pt_290 < pt_304
+MPB Bug found: pt_290 < pt_304
 Before append: 602
 Fence found. 256_Fence_6
-Fence found. 259_Fence_7
+Fence found. 264_Fence_7
 Fence count: 2
 After append: 602
 The bug flag is: 1
-Did not continue for: 295
+Did not continue for: 290
 Did not continue for: 304
 The number of assertions: 2407
 The number of blocking constraint will be:  4
-Blocking constraints: [[295, '256_Fence_6'], [304, '256_Fence_6'], [295, '259_Fence_7'], [304, '259_Fence_7']]
-Bug is: Not(pt_295 < pt_304)
+Blocking constraints: [[290, '256_Fence_6'], [304, '256_Fence_6'], [290, '264_Fence_7'], [304, '264_Fence_7']]
+Bug is: Not(pt_290 < pt_304)
 Not running blocking constraint generation because already unsat.
 SAIS: True
 Repair not found.
 ####################################################################################
-Time taken to repair thread  2 :  9.553974628448486  seconds.
+Repairing for bug: pt_534 < pt_538
+MPB Bug found: pt_534 < pt_538
+Before append: 602
+Fence found. 256_Fence_6
+Fence found. 264_Fence_7
+Fence count: 2
+After append: 602
+The bug flag is: 1
+Did not continue for: 534
+Did not continue for: 538
+The number of assertions: 2407
+The number of blocking constraint will be:  4
+Blocking constraints: [[534, '256_Fence_6'], [538, '256_Fence_6'], [534, '264_Fence_7'], [538, '264_Fence_7']]
+Bug is: Not(pt_534 < pt_538)
+Not running blocking constraint generation because already unsat.
+SAIS: True
+Repair not found.
+####################################################################################
+Time taken to repair thread  2 :  9.609975099563599  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.05248618125915527  seconds.
+Time taken to recombine individual threads:  0.05203604698181152  seconds.

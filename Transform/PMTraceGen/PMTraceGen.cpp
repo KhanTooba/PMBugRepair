@@ -449,7 +449,7 @@ namespace pminv {
 
     void visitStoreInst(StoreInst &SI) {
       // Skip global counter instrumentation
-      outs()<<"Visiting store instruction for: "<<I<<"\n";
+      //outs()<<"Visiting store instruction for: "<<I<<"\n";
       if (auto *gv = dyn_cast<GlobalVariable>(SI.getOperand(1))) {
         if (gv->getName() == "Inst_Counter") {
           return;

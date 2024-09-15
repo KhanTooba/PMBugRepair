@@ -1,9 +1,9 @@
 # Compiler and flags
 CXX = clang++-10
-CXXFLAGS = -g -I./include -I../PMBugRepair/build/Transform/../../Transform/PM -O0 -std=c++11 -emit-llvm
+CXXFLAGS = -g -I../../../PMBugRepair/build/Transform/../../Transform/PM -O0 -std=c++11 -emit-llvm
 OPT = opt
-OPTFLAGS = -load ../PMBugRepair/build/Transform/PMTraceGen/libLLVMPMTraceGen.so --pmtracegen
-LDFLAGS = -lrt -lpthread -L../PMBugRepair/build/Transform/PM -Wl,-rpath=../PMBugRepair/build/Transform/PM -lLLVMPMC -O0
+OPTFLAGS = -load ../../../PMBugRepair/build/Transform/PMTraceGen/libLLVMPMTraceGen.so --pmtracegen
+LDFLAGS = -lrt -lpthread -L../../../PMBugRepair/build/Transform/PM -Wl,-rpath=../../../PMBugRepair/build/Transform/PM -lLLVMPMC -O0
 
 # Targets and files
 SRC_DIR = src

@@ -38,7 +38,7 @@ int main(int argc, char* argv[]){
 #endif
 
     struct timespec start, end;
-    uint64_t* keys = (uint64_t*)pmalloc(sizeof(uint64_t)*numData);
+    uint64_t* keys = (uint64_t*)malloc(sizeof(uint64_t)*numData);
 
     ifstream ifs;
     string dataset = "input_rand.txt";
@@ -63,7 +63,7 @@ int main(int argc, char* argv[]){
 
 #ifndef MULTITHREAD
     cout << "Start Insertion" << endl;
-    clear_cache();
+    //clear_cache();
 cout<<"Cleared cached"<<endl;
     clock_gettime(CLOCK_MONOTONIC, &start);
 cout<<numData<<endl;
@@ -77,7 +77,7 @@ cout<<numData<<endl;
     cout << "Insertion: " << elapsed/1000 << " usec\t" << (uint64_t)(1000000*(numData/(elapsed/1000.0))) << " ops/sec" << endl;
 
     cout << "Start Search" << endl;
-    clear_cache();
+    //clear_cache();
     int failedSearch = 0;
     clock_gettime(CLOCK_MONOTONIC, &start);
     for(int i=0; i<numData; i++){
@@ -113,7 +113,7 @@ cout<<numData<<endl;
     };
 
     cout << "Start Insertion" << endl;
-    clear_cache();
+    //clear_cache();
     const size_t chunk = numData/numThreads;
     clock_gettime(CLOCK_MONOTONIC, &start);
     for(int i=0; i<numThreads; i++){

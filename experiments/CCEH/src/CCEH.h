@@ -64,15 +64,15 @@ struct Segment {
 
   void* operator new(size_t size) {
     void* ret;
-	ret = pmalloc(size);
-    //posix_memalign(&ret, 64, size);
+//	ret = pmalloc(size);
+    posix_memalign(&ret, 64, size);
     return ret;
   }
 
   void* operator new[](size_t size) {
     void* ret;
-    //posix_memalign(&ret, 64, size);
-    ret = pmalloc(size);
+    posix_memalign(&ret, 64, size);
+    //ret = pmalloc(size);
 	return ret;
   }
 

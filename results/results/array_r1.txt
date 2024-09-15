@@ -9,32 +9,32 @@ Working on Thread: 0 (Length of thread :  2 ):
 Repairing for bug: pt_2 < 9999
 Before append: 2
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x9d2480'", -1, 0, '117_x']
+Adding: ['2_0', 102, "'0xa4b480'", -1, 0, '117_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '117_x']
 ####################################################################################
-Time taken to repair thread  0 :  0.007976293563842773  seconds.
+Time taken to repair thread  0 :  0.009302616119384766  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  2 ): 
 Repairing for bug: pt_2 < 9999
 Before append: 2
 ####################################################################################
-Time taken to repair thread  1 :  0.0013279914855957031  seconds.
+Time taken to repair thread  1 :  0.0014770030975341797  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 2 (Length of thread :  2 ): 
 Repairing for bug: pt_2 < 9999
 Before append: 2
 ####################################################################################
-Time taken to repair thread  2 :  0.000843048095703125  seconds.
+Time taken to repair thread  2 :  0.0009493827819824219  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 3 (Length of thread :  2 ): 
 Repairing for bug: pt_2 < 9999
 Before append: 2
 ####################################################################################
-Time taken to repair thread  3 :  0.0006442070007324219  seconds.
+Time taken to repair thread  3 :  0.0007202625274658203  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  1.239776611328125e-05  seconds.
+Time taken to recombine individual threads:  1.4543533325195312e-05  seconds.

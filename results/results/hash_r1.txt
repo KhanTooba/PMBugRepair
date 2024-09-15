@@ -13,7 +13,7 @@ Working on Thread: 0 (Length of thread :  300 ):
 Repairing for bug: pt_2 < 9999
 Before append: 300
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x7fe078002ea0'", -1, 0, '112_x']
+Adding: ['2_0', 102, "'0x7f2c24002c00'", -1, 0, '112_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '112_x']
 ####################################################################################
@@ -75,7 +75,7 @@ SAIS: And(Not(And(Not(pc_2 <= pc_2_1),
 Repairing for bug: pt_3 < 9999
 Before append: 303
 Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0x7fe078002ea4'", -1, 0, '113_x']
+Adding: ['3_0', 102, "'0x7f2c24002c04'", -1, 0, '113_x']
 Constraint added: pc_3 == pc_3_0 - 1
 Adding: ['3_1', 103, '0', -1, 0, '113_x']
 ####################################################################################
@@ -96,20 +96,20 @@ Num: 1220
 ITERATION:  1
 Not(And(pc_3 > pc_3_1,
         pc_4 > pc_3_1,
-        pc_3 < pc_3_Fence_1,
-        pc_4 < pc_3_Fence_1))
-Num: 1221
-ITERATION:  2
-Not(And(pc_3 > pc_3_1,
-        pc_4 > pc_3_1,
         pc_3 > pc_3_Fence_1,
         pc_4 > pc_3_Fence_1))
-Num: 1222
-ITERATION:  3
+Num: 1221
+ITERATION:  2
 Not(And(pc_3 < pc_3_1,
         pc_4 < pc_3_1,
         pc_3 > pc_3_Fence_1,
         pc_4 > pc_3_Fence_1))
+Num: 1222
+ITERATION:  3
+Not(And(pc_3 > pc_3_1,
+        pc_4 > pc_3_1,
+        pc_3 < pc_3_Fence_1,
+        pc_4 < pc_3_Fence_1))
 Num: 1223
 ITERATION:  4
 Not(And(pc_3 < pc_3_1,
@@ -119,16 +119,16 @@ Not(And(pc_3 < pc_3_1,
 Not running blocking constraint generation because already unsat.
 SAIS: And(Not(And(Not(pc_3 <= pc_3_1),
             Not(pc_4 <= pc_3_1),
-            Not(pc_3_Fence_1 <= pc_3),
-            Not(pc_3_Fence_1 <= pc_4))),
-    Not(And(Not(pc_3 <= pc_3_1),
-            Not(pc_4 <= pc_3_1),
             Not(pc_3 <= pc_3_Fence_1),
             Not(pc_4 <= pc_3_Fence_1))),
     Not(And(Not(pc_3_1 <= pc_3),
             Not(pc_3_1 <= pc_4),
             Not(pc_3 <= pc_3_Fence_1),
             Not(pc_4 <= pc_3_Fence_1))),
+    Not(And(Not(pc_3 <= pc_3_1),
+            Not(pc_4 <= pc_3_1),
+            Not(pc_3_Fence_1 <= pc_3),
+            Not(pc_3_Fence_1 <= pc_4))),
     Not(And(Not(pc_3_1 <= pc_3),
             Not(pc_3_1 <= pc_4),
             Not(pc_3_Fence_1 <= pc_3),
@@ -137,10 +137,11 @@ SAIS: And(Not(And(Not(pc_3 <= pc_3_1),
 Repairing for bug: pt_4 < 9999
 Before append: 306
 Bug found:  pt_4 pt_4
-Adding: ['4_0', 102, "'0x7fe078002ea8'", -1, 0, '114_x']
+Adding: ['4_0', 102, "'0x7f2c24002c08'", -1, 0, '114_x']
 Constraint added: pc_4 == pc_4_0 - 1
+Adding: ['4_1', 103, '0', -1, 0, '114_x']
 ####################################################################################
-Time taken to repair thread  0 :  11.669304847717285  seconds.
+Time taken to repair thread  0 :  9.595531940460205  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  300 ): 
@@ -182,7 +183,7 @@ Repair not found.
 Repairing for bug: pt_4 < 9999
 Before append: 300
 ####################################################################################
-Time taken to repair thread  1 :  0.5784821510314941  seconds.
+Time taken to repair thread  1 :  0.5833420753479004  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.008695363998413086  seconds.
+Time taken to recombine individual threads:  0.00845789909362793  seconds.

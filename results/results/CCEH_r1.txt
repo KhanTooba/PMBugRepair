@@ -1,0 +1,65 @@
+Returning from parceTrace.py
+Completed parsing.
+Local variables initialized.
+Number of bugs detected:  5
+pt_2 < 9999
+pt_3 < 9999
+pt_4 < 9999
+pt_5 < 9999
+pt_6 < 9999
+Number of threads:  2
+################################################################################################
+Working on Thread: 0 (Length of thread :  25 ): 
+Repairing for bug: pt_2 < 9999
+Before append: 25
+Bug found:  pt_2 pt_2
+Adding: ['2_0', 102, "'0x7ba110'", -1, 0, '11_x']
+Constraint added: pc_2 == pc_2_0 - 1
+####################################################################################
+Repairing for bug: pt_3 < 9999
+Before append: 26
+Bug found:  pt_3 pt_3
+Adding: ['3_0', 102, "'0x7ba148'", -1, 0, '8_x']
+Constraint added: pc_3 == pc_3_0 - 1
+####################################################################################
+Repairing for bug: pt_4 < 9999
+Before append: 27
+Bug found:  pt_4 pt_4
+Adding: ['4_0', 102, "'0x7ba150'", -1, 0, '21_x']
+Constraint added: pc_4 == pc_4_0 - 1
+####################################################################################
+Repairing for bug: pt_5 < 9999
+Before append: 28
+Bug found:  pt_5 pt_5
+Adding: ['5_0', 102, "'0x7ba110'", -1, 0, '99_x']
+Constraint added: pc_5 == pc_5_0 - 1
+####################################################################################
+Repairing for bug: pt_6 < 9999
+Before append: 29
+Bug found:  pt_6 pt_6
+Adding: ['6_0', 102, "'0x7ba158'", -1, 0, '98_x']
+Constraint added: pc_6 == pc_6_0 - 1
+####################################################################################
+Time taken to repair thread  0 :  0.03935122489929199  seconds.
+################################################################################################
+################################################################################################
+Working on Thread: 1 (Length of thread :  25 ): 
+Repairing for bug: pt_2 < 9999
+Before append: 25
+####################################################################################
+Repairing for bug: pt_3 < 9999
+Before append: 25
+####################################################################################
+Repairing for bug: pt_4 < 9999
+Before append: 25
+####################################################################################
+Repairing for bug: pt_5 < 9999
+Before append: 25
+####################################################################################
+Repairing for bug: pt_6 < 9999
+Before append: 25
+####################################################################################
+Time taken to repair thread  1 :  0.0061795711517333984  seconds.
+################################################################################################
+Beginning the recombination.
+Time taken to recombine individual threads:  5.364418029785156e-05  seconds.

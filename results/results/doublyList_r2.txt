@@ -9,37 +9,37 @@ And(pc_16 < pc_263, pt_16 > pc_263)
 And(pc_16 < pc_10, pt_16 > pc_10)
 And(pc_16 < pc_19, pt_16 > pc_19)
 And(pc_19 < pc_288, pt_19 > pc_288)
-And(pc_10 < pc_281, pt_10 > pc_281)
-And(pc_19 < pc_281, pt_19 > pc_281)
+And(pc_10 < pc_276, pt_10 > pc_276)
+And(pc_19 < pc_276, pt_19 > pc_276)
 And(pc_263 < pc_288, pt_263 > pc_288)
-And(pc_263 < pc_281, pt_263 > pc_281)
-And(pc_279 < pc_281, pt_279 > pc_281)
+And(pc_263 < pc_276, pt_263 > pc_276)
+And(pc_274 < pc_276, pt_274 > pc_276)
 And(pc_288 < pc_263, pt_288 > pc_263)
 And(pc_288 < pc_10, pt_288 > pc_10)
 And(pc_288 < pc_19, pt_288 > pc_19)
-And(pc_279 < pc_288, pt_279 > pc_288)
-And(pc_281 < pc_263, pt_281 > pc_263)
-And(pc_281 < pc_10, pt_281 > pc_10)
-And(pc_281 < pc_19, pt_281 > pc_19)
-set() {288, 2, 5, 263, 10, 16, 19, 279, 281}
+And(pc_276 < pc_10, pt_276 > pc_10)
+And(pc_276 < pc_263, pt_276 > pc_263)
+And(pc_276 < pc_19, pt_276 > pc_19)
+And(pc_274 < pc_288, pt_274 > pc_288)
+set() {288, 2, 5, 263, 10, 16, 274, 19, 276}
 
 ############################################################################
 Iteration:  1
 Number of threads:  46
 Completed building constraints.
-Number of constraints:  4414
+Number of constraints:  4412
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
-2 5 [2, 5, 10, 16, 19, 263, 279, 288, 281] [] [] []
+2 5 [2, 5, 10, 16, 19, 263, 274, 288, 276] [] [] []
 Adding locks for write. 2
-Found insertion point for first lock:  0 1 [2, 101, '0xcba610', '-1', 4, '66']
+Found insertion point for first lock:  0 1 [2, 101, '0x1268610', '-1', 4, '66']
 0
 Found fence: 2 [4, 103, '0', '-1', 4, '66_x']
 Adding locks for read and taking fence within lock. 5
 Found insertion point for second lock:  3
 1
 Found fence at  [7, 103, '0', '-1', 10, '67_x']
-Time taken:  7.295499801635742  seconds.
+Time taken:  10.095729351043701  seconds.
 
 ############################################################################
 
@@ -47,148 +47,148 @@ Time taken:  7.295499801635742  seconds.
 Iteration:  2
 Number of threads:  46
 Completed building constraints.
-Number of constraints:  4440
+Number of constraints:  4438
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_5 < pc_263, pt_5 > pc_263)
-5 263 [2, 5, 10, 16, 19, 263, 279, 288, 281] [] [2, 5] [2, 5]
+5 263 [2, 5, 10, 16, 19, 263, 274, 288, 276] [] [2, 5] [2, 5]
 Adding locks for read and taking fence within lock. 263
 Adding before:  ['Lock_0', 105, 'M1', -1, 4, '66_x']
-Adding before:  [3, 102, '0xcba610', '-1', 4, '66_x']
+Adding before:  [3, 102, '0x1268610', '-1', 4, '66_x']
 Adding before:  ['UnLock_0', 106, 'M1', -1, 4, '66_x']
-Adding before:  [5, 101, '0xcba618', '0xcba610', 10, '67']
+Adding before:  [5, 101, '0x1268618', '0x1268610', 10, '67']
 Adding before:  [7, 103, '0', '-1', 10, '67_x']
 Adding before:  [8, 103, '0', '-1', 0, '66_x']
-Adding before:  [10, 101, '0xcba620', '0xcba618', 42, '68']
-Adding before:  [12, 101, '0xcba700', '-1', 42, '66']
-Adding before:  [14, 101, '0xcba708', '0xcba610', 0, '67']
-Adding before:  [16, 101, '0xcba618', '-1', 18, '86']
+Adding before:  [10, 101, '0x1268620', '0x1268618', 38, '68']
+Adding before:  [12, 101, '0x1268700', '-1', 38, '66']
+Adding before:  [14, 101, '0x1268708', '0x1268610', 0, '67']
+Adding before:  [16, 101, '0x1268618', '-1', 18, '86']
 Adding before:  [18, 103, '0', '-1', 18, '86_x']
-Adding before:  [20, 102, '0xcba710', '-1', 44, '87_x']
-Adding before:  [22, 103, '0', '-1', 44, '86_x']
-Adding before:  [24, 101, '0xcba7c8', '0xcba610', 0, '67']
-Adding before:  [26, 101, '0xcba708', '-1', 0, '86']
-Adding before:  [28, 101, '0xcba820', '-1', 0, '66']
-Adding before:  [30, 101, '0xcba830', '0xcba618', 0, '68']
-Adding before:  [32, 101, '0xcba830', '0xcba618', 0, '87']
-Adding before:  [34, 101, '0xcba888', '0xcba610', 0, '67']
-Adding before:  [36, 101, '0xcba828', '-1', 0, '86']
-Adding before:  [38, 101, '0xcba8e0', '-1', 0, '66']
-Adding before:  [40, 101, '0xcba8f0', '0xcba618', 0, '68']
-Adding before:  [42, 101, '0xcba8f0', '0xcba618', 0, '87']
-Adding before:  [44, 101, '0xcba948', '0xcba610', 0, '67']
-Adding before:  [46, 101, '0xcba8e8', '-1', 0, '86']
-Adding before:  [48, 101, '0xcba9a0', '-1', 0, '66']
-Adding before:  [50, 101, '0xcba9b0', '0xcba618', 0, '68']
-Adding before:  [52, 101, '0xcba9b0', '0xcba618', 0, '87']
-Adding before:  [54, 101, '0xcbaa08', '0xcba610', 0, '67']
-Adding before:  [56, 101, '0xcba9a8', '-1', 0, '86']
-Adding before:  [58, 101, '0xcbaa60', '-1', 0, '66']
-Adding before:  [60, 101, '0xcbaa70', '0xcba618', 0, '68']
-Adding before:  [62, 101, '0xcbaa70', '0xcba618', 0, '87']
-Adding before:  [64, 101, '0xcbaac8', '0xcba610', 0, '67']
-Adding before:  [66, 101, '0xcbaa68', '-1', 0, '86']
-Adding before:  [68, 101, '0xcbab20', '-1', 0, '66']
-Adding before:  [70, 101, '0xcbab30', '0xcba618', 0, '68']
-Adding before:  [72, 101, '0xcbab30', '0xcba618', 0, '87']
-Adding before:  [74, 101, '0xcbab88', '0xcba610', 0, '67']
-Adding before:  [76, 101, '0xcbab28', '-1', 0, '86']
-Adding before:  [78, 101, '0xcbabe0', '-1', 0, '66']
-Adding before:  [80, 101, '0xcbabf0', '0xcba618', 0, '68']
-Adding before:  [82, 101, '0xcbabf0', '0xcba618', 0, '87']
-Adding before:  [84, 101, '0xcbac48', '0xcba610', 0, '67']
-Adding before:  [86, 101, '0xcbabe8', '-1', 0, '86']
-Adding before:  [88, 101, '0xcbaca0', '-1', 0, '66']
-Adding before:  [90, 101, '0xcbacb0', '0xcba618', 0, '68']
-Adding before:  [92, 101, '0xcbacb0', '0xcba618', 0, '87']
-Adding before:  [94, 101, '0xcbad08', '0xcba610', 0, '67']
-Adding before:  [96, 101, '0xcbaca8', '-1', 0, '86']
-Adding before:  [98, 101, '0xcbad60', '-1', 0, '66']
-Adding before:  [100, 101, '0xcbad70', '0xcba618', 0, '68']
-Adding before:  [102, 101, '0xcbad70', '0xcba618', 0, '87']
-Adding before:  [104, 101, '0xcbadc8', '0xcba610', 0, '67']
-Adding before:  [106, 101, '0xcbad68', '-1', 0, '86']
-Adding before:  [108, 101, '0xcbae20', '-1', 0, '66']
-Adding before:  [110, 101, '0xcbae30', '0xcba618', 0, '68']
-Adding before:  [112, 101, '0xcbae30', '0xcba618', 0, '87']
-Adding before:  [114, 101, '0xcbae88', '0xcba610', 0, '67']
-Adding before:  [116, 101, '0xcbae28', '-1', 0, '86']
-Adding before:  [118, 101, '0xcbaee0', '-1', 0, '66']
-Adding before:  [120, 101, '0xcbaef0', '0xcba618', 0, '68']
-Adding before:  [122, 101, '0xcbaef0', '0xcba618', 0, '87']
-Adding before:  [124, 101, '0xcbaf48', '0xcba610', 0, '67']
-Adding before:  [126, 101, '0xcbaee8', '-1', 0, '86']
-Adding before:  [128, 101, '0xcbafa0', '-1', 0, '66']
-Adding before:  [130, 101, '0xcbafb0', '0xcba618', 0, '68']
-Adding before:  [132, 101, '0xcbafb0', '0xcba618', 0, '87']
-Adding before:  [134, 101, '0xcbb008', '0xcba610', 0, '67']
-Adding before:  [136, 101, '0xcbafa8', '-1', 0, '86']
-Adding before:  [138, 101, '0xcbb060', '-1', 0, '66']
-Adding before:  [140, 101, '0xcbb070', '0xcba618', 0, '68']
-Adding before:  [142, 101, '0xcbb070', '0xcba618', 0, '87']
-Adding before:  [144, 101, '0xcbb0c8', '0xcba610', 0, '67']
-Adding before:  [146, 101, '0xcbb068', '-1', 0, '86']
-Adding before:  [148, 101, '0xcbb120', '-1', 0, '66']
-Adding before:  [150, 101, '0xcbb130', '0xcba618', 0, '68']
-Adding before:  [152, 101, '0xcbb130', '0xcba618', 0, '87']
-Adding before:  [154, 101, '0xcbb188', '0xcba610', 0, '67']
-Adding before:  [156, 101, '0xcbb128', '-1', 0, '86']
-Adding before:  [158, 101, '0xcbb1e0', '-1', 0, '66']
-Adding before:  [160, 101, '0xcbb1f0', '0xcba618', 0, '68']
-Adding before:  [162, 101, '0xcbb1f0', '0xcba618', 0, '87']
-Adding before:  [164, 101, '0xcbb248', '0xcba610', 0, '67']
-Adding before:  [166, 101, '0xcbb1e8', '-1', 0, '86']
-Adding before:  [168, 101, '0xcbb2a0', '-1', 0, '66']
-Adding before:  [170, 101, '0xcbb2b0', '0xcba618', 0, '68']
-Adding before:  [172, 101, '0xcbb2b0', '0xcba618', 0, '87']
-Adding before:  [174, 101, '0xcbb308', '0xcba610', 0, '67']
-Adding before:  [176, 101, '0xcbb2a8', '-1', 0, '86']
-Adding before:  [178, 101, '0xcbb360', '-1', 0, '66']
-Adding before:  [180, 101, '0xcbb370', '0xcba618', 0, '68']
-Adding before:  [182, 101, '0xcbb370', '0xcba618', 0, '87']
-Adding before:  [184, 101, '0xcbb3c8', '0xcba610', 0, '67']
-Adding before:  [186, 101, '0xcbb368', '-1', 0, '86']
-Adding before:  [188, 101, '0xcbb420', '-1', 0, '66']
-Adding before:  [190, 101, '0xcbb430', '0xcba618', 0, '68']
-Adding before:  [192, 101, '0xcbb430', '0xcba618', 0, '87']
-Adding before:  [194, 101, '0xcbb488', '0xcba610', 0, '67']
-Adding before:  [196, 101, '0xcbb428', '-1', 0, '86']
-Adding before:  [198, 101, '0xcbb4e0', '-1', 0, '66']
-Adding before:  [200, 101, '0xcbb4f0', '0xcba618', 0, '68']
-Adding before:  [202, 101, '0xcbb4f0', '0xcba618', 0, '87']
-Adding before:  [204, 101, '0xcbb548', '0xcba610', 0, '67']
-Adding before:  [206, 101, '0xcbb4e8', '-1', 0, '86']
-Adding before:  [208, 101, '0xcbb5a0', '-1', 0, '66']
-Adding before:  [210, 101, '0xcbb5b0', '0xcba618', 0, '68']
-Adding before:  [212, 101, '0xcbb5b0', '0xcba618', 0, '87']
-Adding before:  [214, 101, '0xcbb608', '0xcba610', 0, '67']
-Adding before:  [216, 101, '0xcbb5a8', '-1', 0, '86']
-Adding before:  [218, 101, '0xcbb660', '-1', 0, '66']
-Adding before:  [220, 101, '0xcbb670', '0xcba618', 0, '68']
-Adding before:  [222, 101, '0xcbb670', '0xcba618', 0, '87']
-Adding before:  [224, 101, '0xcbb6c8', '0xcba610', 0, '67']
-Adding before:  [226, 101, '0xcbb668', '-1', 0, '86']
-Adding before:  [228, 101, '0xcbb720', '-1', 0, '66']
-Adding before:  [230, 101, '0xcbb730', '0xcba618', 0, '68']
-Adding before:  [232, 101, '0xcbb730', '0xcba618', 0, '87']
-Adding before:  [234, 101, '0xcbb788', '0xcba610', 0, '67']
-Adding before:  [236, 101, '0xcbb728', '-1', 0, '86']
-Adding before:  [238, 101, '0xcbb7e0', '-1', 0, '66']
-Adding before:  [240, 101, '0xcbb7f0', '0xcba618', 0, '68']
-Adding before:  [242, 101, '0xcbb7f0', '0xcba618', 0, '87']
-Adding before:  [244, 101, '0xcbb848', '0xcba610', 0, '67']
-Adding before:  [246, 101, '0xcbb7e8', '-1', 0, '86']
-Adding before:  [248, 101, '0xcbb8a0', '-1', 0, '66']
-Adding before:  [250, 101, '0xcbb8b0', '0xcba618', 0, '68']
-Adding before:  [252, 101, '0xcbb8b0', '0xcba618', 0, '87']
-Adding before:  [254, 101, '0xcbb908', '0xcba610', 0, '67']
-Adding before:  [256, 101, '0xcbb8a8', '-1', 0, '86']
-Adding before:  [258, 101, '0xcbb960', '-1', 0, '66']
-Adding before:  [260, 101, '0xcbb970', '0xcba618', 0, '68']
-Adding before:  [262, 101, '0xcbb970', '0xcba618', 0, '87']
+Adding before:  [20, 102, '0x1268710', '-1', 42, '87_x']
+Adding before:  [22, 103, '0', '-1', 42, '86_x']
+Adding before:  [24, 101, '0x12687c8', '0x1268610', 0, '67']
+Adding before:  [26, 101, '0x1268708', '-1', 0, '86']
+Adding before:  [28, 101, '0x1268820', '-1', 0, '66']
+Adding before:  [30, 101, '0x1268830', '0x1268618', 0, '68']
+Adding before:  [32, 101, '0x1268830', '0x1268618', 0, '87']
+Adding before:  [34, 101, '0x1268888', '0x1268610', 0, '67']
+Adding before:  [36, 101, '0x1268828', '-1', 0, '86']
+Adding before:  [38, 101, '0x12688e0', '-1', 0, '66']
+Adding before:  [40, 101, '0x12688f0', '0x1268618', 0, '68']
+Adding before:  [42, 101, '0x12688f0', '0x1268618', 0, '87']
+Adding before:  [44, 101, '0x1268948', '0x1268610', 0, '67']
+Adding before:  [46, 101, '0x12688e8', '-1', 0, '86']
+Adding before:  [48, 101, '0x12689a0', '-1', 0, '66']
+Adding before:  [50, 101, '0x12689b0', '0x1268618', 0, '68']
+Adding before:  [52, 101, '0x12689b0', '0x1268618', 0, '87']
+Adding before:  [54, 101, '0x1268a08', '0x1268610', 0, '67']
+Adding before:  [56, 101, '0x12689a8', '-1', 0, '86']
+Adding before:  [58, 101, '0x1268a60', '-1', 0, '66']
+Adding before:  [60, 101, '0x1268a70', '0x1268618', 0, '68']
+Adding before:  [62, 101, '0x1268a70', '0x1268618', 0, '87']
+Adding before:  [64, 101, '0x1268ac8', '0x1268610', 0, '67']
+Adding before:  [66, 101, '0x1268a68', '-1', 0, '86']
+Adding before:  [68, 101, '0x1268b20', '-1', 0, '66']
+Adding before:  [70, 101, '0x1268b30', '0x1268618', 0, '68']
+Adding before:  [72, 101, '0x1268b30', '0x1268618', 0, '87']
+Adding before:  [74, 101, '0x1268b88', '0x1268610', 0, '67']
+Adding before:  [76, 101, '0x1268b28', '-1', 0, '86']
+Adding before:  [78, 101, '0x1268be0', '-1', 0, '66']
+Adding before:  [80, 101, '0x1268bf0', '0x1268618', 0, '68']
+Adding before:  [82, 101, '0x1268bf0', '0x1268618', 0, '87']
+Adding before:  [84, 101, '0x1268c48', '0x1268610', 0, '67']
+Adding before:  [86, 101, '0x1268be8', '-1', 0, '86']
+Adding before:  [88, 101, '0x1268ca0', '-1', 0, '66']
+Adding before:  [90, 101, '0x1268cb0', '0x1268618', 0, '68']
+Adding before:  [92, 101, '0x1268cb0', '0x1268618', 0, '87']
+Adding before:  [94, 101, '0x1268d08', '0x1268610', 0, '67']
+Adding before:  [96, 101, '0x1268ca8', '-1', 0, '86']
+Adding before:  [98, 101, '0x1268d60', '-1', 0, '66']
+Adding before:  [100, 101, '0x1268d70', '0x1268618', 0, '68']
+Adding before:  [102, 101, '0x1268d70', '0x1268618', 0, '87']
+Adding before:  [104, 101, '0x1268dc8', '0x1268610', 0, '67']
+Adding before:  [106, 101, '0x1268d68', '-1', 0, '86']
+Adding before:  [108, 101, '0x1268e20', '-1', 0, '66']
+Adding before:  [110, 101, '0x1268e30', '0x1268618', 0, '68']
+Adding before:  [112, 101, '0x1268e30', '0x1268618', 0, '87']
+Adding before:  [114, 101, '0x1268e88', '0x1268610', 0, '67']
+Adding before:  [116, 101, '0x1268e28', '-1', 0, '86']
+Adding before:  [118, 101, '0x1268ee0', '-1', 0, '66']
+Adding before:  [120, 101, '0x1268ef0', '0x1268618', 0, '68']
+Adding before:  [122, 101, '0x1268ef0', '0x1268618', 0, '87']
+Adding before:  [124, 101, '0x1268f48', '0x1268610', 0, '67']
+Adding before:  [126, 101, '0x1268ee8', '-1', 0, '86']
+Adding before:  [128, 101, '0x1268fa0', '-1', 0, '66']
+Adding before:  [130, 101, '0x1268fb0', '0x1268618', 0, '68']
+Adding before:  [132, 101, '0x1268fb0', '0x1268618', 0, '87']
+Adding before:  [134, 101, '0x1269008', '0x1268610', 0, '67']
+Adding before:  [136, 101, '0x1268fa8', '-1', 0, '86']
+Adding before:  [138, 101, '0x1269060', '-1', 0, '66']
+Adding before:  [140, 101, '0x1269070', '0x1268618', 0, '68']
+Adding before:  [142, 101, '0x1269070', '0x1268618', 0, '87']
+Adding before:  [144, 101, '0x12690c8', '0x1268610', 0, '67']
+Adding before:  [146, 101, '0x1269068', '-1', 0, '86']
+Adding before:  [148, 101, '0x1269120', '-1', 0, '66']
+Adding before:  [150, 101, '0x1269130', '0x1268618', 0, '68']
+Adding before:  [152, 101, '0x1269130', '0x1268618', 0, '87']
+Adding before:  [154, 101, '0x1269188', '0x1268610', 0, '67']
+Adding before:  [156, 101, '0x1269128', '-1', 0, '86']
+Adding before:  [158, 101, '0x12691e0', '-1', 0, '66']
+Adding before:  [160, 101, '0x12691f0', '0x1268618', 0, '68']
+Adding before:  [162, 101, '0x12691f0', '0x1268618', 0, '87']
+Adding before:  [164, 101, '0x1269248', '0x1268610', 0, '67']
+Adding before:  [166, 101, '0x12691e8', '-1', 0, '86']
+Adding before:  [168, 101, '0x12692a0', '-1', 0, '66']
+Adding before:  [170, 101, '0x12692b0', '0x1268618', 0, '68']
+Adding before:  [172, 101, '0x12692b0', '0x1268618', 0, '87']
+Adding before:  [174, 101, '0x1269308', '0x1268610', 0, '67']
+Adding before:  [176, 101, '0x12692a8', '-1', 0, '86']
+Adding before:  [178, 101, '0x1269360', '-1', 0, '66']
+Adding before:  [180, 101, '0x1269370', '0x1268618', 0, '68']
+Adding before:  [182, 101, '0x1269370', '0x1268618', 0, '87']
+Adding before:  [184, 101, '0x12693c8', '0x1268610', 0, '67']
+Adding before:  [186, 101, '0x1269368', '-1', 0, '86']
+Adding before:  [188, 101, '0x1269420', '-1', 0, '66']
+Adding before:  [190, 101, '0x1269430', '0x1268618', 0, '68']
+Adding before:  [192, 101, '0x1269430', '0x1268618', 0, '87']
+Adding before:  [194, 101, '0x1269488', '0x1268610', 0, '67']
+Adding before:  [196, 101, '0x1269428', '-1', 0, '86']
+Adding before:  [198, 101, '0x12694e0', '-1', 0, '66']
+Adding before:  [200, 101, '0x12694f0', '0x1268618', 0, '68']
+Adding before:  [202, 101, '0x12694f0', '0x1268618', 0, '87']
+Adding before:  [204, 101, '0x1269548', '0x1268610', 0, '67']
+Adding before:  [206, 101, '0x12694e8', '-1', 0, '86']
+Adding before:  [208, 101, '0x12695a0', '-1', 0, '66']
+Adding before:  [210, 101, '0x12695b0', '0x1268618', 0, '68']
+Adding before:  [212, 101, '0x12695b0', '0x1268618', 0, '87']
+Adding before:  [214, 101, '0x1269608', '0x1268610', 0, '67']
+Adding before:  [216, 101, '0x12695a8', '-1', 0, '86']
+Adding before:  [218, 101, '0x1269660', '-1', 0, '66']
+Adding before:  [220, 101, '0x1269670', '0x1268618', 0, '68']
+Adding before:  [222, 101, '0x1269670', '0x1268618', 0, '87']
+Adding before:  [224, 101, '0x12696c8', '0x1268610', 0, '67']
+Adding before:  [226, 101, '0x1269668', '-1', 0, '86']
+Adding before:  [228, 101, '0x1269720', '-1', 0, '66']
+Adding before:  [230, 101, '0x1269730', '0x1268618', 0, '68']
+Adding before:  [232, 101, '0x1269730', '0x1268618', 0, '87']
+Adding before:  [234, 101, '0x1269788', '0x1268610', 0, '67']
+Adding before:  [236, 101, '0x1269728', '-1', 0, '86']
+Adding before:  [238, 101, '0x12697e0', '-1', 0, '66']
+Adding before:  [240, 101, '0x12697f0', '0x1268618', 0, '68']
+Adding before:  [242, 101, '0x12697f0', '0x1268618', 0, '87']
+Adding before:  [244, 101, '0x1269848', '0x1268610', 0, '67']
+Adding before:  [246, 101, '0x12697e8', '-1', 0, '86']
+Adding before:  [248, 101, '0x12698a0', '-1', 0, '66']
+Adding before:  [250, 101, '0x12698b0', '0x1268618', 0, '68']
+Adding before:  [252, 101, '0x12698b0', '0x1268618', 0, '87']
+Adding before:  [254, 101, '0x1269908', '0x1268610', 0, '67']
+Adding before:  [256, 101, '0x12698a8', '-1', 0, '86']
+Adding before:  [258, 101, '0x1269960', '-1', 0, '66']
+Adding before:  [260, 101, '0x1269970', '0x1268618', 0, '68']
+Adding before:  [262, 101, '0x1269970', '0x1268618', 0, '87']
 Found insertion point for second lock:  265
 2
-Found fence at  [1449, 103, '0', '-1', 45, '150_x']
-Time taken:  8.399617195129395  seconds.
+Found fence at  [1432, 103, '0', '-1', 45, '150_x']
+Time taken:  20.42835760116577  seconds.
 
 ############################################################################
 
@@ -196,9 +196,9 @@ Time taken:  8.399617195129395  seconds.
 Iteration:  3
 Number of threads:  46
 Completed building constraints.
-Number of constraints:  6478
+Number of constraints:  6459
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.31394147872924805  seconds.
+Time taken:  0.3081233501434326  seconds.
 
 ############################################################################
 

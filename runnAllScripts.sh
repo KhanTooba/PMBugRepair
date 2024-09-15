@@ -1,6 +1,8 @@
 make -f benchmarkMake -s -B
 cd experiments/fastFair
 ./all_commands.sh
+cd ../CCEH
+sudo sh commands.sh
 cd ../../repair
 make -f makeRepair -s -B
 cat Report.txt

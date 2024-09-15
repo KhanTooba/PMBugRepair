@@ -22,21 +22,21 @@ Working on Thread: 0 (Length of thread :  52 ):
 Repairing for bug: pt_2 < 9999
 Before append: 52
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x1412780'", -1, 0, '40_x']
+Adding: ['2_0', 102, "'0x146f780'", -1, 0, '40_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, '40_x']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
 Before append: 54
 Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0x1412788'", -1, 0, '41_x']
+Adding: ['3_0', 102, "'0x146f788'", -1, 0, '41_x']
 Constraint added: pc_3 == pc_3_0 - 1
 Adding: ['3_1', 103, '0', -1, 0, '41_x']
 ####################################################################################
 Repairing for bug: pt_4 < 9999
 Before append: 56
 Bug found:  pt_4 pt_4
-Adding: ['4_0', 102, "'0x1412830'", -1, 0, '45_x']
+Adding: ['4_0', 102, "'0x146f830'", -1, 0, '45_x']
 Constraint added: pc_4 == pc_4_0 - 1
 ####################################################################################
 Repairing for bug: pt_54 < 9999
@@ -125,7 +125,7 @@ Repair not found.
 Repairing for bug: pt_65 < 9999
 Before append: 57
 ####################################################################################
-Time taken to repair thread  0 :  0.3846604824066162  seconds.
+Time taken to repair thread  0 :  0.3826005458831787  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 1 (Length of thread :  240 ): 
@@ -141,7 +141,7 @@ Before append: 240
 Repairing for bug: pt_54 < 9999
 Before append: 240
 Bug found:  pt_54 pt_54
-Adding: ['54_0', 102, "'0x7f18c8002740'", -1, 1, '73_x']
+Adding: ['54_0', 102, "'0x7f3730002070'", -1, 1, '73_x']
 Constraint added: pc_54 == pc_54_0 - 1
 Adding: ['54_1', 103, '0', -1, 1, '73_x']
 ####################################################################################
@@ -203,7 +203,7 @@ SAIS: And(Not(And(Not(pc_54_1 <= pc_54),
 Repairing for bug: pt_55 < 9999
 Before append: 243
 Bug found:  pt_55 pt_55
-Adding: ['55_0', 102, "'0x7f18c8002748'", -1, 1, '74_x']
+Adding: ['55_0', 102, "'0x7f3730002078'", -1, 1, '74_x']
 Constraint added: pc_55 == pc_55_0 - 1
 Adding: ['55_1', 103, '0', -1, 1, '74_x']
 ####################################################################################
@@ -222,22 +222,22 @@ Blocking constraints: [[55, '55_1'], [57, '55_1'], [55, '55_Fence_1'], [57, '55_
 Bug is: Not(pt_55 < pt_57)
 Num: 980
 ITERATION:  1
-Not(And(pc_55 < pc_55_1,
-        pc_57 < pc_55_1,
+Not(And(pc_55 > pc_55_1,
+        pc_57 > pc_55_1,
         pc_55 < pc_55_Fence_1,
         pc_57 < pc_55_Fence_1))
 Num: 981
 ITERATION:  2
 Not(And(pc_55 > pc_55_1,
         pc_57 > pc_55_1,
-        pc_55 < pc_55_Fence_1,
-        pc_57 < pc_55_Fence_1))
-Num: 982
-ITERATION:  3
-Not(And(pc_55 > pc_55_1,
-        pc_57 > pc_55_1,
         pc_55 > pc_55_Fence_1,
         pc_57 > pc_55_Fence_1))
+Num: 982
+ITERATION:  3
+Not(And(pc_55 < pc_55_1,
+        pc_57 < pc_55_1,
+        pc_55 < pc_55_Fence_1,
+        pc_57 < pc_55_Fence_1))
 Num: 983
 ITERATION:  4
 Not(And(pc_55 < pc_55_1,
@@ -245,11 +245,7 @@ Not(And(pc_55 < pc_55_1,
         pc_55 > pc_55_Fence_1,
         pc_57 > pc_55_Fence_1))
 Not running blocking constraint generation because already unsat.
-SAIS: And(Not(And(Not(pc_55_1 <= pc_55),
-            Not(pc_55_1 <= pc_57),
-            Not(pc_55_Fence_1 <= pc_55),
-            Not(pc_55_Fence_1 <= pc_57))),
-    Not(And(Not(pc_55 <= pc_55_1),
+SAIS: And(Not(And(Not(pc_55 <= pc_55_1),
             Not(pc_57 <= pc_55_1),
             Not(pc_55_Fence_1 <= pc_55),
             Not(pc_55_Fence_1 <= pc_57))),
@@ -259,13 +255,17 @@ SAIS: And(Not(And(Not(pc_55_1 <= pc_55),
             Not(pc_57 <= pc_55_Fence_1))),
     Not(And(Not(pc_55_1 <= pc_55),
             Not(pc_55_1 <= pc_57),
+            Not(pc_55_Fence_1 <= pc_55),
+            Not(pc_55_Fence_1 <= pc_57))),
+    Not(And(Not(pc_55_1 <= pc_55),
+            Not(pc_55_1 <= pc_57),
             Not(pc_55 <= pc_55_Fence_1),
             Not(pc_57 <= pc_55_Fence_1))))
 ####################################################################################
 Repairing for bug: pt_56 < 9999
 Before append: 246
 Bug found:  pt_56 pt_56
-Adding: ['56_0', 102, "'0x7f18c8002748'", -1, 1, '84_x']
+Adding: ['56_0', 102, "'0x7f3730002078'", -1, 1, '84_x']
 Constraint added: pc_56 == pc_56_0 - 1
 Adding: ['56_1', 103, '0', -1, 1, '84_x']
 ####################################################################################
@@ -286,12 +286,12 @@ Num: 988
 ITERATION:  1
 Not(And(pc_56 > pc_56_1,
         pc_57 > pc_56_1,
-        pc_56 > pc_56_Fence_2,
-        pc_57 > pc_56_Fence_2))
+        pc_56 < pc_56_Fence_2,
+        pc_57 < pc_56_Fence_2))
 Num: 989
 ITERATION:  2
-Not(And(pc_56 < pc_56_1,
-        pc_57 < pc_56_1,
+Not(And(pc_56 > pc_56_1,
+        pc_57 > pc_56_1,
         pc_56 > pc_56_Fence_2,
         pc_57 > pc_56_Fence_2))
 Num: 990
@@ -302,45 +302,44 @@ Not(And(pc_56 < pc_56_1,
         pc_57 < pc_56_Fence_2))
 Num: 991
 ITERATION:  4
-Not(And(pc_56 > pc_56_1,
-        pc_57 > pc_56_1,
-        pc_56 < pc_56_Fence_2,
-        pc_57 < pc_56_Fence_2))
+Not(And(pc_56 < pc_56_1,
+        pc_57 < pc_56_1,
+        pc_56 > pc_56_Fence_2,
+        pc_57 > pc_56_Fence_2))
 Not running blocking constraint generation because already unsat.
 SAIS: And(Not(And(Not(pc_56 <= pc_56_1),
             Not(pc_57 <= pc_56_1),
-            Not(pc_56 <= pc_56_Fence_2),
-            Not(pc_57 <= pc_56_Fence_2))),
-    Not(And(Not(pc_56_1 <= pc_56),
-            Not(pc_56_1 <= pc_57),
+            Not(pc_56_Fence_2 <= pc_56),
+            Not(pc_56_Fence_2 <= pc_57))),
+    Not(And(Not(pc_56 <= pc_56_1),
+            Not(pc_57 <= pc_56_1),
             Not(pc_56 <= pc_56_Fence_2),
             Not(pc_57 <= pc_56_Fence_2))),
     Not(And(Not(pc_56_1 <= pc_56),
             Not(pc_56_1 <= pc_57),
             Not(pc_56_Fence_2 <= pc_56),
             Not(pc_56_Fence_2 <= pc_57))),
-    Not(And(Not(pc_56 <= pc_56_1),
-            Not(pc_57 <= pc_56_1),
-            Not(pc_56_Fence_2 <= pc_56),
-            Not(pc_56_Fence_2 <= pc_57))))
+    Not(And(Not(pc_56_1 <= pc_56),
+            Not(pc_56_1 <= pc_57),
+            Not(pc_56 <= pc_56_Fence_2),
+            Not(pc_57 <= pc_56_Fence_2))))
 ####################################################################################
 Repairing for bug: pt_57 < 9999
 Before append: 249
 Bug found:  pt_57 pt_57
-Adding: ['57_0', 102, "'0x1412e60'", -1, 1, '85_x']
+Adding: ['57_0', 102, "'0x146fd40'", -1, 1, '85_x']
 Constraint added: pc_57 == pc_57_0 - 1
-Adding: ['57_1', 103, '0', -1, 1, '85_x']
 ####################################################################################
 Repairing for bug: pt_63 < pt_65
 MPB Bug found: pt_63 < pt_65
-Before append: 251
-After append: 251
+Before append: 250
+After append: 250
 The bug flag is: -1
-The number of assertions: 981
+The number of assertions: 979
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_63 < pt_65)
-Num: 990
+Num: 988
 ITERATION:  1
 Not(And)
 Not running blocking constraint generation because already unsat.
@@ -348,14 +347,14 @@ SAIS: False
 Repair not found.
 ####################################################################################
 Repairing for bug: pt_64 < 9999
-Before append: 251
+Before append: 250
 ####################################################################################
 Repairing for bug: pt_64 < pt_65
 MPB Bug found: pt_64 < pt_65
-Before append: 251
-After append: 251
+Before append: 250
+After append: 250
 The bug flag is: -1
-The number of assertions: 981
+The number of assertions: 979
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_64 < pt_65)
@@ -364,9 +363,9 @@ SAIS: True
 Repair not found.
 ####################################################################################
 Repairing for bug: pt_65 < 9999
-Before append: 251
+Before append: 250
 ####################################################################################
-Time taken to repair thread  1 :  10.120606899261475  seconds.
+Time taken to repair thread  1 :  10.210285425186157  seconds.
 ################################################################################################
 ################################################################################################
 Working on Thread: 2 (Length of thread :  240 ): 
@@ -452,7 +451,7 @@ Repair not found.
 Repairing for bug: pt_64 < 9999
 Before append: 241
 Bug found:  pt_64 pt_64
-Adding: ['64_0', 102, "'0x7f18d0002138'", -1, 2, '93_x']
+Adding: ['64_0', 102, "'0x7f3728002808'", -1, 2, '93_x']
 Constraint added: pc_64 == pc_64_0 - 1
 Adding: ['64_1', 103, '0', -1, 2, '93_x']
 ####################################################################################
@@ -477,10 +476,10 @@ Repair not found.
 Repairing for bug: pt_65 < 9999
 Before append: 243
 Bug found:  pt_65 pt_65
-Adding: ['65_0', 102, "'0x1412b00'", -1, 2, '94_x']
+Adding: ['65_0', 102, "'0x146fef0'", -1, 2, '94_x']
 Constraint added: pc_65 == pc_65_0 - 1
 ####################################################################################
-Time taken to repair thread  2 :  1.2565712928771973  seconds.
+Time taken to repair thread  2 :  1.2630136013031006  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.00718379020690918  seconds.
+Time taken to recombine individual threads:  0.006963253021240234  seconds.
