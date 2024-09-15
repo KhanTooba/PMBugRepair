@@ -19,6 +19,8 @@ def getLoc():
                                          "../results/outputs/"+file+"_output.txt"])
     listOfFiles['fastFair'] = count_lines(["../experiments/fastFair/btree.h",
                                            "../results/outputs/fastFair_output.txt"])
+    listOfFiles['CCEH'] = count_lines(["../experiments/CCEH/src/CCEH_MSB.cpp",
+                                           "../results/outputs/CCEH_output.txt"])
     return listOfFiles
 
 def getFile():
