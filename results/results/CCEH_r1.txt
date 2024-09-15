@@ -1,65 +1,53 @@
 Returning from parceTrace.py
 Completed parsing.
 Local variables initialized.
-Number of bugs detected:  5
+Number of bugs detected:  6
 pt_2 < 9999
-pt_3 < 9999
-pt_4 < 9999
-pt_5 < 9999
-pt_6 < 9999
-Number of threads:  2
+pt_12 < 9999
+pt_13 < 9999
+pt_14 < 9999
+pt_15 < 9999
+pt_16 < 9999
+Number of threads:  1
 ################################################################################################
-Working on Thread: 0 (Length of thread :  25 ): 
+Working on Thread: 0 (Length of thread :  35 ): 
 Repairing for bug: pt_2 < 9999
-Before append: 25
+Before append: 35
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x7ba110'", -1, 0, '11_x']
+Adding: ['2_0', 102, "'0x1c14890'", -1, 0, '56_x']
 Constraint added: pc_2 == pc_2_0 - 1
 ####################################################################################
-Repairing for bug: pt_3 < 9999
-Before append: 26
-Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0x7ba148'", -1, 0, '8_x']
-Constraint added: pc_3 == pc_3_0 - 1
+Repairing for bug: pt_12 < 9999
+Before append: 36
+Bug found:  pt_12 pt_12
+Adding: ['12_0', 102, "'0x1c17180'", -1, 0, '11_x']
+Constraint added: pc_12 == pc_12_0 - 1
 ####################################################################################
-Repairing for bug: pt_4 < 9999
-Before append: 27
-Bug found:  pt_4 pt_4
-Adding: ['4_0', 102, "'0x7ba150'", -1, 0, '21_x']
-Constraint added: pc_4 == pc_4_0 - 1
+Repairing for bug: pt_13 < 9999
+Before append: 37
+Bug found:  pt_13 pt_13
+Adding: ['13_0', 102, "'0x1c171b8'", -1, 0, '8_x']
+Constraint added: pc_13 == pc_13_0 - 1
 ####################################################################################
-Repairing for bug: pt_5 < 9999
-Before append: 28
-Bug found:  pt_5 pt_5
-Adding: ['5_0', 102, "'0x7ba110'", -1, 0, '99_x']
-Constraint added: pc_5 == pc_5_0 - 1
+Repairing for bug: pt_14 < 9999
+Before append: 38
+Bug found:  pt_14 pt_14
+Adding: ['14_0', 102, "'0x1c171c0'", -1, 0, '21_x']
+Constraint added: pc_14 == pc_14_0 - 1
 ####################################################################################
-Repairing for bug: pt_6 < 9999
-Before append: 29
-Bug found:  pt_6 pt_6
-Adding: ['6_0', 102, "'0x7ba158'", -1, 0, '98_x']
-Constraint added: pc_6 == pc_6_0 - 1
+Repairing for bug: pt_15 < 9999
+Before append: 39
+Bug found:  pt_15 pt_15
+Adding: ['15_0', 102, "'0x1c17180'", -1, 0, '99_x']
+Constraint added: pc_15 == pc_15_0 - 1
 ####################################################################################
-Time taken to repair thread  0 :  0.03935122489929199  seconds.
-################################################################################################
-################################################################################################
-Working on Thread: 1 (Length of thread :  25 ): 
-Repairing for bug: pt_2 < 9999
-Before append: 25
+Repairing for bug: pt_16 < 9999
+Before append: 40
+Bug found:  pt_16 pt_16
+Adding: ['16_0', 102, "'0x1c171c8'", -1, 0, '98_x']
+Constraint added: pc_16 == pc_16_0 - 1
 ####################################################################################
-Repairing for bug: pt_3 < 9999
-Before append: 25
-####################################################################################
-Repairing for bug: pt_4 < 9999
-Before append: 25
-####################################################################################
-Repairing for bug: pt_5 < 9999
-Before append: 25
-####################################################################################
-Repairing for bug: pt_6 < 9999
-Before append: 25
-####################################################################################
-Time taken to repair thread  1 :  0.0061795711517333984  seconds.
+Time taken to repair thread  0 :  0.07464313507080078  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  5.364418029785156e-05  seconds.
+Time taken to recombine individual threads:  3.886222839355469e-05  seconds.
