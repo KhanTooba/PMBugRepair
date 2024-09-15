@@ -348,7 +348,8 @@ namespace pminv {
                 calledFunc->getName().find("simuFlushOpt")!=std::string::npos) {
 
                 Value *argData = callInst->getArgOperand(0); 
-                Value *argLen = Builder.CreateTrunc(callInst->getArgOperand(1), int32Type); 
+                Value *argLen = Builder.CreateTrunc(callInst->getArgOperand(1), 
+                                                    llvm::Type::getInt32Ty(Context);); 
                 llvm::Type *type = argLen->getType();
     
                 // Print the type in a human-readable format
