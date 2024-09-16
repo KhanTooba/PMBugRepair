@@ -1,3 +1,8 @@
+
+
+
+
+
 import sys    
 
 def format_STOREs(row, r):
@@ -31,7 +36,12 @@ def fileReader(name):
     loads = {}
     dependencies = {}
     r = 0
+    rows = []
     for row in f:
+        rows.append(row)
+
+    for i in range(len(rows)):
+        row = rows[i]
         r += 1
         if "Load" in str(row) or "Store" in str(row):
             # print(row)
@@ -48,10 +58,20 @@ def fileReader(name):
             contents.append(stmt)
             # print(stmt)
             # print()
-        
-        # if "Store" in str(row):
-        #     stmt = format_STOREs(str(row), r)
-        #     contents.append(stmt)
+        # if "Load" in str(row):
+        #     # Store: 0x1f7a1c8 Size: 8 ID: 912 @Ln,Col: 98,7 Scope: CCEH; <Thread ID:140586500802368>
+        #     # Load: 0x1f7a1c8 Size: 8 ID: 919 @Ln,Col: 100,30 Scope: CCEH; <Thread ID:140586500802368>
+        #     dest = str(row).split(" ")[5]
+        #     source = ""
+        #     # print("For loads: ", dest)
+        #     for j in range(0, i):
+        #         if "Store" in str(rows[j]) and str(rows[j]).split(" ")[1]==str(row).split(" ")[1]:
+        #             print("Getting dependency from Loads")
+        #             source = str(rows[j]).split(" ")[5]
+
+        if "Store" in str(row):
+            stmt = format_STOREs(str(row), r)
+            contents.append(stmt)
             
         elif "FLUSH" in str(row):
             stmt = format_FLUSH(str(row), r)

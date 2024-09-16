@@ -38,7 +38,7 @@ int main(int argc, char* argv[]){
 #endif
 
     struct timespec start, end;
-    uint64_t* keys = (uint64_t*)pmalloc(sizeof(uint64_t)*numData);
+    uint64_t* keys = (uint64_t*)malloc(sizeof(uint64_t)*numData);
 
     ifstream ifs;
     string dataset = "input_rand.txt";
