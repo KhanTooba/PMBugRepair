@@ -449,9 +449,10 @@ def addConstraints(inputFileName):
             
             for j in range(i+1, length):
                 if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]==trace[j][-2]:
-                    if [str(trace[i][-1]), str(trace[j][-1])] not in mpbs:
+                    if str(trace[i][-1]) not in mpbs:
                         bugs.append(Int("pt_"+str(trace[i][0]))<Int("pt_"+str(trace[j][0])))
-                        mpbs.append([str(trace[i][-1]), str(trace[j][-1])])
+                        mpbs.append(str(trace[i][-1]))
+                        break
     # print(1/0)
     
     print("Number of bugs detected: ", len(bugs))
