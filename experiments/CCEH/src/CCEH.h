@@ -164,7 +164,7 @@ class CCEH : public Hash {
 
     void* operator new(size_t size) {
       void *ret;
-	ret = pmalloc(size);
+	    ret = pmalloc(size);
       //posix_memalign(&ret, 64, size);
       return ret;
     }

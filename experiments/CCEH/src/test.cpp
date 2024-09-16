@@ -64,11 +64,11 @@ int main(int argc, char* argv[]){
 #ifndef MULTITHREAD
     cout << "Start Insertion" << endl;
     //clear_cache();
-cout<<"Cleared cached"<<endl;
+    cout<<"Cleared cached"<<endl;
     clock_gettime(CLOCK_MONOTONIC, &start);
-cout<<numData<<endl;
+    cout<<numData<<endl;
     for(int i=0; i<numData; i++){
-	table->Insert(keys[i], reinterpret_cast<Value_t>(keys[i]));
+	    table->Insert(keys[i], reinterpret_cast<Value_t>(keys[i]));
     }
     clock_gettime(CLOCK_MONOTONIC, &end);
 
