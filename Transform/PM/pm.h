@@ -35,8 +35,8 @@ extern "C" {
   
   void __pmc_printStoreAddr(long long int addr, int size, int ID, int Line, int Col, const char* scope);
   void __pmc_printLoadAddr(long long int addr, int size, int ID, int Line, int Col, const char* scope);
-  int __pmc_pobj_alloc(PMEMobjpool *pop, TOID(struct Segment) *oidp, size_t size, pmemobj_constr constructor, void *arg);
-
+  int __pmc_pobj_alloc(PMEMobjpool *pop, TOID(struct Segment) *oidp, uint64_t type_num, size_t size, pmemobj_constr constructor, void *arg) {
+    
 
   void simuSfence();
   void simuFlushOpt(void *ptr, long int len);
