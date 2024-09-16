@@ -72,13 +72,13 @@ void  *__pmc_malloc  (size_t size) {
 }
 
 int __pmc_pobj_alloc(PMEMobjpool *pop, TOID(struct Segment) *oidp, uint64_t type_num, size_t size, pmemobj_constr constructor, void *arg) {
+    
     int ret;
-
     // Call the original POBJ_ALLOC function
     ret = POBJ_ALLOC(pop, oidp, type_num, size, constructor, arg);
 
     if (my_flag && ret == 0) {  // Check if allocation was successful and logging is enabled
-        void *ptr = pmemobj_direct(oidp->oid);  // Get a direct pointer to the allocated memory
+        void *ptr = pmemobj_oid(oidp); // Get a direct pointer to the allocated memory
         pthread_mutex_lock(&mtx);
 
         // Log the address range
