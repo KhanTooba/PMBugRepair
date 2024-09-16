@@ -186,29 +186,13 @@ class CCEH{
 	void Recovery(PMEMobjpool*);
 
 	bool crashed = true;
-void* operator new(size_t size) {
-      void *ret;
-ret = pmalloc(size);
-std::cout<<"New malloc\n";
-     // posix_memalign(&ret, 64, size);
-      return ret;
+	void* operator new(size_t size) {
+    	void *ret;
+		ret = malloc(size); // posix_memalign(&ret, 64, size);
+    	return ret;
     }
     private:
 	TOID(struct Directory) dir;
 };
 
-
-/**void* operator new(size_t size) {
-      void *ret;
-        ret = pmalloc(size);
-     // posix_memalign(&ret, 64, size);
-      return ret;
-}*/
 #endif
-
-/**void* operator new(size_t size) {
-      void *ret;
-	ret = pmalloc(size);
-     // posix_memalign(&ret, 64, size);
-      return ret;
-}*/

@@ -15,15 +15,6 @@ using namespace std;
 
 #define POOL_SIZE (100000000) // 10GB
 
-/**void* operator new(size_t size) {
-      void *ret;
-ret = pmalloc(size);
-std::cout<<"New malloc\n";
-     // posix_memalign(&ret, 64, size);
-      return ret;
-    }*/
-
-
 void clear_cache() {
     int* dummy = new int[1024*1024*256];
     for (int i=0; i<1024*1024*256; i++) {
