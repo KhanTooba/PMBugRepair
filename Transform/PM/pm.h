@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <libpmemobj.h>
 
 #ifndef PM_INVARIANT_GENERATION_PM_H
 #define PM_INVARIANT_GENERATION_PM_H
@@ -34,7 +35,7 @@ extern "C" {
   
   void __pmc_printStoreAddr(long long int addr, int size, int ID, int Line, int Col, const char* scope);
   void __pmc_printLoadAddr(long long int addr, int size, int ID, int Line, int Col, const char* scope);
-
+  int __pmc_pobj_alloc(PMEMobjpool *pop, TOID(struct Segment) *oidp, size_t size, pmemobj_constr constructor, void *arg);
 
 
   void simuSfence();
@@ -47,6 +48,7 @@ extern "C" {
 #define pmalloc __pmc_malloc
 #define pcalloc  __pmc_calloc
 #define pfree     __pmc_free
+#define PMEM_POBJ_ALLOC __pmc_pobj_alloc
 //#define simuFlushOpt clflush
   
 #ifdef __cplusplus

@@ -175,6 +175,7 @@ def repairDURA(thread, bug, previousConstraints):
                 continue
             else:
                 print("Bug found: ", "pt_"+str(thread[i][0]), str(bug).split("<")[0].replace(" ", ""))
+                bugFlag = 1
             for j in range(i+1, length): #Change this to run from 0 to length so that all clflushopts 
                 # that already exist and might have been reaaranged can be utilized instead of adding new ones
                 if thread[j][1]==102 and thread[i][2]==thread[j][2] and not(thread[j][0] in claimedFlushes):
@@ -200,7 +201,7 @@ def repairDURA(thread, bug, previousConstraints):
                     solver.add(cons)
                     constraintsToReturn.append(cons)
                     print("Constraint added:", cons)
-                    bugFlag = 1
+                    # bugFlag = 1
             
             for j in range(i+1, length):
                 if thread[j][1]==103:
@@ -216,9 +217,9 @@ def repairDURA(thread, bug, previousConstraints):
                     # print(thread[i])
                     r += 1
                     thread.append(fence)
-                    bugFlag = 1
+                    # bugFlag = 1
     
-    return thread, constraintsToReturn
+    return thread, constraintsToReturn, bugFlag
 
 def repairMPB(thread, bug, previousConstraints):
     global num_solverCalls
@@ -376,8 +377,9 @@ def repairMPB(thread, bug, previousConstraints):
 
     else:
         print("Repair not found.")
+        return repairedThread, constraintsToReturn, -1
     
-    return repairedThread, constraintsToReturn
+    return repairedThread, constraintsToReturn, 1
     
 def repairThread(thread, bugs):
     global fixedBugs
@@ -397,14 +399,21 @@ def repairThread(thread, bugs):
         print("Repairing for bug:", b)
         if str(inf) in str(b): # and "pt_70" in str(b):
             t1 = time.time()
-            thread, cons_1 = repairDURA(thread, b, cons)
+            thread, cons_1, success = repairDURA(thread, b, cons)
+            if success==1:
+                bugs.remove(b)
+                print("Removing:", b)
             timeDura += time.time()-t1
             for constraint in cons_1:
                 cons.append(constraint)
+
         else:
             print("MPB Bug found:", b)
             t1 = time.time()
-            thread, cons_1 = repairMPB(thread, b, cons)
+            thread, cons_1, success = repairMPB(thread, b, cons)
+            if success==1:
+                print("Removing:", b)
+                bugs.remove(b)
             timeMPB += time.time()-t1
             for constraint in cons_1:
                 cons.append(constraint)
@@ -412,7 +421,7 @@ def repairThread(thread, bugs):
         print("####################################################################################")
         fixedBugs.append(b)
 
-    return thread, timeDura, timeMPB
+    return thread, timeDura, timeMPB, bugs
 
 def addConstraints(inputFileName):
     trace, threadInfo = parseTrace(inputFileName)
@@ -473,7 +482,7 @@ def addConstraints(inputFileName):
     for i in range(num_threads):
         print("################################################################################################")
         print("Working on Thread:", i, "(Length of thread : ", len(indiThreads[i]), "): ")
-        threadreturned, t1, t2 = repairThread(indiThreads[i], bugs)
+        threadreturned, t1, t2, bugs = repairThread(indiThreads[i], bugs)
         repaired_threads.append(threadreturned)
         timeDura += t1
         timeMPB += t2

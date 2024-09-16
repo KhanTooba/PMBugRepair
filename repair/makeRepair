@@ -12,7 +12,7 @@ process_files:
 	echo "\n"; \
 	echo "Repairing program in $(file_name)"; \
 	python3 trace_formatter.py ../results/outputs/$(file_name)_output.txt ../results/outputs/$(file_name)_formatted_output.txt; \
-	python3 step1.py ../results/outputs/$(file_name)_formatted_output.txt ../results/results/$(file_name)_trace_repaired.txt $(file_name)>> ../results/results/$(file_name)_r1.txt; \
+	python3 step1.py ../results/outputs/$(file_name)_formatted_output.txt ../results/results/$(file_name)_trace_repaired.txt $(file_name) >> ../results/results/$(file_name)_r1.txt; \
 	python3 step4.py ../results/results/$(file_name)_trace_repaired.txt ../results/repairedFiles/$(file_name)_trace_last_repair.txt $(file_name)>> ../results/results/$(file_name)_r2.txt; \
 	echo "Repair of $(file_name) completed."; \
 	)
