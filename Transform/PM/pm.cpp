@@ -75,7 +75,7 @@ int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t 
     int ret = pmemobj_alloc(pop, oidp, type_num, size, constructor, arg);
 
     if (my_flag && ret == 0) {  // Check if allocation was successful and logging is enabled
-        void *ptr = pmemobj_oid(oidp);   // Get a direct pointer to the allocated memory
+        void *ptr = pmemobj_direct(oidp);   // Get a direct pointer to the allocated memory
         pthread_mutex_lock(&mtx);
 
         // Log the address range
