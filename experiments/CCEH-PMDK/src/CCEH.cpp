@@ -193,9 +193,13 @@ void CCEH::initCCEH(PMEMobjpool* pop, size_t initCap){
 
 		PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RO(D_RO(dir)->segment)[i], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
 		cout <<"Reached 3"<<endl;
-		std::cout << "dir: " << dir << std::endl;
-		std::cout << "D_RW(dir)->segment: " << D_RW(dir)->segment << std::endl;
-		std::cout << "D_RW(D_RW(dir)->segment)[i]: " << D_RW(D_RW(dir)->segment)[i] << std::endl;
+		std::cout << "dir: " << D_RW(dir) << std::endl;
+		std::cout << "D_RW(dir)->segment: " << D_RW(D_RW(dir)->segment) << std::endl;
+		std::cout << "D_RW(D_RW(dir)->segment)[i]: " << D_RW(D_RW(D_RW(dir)->segment)[i]) << std::endl;
+		std::cout << "1st: " << static_cast<size_t>(log2(initCap)) << std::endl;
+		//std::cout<<initSegment(static_cast<size_t>(log2(initCap)))<<std::endl;		
+		std::cout<<"trying:"<<std::endl;
+		//std::cout<<"Pointer: "<<D_RW(D_RW(dir)->segment)[i])<<std::endl;
 		D_RW(D_RW(D_RW(dir)->segment)[i])->initSegment(static_cast<size_t>(log2(initCap)));
 		cout <<"Reached 4"<<endl;
     }

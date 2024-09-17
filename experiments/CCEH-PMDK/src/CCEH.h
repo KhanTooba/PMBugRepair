@@ -59,11 +59,15 @@ struct Segment{
     }
 
     void initSegment(size_t depth){
+std::cout<<"1st in initSegment"<<std::endl;
+std::cout<<kNumSlot<<std::endl;
 	for(int i=0; i<kNumSlot; ++i){
 	    bucket[i].key = INVALID;
 	}
+std::cout<<"2nd in initSegment"<<std::endl;
 	local_depth = depth;
 	sema = 0;
+std::cout<<"Returning from initSegment"<<std::endl;
     }
 
     bool suspend(void){
