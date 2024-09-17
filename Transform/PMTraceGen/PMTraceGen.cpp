@@ -586,10 +586,9 @@ void printInstructionDetails(llvm::Instruction *inst) {
     }
 } 
     void InstruAddr(Instruction &I) {
-printInstructionDetails(&I);
-      outs()<< "\n\n"<<I.getFunction()->getParent()->getName()<<"\n";
-//I->print(llvm::errs());      
-	outs()<<I.getFunction()->getName()<<"\n"<<isa<StoreInst>(&I)<<"\n";
+      outs()<< "\n\n"<<I.getFunction()->getParent()->getName()<<"\n";  
+      outs()<<I.getFunction()->getName()<<"\n"<<isa<StoreInst>(&I)<<"\n";
+      printInstructionDetails(&I);
       IRBuilder<> builder(I.getContext());
       DataLayout DL = I.getFunction()->getParent()->getDataLayout();
       Value *address;
@@ -629,7 +628,6 @@ printInstructionDetails(&I);
             llvm::Constant *i32_size = llvm::ConstantInt::get(i32_type, size);
             llvm::Constant *LineLoc, *ColLoc;
 
-//            if (I.getNextNode()->getDebugLoc().get() != nullptr) {
             if (I.getDebugLoc().get() != nullptr) {
                 LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
                 ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
@@ -639,17 +637,7 @@ printInstructionDetails(&I);
                 LineLoc = llvm::ConstantInt::get(i32_type, 0);
                 ColLoc = llvm::ConstantInt::get(i32_type, 0);
             }
-//            llvm::Constant *ScopeConstant = ConstantDataArray::getString(I.getContext(), InstToSubProgramName[&I], true);
-
-            //llvm::Constant *ScopeConstant = builder.CreateGlobalStringPtr(StringRef(InstToSubProgramName[&I]));
             llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&builder, StringRef(InstToSubProgramName[&I]));
-
-	    //            llvm::Constant *ScopeConstant = builder.CreateGlobalString(StringRef(InstToSubProgramName[&I]), "Test");
-//            builder.Createstr
-//            errs() << InstToSubProgramName[&I] << " " << InstToIDMap[&I] << "\n";
-
-            // Get a pointer to the data array
-//            llvm::Constant *StrPointer = ConstantExpr::getBitCast(StrConstant, Type::getInt8PtrTy(I.getContext()));
 
             llvm::ArrayRef< llvm::Value* > args = {address_i64, i32_size, i32_id, LineLoc, ColLoc, ScopeConstant};
 
@@ -657,7 +645,7 @@ printInstructionDetails(&I);
 //                PrintedIDs.insert(InstToIDMap[&I]);
                 builder.CreateCall(__pmc_printLoadAddr, args);
             }
-            else if (isa<StoreInst>(&I)) {
+            else if (llvm::isa<llvm::StoreInst>(&I)) {
 //                PrintedIDs.insert(InstToIDMap[&I]);
                 builder.CreateCall(__pmc_printStoreAddr, args);
             }
