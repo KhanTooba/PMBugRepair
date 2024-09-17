@@ -86,7 +86,7 @@ int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t 
         // Log the address range
         unsigned long long start_addr = (unsigned long long)ptr;
         unsigned long long end_addr = start_addr + size;
-        printf("Adding addr: 0x%llx to 0x%llx\n", start_addr, end_addr);
+        my_printf("Adding addr: 0x%llx to 0x%llx\n", start_addr, end_addr);
 
         // // Track the memory range in the map
         M[start_addr] = end_addr;
