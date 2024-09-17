@@ -100,7 +100,7 @@ TOID(struct Segment)* Segment::Split(PMEMobjpool* pop){
 #ifdef INPLACE
     TOID(struct Segment)* split = new TOID(struct Segment)[2];
     split[0] = pmemobj_oid(this);
-    PMEM_POBJ_ALLOC(pop, &split[1], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
+    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&split[1], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
     D_RW(split[1])->initSegment(local_depth+1);
 
     auto pattern = ((size_t)1 << (sizeof(Key_t)*8 - local_depth - 1));
@@ -140,8 +140,8 @@ TOID(struct Segment)* Segment::Split(PMEMobjpool* pop){
     return split;
 #else
     TOID(struct Segment)* split = new TOID(struct Segment)[2];
-    PMEM_POBJ_ALLOC(pop, &split[0], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
-    PMEM_POBJ_ALLOC(pop, &split[1], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
+    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&split[0], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
+    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&split[1], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
     D_RW(split[0])->initSegment(local_depth+1);
     D_RW(split[1])->initSegment(local_depth+1);
 
@@ -166,24 +166,24 @@ TOID(struct Segment)* Segment::Split(PMEMobjpool* pop){
 
 void CCEH::initCCEH(PMEMobjpool* pop){
     crashed = true;
-    PMEM_POBJ_ALLOC(pop, &dir, TOID_TYPE_NUM(struct Director, sizeof(struct Directory), NULL, NULL);
+    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&dir, TOID_TYPE_NUM(struct Director, sizeof(struct Directory), NULL, NULL);
     D_RW(dir)->initDirectory();
-    PMEM_POBJ_ALLOC(pop, &D_RW(dir)->segment, TOID_TYPE_NUM(TOID(struct Segment)), sizeof(TOID(struct Segment))*D_RO(dir)->capacity, NULL, NULL);
+    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RW(dir)->segment, TOID_TYPE_NUM(TOID(struct Segment)), sizeof(TOID(struct Segment))*D_RO(dir)->capacity, NULL, NULL);
 
     for(int i=0; i<D_RO(dir)->capacity; ++i){
-	PMEM_POBJ_ALLOC(pop, &D_RO(D_RO(dir)->segment)[i], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
+	PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RO(D_RO(dir)->segment)[i], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
 	D_RW(D_RW(D_RW(dir)->segment)[i])->initSegment();
     }
 }
 
 void CCEH::initCCEH(PMEMobjpool* pop, size_t initCap){
     crashed = true;
-    PMEM_POBJ_ALLOC(pop, &dir, TOID_TYPE_NUM(struct Directory), sizeof(struct Directory), NULL, NULL);
+    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&dir, TOID_TYPE_NUM(struct Directory), sizeof(struct Directory), NULL, NULL);
     D_RW(dir)->initDirectory(static_cast<size_t>(log2(initCap)));
-    PMEM_POBJ_ALLOC(pop, &D_RW(dir)->segment, TOID_TYPE_NUM(TOID(struct Segment)), sizeof(TOID(struct Segment))*D_RO(dir)->capacity, NULL, NULL);
+    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RW(dir)->segment, TOID_TYPE_NUM(TOID(struct Segment)), sizeof(TOID(struct Segment))*D_RO(dir)->capacity, NULL, NULL);
 
     for(int i=0; i<D_RO(dir)->capacity; ++i){
-	PMEM_POBJ_ALLOC(pop, &D_RO(D_RO(dir)->segment)[i], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
+	PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RO(D_RO(dir)->segment)[i], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
 	D_RW(D_RW(D_RW(dir)->segment)[i])->initSegment(static_cast<size_t>(log2(initCap)));
     }
 }
@@ -303,8 +303,8 @@ DIR_RETRY:
 	auto dir_old = dir;
 	TOID_ARRAY(TOID(struct Segment)) d = D_RO(dir)->segment;
 	TOID(struct Directory) _dir;
-	PMEM_POBJ_ALLOC(pop, &_dir, TOID_TYPE_NUM(struct Directory), sizeof(struct Directory), NULL, NULL);
-	PMEM_POBJ_ALLOC(pop, &D_RO(_dir)->segment, TOID_TYPE_NUM(TOID(struct Segment)), sizeof(TOID(struct Segment))*D_RO(dir)->capacity*2, NULL, NULL);
+	PMEM_POBJ_ALLOC(pop, (PMEMoid *)&_dir, TOID_TYPE_NUM(struct Directory), sizeof(struct Directory), NULL, NULL);
+	PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RO(_dir)->segment, TOID_TYPE_NUM(TOID(struct Segment)), sizeof(TOID(struct Segment))*D_RO(dir)->capacity*2, NULL, NULL);
 	D_RW(_dir)->initDirectory(D_RO(dir)->depth+1);
 
 	for(int i=0; i<D_RO(dir)->capacity; ++i){
