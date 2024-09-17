@@ -586,9 +586,7 @@ void printInstructionDetails(llvm::Instruction *inst) {
     }
 } 
     void InstruAddr(Instruction &I) {
-      outs()<< "\n\n"<<I.getFunction()->getParent()->getName()<<"\n";  
-      outs()<<I.getFunction()->getName()<<"\n"<<isa<StoreInst>(&I)<<"\n";
-      printInstructionDetails(&I);
+      
       IRBuilder<> builder(I.getContext());
       DataLayout DL = I.getFunction()->getParent()->getDataLayout();
       Value *address;
@@ -641,11 +639,14 @@ void printInstructionDetails(llvm::Instruction *inst) {
 
             llvm::ArrayRef< llvm::Value* > args = {address_i64, i32_size, i32_id, LineLoc, ColLoc, ScopeConstant};
 
-            if (isa<LoadInst>(&I)) {
+            if (llvm::isa<llvm::LoadInst>(&I)) {
 //                PrintedIDs.insert(InstToIDMap[&I]);
                 builder.CreateCall(__pmc_printLoadAddr, args);
             }
             else if (llvm::isa<llvm::StoreInst>(&I)) {
+                outs()<< "\n\n"<<I.getFunction()->getParent()->getName()<<"\n";  
+                outs()<<I.getFunction()->getName()<<"\n"<<isa<StoreInst>(&I)<<"\n";
+                printInstructionDetails(&I);
 //                PrintedIDs.insert(InstToIDMap[&I]);
                 builder.CreateCall(__pmc_printStoreAddr, args);
             }

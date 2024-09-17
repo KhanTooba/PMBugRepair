@@ -236,7 +236,7 @@ void __pmc_memClear() {
   }
   */
   void __pmc_printStoreAddr(long long int addr, int size, int ID, int Line, int Col, const char* scope) {
-	my_printf("Store: Entering for 0x%llx: ", addr);
+	// my_printf("Store: Entering for 0x%llx: ", addr);
     if (my_flag) {
       pthread_mutex_lock(&mtx);
       for (const auto &pair: M) {
@@ -247,7 +247,7 @@ void __pmc_memClear() {
                 if (!TRACE_IDS.count(p.first)) continue;
                 for (auto const& dep : p.second) {
                     if (dep == ID) {
-		      my_printf("DEP: SrcID: %d DestID: %d; ", p.first, dep);
+		                  my_printf("DEP: SrcID: %d DestID: %d; ", p.first, dep);
                     }
                 }
             }
