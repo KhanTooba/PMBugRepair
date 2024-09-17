@@ -83,9 +83,14 @@ int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t 
         void *ptr = pmemobj_direct(*oidp);   // Get a direct pointer to the allocated memory
         pthread_mutex_lock(&mtx);
 
-        // Log the address range
-        unsigned long long start_addr = (unsigned long long)ptr;
-        unsigned long long end_addr = start_addr + size;
+        void *start_addr = D_RW(oid);
+        void *end_addr = (char *)start_addr + size;
+        unsigned long long start_addr_ull = (unsigned long long)start_addr;
+        unsigned long long end_addr_ull = (unsigned long long)end_addr;
+
+        // unsigned long long start_addr = (unsigned long long)ptr;
+        // unsigned long long end_addr = start_addr + size;
+        
         my_printf("Adding addr: 0x%llx to 0x%llx\n", start_addr, end_addr);
 
         // // Track the memory range in the map
