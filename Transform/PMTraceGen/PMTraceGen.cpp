@@ -86,8 +86,9 @@ namespace pminv {
         bool Init = false;
         // Initialize external functions from helper function
 
-      void init( Function &F ) {
-	
+    void init( Function &F ) {
+        llvm::outs() << "Initializing pass...\n";
+
         if (Init)
           return; 
 
@@ -144,25 +145,22 @@ namespace pminv {
       }
 
     virtual bool runOnFunction(Function &F) override {
-      //outs() << "This is a message printed to stdout from runOnFrunction\n";
+      init(F);
 	    insertFlush(F);
       insertFence(F);
         
-          if (!F.getSubprogram()) {
-      LLVM_DEBUG( dbgs() << __func__ << " (0) skip the Function " << F.getName() << " since it doesn't have debug information.\n");
-      return false;
-          }
-          if (F.getSubprogram()->getFilename().contains("c++")) {
-      LLVM_DEBUG( dbgs() << __func__ << " (1) skip the Function " << F.getName() << " FileName:  " << F.getSubprogram()->getFilename() << " Name: " << F.getSubprogram()->getName() << "\n");
-      return false;
-          }
-          if (F.getName().contains("_GLOBAL__sub_I")  || F.getName().contains("__cxx_global_var_init") ){
-      LLVM_DEBUG( dbgs() << __func__ << " (2) skip the Function " << F.getName() << " since it initializes <iostream>.\n");
-      return false;
-          }
-      
-
-      init(F);
+      if (!F.getSubprogram()) {
+        LLVM_DEBUG( dbgs() << __func__ << " (0) skip the Function " << F.getName() << " since it doesn't have debug information.\n");
+        return false;
+      }
+      if (F.getSubprogram()->getFilename().contains("c++")) {
+        LLVM_DEBUG( dbgs() << __func__ << " (1) skip the Function " << F.getName() << " FileName:  " << F.getSubprogram()->getFilename() << " Name: " << F.getSubprogram()->getName() << "\n");
+        return false;
+      }
+      if (F.getName().contains("_GLOBAL__sub_I")  || F.getName().contains("__cxx_global_var_init") ){
+        LLVM_DEBUG( dbgs() << __func__ << " (2) skip the Function " << F.getName() << " since it initializes <iostream>.\n");
+        return false;
+      }
 
       // Chao: the following lines are taken from 'PMSetUniqueID' pass
       
@@ -741,10 +739,8 @@ namespace pminv {
                 EndDummy->insertBefore(ExitBlock.getTerminator());
             else
                 ExitBlock.getInstList().push_back(EndDummy);
-    }
-
-
-    
+    }  
+     
     void getAnalysisUsage(AnalysisUsage &AU) const override{
                 AU.setPreservesCFG();
                 AU.addRequired<DependenceAnalysisWrapperPass>();
