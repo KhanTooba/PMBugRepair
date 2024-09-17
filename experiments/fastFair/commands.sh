@@ -18,7 +18,7 @@ opt           -load $PMInvGen_DIR/PMTraceGen/libLLVMPMTraceGen.so --pmtracegen  
 #########################################################################
 # Step-3  Linking  (Program-Under-Test) with (Zunchen's Library) 
 #########################################################################
-clang++-10 -g  test_trace.bc  -lstdc++ -lrt -lm -lpthread     -L$PMInvGen_DIR/PM  -Wl,-rpath=$PMInvGen_DIR/PM -lLLVMPMC  -O0
+clang++-10 -g  test_trace.bc  -lstdc++ -lrt -lm -lpthread     -L$PMInvGen_DIR/PM  -Wl,-rpath=$PMInvGen_DIR/PM -lLLVMPMC  -O0 -lpmemobj -lpmem
 
 
 llvm-dis test.bc
