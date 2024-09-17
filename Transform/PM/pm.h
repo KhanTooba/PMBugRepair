@@ -49,7 +49,8 @@ extern "C" {
 #define pmalloc __pmc_malloc
 #define pcalloc  __pmc_calloc
 #define pfree     __pmc_free
-#define PMEM_POBJ_ALLOC __pmc_pobj_alloc
+// #define POBJ_ALLOC __pmc_pobj_alloc
+#define PMEM_POBJ_ALLOC(pop, o, t, size, constr, arg) __pmc_pobj_alloc((pop), (PMEMoid *)(o), (size), TOID_TYPE_NUM(t), (constr), (arg))
 //#define simuFlushOpt clflush
   
 #ifdef __cplusplus
