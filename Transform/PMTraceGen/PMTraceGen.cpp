@@ -310,6 +310,7 @@ namespace pminv {
 		        Function *parentFunc = callInst->getFunction();
             if (calledFunc->getName().find("fence")!=std::string::npos && parentFunc->getName().find("clflush")==std::string::npos) {
                 llvm::Constant *LineLoc, *ColLoc;
+                llvm::outs() << "Fence:" << I.getDebugLoc().get()<<", "<<parentFunc->getName()<<", "<<calledFunc->getName()<<"\n";
                 if (I.getDebugLoc().get() != nullptr) {
                   LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
                   ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
