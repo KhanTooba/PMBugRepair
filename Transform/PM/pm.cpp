@@ -236,6 +236,7 @@ void __pmc_memClear() {
   }
   */
   void __pmc_printStoreAddr(long long int addr, int size, int ID, int Line, int Col, const char* scope) {
+	my_printf("Store: Entering for 0x%llx: ", addr);
     if (my_flag) {
       pthread_mutex_lock(&mtx);
       for (const auto &pair: M) {

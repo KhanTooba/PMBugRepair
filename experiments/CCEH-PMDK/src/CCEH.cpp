@@ -179,29 +179,29 @@ void CCEH::initCCEH(PMEMobjpool* pop){
 void CCEH::initCCEH(PMEMobjpool* pop, size_t initCap){
     crashed = true;
     PMEM_POBJ_ALLOC(pop, &dir, struct Directory, sizeof(struct Directory), NULL, NULL);
-	cout <<"Reached -1"<<endl;
+	//cout <<"Reached -1"<<endl;
 
     D_RW(dir)->initDirectory(static_cast<size_t>(log2(initCap)));
-	cout <<"Reached 0"<<endl;
+	//cout <<"Reached 0"<<endl;
 
     PMEM_POBJ_ALLOC(pop, &D_RW(dir)->segment, struct Segment, sizeof(TOID(struct Segment))*D_RO(dir)->capacity, NULL, NULL);
-	cout <<"Reached first"<<endl;
-	cout<<D_RO(dir)->capacity<<endl;
-	cout<<sizeof(struct Segment)<<endl;
+	//cout <<"Reached first"<<endl;
+	//cout<<D_RO(dir)->capacity<<endl;
+	//cout<<sizeof(struct Segment)<<endl;
     for(int i=0; i<D_RO(dir)->capacity; ++i){
-		cout <<"Reached 2"<<endl;
+		//cout <<"Reached 2"<<endl;
 
 		PMEM_POBJ_ALLOC(pop, &D_RO(D_RO(dir)->segment)[i], struct Segment, sizeof(struct Segment), NULL, NULL);
-		cout <<"Reached 3"<<endl;
-		std::cout << "dir: " << D_RW(dir) << std::endl;
-		std::cout << "D_RW(dir)->segment: " << D_RW(D_RW(dir)->segment) << std::endl;
-		std::cout << "D_RW(D_RW(dir)->segment)[i]: " << D_RW(D_RW(D_RW(dir)->segment)[i]) << std::endl;
-		std::cout << "1st: " << static_cast<size_t>(log2(initCap)) << std::endl;
+		//cout <<"Reached 3"<<endl;
+		//std::cout << "dir: " << D_RW(dir) << std::endl;
+		//std::cout << "D_RW(dir)->segment: " << D_RW(D_RW(dir)->segment) << std::endl;
+		//std::cout << "D_RW(D_RW(dir)->segment)[i]: " << D_RW(D_RW(D_RW(dir)->segment)[i]) << std::endl;
+		//std::cout << "1st: " << static_cast<size_t>(log2(initCap)) << std::endl;
 		//std::cout<<initSegment(static_cast<size_t>(log2(initCap)))<<std::endl;		
-		std::cout<<"trying:"<<std::endl;
+		//std::cout<<"trying:"<<std::endl;
 		//std::cout<<"Pointer: "<<D_RW(D_RW(dir)->segment)[i])<<std::endl;
 		D_RW(D_RW(D_RW(dir)->segment)[i])->initSegment(static_cast<size_t>(log2(initCap)));
-		cout <<"Reached 4"<<endl;
+		//cout <<"Reached 4"<<endl;
     }
 }
  
@@ -240,8 +240,11 @@ RETRY:
 	if((((hash_funcs[0](&D_RO(target)->bucket[loc].key, sizeof(Key_t), f_seed) >> (8*sizeof(f_hash)-D_RO(target)->local_depth)) != pattern) || (D_RO(target)->bucket[loc].key == INVALID)) && (D_RO(target)->bucket[loc].key != SENTINEL)){
 	    if(CAS(&D_RW(target)->bucket[loc].key, &_key, SENTINEL)){
 		D_RW(target)->bucket[loc].value = value;
+		cout<<"Storing from 1"<<endl;
+		std::cout << "Storing to address: " << (void*)&D_RW(target)->bucket[loc].value << std::endl;
 		mfence();
 		D_RW(target)->bucket[loc].key = key;
+		cout<<"Storing from 1.b"<<endl;
 		pmemobj_persist(pop, (char*)&D_RO(target)->bucket[loc], sizeof(Pair));
 		/* release segment exclusive lock */
 		D_RW(target)->unlock();
@@ -259,9 +262,11 @@ RETRY:
 	if((((hash_funcs[0](&D_RO(target)->bucket[loc].key, sizeof(Key_t), f_seed) >> (8*sizeof(s_hash)-D_RO(target)->local_depth)) != pattern) || (D_RO(target)->bucket[loc].key == INVALID)) && (D_RO(target)->bucket[loc].key != SENTINEL)){
 	    if(CAS(&D_RW(target)->bucket[loc].key, &_key, SENTINEL)){
 		D_RW(target)->bucket[loc].value = value;
-		mfence();
+cout<<"Storing from 2.a"<<endl;		
+mfence();
 		D_RW(target)->bucket[loc].key = key;
-		pmemobj_persist(pop, (char*)&D_RO(target)->bucket[loc], sizeof(Pair));
+cout<<"Storing from 2.b"<<endl;		
+pmemobj_persist(pop, (char*)&D_RO(target)->bucket[loc], sizeof(Pair));
 		D_RW(target)->unlock();
 		return;
 	    }
