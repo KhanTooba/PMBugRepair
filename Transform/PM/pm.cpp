@@ -73,7 +73,7 @@ void  *__pmc_malloc  (size_t size) {
 
 int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t size, pmemobj_constr constructor, void *arg){
     int ret = pmemobj_alloc(pop, oidp, type_num, size, constructor, arg);
-
+    // PMEM_POBJ_ALLOC(pop, &dir, struct Directory, sizeof(struct Directory), NULL, NULL);
     if (my_flag && ret == 0) {  // Check if allocation was successful and logging is enabled
         void *ptr = pmemobj_direct(*oidp);   // Get a direct pointer to the allocated memory
         pthread_mutex_lock(&mtx);
