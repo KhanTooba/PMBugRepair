@@ -558,7 +558,7 @@ namespace pminv {
     }
     
     void InstruAddr(Instruction &I) {
-      outs()<< I.getFunction()->getParent()->getName()<<"\n";
+      outs()<< "\n\n"<<I.dump()<<"\n"<<I.getFunction()->getParent()->getName()<<"\n";
       outs()<<I.getFunction()->getName()<<"\n"<<isa<StoreInst>(&I)<<"\n";
       IRBuilder<> builder(I.getContext());
       DataLayout DL = I.getFunction()->getParent()->getDataLayout();
