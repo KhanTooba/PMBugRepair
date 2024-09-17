@@ -558,8 +558,8 @@ namespace pminv {
     }
     
     void InstruAddr(Instruction &I) {
-      outs()<< I.getFunction()->getParent()<<"\n";
-      outs()<<I.getFunction()<<"\n"<<isa<StoreInst>(&I)<<"\n";
+      outs()<< I.getFunction()->getParent()->getName()<<"\n";
+      outs()<<I.getFunction()->getName()<<"\n"<<isa<StoreInst>(&I)<<"\n";
       IRBuilder<> builder(I.getContext());
       DataLayout DL = I.getFunction()->getParent()->getDataLayout();
       Value *address;
@@ -603,6 +603,7 @@ namespace pminv {
             if (I.getDebugLoc().get() != nullptr) {
                 LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
                 ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
+                cout()<<LineLoc<<":"<<ColLoc<<"\n";
             }
             else {
                 LineLoc = llvm::ConstantInt::get(i32_type, 0);
