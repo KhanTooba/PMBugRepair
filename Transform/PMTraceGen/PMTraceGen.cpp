@@ -556,10 +556,40 @@ namespace pminv {
       }
       return sc;
     }
-    
+   
+void printInstructionDetails(llvm::Instruction *inst) {
+    // Print the instruction in text form using llvm::outs()
+    inst->print(llvm::outs());
+    llvm::outs() << "\n";
+
+    // Determine the type of instruction
+    llvm::outs() << "Instruction Type: ";
+    if (llvm::isa<llvm::BinaryOperator>(inst)) {
+        llvm::outs() << "BinaryOperator\n";
+    } else if (llvm::isa<llvm::LoadInst>(inst)) {
+        llvm::outs() << "LoadInst\n";
+    } else if (llvm::isa<llvm::StoreInst>(inst)) {
+        llvm::outs() << "StoreInst\n";
+    } else if (llvm::isa<llvm::CallInst>(inst)) {
+        llvm::outs() << "CallInst\n";
+    } else if (llvm::isa<llvm::BranchInst>(inst)) {
+        llvm::outs() << "BranchInst\n";
+    } else {
+        llvm::outs() << "Other\n";
+    }
+
+    // Print line and column number if debugging information is available
+    if (const llvm::DILocation *loc = inst->getDebugLoc()) {
+        llvm::outs() << "Line: " << loc->getLine() << ", Column: " << loc->getColumn() << "\n";
+    } else {
+        llvm::outs() << "No Debug Location\n";
+    }
+} 
     void InstruAddr(Instruction &I) {
-      outs()<< "\n\n"<<I.dump()<<"\n"<<I.getFunction()->getParent()->getName()<<"\n";
-      outs()<<I.getFunction()->getName()<<"\n"<<isa<StoreInst>(&I)<<"\n";
+printInstructionDetails(&I);
+      outs()<< "\n\n"<<I.getFunction()->getParent()->getName()<<"\n";
+//I->print(llvm::errs());      
+	outs()<<I.getFunction()->getName()<<"\n"<<isa<StoreInst>(&I)<<"\n";
       IRBuilder<> builder(I.getContext());
       DataLayout DL = I.getFunction()->getParent()->getDataLayout();
       Value *address;
@@ -603,7 +633,7 @@ namespace pminv {
             if (I.getDebugLoc().get() != nullptr) {
                 LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
                 ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
-                cout()<<LineLoc<<":"<<ColLoc<<"\n";
+                outs()<<LineLoc<<":"<<ColLoc<<"\n";
             }
             else {
                 LineLoc = llvm::ConstantInt::get(i32_type, 0);
