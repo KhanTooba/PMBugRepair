@@ -195,6 +195,7 @@ void CCEH::initCCEH(PMEMobjpool* pop, size_t initCap){
 		cout <<"Reached 3"<<endl;
 
 		D_RW(D_RW(D_RW(dir)->segment)[i])->initSegment(static_cast<size_t>(log2(initCap)));
+		cout <<"Reached 4"<<endl;
     }
 }
  
