@@ -166,9 +166,9 @@ TOID(struct Segment)* Segment::Split(PMEMobjpool* pop){
 
 void CCEH::initCCEH(PMEMobjpool* pop){
     crashed = true;
-    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&dir, TOID_TYPE_NUM(struct Director, sizeof(struct Directory), NULL, NULL);
+    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&dir, TOID_TYPE_NUM(struct Director), sizeof(struct Directory), NULL, NULL);
     D_RW(dir)->initDirectory();
-    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RW(dir)->segment, TOID_TYPE_NUM(TOID(struct Segment)), sizeof(TOID(struct Segment))*D_RO(dir)->capacity, NULL, NULL);
+    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RW(dir)->segment, TOID_TYPE_NUM(struct Segment), sizeof(TOID(struct Segment))*D_RO(dir)->capacity, NULL, NULL);
 
     for(int i=0; i<D_RO(dir)->capacity; ++i){
 	PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RO(D_RO(dir)->segment)[i], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
@@ -180,7 +180,7 @@ void CCEH::initCCEH(PMEMobjpool* pop, size_t initCap){
     crashed = true;
     PMEM_POBJ_ALLOC(pop, (PMEMoid *)&dir, TOID_TYPE_NUM(struct Directory), sizeof(struct Directory), NULL, NULL);
     D_RW(dir)->initDirectory(static_cast<size_t>(log2(initCap)));
-    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RW(dir)->segment, TOID_TYPE_NUM(TOID(struct Segment)), sizeof(TOID(struct Segment))*D_RO(dir)->capacity, NULL, NULL);
+    PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RW(dir)->segment, TOID_TYPE_NUM(struct Segment), sizeof(TOID(struct Segment))*D_RO(dir)->capacity, NULL, NULL);
 
     for(int i=0; i<D_RO(dir)->capacity; ++i){
 	PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RO(D_RO(dir)->segment)[i], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
@@ -304,7 +304,7 @@ DIR_RETRY:
 	TOID_ARRAY(TOID(struct Segment)) d = D_RO(dir)->segment;
 	TOID(struct Directory) _dir;
 	PMEM_POBJ_ALLOC(pop, (PMEMoid *)&_dir, TOID_TYPE_NUM(struct Directory), sizeof(struct Directory), NULL, NULL);
-	PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RO(_dir)->segment, TOID_TYPE_NUM(TOID(struct Segment)), sizeof(TOID(struct Segment))*D_RO(dir)->capacity*2, NULL, NULL);
+	PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RO(_dir)->segment, TOID_TYPE_NUM(struct Segment), sizeof(TOID(struct Segment))*D_RO(dir)->capacity*2, NULL, NULL);
 	D_RW(_dir)->initDirectory(D_RO(dir)->depth+1);
 
 	for(int i=0; i<D_RO(dir)->capacity; ++i){
