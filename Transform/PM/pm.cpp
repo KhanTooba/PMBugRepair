@@ -91,10 +91,10 @@ int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t 
         // unsigned long long start_addr = (unsigned long long)ptr;
         // unsigned long long end_addr = start_addr + size;
         
-        my_printf("Adding addr: 0x%llx to 0x%llx\n", start_addr, end_addr);
+        my_printf("Adding addr: 0x%llx to 0x%llx\n", start_addr_ull, end_addr_ull);
 
         // // Track the memory range in the map
-        M[start_addr] = end_addr;
+        M[start_addr_ull] = end_addr_ull;
 
         pthread_mutex_unlock(&mtx);
     }
