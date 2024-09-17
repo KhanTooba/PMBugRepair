@@ -87,7 +87,7 @@ namespace pminv {
         // Initialize external functions from helper function
 
     void init( Function &F ) {
-        llvm::outs() << "Initializing pass...\n";
+        // llvm::outs() << "Initializing pass...\n";
 
         if (Init)
           return; 
