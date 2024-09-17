@@ -22,10 +22,12 @@ extern "C" {
   static std::set<int> TRACE_IDS;
   
   static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
+  static pthread_mutex_t print = PTHREAD_MUTEX_INITIALIZER;
   
   static bool my_flag = false;  
 
 void my_printf(const char* format, ...) {
+  pthread_mutex_lock(&print);
     FILE *fptr;
     fptr = fopen("output.txt","a");
     std::thread::id threadId = std::this_thread::get_id();
@@ -42,6 +44,7 @@ void my_printf(const char* format, ...) {
     va_end(args);
     fprintf(fptr, "<Thread ID:%lu>\n", (unsigned long)tid);
     fclose(fptr);
+  pthread_mutex_unlock(&print);
 }
 
   //------------------------------------------------------------------------------------------

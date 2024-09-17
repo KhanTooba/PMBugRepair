@@ -47,18 +47,18 @@ int main (int argc, char* argv[])
     PMEMobjpool* pop;
     bool exists = false;
     TOID(CCEH) HashTable = OID_NULL;
-cout<<access(path, 0)<<path<<"\n";
+	// cout<<access(path, 0)<<path<<"\n";
     if(access(path, 0) != 0){
 	pop = pmemobj_create(path, "CCEH", POOL_SIZE, 0666);
 	if(!pop){
 	    perror("pmemoj_create");
 	    exit(1);
 	}
-cout<<"FIRST\n";
+	// cout<<"FIRST\n";
 	HashTable = POBJ_ROOT(pop, CCEH);
-cout<<"SECOND\n";
+	// cout<<"SECOND\n";
 	D_RW(HashTable)->initCCEH(pop, initialSize);
-cout<<"THIRD\n";
+	// cout<<"THIRD\n";
     }
     else{
 	pop = pmemobj_open(path, "CCEH");
