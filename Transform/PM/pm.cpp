@@ -31,7 +31,10 @@ void my_printf(const char* format, ...) {
     FILE *fptr;
     fptr = fopen("output.txt","a");
     if(fptr==NULL){
+      static char buffer [1024];
+      vsnprintf(buffer, 1024, format, args);
       printf("Could not open file for:%s", buffer);
+      return;
     }
     std::thread::id threadId = std::this_thread::get_id();
     size_t threadIdNum = std::hash<std::thread::id>{}(threadId);
