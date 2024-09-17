@@ -179,21 +179,22 @@ void CCEH::initCCEH(PMEMobjpool* pop){
 void CCEH::initCCEH(PMEMobjpool* pop, size_t initCap){
     crashed = true;
     PMEM_POBJ_ALLOC(pop, (PMEMoid *)&dir, TOID_TYPE_NUM(struct Directory), sizeof(struct Directory), NULL, NULL);
-cout <<"Reached -1"<<endl;
+	cout <<"Reached -1"<<endl;
 
     D_RW(dir)->initDirectory(static_cast<size_t>(log2(initCap)));
-cout <<"Reached 0"<<endl;
+	cout <<"Reached 0"<<endl;
 
     PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RW(dir)->segment, TOID_TYPE_NUM(struct Segment), sizeof(TOID(struct Segment))*D_RO(dir)->capacity, NULL, NULL);
-cout <<"Reached first"<<endl;
-cout<<D_RO(dir)->capacity<<endl;
+	cout <<"Reached first"<<endl;
+	cout<<D_RO(dir)->capacity<<endl;
+	cout<<sizeof(struct Segment)<<endl;
     for(int i=0; i<D_RO(dir)->capacity; ++i){
-cout <<"Reached 2"<<endl;
+		cout <<"Reached 2"<<endl;
 
-	PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RO(D_RO(dir)->segment)[i], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
-cout <<"Reached 3"<<endl;
+		PMEM_POBJ_ALLOC(pop, (PMEMoid *)&D_RO(D_RO(dir)->segment)[i], TOID_TYPE_NUM(struct Segment), sizeof(struct Segment), NULL, NULL);
+		cout <<"Reached 3"<<endl;
 
-	D_RW(D_RW(D_RW(dir)->segment)[i])->initSegment(static_cast<size_t>(log2(initCap)));
+		D_RW(D_RW(D_RW(dir)->segment)[i])->initSegment(static_cast<size_t>(log2(initCap)));
     }
 }
  

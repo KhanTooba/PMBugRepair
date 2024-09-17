@@ -13,7 +13,7 @@
 using namespace std;
 
 
-#define POOL_SIZE (100000000) // 10GB
+#define POOL_SIZE (1073741824) // 10GB
 
 void clear_cache() {
     int* dummy = new int[1024*1024*256];

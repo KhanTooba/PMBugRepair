@@ -27,7 +27,6 @@ extern "C" {
   static bool my_flag = false;  
 
 void my_printf(const char* format, ...) {
-//  pthread_mutex_lock(&print);
     FILE *fptr;
     fptr = fopen("output.txt","a");
     if(fptr==NULL){
@@ -48,7 +47,6 @@ void my_printf(const char* format, ...) {
     va_end(args);
     fprintf(fptr, "<Thread ID:%lu>\n", (unsigned long)tid);
     fclose(fptr);
-  //pthread_mutex_unlock(&print);
 }
 
   //------------------------------------------------------------------------------------------
@@ -86,12 +84,12 @@ int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t 
         pthread_mutex_lock(&mtx);
 
         // Log the address range
-        // unsigned long long start_addr = (unsigned long long)ptr;
-        // unsigned long long end_addr = start_addr + size;
-        // printf("Adding addr: 0x%llx to 0x%llx\n", start_addr, end_addr);
+        unsigned long long start_addr = (unsigned long long)ptr;
+        unsigned long long end_addr = start_addr + size;
+        printf("Adding addr: 0x%llx to 0x%llx\n", start_addr, end_addr);
 
         // // Track the memory range in the map
-        // M[start_addr] = end_addr;
+        M[start_addr] = end_addr;
 
         pthread_mutex_unlock(&mtx);
     }
