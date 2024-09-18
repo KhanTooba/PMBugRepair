@@ -308,7 +308,7 @@ namespace pminv {
 		        Function *parentFunc = callInst->getFunction();
             if (calledFunc->getName().find("fence")!=std::string::npos && parentFunc->getName().find("clflush")==std::string::npos) {
                 llvm::Constant *LineLoc, *ColLoc;
-                llvm::outs() << "Fence:" << I.getDebugLoc().get()<<", "<<parentFunc->getName()<<", "<<calledFunc->getName()<<"\n";
+                // llvm::outs() << "Fence:" << I.getDebugLoc().get()<<", "<<parentFunc->getName()<<", "<<calledFunc->getName()<<"\n";
                 if (I.getDebugLoc().get() != nullptr) {
                   LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
                   ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
@@ -351,9 +351,9 @@ namespace pminv {
                 llvm::Type *type = argLen->getType();
     
                 // Print the type in a human-readable format
-                llvm::outs() << "Type of argLen: ";
-                type->print(llvm::outs());  // Print the type
-                llvm::outs() << "\n";
+                // llvm::outs() << "Type of argLen: ";
+                // type->print(llvm::outs());  // Print the type
+                // llvm::outs() << "\n";
 
                 unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
                 Value *argLen64;
@@ -385,9 +385,9 @@ namespace pminv {
                 llvm::Type *type = argLen->getType();
     
                 // Print the type in a human-readable format
-                llvm::outs() << "Type of argLen: ";
-                type->print(llvm::outs());  // Print the type
-                llvm::outs() << "\n";
+                // llvm::outs() << "Type of argLen: ";
+                // type->print(llvm::outs());  // Print the type
+                // llvm::outs() << "\n";
 
                 unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
                 Value *argLen64;

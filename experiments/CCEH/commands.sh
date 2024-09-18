@@ -13,5 +13,6 @@ clang++-10 -g -std=c++17 -I./ -lrt -lpthread -O3 -o bin/multi_threaded_cceh src/
 
 sudo rm /mnt/pmfs/pool1
 sudo ./bin/multi_threaded_cceh /mnt/pmfs/pool1 10 2
-python3 clean.py output.txt output_clean.txt
+python3 cleanOutput.py output.txt output_clean.txt
 cp output_clean.txt ../../results/outputs/CCEH_output.txt
+rm output.txt
