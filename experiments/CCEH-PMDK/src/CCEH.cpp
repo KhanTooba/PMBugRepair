@@ -511,9 +511,10 @@ double CCEH::Utilization(void){
 	int stride = pow(2, D_RO(dir)->depth - D_RO(target)->local_depth);
 	auto pattern = (i >> (D_RO(dir)->depth - D_RO(target)->local_depth));
 	for(unsigned j=0; j<Segment::kNumSlot; ++j){
+		cout<<j<<"\n";
 	    auto f_hash = h(&D_RO(target)->bucket[j].key, sizeof(Key_t));
 	    if(((f_hash >> (8*sizeof(f_hash)-D_RO(target)->local_depth)) == pattern) && (D_RO(target)->bucket[j].key != INVALID)){
-		sum++;
+			sum++;
 	    }
 	}
 	i += stride;

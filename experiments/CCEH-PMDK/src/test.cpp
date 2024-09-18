@@ -89,12 +89,11 @@ int main (int argc, char* argv[])
     }
     else{
 	for(int i=0; i<numData; i++){
-
-uint64_t temp;
+		uint64_t temp;
 	    ifs >> temp;
-keys[i]=temp;}
-	ifs.close();
-	cout << dataset << " is used." << endl;
+		keys[i]=temp;}
+		ifs.close();
+		cout << dataset << " is used." << endl;
     }
 //my_printf("Till here\n");
 #ifndef MULTITHREAD // single-threaded
@@ -197,7 +196,6 @@ cout<<"Inserting:"<<keys[i]<<"\n";
 	cout << "Search Failed: " << failedSearch << endl;
     }
 #endif
-
     auto util = D_RW(HashTable)->Utilization();
     cout << "Utilization: " << util << " %" << endl;
 
