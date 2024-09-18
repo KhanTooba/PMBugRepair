@@ -8,11 +8,12 @@ import sys
 def format_STOREs(row, r):
     # Store: 0xb82306 Size: 2 ID: 2862 @Ln,Col: 564,22 Scope: insert_key; <Thread ID:140255810307904>
     stmt = []
+    scope = str(row).split(" ")[9].replace(";", "_")
     add = str(row).split(" ")[1]
     tid = str(row).split(":")[-1].split(">")[0]
     line = row.split("@")[1].split(":")[1].split(",")[0].strip()
     uid = str(row).split(" ")[5]
-    stmt = [r, "STORE", add, tid, uid, line]
+    stmt = [r, "STORE", add, tid, uid, scope+line]
     return stmt
 
 def format_FLUSH(row, r):
@@ -47,27 +48,16 @@ def fileReader(name):
             # print(row)
             stmt = []
             # Load: 0xb82308 Size: 8 ID: 733 @Ln,Col: 573,11 Scope: store; <Thread ID:140255810307904>
+            scope = str(row).split(" ")[9].replace(";", "_")
             add = str(row).split(" ")[1]
             tid = str(row).split(":")[-1].split(">")[0]
             line = row.split("@")[1].split(":")[1].split(",")[0].strip()
             uid = str(row).split(" ")[5]
-            stmt = [r, "LOAD", add, tid, line]
+            stmt = [r, "LOAD", add, tid, scope+line]
             if uid not in loads.keys():
                 loads[uid] = stmt
-            stmt = format_STOREs(str(row), r)
-            contents.append(stmt)
-            # print(stmt)
-            # print()
-        # if "Load" in str(row):
-        #     # Store: 0x1f7a1c8 Size: 8 ID: 912 @Ln,Col: 98,7 Scope: CCEH; <Thread ID:140586500802368>
-        #     # Load: 0x1f7a1c8 Size: 8 ID: 919 @Ln,Col: 100,30 Scope: CCEH; <Thread ID:140586500802368>
-        #     dest = str(row).split(" ")[5]
-        #     source = ""
-        #     # print("For loads: ", dest)
-        #     for j in range(0, i):
-        #         if "Store" in str(rows[j]) and str(rows[j]).split(" ")[1]==str(row).split(" ")[1]:
-        #             print("Getting dependency from Loads")
-        #             source = str(rows[j]).split(" ")[5]
+            # stmt = format_STOREs(str(row), r)
+            # contents.append(stmt)
 
         if "Store" in str(row):
             stmt = format_STOREs(str(row), r)
