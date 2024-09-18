@@ -196,8 +196,8 @@ cout<<"Inserting:"<<keys[i]<<"\n";
 	cout << "Search Failed: " << failedSearch << endl;
     }
 #endif
-    auto util = D_RW(HashTable)->Utilization();
-    cout << "Utilization: " << util << " %" << endl;
+//    auto util = D_RW(HashTable)->Utilization();
+//    cout << "Utilization: " << util << " %" << endl;
 
     D_RW(HashTable)->crashed = false;
     pmemobj_persist(pop, (char*)&D_RO(HashTable)->crashed, sizeof(bool));
