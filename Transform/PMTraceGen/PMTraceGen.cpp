@@ -376,6 +376,40 @@ namespace pminv {
                 Builder.SetInsertPoint(&I);
                 // outs() << argLen64;
                 Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
+            } 
+
+          if (calledFunc->getName().find("pmemobj_persist")!=std::string::npos ) {
+
+                Value *argData = callInst->getArgOperand(1); 
+                Value *argLen = callInst->getArgOperand(2); 
+                llvm::Type *type = argLen->getType();
+    
+                // Print the type in a human-readable format
+                llvm::outs() << "Type of argLen: ";
+                type->print(llvm::outs());  // Print the type
+                llvm::outs() << "\n";
+
+                unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
+                Value *argLen64;
+			          if (bitWidth == 64) {
+                    argLen64 = argLen;  
+                }
+                if (bitWidth < 64) {
+                    argLen64 = Builder.CreateZExtOrBitCast(argLen, llvm::Type::getInt64Ty(Builder.getContext()));
+                }
+                        
+                llvm::Constant *LineLoc, *ColLoc;
+                if (I.getDebugLoc().get() != nullptr) {
+                  LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
+                  ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
+                }
+                else {
+                  LineLoc = llvm::ConstantInt::get(i32_type, 0);
+                  ColLoc = llvm::ConstantInt::get(i32_type, 0);
+                }
+                Builder.SetInsertPoint(&I);
+                // outs() << argLen64;
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
             }
           }          
         }
