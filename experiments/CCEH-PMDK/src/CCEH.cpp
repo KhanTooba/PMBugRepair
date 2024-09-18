@@ -506,17 +506,18 @@ void CCEH::Recovery(PMEMobjpool* pop){
 double CCEH::Utilization(void){
     size_t sum = 0;
     size_t cnt = 0;
+	cout<<D_RO(dir)->capacity<<", "<<Segment::kNumSlot<<"\n";
     for(int i=0; i<D_RO(dir)->capacity; ++cnt){
-	auto target = D_RO(D_RO(dir)->segment)[i];
-	int stride = pow(2, D_RO(dir)->depth - D_RO(target)->local_depth);
-	auto pattern = (i >> (D_RO(dir)->depth - D_RO(target)->local_depth));
-	for(unsigned j=0; j<Segment::kNumSlot; ++j){
-		cout<<j<<"\n";
-	    auto f_hash = h(&D_RO(target)->bucket[j].key, sizeof(Key_t));
-	    if(((f_hash >> (8*sizeof(f_hash)-D_RO(target)->local_depth)) == pattern) && (D_RO(target)->bucket[j].key != INVALID)){
-			sum++;
-	    }
-	}
+		auto target = D_RO(D_RO(dir)->segment)[i];
+		int stride = pow(2, D_RO(dir)->depth - D_RO(target)->local_depth);
+		auto pattern = (i >> (D_RO(dir)->depth - D_RO(target)->local_depth));
+		for(unsigned j=0; j<Segment::kNumSlot; ++j){
+			cout<<j<<"\n";
+			auto f_hash = h(&D_RO(target)->bucket[j].key, sizeof(Key_t));
+			if(((f_hash >> (8*sizeof(f_hash)-D_RO(target)->local_depth)) == pattern) && (D_RO(target)->bucket[j].key != INVALID)){
+				sum++;
+			}
+		}
 	i += stride;
     }
     return ((double)sum) / ((double)cnt * Segment::kNumSlot)*100.0;
