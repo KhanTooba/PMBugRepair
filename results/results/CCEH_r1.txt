@@ -1,0 +1,108 @@
+Returning from parceTrace.py
+Completed parsing.
+Local variables initialized.
+Number of bugs detected:  8
+pt_2 < 9999
+pt_3 < 9999
+pt_4 < 9999
+pt_4 < pt_5
+pt_5 < 9999
+pt_6 < 9999
+pt_8 < 9999
+pt_46 < 9999
+Number of threads:  3
+################################################################################################
+Working on Thread: 0 (Length of thread :  5 ): 
+Repairing for bug: pt_2 < 9999
+Before append: 5
+Bug found:  pt_2 pt_2
+Adding: ['2_0', 102, "'0x7fef2b9c0550'", -1, 0, 'initCCEH_180_x']
+Constraint added: pc_2 == pc_2_0 - 1
+Adding: ['2_1', 103, '0', -1, 0, 'initCCEH_180_x']
+Removing: pt_2 < 9999
+####################################################################################
+Repairing for bug: pt_4 < 9999
+Before append: 7
+Bug found:  pt_4 pt_4
+Adding: ['4_0', 102, "'0x7fef2b9c05e8'", -1, 0, 'initDirectory_170_x']
+Constraint added: pc_4 == pc_4_0 - 1
+Adding: ['4_1', 103, '0', -1, 0, 'initDirectory_170_x']
+Removing: pt_4 < 9999
+####################################################################################
+Repairing for bug: pt_5 < 9999
+Before append: 9
+Bug found:  pt_5 pt_5
+Adding: ['5_0', 102, "'0x7fef2b9c05e0'", -1, 0, 'initDirectory_171_x']
+Constraint added: pc_5 == pc_5_0 - 1
+Removing: pt_5 < 9999
+####################################################################################
+Repairing for bug: pt_8 < 9999
+Before append: 10
+####################################################################################
+Repairing for bug: pt_46 < 9999
+Before append: 10
+Bug found:  pt_46 pt_46
+Adding: ['46_0', 102, "'0x7fef2b9c0550'", -1, 0, 'main_202_x']
+Constraint added: pc_46 == pc_46_0 - 1
+Removing: pt_46 < 9999
+####################################################################################
+Time taken to repair thread  0 :  0.03638792037963867  seconds.
+################################################################################################
+################################################################################################
+Working on Thread: 1 (Length of thread :  20 ): 
+Repairing for bug: pt_3 < 9999
+Before append: 20
+####################################################################################
+Repairing for bug: pt_4 < pt_5
+MPB Bug found: pt_4 < pt_5
+Before append: 20
+After append: 20
+The bug flag is: -1
+The number of assertions: 59
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_4 < pt_5)
+Num: 61
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+SAIS: False
+Repair not found.
+####################################################################################
+Repairing for bug: pt_6 < 9999
+Before append: 20
+Bug found:  pt_6 pt_6
+Adding: ['6_0', 102, "'0x7fef2c433a98'", -1, 1, 'Insert_242_x']
+Constraint added: pc_6 == pc_6_0 - 1
+Removing: pt_6 < 9999
+####################################################################################
+Time taken to repair thread  1 :  0.06595325469970703  seconds.
+################################################################################################
+################################################################################################
+Working on Thread: 2 (Length of thread :  20 ): 
+Repairing for bug: pt_3 < 9999
+Before append: 20
+####################################################################################
+Repairing for bug: pt_4 < pt_5
+MPB Bug found: pt_4 < pt_5
+Before append: 20
+After append: 20
+The bug flag is: -1
+The number of assertions: 59
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_4 < pt_5)
+Num: 61
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+SAIS: False
+Repair not found.
+####################################################################################
+Repairing for bug: pt_8 < 9999
+Before append: 20
+####################################################################################
+Time taken to repair thread  2 :  0.06584596633911133  seconds.
+################################################################################################
+Beginning the recombination.
+Time taken to recombine individual threads:  0.00040793418884277344  seconds.

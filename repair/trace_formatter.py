@@ -1,8 +1,3 @@
-
-
-
-
-
 import sys    
 
 def format_STOREs(row, r):
@@ -44,6 +39,16 @@ def fileReader(name):
     for i in range(len(rows)):
         row = rows[i]
         r += 1
+        if "Load" in str(row):
+            dest = str(row).split(" ")[5]
+            source = ""
+            for j in range(0, i):
+                if "Store" in str(rows[j]) and str(rows[i]).split(" ")[1]==str(rows[j]).split(" ")[1]:
+                    source = str(rows[j]).split(" ")[5]
+                    # print(source, dest)
+            dependencies[dest] = source
+
+
         if "Load" in str(row) or "Store" in str(row):
             # print(row)
             stmt = []
@@ -105,8 +110,9 @@ def format(trace, threads, dependencies, loads):
             element = [trace[i][0], trace[i][1], trace[i][2], -1, threads[trace[i][3]], trace[i][-1]]
         elif trace[i][1]=='STORE':
             element = [trace[i][0], trace[i][1], trace[i][2], -1, threads[trace[i][3]]]
-            # print(element, dependencies.keys(), trace[i][-2])
+            # print(element, trace[i])
             if trace[i][-2] in dependencies.keys():
+                # print(True)
                 dest_id = dependencies[trace[i][-2]]
                 element[3] = loads[dest_id][2]
                 dep += 1
@@ -123,11 +129,11 @@ def format(trace, threads, dependencies, loads):
     print("Total dependencies: ", dep)
 
     
-    ints = []
-    index = []
-    for t in traceFormatted:
-        ints.append(int(t[-1]))
-        index.append(int(t[0]))
+    # ints = []
+    # index = []
+    # for t in traceFormatted:
+    #     ints.append(t[-1])
+    #     index.append(int(t[0]))
         
     toreturn = []
     for t in traceFormatted:
@@ -150,7 +156,7 @@ if __name__ == "__main__":
     trace = format(trace, threads, dependencies, loads)
     # for t in trace:
     #     print(t)
-
+    print(len(trace))
     file = open(outputFileName, 'w')
     file.write("Threads: ["+str(threads)+"]\n")
     for t in trace:
