@@ -98,7 +98,7 @@ PMEMobjpool* __pmc_pmemobj_create(const char *path, const char *layout, size_t p
   pthread_mutex_lock(&mtx);
 
   unsigned long long start_addr_ull = (unsigned long long)pop;
-  unsigned long long end_addr_ull = start_addr_ull + size;
+  unsigned long long end_addr_ull = start_addr_ull + poolsize;
         
   my_printf("Adding addr: 0x%llx to 0x%llx\n", start_addr_ull, end_addr_ull);
 
@@ -110,9 +110,11 @@ PMEMobjpool* __pmc_pmemobj_create(const char *path, const char *layout, size_t p
 PMEMobjpool* __pmc_pmemobj_open(const char *path, const char *layout){
   PMEMobjpool* pop = pmemobj_open(path, layout);
   pthread_mutex_lock(&mtx);
+  size_t pool_size;
+  pmemobj_ctl_get(pop, "heap.size", &pool_size);
 
   unsigned long long start_addr_ull = (unsigned long long)pop;
-  unsigned long long end_addr_ull = start_addr_ull + size;
+  unsigned long long end_addr_ull = start_addr_ull + pool_size;
         
   my_printf("Adding addr: 0x%llx to 0x%llx\n", start_addr_ull, end_addr_ull);
 
