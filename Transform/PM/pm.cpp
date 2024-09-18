@@ -85,7 +85,7 @@ int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t 
         unsigned long long start_addr_ull = (unsigned long long)ptr;
         unsigned long long end_addr_ull = start_addr_ull + size;
         
-        my_printf("Adding addr: 0x%llx to 0x%llx", start_addr_ull, end_addr_ull);
+        my_printf("Adding addr: 0x%llx to 0x%llx; ", start_addr_ull, end_addr_ull);
 
         M[start_addr_ull] = end_addr_ull;
         pthread_mutex_unlock(&mtx);
@@ -100,7 +100,7 @@ PMEMobjpool* __pmc_pmemobj_create(const char *path, const char *layout, size_t p
   unsigned long long start_addr_ull = (unsigned long long)pop;
   unsigned long long end_addr_ull = start_addr_ull + poolsize;
         
-  my_printf("Adding addr: 0x%llx to 0x%llx", start_addr_ull, end_addr_ull);
+  my_printf("Adding addr: 0x%llx to 0x%llx; ", start_addr_ull, end_addr_ull);
 
   M[start_addr_ull] = end_addr_ull;
   pthread_mutex_unlock(&mtx);
@@ -116,7 +116,7 @@ PMEMobjpool* __pmc_pmemobj_open(const char *path, const char *layout){
   unsigned long long start_addr_ull = (unsigned long long)pop;
   unsigned long long end_addr_ull = start_addr_ull + pool_size;
         
-  my_printf("Adding addr: 0x%llx to 0x%llx", start_addr_ull, end_addr_ull);
+  my_printf("Adding addr: 0x%llx to 0x%llx; ", start_addr_ull, end_addr_ull);
 
   M[start_addr_ull] = end_addr_ull;
   pthread_mutex_unlock(&mtx);
@@ -197,7 +197,7 @@ void __pmc_memClear() {
       if (!FUNC_STACK.count(func)) {
         FUNC_STACK[func] = 1;
       }
-      my_printf("FUNC_BEGIN_1: %s %u; ", func, FUNC_STACK[func]);
+//      my_printf("FUNC_BEGIN_1: %s %u; ", func, FUNC_STACK[func]);
       pthread_mutex_unlock(&mtx);
     }
   }
@@ -205,7 +205,7 @@ void __pmc_memClear() {
   void __pmc_funcEnd(const char* func) {
     if (my_flag) {
       pthread_mutex_lock(&mtx);
-      my_printf("FUNC_END: %s %u; ", func, FUNC_STACK[func]);
+  //    my_printf("FUNC_END: %s %u; ", func, FUNC_STACK[func]);
       FUNC_STACK[func]++;
       pthread_mutex_unlock(&mtx);
     }
