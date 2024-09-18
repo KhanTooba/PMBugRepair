@@ -49,7 +49,7 @@ int main (int argc, char* argv[])
     TOID(CCEH) HashTable = OID_NULL;
 	// cout<<access(path, 0)<<path<<"\n";
     if(access(path, 0) != 0){
-		pop = pmemobj_create(path, "CCEH", POOL_SIZE, 0666);
+		pop = pmem_pmemobj_create(path, "CCEH", POOL_SIZE, 0666);
 		if(!pop){
 			perror("pmemoj_create");
 			exit(1);
@@ -61,7 +61,7 @@ int main (int argc, char* argv[])
 		// cout<<"THIRD\n";
     }
     else{
-		pop = pmemobj_open(path, "CCEH");
+		pop = pmem_pmemobj_open(path, "CCEH");
 		if(pop == NULL){
 			perror("pmemobj_open");
 			exit(1);
