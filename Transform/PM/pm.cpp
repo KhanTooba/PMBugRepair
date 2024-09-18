@@ -78,52 +78,32 @@ void  *__pmc_malloc  (size_t size) {
 
 int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t size, pmemobj_constr constructor, void *arg){
     int ret = pmemobj_alloc(pop, oidp, type_num, size, constructor, arg);
-    // PMEM_POBJ_ALLOC(pop, &dir, struct Directory, sizeof(struct Directory), NULL, NULL);
-    if (my_flag && ret == 0) {  // Check if allocation was successful and logging is enabled
-        void *ptr = pmemobj_direct(*oidp);   // Get a direct pointer to the allocated memory
+    if (my_flag && ret == 0) { 
+        void *ptr = pmemobj_direct(*oidp); 
         pthread_mutex_lock(&mtx);
 
-        void *start_addr = D_RW(oid);
-        void *end_addr = (char *)start_addr + size;
-        unsigned long long start_addr_ull = (unsigned long long)start_addr;
-        unsigned long long end_addr_ull = (unsigned long long)end_addr;
-
-        // unsigned long long start_addr = (unsigned long long)ptr;
-        // unsigned long long end_addr = start_addr + size;
+        unsigned long long start_addr = (unsigned long long)ptr;
+        unsigned long long end_addr = start_addr + size;
         
         my_printf("Adding addr: 0x%llx to 0x%llx\n", start_addr_ull, end_addr_ull);
 
-        // // Track the memory range in the map
         M[start_addr_ull] = end_addr_ull;
-
         pthread_mutex_unlock(&mtx);
     }
-
-    return ret;  // Return the result of POBJ_ALLOC
+    return ret;  
 }
 
-// int __pmc_pobj_alloc(PMEMobjpool *pop, TOID(struct Segment) *oidp, size_t size, pmemobj_constr constructor, void *arg) 
-// {
-//     int ret;
-//     ret = POBJ_ALLOC(pop, oidp, size, constructor, arg);
+PMEMobjpool* __pmc_pmemobj_create(const char *path, const char *layout, size_t poolsize, mode_t mode){
+  PMEMobjpool* pop = pmemobj_create(path, layout, poolsize, mode);
 
-//     if (my_flag && ret == 0) {  // Check if allocation was successful and we have initiallized variables
-//         void *ptr = pmemobj_direct(oidp->oid);  // Get a direct pointer to the allocated memory
-//         pthread_mutex_lock(&mtx);
+  return pop;
+}
 
-//         // Log the address range
-//         unsigned long long start_addr = (unsigned long long)ptr;
-//         unsigned long long end_addr = start_addr + size;
-//         printf("Adding addr: 0x%llx to 0x%llx\n", start_addr, end_addr);
+PMEMobjpool* __pmc_pmemobj_open(const char *path, const char *layout){
+  PMEMobjpool* pop = pmemobj_open(path, layout);
 
-//         // Track the memory range in the map
-//         M[start_addr] = end_addr;
-
-//         pthread_mutex_unlock(&mtx);
-//     }
-//     return ret;  // Return the result of POBJ_ALLOC
-// }
-
+  return pop;
+}
 
 void  *__pmc_calloc  (size_t blocks, size_t size) {
   void *ptr  = calloc(blocks, size);

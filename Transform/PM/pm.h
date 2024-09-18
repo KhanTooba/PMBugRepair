@@ -36,8 +36,8 @@ extern "C" {
   void __pmc_printStoreAddr(long long int addr, int size, int ID, int Line, int Col, const char* scope);
   void __pmc_printLoadAddr(long long int addr, int size, int ID, int Line, int Col, const char* scope);
   int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t size, pmemobj_constr constructor, void *arg);
-  // int __pmc_pobj_alloc(PMEMobjpool *pop, TOID(struct Segment) *oidp, struct Segment, size_t size, pmemobj_constr constructor, void *arg);
-  // int __pmc_pobj_alloc(PMEMobjpool *pop, TOID *oidp, TYPE, size_t size, pmemobj_constr constructor, void *arg);
+  PMEMobjpool* __pmc_pmemobj_create(const char *path, const char *layout, size_t poolsize, mode_t mode);
+  PMEMobjpool* __pmc_pmemobj_open(const char *path, const char *layout);
 
   void simuSfence();
   void simuFlushOpt(void *ptr, long int len);
@@ -51,8 +51,8 @@ extern "C" {
 #define pfree     __pmc_free
 // #define POBJ_ALLOC __pmc_pobj_alloc
 #define PMEM_POBJ_ALLOC(pop, o, t, size, constr, arg) __pmc_pobj_alloc((pop), (PMEMoid *)(o), (size), TOID_TYPE_NUM(t), (constr), (arg))
-//#define simuFlushOpt clflush
-  
+#define pmemobj_create __pmc_pmemobj_create
+#define pmemonj_open __pmc_pmemobj_open
 #ifdef __cplusplus
 }
 #endif
