@@ -85,7 +85,7 @@ int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t 
         unsigned long long start_addr_ull = (unsigned long long)ptr;
         unsigned long long end_addr_ull = start_addr_ull + size;
         
-        my_printf("Adding addr: 0x%llx to 0x%llx\n", start_addr_ull, end_addr_ull);
+        my_printf("Adding addr: 0x%llx to 0x%llx", start_addr_ull, end_addr_ull);
 
         M[start_addr_ull] = end_addr_ull;
         pthread_mutex_unlock(&mtx);
@@ -100,7 +100,7 @@ PMEMobjpool* __pmc_pmemobj_create(const char *path, const char *layout, size_t p
   unsigned long long start_addr_ull = (unsigned long long)pop;
   unsigned long long end_addr_ull = start_addr_ull + poolsize;
         
-  my_printf("Adding addr: 0x%llx to 0x%llx\n", start_addr_ull, end_addr_ull);
+  my_printf("Adding addr: 0x%llx to 0x%llx", start_addr_ull, end_addr_ull);
 
   M[start_addr_ull] = end_addr_ull;
   pthread_mutex_unlock(&mtx);
@@ -116,12 +116,16 @@ PMEMobjpool* __pmc_pmemobj_open(const char *path, const char *layout){
   unsigned long long start_addr_ull = (unsigned long long)pop;
   unsigned long long end_addr_ull = start_addr_ull + pool_size;
         
-  my_printf("Adding addr: 0x%llx to 0x%llx\n", start_addr_ull, end_addr_ull);
+  my_printf("Adding addr: 0x%llx to 0x%llx", start_addr_ull, end_addr_ull);
 
   M[start_addr_ull] = end_addr_ull;
   pthread_mutex_unlock(&mtx);
 
   return pop;
+}
+
+void __pmc_pmemobj_persist(PMEMobjpool *pop, const void *addr, size_t len){
+  pmemobj_persist(pop, addr, len);
 }
 
 void  *__pmc_calloc  (size_t blocks, size_t size) {
@@ -320,12 +324,11 @@ void __flush(void* ptr, long int size, int line, int col) {
 }
 
 void __fence(int line, int col){
-        if (my_flag) {
-            pthread_mutex_lock(&mtx);
-            //my_printf("SFENCE;");
-	    my_printf("SFENCE. @Ln,Col: %d,%d ; ", line, col);
-            pthread_mutex_unlock(&mtx);
-          }
+  if (my_flag) {
+    pthread_mutex_lock(&mtx);
+	  my_printf("SFENCE. @Ln,Col: %d,%d ; ", line, col);
+    pthread_mutex_unlock(&mtx);
+  }
 }
 
 //Tooba's addition ends here.

@@ -585,8 +585,7 @@ void printInstructionDetails(llvm::Instruction *inst) {
         llvm::outs() << "No Debug Location\n";
     }
 } 
-    void InstruAddr(Instruction &I) {
-      
+void InstruAddr(Instruction &I) {
       IRBuilder<> builder(I.getContext());
       DataLayout DL = I.getFunction()->getParent()->getDataLayout();
       Value *address;
@@ -608,7 +607,7 @@ void printInstructionDetails(llvm::Instruction *inst) {
       }
       assert(address != nullptr);
 
-            Type *ty = address->getType();
+      Type *ty = address->getType();
             builder.SetInsertPoint(&I);
             builder.SetCurrentDebugLocation(I.getDebugLoc());
             Value *address_i64;
@@ -629,7 +628,7 @@ void printInstructionDetails(llvm::Instruction *inst) {
             if (I.getDebugLoc().get() != nullptr) {
                 LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
                 ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
-                outs()<<LineLoc<<":"<<ColLoc<<"\n";
+                // outs()<<LineLoc<<":"<<ColLoc<<"\n";
             }
             else {
                 LineLoc = llvm::ConstantInt::get(i32_type, 0);
@@ -644,9 +643,9 @@ void printInstructionDetails(llvm::Instruction *inst) {
                 builder.CreateCall(__pmc_printLoadAddr, args);
             }
             else if (llvm::isa<llvm::StoreInst>(&I)) {
-                outs()<< "\n\n"<<I.getFunction()->getParent()->getName()<<"\n";  
-                outs()<<I.getFunction()->getName()<<"\n"<<isa<StoreInst>(&I)<<"\n";
-                printInstructionDetails(&I);
+                // outs()<< "\n\n"<<I.getFunction()->getParent()->getName()<<"\n";  
+                // outs()<<I.getFunction()->getName()<<"\n"<<isa<StoreInst>(&I)<<"\n";
+                // printInstructionDetails(&I);
 //                PrintedIDs.insert(InstToIDMap[&I]);
                 builder.CreateCall(__pmc_printStoreAddr, args);
             }
