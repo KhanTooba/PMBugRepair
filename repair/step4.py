@@ -167,7 +167,7 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
         while i<len(trace)-1:
             # print(trace[i])
             if foundfirst==-1 and trace[i][0]!=int(first) and trace[i][0]!=int(second):
-                print("Adding before: ", trace[i])
+                # print("Adding before: ", trace[i])
                 repairedTrace.append(trace[i])
                 i += 1
                 # traceIndex = i
@@ -231,7 +231,7 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
         i = traceIndex
         while i<len(trace)-1:
             if foundSecond==-1 and trace[i][0]!=int(second):
-                print("Adding before: ", trace[i])
+                # print("Adding before: ", trace[i])
                 repairedTrace.append(trace[i])
                 i+=1
                 traceIndex = i
@@ -297,7 +297,8 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
     # print("Starting from:", trace[traceIndex])
     for i in range(traceIndex, len(trace)):
         # print("Starting from:")
-        repairedTrace.append(trace[i])
+        if trace[i] not in repairedTrace:
+            repairedTrace.append(trace[i])
         
     return repairedTrace, addCons
 
