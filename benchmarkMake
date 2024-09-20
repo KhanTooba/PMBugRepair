@@ -19,7 +19,8 @@ compile_and_opt:
 		$(CC) $(CFLAGS) ThreadTrove/$(file)/$(file).c -o results/bcFiles/$(file).bc -I ThreadTrove/$(file) -I $(INCLUDE_GEN)  -lpmemobj -lpmem ; \
 		opt -load $(PMInvGen_dir)/PMTraceGen/libLLVMPMTraceGen.so --pmtracegen results/bcFiles/$(file).bc -o results/bcFiles/$(file)_tracegen.bc; \
 		$(CC) -g results/bcFiles/$(file)_tracegen.bc -o results/bcFiles/$(file)_exec.o -pthread  -lpmemobj -lpmem -L/usr/lib/x86_64-linux-gnu -lm -L$(PMInvGen_dir)/PM -Wl,-rpath=$(PMInvGen_dir)/PM -lLLVMPMC  ; \
-		./results/bcFiles/$(file)_exec.o; \
+		./results/bcFiles/$(file)_exec.o >> results/bcFiles/$(file)_temp_out.txt; \
+		rm results/bcFiles/$(file)_temp_out.txt; \
 		mv output.txt ./results/outputs/$(file)_output.txt; \
 		echo "Processed $(file)"; \
 	)
