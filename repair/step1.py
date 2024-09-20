@@ -176,11 +176,13 @@ def repairDURA(thread, bug, previousConstraints):
             else:
                 print("Bug found: ", "pt_"+str(thread[i][0]), str(bug).split("<")[0].replace(" ", ""))
                 bugFlag = 1
-            for j in range(i+1, length): #Change this to run from 0 to length so that all clflushopts 
+            for j in range(0, length): #Change this to run from 0 to length so that all clflushopts 
                 # that already exist and might have been reaaranged can be utilized instead of adding new ones
-                if thread[j][1]==102 and thread[i][2]==thread[j][2] and not(thread[j][0] in claimedFlushes):
+                if thread[j][1]==102 and thread[i][2]==thread[j][2] and not(thread[j][0] in claimedFlushes) and (
+                    str(thread[i][-1]).split("_")[0]==str(thread[j][-1]).split("_")[0]): 
+                    # Ensure that the clflushopt is present in the same function as the STORE
+                    
                     foundFlush = j
-                    # print("Flush found at:", thread[j][0])
                     claimedFlushes.append(thread[j][0])
                     print("Constraint added:", Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[j][0]))-1)
                     solver.add(Int("pc_"+str(thread[i][0]))==Int("pc_"+str(thread[j][0]))-1)
@@ -204,7 +206,8 @@ def repairDURA(thread, bug, previousConstraints):
                     # bugFlag = 1
             
             for j in range(i+1, length):
-                if thread[j][1]==103:
+                if thread[j][1]==103: # and str(thread[i][-1]).split("_")[0]==str(thread[j][-1]).split("_")[0]: 
+                    # For DURA: Fence being in the same function is not important. Scope is relevant only for CLFLUSHOPT()
                     foundFence = 1 
             # print("pt_"+str(thread[i][0]))
             
@@ -261,15 +264,8 @@ def repairMPB(thread, bug, previousConstraints):
                     if countFence<2:
                         fence = [str(thread[i][0])+"_Fence_"+str(r), 103, '0', -1, thread[i][4], str(thread[i][5])+"_x"]
                         num_fence += 1
-                        # print("Adding:", fence)
-                        # blocking.append([thread[i][0], str(thread[i][0])+"_Fence_"+str(r)])
-                        # print(thread[i])
                         r += 1
                         thread.append(fence)
-                    #Let us now make constraints:
-                    # cons = Int("pt_"+str(thread[i][0]))<Int("pt_"+str(thread[j][0]))
-                    # constraintsToReturn.append(cons)
-                    # solver.add(cons)
                     break
     
     length = len(thread)

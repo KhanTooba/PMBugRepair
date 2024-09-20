@@ -1,21 +1,18 @@
 ###########################################################################
-Adding DURA & MPB Repair Report for CCEH: 
-Number of DURAS fixed: 16
-Number of MPBs fixed: 9
-Total time taken to repair DURA bugs: 2.101640224456787 seconds.
-Total time taken to repair MPB bugs: 146.57829427719116 seconds.
-Number of sfences() added: 7
-Number of clflushopts() added: 11
-Total number of calls to the Z3 solver: 27
-Total time taken: 148.8814799785614 seconds.
+Adding MPA Repair Report for cceh: 
+Number of MPAs fixed: 25
+Number of fences() added: 8
+Number of locks() added: 12
+Total number of calls to the Z3 solver: 9
+Total time taken to repair MPA bugs: 44.22953176498413 seconds.
 ###########################################################################
 
 ###########################################################################
-Adding MPA Repair Report for CCEH: 
+Adding MPA Repair Report for cceh: 
 Number of MPAs fixed: 25
-Number of fences() added: 0
-Number of locks() added: 3
-Total number of calls to the Z3 solver: 3
-Total time taken to repair MPA bugs: 5.036716938018799 seconds.
+Number of fences() added: 8
+Number of locks() added: 9
+Total number of calls to the Z3 solver: 9
+Total time taken to repair MPA bugs: 56.54842209815979 seconds.
 ###########################################################################
 
