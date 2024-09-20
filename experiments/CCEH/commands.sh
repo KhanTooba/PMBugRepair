@@ -1,4 +1,4 @@
-rm output.txt output_clean.txt
+rm output_clean.txt
 PMInvGen_DIR=../../../PMBugRepair/build/Transform
 
 #clang++-10 -O3 -std=c++17 -I./ -lrt -c -o src/CCEH.o src/CCEH.cpp -DINPLACE -lpmemobj -lpmem
@@ -15,4 +15,3 @@ sudo rm /mnt/pmfs/pool1
 sudo ./bin/multi_threaded_cceh /mnt/pmfs/pool1 10 2
 python3 cleanOutput.py output.txt output_clean.txt
 cp output_clean.txt ../../results/outputs/CCEH_output.txt
-rm output.txt
