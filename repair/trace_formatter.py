@@ -47,9 +47,9 @@ def fileReader(name):
                     source = str(rows[j]).split(" ")[5]
                     # print(source, dest)
             dependencies[dest] = source
-#            if source!="":
-#                stmt = format_STOREs(str(row), r)
-#                contents.append(stmt)
+            # if source!="":
+            #     stmt = format_STOREs(str(row), r)
+            #     contents.append(stmt)
 
 
         if "Load" in str(row) or "Store" in str(row):

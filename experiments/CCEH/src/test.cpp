@@ -57,7 +57,8 @@ int main (int argc, char* argv[])
 		// cout<<"FIRST\n";
 		HashTable = POBJ_ROOT(pop, CCEH);
 		// cout<<"SECOND\n";
-		D_RW(HashTable)->initCCEH(pop, initialSize);
+		// D_RW(HashTable)->initCCEH(pop, initialSize);
+		D_RW(HashTable)->initCCEH(pop);
 		// cout<<"THIRD\n";
     }
     else{
