@@ -15,3 +15,4 @@ sudo rm /mnt/pmfs/pool1
 sudo ./bin/multi_threaded_cceh /mnt/pmfs/pool1 10 2
 python3 cleanOutput.py output.txt output_clean.txt
 cp output_clean.txt ../../results/outputs/CCEH_output.txt
+rm output.txt

@@ -197,7 +197,7 @@ void __pmc_memClear() {
       if (!FUNC_STACK.count(func)) {
         FUNC_STACK[func] = 1;
       }
-//      my_printf("FUNC_BEGIN_1: %s %u; ", func, FUNC_STACK[func]);
+      my_printf("FUNC_BEGIN_1: %s %u; ", func, FUNC_STACK[func]);
       pthread_mutex_unlock(&mtx);
     }
   }
@@ -205,7 +205,7 @@ void __pmc_memClear() {
   void __pmc_funcEnd(const char* func) {
     if (my_flag) {
       pthread_mutex_lock(&mtx);
-  //    my_printf("FUNC_END: %s %u; ", func, FUNC_STACK[func]);
+      my_printf("FUNC_END: %s %u; ", func, FUNC_STACK[func]);
       FUNC_STACK[func]++;
       pthread_mutex_unlock(&mtx);
     }

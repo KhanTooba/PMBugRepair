@@ -1,76 +1,17 @@
 Local variables initialized.
-Number of bugs to be repaired:  25
-And(pc_4 < pc_1038, pt_4 > pc_1038)
-And(pc_4 < pc_1040, pt_4 > pc_1040)
-And(pc_4 < pc_1101, pt_4 > pc_1101)
-And(pc_4 < pc_1103, pt_4 > pc_1103)
-And(pc_4 < pc_1104, pt_4 > pc_1104)
-And(pc_1038 < pc_1038, pt_1038 > pc_1038)
-And(pc_1038 < pc_1040, pt_1038 > pc_1040)
-And(pc_1038 < pc_1101, pt_1038 > pc_1101)
-And(pc_1038 < pc_1103, pt_1038 > pc_1103)
-And(pc_1038 < pc_1104, pt_1038 > pc_1104)
-And(pc_1040 < pc_1038, pt_1040 > pc_1038)
-And(pc_1040 < pc_1040, pt_1040 > pc_1040)
-And(pc_1040 < pc_1101, pt_1040 > pc_1101)
-And(pc_1040 < pc_1103, pt_1040 > pc_1103)
-And(pc_1040 < pc_1104, pt_1040 > pc_1104)
-And(pc_1045 < pc_1108, pt_1045 > pc_1108)
-And(pc_1045 < pc_1110, pt_1045 > pc_1110)
-And(pc_1103 < pc_1101, pt_1103 > pc_1101)
-And(pc_1103 < pc_1103, pt_1103 > pc_1103)
-And(pc_1103 < pc_1104, pt_1103 > pc_1104)
-And(pc_1104 < pc_1101, pt_1104 > pc_1101)
-And(pc_1104 < pc_1103, pt_1104 > pc_1103)
-And(pc_1104 < pc_1104, pt_1104 > pc_1104)
-And(pc_1108 < pc_1108, pt_1108 > pc_1108)
-And(pc_1108 < pc_1110, pt_1108 > pc_1110)
-{1101, 1110} {4, 1038, 1103, 1040, 1104, 1108, 1045}
+Number of bugs to be repaired:  0
+set() set()
 
 ############################################################################
 Iteration:  1
-Number of threads:  54
+Number of threads:  4
 Completed building constraints.
-Number of constraints:  3476
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_4 < pc_1038, pt_4 > pc_1038)
-4 1038 [4, 1038, 1040, 1045, 1103, 1104, 1108] [1101, 1110] [] []
-Adding locks for write. 4
-Found insertion point for first lock:  2 3 [4, 101, '0x7fef2b9c05f0', '-1', 12, 'initDirectory_169']
-0
-Found fence: 8 [10, 103, '0', '-1', 12, 'initDirectory_170_x']
-Adding locks for read and taking fence within lock. 1038
-Found insertion point for second lock:  1036
-1
-Found fence at  [1044, 103, '0', '-1', 32, '245']
-Time taken:  1.958122968673706  seconds.
-
-############################################################################
-
-############################################################################
-Iteration:  2
-Number of threads:  54
-Completed building constraints.
-Number of constraints:  3510
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_4 < pc_1103, pt_4 > pc_1103)
-4 1103 [4, 1038, 1040, 1045, 1103, 1104, 1108] [1101, 1110] [4, 1038, 1040] [4, 1038]
-Adding locks for read and taking fence within lock. 1103
-Found insertion point for second lock:  1105
-2
-Found fence at  [1150, 103, '0', '-1', 53, 'Get_428_x']
-Time taken:  2.471374034881592  seconds.
-
-############################################################################
-
-############################################################################
-Iteration:  3
-Number of threads:  54
-Completed building constraints.
-Number of constraints:  6934
+Number of constraints:  154
+Already unsat at 1st
+Already unsat at 2nd
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.5057990550994873  seconds.
+Time taken:  0.022578954696655273  seconds.
 
 ############################################################################
 
-Total number of iterations:  3
+Total number of iterations:  1

@@ -1,3 +1,4 @@
+rm output.txt
 rm *.bc *.ll a.out
 ./commands.sh
 ./a.out
