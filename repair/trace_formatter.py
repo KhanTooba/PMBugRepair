@@ -46,10 +46,11 @@ def fileReader(name):
                 if "Store" in str(rows[j]) and str(rows[i]).split(" ")[1]==str(rows[j]).split(" ")[1]:
                     source = str(rows[j]).split(" ")[5]
                     # print(source, dest)
-            dependencies[dest] = source
-            # if source!="":
-            #     stmt = format_STOREs(str(row), r)
-            #     contents.append(stmt)
+            if source!="":
+                dependencies[dest] = source
+            if source!="":
+                stmt = format_STOREs(str(row), r)
+                contents.append(stmt)
 
 
         if "Load" in str(row) or "Store" in str(row):
@@ -79,13 +80,14 @@ def fileReader(name):
             stmt = format_FENCE(str(row), r)
             contents.append(stmt)
         
-        elif "DEP" in str(row):
-            # DEP: SrcID: 2554 DestID: 2495; <Thread ID:140255810307904>
-            source = str(row).split(" ")[2]
-            dest = str(row).split(" ")[4].split(";")[0]
-            dependencies[dest] = source
+        # elif "DEP" in str(row):
+        #     # DEP: SrcID: 2554 DestID: 2495; <Thread ID:140255810307904>
+        #     source = str(row).split(" ")[2]
+        #     dest = str(row).split(" ")[4].split(";")[0]
+        #     dependencies[dest] = source
             # print(source, dest)
-    
+    # for k in dependencies.keys():
+    #     print("DEP:", k, dependencies[k])
     print("Total number of lines:", r)
     return contents, dependencies, loads
 
@@ -104,6 +106,7 @@ def format(trace, threads, dependencies, loads):
     traceFormatted = []
     dep = 0
     dep_set = []
+    # print(dependencies.keys())
     # print(len(trace))
     for i in range(len(trace)):
         element = []
@@ -112,9 +115,11 @@ def format(trace, threads, dependencies, loads):
         if trace[i][1] in ['FLUSH', 'FENCE']:
             element = [trace[i][0], trace[i][1], trace[i][2], -1, threads[trace[i][3]], trace[i][-1]]
         elif trace[i][1]=='STORE':
+            # print("For store:")
             element = [trace[i][0], trace[i][1], trace[i][2], -1, threads[trace[i][3]]]
             # print(element, trace[i])
             if trace[i][-2] in dependencies.keys():
+                # print("For store:", trace[i][-2])
                 # print(True)
                 dest_id = dependencies[trace[i][-2]]
                 element[3] = loads[dest_id][2]

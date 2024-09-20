@@ -464,6 +464,8 @@ def addConstraints(inputFileName):
     for b in bugs:
         print(b)
     
+    # return trace, len(duras), len(mpbs), threadInfo, timeDura, timeMPB
+    
     #We have all the unique bugs now
     storeSeqs = []
     for stmt in trace:

@@ -73,7 +73,7 @@ def parseTraceHelper(elements, index):
     traceParsed.append(int(elements[0].strip()))
     traceParsed.append(elements[1].strip().replace("'",""))
     traceParsed.append(elements[2].strip().replace("'",""))
-    traceParsed.append(int(elements[3].strip()))
+    traceParsed.append(elements[3].strip())
     traceParsed.append(elements[4].replace("'","").strip())
     # print(traceParsed)
     return traceParsed
@@ -522,12 +522,15 @@ def generateRepair(inputFileName):
     i = 0
 
     print("Local variables initialized.")
-
+    print(trace[0])
     while i<length:
         if trace[i][1]==101:
+            # print(trace[i])
             for j in range(i+1, length):
-                if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]!=trace[j][-2]:
-                    if [str(trace[i][-1]), str(trace[j][-1])] not in mpas:
+                if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]!=trace[j][-2] and trace[i][-1]!=trace[j][-1]:
+                    
+                    if [str(trace[i][-1]), str(trace[j][-1])] not in mpas and [str(trace[j][-1]), str(trace[i][-1])] not in mpas:
+                        # print(trace[i], trace[j])
                         # print(trace[i], trace[j])
                         first = firstOcc[trace[i][-1]][0]
                         second = firstOcc[trace[j][-1]][0]
@@ -577,8 +580,9 @@ def generateRepair(inputFileName):
     # print("Num threads: ", tid)
     num_threads = tid
     print("Number of bugs to be repaired: ", bugCount)
-    for b in bugCons:
-        print(b)
+    # for b in bugCons:
+    #     print(b)
+    # return trace, bugCount
     truthValue = True
     iterCount = 0
     print(set(reads), set(writes))

@@ -1,6 +1,9 @@
-rm output.txt
+rm output.txt cleanOutput.txt
 rm *.bc *.ll a.out
 ./commands.sh
 ./a.out
-mv output.txt ../../results/outputs/fastFair_output.txt
+
+python3 cleanTrace.py output.txt cleanOutput.txt
+
+mv cleanOutput.txt ../../results/outputs/fastFair_output.txt
 rm *.bc *.ll a.out
