@@ -17,7 +17,7 @@ void* threadFunction(void* arg) {
     int thread_id = data->thread_id;
 
     // Example of write-after-write dependency
-    for(int i=0;i<15;i++){
+    for(int i=0;i<10;i++){
         addEdge(graph, rand()%N_Vertices, rand()%N_Vertices);
         hasEdge(graph, rand()%N_Vertices, rand()%N_Vertices); 
     }
