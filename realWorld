@@ -1,0 +1,11 @@
+.PHONY: fastFair CCEH all
+
+all: fastFair CCEH
+
+# Step 1: Run the commands in the fastFair directory
+fastFair:
+	cd experiments/fastFair && ./all_commands.sh
+
+# Step 2: Run the commands in the CCEH directory with sudo
+CCEH:
+	cd experiments/CCEH && sudo sh commands.sh
