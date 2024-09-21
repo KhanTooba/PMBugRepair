@@ -6,7 +6,7 @@ void* thread_func(void* arg) {
     DoublyLinkedList* list = (DoublyLinkedList*)arg;
 
     // Thread performs multiple operations on the list
-    for(int i=0; i<50; i++){
+    for(int i=0; i<20; i++){
         int value = dll_remove_start(list);
         dll_insert_end(list, value + 1);
         dll_insert_start(list, value + 2);
@@ -21,7 +21,7 @@ int main() {
     dll_init(&list);
 
     // Insert initial values
-    for(int i = 0; i<50; i++){
+    for(int i = 0; i<20; i++){
         dll_insert_end(&list, rand());
     }
 

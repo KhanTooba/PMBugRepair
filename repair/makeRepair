@@ -1,7 +1,7 @@
 # l1 = list motivatingExample stack queue queue_1 queue_2
 FOLDER = ../ThreadTrove
 l1 = CCEH $(shell find $(FOLDER) -maxdepth 1 -type d | sed 's|.*/||' | tail -n +2) fastFair
-
+# l1 = motivatingExample
 #l1 = skipLists
 process_files:
 	@echo "Subfolders: $(files)"
@@ -12,8 +12,8 @@ process_files:
 	echo "\n"; \
 	echo "Repairing program in $(file_name)"; \
 	python3 trace_formatter.py ../results/outputs/$(file_name)_output.txt ../results/outputs/$(file_name)_formatted_output.txt; \
-	python3 step1.py ../results/outputs/$(file_name)_formatted_output.txt ../results/results/$(file_name)_trace_repaired.txt $(file_name) >> ../results/results/$(file_name)_r1.txt; \
-	python3 step4.py ../results/results/$(file_name)_trace_repaired.txt ../results/repairedFiles/$(file_name)_trace_last_repair.txt $(file_name)>> ../results/results/$(file_name)_r2.txt; \
+	python3 step1.py ../results/outputs/$(file_name)_formatted_output.txt ../results/results/$(file_name)_trace_repaired.txt $(file_name); \
+	python3 step4.py ../results/results/$(file_name)_trace_repaired.txt ../results/repairedFiles/$(file_name)_trace_last_repair.txt $(file_name); \
 	echo "Repair of $(file_name) completed."; \
 	)
 

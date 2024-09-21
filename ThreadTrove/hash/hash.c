@@ -9,7 +9,7 @@ void* thread_func(void* arg) {
     int value_to_insert;
 
     // Each thread inserts 100 random values 
-    for(int i = 0; i < 100; i++){
+    for(int i = 0; i < 30; i++){
         key_to_insert = rand();
         value_to_insert = rand()%100;
         insert(ht, key_to_insert, value_to_insert);

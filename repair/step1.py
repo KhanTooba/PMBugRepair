@@ -177,9 +177,9 @@ def repairDURA(thread, bug, previousConstraints):
                 print("Bug found: ", "pt_"+str(thread[i][0]), str(bug).split("<")[0].replace(" ", ""))
                 bugFlag = 1
             for j in range(0, length): #Change this to run from 0 to length so that all clflushopts 
-                # that already exist and might have been reaaranged can be utilized instead of adding new ones
+                # that already exist and might have been rearranged can be utilized instead of adding new ones
                 if thread[j][1]==102 and thread[i][2]==thread[j][2] and not(thread[j][0] in claimedFlushes) and (
-                    str(thread[i][-1]).split("_")[0]==str(thread[j][-1]).split("_")[0]): 
+                    str(thread[i][-1]).split("_")[0]==str(thread[j][-1]).split("_")[0] or '_' not in str(thread[j][-1])):
                     # Ensure that the clflushopt is present in the same function as the STORE
                     
                     foundFlush = j

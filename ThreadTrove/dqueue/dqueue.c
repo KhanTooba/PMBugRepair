@@ -22,7 +22,7 @@ int main() {
     deque_init(&deque);
 
     // Insert initial values
-    for(int i=0; i<100; i++){
+    for(int i=0; i<10; i++){
         deque_push_back(&deque, rand());
     }
 

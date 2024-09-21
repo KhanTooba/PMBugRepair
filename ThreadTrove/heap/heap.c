@@ -16,7 +16,7 @@ void* threadFunction(void* arg) {
     int thread_id = data->thread_id;
 
     // Example of write-after-write dependency
-    for(int i=0;i<25;i++){
+    for(int i=0;i<20;i++){
         insertHeap(heap, rand());
     }
 
