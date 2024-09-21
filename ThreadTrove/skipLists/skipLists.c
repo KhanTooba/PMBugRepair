@@ -9,9 +9,9 @@ void* threadFunc(void* arg) {
     for(int i = 0; i<10; i++){
         int value = rand()%100;
         insert(skipList, value);
-        insert(skipList, value*2);
+        // insert(skipList, value*2);
         delete_element(skipList, value);
-        insert(skipList, value*3);
+        // insert(skipList, value*3);
     }
     return NULL;
 }

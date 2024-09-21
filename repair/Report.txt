@@ -1,33 +1,12 @@
 ###########################################################################
-Adding DURA & MPB Repair Report for CCEH: 
-Number of DURAS fixed: 16
-Number of MPBs fixed: 12
-Total time taken to repair DURA bugs: 0.22364592552185059 seconds.
-Total time taken to repair MPB bugs: 2.13228178024292 seconds.
-Number of sfences() added: 9
-Number of clflushopts() added: 11
-Total number of calls to the Z3 solver: 33
-Total time taken: 2.4008119106292725 seconds.
-###########################################################################
-
-###########################################################################
-Adding MPA Repair Report for CCEH: 
-Number of MPAs fixed: 17
-Number of fences() added: 4
-Number of locks() added: 12
-Total number of calls to the Z3 solver: 9
-Total time taken to repair MPA bugs: 3.82728910446167 seconds.
-###########################################################################
-
-###########################################################################
-Adding DURA & MPB Repair Report for doublyList: 
-Number of DURAS fixed: 16
-Number of MPBs fixed: 13
-Total time taken to repair DURA bugs: 2.8702805042266846 seconds.
-Total time taken to repair MPB bugs: 36.48824954032898 seconds.
-Number of sfences() added: 8
-Number of clflushopts() added: 10
-Total number of calls to the Z3 solver: 40
-Total time taken: 39.72296476364136 seconds.
+Adding DURA & MPB Repair Report for skipLists: 
+Number of DURAS fixed: 30
+Number of MPBs fixed: 26
+Total time taken to repair DURA bugs: 3.2761127948760986 seconds.
+Total time taken to repair MPB bugs: 13.329466819763184 seconds.
+Number of sfences() added: 10
+Number of clflushopts() added: 26
+Total number of calls to the Z3 solver: 61
+Total time taken: 16.776459217071533 seconds.
 ###########################################################################
 

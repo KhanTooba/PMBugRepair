@@ -8,7 +8,7 @@ void* thread_func(void* arg) {
     int value;
 
     // Each thread inserts 100 random values 
-    for(int i = 0; i < 50; i++){
+    for(int i = 0; i < 20; i++){
         value = rand();
         insert(list, value);
         printf("Thread %d inserted: %d into the list\n", thread_id, value);

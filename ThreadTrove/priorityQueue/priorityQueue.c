@@ -6,7 +6,7 @@ void* thread_func(void* arg) {
     PriorityQueue* pq = (PriorityQueue*)arg;
     int value;
 
-    for(int i=0;i<30;i++) {  
+    for(int i=0;i<10;i++) {  
         value = rand()%10;
         pq_insert(pq, value, value);
     }

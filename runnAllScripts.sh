@@ -1,11 +1,4 @@
-make -f benchmarkMake -s -B
-cd experiments/fastFair
-./all_commands.sh
-cd ../CCEH
-sudo sh commands.sh
-#cd ../../repair
-#make -f makeRepair -s -B
-#cat Report.txt
-#cd ../experiments
-#python3 convertResultsToCsv.py
-#cat ../experiments/results.csv
+sudo make -f benchmarkMake -s -B
+sudo make -f realWorld -B
+cd repair
+make -f makeRepair -s -B

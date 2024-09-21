@@ -565,7 +565,7 @@ def generateRepair(inputFileName):
     iterCount = 0
     print(set(reads), set(writes))
     
-    setSize = len(bugCons) if len(bugCons)>0 else 1
+    setSize = 5 #len(bugCons) if len(bugCons)>0 else 1
     # setSize = 5
     for i in range(0, len(bugCons), setSize):
         start = i

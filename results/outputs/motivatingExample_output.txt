@@ -1,17 +1,17 @@
-FUNC_BEGIN_1: main 1; <Thread ID:140510123221632>
-FUNC_BEGIN_1: PersistentMemory_init 1; <Thread ID:140510123221632>
-Adding addr: 0x1006850 to 0x1006854; <Thread ID:140510123221632>
-Adding addr: 0x10068b0 to 0x10068b4; <Thread ID:140510123221632>
-FUNC_END: PersistentMemory_init 1; <Thread ID:140510123221632>
-FUNC_BEGIN_1: thread2_function 1; <Thread ID:140510114813696>
-Load: 0x1006850 Size: 4 ID: 38 @Ln,Col: 24,16 Scope: thread2_function; <Thread ID:140510114813696>
-Store: 0x10068b0 Size: 4 ID: 42 @Ln,Col: 24,14 Scope: thread2_function; <Thread ID:140510114813696>
-CLFLUSH: 0x10068b0 LEN: 4 @Ln,Col: 25,5 ; <Thread ID:140510114813696>
-Simulated F-L-U-S-H: 0x10068b0 LEN: 4; <Thread ID:140510114813696>
-SFENCE. @Ln,Col: 26,5 ; <Thread ID:140510114813696>
-Simulated F-E-N-C-E;<Thread ID:140510114813696>
-FUNC_END: thread2_function 1; <Thread ID:140510114813696>
-FUNC_BEGIN_1: thread1_function 1; <Thread ID:140510123206400>
-Store: 0x1006850 Size: 4 ID: 25 @Ln,Col: 18,14 Scope: thread1_function; <Thread ID:140510123206400>
-FUNC_END: thread1_function 1; <Thread ID:140510123206400>
-FUNC_END: main 1; <Thread ID:140510123221632>
+FUNC_BEGIN_1: main 1; <Thread ID:139895875228288>
+FUNC_BEGIN_1: PersistentMemory_init 1; <Thread ID:139895875228288>
+Adding addr: 0x1900850 to 0x1900854; <Thread ID:139895875228288>
+Adding addr: 0x19008b0 to 0x19008b4; <Thread ID:139895875228288>
+FUNC_END: PersistentMemory_init 1; <Thread ID:139895875228288>
+FUNC_BEGIN_1: thread2_function 1; <Thread ID:139895866820352>
+Load: 0x1900850 Size: 4 ID: 38 @Ln,Col: 24,16 Scope: thread2_function; <Thread ID:139895866820352>
+Store: 0x19008b0 Size: 4 ID: 42 @Ln,Col: 24,14 Scope: thread2_function; <Thread ID:139895866820352>
+CLFLUSH: 0x19008b0 LEN: 4 @Ln,Col: 25,5 ; <Thread ID:139895866820352>
+Simulated F-L-U-S-H: 0x19008b0 LEN: 4; <Thread ID:139895866820352>
+SFENCE. @Ln,Col: 26,5 ; <Thread ID:139895866820352>
+Simulated F-E-N-C-E;<Thread ID:139895866820352>
+FUNC_END: thread2_function 1; <Thread ID:139895866820352>
+FUNC_BEGIN_1: thread1_function 1; <Thread ID:139895875213056>
+Store: 0x1900850 Size: 4 ID: 25 @Ln,Col: 18,14 Scope: thread1_function; <Thread ID:139895875213056>
+FUNC_END: thread1_function 1; <Thread ID:139895875213056>
+FUNC_END: main 1; <Thread ID:139895875228288>
