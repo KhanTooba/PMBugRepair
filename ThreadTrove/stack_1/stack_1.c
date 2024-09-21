@@ -5,12 +5,12 @@ void* thread_func(void* arg) {
     int start = rand();
     Stack* stack = (Stack*)arg;
 
-    for (int i = start; i < start + 100; i++) {
+    for (int i = start; i < start + 10; i++) {
         stack_push(stack, i);
         printf("Pushed: %d\n", i);
     }
 
-    for (int i = 0; i < 25; i++) {
+    for (int i = 0; i < 15; i++) {
         int popped_value = stack_pop(stack);
         if (popped_value != -1) {
             printf("Popped: %d\n", popped_value);

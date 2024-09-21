@@ -1,12 +1,12 @@
 ###########################################################################
-Adding DURA & MPB Repair Report for skipLists: 
-Number of DURAS fixed: 30
-Number of MPBs fixed: 26
-Total time taken to repair DURA bugs: 3.2761127948760986 seconds.
-Total time taken to repair MPB bugs: 13.329466819763184 seconds.
-Number of sfences() added: 10
-Number of clflushopts() added: 26
-Total number of calls to the Z3 solver: 61
-Total time taken: 16.776459217071533 seconds.
+Adding DURA & MPB Repair Report for stack_1: 
+Number of DURAS fixed: 5
+Number of MPBs fixed: 3
+Total time taken to repair DURA bugs: 0.4952223300933838 seconds.
+Total time taken to repair MPB bugs: 1.7771508693695068 seconds.
+Number of sfences() added: 3
+Number of clflushopts() added: 4
+Total number of calls to the Z3 solver: 8
+Total time taken: 2.354203939437866 seconds.
 ###########################################################################
 
