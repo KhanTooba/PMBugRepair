@@ -137,8 +137,9 @@ def format(trace, threads, dependencies, loads):
 def removeDuplicates(trace):
     traceToSend = [trace[0]]
     for i in range(1, len(trace)):
-        if str(trace[i])!=str(traceToSend[-1]):
+        if str(trace[i])!=str(traceToSend[-1]) and "Node" not in str(trace[i]):
             traceToSend.append(trace[i])
+    
     return traceToSend
 
 if __name__ == "__main__":
