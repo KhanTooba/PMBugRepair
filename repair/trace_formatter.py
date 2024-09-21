@@ -106,8 +106,6 @@ def format(trace, threads, dependencies, loads):
     traceFormatted = []
     dep = 0
     dep_set = []
-    # print(dependencies.keys())
-    # print(len(trace))
     for i in range(len(trace)):
         element = []
         if trace[i][1]=='LOAD':
@@ -115,12 +113,8 @@ def format(trace, threads, dependencies, loads):
         if trace[i][1] in ['FLUSH', 'FENCE']:
             element = [trace[i][0], trace[i][1], trace[i][2], -1, threads[trace[i][3]], trace[i][-1]]
         elif trace[i][1]=='STORE':
-            # print("For store:")
             element = [trace[i][0], trace[i][1], trace[i][2], -1, threads[trace[i][3]]]
-            # print(element, trace[i])
             if trace[i][-2] in dependencies.keys():
-                # print("For store:", trace[i][-2])
-                # print(True)
                 dest_id = dependencies[trace[i][-2]]
                 element[3] = loads[dest_id][2]
                 dep += 1
@@ -131,17 +125,8 @@ def format(trace, threads, dependencies, loads):
         traceFormatted.append(element)
 
     print(len(traceFormatted))
-    # for d in dep_set:
-    #     print(d)
     print("Total unique dependencies: ", len(dep_set))
     print("Total dependencies: ", dep)
-
-    
-    # ints = []
-    # index = []
-    # for t in traceFormatted:
-    #     ints.append(t[-1])
-    #     index.append(int(t[0]))
         
     toreturn = []
     for t in traceFormatted:
@@ -149,22 +134,21 @@ def format(trace, threads, dependencies, loads):
     
     return toreturn
 
+def removeDuplicates(trace):
+    traceToSend = [trace[0]]
+    for i in range(1, len(trace)):
+        if str(trace[i])!=str(traceToSend[-1]):
+            traceToSend.append(trace[i])
+    return traceToSend
+
 if __name__ == "__main__":
     inputFileName = sys.argv[1]
     outputFileName = sys.argv[2]
     trace, dependencies, loads = fileReader(inputFileName)
-    # print("After the fileReader function:")
-    # for t in trace:
-    #     print(t)
-
-    # print(dependencies)
     threads = getThreads(trace)
     print(threads)
-    # print("After format function:")
     trace = format(trace, threads, dependencies, loads)
-    # for t in trace:
-    #     print(t)
-    print(len(trace))
+    trace = removeDuplicates(trace)
     file = open(outputFileName, 'w')
     file.write("Threads: ["+str(threads)+"]\n")
     for t in trace:

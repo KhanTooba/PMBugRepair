@@ -1,0 +1,41 @@
+###########################################################################
+Adding DURA & MPB Repair Report for CCEH: 
+Number of DURAS fixed: 16
+Number of MPBs fixed: 12
+Total time taken to repair DURA bugs: 0.2648298740386963 seconds.
+Total time taken to repair MPB bugs: 1.6724860668182373 seconds.
+Number of sfences() added: 9
+Number of clflushopts() added: 13
+Total number of calls to the Z3 solver: 31
+Total time taken: 1.9764721393585205 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for CCEH: 
+Number of MPAs fixed: 17
+Number of fences() added: 4
+Number of locks() added: 12
+Total number of calls to the Z3 solver: 9
+Total time taken to repair MPA bugs: 3.8537940979003906 seconds.
+###########################################################################
+###########################################################################
+Adding DURA & MPB Repair Report for fastFair: 
+Number of DURAS fixed: 23
+Number of MPBs fixed: 17
+Total time taken to repair DURA bugs: 1.559410810470581 seconds.
+Total time taken to repair MPB bugs: 28.962361812591553 seconds.
+Number of sfences() added: 11
+Number of clflushopts() added: 15
+Total number of calls to the Z3 solver: 47
+Total time taken: 30.627373933792114 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for fastFair: 
+Number of MPAs fixed: 51
+Number of fences() added: 12
+Number of locks() added: 21
+Total number of calls to the Z3 solver: 19
+Total time taken to repair MPA bugs: 1195.1183459758759 seconds.
+###########################################################################
+
