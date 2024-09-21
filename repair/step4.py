@@ -565,12 +565,13 @@ def generateRepair(inputFileName):
     iterCount = 0
     print(set(reads), set(writes))
     
-    setSize = 5 #len(bugCons) if len(bugCons)>0 else 1
+    setSize = int(len(bugCons)/10) #len(bugCons) if len(bugCons)>0 else 1
     # setSize = 5
     for i in range(0, len(bugCons), setSize):
         start = i
         end = len(bugCons) if i+setSize>=len(bugCons) else i+setSize
         set1 = bugCons[start:end]
+        truthValue = True
         while truthValue==True:
             print("\n############################################################################")
             t1 =  time.time()
