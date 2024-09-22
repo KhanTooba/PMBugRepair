@@ -8,23 +8,36 @@ To build the trace generator llvm opt pass:
     sh builder.sh
 ```
 
-To generate trace for all benchmarks in the ThreadTrove folder: 
+To generate traces for all benchmarks in the ThreadTrove folder: 
 ```
 # Generate traces (Results will be saved in PMBugRepair/results/bcFiles/outputs): 
     make -f benchmarkMake -s -B
 ```
 
-To execute step1 (repair individual traces) for all benchmarks in the ThreadTrove folder: 
+To generate traces for all RealWorld benchmarks (FastFair, and CCEH): 
 ```
-# Execute step 1 (Results will be saved in PMBugRepair/results/bcFiles/results): 
+# Generate traces (Results will be saved in PMBugRepair/results/bcFiles/outputs): 
+    make -f realWorld -B
+```
+
+To execute step1 (repair individual traces) and step 4 (repair MPA bugs) for all benchmarks in the ThreadTrove folder and realWorld benchmarks: 
+```
+# Step 1 Results will be saved in PMBugRepair/results/bcFiles/results | Step 4 Results will be saved in PMBugRepair/results/bcFiles/repairedFiles: 
     cd repair
     make -f makeRepair -s -B
 ```
 
+Final Report will be saved in repair/Report.txt. This report contains stats for repair of DURA, MPB, and MPA bugs for all micro and real world benchmarks. The tables 1 and 2 from the paper can be generated using the Report.txt by running the following command:
+```
+# Results will be saved in experiments/results_table1.csv and experiments/results_table2.csv: 
+    cd experiments
+    python3 convertResultsToCsv.py
+```
+
 ## Updates:
 1. DURA, MPB and MPB bug repair has been added.
-2. Results verified on programs under ThreadTrove folder and FAST FAIR benchmark.
-3. Results pending for the remaining ASPLOS benchmarks.
+2. Results verified on programs under ThreadTrove folder, CCEH, and FAST FAIR benchmark.
+3. Results pending for the P-CLHT, Memcached, and Clevel-hashing benchmarks.
 
 
 ## Experimental Setup
@@ -62,5 +75,7 @@ To execute step1 (repair individual traces) for all benchmarks in the ThreadTrov
     ./example
 ```
 
-### 2. Redis: [redis](https://github.com/redis/redis)
-#### Steps taken to install:
+sudo make -f benchmarkMake -s -B
+sudo make -f realWorld -B
+cd repair
+make -f makeRepair -s -B
