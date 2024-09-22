@@ -3,7 +3,7 @@
 #include "graph.h"
 
 #define N_THREADS 2
-#define N_Vertices 50
+#define N_Vertices 10
 
 typedef struct {
     Graph *graph;
@@ -45,7 +45,7 @@ int main() {
         pthread_join(threads[i], NULL);
     }
 
-    printGraph(graph);
+    // printGraph(graph);
 
     destroyGraph(graph);
     return 0;

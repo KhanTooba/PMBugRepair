@@ -1,0 +1,215 @@
+Local variables initialized.
+[2, 101, '0x7f2f92fc0550', '-1', '0', 'initCCEH_168']
+Number of bugs to be repaired:  17
+And(pc_4 < pc_15, pt_4 > pc_15)
+And(pc_4 < pc_17, pt_4 > pc_17)
+And(pc_4 < pc_81, pt_4 > pc_81)
+And(pc_4 < pc_84, pt_4 > pc_84)
+And(pc_6 < pc_15, pt_6 > pc_15)
+And(pc_6 < pc_17, pt_6 > pc_17)
+And(pc_6 < pc_81, pt_6 > pc_81)
+And(pc_6 < pc_84, pt_6 > pc_84)
+And(pc_8 < pc_78, pt_8 > pc_78)
+And(pc_15 < pc_17, pt_15 > pc_17)
+And(pc_15 < pc_81, pt_15 > pc_81)
+And(pc_15 < pc_84, pt_15 > pc_84)
+And(pc_17 < pc_81, pt_17 > pc_81)
+And(pc_17 < pc_84, pt_17 > pc_84)
+And(pc_19 < pc_90, pt_19 > pc_90)
+And(pc_26 < pc_87, pt_26 > pc_87)
+And(pc_81 < pc_84, pt_81 > pc_84)
+{90, 84, 78, 87} {4, 6, 8, 15, 17, 81, 19, 26}
+Set Size:  10
+10 [And(pc_4 < pc_15, pt_4 > pc_15), And(pc_4 < pc_17, pt_4 > pc_17), And(pc_4 < pc_81, pt_4 > pc_81), And(pc_4 < pc_84, pt_4 > pc_84), And(pc_6 < pc_15, pt_6 > pc_15), And(pc_6 < pc_17, pt_6 > pc_17), And(pc_6 < pc_81, pt_6 > pc_81), And(pc_6 < pc_84, pt_6 > pc_84), And(pc_8 < pc_78, pt_8 > pc_78), And(pc_15 < pc_17, pt_15 > pc_17)]
+
+############################################################################
+Iteration:  1
+Number of threads:  38
+139 139 10
+Completed building constraints.
+Number of constraints:  345
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_4 < pc_15, pt_4 > pc_15)
+4 15
+Prinitng stats:  -1 -1
+Adding locks for write. 4
+Found insertion point for first lock:  2 3 [4, 101, '0x7f2f92fc05f0', '-1', 10, 'initDirectory_163'] ['Lock_0', 105, 'M1', -1, 10, 'initDirectory_163_x']
+Adding unlock: ['UnLock_0', 106, 'M1', -1, 10, 'initDirectory_163_x']
+Adding locks for read and taking fence within lock. 15
+Found insertion point for second lock:  13
+Adding fence because another thread started.
+Time taken:  0.3317232131958008  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  2
+Number of threads:  38
+144 144 10
+Completed building constraints.
+Number of constraints:  374
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_4 < pc_17, pt_4 > pc_17)
+4 17
+Prinitng stats:  2 -1
+Adding locks for read and taking fence within lock. 17
+Found insertion point for second lock:  20
+Adding fence because another thread started.
+Time taken:  0.3507676124572754  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  3
+Number of threads:  38
+147 147 10
+Completed building constraints.
+Number of constraints:  397
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_4 < pc_81, pt_4 > pc_81)
+4 81
+Prinitng stats:  2 -1
+Adding locks for read and taking fence within lock. 81
+Found insertion point for second lock:  87
+Adding fence because another thread started.
+Time taken:  0.3974781036376953  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  4
+Number of threads:  38
+150 150 10
+Completed building constraints.
+Number of constraints:  425
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_4 < pc_84, pt_4 > pc_84)
+4 84
+Prinitng stats:  2 -1
+Adding very restricted lock for read. 84
+['Lock_4', 105, 'M1', -1, 37, 'Get_448_x']
+[84, 101, '0x7f2f92fc05f0', '0x7f2f92fc05f0', 37, 'Get_448']
+['UnLock_4', 106, 'M1', -1, 37, 'Get_448_x']
+[85, 102, '0x7f2f92fc05f0', '-1', 37, 'Get_448_x']
+Time taken:  0.3853113651275635  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  5
+Number of threads:  38
+152 152 10
+Completed building constraints.
+Number of constraints:  450
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_6 < pc_15, pt_6 > pc_15)
+6 15
+Prinitng stats:  -1 15
+Adding locks for write. 6
+Found insertion point for first lock:  6 7 [6, 101, '0x7f2f92fc05f0', '0x7f2f92fc05f0', 18, 'initDirectory_164'] ['Lock_5', 105, 'M1', -1, 18, 'initDirectory_164_x']
+Adding fence because another thread started.
+Adding unlock: ['UnLock_5', 106, 'M1', -1, 18, 'initDirectory_164_x']
+Time taken:  0.32027435302734375  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  6
+Number of threads:  38
+155 155 10
+Completed building constraints.
+Number of constraints:  485
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_8 < pc_78, pt_8 > pc_78)
+8 78
+Prinitng stats:  -1 -1
+Adding locks for write. 8
+Found insertion point for first lock:  11 12 [8, 101, '0x7f2f92fc05e0', '-1', 20, 'initDirectory_165'] ['Lock_6', 105, 'M1', -1, 20, 'initDirectory_165_x']
+Adding unlock: ['UnLock_6', 106, 'M1', -1, 20, 'initDirectory_165_x']
+Adding very restricted lock for read. 78
+['Lock_7', 105, 'M1', -1, 21, 'Get_428_x']
+[78, 101, '0x7f2f92fc05e0', '0x7f2f92fc05e0', 21, 'Get_428']
+['UnLock_7', 106, 'M1', -1, 21, 'Get_428_x']
+[79, 102, '0x7f2f92fc05e0', '-1', 21, 'Get_428_x']
+Time taken:  0.406099796295166  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  7
+Number of threads:  38
+159 159 10
+Completed building constraints.
+Number of constraints:  556
+Solving:
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.06208515167236328  seconds.
+
+############################################################################
+7 [And(pc_15 < pc_81, pt_15 > pc_81), And(pc_15 < pc_84, pt_15 > pc_84), And(pc_17 < pc_81, pt_17 > pc_81), And(pc_17 < pc_84, pt_17 > pc_84), And(pc_19 < pc_90, pt_19 > pc_90), And(pc_26 < pc_87, pt_26 > pc_87), And(pc_81 < pc_84, pt_81 > pc_84)]
+
+############################################################################
+Iteration:  8
+Number of threads:  38
+159 159 7
+Completed building constraints.
+Number of constraints:  556
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_19 < pc_90, pt_19 > pc_90)
+19 90
+Prinitng stats:  -1 -1
+Adding locks for write. 19
+Found insertion point for first lock:  30 31 [19, 101, '0x7f2f93a33a98', '-1', 32, 'Insert_242'] ['Lock_8', 105, 'M1', -1, 32, 'Insert_242_x']
+Adding unlock: ['UnLock_8', 106, 'M1', -1, 32, 'Insert_242_x']
+Adding very restricted lock for read. 90
+['Lock_9', 105, 'M1', -1, 37, 'Get_458_x']
+[90, 101, '0x7f2f93020658', '0x7f2f93a33a98', 37, 'Get_458']
+['UnLock_9', 106, 'M1', -1, 37, 'Get_458_x']
+[91, 102, '0x7f2f93020658', '-1', 37, 'Get_458_x']
+Time taken:  0.5366597175598145  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  9
+Number of threads:  38
+163 163 7
+Completed building constraints.
+Number of constraints:  644
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_26 < pc_87, pt_26 > pc_87)
+26 87
+Prinitng stats:  -1 -1
+Adding locks for write. 26
+Found insertion point for first lock:  39 40 [26, 101, '0x7f2f93020650', '-1', 34, 'Insert_246'] ['Lock_10', 105, 'M1', -1, 34, 'Insert_246_x']
+Adding unlock: ['UnLock_10', 106, 'M1', -1, 34, 'Insert_246_x']
+Adding very restricted lock for read. 87
+['Lock_11', 105, 'M1', -1, 37, 'Get_457_x']
+[87, 101, '0x7f2f93a33a90', '0x7f2f93020650', 37, 'Get_457']
+['UnLock_11', 106, 'M1', -1, 37, 'Get_457_x']
+[88, 102, '0x7f2f93a33a90', '-1', 37, 'Get_457_x']
+Time taken:  0.6472196578979492  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  10
+Number of threads:  38
+167 167 7
+Completed building constraints.
+Number of constraints:  753
+Solving:
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.09308385848999023  seconds.
+
+############################################################################
+
+Total number of iterations:  10

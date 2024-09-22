@@ -1,0 +1,44 @@
+Local variables initialized.
+[2, 101, '0x999850', '-1', '0', 'thread1_function_18']
+Number of bugs to be repaired:  1
+And(pc_2 < pc_5, pt_2 > pc_5)
+{5} {2}
+Set Size:  10
+1 [And(pc_2 < pc_5, pt_2 > pc_5)]
+
+############################################################################
+Iteration:  1
+Number of threads:  5
+9 9 1
+Completed building constraints.
+Number of constraints:  27
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
+2 5
+Prinitng stats:  -1 -1
+Adding locks for write. 2
+Found insertion point for first lock:  0 1 [2, 101, '0x999850', '-1', 3, 'thread1_function_18'] ['Lock_0', 105, 'M1', -1, 3, 'thread1_function_18_x']
+Adding unlock: ['UnLock_0', 106, 'M1', -1, 3, 'thread1_function_18_x']
+Adding very restricted lock for read. 5
+['Lock_1', 105, 'M1', -1, 4, 'thread2_function_24_x']
+[5, 101, '0x999850', '0x999850', 4, 'thread2_function_24']
+['UnLock_1', 106, 'M1', -1, 4, 'thread2_function_24_x']
+[6, 102, '0x999850', '-1', 4, 'thread2_function_24_x']
+Time taken:  0.016797780990600586  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  2
+Number of threads:  5
+13 13 1
+Completed building constraints.
+Number of constraints:  51
+Solving:
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.013977527618408203  seconds.
+
+############################################################################
+
+Total number of iterations:  2

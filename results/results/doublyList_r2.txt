@@ -1,0 +1,232 @@
+Local variables initialized.
+[2, 101, '0x23629e0', '-1', '0', 'newNode_66']
+Number of bugs to be repaired:  19
+And(pc_2 < pc_45, pt_2 > pc_45)
+And(pc_2 < pc_62, pt_2 > pc_62)
+And(pc_6 < pc_64, pt_6 > pc_64)
+And(pc_45 < pc_62, pt_45 > pc_62)
+And(pc_45 < pc_454, pt_45 > pc_454)
+And(pc_49 < pc_64, pt_49 > pc_64)
+And(pc_47 < pc_456, pt_47 > pc_456)
+And(pc_47 < pc_495, pt_47 > pc_495)
+And(pc_4 < pc_456, pt_4 > pc_456)
+And(pc_4 < pc_495, pt_4 > pc_495)
+And(pc_59 < pc_47, pt_59 > pc_47)
+And(pc_62 < pc_454, pt_62 > pc_454)
+And(pc_66 < pc_456, pt_66 > pc_456)
+And(pc_66 < pc_495, pt_66 > pc_495)
+And(pc_59 < pc_456, pt_59 > pc_456)
+And(pc_59 < pc_495, pt_59 > pc_495)
+And(pc_57 < pc_64, pt_57 > pc_64)
+And(pc_4 < pc_47, pt_4 > pc_47)
+And(pc_66 < pc_47, pt_66 > pc_47)
+{64, 456, 454, 495} {2, 66, 4, 6, 45, 47, 49, 57, 59, 62}
+Set Size:  10
+10 [And(pc_2 < pc_45, pt_2 > pc_45), And(pc_2 < pc_62, pt_2 > pc_62), And(pc_6 < pc_64, pt_6 > pc_64), And(pc_45 < pc_62, pt_45 > pc_62), And(pc_45 < pc_454, pt_45 > pc_454), And(pc_49 < pc_64, pt_49 > pc_64), And(pc_47 < pc_456, pt_47 > pc_456), And(pc_47 < pc_495, pt_47 > pc_495), And(pc_4 < pc_456, pt_4 > pc_456), And(pc_4 < pc_495, pt_4 > pc_495)]
+
+############################################################################
+Iteration:  1
+Number of threads:  42
+516 516 10
+Completed building constraints.
+Number of constraints:  1508
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_2 < pc_45, pt_2 > pc_45)
+2 45
+Prinitng stats:  -1 -1
+Adding locks for write. 2
+Found insertion point for first lock:  0 1 [2, 101, '0x23629e0', '-1', 6, 'newNode_66'] ['Lock_0', 105, 'M1', -1, 6, 'newNode_66_x']
+Adding fence because another thread started.
+Adding unlock: ['UnLock_0', 106, 'M1', -1, 6, 'newNode_66_x']
+Adding locks for read and taking fence within lock. 45
+Found insertion point for second lock:  43
+Adding fence because another thread started.
+Time taken:  0.7019641399383545  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  2
+Number of threads:  42
+522 522 10
+Completed building constraints.
+Number of constraints:  1542
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_2 < pc_62, pt_2 > pc_62)
+2 62
+Prinitng stats:  0 -1
+Adding locks for read and taking fence within lock. 62
+Found insertion point for second lock:  66
+Adding fence because another thread started.
+Time taken:  2.978963851928711  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  3
+Number of threads:  42
+525 525 10
+Completed building constraints.
+Number of constraints:  1571
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_6 < pc_64, pt_6 > pc_64)
+6 64
+Prinitng stats:  -1 66
+Adding locks for write. 6
+Found insertion point for first lock:  7 8 [6, 101, '0x2362ae0', '-1', 38, 'dll_insert_end_87'] ['Lock_3', 105, 'M1', -1, 38, 'dll_insert_end_87_x']
+Adding unlock: ['UnLock_3', 106, 'M1', -1, 38, 'dll_insert_end_87_x']
+Time taken:  1.4373970031738281  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  4
+Number of threads:  42
+527 527 10
+Completed building constraints.
+Number of constraints:  1595
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_45 < pc_454, pt_45 > pc_454)
+45 454
+Prinitng stats:  48 -1
+Adding very restricted lock for read. 454
+['Lock_4', 105, 'M1', -1, 27, 'dll_print_195_x']
+[454, 101, '0x7f81b0003520', '0x23629e0', 27, 'dll_print_195']
+['UnLock_4', 106, 'M1', -1, 27, 'dll_print_195_x']
+[455, 102, '0x7f81b0003520', '-1', 27, 'dll_print_195_x']
+Time taken:  5.892455101013184  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  5
+Number of threads:  42
+529 529 10
+Completed building constraints.
+Number of constraints:  1620
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_49 < pc_64, pt_49 > pc_64)
+49 64
+Prinitng stats:  -1 68
+Adding locks for write. 49
+Found insertion point for first lock:  55 56 [49, 101, '0x2362ae0', '-1', 40, 'dll_remove_start_150'] ['Lock_5', 105, 'M1', -1, 40, 'dll_remove_start_150_x']
+Locking  [57, 101, '0x2362ba0', '-1', 40, 'dll_insert_start_102']
+Locking  [59, 101, '0x7f81b0003528', '-1', 40, 'dll_insert_start_103']
+Adding fence because encountered second before fence.
+Adding unlock: ['UnLock_5', 106, 'M1', -1, 40, 'dll_remove_start_150_x']
+Time taken:  1.8029625415802002  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  6
+Number of threads:  42
+532 532 10
+Completed building constraints.
+Number of constraints:  1665
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_47 < pc_456, pt_47 > pc_456)
+47 456
+Prinitng stats:  -1 -1
+Adding locks for write. 47
+Found insertion point for first lock:  53 54 [47, 101, '0x23629e8', '0x7f81b0003528', 40, 'dll_remove_start_145'] ['Lock_6', 105, 'M1', -1, 40, 'dll_remove_start_145_x']
+Adding fence because encountered second before fence.
+Adding unlock: ['UnLock_6', 106, 'M1', -1, 40, 'dll_remove_start_145_x']
+Adding very restricted lock for read. 456
+['Lock_7', 105, 'M1', -1, 33, 'dll_print_196_x']
+[456, 101, '0x7f81b0003528', '0x2362ad8', 33, 'dll_print_196']
+['UnLock_7', 106, 'M1', -1, 33, 'dll_print_196_x']
+[457, 101, '0x7f81a80035a0', '0x23629e0', 33, 'dll_print_195']
+Time taken:  1.411086082458496  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  7
+Number of threads:  42
+537 537 10
+Completed building constraints.
+Number of constraints:  1740
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_47 < pc_495, pt_47 > pc_495)
+47 495
+Prinitng stats:  53 -1
+Adding very restricted lock for read. 495
+['Lock_8', 105, 'M1', -1, 35, 'dll_clear_173_x']
+[495, 101, '0x7f81b0003528', '0x2362ad8', 35, 'dll_clear_173']
+['UnLock_8', 106, 'M1', -1, 35, 'dll_clear_173_x']
+[496, 102, '0x7f81b0003528', '-1', 35, 'dll_clear_173_x']
+Time taken:  4.560321807861328  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  8
+Number of threads:  42
+539 539 10
+Completed building constraints.
+Number of constraints:  1781
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_4 < pc_456, pt_4 > pc_456)
+4 456
+Prinitng stats:  -1 473
+Adding locks for write. 4
+Found insertion point for first lock:  5 6 [4, 101, '0x23629e8', '-1', 38, 'dll_insert_end_86'] ['Lock_9', 105, 'M1', -1, 38, 'dll_insert_end_86_x']
+Adding fence because encountered second before fence.
+Adding unlock: ['UnLock_9', 106, 'M1', -1, 38, 'dll_insert_end_86_x']
+Time taken:  2.2844839096069336  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  9
+Number of threads:  42
+542 542 10
+Completed building constraints.
+Number of constraints:  1831
+Solving:
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.14473271369934082  seconds.
+
+############################################################################
+9 [And(pc_59 < pc_47, pt_59 > pc_47), And(pc_62 < pc_454, pt_62 > pc_454), And(pc_66 < pc_456, pt_66 > pc_456), And(pc_66 < pc_495, pt_66 > pc_495), And(pc_59 < pc_456, pt_59 > pc_456), And(pc_59 < pc_495, pt_59 > pc_495), And(pc_57 < pc_64, pt_57 > pc_64), And(pc_4 < pc_47, pt_4 > pc_47), And(pc_66 < pc_47, pt_66 > pc_47)]
+
+############################################################################
+Iteration:  10
+Number of threads:  42
+542 542 9
+Completed building constraints.
+Number of constraints:  1831
+Solving:
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_66 < pc_456, pt_66 > pc_456)
+66 456
+Prinitng stats:  -1 476
+Adding locks for write. 66
+Found insertion point for first lock:  84 85 [66, 101, '0x2362ad8', '-1', 41, 'dll_remove_end_126'] ['Lock_10', 105, 'M1', -1, 41, 'dll_remove_end_126_x']
+Adding unlock: ['UnLock_10', 106, 'M1', -1, 41, 'dll_remove_end_126_x']
+Time taken:  0.8143608570098877  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  11
+Number of threads:  42
+544 544 9
+Completed building constraints.
+Number of constraints:  2257
+Solving:
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.2051067352294922  seconds.
+
+############################################################################
+
+Total number of iterations:  11
