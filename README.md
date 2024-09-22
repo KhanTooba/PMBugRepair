@@ -22,12 +22,13 @@ To generate traces for all RealWorld benchmarks (FastFair, and CCEH):
 
 To execute step1 (repair individual traces) and step 4 (repair MPA bugs) for all benchmarks in the ThreadTrove folder and realWorld benchmarks: 
 ```
-# Step 1 Results will be saved in PMBugRepair/results/bcFiles/results | Step 4 Results will be saved in PMBugRepair/results/bcFiles/repairedFiles: 
+# Step 1 Results will be saved in PMBugRepair/results/bcFiles/results 
+# Step 4 Results will be saved in PMBugRepair/results/bcFiles/repairedFiles: 
     cd repair
     make -f makeRepair -s -B
 ```
 
-Final Report will be saved in repair/Report.txt. This report contains stats for repair of DURA, MPB, and MPA bugs for all micro and real world benchmarks. The tables 1 and 2 from the paper can be generated using the Report.txt by running the following command:
+Final Report will be saved in repair/Report.txt. This report contains stats for repair of DURA, MPB, and MPA bugs for all micro and real world benchmarks. The tables 1 and 2 from the paper can be generated from Report.txt by running the following command:
 ```
 # Results will be saved in experiments/results_table1.csv and experiments/results_table2.csv: 
     cd experiments
