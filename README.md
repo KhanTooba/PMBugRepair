@@ -25,7 +25,7 @@ To execute step1 (repair individual traces) and step 4 (repair MPA bugs) for all
 # Step 1 Results will be saved in PMBugRepair/results/bcFiles/results 
 # Step 4 Results will be saved in PMBugRepair/results/bcFiles/repairedFiles: 
     cd repair
-    make -f makeRepair -s -B
+    make -f makeRepair -B
 ```
 
 Final Report will be saved in repair/Report.txt. This report contains stats for repair of DURA, MPB, and MPA bugs for all micro and real world benchmarks. The tables 1 and 2 from the paper can be generated from Report.txt by running the following command:
@@ -75,8 +75,3 @@ Final Report will be saved in repair/Report.txt. This report contains stats for 
 # Run the "example" executable with:
     ./example
 ```
-
-sudo make -f benchmarkMake -s -B
-sudo make -f realWorld -B
-cd repair
-make -f makeRepair -s -B
