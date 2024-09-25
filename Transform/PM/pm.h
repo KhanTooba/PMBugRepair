@@ -48,6 +48,7 @@ extern "C" {
   void simuTX_ADD(void *ptr);
 
 #define pmalloc __pmc_malloc
+#define pmemalign(alignment, size) __pmc_malloc(size)
 #define pcalloc  __pmc_calloc
 #define pfree     __pmc_free
 // #define POBJ_ALLOC __pmc_pobj_alloc

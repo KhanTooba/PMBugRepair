@@ -29,7 +29,7 @@
  */
 //extern "C" {
 #include "clht_lb_res.h"
-
+#include "pm.h"
 #include <assert.h>
 #include <malloc.h>
 

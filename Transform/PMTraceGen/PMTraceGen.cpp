@@ -85,7 +85,7 @@ namespace pminv {
 
         bool Init = false;
         // Initialize external functions from helper function
-
+//	init();
     void init( Function &F ) {
         // llvm::outs() << "Initializing pass...\n";
 
@@ -145,9 +145,10 @@ namespace pminv {
       }
 
     virtual bool runOnFunction(Function &F) override {
-      init(F);
-	    insertFlush(F);
-      insertFence(F);
+//outs()<<"RUnning on function: "<<F.getName()<<"\n";
+      //init(F);
+//	insertFlush(F);
+ //     insertFence(F);
         
       if (!F.getSubprogram()) {
         LLVM_DEBUG( dbgs() << __func__ << " (0) skip the Function " << F.getName() << " since it doesn't have debug information.\n");
@@ -161,6 +162,10 @@ namespace pminv {
         LLVM_DEBUG( dbgs() << __func__ << " (2) skip the Function " << F.getName() << " since it initializes <iostream>.\n");
         return false;
       }
+
+	init(F);
+	insertFlush(F);
+        insertFence(F);
 
       // Chao: the following lines are taken from 'PMSetUniqueID' pass
       
@@ -269,6 +274,7 @@ namespace pminv {
     */
     // creating 'InstToIDMap' and 'instToSubProgramName' based on the 'UniqueID' metadata associated with each instruction 
     void GetUniqueID(Function &F) {
+//outs()<<"Executing getunique id\n";
 
       for (BasicBlock &bb: F) {
         for (Instruction &i: bb) {
@@ -349,6 +355,7 @@ namespace pminv {
                 Value *argData = callInst->getArgOperand(0); 
                 Value *argLen = callInst->getArgOperand(1); 
                 llvm::Type *type = argLen->getType();
+		Builder.SetInsertPoint(&I);
     
                 // Print the type in a human-readable format
                 // llvm::outs() << "Type of argLen: ";
@@ -357,22 +364,32 @@ namespace pminv {
 
                 unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
                 Value *argLen64;
-			          if (bitWidth == 64) {
+		if (bitWidth == 64) {
                     argLen64 = argLen;  
                 }
-                if (bitWidth < 64) {
+                else {//if (bitWidth < 64) {
                     argLen64 = Builder.CreateZExtOrBitCast(argLen, llvm::Type::getInt64Ty(Builder.getContext()));
                 }
-                        
+		//Value *argLen64 = Builder.CreateZExtOrBitCast(callInst->getArgOperand(1), 
+                //                          llvm::Type::getInt64Ty(Builder.getContext()));
+		Builder.SetInsertPoint(&I);
+                //outs()<<"Checking if null: "<<I.getDebugLoc().get()<<"\n";        
                 llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
+		//	outs()<<"Still entering here\n";
                   LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
                   ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
                 }
                 else {
+//		outs()<<"Entering else\n";
+
                   LineLoc = llvm::ConstantInt::get(i32_type, 0);
+//outs()<<"Second try\n";
+
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
-                }
+//outs()<<"Third try\n";
+                
+}
                 Builder.SetInsertPoint(&I);
                 // outs() << argLen64;
                 Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
@@ -383,7 +400,7 @@ namespace pminv {
                 Value *argData = callInst->getArgOperand(1); 
                 Value *argLen = callInst->getArgOperand(2); 
                 llvm::Type *type = argLen->getType();
-    
+    		Builder.SetInsertPoint(&I);
                 // Print the type in a human-readable format
                 // llvm::outs() << "Type of argLen: ";
                 // type->print(llvm::outs());  // Print the type
@@ -391,13 +408,13 @@ namespace pminv {
 
                 unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
                 Value *argLen64;
-			          if (bitWidth == 64) {
+		if (bitWidth == 64) {
                     argLen64 = argLen;  
                 }
                 if (bitWidth < 64) {
                     argLen64 = Builder.CreateZExtOrBitCast(argLen, llvm::Type::getInt64Ty(Builder.getContext()));
                 }
-                        
+                Builder.SetInsertPoint(&I);
                 llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
                   LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());

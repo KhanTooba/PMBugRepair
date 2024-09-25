@@ -38,6 +38,7 @@
 #include <emmintrin.h>
 //extern "C" {
 #include "clht_lb_res.h"
+#include "pm.h"
 //}
 //#define CLHTDEBUG
 //#define CRASH_AFTER_SWAP_CLHT
@@ -183,7 +184,7 @@ static inline void movnt64(uint64_t *dest, uint64_t const src, bool front, bool 
 clht_bucket_create() 
 {
     bucket_t* bucket = NULL;
-    bucket = (bucket_t *) memalign(CACHE_LINE_SIZE, sizeof(bucket_t));
+    bucket = (bucket_t *) pmemalign(CACHE_LINE_SIZE, sizeof(bucket_t));
     if (bucket == NULL)
     {
         return NULL;
@@ -219,7 +220,7 @@ clht_hashtable_t* clht_hashtable_create(uint64_t num_buckets);
     clht_t* 
 clht_create(uint64_t num_buckets)
 {
-    clht_t* w = (clht_t*) memalign(CACHE_LINE_SIZE, sizeof(clht_t));
+    clht_t* w = (clht_t*) pmemalign(CACHE_LINE_SIZE, sizeof(clht_t));
     if (w == NULL)
     {
         printf("** malloc @ hatshtalbe\n");
@@ -257,7 +258,7 @@ clht_hashtable_create(uint64_t num_buckets)
     }
 
     /* Allocate the table itself. */
-    hashtable = (clht_hashtable_t*) memalign(CACHE_LINE_SIZE, sizeof(clht_hashtable_t));
+    hashtable = (clht_hashtable_t*) pmemalign(CACHE_LINE_SIZE, sizeof(clht_hashtable_t));
     if (hashtable == NULL)
     {
         printf("** malloc @ hatshtalbe\n");
@@ -265,7 +266,7 @@ clht_hashtable_create(uint64_t num_buckets)
     }
 
     /* hashtable->table = calloc(num_buckets, (sizeof(bucket_t))); */
-    hashtable->table = (bucket_t*) memalign(CACHE_LINE_SIZE, num_buckets * (sizeof(bucket_t)));
+    hashtable->table = (bucket_t*) pmemalign(CACHE_LINE_SIZE, num_buckets * (sizeof(bucket_t)));
     if (hashtable->table == NULL) 
     {
         printf("** alloc: hashtable->table\n"); fflush(stdout);

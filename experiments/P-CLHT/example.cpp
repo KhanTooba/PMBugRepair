@@ -6,7 +6,7 @@
 #include <thread>
 #include <atomic>
 #include "tbb/tbb.h"
-
+#include "pm.h"
 using namespace std;
 #ifdef __cplusplus
 extern "C" {
