@@ -21,6 +21,11 @@ def getLoc():
                                            "../results/outputs/fastFair_output.txt"])
     listOfFiles['CCEH'] = count_lines(["../experiments/CCEH/src/CCEH.cpp",
                                            "../results/outputs/CCEH_output.txt"])
+    
+    all_Locs = count_lines(["../experiments/P-CLHT/src/clht_lb_res.c",
+                            "../experiments/P-CLHT/src/clht_gc.c"])
+    listOfFiles['P-CLHT'] = [sum(all_Locs), count_lines(["../results/outputs/P-CLHT_output.txt"])[0]]
+    
     return listOfFiles
 
 def getFile():
@@ -29,26 +34,15 @@ def getFile():
         file.append(str(line).replace("\n", ""))
     return file
 
-def processSubset1(name, subset, locDetails):
+def processSubset1(name, locDetails):
     # headers_1 = ["BenchmarkName", "LoC", "Trace Length", "#Loads", "#Stores", "#Threads", "#PM Vars"]
     data = []
-    dura = str(subset[0]).split(" ")[-1]
-    mpb = str(subset[1]).split(" ")[-1]
-    t_dura = str(subset[2]).split(" ")[-2]
-    t_mpb = str(subset[3]).split(" ")[-2]
-    num_sfence = float(str(subset[4]).split(" ")[-1]) + float(str(subset[13]).split(" ")[-1])
-    num_flush = str(subset[5]).split(" ")[-1]
-    num_calls_1 = float(str(subset[6]).split(" ")[-1]) 
-    mpa = str(subset[12]).split(" ")[-1]
-    num_locks = str(subset[14]).split(" ")[-1]
-    t_mpa = str(subset[16]).split(" ")[-2]
-    num_calls_2 = float(str(subset[15]).split(" ")[-1])
     locDetail = locDetails[name]
 
     data = [name, locDetail[0], locDetail[1], 0, 0, 2, 0]
     return data
 
-def processSubset2(name, subset, locDetails):
+def processSubset2(name, subset):
     # headers_2 = ["BenchmarkName", "#DURA", "#MPB", "#MPA", "Repair time in Step 1", 
     #         "Repair time in Step 2", "#Calls in step 1", "#Calls in step 2", 
     #         "#Lock", "#sfence()", "#clflushopt()"]
@@ -64,7 +58,6 @@ def processSubset2(name, subset, locDetails):
     num_locks = str(subset[14]).split(" ")[-1]
     t_mpa = str(subset[16]).split(" ")[-2]
     num_calls_2 = float(str(subset[15]).split(" ")[-1])
-    locDetail = locDetails[name]
 
     data = [name, int(dura), int(mpb), int(mpa), float(f"{float(t_dura)+float(t_mpb):.4f}"), 
             float(f"{float(t_mpa):.4f}"), int(num_calls_1), int(num_calls_2), int(num_locks), 
@@ -93,8 +86,8 @@ def processFile(file, locDetails):
     benchmarks[name] = subset
 
     for key in benchmarks.keys():
-        dataToSend1.append(processSubset1(key, benchmarks[key], locDetails))
-        dataToSend2.append(processSubset2(key, benchmarks[key], locDetails))
+        dataToSend1.append(processSubset1(key, locDetails))
+        dataToSend2.append(processSubset2(key, benchmarks[key]))
 
     return dataToSend1, dataToSend2
 
