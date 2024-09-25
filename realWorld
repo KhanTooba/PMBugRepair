@@ -1,7 +1,7 @@
 experimentDirectory = experiments
-.PHONY: fastFair CCEH all
+.PHONY: fastFair CCEH P-CLHT all
 
-all: fastFair CCEH
+all: fastFair CCEH P-CLHT
 
 # Step 1: Run the commands in the fastFair directory
 fastFair:
@@ -10,3 +10,6 @@ fastFair:
 # Step 2: Run the commands in the CCEH directory with sudo
 CCEH:
 	cd $(experimentDirectory)/CCEH && sudo sh commands.sh
+
+P-CLHT:
+	cd $(experimentDirectory)/P-CLHT && sudo sh commands.sh
