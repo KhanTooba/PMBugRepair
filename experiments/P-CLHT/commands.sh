@@ -21,7 +21,7 @@ clang++-10 -g example_trace.bc clht_gc_trace.bc clht_lb_res_trace.bc sspfd.o ssm
 
 rm *.bc *.o *.ll
 
-./example_executable 100 2
+./example_executable 10 2
 
 cp output.txt ../../results/outputs/P-CLHT_output.txt
 
