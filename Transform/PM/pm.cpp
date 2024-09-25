@@ -76,6 +76,24 @@ void  *__pmc_malloc  (size_t size) {
   return ptr;
 }
 
+//Tooba's addition begins here:
+
+void __flush(void* ptr, long int size, int line, int col) {
+  if (my_flag) {
+      pthread_mutex_lock(&mtx);
+      my_printf("CLFLUSH: %p LEN: %ld @Ln,Col: %d,%d ; ", ptr, size, line, col);
+      pthread_mutex_unlock(&mtx);
+  }
+}
+
+void __fence(int line, int col){
+  if (my_flag) {
+    pthread_mutex_lock(&mtx);
+	  my_printf("SFENCE. @Ln,Col: %d,%d ; ", line, col);
+    pthread_mutex_unlock(&mtx);
+  }
+}
+
 int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t size, pmemobj_constr constructor, void *arg){
     int ret = pmemobj_alloc(pop, oidp, type_num, size, constructor, arg);
     if (my_flag && ret == 0) { 
@@ -124,9 +142,7 @@ PMEMobjpool* __pmc_pmemobj_open(const char *path, const char *layout){
   return pop;
 }
 
-void __pmc_pmemobj_persist(PMEMobjpool *pop, const void *addr, size_t len){
-  pmemobj_persist(pop, addr, len);
-}
+//Tooba's addition ends here.
 
 void  *__pmc_calloc  (size_t blocks, size_t size) {
   void *ptr  = calloc(blocks, size);
@@ -313,25 +329,6 @@ void simuFlush(void* ptr, long int len) {
   }
 }
 
-//Tooba's addition begins here:
-
-void __flush(void* ptr, long int size, int line, int col) {
-  if (my_flag) {
-      pthread_mutex_lock(&mtx);
-      my_printf("CLFLUSH: %p LEN: %ld @Ln,Col: %d,%d ; ", ptr, size, line, col);
-      pthread_mutex_unlock(&mtx);
-  }
-}
-
-void __fence(int line, int col){
-  if (my_flag) {
-    pthread_mutex_lock(&mtx);
-	  my_printf("SFENCE. @Ln,Col: %d,%d ; ", line, col);
-    pthread_mutex_unlock(&mtx);
-  }
-}
-
-//Tooba's addition ends here.
 void simuTX_BEGIN() {
   if (my_flag) {
     pthread_mutex_lock(&mtx);

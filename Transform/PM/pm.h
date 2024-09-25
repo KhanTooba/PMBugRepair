@@ -55,7 +55,6 @@ extern "C" {
 #define PMEM_POBJ_ALLOC(pop, o, t, size, constr, arg) __pmc_pobj_alloc((pop), (PMEMoid *)(o), (size), TOID_TYPE_NUM(t), (constr), (arg))
 #define pmem_pmemobj_create __pmc_pmemobj_create
 #define pmem_pmemobj_open __pmc_pmemobj_open
-#define pmem_pmemobj_persist __pmc_pmemobj_persist
 #ifdef __cplusplus
 }
 #endif
