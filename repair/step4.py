@@ -438,7 +438,7 @@ def addLocks(trace, reads, writes, prevCons, bugCons, bugInfos):
     
     solver = Solver()
     solver.add(Or(bugCons))
-    solver.add(simplify(And(cons)))
+    solver.add(cons)
     print("Solving:")
 
     if solver.check()==sat:

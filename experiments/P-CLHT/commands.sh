@@ -1,5 +1,5 @@
 
-rm output.txt
+rm output.txt cleanOutput.txt
 
 clang++-10 -g -O3 -lrt -emit-llvm -c -I include -I external/include -I src -std=c++17 -march=native -mrtm -mcx16 -mavx -mavx2 -mbmi2 -mlzcnt example.cpp -o example.bc -I../../../PMBugRepair/build/Transform/../../Transform/PM -O0 -I./ -fheinous-gnu-extensions
 opt -load ../../../PMBugRepair/build/Transform/PMTraceGen/libLLVMPMTraceGen.so --pmtracegen  example.bc -o example_trace.bc
@@ -23,6 +23,7 @@ rm *.bc *.o *.ll
 
 ./example_executable 10 2
 
-cp output.txt ../../results/outputs/P-CLHT_output.txt
+python3 cleanTrace.py output.txt cleanOutput.txt
+cp cleanOutput.txt ../../results/outputs/P-CLHT_output.txt
 
 
