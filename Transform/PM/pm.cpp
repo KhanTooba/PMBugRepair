@@ -54,7 +54,9 @@ void my_printf(const char* format, ...) {
   //------------------------------------------------------------------------------------------
 
   void __pmc_Initialize() {
+//printf("Came here");
     if (!my_flag) {
+//	printf("Initializing variables\n");
       M = {};
       FUNC_STACK = {};
       DEP = {};
@@ -96,7 +98,7 @@ void __fence(int line, int col){
 
 int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t size, pmemobj_constr constructor, void *arg){
     int ret = pmemobj_alloc(pop, oidp, type_num, size, constructor, arg);
-    if (my_flag && ret == 0) { 
+/**    if (my_flag && ret == 0) { 
         void *ptr = pmemobj_direct(*oidp); 
         pthread_mutex_lock(&mtx);
 
@@ -107,7 +109,7 @@ int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t 
 
         M[start_addr_ull] = end_addr_ull;
         pthread_mutex_unlock(&mtx);
-    }
+    }*/
     return ret;  
 }
 

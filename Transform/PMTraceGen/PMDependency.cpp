@@ -41,7 +41,7 @@ namespace pminv {
             auto *childBB = child->getBlock();
             for (auto *childFrontierBB : PostDomFrontierMap[childBB]) {
                 auto *childFrontierNode = PDT.getNode(childFrontierBB);
-                if (childFrontierNode->getIDom() != node) {
+                if (childFrontierNode && childFrontierNode->getIDom() && childFrontierNode->getIDom() != node) {
                     PostDomFrontierMap[bb].push_back(childFrontierNode->getBlock());
                 }
             }

@@ -87,11 +87,11 @@ namespace pminv {
         // Initialize external functions from helper function
 //	init();
     void init( Function &F ) {
-        //llvm::outs() << "Initializing pass...\n";
-	
+        // llvm::outs() << "Initializing pass...\n";
+
         if (Init)
           return; 
-	//outs()<<"Beginning Init function\n";
+
         Init = true;
 
         i32_type = llvm::IntegerType::getInt32Ty(F.getContext());
@@ -101,15 +101,7 @@ namespace pminv {
         M = F.getParent();
 
         __pmc_Initialize = M->getOrInsertFunction("__pmc_Initialize", Type::getVoidTy(ctx)  );
-        //outs()<<"Added pmc_initialize\n";
-	// Now insert a call to this function at the beginning of the function 'F'
-//    	llvm::BasicBlock &entryBlock = F.getEntryBlock();  // Get the first basic block
-  //  	llvm::IRBuilder<> builder(&entryBlock, entryBlock.begin());  // Set the insertion point at the beginning
-
-    	// Create the call to __pmc_Initialize
-    //	builder.CreateCall(__pmc_Initialize);
-	
-	//LLVM_DEBUG(dbgs() << "found __pmc_Initialize function " << __pmc_Initialize.getFunctionType() << "\n");
+        //LLVM_DEBUG(dbgs() << "found __pmc_Initialize function " << __pmc_Initialize.getFunctionType() << "\n");
         __pmc_depAdd = M->getOrInsertFunction("__pmc_depAdd", Type::getVoidTy(ctx), 
                 Type::getInt32Ty(ctx),
                 Type::getInt32Ty(ctx)  );
@@ -153,26 +145,23 @@ namespace pminv {
       }
 
     virtual bool runOnFunction(Function &F) override {
-	outs()<<"Calling runOnFunction() for: "<<F.getName()<<"\n";
       if (!F.getSubprogram()) {
-	outs()<<"Returning false from 1st condition.\n";
         LLVM_DEBUG( dbgs() << __func__ << " (0) skip the Function " << F.getName() << " since it doesn't have debug information.\n");
         return false;
       }
       if (F.getSubprogram()->getFilename().contains("c++")) {
-        outs()<<"Returning false from 2nd condition.\n";
-	LLVM_DEBUG( dbgs() << __func__ << " (1) skip the Function " << F.getName() << " FileName:  " << F.getSubprogram()->getFilename() << " Name: " << F.getSubprogram()->getName() << "\n");
+        LLVM_DEBUG( dbgs() << __func__ << " (1) skip the Function " << F.getName() << " FileName:  " << F.getSubprogram()->getFilename() << " Name: " << F.getSubprogram()->getName() << "\n");
         return false;
       }
       if (F.getName().contains("_GLOBAL__sub_I")  || F.getName().contains("__cxx_global_var_init") ){
-        outs()<<"Returning false from 3rd condition.\n";
-	LLVM_DEBUG( dbgs() << __func__ << " (2) skip the Function " << F.getName() << " since it initializes <iostream>.\n");
-        return false;
+        LLVM_DEBUG( dbgs() << __func__ << " (2) skip the Function " << F.getName() << " since it initializes <iostream>.\n");
+        outs()<<"Returning without init() because of \n";
+	return false;
       }
 
-	init(F);
-	insertFlush(F);
-      	insertFence(F);
+	    init(F);
+	    insertFlush(F);
+      insertFence(F);
 
       // Chao: the following lines are taken from 'PMSetUniqueID' pass
       
