@@ -39,6 +39,7 @@ extern "C" {
   PMEMobjpool* __pmc_pmemobj_create(const char *path, const char *layout, size_t poolsize, mode_t mode);
   PMEMobjpool* __pmc_pmemobj_open(const char *path, const char *layout);
   void __pmc_pmemobj_persist(PMEMobjpool *pop, const void *addr, size_t len);
+  void* __pmc_wrapper_pmem_map_file(const char *path, size_t len, int flags, mode_t mode, size_t *mapped_lenp, int *is_pmemp);
 
   void simuSfence();
   void simuFlushOpt(void *ptr, long int len);
@@ -55,6 +56,7 @@ extern "C" {
 #define PMEM_POBJ_ALLOC(pop, o, t, size, constr, arg) __pmc_pobj_alloc((pop), (PMEMoid *)(o), (size), TOID_TYPE_NUM(t), (constr), (arg))
 #define pmem_pmemobj_create __pmc_pmemobj_create
 #define pmem_pmemobj_open __pmc_pmemobj_open
+#define pmc_pmem_map_file __pmc_wrapper_pmem_map_file
 #ifdef __cplusplus
 }
 #endif

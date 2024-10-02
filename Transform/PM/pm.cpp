@@ -79,6 +79,20 @@ void  *__pmc_malloc  (size_t size) {
 }
 
 //Tooba's addition begins here:
+void* __pmc_wrapper_pmem_map_file(const char *path, size_t len, int flags, mode_t mode, size_t *mapped_lenp, int *is_pmemp){
+  void* pslab_pool = pmem_map_file(path, len, flags, mode, &mapped_lenp, &is_pmemp);
+  pthread_mutex_lock(&mtx);
+
+  unsigned long long start_addr_ull = (unsigned long long)pslab_pool;
+  unsigned long long end_addr_ull = start_addr_ull + mapped_lenp;
+        
+  my_printf("Adding addr: 0x%llx to 0x%llx; ", start_addr_ull, end_addr_ull);
+
+  // M[start_addr_ull] = end_addr_ull;
+  pthread_mutex_unlock(&mtx);
+  return pslab_pool;
+}
+  
 
 void __flush(void* ptr, long int size, int line, int col) {
   if (my_flag) {
