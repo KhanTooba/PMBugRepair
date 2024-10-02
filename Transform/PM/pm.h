@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <libpmemobj.h>
+#include <libpmem.h>
 
 #ifndef PM_INVARIANT_GENERATION_PM_H
 #define PM_INVARIANT_GENERATION_PM_H
