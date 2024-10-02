@@ -350,15 +350,18 @@ namespace pminv {
                                                     Type::getInt32Ty(Context)}, false);
     FunctionCallee FlushFunc = F.getParent()->getOrInsertFunction("__flush", FlushFuncType);
 
+    FunctionType *FenceFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
+                                                    {Type::getInt32Ty(Context),
+                                                    Type::getInt32Ty(Context)}, false);
+    FunctionCallee FenceFunc = F.getParent()->getOrInsertFunction("__fence", FenceFuncType);
+
     for (BasicBlock &BB : F) {
       for (Instruction &I : BB) {
 
         if (CallInst *callInst = dyn_cast<CallInst>(&I)) {
 	        if (const Function *calledFunc = callInst->getCalledFunction()) {
             if (calledFunc->getName().find("clflush")!=std::string::npos || 
-                calledFunc->getName().find("simuFlushOpt")!=std::string::npos || 
-		calledFunc->getName().find("pmem_persist")!=std::string::npos ||
-		calledFunc->getName().find("pmem_flush")!=std::string::npos) {
+                calledFunc->getName().find("simuFlushOpt")!=std::string::npos) {
 
                 Value *argData = callInst->getArgOperand(0); 
                 Value *argLen = callInst->getArgOperand(1); 
@@ -387,9 +390,41 @@ namespace pminv {
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
             } 
+          
+          if (calledFunc->getName().find("pmem_persist")!=std::string::npos ||
+                calledFunc->getName().find("pmem_flush")!=std::string::npos) {
+
+                Value *argData = callInst->getArgOperand(0); 
+                Value *argLen = callInst->getArgOperand(1); 
+                llvm::Type *type = argLen->getType();
+		            Builder.SetInsertPoint(&I);
+    
+                unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
+                Value *argLen64;
+		            if (bitWidth == 64) {
+                    argLen64 = argLen;  
+                }
+                else {
+                    argLen64 = Builder.CreateZExtOrBitCast(argLen, llvm::Type::getInt64Ty(Builder.getContext()));
+                }
+		            
+                Builder.SetInsertPoint(&I);   
+                llvm::Constant *LineLoc, *ColLoc;
+                if (I.getDebugLoc().get() != nullptr) {
+                  LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
+                  ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
+                }
+                else {
+                  LineLoc = llvm::ConstantInt::get(i32_type, 0);
+                  ColLoc = llvm::ConstantInt::get(i32_type, 0);
+                }
+                Builder.SetInsertPoint(&I);
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
+                Builder.SetInsertPoint(&I);
+                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
+            } 
 
           if (calledFunc->getName().find("pmemobj_persist")!=std::string::npos) {
-
                 Value *argData = callInst->getArgOperand(1); 
                 Value *argLen = callInst->getArgOperand(2); 
                 llvm::Type *type = argLen->getType();
@@ -414,6 +449,8 @@ namespace pminv {
                 }
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
+                Builder.SetInsertPoint(&I);
+                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
             }
           }          
         }
