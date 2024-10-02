@@ -310,8 +310,7 @@ namespace pminv {
     IRBuilder<> Builder(Context);
     FunctionType *FenceFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt32Ty(Context),
-                                                    Type::getInt32Ty(Context),
-                                                    Type::getInt8PtrTy(Context)}, false);
+                                                    Type::getInt32Ty(Context)}, false);
     FunctionCallee FenceFunc = F.getParent()->getOrInsertFunction("__fence", FenceFuncType);
 
     for (BasicBlock &BB : F) {
@@ -331,7 +330,7 @@ namespace pminv {
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc, F.getName()});
+                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
             }
           }          
         }
@@ -348,14 +347,12 @@ namespace pminv {
     FunctionType *FlushFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt8PtrTy(Context), 
                                                     Type::getInt64Ty(Context),Type::getInt32Ty(Context),
-                                                    Type::getInt32Ty(Context),
-                                                    Type::getInt8PtrTy(Context)}, false);
+                                                    Type::getInt32Ty(Context)}, false);
     FunctionCallee FlushFunc = F.getParent()->getOrInsertFunction("__flush", FlushFuncType);
 
     FunctionType *FenceFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt32Ty(Context),
-                                                    Type::getInt32Ty(Context),
-                                                    Type::getInt8PtrTy(Context)}, false);
+                                                    Type::getInt32Ty(Context)}, false);
     FunctionCallee FenceFunc = F.getParent()->getOrInsertFunction("__fence", FenceFuncType);
 
     for (BasicBlock &BB : F) {
@@ -391,7 +388,7 @@ namespace pminv {
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc, F.getName()});
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
             } 
           
             else if (calledFunc->getName().find("pmem_persist")!=std::string::npos ||
@@ -422,9 +419,9 @@ namespace pminv {
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc, F.getName()});
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc, F.getName()});
+                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
             } 
 
             else if (calledFunc->getName().find("pmemobj_persist")!=std::string::npos) {
@@ -451,9 +448,9 @@ namespace pminv {
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc, F.getName()});
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc, F.getName()});
+                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
             }
           }          
         }
