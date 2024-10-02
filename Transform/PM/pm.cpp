@@ -94,18 +94,18 @@ void* __pmc_wrapper_pmem_map_file(const char *path, size_t len, int flags, mode_
 }
   
 
-void __flush(void* ptr, long int size, int line, int col) {
+void __flush(void* ptr, long int size, int line, int col, const char* scope) {
   if (my_flag) {
       pthread_mutex_lock(&mtx);
-      my_printf("CLFLUSH: %p LEN: %ld @Ln,Col: %d,%d ; ", ptr, size, line, col);
+      my_printf("CLFLUSH: %p LEN: %ld @Ln,Col: %d,%d Scope: %s; ", ptr, size, line, col, scope);
       pthread_mutex_unlock(&mtx);
   }
 }
 
-void __fence(int line, int col){
+void __fence(int line, int col, const char* scope){
   if (my_flag) {
     pthread_mutex_lock(&mtx);
-	  my_printf("SFENCE. @Ln,Col: %d,%d ; ", line, col);
+	  my_printf("SFENCE @Ln,Col: %d,%d Scope: %s; ", line, col, scope);
     pthread_mutex_unlock(&mtx);
   }
 }

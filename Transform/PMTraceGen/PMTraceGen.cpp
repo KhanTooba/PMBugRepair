@@ -153,26 +153,26 @@ namespace pminv {
       }
 
     virtual bool runOnFunction(Function &F) override {
-//	outs()<<"Calling runOnFunction() for: "<<F.getName()<<"\n";
+      //	outs()<<"Calling runOnFunction() for: "<<F.getName()<<"\n";
       if (!F.getSubprogram()) {
-	outs()<<"Returning false from 1st condition.\n";
+	      //outs()<<"Returning false from 1st condition.\n";
         LLVM_DEBUG( dbgs() << __func__ << " (0) skip the Function " << F.getName() << " since it doesn't have debug information.\n");
         return false;
       }
       if (F.getSubprogram()->getFilename().contains("c++")) {
-        outs()<<"Returning false from 2nd condition.\n";
-	LLVM_DEBUG( dbgs() << __func__ << " (1) skip the Function " << F.getName() << " FileName:  " << F.getSubprogram()->getFilename() << " Name: " << F.getSubprogram()->getName() << "\n");
+        //outs()<<"Returning false from 2nd condition.\n";
+	      LLVM_DEBUG( dbgs() << __func__ << " (1) skip the Function " << F.getName() << " FileName:  " << F.getSubprogram()->getFilename() << " Name: " << F.getSubprogram()->getName() << "\n");
         return false;
       }
       if (F.getName().contains("_GLOBAL__sub_I")  || F.getName().contains("__cxx_global_var_init") ){
-        outs()<<"Returning false from 3rd condition.\n";
-	LLVM_DEBUG( dbgs() << __func__ << " (2) skip the Function " << F.getName() << " since it initializes <iostream>.\n");
+        //outs()<<"Returning false from 3rd condition.\n";
+	      LLVM_DEBUG( dbgs() << __func__ << " (2) skip the Function " << F.getName() << " since it initializes <iostream>.\n");
         return false;
       }
 
-	init(F);
-	insertFlush(F);
-      	insertFence(F);
+	    init(F);
+	    insertFlush(F);
+      insertFence(F);
 
       // Chao: the following lines are taken from 'PMSetUniqueID' pass
       
@@ -310,7 +310,8 @@ namespace pminv {
     IRBuilder<> Builder(Context);
     FunctionType *FenceFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt32Ty(Context),
-                                                    Type::getInt32Ty(Context)}, false);
+                                                    Type::getInt32Ty(Context),
+                                                    Type::getInt8PtrTy(Context)}, false);
     FunctionCallee FenceFunc = F.getParent()->getOrInsertFunction("__fence", FenceFuncType);
 
     for (BasicBlock &BB : F) {
@@ -330,7 +331,7 @@ namespace pminv {
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
+                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc, F.getName()});
             }
           }          
         }
@@ -347,12 +348,14 @@ namespace pminv {
     FunctionType *FlushFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt8PtrTy(Context), 
                                                     Type::getInt64Ty(Context),Type::getInt32Ty(Context),
-                                                    Type::getInt32Ty(Context)}, false);
+                                                    Type::getInt32Ty(Context),
+                                                    Type::getInt8PtrTy(Context)}, false);
     FunctionCallee FlushFunc = F.getParent()->getOrInsertFunction("__flush", FlushFuncType);
 
     FunctionType *FenceFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt32Ty(Context),
-                                                    Type::getInt32Ty(Context)}, false);
+                                                    Type::getInt32Ty(Context),
+                                                    Type::getInt8PtrTy(Context)}, false);
     FunctionCallee FenceFunc = F.getParent()->getOrInsertFunction("__fence", FenceFuncType);
 
     for (BasicBlock &BB : F) {
@@ -388,10 +391,10 @@ namespace pminv {
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc, F.getName()});
             } 
           
-          if (calledFunc->getName().find("pmem_persist")!=std::string::npos ||
+            else if (calledFunc->getName().find("pmem_persist")!=std::string::npos ||
                 calledFunc->getName().find("pmem_flush")!=std::string::npos) {
 
                 Value *argData = callInst->getArgOperand(0); 
@@ -419,12 +422,12 @@ namespace pminv {
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc, F.getName()});
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
+                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc, F.getName()});
             } 
 
-          if (calledFunc->getName().find("pmemobj_persist")!=std::string::npos) {
+            else if (calledFunc->getName().find("pmemobj_persist")!=std::string::npos) {
                 Value *argData = callInst->getArgOperand(1); 
                 Value *argLen = callInst->getArgOperand(2); 
                 llvm::Type *type = argLen->getType();
@@ -448,9 +451,9 @@ namespace pminv {
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc, F.getName()});
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
+                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc, F.getName()});
             }
           }          
         }
