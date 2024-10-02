@@ -153,7 +153,7 @@ namespace pminv {
       }
 
     virtual bool runOnFunction(Function &F) override {
-	outs()<<"Calling runOnFunction() for: "<<F.getName()<<"\n";
+//	outs()<<"Calling runOnFunction() for: "<<F.getName()<<"\n";
       if (!F.getSubprogram()) {
 	outs()<<"Returning false from 1st condition.\n";
         LLVM_DEBUG( dbgs() << __func__ << " (0) skip the Function " << F.getName() << " since it doesn't have debug information.\n");
@@ -356,7 +356,9 @@ namespace pminv {
         if (CallInst *callInst = dyn_cast<CallInst>(&I)) {
 	        if (const Function *calledFunc = callInst->getCalledFunction()) {
             if (calledFunc->getName().find("clflush")!=std::string::npos || 
-                calledFunc->getName().find("simuFlushOpt")!=std::string::npos) {
+                calledFunc->getName().find("simuFlushOpt")!=std::string::npos || 
+		calledFunc->getName().find("pmem_persist")!=std::string::npos ||
+		calledFunc->getName().find("pmem_flush")!=std::string::npos) {
 
                 Value *argData = callInst->getArgOperand(0); 
                 Value *argLen = callInst->getArgOperand(1); 
@@ -386,7 +388,7 @@ namespace pminv {
                 Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
             } 
 
-          if (calledFunc->getName().find("pmemobj_persist")!=std::string::npos ) {
+          if (calledFunc->getName().find("pmemobj_persist")!=std::string::npos) {
 
                 Value *argData = callInst->getArgOperand(1); 
                 Value *argLen = callInst->getArgOperand(2); 
