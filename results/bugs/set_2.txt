@@ -1,0 +1,38 @@
+And(pc_newNode_56 < pc_set_remove_96,
+    pt_newNode_56 > pc_set_remove_96)
+And(pc_newNode_56 < pc_set_insert_74,
+    pt_newNode_56 > pc_set_insert_74)
+And(pc_set_insert_83 < pc_set_insert_78,
+    pt_set_insert_83 > pc_set_insert_78)
+And(pc_set_insert_74 < pc_set_remove_96,
+    pt_set_insert_74 > pc_set_remove_96)
+And(pc_set_insert_83 < pc_set_remove_98,
+    pt_set_insert_83 > pc_set_remove_98)
+And(pc_set_insert_83 < pc_set_remove_111,
+    pt_set_insert_83 > pc_set_remove_111)
+And(pc_set_insert_78 < pc_set_remove_98,
+    pt_set_insert_78 > pc_set_remove_98)
+And(pc_set_insert_78 < pc_set_remove_111,
+    pt_set_insert_78 > pc_set_remove_111)
+And(pc_set_remove_98 < pc_set_remove_111,
+    pt_set_remove_98 > pc_set_remove_111)
+And(pc_set_remove_98 < pc_set_print_164,
+    pt_set_remove_98 > pc_set_print_164)
+And(pc_set_remove_98 < pc_set_clear_142,
+    pt_set_remove_98 > pc_set_clear_142)
+And(pc_set_remove_96 < pc_set_print_163,
+    pt_set_remove_96 > pc_set_print_163)
+And(pc_set_remove_111 < pc_set_print_164,
+    pt_set_remove_111 > pc_set_print_164)
+And(pc_set_remove_111 < pc_set_clear_142,
+    pt_set_remove_111 > pc_set_clear_142)
+And(pc_set_insert_78 < pc_set_print_164,
+    pt_set_insert_78 > pc_set_print_164)
+And(pc_set_insert_78 < pc_set_clear_142,
+    pt_set_insert_78 > pc_set_clear_142)
+And(pc_set_insert_74 < pc_set_print_163,
+    pt_set_insert_74 > pc_set_print_163)
+And(pc_set_insert_83 < pc_set_print_164,
+    pt_set_insert_83 > pc_set_print_164)
+And(pc_set_insert_83 < pc_set_clear_142,
+    pt_set_insert_83 > pc_set_clear_142)

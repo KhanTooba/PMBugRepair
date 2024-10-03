@@ -1,0 +1,16 @@
+And(pc_newNode_76 < pc_pq_extract_min_124,
+    pt_newNode_76 > pc_pq_extract_min_124)
+And(pc_pq_insert_96 < pc_pq_insert_102,
+    pt_pq_insert_96 > pc_pq_insert_102)
+And(pc_pq_insert_95 < pc_pq_insert_101,
+    pt_pq_insert_95 > pc_pq_insert_101)
+And(pc_pq_insert_101 < pc_pq_insert_102,
+    pt_pq_insert_101 > pc_pq_insert_102)
+And(pc_pq_insert_104 < pc_pq_insert_102,
+    pt_pq_insert_104 > pc_pq_insert_102)
+And(pc_pq_insert_104 < pc_pq_insert_101,
+    pt_pq_insert_104 > pc_pq_insert_101)
+And(pc_pq_insert_104 < pc_pq_extract_min_125,
+    pt_pq_insert_104 > pc_pq_extract_min_125)
+And(pc_pq_insert_105 < pc_pq_insert_102,
+    pt_pq_insert_105 > pc_pq_insert_102)

@@ -1,0 +1,32 @@
+And(pc_newNode_66 < pc_deque_pop_front_119,
+    pt_newNode_66 > pc_deque_pop_front_119)
+And(pc_newNode_66 < pc_deque_pop_back_143,
+    pt_newNode_66 > pc_deque_pop_back_143)
+And(pc_deque_push_back_102 < pc_deque_pop_back_145,
+    pt_deque_push_back_102 > pc_deque_pop_back_145)
+And(pc_deque_pop_front_119 < pc_deque_pop_back_143,
+    pt_deque_pop_front_119 > pc_deque_pop_back_143)
+And(pc_deque_pop_front_119 < pc_deque_print_195,
+    pt_deque_pop_front_119 > pc_deque_print_195)
+And(pc_deque_pop_front_121 < pc_deque_print_196,
+    pt_deque_pop_front_121 > pc_deque_print_196)
+And(pc_deque_pop_front_121 < pc_deque_clear_173,
+    pt_deque_pop_front_121 > pc_deque_clear_173)
+And(pc_deque_pop_front_126 < pc_deque_pop_back_145,
+    pt_deque_pop_front_126 > pc_deque_pop_back_145)
+And(pc_deque_push_back_103 < pc_deque_print_196,
+    pt_deque_push_back_103 > pc_deque_print_196)
+And(pc_deque_push_back_103 < pc_deque_clear_173,
+    pt_deque_push_back_103 > pc_deque_clear_173)
+And(pc_deque_push_front_86 < pc_deque_pop_front_121,
+    pt_deque_push_front_86 > pc_deque_pop_front_121)
+And(pc_deque_pop_back_150 < pc_deque_print_196,
+    pt_deque_pop_back_150 > pc_deque_print_196)
+And(pc_deque_pop_back_150 < pc_deque_clear_173,
+    pt_deque_pop_back_150 > pc_deque_clear_173)
+And(pc_deque_pop_back_143 < pc_deque_print_195,
+    pt_deque_pop_back_143 > pc_deque_print_195)
+And(pc_deque_push_front_86 < pc_deque_print_196,
+    pt_deque_push_front_86 > pc_deque_print_196)
+And(pc_deque_push_front_86 < pc_deque_clear_173,
+    pt_deque_push_front_86 > pc_deque_clear_173)

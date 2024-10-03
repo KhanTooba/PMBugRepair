@@ -1,0 +1,38 @@
+And(pc_newNode_66 < pc_dll_remove_start_143,
+    pt_newNode_66 > pc_dll_remove_start_143)
+And(pc_newNode_66 < pc_dll_remove_end_119,
+    pt_newNode_66 > pc_dll_remove_end_119)
+And(pc_dll_insert_end_87 < pc_dll_remove_end_121,
+    pt_dll_insert_end_87 > pc_dll_remove_end_121)
+And(pc_dll_remove_start_143 < pc_dll_remove_end_119,
+    pt_dll_remove_start_143 > pc_dll_remove_end_119)
+And(pc_dll_remove_start_143 < pc_dll_print_195,
+    pt_dll_remove_start_143 > pc_dll_print_195)
+And(pc_dll_remove_start_150 < pc_dll_remove_end_121,
+    pt_dll_remove_start_150 > pc_dll_remove_end_121)
+And(pc_dll_remove_start_145 < pc_dll_print_196,
+    pt_dll_remove_start_145 > pc_dll_print_196)
+And(pc_dll_remove_start_145 < pc_dll_clear_173,
+    pt_dll_remove_start_145 > pc_dll_clear_173)
+And(pc_dll_insert_end_86 < pc_dll_print_196,
+    pt_dll_insert_end_86 > pc_dll_print_196)
+And(pc_dll_insert_end_86 < pc_dll_clear_173,
+    pt_dll_insert_end_86 > pc_dll_clear_173)
+And(pc_dll_insert_start_103 < pc_dll_remove_start_145,
+    pt_dll_insert_start_103 > pc_dll_remove_start_145)
+And(pc_dll_remove_end_119 < pc_dll_print_195,
+    pt_dll_remove_end_119 > pc_dll_print_195)
+And(pc_dll_remove_end_126 < pc_dll_print_196,
+    pt_dll_remove_end_126 > pc_dll_print_196)
+And(pc_dll_remove_end_126 < pc_dll_clear_173,
+    pt_dll_remove_end_126 > pc_dll_clear_173)
+And(pc_dll_insert_start_103 < pc_dll_print_196,
+    pt_dll_insert_start_103 > pc_dll_print_196)
+And(pc_dll_insert_start_103 < pc_dll_clear_173,
+    pt_dll_insert_start_103 > pc_dll_clear_173)
+And(pc_dll_insert_start_102 < pc_dll_remove_end_121,
+    pt_dll_insert_start_102 > pc_dll_remove_end_121)
+And(pc_dll_insert_end_86 < pc_dll_remove_start_145,
+    pt_dll_insert_end_86 > pc_dll_remove_start_145)
+And(pc_dll_remove_end_126 < pc_dll_remove_start_145,
+    pt_dll_remove_end_126 > pc_dll_remove_start_145)

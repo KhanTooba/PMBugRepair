@@ -1,0 +1,78 @@
+And(pc_createQueue_84 < pc_enqueue_101,
+    pt_createQueue_84 > pc_enqueue_101)
+And(pc_createQueue_84 < pc_enqueue_104,
+    pt_createQueue_84 > pc_enqueue_104)
+And(pc_createQueue_84 < pc_isEmpty_91,
+    pt_createQueue_84 > pc_isEmpty_91)
+And(pc_createQueue_84 < pc_dequeue_122,
+    pt_createQueue_84 > pc_dequeue_122)
+And(pc_createQueue_84 < pc_dequeue_124,
+    pt_createQueue_84 > pc_dequeue_124)
+And(pc_createQueue_84 < pc_dequeue_126,
+    pt_createQueue_84 > pc_dequeue_126)
+And(pc_createQueue_84 < pc_front_147,
+    pt_createQueue_84 > pc_front_147)
+And(pc_createQueue_84 < pc_printQueue_163,
+    pt_createQueue_84 > pc_printQueue_163)
+And(pc_enqueue_101 < pc_enqueue_104,
+    pt_enqueue_101 > pc_enqueue_104)
+And(pc_enqueue_102 < pc_enqueue_101,
+    pt_enqueue_102 > pc_enqueue_101)
+And(pc_enqueue_102 < pc_enqueue_104,
+    pt_enqueue_102 > pc_enqueue_104)
+And(pc_enqueue_102 < pc_isEmpty_91,
+    pt_enqueue_102 > pc_isEmpty_91)
+And(pc_enqueue_102 < pc_dequeue_122,
+    pt_enqueue_102 > pc_dequeue_122)
+And(pc_enqueue_102 < pc_dequeue_124,
+    pt_enqueue_102 > pc_dequeue_124)
+And(pc_enqueue_102 < pc_dequeue_126,
+    pt_enqueue_102 > pc_dequeue_126)
+And(pc_enqueue_102 < pc_front_147,
+    pt_enqueue_102 > pc_front_147)
+And(pc_enqueue_102 < pc_printQueue_163,
+    pt_enqueue_102 > pc_printQueue_163)
+And(pc_enqueue_104 < pc_dequeue_124,
+    pt_enqueue_104 > pc_dequeue_124)
+And(pc_enqueue_104 < pc_printQueue_167,
+    pt_enqueue_104 > pc_printQueue_167)
+And(pc_enqueue_105 < pc_enqueue_101,
+    pt_enqueue_105 > pc_enqueue_101)
+And(pc_enqueue_105 < pc_enqueue_104,
+    pt_enqueue_105 > pc_enqueue_104)
+And(pc_isEmpty_91 < pc_dequeue_122,
+    pt_isEmpty_91 > pc_dequeue_122)
+And(pc_isEmpty_91 < pc_dequeue_124,
+    pt_isEmpty_91 > pc_dequeue_124)
+And(pc_isEmpty_91 < pc_dequeue_126,
+    pt_isEmpty_91 > pc_dequeue_126)
+And(pc_isEmpty_91 < pc_front_147,
+    pt_isEmpty_91 > pc_front_147)
+And(pc_isEmpty_91 < pc_printQueue_163,
+    pt_isEmpty_91 > pc_printQueue_163)
+And(pc_dequeue_122 < pc_dequeue_124,
+    pt_dequeue_122 > pc_dequeue_124)
+And(pc_dequeue_122 < pc_dequeue_126,
+    pt_dequeue_122 > pc_dequeue_126)
+And(pc_dequeue_122 < pc_front_147,
+    pt_dequeue_122 > pc_front_147)
+And(pc_dequeue_122 < pc_printQueue_163,
+    pt_dequeue_122 > pc_printQueue_163)
+And(pc_dequeue_123 < pc_front_147,
+    pt_dequeue_123 > pc_front_147)
+And(pc_dequeue_123 < pc_printQueue_166,
+    pt_dequeue_123 > pc_printQueue_166)
+And(pc_dequeue_124 < pc_dequeue_126,
+    pt_dequeue_124 > pc_dequeue_126)
+And(pc_dequeue_124 < pc_front_147,
+    pt_dequeue_124 > pc_front_147)
+And(pc_dequeue_124 < pc_printQueue_163,
+    pt_dequeue_124 > pc_printQueue_163)
+And(pc_dequeue_124 < pc_printQueue_167,
+    pt_dequeue_124 > pc_printQueue_167)
+And(pc_dequeue_126 < pc_front_147,
+    pt_dequeue_126 > pc_front_147)
+And(pc_dequeue_126 < pc_printQueue_163,
+    pt_dequeue_126 > pc_printQueue_163)
+And(pc_front_147 < pc_printQueue_163,
+    pt_front_147 > pc_printQueue_163)

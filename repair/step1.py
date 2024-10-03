@@ -1,5 +1,7 @@
 import time
 from z3 import *
+from readBugs import *
+
 """
 Questions to think:
 1. Reading the bugs from a bug file
@@ -78,7 +80,7 @@ def parseTraceHelper(elements, index):
     traceParsed.append(elements[1].strip())
     traceParsed.append(elements[2].strip())
     traceParsed.append(int(elements[3].strip()))
-    traceParsed.append(elements[4].replace("'","").strip())
+    traceParsed.append(elements[4].replace("'","").replace("\n", "").strip())
     # print(traceParsed)
     return traceParsed
 
@@ -419,7 +421,7 @@ def repairThread(thread, bugs):
 
     return thread, timeDura, timeMPB, bugs
 
-def addConstraints(inputFileName):
+def addConstraints(inputFileName, name):
     trace, threadInfo = parseTrace(inputFileName)
     
     store = 0
@@ -445,26 +447,28 @@ def addConstraints(inputFileName):
     mpbs, duras = [], []
     timeDura, timeMPB = 0, 0
     store = 0
-    for i in range(length):
-        # print(trace[i])
-        if trace[i][1]==101:
-            if str(trace[i][-1]) not in duras:
-                bugs.append(Int("pt_"+str(trace[i][0]))<inf)
-                duras.append(str(trace[i][-1]))
+
+    bugs, totalMPB, totalDURA, failedMPB, failedDURA = readBugs("../results/bugs/"+str(name)+"_1.txt", trace, 9999)
+
+    # for i in range(length):
+    #     # print(trace[i])
+    #     if trace[i][1]==101:
+    #         if str(trace[i][-1]) not in duras:
+    #             bugs.append(Int("pt_"+str(trace[i][0]))<inf)
+    #             duras.append(str(trace[i][-1]))
             
-            for j in range(i+1, length):
-                if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]==trace[j][-2]:
-                    if str(trace[i][-1]) not in mpbs:
-                        bugs.append(Int("pt_"+str(trace[i][0]))<Int("pt_"+str(trace[j][0])))
-                        mpbs.append(str(trace[i][-1]))
-                        break
-    # print(1/0)
-    
+    #         for j in range(i+1, length):
+    #             if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]==trace[j][-2]:
+    #                 if str(trace[i][-1]) not in mpbs:
+    #                     first = "pt_"+str(trace[i][0])
+    #                     second = "pt_"+str(trace[j][0])
+    #                     bugs.append(Int(first)<Int(second))
+    #                     mpbs.append(str(trace[i][-1]))
+    #                     break
+
     print("Number of bugs detected: ", len(bugs))
     for b in bugs:
         print(b)
-    
-    # return trace, len(duras), len(mpbs), threadInfo, timeDura, timeMPB
     
     #We have all the unique bugs now
     storeSeqs = []
@@ -526,7 +530,7 @@ def addConstraints(inputFileName):
         
     time3 = time.time()
     print("Time taken to recombine individual threads: ", (time3-time2), " seconds.")
-    return recombinedTrace, len(duras), len(mpbs), threadInfo, timeDura, timeMPB
+    return recombinedTrace, len(duras), len(mpbs), threadInfo, timeDura, timeMPB, totalMPB, totalDURA, failedMPB, failedDURA
 
 if __name__ == "__main__":
     inputFileName = sys.argv[1]         # "trace-1.txt"
@@ -534,7 +538,7 @@ if __name__ == "__main__":
     fileName = sys.argv[3]
 
     time1 = time.time()
-    step1_result, duraCount, mpbCount, threadInfo, timeDURA, timeMPB = addConstraints(inputFileName)
+    step1_result, duraCount, mpbCount, threadInfo, timeDURA, timeMPB, totalMPB, totalDURA, failedMPB, failedDURA = addConstraints(inputFileName, fileName)
     timeTaken = time.time()-time1
 
     f = open(outputFileName, "w")
@@ -547,10 +551,10 @@ if __name__ == "__main__":
     f = open("Report.txt", "a")
     f.write("###########################################################################\n")
     f.write("Adding DURA & MPB Repair Report for "+str(fileName)+": \n")
-    # /Users/toobakhan/Downloads/PMBugRepair/results/bcFiles/outputs/array_output.txt
-    # f.write("Length of trace: "+str()+"\n")
-    f.write("Number of DURAS fixed: "+str(duraCount)+"\n")
-    f.write("Number of MPBs fixed: "+str(mpbCount)+"\n")
+    f.write("Number of DURAS fixed: "+str(totalDURA)+"\n")
+    f.write("Number of MPBs fixed: "+str(totalMPB)+"\n")
+    f.write("Number of DURAS failed to fix: "+str(failedDURA)+"\n")
+    f.write("Number of MPBs failed to fix: "+str(failedMPB)+"\n")
     f.write("Total time taken to repair DURA bugs: "+str(timeDURA)+" seconds.\n")
     f.write("Total time taken to repair MPB bugs: "+str(timeMPB)+" seconds.\n")
     f.write("Number of sfences() added: "+str(num_fence)+"\n")

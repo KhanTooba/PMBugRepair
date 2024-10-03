@@ -46,14 +46,31 @@ def processSubset2(name, subset):
     # headers_2 = ["BenchmarkName", "#DURA", "#MPB", "#MPA", "Repair time in Step 1", 
     #         "Repair time in Step 2", "#Calls in step 1", "#Calls in step 2", 
     #         "#Lock", "#sfence()", "#clflushopt()"]
+
+    # f = open("Report.txt", "a")
+    # f.write("###########################################################################\n")
+    # f.write("Adding DURA & MPB Repair Report for "+str(fileName)+": \n")
+    # f.write("Number of DURAS fixed: "+str(totalDURA)+"\n")
+    # f.write("Number of MPBs fixed: "+str(totalMPB)+"\n")
+    # f.write("Number of DURAS failed to fix: "+str(failedDURA)+"\n")
+    # f.write("Number of MPBs failed to fix: "+str(failedMPB)+"\n")
+    # f.write("Total time taken to repair DURA bugs: "+str(timeDURA)+" seconds.\n")
+    # f.write("Total time taken to repair MPB bugs: "+str(timeMPB)+" seconds.\n")
+    # f.write("Number of sfences() added: "+str(num_fence)+"\n")
+    # f.write("Number of clflushopts() added: "+str(num_flush)+"\n")
+    # f.write("Total number of calls to the Z3 solver: "+str(num_solverCalls)+"\n")
+    # f.write("Total time taken: "+str(timeTaken)+" seconds.\n")
+    # f.write("###########################################################################\n\n")
+    # f.close()
     data = []
     dura = str(subset[0]).split(" ")[-1]
-    mpb = str(subset[1]).split(" ")[-1]
-    t_dura = str(subset[2]).split(" ")[-2]
-    t_mpb = str(subset[3]).split(" ")[-2]
-    num_sfence = float(str(subset[4]).split(" ")[-1]) + float(str(subset[13]).split(" ")[-1])
-    num_flush = str(subset[5]).split(" ")[-1]
-    num_calls_1 = float(str(subset[6]).split(" ")[-1]) 
+    mpbFail = str(subset[1]).split(" ")[-1]
+    duraFail = str(subset[2]).split(" ")[-1]
+    t_dura = str(subset[3]).split(" ")[-2]
+    t_mpb = str(subset[4]).split(" ")[-2]
+    num_sfence = float(str(subset[5]).split(" ")[-1]) + float(str(subset[13]).split(" ")[-1])
+    num_flush = str(subset[6]).split(" ")[-1]
+    num_calls_1 = float(str(subset[7]).split(" ")[-1]) 
     mpa = str(subset[12]).split(" ")[-1]
     num_locks = str(subset[14]).split(" ")[-1]
     t_mpa = str(subset[16]).split(" ")[-2]

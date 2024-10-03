@@ -1,5 +1,6 @@
 import time
 from z3 import *
+from readBugs import *
 """
 Questions to think:
 1. Reading the bugs from a bug file
@@ -481,7 +482,7 @@ def removeDeadlocks(trace):
 
     return traceRepaired , toRemove
 
-def generateRepair(inputFileName):
+def generateRepair(inputFileName, name):
     trace = parseTrace(inputFileName)
     global lastStmt
     global num_threads
@@ -503,62 +504,59 @@ def generateRepair(inputFileName):
 
     print("Local variables initialized.")
     print(trace[0])
-    while i<length:
-        if trace[i][1]==101:
-            # print(trace[i])
-            for j in range(i+1, length):
-                if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]!=trace[j][-2] and trace[i][-1]!=trace[j][-1]:
+    # while i<length:
+    #     if trace[i][1]==101:
+    #         # print(trace[i])
+    #         for j in range(i+1, length):
+    #             if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]!=trace[j][-2] and trace[i][-1]!=trace[j][-1]:
                     
-                    if [str(trace[i][-1]), str(trace[j][-1])] not in mpas and [str(trace[j][-1]), str(trace[i][-1])] not in mpas:
-                        # print(trace[i], trace[j])
-                        # print(trace[i], trace[j])
-                        first = firstOcc[trace[i][-1]][0]
-                        second = firstOcc[trace[j][-1]][0]
-                        bugInfos[str(first)+"-"+str(second)] = [firstOcc[trace[i][-1]], firstOcc[trace[j][-1]]]
-                        # bugInfos[str(second)+"-"+str(first)] = [firstOcc[trace[j][-1]], firstOcc[trace[i][-1]]]
+    #                 if [str(trace[i][-1]), str(trace[j][-1])] not in mpas and [str(trace[j][-1]), str(trace[i][-1])] not in mpas:
+    #                     # print(trace[i], trace[j])
+    #                     # print(trace[i], trace[j])
+    #                     first = firstOcc[trace[i][-1]][0]
+    #                     second = firstOcc[trace[j][-1]][0]
+    #                     bugInfos[str(first)+"-"+str(second)] = [firstOcc[trace[i][-1]], firstOcc[trace[j][-1]]]
+    #                     # bugInfos[str(second)+"-"+str(first)] = [firstOcc[trace[j][-1]], firstOcc[trace[i][-1]]]
                         
-                        bugCount += 1
+    #                     bugCount += 1
 
-                        mpas.append([str(trace[i][-1]), str(trace[j][-1])])
-                        if firstOcc[trace[i][-1]][0] not in writes:
-                            writes.append(firstOcc[trace[i][-1]][0])
-                        if firstOcc[trace[j][-1]][0] not in reads:
-                            reads.append(firstOcc[trace[j][-1]][0])
+    #                     mpas.append([str(trace[i][-1]), str(trace[j][-1])])
+    #                     if firstOcc[trace[i][-1]][0] not in writes:
+    #                         writes.append(firstOcc[trace[i][-1]][0])
+    #                     if firstOcc[trace[j][-1]][0] not in reads:
+    #                         reads.append(firstOcc[trace[j][-1]][0])
 
-                        bugCons.append(And(Int("pc_"+str(first))<Int("pc_"+str(second)),
-                                        Int("pt_"+str(first))>Int("pc_"+str(second))))
-                        # bugCons.append(And(Int("pc_"+str(second))<Int("pc_"+str(first)),
-                        #                 Int("pt_"+str(second))>Int("pc_"+str(first))))
-        i+= 1
+    #                     bugCons.append(And(Int("pc_"+str(first))<Int("pc_"+str(second)),
+    #                                     Int("pt_"+str(first))>Int("pc_"+str(second))))
+    #                     # bugCons.append(And(Int("pc_"+str(second))<Int("pc_"+str(first)),
+    #                     #                 Int("pt_"+str(second))>Int("pc_"+str(first))))
+    #     i+= 1
 
+    bugCons, totalMPA, failedMPA, bugInfos, writes, reads = readMPAs("../results/bugs/"+name+"_2.txt", trace) #/Users/toobakhan/Downloads/PMBugRepair/results/bugs/array_2.txt
     reads = list(set(reads) - set(writes)) 
-
-    #Let us fix the thread IDs 
     tid = num_threads+1
+    #Let us fix the thread IDs 
     for b in bugInfos:
         first, second = int(b.split("-")[0]), int(b.split("-")[1])
-        # print("For: ", first, second)
         for i in range(len(trace)):
             if trace[i][0]==first:
-                # print("\nFirst: ", i, trace[i][0])
                 for j in range(i, len(trace)):
                     trace[j][-2] = tid
-                    # print(trace[j][-2], j)
                     if trace[j][1]==103:
                         tid += 1
                         break
                 
             if trace[i][0]==second:
-                # print("\nSecond: ", i, trace[i][0])
                 for j in range(i, len(trace)):
                     trace[j][-2] = tid
-                    # print(trace[j][-2], j)
                     if trace[j][1]==103:
                         tid += 1
                         break
     
     num_threads = tid
+    bugCount = len(bugCons)
     print("Number of bugs to be repaired: ", bugCount)
+    
     for b in bugCons:
         print(b)
     truthValue = True
@@ -598,7 +596,7 @@ if __name__ == "__main__":
     fileName = sys.argv[3]
 
     t1 = time.time()
-    step1_result, MPACount = generateRepair(inputFileName)
+    step1_result, MPACount = generateRepair(inputFileName, fileName)
     timeTaken = time.time()-t1
 
     f = open(outputFileName, "w")
