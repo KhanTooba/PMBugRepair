@@ -1,6 +1,6 @@
 # l1 = list motivatingExample stack queue queue_1 queue_2
 FOLDER = ../ThreadTrove
-l1 = CCEH fastFair $(shell find $(FOLDER) -maxdepth 1 -type d | sed 's|.*/||' | tail -n +2) 
+l1 = memcached P-CLHT CCEH fastFair $(shell find $(FOLDER) -maxdepth 1 -type d | sed 's|.*/||' | tail -n +2) 
 # l1 = graph
 # l1 = set stack_1 array stack queue_2
 process_files:
