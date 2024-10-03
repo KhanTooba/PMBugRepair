@@ -937,7 +937,7 @@ void item_stats_sizes_init(void) {
     if (stats_sizes_hist != NULL)
         return;
     stats_sizes_buckets = settings.item_size_max / 32 + 1;
-    stats_sizes_hist = calloc(stats_sizes_buckets, sizeof(int));
+    stats_sizes_hist = pcalloc(stats_sizes_buckets, sizeof(int));
     stats_sizes_cas_min = (settings.use_cas) ? get_cas_id() : 0;
 }
 
@@ -1327,7 +1327,7 @@ static void lru_bump_buf_link_q(lru_bump_buf *b) {
 }
 
 void *item_lru_bump_buf_create(void) {
-    lru_bump_buf *b = calloc(1, sizeof(lru_bump_buf));
+    lru_bump_buf *b = pcalloc(1, sizeof(lru_bump_buf));
     if (b == NULL) {
         return NULL;
     }
@@ -1622,7 +1622,7 @@ static void *lru_maintainer_thread(void *arg) {
     useconds_t next_juggles[MAX_NUMBER_OF_SLAB_CLASSES] = {0};
     useconds_t backoff_juggles[MAX_NUMBER_OF_SLAB_CLASSES] = {0};
     struct crawler_expired_data *cdata =
-        calloc(1, sizeof(struct crawler_expired_data));
+        pcalloc(1, sizeof(struct crawler_expired_data));
     if (cdata == NULL) {
         fprintf(stderr, "Failed to allocate crawler data for LRU maintainer thread\n");
         abort();

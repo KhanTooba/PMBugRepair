@@ -1,3 +1,4 @@
+
 #rm output.txt
 cd src
 sudo sh commands.sh

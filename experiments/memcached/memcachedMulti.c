@@ -39,9 +39,9 @@ void *write_data(void *arg) {
     if (connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
         error("Connection to server failed");
     }
-
+	int val = 150;
     // Write 5 data objects per thread
-    for (int i = 100; i < 100+DATA_PER_THREAD; ++i) {
+    for (int i = val; i < val+DATA_PER_THREAD; ++i) {
         char set_command[BUFFER_SIZE];
         char value[BUFFER_SIZE];
         snprintf(value, sizeof(value), "value%d", i+10);  // The data to store (e.g., "value0", "value1", ...)
