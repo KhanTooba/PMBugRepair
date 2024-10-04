@@ -1,27 +1,11 @@
-import time
+
 from z3 import *
 from readBugs import *
 
-"""
-Questions to think:
-1. Reading the bugs from a bug file
-2. First repair all DURAs and then MPBs. What benefit does it give?-----No need for this
-    It reduces the need to check for CLFLUSHOPT after stores while solving for MPB.
-3. Add constraints for all statements belonging to the same line in the code.
-"""
-
-r = 0
-inf = 9999
 threads = {}
-lastStmt = 0
-num_fence = 0
-num_flush = 0
-fixedBugs = []
 num_threads = 1
-claimedFlushes = []
-num_solverCalls = 0
 
-def printer(model, map, thread):
+def printer(model, map):
     # print("Model: ",model)
     last = len(map)
     finalModel = []
@@ -120,58 +104,30 @@ def parseTrace(file):
     # print("Returning from parceTrace.py")
     return trace, infoToSend
 
-def addConstraints(inputFileName):
-    trace, threadInfo = parseTrace(inputFileName)
-    
-    store = 0
-    for t in trace:
-        if t[1]==101:
-            store += 1
-    # print("Completed parsing.")
-    global lastStmt
-    lastStmt = len(trace)
-    
-    # lastStmt = trace[-1][0]
-    # print("Local variables initialized.")
 
-    bugs = []
-    length = len(trace)
-    mpbs, duras = [], []
-    store = 0
+def print_UNSATCORE(solver):
+    dict_solver = {}
+    s = Solver()
+    i = 1
+    for a in solver.assertions():
+        s.assert_and_track(a, 'c_'+str(i))
+        dict_solver['c_'+str(i)] = a
+        i += 1
+    if s.check()==unsat:
+        print(s.unsat_core())
+        for c in s.unsat_core():
+            print(dict_solver[str(c)], c)
 
-    for i in range(length):
-        # print(trace[i])
-        if trace[i][1]==101:
-            if str(trace[i][-1]) not in duras:
-                bugs.append(Int("pt_"+str(trace[i][-1]))<inf)
-                duras.append(str(trace[i][-1]))
-            
-            for j in range(i+1, length):
-                if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]==trace[j][-2]:
-                    if str(trace[i][-1]) not in mpbs:
-                        first = "pt_"+str(trace[i][-1])
-                        second = "pt_"+str(trace[j][-1])
-                        bugs.append(Int(first)<Int(second))
-                        mpbs.append(str(trace[i][-1]))
-                        break
+def getIndividualThreads(trace):
+    #Function to seperate out individual threads from one monolithic trace.
+    indiThreads = []
+    print("Number of threads: ", num_threads)
+    for i in range(num_threads):
+        currentThread = []
+        for j in range(len(trace)):
+            # print(trace[j])
+            if trace[j][-2]==i:
+                currentThread.append(trace[j])
+        indiThreads.append(currentThread)
 
-    # print("Number of bugs detected: ", len(bugs))
-    for b in bugs:
-        print(b)
-    return bugs
-
-if __name__ == "__main__":
-    inputPath = "/Users/toobakhan/Downloads/PMBugRepair/results/outputs/"           #"_output.txt"
-    outputPath = "/Users/toobakhan/Downloads/PMBugRepair/results/bugs/"             #memcached
-    benchmarks = ["memcached", "CCEH", "array", "doublyList", "dqueue", "fastFair", 
-                  "graph", "hash", "heap", "list_1", "list", "motivatingExample", 
-                  "priorityQueue", "queue_1", "queue_2", "queue", "set", "skipLists", 
-                  "stack", "stack_1", "P-CLHT"]
-    for b in benchmarks:
-        inputFile = inputPath+b+"_formatted_output.txt"
-        outputFile = outputPath+b+"_1.txt"
-        bugs = addConstraints(inputFile)
-        f = open(outputFile, "w")
-        for bug in bugs:
-            f.write(str(bug)+"\n")
-        f.close()
+    return indiThreads
