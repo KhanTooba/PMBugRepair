@@ -5,9 +5,9 @@ l1 = memcached P-CLHT CCEH fastFair $(shell find $(FOLDER) -maxdepth 1 -type d |
 # l1 = set stack_1 array stack queue_2
 process_files:
 	@echo "Subfolders: $(l1)"
-	rm -f ../repair/Report.txt
-	rm -f ../results/results/*.txt
-	rm -f ../results/repairedFiles/*.txt
+	# rm -f ../repair/Report.txt
+	# rm -f ../results/results/*.txt
+	# rm -f ../results/repairedFiles/*.txt
 	$(foreach file_name,$(l1), \
 	echo "\n"; \
 	echo "Repairing program in $(file_name)"; \

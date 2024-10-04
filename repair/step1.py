@@ -1,10 +1,10 @@
 import time
 from z3 import *
-from helpers.readBugs import *
-from helpers.traceHelper import *
+from readBugs import *
 
 """
 Questions to think:
+1. Reading the bugs from a bug file
 2. First repair all DURAs and then MPBs. What benefit does it give?-----No need for this
     It reduces the need to check for CLFLUSHOPT after stores while solving for MPB.
 3. Add constraints for all statements belonging to the same line in the code.
@@ -12,12 +12,59 @@ Questions to think:
 
 r = 0
 inf = 9999
+threads = {}
 lastStmt = 0
 num_fence = 0
 num_flush = 0
 fixedBugs = []
+num_threads = 1
 claimedFlushes = []
 num_solverCalls = 0
+
+def printer(model, map, thread):
+    # print("Model: ",model)
+    last = len(map)
+    finalModel = []
+    for i in range(1, last+1):
+        # print("Searching for index: ",str(i))
+        for m in model:
+            if str(i)==str(model[m]) and not "pt" in str(m) and not "interleave" in str(m):
+                # print(i, m, model[m], map[str(m)])
+                finalModel.append(map[str(m)])
+    
+    return finalModel
+
+def blockPrint():
+    sys.stdout = open(os.devnull, 'w')
+
+def enablePrint():
+    sys.stdout = sys.__stdout__
+
+def printableSolver(solver):
+    ref = {}
+    for m in solver.model():
+        ref[int(str(solver.model()[m]))] = m
+        
+    sorted_ref = dict(sorted(ref.items()))
+    return sorted_ref
+
+def printAllSolutions(s, lastStmt, writer):
+    solver = Solver()
+    solver.add(s.assertions())
+    numSols = 0
+
+    while solver.check()==sat:
+        numSols += 1
+        model = printableSolver(solver)
+        writer.write(str(model))
+        writer.write("\n")
+        print(model)
+        F = []
+        for i in range(0, lastStmt):
+            F.append(solver.model()[Int("var_"+str(i+1))]!=Int("var_"+str(i+1)))
+        solver.add(Or(F))
+    
+    return numSols
 
 def parseTraceHelper(elements, index):
     traceParsed = [index]
@@ -70,8 +117,22 @@ def parseTrace(file):
         trace.append(parseTraceHelper(elements, counter))
         counter += 1
 
-    # print("Returning from parceTrace.py")
+    print("Returning from parceTrace.py")
     return trace, infoToSend
+
+def getIndividualThreads(trace):
+    #Function to seperate out individual threads from one monolithic trace.
+    indiThreads = []
+    print("Number of threads: ", num_threads)
+    for i in range(num_threads):
+        currentThread = []
+        for j in range(len(trace)):
+            # print(trace[j])
+            if trace[j][-2]==i:
+                currentThread.append(trace[j])
+        indiThreads.append(currentThread)
+
+    return indiThreads
 
 def constructConstraint(i, j, s):
     a, b = 0, 0
@@ -310,7 +371,7 @@ def repairMPB(thread, bug, previousConstraints):
 
     if s.check()==sat:
         model = s.model()
-        repairedThread = printer(model, map)
+        repairedThread = printer(model, map, thread)
 
     else:
         print("Repair not found.")
@@ -388,6 +449,22 @@ def addConstraints(inputFileName, name):
     store = 0
 
     bugs, totalMPB, totalDURA, failedMPB, failedDURA = readBugs("../results/bugs/"+str(name)+"_1.txt", trace, 9999)
+
+    # for i in range(length):
+    #     # print(trace[i])
+    #     if trace[i][1]==101:
+    #         if str(trace[i][-1]) not in duras:
+    #             bugs.append(Int("pt_"+str(trace[i][0]))<inf)
+    #             duras.append(str(trace[i][-1]))
+            
+    #         for j in range(i+1, length):
+    #             if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]==trace[j][-2]:
+    #                 if str(trace[i][-1]) not in mpbs:
+    #                     first = "pt_"+str(trace[i][0])
+    #                     second = "pt_"+str(trace[j][0])
+    #                     bugs.append(Int(first)<Int(second))
+    #                     mpbs.append(str(trace[i][-1]))
+    #                     break
 
     print("Number of bugs detected: ", len(bugs))
     for b in bugs:

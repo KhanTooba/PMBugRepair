@@ -1,9 +1,5 @@
 from z3 import *
 
-"""
-Helper file to read DURA, MPB and MPA bugs specified in the bug files.
-"""
-
 def readBugs(name, trace, inf):
     index = {}
     totalMPB, totalDURA, failedMPB, failedDURA = 0, 0, 0, 0
