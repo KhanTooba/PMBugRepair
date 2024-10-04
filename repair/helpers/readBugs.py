@@ -1,5 +1,9 @@
 from z3 import *
 
+"""
+Reads DURA, MPB & MPA bugs from their respective bug files and constructs bug constraints from them.
+"""
+
 def readBugs(name, trace, inf):
     index = {}
     totalMPB, totalDURA, failedMPB, failedDURA = 0, 0, 0, 0

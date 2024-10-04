@@ -1,13 +1,9 @@
 import time
 from z3 import *
-from readBugs import *
-
+from helpers.readBugs import *
+from helpers.helperFunctions import *
 """
-Questions to think:
-1. Reading the bugs from a bug file
-2. First repair all DURAs and then MPBs. What benefit does it give?-----No need for this
-    It reduces the need to check for CLFLUSHOPT after stores while solving for MPB.
-3. Add constraints for all statements belonging to the same line in the code.
+Implementation of step 1 of the algorithm
 """
 
 r = 0
@@ -20,51 +16,6 @@ fixedBugs = []
 num_threads = 1
 claimedFlushes = []
 num_solverCalls = 0
-
-def printer(model, map, thread):
-    # print("Model: ",model)
-    last = len(map)
-    finalModel = []
-    for i in range(1, last+1):
-        # print("Searching for index: ",str(i))
-        for m in model:
-            if str(i)==str(model[m]) and not "pt" in str(m) and not "interleave" in str(m):
-                # print(i, m, model[m], map[str(m)])
-                finalModel.append(map[str(m)])
-    
-    return finalModel
-
-def blockPrint():
-    sys.stdout = open(os.devnull, 'w')
-
-def enablePrint():
-    sys.stdout = sys.__stdout__
-
-def printableSolver(solver):
-    ref = {}
-    for m in solver.model():
-        ref[int(str(solver.model()[m]))] = m
-        
-    sorted_ref = dict(sorted(ref.items()))
-    return sorted_ref
-
-def printAllSolutions(s, lastStmt, writer):
-    solver = Solver()
-    solver.add(s.assertions())
-    numSols = 0
-
-    while solver.check()==sat:
-        numSols += 1
-        model = printableSolver(solver)
-        writer.write(str(model))
-        writer.write("\n")
-        print(model)
-        F = []
-        for i in range(0, lastStmt):
-            F.append(solver.model()[Int("var_"+str(i+1))]!=Int("var_"+str(i+1)))
-        solver.add(Or(F))
-    
-    return numSols
 
 def parseTraceHelper(elements, index):
     traceParsed = [index]
@@ -371,7 +322,7 @@ def repairMPB(thread, bug, previousConstraints):
 
     if s.check()==sat:
         model = s.model()
-        repairedThread = printer(model, map, thread)
+        repairedThread = printer(model, map)
 
     else:
         print("Repair not found.")
