@@ -37,6 +37,7 @@ extern "C" {
   void __pmc_printStoreAddr(long long int addr, int size, int ID, int Line, int Col, const char* scope);
   void __pmc_printLoadAddr(long long int addr, int size, int ID, int Line, int Col, const char* scope);
   int __pmc_pobj_alloc(PMEMobjpool *pop, PMEMoid *oidp, uint64_t type_num, size_t size, pmemobj_constr constructor, void *arg);
+  void pmem_create(unsigned long long pop, size_t poolsize);
   PMEMobjpool* __pmc_pmemobj_create(const char *path, const char *layout, size_t poolsize, mode_t mode);
   PMEMobjpool* __pmc_pmemobj_open(const char *path, const char *layout);
   void __pmc_pmemobj_persist(PMEMobjpool *pop, const void *addr, size_t len);
