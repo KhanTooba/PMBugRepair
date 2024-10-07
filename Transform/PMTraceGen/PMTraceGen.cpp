@@ -403,6 +403,7 @@ namespace pminv {
                 Value *argLen64;
 		            if (bitWidth == 64) {
                     argLen64 = argLen;  
+
                 }
                 else {
                     argLen64 = Builder.CreateZExtOrBitCast(argLen, llvm::Type::getInt64Ty(Builder.getContext()));
@@ -452,6 +453,37 @@ namespace pminv {
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
             }
+	else if (calledFunc->getName().find("transaction")!=std::string::npos){ 
+		outs()<<calledFunc->getName()<<"\n";
+              //  calledFunc->getName().find("simuFlushOpt")!=std::string::npos) {
+/**
+                Value *argData = callInst->getArgOperand(0); 
+                Value *argLen = callInst->getArgOperand(1); 
+                llvm::Type *type = argLen->getType();
+                            Builder.SetInsertPoint(&I);
+    
+                unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
+                Value *argLen64;
+                            if (bitWidth == 64) {
+                    argLen64 = argLen;  
+                }
+                else {
+                    argLen64 = Builder.CreateZExtOrBitCast(argLen, llvm::Type::get>
+                }
+                            
+                Builder.SetInsertPoint(&I);   
+                llvm::Constant *LineLoc, *ColLoc;
+                if (I.getDebugLoc().get() != nullptr) {
+                  LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLi>
+                  ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol>
+                }
+                else {
+                  LineLoc = llvm::ConstantInt::get(i32_type, 0);
+                  ColLoc = llvm::ConstantInt::get(i32_type, 0);
+                }
+                Builder.SetInsertPoint(&I);
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc}>*/
+            } 
           }          
         }
       }
