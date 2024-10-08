@@ -453,7 +453,7 @@ namespace pminv {
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
             }
-	else if (calledFunc->getName().find("transaction")!=std::string::npos){ 
+	else if (calledFunc->getName().find("manual")!=std::string::npos){ 
 		outs()<<calledFunc->getName()<<"\n";
               //  calledFunc->getName().find("simuFlushOpt")!=std::string::npos) {
 /**
