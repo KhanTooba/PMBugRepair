@@ -171,19 +171,23 @@ namespace pminv {
       }
 
 	    init(F);
-	    insertFlush(F);
-      insertFence(F);
-      insertTransactions(F);
+//	GetUniqueID(F);
+//	    insertFlush(F);
+//      insertFence(F);
+//      insertTransactions(F);
 
       // Chao: the following lines are taken from 'PMSetUniqueID' pass
       
       SetInstUniqueID(F);
       InsertDummyBeginEnd(F);
       LLVM_DEBUG(dbgs() << "Function: " << F.getName() << " BlockSize: " << F.getBasicBlockList().size() << "\n");
-
+	GetUniqueID(F);
+            insertFlush(F);
+      insertFence(F);
+      insertTransactions(F);
       // Chao: the remaining lines are taken from 'PMTraceGen' pass
       
-      GetUniqueID(F);
+//      GetUniqueID(F);
       
       LLVM_DEBUG( dbgs() <<F.getParent()->getSourceFileName()<< ": Instrumenting " << F.getName() << " BlockSize: " << F.getBasicBlockList().size() << "\n" );
       
@@ -469,13 +473,13 @@ namespace pminv {
     FunctionType *beginFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt32Ty(Context),
                                                     Type::getInt32Ty(Context), 
-                                                    Type::getInt8PtrTy(ctx)}, false);
+                                                    Type::getInt8PtrTy(Context)}, false);
     FunctionCallee beginFunc = F.getParent()->getOrInsertFunction("__transactionBegins", beginFuncType);
 
     FunctionType *beginCommitType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt32Ty(Context),
                                                     Type::getInt32Ty(Context), 
-                                                    Type::getInt8PtrTy(ctx)}, false);
+                                                    Type::getInt8PtrTy(Context)}, false);
     FunctionCallee commitFunc = F.getParent()->getOrInsertFunction("__transactionCommits", beginCommitType);
 
     FunctionType *FenceFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
@@ -489,8 +493,8 @@ namespace pminv {
         if (CallInst *callInst = dyn_cast<CallInst>(&I)) {
 	        if (const Function *calledFunc = callInst->getCalledFunction()) {
             if (calledFunc->getName().find("manual")!=std::string::npos){ 
-		            outs()<<calledFunc->getName()<<"\n";
-                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&builder, StringRef(InstToSubProgramName[&I]));
+		            outs()<<"Transaction print: "<<calledFunc->getName()<<"\n";
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);   
                 llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
@@ -507,7 +511,7 @@ namespace pminv {
 
             if (calledFunc->getName().find("commit")!=std::string::npos){ 
 		            outs()<<calledFunc->getName()<<"\n";
-                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&builder, StringRef(InstToSubProgramName[&I]));
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);   
                 llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
@@ -690,14 +694,29 @@ namespace pminv {
       static std::map<StringRef,llvm::Constant*>::iterator N2C_it;
       N2C_it = N2C.find(name);
       llvm::Constant *sc;
-      if (N2C_it != N2C.end()) {
-        sc = N2C_it->second;
-      } 
-      else {
-        sc = builder->CreateGlobalStringPtr(name);
-        N2C [ name ]  = sc;
-      }
-      return sc;
+//      outs()<<name<<"\n";
+	if (name.empty() || name[0] != '\0'){
+	llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
+                return llvm::Constant::getNullValue(ptrType);
+
+	}
+
+      	try{
+      	if (N2C_it != N2C.end()) {
+        	sc = N2C_it->second;
+      	} 
+      	else {
+		outs()<<"For: "<<name<<"\n";
+        	sc = builder->CreateGlobalStringPtr(name);
+		 outs()<<"Call succeded.\n";
+        	N2C [ name ]  = sc;
+      	}
+      	return sc;
+	}
+	catch(...){
+		llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
+        	return llvm::Constant::getNullValue(ptrType);
+	}
     }
    
 void printInstructionDetails(llvm::Instruction *inst) {
