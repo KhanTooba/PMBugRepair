@@ -49,6 +49,8 @@ extern "C" {
   void simuTX_BEGIN();
   void simuTX_END();
   void simuTX_ADD(void *ptr);
+  void __transactionBegins(int Line, int Col, const char* scope);
+  void __transactionCommits(int Line, int Col, const char* scope);
 
 #define pmalloc __pmc_malloc
 #define pmemalign(alignment, size) __pmc_malloc(size)

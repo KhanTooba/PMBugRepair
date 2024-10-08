@@ -171,6 +171,22 @@ PMEMobjpool* __pmc_pmemobj_open(const char *path, const char *layout){
   return pop;
 }
 
+void __transactionBegins(int Line, int Col, const char* scope){
+    if (my_flag) {
+      pthread_mutex_lock(&mtx);
+      my_printf("Transaction begins. @Ln,Col: %d,%d Scope: %s; ", Line, Col, scope);
+      pthread_mutex_unlock(&mtx);
+    }
+}
+
+void __transactionCommits(int Line, int Col, const char* scope){
+    if (my_flag) {
+      pthread_mutex_lock(&mtx);
+      my_printf("Transaction Commits. @Ln,Col: %d,%d Scope: %s; ", Line, Col, scope);
+      pthread_mutex_unlock(&mtx);
+    }
+}
+
 //Tooba's addition ends here.
 
 void  *__pmc_calloc  (size_t blocks, size_t size) {
@@ -288,6 +304,7 @@ void __pmc_memClear() {
     }
   }
   */
+
   void __pmc_printStoreAddr(long long int addr, int size, int ID, int Line, int Col, const char* scope) {
 	// my_printf("Store: Entering for 0x%llx: ", addr);
     if (my_flag) {

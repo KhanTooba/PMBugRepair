@@ -120,7 +120,7 @@ namespace pminv {
                   Type::getInt32Ty(ctx),
                   Type::getInt32Ty(ctx),
                   Type::getInt32Ty(ctx),
-                    Type::getInt8PtrTy(ctx) );
+                  Type::getInt8PtrTy(ctx) );
         //LLVM_DEBUG(dbgs() << "found __pmc_printStoreAddr function " << *__pmc_printStoreAddr.getFunctionType() << "\n");
         __pmc_printLoadAddr = M->getOrInsertFunction("__pmc_printLoadAddr", Type::getVoidTy(ctx), 
                       Type::getInt64Ty(ctx),
@@ -453,43 +453,78 @@ namespace pminv {
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
             }
-	else if (calledFunc->getName().find("manual")!=std::string::npos){ 
-		outs()<<calledFunc->getName()<<"\n";
-              //  calledFunc->getName().find("simuFlushOpt")!=std::string::npos) {
-/**
-                Value *argData = callInst->getArgOperand(0); 
-                Value *argLen = callInst->getArgOperand(1); 
-                llvm::Type *type = argLen->getType();
-                            Builder.SetInsertPoint(&I);
-    
-                unsigned bitWidth = argLen->getType()->getIntegerBitWidth();
-                Value *argLen64;
-                            if (bitWidth == 64) {
-                    argLen64 = argLen;  
-                }
-                else {
-                    argLen64 = Builder.CreateZExtOrBitCast(argLen, llvm::Type::get>
-                }
-                            
+	        }          
+        }
+      }
+    }
+}
+
+  void insertTransactions(Function &F) {
+	
+    LLVMContext &Context = F.getContext();
+    IRBuilder<> Builder(Context);
+	
+	  Type *VoidPtrTy = Type::getInt8PtrTy(Context);
+    FunctionType *beginFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
+                                                    {Type::getInt32Ty(Context),
+                                                    Type::getInt32Ty(Context), 
+                                                    Type::getInt8PtrTy(ctx)}, false);
+    FunctionCallee beginFunc = F.getParent()->getOrInsertFunction("__transactionBegins", beginFuncType);
+
+    FunctionType *beginCommitType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
+                                                    {Type::getInt32Ty(Context),
+                                                    Type::getInt32Ty(Context), 
+                                                    Type::getInt8PtrTy(ctx)}, false);
+    FunctionCallee commitFunc = F.getParent()->getOrInsertFunction("__transactionCommits", beginCommitType);
+
+    FunctionType *FenceFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
+                                                    {Type::getInt32Ty(Context),
+                                                    Type::getInt32Ty(Context)}, false);
+    FunctionCallee FenceFunc = F.getParent()->getOrInsertFunction("__fence", FenceFuncType);
+
+    for (BasicBlock &BB : F) {
+      for (Instruction &I : BB) {
+
+        if (CallInst *callInst = dyn_cast<CallInst>(&I)) {
+	        if (const Function *calledFunc = callInst->getCalledFunction()) {
+            if (calledFunc->getName().find("manual")!=std::string::npos){ 
+		            outs()<<calledFunc->getName()<<"\n";
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);   
                 llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
-                  LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLi>
-                  ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol>
+                  LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
+                  ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
                 }
                 else {
                   LineLoc = llvm::ConstantInt::get(i32_type, 0);
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc}>*/
+                Builder.CreateCall(beginFunc, {LineLoc, ColLoc, ScopeConstant});
+            } 
+
+            if (calledFunc->getName().find("commit")!=std::string::npos){ 
+		            outs()<<calledFunc->getName()<<"\n";
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&builder, StringRef(InstToSubProgramName[&I]));
+                Builder.SetInsertPoint(&I);   
+                llvm::Constant *LineLoc, *ColLoc;
+                if (I.getDebugLoc().get() != nullptr) {
+                  LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
+                  ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
+                }
+                else {
+                  LineLoc = llvm::ConstantInt::get(i32_type, 0);
+                  ColLoc = llvm::ConstantInt::get(i32_type, 0);
+                }
+                Builder.SetInsertPoint(&I);
+                Builder.CreateCall(commitFunc, {LineLoc, ColLoc, ScopeConstant});
             } 
           }          
         }
       }
     }
-}
-       
+}      
     void InstruDepMap(Function &F) {
       
       IRBuilder<> builder(F.getContext());
