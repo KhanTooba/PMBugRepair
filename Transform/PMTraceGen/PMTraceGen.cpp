@@ -493,7 +493,7 @@ namespace pminv {
         if (CallInst *callInst = dyn_cast<CallInst>(&I)) {
 	        if (const Function *calledFunc = callInst->getCalledFunction()) {
             if (calledFunc->getName().find("manual")!=std::string::npos){ 
-		            outs()<<"Transaction print: "<<calledFunc->getName()<<"\n";
+		            outs()<<"For manual: "<<calledFunc->getName()<<"\n";
                 llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);   
                 llvm::Constant *LineLoc, *ColLoc;
@@ -510,7 +510,7 @@ namespace pminv {
             } 
 
             if (calledFunc->getName().find("commit")!=std::string::npos){ 
-		            outs()<<calledFunc->getName()<<"\n";
+		            outs()<<"For commit: "<<calledFunc->getName()<<"\n";
                 llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);   
                 llvm::Constant *LineLoc, *ColLoc;
@@ -695,20 +695,20 @@ namespace pminv {
       N2C_it = N2C.find(name);
       llvm::Constant *sc;
 //      outs()<<name<<"\n";
-	if (name.empty() || name[0] != '\0'){
-	llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
-                return llvm::Constant::getNullValue(ptrType);
+      if (name.empty() || name[0] == '\0'){
+      llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
+                    return llvm::Constant::getNullValue(ptrType);
 
-	}
+      }
 
-      	try{
+      try{
       	if (N2C_it != N2C.end()) {
         	sc = N2C_it->second;
-      	} 
-      	else {
-		outs()<<"For: "<<name<<"\n";
+        } 
+      else {
+		      // outs()<<"For: "<<name<<"\n";
         	sc = builder->CreateGlobalStringPtr(name);
-		 outs()<<"Call succeded.\n";
+		      //outs()<<"Call succeded.\n";
         	N2C [ name ]  = sc;
       	}
       	return sc;
