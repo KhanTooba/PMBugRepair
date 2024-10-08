@@ -173,6 +173,7 @@ namespace pminv {
 	    init(F);
 	    insertFlush(F);
       insertFence(F);
+      insertTransactions(F);
 
       // Chao: the following lines are taken from 'PMSetUniqueID' pass
       
