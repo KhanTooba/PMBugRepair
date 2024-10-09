@@ -171,20 +171,17 @@ namespace pminv {
       }
 
 	    init(F);
-//	GetUniqueID(F);
-//	    insertFlush(F);
-//      insertFence(F);
-//      insertTransactions(F);
 
       // Chao: the following lines are taken from 'PMSetUniqueID' pass
-      insertFlush(F);
-      insertFence(F);
-      insertTransactions(F);
+      
 
       SetInstUniqueID(F);
       InsertDummyBeginEnd(F);
       LLVM_DEBUG(dbgs() << "Function: " << F.getName() << " BlockSize: " << F.getBasicBlockList().size() << "\n");
 	    GetUniqueID(F);
+      insertFlush(F);
+      insertFence(F);
+      insertTransactions(F);
       
       // Chao: the remaining lines are taken from 'PMTraceGen' pass
       
@@ -495,8 +492,8 @@ namespace pminv {
 	        if (const Function *calledFunc = callInst->getCalledFunction()) {
             if (calledFunc->getName().find("manual")!=std::string::npos){ 
 		            outs()<<"For manual: "<<calledFunc->getName()<<"\n";
-                // llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
-                llvm::Constant *ScopeConstant = calledFunc->getName();
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
+                // llvm::Constant *ScopeConstant = calledFunc->getName();
                 Builder.SetInsertPoint(&I);   
                 llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
@@ -513,8 +510,8 @@ namespace pminv {
 
             if (calledFunc->getName().find("commit")!=std::string::npos){ 
 		            outs()<<"For commit: "<<calledFunc->getName()<<"\n";
-                // llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
-                llvm::Constant *ScopeConstant = calledFunc->getName();
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
+                // llvm::Constant *ScopeConstant = calledFunc->getName();
                 Builder.SetInsertPoint(&I);   
                 llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
@@ -692,32 +689,31 @@ namespace pminv {
     }
     */
 
-    llvm::Constant * getOrCreateGlobalStringPtr(IRBuilder<> *builder,StringRef name) {
+  llvm::Constant * getOrCreateGlobalStringPtr(IRBuilder<> *builder,StringRef value) {
       static std::map<StringRef,llvm::Constant*> N2C;
       static std::map<StringRef,llvm::Constant*>::iterator N2C_it;
+      try{
+        StringRef name(value);
+      }
+      catch(...){
+        llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
+        return llvm::Constant::getNullValue(ptrType);
+      }
       N2C_it = N2C.find(name);
       llvm::Constant *sc;
       if (name.empty() || name[0] == '\0' || !std::is_same<decltype(name), llvm::StringRef>::value){
         llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
         return llvm::Constant::getNullValue(ptrType);
       }
-
-      try{
-      	if (N2C_it != N2C.end()) {
-        	sc = N2C_it->second;
-        } 
-      else {
-		      // outs()<<"For: "<<name<<"\n";
-        	sc = builder->CreateGlobalStringPtr(name);
-		      //outs()<<"Call succeded.\n";
-        	N2C [ name ]  = sc;
-      	}
-      	return sc;
-	}
-	catch(...){
-		llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
-        	return llvm::Constant::getNullValue(ptrType);
-	}
+      if (N2C_it != N2C.end()) {
+        sc = N2C_it->second;
+      } 
+      else 
+      {
+		    sc = builder->CreateGlobalStringPtr(name);
+		    N2C [ name ]  = sc;
+      }
+      return sc;
     }
    
 void printInstructionDetails(llvm::Instruction *inst) {
