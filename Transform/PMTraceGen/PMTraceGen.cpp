@@ -695,7 +695,7 @@ namespace pminv {
       N2C_it = N2C.find(name);
       llvm::Constant *sc;
 //      outs()<<name<<"\n";
-      if (name.empty() || name[0] == '\0'){
+      if (name.empty() || name[0] == '\0' || !std::is_same<decltype(name), llvm::StringRef>::value){
       llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
                     return llvm::Constant::getNullValue(ptrType);
 
