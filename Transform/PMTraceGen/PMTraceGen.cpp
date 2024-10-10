@@ -178,7 +178,7 @@ namespace pminv {
       SetInstUniqueID(F);
       InsertDummyBeginEnd(F);
       LLVM_DEBUG(dbgs() << "Function: " << F.getName() << " BlockSize: " << F.getBasicBlockList().size() << "\n");
-	    GetUniqueID(F);
+      GetUniqueID(F);
       insertFlush(F);
       insertFence(F);
       insertTransactions(F);
@@ -487,15 +487,36 @@ namespace pminv {
 
     for (BasicBlock &BB : F) {
       for (Instruction &I : BB) {
+//	outs()<<I<<"\n\n";
 
         if (CallInst *callInst = dyn_cast<CallInst>(&I)) {
+
 	        if (const Function *calledFunc = callInst->getCalledFunction()) {
-            if (calledFunc->getName().find("manual")!=std::string::npos){ 
-		            outs()<<"For manual: "<<calledFunc->getName()<<"\n";
+//		outs()<<calledFunc->getName()<<"\t Parent func: "<<F.getName()<<"\t"<<F.getParent()->getName()<<": ";
+		llvm::Constant *LineLoc, *ColLoc;
+                if (I.getDebugLoc().get() != nullptr) {
+                  LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
+                  ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
+                }
+                else {
+                  LineLoc = llvm::ConstantInt::get(i32_type, 0);
+                  ColLoc = llvm::ConstantInt::get(i32_type, 0);
+                }
+		auto *intConst = dyn_cast<ConstantInt>(LineLoc);
+		APInt value = intConst->getValue();
+        	// Print the integer value
+        	//errs() << "Constant value: " << value.toString(10, false)
+  //              outs()<<value.toString(10, false)<<"; "<<ColLoc<<"\n";
+
+
+
+            if (calledFunc->getName().find("manual")!=std::string::npos || 
+		calledFunc->getName().find("run")!=std::string::npos){ 
+		            //outs()<<"For manual: "<<calledFunc->getName()<<"\t Parent func: "<<F.getName()<<"\t"<<F.getParent()->getName()<<"\n";
                 llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 // llvm::Constant *ScopeConstant = calledFunc->getName();
                 Builder.SetInsertPoint(&I);   
-                llvm::Constant *LineLoc, *ColLoc;
+//                llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
                   LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
                   ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
@@ -507,13 +528,21 @@ namespace pminv {
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(beginFunc, {LineLoc, ColLoc, ScopeConstant});
             } 
+}}
+else if (auto *invokeInst = dyn_cast<InvokeInst>(&I)) {
+            // Handle 'invoke' instruction
+            if (invokeInst->getCalledFunction()->getName() == "pmemobj_tx_commit") {
+                // Add instrumentation code for 'invoke'
+            //}
 
-            if (calledFunc->getName().find("commit")!=std::string::npos){ 
-		            outs()<<"For commit: "<<calledFunc->getName()<<"\n";
+            //if (call->getName().find("pmemobj_tx_commit()")!=std::string::npos){ 
+			outs()<<I<<"\n";
+		            outs()<<"For commit: "<<calledFunc->getName()<<"\t Parent func: "<<F.getName()<<"\t"<<F.getParent()->getName();
+//calledFunc->getName()<<"\n";
                 llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 // llvm::Constant *ScopeConstant = calledFunc->getName();
                 Builder.SetInsertPoint(&I);   
-                llvm::Constant *LineLoc, *ColLoc;
+                // llvm::Constant *LineLoc, *ColLoc;
                 if (I.getDebugLoc().get() != nullptr) {
                   LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
                   ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
@@ -522,6 +551,11 @@ namespace pminv {
                   LineLoc = llvm::ConstantInt::get(i32_type, 0);
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
+auto *intConst = dyn_cast<ConstantInt>(LineLoc);
+APInt value = intConst->getValue();
+        // Print the integer value
+        //errs() << "Constant value: " << value.toString(10, false)
+		outs()<<value.toString(10, false)<<"; "<<ColLoc<<"\n";
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(commitFunc, {LineLoc, ColLoc, ScopeConstant});
             } 
@@ -692,7 +726,8 @@ namespace pminv {
   llvm::Constant * getOrCreateGlobalStringPtr(IRBuilder<> *builder,StringRef value) {
       static std::map<StringRef,llvm::Constant*> N2C;
       static std::map<StringRef,llvm::Constant*>::iterator N2C_it;
-      try{
+	StringRef name;      
+try{
         StringRef name(value);
       }
       catch(...){
