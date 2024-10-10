@@ -500,7 +500,7 @@ namespace pminv {
             }
                 // auto *intConst = dyn_cast<ConstantInt>(LineLoc);
                 // APInt value = intConst->getValue();
-            if (calledFunc->getName().find("manual")!=std::string::npos || 
+            if (calledFunc->getName().find("begin")!=std::string::npos || 
 		              calledFunc->getName().find("run")!=std::string::npos){ 
 		            llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);   
@@ -520,14 +520,15 @@ namespace pminv {
               LineLoc = llvm::ConstantInt::get(i32_type, 0);
               ColLoc = llvm::ConstantInt::get(i32_type, 0);
             }
-            if (calledFunc->getName().find("pmemobj_tx_commit")!=std::string::npos) {
-			          // outs()<<I<<"\n";
-		            // outs()<<"For commit: "<<calledFunc->getName()<<"\t Parent func: "<<F.getName()<<"\t"<<F.getParent()->getName();
-                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
+            if (calledFunc->getName().find("pmemobj_tx_begin")!=std::string::npos) {
+			          llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);   
-                // auto *intConst = dyn_cast<ConstantInt>(LineLoc);
-                // APInt value = intConst->getValue();
-		            // outs()<<value.toString(10, false)<<"; "<<ColLoc<<"\n";
+                Builder.SetInsertPoint(&I);
+                Builder.CreateCall(beginFunc, {LineLoc, ColLoc, ScopeConstant});
+            }
+            else if (calledFunc->getName().find("pmemobj_tx_commit")!=std::string::npos) {
+			          llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
+                Builder.SetInsertPoint(&I);  
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(commitFunc, {LineLoc, ColLoc, ScopeConstant});
             }
