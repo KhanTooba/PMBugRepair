@@ -498,15 +498,13 @@ namespace pminv {
               LineLoc = llvm::ConstantInt::get(i32_type, 0);
               ColLoc = llvm::ConstantInt::get(i32_type, 0);
             }
-                // auto *intConst = dyn_cast<ConstantInt>(LineLoc);
-                // APInt value = intConst->getValue();
-            if (calledFunc->getName().find("begin")!=std::string::npos || 
-		              calledFunc->getName().find("run")!=std::string::npos){ 
-		            llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
-                Builder.SetInsertPoint(&I);   
-                Builder.SetInsertPoint(&I);
-                Builder.CreateCall(beginFunc, {LineLoc, ColLoc, ScopeConstant});
-            }
+            // if (calledFunc->getName().find("begin")!=std::string::npos || 
+		        //       calledFunc->getName().find("run")!=std::string::npos){ 
+		        //     llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
+            //     Builder.SetInsertPoint(&I);   
+            //     Builder.SetInsertPoint(&I);
+            //     Builder.CreateCall(beginFunc, {LineLoc, ColLoc, ScopeConstant});
+            // }
          }
         } 
         else if (auto *invokeInst = dyn_cast<InvokeInst>(&I)) {
