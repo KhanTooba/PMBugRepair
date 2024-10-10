@@ -510,19 +510,20 @@ namespace pminv {
          }
         } 
         else if (auto *invokeInst = dyn_cast<InvokeInst>(&I)) {
+          llvm::Constant *LineLoc, *ColLoc;
+            if (I.getDebugLoc().get() != nullptr) {
+              LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
+              ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
+            }
+            else {
+              LineLoc = llvm::ConstantInt::get(i32_type, 0);
+              ColLoc = llvm::ConstantInt::get(i32_type, 0);
+            }
             if (invokeInst->getCalledFunction()->getName() == "pmemobj_tx_commit") {
 			          outs()<<I<<"\n";
-		            outs()<<"For commit: "<<calledFunc->getName()<<"\t Parent func: "<<F.getName()<<"\t"<<F.getParent()->getName();
+		            outs()<<"For commit: "<<invokeInst->getCalledFunction()->getName()<<"\t Parent func: "<<F.getName()<<"\t"<<F.getParent()->getName();
                 llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);   
-                if (I.getDebugLoc().get() != nullptr) {
-                  LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
-                  ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
-                }
-                else {
-                  LineLoc = llvm::ConstantInt::get(i32_type, 0);
-                  ColLoc = llvm::ConstantInt::get(i32_type, 0);
-                }
                 // auto *intConst = dyn_cast<ConstantInt>(LineLoc);
                 // APInt value = intConst->getValue();
 		            // outs()<<value.toString(10, false)<<"; "<<ColLoc<<"\n";
