@@ -520,7 +520,7 @@ namespace pminv {
               LineLoc = llvm::ConstantInt::get(i32_type, 0);
               ColLoc = llvm::ConstantInt::get(i32_type, 0);
             }
-            if (invokeInst->calledFunc->getName() == "pmemobj_tx_commit") {
+            if (calledFunc->getName().find("pmemobj_tx_commit")!=std::string::npos) {
 			          outs()<<I<<"\n";
 		            outs()<<"For commit: "<<calledFunc->getName()<<"\t Parent func: "<<F.getName()<<"\t"<<F.getParent()->getName();
                 llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
