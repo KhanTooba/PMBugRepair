@@ -699,18 +699,9 @@ namespace pminv {
     }
     */
 
-  llvm::Constant * getOrCreateGlobalStringPtr(IRBuilder<> *builder,StringRef value) {
+  llvm::Constant * getOrCreateGlobalStringPtr(IRBuilder<> *builder,StringRef name) {
       static std::map<StringRef,llvm::Constant*> N2C;
       static std::map<StringRef,llvm::Constant*>::iterator N2C_it;
-	    StringRef name = value;  
-      outs()<<name<<"\n";    
-      // try{
-      //         StringRef name(value);
-      //       }
-      //       catch(...){
-      //         llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
-      //         return llvm::Constant::getNullValue(ptrType);
-      //       }
 
       N2C_it = N2C.find(name);
       llvm::Constant *sc;
@@ -719,14 +710,11 @@ namespace pminv {
         return llvm::Constant::getNullValue(ptrType);
       }
       if (N2C_it != N2C.end()) {
-        outs()<<"Come to If.\n";
         sc = N2C_it->second;
       } 
       else 
       {
-        outs()<<"Come to Else.1.\n";
-		    sc = builder->CreateGlobalStringPtr(name);
-        outs()<<"Come to Else.2.\n";
+        sc = builder->CreateGlobalStringPtr(name);
 		    N2C [ name ]  = sc;
       }
       return sc;
