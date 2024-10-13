@@ -499,14 +499,14 @@ namespace pminv {
               ColLoc = llvm::ConstantInt::get(i32_type, 0);
             }
             if (calledFunc->getName().find("pmemobj_tx_begin")!=std::string::npos){ 
-		            llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);   
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(beginFunc, {LineLoc, ColLoc, ScopeConstant});
             }
             else if (calledFunc->getName().find("pmemobj_tx_commit")!=std::string::npos) {
-			          llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
-                Builder.SetInsertPoint(&I);  
+			          Builder.SetInsertPoint(&I); 
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(commitFunc, {LineLoc, ColLoc, ScopeConstant});
             }
@@ -524,14 +524,14 @@ namespace pminv {
               ColLoc = llvm::ConstantInt::get(i32_type, 0);
             }
             if (calledFunc->getName().find("pmemobj_tx_begin")!=std::string::npos) {
-			          llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
-                Builder.SetInsertPoint(&I);   
+			          Builder.SetInsertPoint(&I); 
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(beginFunc, {LineLoc, ColLoc, ScopeConstant});
             }
             else if (calledFunc->getName().find("pmemobj_tx_commit")!=std::string::npos) {
-			          llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);  
+			          llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(commitFunc, {LineLoc, ColLoc, ScopeConstant});
             }
