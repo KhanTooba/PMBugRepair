@@ -702,7 +702,8 @@ namespace pminv {
   llvm::Constant * getOrCreateGlobalStringPtr(IRBuilder<> *builder,StringRef value) {
       static std::map<StringRef,llvm::Constant*> N2C;
       static std::map<StringRef,llvm::Constant*>::iterator N2C_it;
-	    StringRef name = value;      
+	    StringRef name = value;  
+      outs()<<name<<"\n";    
       // try{
       //         StringRef name(value);
       //       }
