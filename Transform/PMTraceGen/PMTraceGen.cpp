@@ -719,11 +719,14 @@ namespace pminv {
         return llvm::Constant::getNullValue(ptrType);
       }
       if (N2C_it != N2C.end()) {
+        outs()<<"Come to If.\n"
         sc = N2C_it->second;
       } 
       else 
       {
+        outs()<<"Come to Else.1.\n"
 		    sc = builder->CreateGlobalStringPtr(name);
+        outs()<<"Come to Else.2.\n"
 		    N2C [ name ]  = sc;
       }
       return sc;
