@@ -713,10 +713,10 @@ namespace pminv {
 
       N2C_it = N2C.find(name);
       llvm::Constant *sc;
-      // if (name.empty() || name[0] == '\0' || !std::is_same<decltype(name), llvm::StringRef>::value){
-      //   llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
-      //   return llvm::Constant::getNullValue(ptrType);
-      // }
+      if (name.empty() || name[0] == '\0' || !std::is_same<decltype(name), llvm::StringRef>::value){
+        llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
+        return llvm::Constant::getNullValue(ptrType);
+      }
       if (N2C_it != N2C.end()) {
         sc = N2C_it->second;
       } 
