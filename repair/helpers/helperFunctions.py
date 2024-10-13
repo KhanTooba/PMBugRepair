@@ -4,10 +4,10 @@ from z3 import *
 Just a collection of helper functions universally called.
 """
 
-benchmarks = ["memcached", "CCEH", "array", "doublyList", "dqueue", "fastFair", 
+benchmarks = ["memcached", "CCEH",  "P-CLHT", "array", "doublyList", "dqueue", "fastFair", 
                   "graph", "hash", "heap", "list_1", "list", "motivatingExample", 
                   "priorityQueue", "queue_1", "queue_2", "queue", "set", "skipLists", 
-                  "stack", "stack_1", "P-CLHT"]
+                  "stack", "stack_1"]
 
 def printer(model, map):
     # print("Model: ",model)

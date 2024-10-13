@@ -1,49 +1,49 @@
-pt_createHeap_93 < 9999
-pt_createHeap_93 < pt_printHeap_205
-pt_createHeap_94 < 9999
-pt_createHeap_94 < pt_insertHeap_111
-pt_createHeap_95 < 9999
-pt_createHeap_95 < pt_insertHeap_111
-pt_insertHeap_111 < 9999
-pt_insertHeap_111 < pt_insertHeap_118
-pt_insertHeap_118 < 9999
-pt_insertHeap_118 < pt_insertHeap_119
-pt_insertHeap_119 < 9999
-pt_insertHeap_119 < pt_insertHeap_111
-pt_insertHeap_120 < 9999
-pt_insertHeap_120 < pt_insertHeap_120
-pt_insertHeap_123 < 9999
-pt_insertHeap_123 < pt_insertHeap_123
-pt_insertHeap_124 < 9999
-pt_insertHeap_124 < pt_insertHeap_125
-pt_insertHeap_125 < 9999
-pt_insertHeap_125 < pt_insertHeap_125
-pt_insertHeap_126 < 9999
-pt_insertHeap_126 < pt_insertHeap_120
-pt_isEmpty_175 < 9999
-pt_isEmpty_175 < pt_extractMin_137
-pt_extractMin_137 < 9999
-pt_extractMin_137 < pt_extractMin_141
-pt_extractMin_141 < 9999
-pt_extractMin_141 < pt_extractMin_149
-pt_extractMin_148 < 9999
-pt_extractMin_148 < pt_extractMin_149
-pt_extractMin_149 < 9999
-pt_extractMin_149 < pt_extractMin_149
-pt_extractMin_150 < 9999
-pt_extractMin_150 < pt_heapify_186
-pt_heapify_186 < 9999
-pt_heapify_186 < pt_heapify_189
-pt_heapify_189 < 9999
-pt_heapify_189 < pt_heapify_186
-pt_heapify_193 < 9999
-pt_heapify_193 < pt_heapify_194
-pt_heapify_194 < 9999
-pt_heapify_194 < pt_heapify_194
-pt_heapify_195 < 9999
-pt_heapify_195 < pt_heapify_186
-pt_printHeap_204 < 9999
-pt_printHeap_204 < pt_printHeap_204
-pt_printHeap_205 < 9999
-pt_printHeap_205 < pt_printHeap_205
-pt_destroyHeap_102 < 9999
+DURA:[ pt_createHeap_93]
+MPB: [pt_createHeap_93; pt_printHeap_205]
+DURA:[ pt_createHeap_94]
+MPB: [pt_createHeap_94; pt_insertHeap_111]
+DURA:[ pt_createHeap_95]
+MPB: [pt_createHeap_95; pt_insertHeap_111]
+DURA:[ pt_insertHeap_111]
+MPB: [pt_insertHeap_111; pt_insertHeap_118]
+DURA:[ pt_insertHeap_118]
+MPB: [pt_insertHeap_118; pt_insertHeap_119]
+DURA:[ pt_insertHeap_119]
+MPB: [pt_insertHeap_119; pt_insertHeap_111]
+DURA:[ pt_insertHeap_120]
+MPB: [pt_insertHeap_120; pt_insertHeap_120]
+DURA:[ pt_insertHeap_123]
+MPB: [pt_insertHeap_123; pt_insertHeap_123]
+DURA:[ pt_insertHeap_124]
+MPB: [pt_insertHeap_124; pt_insertHeap_125]
+DURA:[ pt_insertHeap_125]
+MPB: [pt_insertHeap_125; pt_insertHeap_125]
+DURA:[ pt_insertHeap_126]
+MPB: [pt_insertHeap_126; pt_insertHeap_120]
+DURA:[ pt_isEmpty_175]
+MPB: [pt_isEmpty_175; pt_extractMin_137]
+DURA:[ pt_extractMin_137]
+MPB: [pt_extractMin_137; pt_extractMin_141]
+DURA:[ pt_extractMin_141]
+MPB: [pt_extractMin_141; pt_extractMin_149]
+DURA:[ pt_extractMin_148]
+MPB: [pt_extractMin_148; pt_extractMin_149]
+DURA:[ pt_extractMin_149]
+MPB: [pt_extractMin_149; pt_extractMin_149]
+DURA:[ pt_extractMin_150]
+MPB: [pt_extractMin_150; pt_heapify_186]
+DURA:[ pt_heapify_186]
+MPB: [pt_heapify_186; pt_heapify_189]
+DURA:[ pt_heapify_189]
+MPB: [pt_heapify_189; pt_heapify_186]
+DURA:[ pt_heapify_193]
+MPB: [pt_heapify_193; pt_heapify_194]
+DURA:[ pt_heapify_194]
+MPB: [pt_heapify_194; pt_heapify_194]
+DURA:[ pt_heapify_195]
+MPB: [pt_heapify_195; pt_heapify_186]
+DURA:[ pt_printHeap_204]
+MPB: [pt_printHeap_204; pt_printHeap_204]
+DURA:[ pt_printHeap_205]
+MPB: [pt_printHeap_205; pt_printHeap_205]
+DURA:[ pt_destroyHeap_102]

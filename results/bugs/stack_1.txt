@@ -1,6 +1,6 @@
-pt_push_50 < 9999
-pt_push_50 < pt_pop_66
-pt_push_53 < 9999
-pt_push_53 < pt_pop_67
-pt_pop_66 < 9999
-pt_pop_67 < 9999
+DURA:[ pt_push_50]
+MPB: [pt_push_50; pt_pop_66]
+DURA:[ pt_push_53]
+MPB: [pt_push_53; pt_pop_67]
+DURA:[ pt_pop_66]
+DURA:[ pt_pop_67]

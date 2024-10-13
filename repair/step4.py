@@ -429,33 +429,6 @@ def generateRepair(inputFileName, name):
 
     print("Local variables initialized.")
     print(trace[0])
-    # while i<length:
-    #     if trace[i][1]==101:
-    #         # print(trace[i])
-    #         for j in range(i+1, length):
-    #             if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]!=trace[j][-2] and trace[i][-1]!=trace[j][-1]:
-                    
-    #                 if [str(trace[i][-1]), str(trace[j][-1])] not in mpas and [str(trace[j][-1]), str(trace[i][-1])] not in mpas:
-    #                     # print(trace[i], trace[j])
-    #                     # print(trace[i], trace[j])
-    #                     first = firstOcc[trace[i][-1]][0]
-    #                     second = firstOcc[trace[j][-1]][0]
-    #                     bugInfos[str(first)+"-"+str(second)] = [firstOcc[trace[i][-1]], firstOcc[trace[j][-1]]]
-    #                     # bugInfos[str(second)+"-"+str(first)] = [firstOcc[trace[j][-1]], firstOcc[trace[i][-1]]]
-                        
-    #                     bugCount += 1
-
-    #                     mpas.append([str(trace[i][-1]), str(trace[j][-1])])
-    #                     if firstOcc[trace[i][-1]][0] not in writes:
-    #                         writes.append(firstOcc[trace[i][-1]][0])
-    #                     if firstOcc[trace[j][-1]][0] not in reads:
-    #                         reads.append(firstOcc[trace[j][-1]][0])
-
-    #                     bugCons.append(And(Int("pc_"+str(first))<Int("pc_"+str(second)),
-    #                                     Int("pt_"+str(first))>Int("pc_"+str(second))))
-    #                     # bugCons.append(And(Int("pc_"+str(second))<Int("pc_"+str(first)),
-    #                     #                 Int("pt_"+str(second))>Int("pc_"+str(first))))
-    #     i+= 1
 
     bugCons, totalMPA, failedMPA, bugInfos, writes, reads = readMPAs("../results/bugs/"+name+"_2.txt", trace) #/Users/toobakhan/Downloads/PMBugRepair/results/bugs/array_2.txt
     reads = list(set(reads) - set(writes)) 
@@ -513,7 +486,7 @@ def generateRepair(inputFileName, name):
             print("\n############################################################################")
 
     print("\nTotal number of iterations: ", iterCount)
-    return trace, bugCount
+    return trace, bugCount, totalMPA, failedMPA
 
 if __name__ == "__main__":
     inputFileName = sys.argv[1]         # "trace-1.txt"
@@ -521,7 +494,7 @@ if __name__ == "__main__":
     fileName = sys.argv[3]
 
     t1 = time.time()
-    step1_result, MPACount = generateRepair(inputFileName, fileName)
+    step1_result, MPACount, totalMPA, failedMPA = generateRepair(inputFileName, fileName)
     timeTaken = time.time()-t1
 
     f = open(outputFileName, "w")
@@ -534,6 +507,7 @@ if __name__ == "__main__":
     f.write("###########################################################################\n")
     f.write("Adding MPA Repair Report for "+str(fileName)+": \n")
     f.write("Number of MPAs fixed: "+str(MPACount)+"\n")
+    f.write("Number of MPAs failed: "+str(failedMPA)+"\n")
     f.write("Number of fences() added: "+str(num_fence)+"\n")
     f.write("Number of locks() added: "+str(num_locks)+"\n")
     f.write("Total number of calls to the Z3 solver: "+str(num_solverCalls)+"\n")

@@ -1,14 +1,8 @@
-And(pc_insert_112 < pc_get_162, pt_insert_112 > pc_get_162)
-And(pc_insert_112 < pc_delete_from_hash_130,
-    pt_insert_112 > pc_delete_from_hash_130)
-And(pc_insert_112 < pc_display_239,
-    pt_insert_112 > pc_display_239)
-And(pc_insert_113 < pc_get_163, pt_insert_113 > pc_get_163)
-And(pc_insert_113 < pc_display_239,
-    pt_insert_113 > pc_display_239)
-And(pc_insert_114 < pc_delete_from_hash_141,
-    pt_insert_114 > pc_delete_from_hash_141)
-And(pc_insert_114 < pc_display_240,
-    pt_insert_114 > pc_display_240)
-And(pc_insert_114 < pc_clear_207,
-    pt_insert_114 > pc_clear_207)
+MPA: [pc_insert_112; pc_get_162]
+MPA: [pc_insert_112; pc_delete_from_hash_130]
+MPA: [pc_insert_112; pc_display_239]
+MPA: [pc_insert_113; pc_get_163]
+MPA: [pc_insert_113; pc_display_239]
+MPA: [pc_insert_114; pc_delete_from_hash_141]
+MPA: [pc_insert_114; pc_display_240]
+MPA: [pc_insert_114; pc_clear_207]

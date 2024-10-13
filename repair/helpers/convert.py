@@ -86,7 +86,7 @@ def generateBugConstraints(inputFileName):
         # print(trace[i])
         if trace[i][1]==101:
             if str(trace[i][-1]) not in duras:
-                bugs.append(Int("pt_"+str(trace[i][-1]))<inf)
+                bugs.append("DURA:[ pt_"+str(trace[i][-1])+"]")
                 duras.append(str(trace[i][-1]))
             
             for j in range(i+1, length):
@@ -94,7 +94,7 @@ def generateBugConstraints(inputFileName):
                     if str(trace[i][-1]) not in mpbs:
                         first = "pt_"+str(trace[i][-1])
                         second = "pt_"+str(trace[j][-1])
-                        bugs.append(Int(first)<Int(second))
+                        bugs.append("MPB: ["+first+"; "+second+"]")
                         mpbs.append(str(trace[i][-1]))
                         break
 

@@ -13,7 +13,15 @@ num_threads = 1
 def parseTraceHelper(elements, index):
     # print(elements)
     traceParsed = [index]
-    traceParsed.append(int(elements[0].strip()))
+    if "LOAD" in elements[0]:
+        traceParsed.append(100)
+    elif "STORE" in elements[0]:
+        traceParsed.append(101)
+    elif "FLUSH" in elements[0]:
+        traceParsed.append(102)
+    elif "FENCE" in elements[0]:
+        traceParsed.append(103)
+
     traceParsed.append(elements[1].strip().replace("'",""))
     traceParsed.append(elements[2].strip().replace("'",""))
     traceParsed.append(elements[3].strip())
@@ -54,7 +62,7 @@ def parseTrace(file):
         # print(modifiedElements)
         trace.append(modifiedElements)
         counter += 1
-
+    print(trace[0])
     # print("Returning from parceTrace.py")
     return trace
 
@@ -81,41 +89,33 @@ def generateBugConstraints(inputFileName):
         if trace[i][1]==101:
             # print(trace[i])
             for j in range(i+1, length):
+                # print(trace[i], trace[j])
                 if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]!=trace[j][-2] and trace[i][-1]!=trace[j][-1]:
-                    
                     if [str(trace[i][-1]), str(trace[j][-1])] not in mpas and [str(trace[j][-1]), str(trace[i][-1])] not in mpas:
-                        # print(trace[i], trace[j])
-                        # print(trace[i], trace[j])
                         first = firstOcc[trace[i][-1]][-1]
                         second = firstOcc[trace[j][-1]][-1]
-                        bugInfos[str(first)+"-"+str(second)] = [firstOcc[trace[i][-1]], firstOcc[trace[j][-1]]]
-                        # bugInfos[str(second)+"-"+str(first)] = [firstOcc[trace[j][-1]], firstOcc[trace[i][-1]]]
-                        
                         bugCount += 1
-
                         mpas.append([str(trace[i][-1]), str(trace[j][-1])])
                         if firstOcc[trace[i][-1]][0] not in writes:
                             writes.append(firstOcc[trace[i][-1]][0])
                         if firstOcc[trace[j][-1]][0] not in reads:
                             reads.append(firstOcc[trace[j][-1]][0])
 
-                        bugCons.append(And(Int("pc_"+str(first))<Int("pc_"+str(second)),
-                                        Int("pt_"+str(first))>Int("pc_"+str(second))))
-                        # bugCons.append(And(Int("pc_"+str(second))<Int("pc_"+str(first)),
-                        #                 Int("pt_"+str(second))>Int("pc_"+str(first))))
+                        bugCons.append("MPA: ["+"pc_"+str(first)+"; pc_"+str(second)+"]")
         i+= 1
     
     return bugCons
 
 if __name__ == "__main__":
-    inputPath = "../../results/results/"           #"_output.txt"
+    inputPath = "../../results/outputs/"           #"_output.txt"
     outputPath = "../../results/bugs/"             #memcached
     
     for b in benchmarks:
-        inputFile = inputPath+b+"_trace_repaired.txt"
+        inputFile = inputPath+b+"_formatted_output.txt"
         outputFile = outputPath+b+"_2.txt"
         bugs = generateBugConstraints(inputFile)
         f = open(outputFile, "w")
+        print(b, len(bugs), "\n\n")
         for bug in bugs:
             f.write(str(bug)+"\n")
         f.close()

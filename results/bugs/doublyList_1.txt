@@ -1,25 +1,25 @@
-pt_newNode_66 < 9999
-pt_newNode_66 < pt_dll_print_195
-pt_dll_insert_end_86 < 9999
-pt_dll_insert_end_87 < 9999
-pt_dll_insert_end_86 < pt_dll_print_196
-pt_dll_remove_start_143 < 9999
-pt_dll_remove_start_143 < pt_dll_remove_end_119
-pt_dll_remove_start_145 < 9999
-pt_dll_remove_start_150 < 9999
-pt_dll_remove_start_150 < pt_dll_remove_end_121
-pt_dll_insert_end_87 < pt_dll_remove_end_121
-pt_dll_insert_start_102 < 9999
-pt_dll_insert_start_103 < 9999
-pt_dll_insert_start_103 < pt_dll_remove_start_145
-pt_dll_remove_end_119 < 9999
-pt_dll_remove_end_119 < pt_dll_remove_start_143
-pt_dll_remove_end_121 < 9999
-pt_dll_remove_end_126 < 9999
-pt_dll_remove_end_121 < pt_dll_remove_end_121
-pt_dll_remove_start_145 < pt_dll_remove_start_145
-pt_dll_insert_start_102 < pt_dll_remove_end_121
-pt_dll_remove_end_126 < pt_dll_remove_start_145
-pt_dll_print_195 < 9999
-pt_dll_print_196 < 9999
-pt_dll_clear_173 < 9999
+DURA:[ pt_newNode_66]
+MPB: [pt_newNode_66; pt_dll_print_195]
+DURA:[ pt_dll_insert_end_86]
+DURA:[ pt_dll_insert_end_87]
+MPB: [pt_dll_insert_end_86; pt_dll_print_196]
+DURA:[ pt_dll_remove_start_143]
+MPB: [pt_dll_remove_start_143; pt_dll_remove_end_119]
+DURA:[ pt_dll_remove_start_145]
+DURA:[ pt_dll_remove_start_150]
+MPB: [pt_dll_remove_start_150; pt_dll_remove_end_121]
+MPB: [pt_dll_insert_end_87; pt_dll_remove_end_121]
+DURA:[ pt_dll_insert_start_102]
+DURA:[ pt_dll_insert_start_103]
+MPB: [pt_dll_insert_start_103; pt_dll_remove_start_145]
+DURA:[ pt_dll_remove_end_119]
+MPB: [pt_dll_remove_end_119; pt_dll_remove_start_143]
+DURA:[ pt_dll_remove_end_121]
+DURA:[ pt_dll_remove_end_126]
+MPB: [pt_dll_remove_end_121; pt_dll_remove_end_121]
+MPB: [pt_dll_remove_start_145; pt_dll_remove_start_145]
+MPB: [pt_dll_insert_start_102; pt_dll_remove_end_121]
+MPB: [pt_dll_remove_end_126; pt_dll_remove_start_145]
+DURA:[ pt_dll_print_195]
+DURA:[ pt_dll_print_196]
+DURA:[ pt_dll_clear_173]

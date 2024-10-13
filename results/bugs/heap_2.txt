@@ -1,336 +1,168 @@
-And(pc_createHeap_93 < pc_insertHeap_120,
-    pt_createHeap_93 > pc_insertHeap_120)
-And(pc_createHeap_93 < pc_insertHeap_123,
-    pt_createHeap_93 > pc_insertHeap_123)
-And(pc_createHeap_93 < pc_insertHeap_124,
-    pt_createHeap_93 > pc_insertHeap_124)
-And(pc_createHeap_93 < pc_insertHeap_125,
-    pt_createHeap_93 > pc_insertHeap_125)
-And(pc_createHeap_93 < pc_insertHeap_126,
-    pt_createHeap_93 > pc_insertHeap_126)
-And(pc_createHeap_93 < pc_extractMin_148,
-    pt_createHeap_93 > pc_extractMin_148)
-And(pc_createHeap_93 < pc_extractMin_149,
-    pt_createHeap_93 > pc_extractMin_149)
-And(pc_createHeap_93 < pc_heapify_186,
-    pt_createHeap_93 > pc_heapify_186)
-And(pc_createHeap_93 < pc_heapify_189,
-    pt_createHeap_93 > pc_heapify_189)
-And(pc_createHeap_93 < pc_heapify_193,
-    pt_createHeap_93 > pc_heapify_193)
-And(pc_createHeap_93 < pc_heapify_194,
-    pt_createHeap_93 > pc_heapify_194)
-And(pc_createHeap_93 < pc_heapify_195,
-    pt_createHeap_93 > pc_heapify_195)
-And(pc_createHeap_93 < pc_printHeap_205,
-    pt_createHeap_93 > pc_printHeap_205)
-And(pc_createHeap_94 < pc_insertHeap_111,
-    pt_createHeap_94 > pc_insertHeap_111)
-And(pc_createHeap_95 < pc_insertHeap_111,
-    pt_createHeap_95 > pc_insertHeap_111)
-And(pc_createHeap_95 < pc_insertHeap_118,
-    pt_createHeap_95 > pc_insertHeap_118)
-And(pc_createHeap_95 < pc_insertHeap_119,
-    pt_createHeap_95 > pc_insertHeap_119)
-And(pc_createHeap_95 < pc_isEmpty_175,
-    pt_createHeap_95 > pc_isEmpty_175)
-And(pc_createHeap_95 < pc_extractMin_137,
-    pt_createHeap_95 > pc_extractMin_137)
-And(pc_createHeap_95 < pc_extractMin_141,
-    pt_createHeap_95 > pc_extractMin_141)
-And(pc_createHeap_95 < pc_extractMin_149,
-    pt_createHeap_95 > pc_extractMin_149)
-And(pc_createHeap_95 < pc_extractMin_150,
-    pt_createHeap_95 > pc_extractMin_150)
-And(pc_createHeap_95 < pc_heapify_186,
-    pt_createHeap_95 > pc_heapify_186)
-And(pc_createHeap_95 < pc_heapify_189,
-    pt_createHeap_95 > pc_heapify_189)
-And(pc_createHeap_95 < pc_printHeap_204,
-    pt_createHeap_95 > pc_printHeap_204)
-And(pc_insertHeap_111 < pc_insertHeap_118,
-    pt_insertHeap_111 > pc_insertHeap_118)
-And(pc_insertHeap_111 < pc_insertHeap_119,
-    pt_insertHeap_111 > pc_insertHeap_119)
-And(pc_insertHeap_111 < pc_isEmpty_175,
-    pt_insertHeap_111 > pc_isEmpty_175)
-And(pc_insertHeap_111 < pc_extractMin_137,
-    pt_insertHeap_111 > pc_extractMin_137)
-And(pc_insertHeap_111 < pc_extractMin_141,
-    pt_insertHeap_111 > pc_extractMin_141)
-And(pc_insertHeap_111 < pc_extractMin_149,
-    pt_insertHeap_111 > pc_extractMin_149)
-And(pc_insertHeap_111 < pc_extractMin_150,
-    pt_insertHeap_111 > pc_extractMin_150)
-And(pc_insertHeap_111 < pc_heapify_186,
-    pt_insertHeap_111 > pc_heapify_186)
-And(pc_insertHeap_111 < pc_heapify_189,
-    pt_insertHeap_111 > pc_heapify_189)
-And(pc_insertHeap_111 < pc_printHeap_204,
-    pt_insertHeap_111 > pc_printHeap_204)
-And(pc_insertHeap_118 < pc_insertHeap_119,
-    pt_insertHeap_118 > pc_insertHeap_119)
-And(pc_insertHeap_118 < pc_isEmpty_175,
-    pt_insertHeap_118 > pc_isEmpty_175)
-And(pc_insertHeap_118 < pc_extractMin_137,
-    pt_insertHeap_118 > pc_extractMin_137)
-And(pc_insertHeap_118 < pc_extractMin_141,
-    pt_insertHeap_118 > pc_extractMin_141)
-And(pc_insertHeap_118 < pc_extractMin_149,
-    pt_insertHeap_118 > pc_extractMin_149)
-And(pc_insertHeap_118 < pc_extractMin_150,
-    pt_insertHeap_118 > pc_extractMin_150)
-And(pc_insertHeap_118 < pc_heapify_186,
-    pt_insertHeap_118 > pc_heapify_186)
-And(pc_insertHeap_118 < pc_heapify_189,
-    pt_insertHeap_118 > pc_heapify_189)
-And(pc_insertHeap_118 < pc_printHeap_204,
-    pt_insertHeap_118 > pc_printHeap_204)
-And(pc_insertHeap_119 < pc_isEmpty_175,
-    pt_insertHeap_119 > pc_isEmpty_175)
-And(pc_insertHeap_119 < pc_extractMin_137,
-    pt_insertHeap_119 > pc_extractMin_137)
-And(pc_insertHeap_119 < pc_extractMin_141,
-    pt_insertHeap_119 > pc_extractMin_141)
-And(pc_insertHeap_119 < pc_extractMin_149,
-    pt_insertHeap_119 > pc_extractMin_149)
-And(pc_insertHeap_119 < pc_extractMin_150,
-    pt_insertHeap_119 > pc_extractMin_150)
-And(pc_insertHeap_119 < pc_heapify_186,
-    pt_insertHeap_119 > pc_heapify_186)
-And(pc_insertHeap_119 < pc_heapify_189,
-    pt_insertHeap_119 > pc_heapify_189)
-And(pc_insertHeap_119 < pc_printHeap_204,
-    pt_insertHeap_119 > pc_printHeap_204)
-And(pc_insertHeap_120 < pc_insertHeap_123,
-    pt_insertHeap_120 > pc_insertHeap_123)
-And(pc_insertHeap_120 < pc_insertHeap_124,
-    pt_insertHeap_120 > pc_insertHeap_124)
-And(pc_insertHeap_120 < pc_insertHeap_125,
-    pt_insertHeap_120 > pc_insertHeap_125)
-And(pc_insertHeap_120 < pc_insertHeap_126,
-    pt_insertHeap_120 > pc_insertHeap_126)
-And(pc_insertHeap_120 < pc_extractMin_148,
-    pt_insertHeap_120 > pc_extractMin_148)
-And(pc_insertHeap_120 < pc_extractMin_149,
-    pt_insertHeap_120 > pc_extractMin_149)
-And(pc_insertHeap_120 < pc_heapify_186,
-    pt_insertHeap_120 > pc_heapify_186)
-And(pc_insertHeap_120 < pc_heapify_189,
-    pt_insertHeap_120 > pc_heapify_189)
-And(pc_insertHeap_120 < pc_heapify_193,
-    pt_insertHeap_120 > pc_heapify_193)
-And(pc_insertHeap_120 < pc_heapify_194,
-    pt_insertHeap_120 > pc_heapify_194)
-And(pc_insertHeap_120 < pc_heapify_195,
-    pt_insertHeap_120 > pc_heapify_195)
-And(pc_insertHeap_120 < pc_printHeap_205,
-    pt_insertHeap_120 > pc_printHeap_205)
-And(pc_insertHeap_120 < pc_destroyHeap_102,
-    pt_insertHeap_120 > pc_destroyHeap_102)
-And(pc_insertHeap_123 < pc_insertHeap_124,
-    pt_insertHeap_123 > pc_insertHeap_124)
-And(pc_insertHeap_123 < pc_insertHeap_125,
-    pt_insertHeap_123 > pc_insertHeap_125)
-And(pc_insertHeap_123 < pc_insertHeap_126,
-    pt_insertHeap_123 > pc_insertHeap_126)
-And(pc_insertHeap_123 < pc_extractMin_148,
-    pt_insertHeap_123 > pc_extractMin_148)
-And(pc_insertHeap_123 < pc_extractMin_149,
-    pt_insertHeap_123 > pc_extractMin_149)
-And(pc_insertHeap_123 < pc_heapify_186,
-    pt_insertHeap_123 > pc_heapify_186)
-And(pc_insertHeap_123 < pc_heapify_189,
-    pt_insertHeap_123 > pc_heapify_189)
-And(pc_insertHeap_123 < pc_heapify_193,
-    pt_insertHeap_123 > pc_heapify_193)
-And(pc_insertHeap_123 < pc_heapify_194,
-    pt_insertHeap_123 > pc_heapify_194)
-And(pc_insertHeap_123 < pc_heapify_195,
-    pt_insertHeap_123 > pc_heapify_195)
-And(pc_insertHeap_123 < pc_printHeap_205,
-    pt_insertHeap_123 > pc_printHeap_205)
-And(pc_insertHeap_123 < pc_destroyHeap_102,
-    pt_insertHeap_123 > pc_destroyHeap_102)
-And(pc_insertHeap_124 < pc_insertHeap_125,
-    pt_insertHeap_124 > pc_insertHeap_125)
-And(pc_insertHeap_124 < pc_insertHeap_126,
-    pt_insertHeap_124 > pc_insertHeap_126)
-And(pc_insertHeap_124 < pc_extractMin_148,
-    pt_insertHeap_124 > pc_extractMin_148)
-And(pc_insertHeap_124 < pc_extractMin_149,
-    pt_insertHeap_124 > pc_extractMin_149)
-And(pc_insertHeap_124 < pc_heapify_186,
-    pt_insertHeap_124 > pc_heapify_186)
-And(pc_insertHeap_124 < pc_heapify_189,
-    pt_insertHeap_124 > pc_heapify_189)
-And(pc_insertHeap_124 < pc_heapify_193,
-    pt_insertHeap_124 > pc_heapify_193)
-And(pc_insertHeap_124 < pc_heapify_194,
-    pt_insertHeap_124 > pc_heapify_194)
-And(pc_insertHeap_124 < pc_heapify_195,
-    pt_insertHeap_124 > pc_heapify_195)
-And(pc_insertHeap_124 < pc_printHeap_205,
-    pt_insertHeap_124 > pc_printHeap_205)
-And(pc_insertHeap_124 < pc_destroyHeap_102,
-    pt_insertHeap_124 > pc_destroyHeap_102)
-And(pc_insertHeap_125 < pc_insertHeap_126,
-    pt_insertHeap_125 > pc_insertHeap_126)
-And(pc_insertHeap_125 < pc_extractMin_148,
-    pt_insertHeap_125 > pc_extractMin_148)
-And(pc_insertHeap_125 < pc_extractMin_149,
-    pt_insertHeap_125 > pc_extractMin_149)
-And(pc_insertHeap_125 < pc_heapify_186,
-    pt_insertHeap_125 > pc_heapify_186)
-And(pc_insertHeap_125 < pc_heapify_189,
-    pt_insertHeap_125 > pc_heapify_189)
-And(pc_insertHeap_125 < pc_heapify_193,
-    pt_insertHeap_125 > pc_heapify_193)
-And(pc_insertHeap_125 < pc_heapify_194,
-    pt_insertHeap_125 > pc_heapify_194)
-And(pc_insertHeap_125 < pc_heapify_195,
-    pt_insertHeap_125 > pc_heapify_195)
-And(pc_insertHeap_125 < pc_printHeap_205,
-    pt_insertHeap_125 > pc_printHeap_205)
-And(pc_insertHeap_125 < pc_destroyHeap_102,
-    pt_insertHeap_125 > pc_destroyHeap_102)
-And(pc_insertHeap_126 < pc_extractMin_148,
-    pt_insertHeap_126 > pc_extractMin_148)
-And(pc_insertHeap_126 < pc_extractMin_149,
-    pt_insertHeap_126 > pc_extractMin_149)
-And(pc_insertHeap_126 < pc_heapify_186,
-    pt_insertHeap_126 > pc_heapify_186)
-And(pc_insertHeap_126 < pc_heapify_189,
-    pt_insertHeap_126 > pc_heapify_189)
-And(pc_insertHeap_126 < pc_heapify_193,
-    pt_insertHeap_126 > pc_heapify_193)
-And(pc_insertHeap_126 < pc_heapify_194,
-    pt_insertHeap_126 > pc_heapify_194)
-And(pc_insertHeap_126 < pc_heapify_195,
-    pt_insertHeap_126 > pc_heapify_195)
-And(pc_insertHeap_126 < pc_printHeap_205,
-    pt_insertHeap_126 > pc_printHeap_205)
-And(pc_insertHeap_126 < pc_destroyHeap_102,
-    pt_insertHeap_126 > pc_destroyHeap_102)
-And(pc_isEmpty_175 < pc_extractMin_137,
-    pt_isEmpty_175 > pc_extractMin_137)
-And(pc_isEmpty_175 < pc_extractMin_141,
-    pt_isEmpty_175 > pc_extractMin_141)
-And(pc_isEmpty_175 < pc_extractMin_149,
-    pt_isEmpty_175 > pc_extractMin_149)
-And(pc_isEmpty_175 < pc_extractMin_150,
-    pt_isEmpty_175 > pc_extractMin_150)
-And(pc_isEmpty_175 < pc_heapify_186,
-    pt_isEmpty_175 > pc_heapify_186)
-And(pc_isEmpty_175 < pc_heapify_189,
-    pt_isEmpty_175 > pc_heapify_189)
-And(pc_isEmpty_175 < pc_printHeap_204,
-    pt_isEmpty_175 > pc_printHeap_204)
-And(pc_extractMin_137 < pc_extractMin_141,
-    pt_extractMin_137 > pc_extractMin_141)
-And(pc_extractMin_137 < pc_extractMin_149,
-    pt_extractMin_137 > pc_extractMin_149)
-And(pc_extractMin_137 < pc_extractMin_150,
-    pt_extractMin_137 > pc_extractMin_150)
-And(pc_extractMin_137 < pc_heapify_186,
-    pt_extractMin_137 > pc_heapify_186)
-And(pc_extractMin_137 < pc_heapify_189,
-    pt_extractMin_137 > pc_heapify_189)
-And(pc_extractMin_137 < pc_printHeap_204,
-    pt_extractMin_137 > pc_printHeap_204)
-And(pc_extractMin_141 < pc_extractMin_149,
-    pt_extractMin_141 > pc_extractMin_149)
-And(pc_extractMin_141 < pc_extractMin_150,
-    pt_extractMin_141 > pc_extractMin_150)
-And(pc_extractMin_141 < pc_heapify_186,
-    pt_extractMin_141 > pc_heapify_186)
-And(pc_extractMin_141 < pc_heapify_189,
-    pt_extractMin_141 > pc_heapify_189)
-And(pc_extractMin_141 < pc_printHeap_204,
-    pt_extractMin_141 > pc_printHeap_204)
-And(pc_extractMin_148 < pc_extractMin_149,
-    pt_extractMin_148 > pc_extractMin_149)
-And(pc_extractMin_148 < pc_heapify_186,
-    pt_extractMin_148 > pc_heapify_186)
-And(pc_extractMin_148 < pc_heapify_189,
-    pt_extractMin_148 > pc_heapify_189)
-And(pc_extractMin_148 < pc_heapify_193,
-    pt_extractMin_148 > pc_heapify_193)
-And(pc_extractMin_148 < pc_heapify_194,
-    pt_extractMin_148 > pc_heapify_194)
-And(pc_extractMin_148 < pc_heapify_195,
-    pt_extractMin_148 > pc_heapify_195)
-And(pc_extractMin_148 < pc_printHeap_205,
-    pt_extractMin_148 > pc_printHeap_205)
-And(pc_extractMin_148 < pc_destroyHeap_102,
-    pt_extractMin_148 > pc_destroyHeap_102)
-And(pc_extractMin_149 < pc_heapify_186,
-    pt_extractMin_149 > pc_heapify_186)
-And(pc_extractMin_149 < pc_heapify_189,
-    pt_extractMin_149 > pc_heapify_189)
-And(pc_extractMin_149 < pc_heapify_193,
-    pt_extractMin_149 > pc_heapify_193)
-And(pc_extractMin_149 < pc_heapify_194,
-    pt_extractMin_149 > pc_heapify_194)
-And(pc_extractMin_149 < pc_heapify_195,
-    pt_extractMin_149 > pc_heapify_195)
-And(pc_extractMin_149 < pc_printHeap_205,
-    pt_extractMin_149 > pc_printHeap_205)
-And(pc_extractMin_149 < pc_destroyHeap_102,
-    pt_extractMin_149 > pc_destroyHeap_102)
-And(pc_extractMin_149 < pc_extractMin_150,
-    pt_extractMin_149 > pc_extractMin_150)
-And(pc_extractMin_149 < pc_printHeap_204,
-    pt_extractMin_149 > pc_printHeap_204)
-And(pc_extractMin_150 < pc_heapify_186,
-    pt_extractMin_150 > pc_heapify_186)
-And(pc_extractMin_150 < pc_heapify_189,
-    pt_extractMin_150 > pc_heapify_189)
-And(pc_extractMin_150 < pc_printHeap_204,
-    pt_extractMin_150 > pc_printHeap_204)
-And(pc_heapify_186 < pc_heapify_189,
-    pt_heapify_186 > pc_heapify_189)
-And(pc_heapify_186 < pc_printHeap_204,
-    pt_heapify_186 > pc_printHeap_204)
-And(pc_heapify_186 < pc_heapify_193,
-    pt_heapify_186 > pc_heapify_193)
-And(pc_heapify_186 < pc_heapify_194,
-    pt_heapify_186 > pc_heapify_194)
-And(pc_heapify_186 < pc_heapify_195,
-    pt_heapify_186 > pc_heapify_195)
-And(pc_heapify_186 < pc_printHeap_205,
-    pt_heapify_186 > pc_printHeap_205)
-And(pc_heapify_186 < pc_destroyHeap_102,
-    pt_heapify_186 > pc_destroyHeap_102)
-And(pc_heapify_189 < pc_printHeap_204,
-    pt_heapify_189 > pc_printHeap_204)
-And(pc_heapify_189 < pc_heapify_193,
-    pt_heapify_189 > pc_heapify_193)
-And(pc_heapify_189 < pc_heapify_194,
-    pt_heapify_189 > pc_heapify_194)
-And(pc_heapify_189 < pc_heapify_195,
-    pt_heapify_189 > pc_heapify_195)
-And(pc_heapify_189 < pc_printHeap_205,
-    pt_heapify_189 > pc_printHeap_205)
-And(pc_heapify_189 < pc_destroyHeap_102,
-    pt_heapify_189 > pc_destroyHeap_102)
-And(pc_heapify_193 < pc_heapify_194,
-    pt_heapify_193 > pc_heapify_194)
-And(pc_heapify_193 < pc_heapify_195,
-    pt_heapify_193 > pc_heapify_195)
-And(pc_heapify_193 < pc_printHeap_205,
-    pt_heapify_193 > pc_printHeap_205)
-And(pc_heapify_193 < pc_destroyHeap_102,
-    pt_heapify_193 > pc_destroyHeap_102)
-And(pc_heapify_194 < pc_heapify_195,
-    pt_heapify_194 > pc_heapify_195)
-And(pc_heapify_194 < pc_printHeap_205,
-    pt_heapify_194 > pc_printHeap_205)
-And(pc_heapify_194 < pc_destroyHeap_102,
-    pt_heapify_194 > pc_destroyHeap_102)
-And(pc_heapify_195 < pc_printHeap_205,
-    pt_heapify_195 > pc_printHeap_205)
-And(pc_heapify_195 < pc_destroyHeap_102,
-    pt_heapify_195 > pc_destroyHeap_102)
-And(pc_printHeap_205 < pc_destroyHeap_102,
-    pt_printHeap_205 > pc_destroyHeap_102)
+MPA: [pc_createHeap_93; pc_insertHeap_120]
+MPA: [pc_createHeap_93; pc_insertHeap_123]
+MPA: [pc_createHeap_93; pc_insertHeap_124]
+MPA: [pc_createHeap_93; pc_insertHeap_125]
+MPA: [pc_createHeap_93; pc_insertHeap_126]
+MPA: [pc_createHeap_93; pc_extractMin_148]
+MPA: [pc_createHeap_93; pc_extractMin_149]
+MPA: [pc_createHeap_93; pc_heapify_186]
+MPA: [pc_createHeap_93; pc_heapify_189]
+MPA: [pc_createHeap_93; pc_heapify_193]
+MPA: [pc_createHeap_93; pc_heapify_194]
+MPA: [pc_createHeap_93; pc_heapify_195]
+MPA: [pc_createHeap_93; pc_printHeap_205]
+MPA: [pc_createHeap_94; pc_insertHeap_111]
+MPA: [pc_createHeap_95; pc_insertHeap_111]
+MPA: [pc_createHeap_95; pc_insertHeap_118]
+MPA: [pc_createHeap_95; pc_insertHeap_119]
+MPA: [pc_createHeap_95; pc_isEmpty_175]
+MPA: [pc_createHeap_95; pc_extractMin_137]
+MPA: [pc_createHeap_95; pc_extractMin_141]
+MPA: [pc_createHeap_95; pc_extractMin_149]
+MPA: [pc_createHeap_95; pc_extractMin_150]
+MPA: [pc_createHeap_95; pc_heapify_186]
+MPA: [pc_createHeap_95; pc_heapify_189]
+MPA: [pc_createHeap_95; pc_printHeap_204]
+MPA: [pc_insertHeap_111; pc_insertHeap_118]
+MPA: [pc_insertHeap_111; pc_insertHeap_119]
+MPA: [pc_insertHeap_111; pc_isEmpty_175]
+MPA: [pc_insertHeap_111; pc_extractMin_137]
+MPA: [pc_insertHeap_111; pc_extractMin_141]
+MPA: [pc_insertHeap_111; pc_extractMin_149]
+MPA: [pc_insertHeap_111; pc_extractMin_150]
+MPA: [pc_insertHeap_111; pc_heapify_186]
+MPA: [pc_insertHeap_111; pc_heapify_189]
+MPA: [pc_insertHeap_111; pc_printHeap_204]
+MPA: [pc_insertHeap_118; pc_insertHeap_119]
+MPA: [pc_insertHeap_118; pc_isEmpty_175]
+MPA: [pc_insertHeap_118; pc_extractMin_137]
+MPA: [pc_insertHeap_118; pc_extractMin_141]
+MPA: [pc_insertHeap_118; pc_extractMin_149]
+MPA: [pc_insertHeap_118; pc_extractMin_150]
+MPA: [pc_insertHeap_118; pc_heapify_186]
+MPA: [pc_insertHeap_118; pc_heapify_189]
+MPA: [pc_insertHeap_118; pc_printHeap_204]
+MPA: [pc_insertHeap_119; pc_isEmpty_175]
+MPA: [pc_insertHeap_119; pc_extractMin_137]
+MPA: [pc_insertHeap_119; pc_extractMin_141]
+MPA: [pc_insertHeap_119; pc_extractMin_149]
+MPA: [pc_insertHeap_119; pc_extractMin_150]
+MPA: [pc_insertHeap_119; pc_heapify_186]
+MPA: [pc_insertHeap_119; pc_heapify_189]
+MPA: [pc_insertHeap_119; pc_printHeap_204]
+MPA: [pc_insertHeap_120; pc_insertHeap_123]
+MPA: [pc_insertHeap_120; pc_insertHeap_124]
+MPA: [pc_insertHeap_120; pc_insertHeap_125]
+MPA: [pc_insertHeap_120; pc_insertHeap_126]
+MPA: [pc_insertHeap_120; pc_extractMin_148]
+MPA: [pc_insertHeap_120; pc_extractMin_149]
+MPA: [pc_insertHeap_120; pc_heapify_186]
+MPA: [pc_insertHeap_120; pc_heapify_189]
+MPA: [pc_insertHeap_120; pc_heapify_193]
+MPA: [pc_insertHeap_120; pc_heapify_194]
+MPA: [pc_insertHeap_120; pc_heapify_195]
+MPA: [pc_insertHeap_120; pc_printHeap_205]
+MPA: [pc_insertHeap_120; pc_destroyHeap_102]
+MPA: [pc_insertHeap_123; pc_insertHeap_124]
+MPA: [pc_insertHeap_123; pc_insertHeap_125]
+MPA: [pc_insertHeap_123; pc_insertHeap_126]
+MPA: [pc_insertHeap_123; pc_extractMin_148]
+MPA: [pc_insertHeap_123; pc_extractMin_149]
+MPA: [pc_insertHeap_123; pc_heapify_186]
+MPA: [pc_insertHeap_123; pc_heapify_189]
+MPA: [pc_insertHeap_123; pc_heapify_193]
+MPA: [pc_insertHeap_123; pc_heapify_194]
+MPA: [pc_insertHeap_123; pc_heapify_195]
+MPA: [pc_insertHeap_123; pc_printHeap_205]
+MPA: [pc_insertHeap_123; pc_destroyHeap_102]
+MPA: [pc_insertHeap_124; pc_insertHeap_125]
+MPA: [pc_insertHeap_124; pc_insertHeap_126]
+MPA: [pc_insertHeap_124; pc_extractMin_148]
+MPA: [pc_insertHeap_124; pc_extractMin_149]
+MPA: [pc_insertHeap_124; pc_heapify_186]
+MPA: [pc_insertHeap_124; pc_heapify_189]
+MPA: [pc_insertHeap_124; pc_heapify_193]
+MPA: [pc_insertHeap_124; pc_heapify_194]
+MPA: [pc_insertHeap_124; pc_heapify_195]
+MPA: [pc_insertHeap_124; pc_printHeap_205]
+MPA: [pc_insertHeap_124; pc_destroyHeap_102]
+MPA: [pc_insertHeap_125; pc_insertHeap_126]
+MPA: [pc_insertHeap_125; pc_extractMin_148]
+MPA: [pc_insertHeap_125; pc_extractMin_149]
+MPA: [pc_insertHeap_125; pc_heapify_186]
+MPA: [pc_insertHeap_125; pc_heapify_189]
+MPA: [pc_insertHeap_125; pc_heapify_193]
+MPA: [pc_insertHeap_125; pc_heapify_194]
+MPA: [pc_insertHeap_125; pc_heapify_195]
+MPA: [pc_insertHeap_125; pc_printHeap_205]
+MPA: [pc_insertHeap_125; pc_destroyHeap_102]
+MPA: [pc_insertHeap_126; pc_extractMin_148]
+MPA: [pc_insertHeap_126; pc_extractMin_149]
+MPA: [pc_insertHeap_126; pc_heapify_186]
+MPA: [pc_insertHeap_126; pc_heapify_189]
+MPA: [pc_insertHeap_126; pc_heapify_193]
+MPA: [pc_insertHeap_126; pc_heapify_194]
+MPA: [pc_insertHeap_126; pc_heapify_195]
+MPA: [pc_insertHeap_126; pc_printHeap_205]
+MPA: [pc_insertHeap_126; pc_destroyHeap_102]
+MPA: [pc_isEmpty_175; pc_extractMin_137]
+MPA: [pc_isEmpty_175; pc_extractMin_141]
+MPA: [pc_isEmpty_175; pc_extractMin_149]
+MPA: [pc_isEmpty_175; pc_extractMin_150]
+MPA: [pc_isEmpty_175; pc_heapify_186]
+MPA: [pc_isEmpty_175; pc_heapify_189]
+MPA: [pc_isEmpty_175; pc_printHeap_204]
+MPA: [pc_extractMin_137; pc_extractMin_141]
+MPA: [pc_extractMin_137; pc_extractMin_149]
+MPA: [pc_extractMin_137; pc_extractMin_150]
+MPA: [pc_extractMin_137; pc_heapify_186]
+MPA: [pc_extractMin_137; pc_heapify_189]
+MPA: [pc_extractMin_137; pc_printHeap_204]
+MPA: [pc_extractMin_141; pc_extractMin_149]
+MPA: [pc_extractMin_141; pc_extractMin_150]
+MPA: [pc_extractMin_141; pc_heapify_186]
+MPA: [pc_extractMin_141; pc_heapify_189]
+MPA: [pc_extractMin_141; pc_printHeap_204]
+MPA: [pc_extractMin_148; pc_extractMin_149]
+MPA: [pc_extractMin_148; pc_heapify_186]
+MPA: [pc_extractMin_148; pc_heapify_189]
+MPA: [pc_extractMin_148; pc_heapify_193]
+MPA: [pc_extractMin_148; pc_heapify_194]
+MPA: [pc_extractMin_148; pc_heapify_195]
+MPA: [pc_extractMin_148; pc_printHeap_205]
+MPA: [pc_extractMin_148; pc_destroyHeap_102]
+MPA: [pc_extractMin_149; pc_heapify_186]
+MPA: [pc_extractMin_149; pc_heapify_189]
+MPA: [pc_extractMin_149; pc_heapify_193]
+MPA: [pc_extractMin_149; pc_heapify_194]
+MPA: [pc_extractMin_149; pc_heapify_195]
+MPA: [pc_extractMin_149; pc_printHeap_205]
+MPA: [pc_extractMin_149; pc_destroyHeap_102]
+MPA: [pc_extractMin_149; pc_extractMin_150]
+MPA: [pc_extractMin_149; pc_printHeap_204]
+MPA: [pc_extractMin_150; pc_heapify_186]
+MPA: [pc_extractMin_150; pc_heapify_189]
+MPA: [pc_extractMin_150; pc_printHeap_204]
+MPA: [pc_heapify_186; pc_heapify_189]
+MPA: [pc_heapify_186; pc_printHeap_204]
+MPA: [pc_heapify_186; pc_heapify_193]
+MPA: [pc_heapify_186; pc_heapify_194]
+MPA: [pc_heapify_186; pc_heapify_195]
+MPA: [pc_heapify_186; pc_printHeap_205]
+MPA: [pc_heapify_186; pc_destroyHeap_102]
+MPA: [pc_heapify_189; pc_printHeap_204]
+MPA: [pc_heapify_189; pc_heapify_193]
+MPA: [pc_heapify_189; pc_heapify_194]
+MPA: [pc_heapify_189; pc_heapify_195]
+MPA: [pc_heapify_189; pc_printHeap_205]
+MPA: [pc_heapify_189; pc_destroyHeap_102]
+MPA: [pc_heapify_193; pc_heapify_194]
+MPA: [pc_heapify_193; pc_heapify_195]
+MPA: [pc_heapify_193; pc_printHeap_205]
+MPA: [pc_heapify_193; pc_destroyHeap_102]
+MPA: [pc_heapify_194; pc_heapify_195]
+MPA: [pc_heapify_194; pc_printHeap_205]
+MPA: [pc_heapify_194; pc_destroyHeap_102]
+MPA: [pc_heapify_195; pc_printHeap_205]
+MPA: [pc_heapify_195; pc_destroyHeap_102]
+MPA: [pc_printHeap_205; pc_destroyHeap_102]
