@@ -4,10 +4,11 @@ from z3 import *
 Just a collection of helper functions universally called.
 """
 
-benchmarks = ["memcached", "CCEH",  "P-CLHT", "array", "doublyList", "dqueue", "fastFair", 
-                  "graph", "hash", "heap", "list_1", "list", "motivatingExample", 
-                  "priorityQueue", "queue_1", "queue_2", "queue", "set", "skipLists", 
-                  "stack", "stack_1"]
+benchmarks = ["Clevel_hashing"]
+# , "memcached", "CCEH",  "P-CLHT", "fastFair", "array", "doublyList", "dqueue", 
+#                   "graph", "hash", "heap", "list_1", "list", "motivatingExample", 
+#                   "priorityQueue", "queue_1", "queue_2", "queue", "set", "skipLists", 
+#                   "stack", "stack_1"]
 
 def printer(model, map):
     # print("Model: ",model)
@@ -67,11 +68,11 @@ def print_UNSATCORE(solver):
         for c in s.unsat_core():
             print(dict_solver[str(c)], c)
 
-def getIndividualThreads(trace, num_threads):
+def getIndividualThreads(trace, threadCount):
     #Function to seperate out individual threads from one monolithic trace.
     indiThreads = []
-    print("Number of threads: ", num_threads)
-    for i in range(num_threads):
+    print("Thread IDs: ", threadCount)
+    for i in threadCount:
         currentThread = []
         for j in range(len(trace)):
             # print(trace[j])
@@ -80,3 +81,38 @@ def getIndividualThreads(trace, num_threads):
         indiThreads.append(currentThread)
 
     return indiThreads
+
+def getTransactionConstraints(trace):
+    constraints = []
+    for i in range(len(trace)):
+        if trace[i][1]==201:
+            stores = []
+            for j in range(i, len(trace)):
+                if trace[j][1]==202:
+                    # One I get a commit message, I can add all constraints.
+                    for store in stores:
+                        constraints.append(store<Int("pc_"+str(trace[j][0])))
+                    break
+                stores.append(Int("pt_"+str(trace[j][0])))
+
+    return constraints
+
+def processTransactions(trace):
+    traceToReturn = []
+    lockCount = 1
+    for i in range(len(trace)):
+        if trace[i][1]==201:
+            lock = ["Lock_t"+str(lockCount), 105, 'M2', -1, trace[i][-2], trace[i][-1]]
+            traceToReturn.append(trace[i])
+            traceToReturn.append(lock)
+
+        elif trace[i][1]==202:
+            unlock = ["UnLock_t"+str(lockCount), 106, 'M2', -1, trace[i][-2], trace[i][-1]]
+            traceToReturn.append(unlock)
+            traceToReturn.append(trace[i])
+            lockCount += 1
+       
+        else:
+            traceToReturn.append(trace[i])
+
+    return traceToReturn

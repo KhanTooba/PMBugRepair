@@ -16,18 +16,36 @@ def format_STOREs(row, r):
     return stmt
 
 def format_FLUSH(row, r):
+    # CLFLUSH: 0x7f1c502a4dd0 LEN: 16 @Ln,Col: 248,3 ; Scope: Insert;  <Thread ID:139759524288256>
     stmt = []
+    scope = str(row).split(" ")[8].replace(";", "_")
     add = str(row).split(" ")[1]
     tid = str(row).split(":")[-1].split(">")[0]
     line = row.split("@")[1].split(":")[1].split(",")[0].strip()
-    stmt = [r, "FLUSH", add, tid, line]
+    stmt = [r, "FLUSH", add, tid, scope+line]
     return stmt
 
 def format_FENCE(row, r):
+    # SFENCE. @Ln,Col: 245,3 ; Scope: Insert;  <Thread ID:139759532680960>
     stmt = []
+    scope = str(row).split(" ")[5].replace(";", "_")
     tid = str(row).split(":")[-1].split(">")[0]
     line = row.split("@")[1].split(":")[1].split(",")[0].strip()
-    stmt = [r, "FENCE", 0, tid, line]
+    stmt = [r, "FENCE", 0, tid, scope+line]
+    return stmt
+
+def format_Transactions(row, r):
+    # Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+    # Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+    
+    stmt = []
+    scope = str(row).split(" ")[5].replace(";", "_")
+    tid = str(row).split(":")[-1].split(">")[0]
+    line = row.split("@")[1].split(":")[1].split(",")[0].strip()
+    if "Transaction begins" in str(row):
+        stmt = [r, "tx_begin", 0, tid, scope+line]
+    else:
+        stmt = [r, "tx_commit", 0, tid, scope+line]
     return stmt
 
 def fileReader(name):
@@ -56,7 +74,6 @@ def fileReader(name):
                 stmt = format_STOREs(str(row), r) # Added this only to get MPAs in CCEH. But, no real MPAs exist in CCEH. Hence, commenting out.
                 contents.append(stmt)
 
-
         if "Load" in str(row) or "Store" in str(row):
             # print(row)
             stmt = []
@@ -84,6 +101,9 @@ def fileReader(name):
             stmt = format_FENCE(str(row), r)
             contents.append(stmt)
         
+        elif "Transaction" in str(row):
+            stmt = format_Transactions(str(row), r)
+            contents.append(stmt)
         # elif "DEP" in str(row):
         #     # DEP: SrcID: 2554 DestID: 2495; <Thread ID:140255810307904>
         #     source = str(row).split(" ")[2]
@@ -115,6 +135,9 @@ def format(trace, threads, dependencies, loads):
         if trace[i][1]=='LOAD':
             continue
         if trace[i][1] in ['FLUSH', 'FENCE']:
+            element = [trace[i][0], trace[i][1], trace[i][2], -1, threads[trace[i][3]], trace[i][-1]]
+        elif trace[i][1] in ['tx_begin', 'tx_commit']:
+            # print(trace[i])
             element = [trace[i][0], trace[i][1], trace[i][2], -1, threads[trace[i][3]], trace[i][-1]]
         elif trace[i][1]=='STORE':
             element = [trace[i][0], trace[i][1], trace[i][2], -1, threads[trace[i][3]]]

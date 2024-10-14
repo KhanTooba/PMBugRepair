@@ -27,6 +27,10 @@ def parseTraceHelper(elements, index):
         traceParsed.append(102)
     elif "FENCE" in elements[0]:
         traceParsed.append(103)
+    elif "tx_begin" in elements[0]:
+        traceParsed.append(201)
+    elif "tx_commit" in elements[0]:
+        traceParsed.append(202)
     
     traceParsed.append(elements[1].strip())
     traceParsed.append(elements[2].strip())
@@ -225,15 +229,33 @@ def repairMPB(thread, bug, previousConstraints):
     print("After append:", length)
     print("The bug flag is:", bugFlag)
     pcs = []
+    transactCons = []
+
     for i in range(length):
         pcs.append(Int("pc_"+str(thread[i][0])))
 
         map["pc_"+str(thread[i][0])] = thread[i]
         solver.add(Int("pc_"+str(thread[i][0]))>0, Int("pc_"+str(thread[i][0]))<length+1) #(0 <= pc_i <= max_stmt)
         
-        # for j in range(i+1, length):
-        #     solver.add(Int("pc_"+str(thread[i][0]))!=Int("pc_"+str(thread[j][0]))) #(pc_i != pc_j ; if i!=j)
-
+        if thread[i][1]==201:
+            commit = -1
+            for j in range(i+1, length):
+                if thread[j][1]==202:
+                    commit = j
+                    break
+            transactCons.append(Int("pc_"+str(thread[i][0]))<Int("pc_"+str(thread[commit][0])))
+            transactCons.append(Int("pc_"+str(thread[i][0]))+1==Int("pc_"+str(thread[i+1][0])))
+            transactCons.append(Int("pc_"+str(thread[commit-1][0]))+1==Int("pc_"+str(thread[commit][0])))
+            for j in range(i+1, commit):
+                    transactCons.append(Int("pc_"+str(thread[i][0]))<Int("pc_"+str(thread[j][0])))
+                    transactCons.append(Int("pc_"+str(thread[j][0]))<Int("pc_"+str(thread[commit][0])))
+            
+            begin = thread[i][0]
+            for j in range(0, len(thread)): 
+                if (thread[j][1]==201 and thread[j][0]!=begin) or (thread[j][1]==202 and thread[j][0]!=thread[commit][0]):
+                    transactCons.append(Or(Int("pc_"+str(thread[j][0]))<Int("pc_"+str(begin)), 
+                                   Int("pc_"+str(thread[j][0]))>Int("pc_"+str(thread[commit][0]))))
+                    
         if thread[i][1]==101: #Do this for all STORES
             for j in range(i+1, length):
                 if thread[j][1]==101:
@@ -272,8 +294,9 @@ def repairMPB(thread, bug, previousConstraints):
     
     s = Solver()
     solver.add(previousConstraints)
+    solver.add(transactCons)
     solver.add(Distinct(pcs))
-    # print(Distinct(pcs))
+    constraintsToReturn.extend(transactCons)
 
     for assertion in solver.assertions():
         s.add(assertion)
@@ -314,11 +337,16 @@ def repairMPB(thread, bug, previousConstraints):
         print("Not running blocking constraint generation because already unsat.")
 
         #(STORE(&x)->CLFLUSHOPT(&x))->.........->SFENCE()
+    
+    repairedThread = thread
+    print(len(sais))
+    if len(sais)==0 or simplify(And(sais))==False:
+        print(len(thread), thread[0])
+        return thread, constraintsToReturn, -1
+    
     s.add(simplify(And(sais)))
     print("SAIS:", simplify(And(sais)))
     constraintsToReturn.append(simplify(And(sais)))
-
-    repairedThread = thread
 
     if s.check()==sat:
         model = s.model()
@@ -330,7 +358,7 @@ def repairMPB(thread, bug, previousConstraints):
     
     return repairedThread, constraintsToReturn, 1
     
-def repairThread(thread, bugs):
+def repairThread(thread, bugs, transactCons):
     global fixedBugs
     """
     Plan:
@@ -340,6 +368,8 @@ def repairThread(thread, bugs):
         b. Solve it.        ----Done for DURA
     """
     cons = []
+    cons.extend(transactCons)
+    # print(transactCons)
     timeDura = 0
     timeMPB = 0
     for b in bugs:
@@ -353,6 +383,7 @@ def repairThread(thread, bugs):
                 bugs.remove(b)
                 print("Removing:", b)
             timeDura += time.time()-t1
+            
             for constraint in cons_1:
                 cons.append(constraint)
 
@@ -366,7 +397,7 @@ def repairThread(thread, bugs):
             timeMPB += time.time()-t1
             for constraint in cons_1:
                 cons.append(constraint)
-        # print(thread)
+        
         print("####################################################################################")
         fixedBugs.append(b)
 
@@ -375,6 +406,7 @@ def repairThread(thread, bugs):
 def addConstraints(inputFileName, name):
     trace, threadInfo = parseTrace(inputFileName)
     
+    # print(transactCons)
     store = 0
     for t in trace:
         if t[1]==101:
@@ -386,13 +418,7 @@ def addConstraints(inputFileName, name):
     # lastStmt = trace[-1][0]
     print("Local variables initialized.")
 
-    """
-    Next steps:
-    1. After reading a trace, first seperate trace into individual threads
-    2. For each thread:
-        a. Repair MPB, DURA bugs in the individual trace.
-    3. Combine the resultant traces.
-    """
+    
     bugs = []
     length = len(trace)
     mpbs, duras = [], []
@@ -400,22 +426,6 @@ def addConstraints(inputFileName, name):
     store = 0
 
     bugs, totalMPB, totalDURA, failedMPB, failedDURA = readBugs("../results/bugs/"+str(name)+"_1.txt", trace, 9999)
-
-    # for i in range(length):
-    #     # print(trace[i])
-    #     if trace[i][1]==101:
-    #         if str(trace[i][-1]) not in duras:
-    #             bugs.append(Int("pt_"+str(trace[i][0]))<inf)
-    #             duras.append(str(trace[i][-1]))
-            
-    #         for j in range(i+1, length):
-    #             if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]==trace[j][-2]:
-    #                 if str(trace[i][-1]) not in mpbs:
-    #                     first = "pt_"+str(trace[i][0])
-    #                     second = "pt_"+str(trace[j][0])
-    #                     bugs.append(Int(first)<Int(second))
-    #                     mpbs.append(str(trace[i][-1]))
-    #                     break
 
     print("Number of bugs detected: ", len(bugs))
     for b in bugs:
@@ -432,10 +442,14 @@ def addConstraints(inputFileName, name):
     time2 = time1
     indiThreads = getIndividualThreads(trace) #seperated out the threads
     repaired_threads = []
+    # print(len(indiThreads))
     for i in range(num_threads):
+        # print(len(indiThreads[i]))
         print("################################################################################################")
         print("Working on Thread:", i, "(Length of thread : ", len(indiThreads[i]), "): ")
-        threadreturned, t1, t2, bugs = repairThread(indiThreads[i], bugs)
+        transactCons = getTransactionConstraints(indiThreads[i])
+        threadreturned, t1, t2, bugs = repairThread(indiThreads[i], bugs, transactCons)
+
         repaired_threads.append(threadreturned)
         timeDura += t1
         timeMPB += t2
@@ -449,36 +463,37 @@ def addConstraints(inputFileName, name):
     """
 
     print("Beginning the recombination.")
-
     intermediateTrace = []
     for i in range(num_threads):
         for stmt in repaired_threads[i]:
             intermediateTrace.append(stmt)
-
-    # for stmt in intermediateTrace:
-    #     print(stmt)
-    # print("\n\n")
+    
+    c1 = 0
+    for t in intermediateTrace:
+        if t[1]==201:
+            c1 += 1
+    print(c1)
     recombinedTrace = []
 
-    """
-    How can recombination be corrected?
-    Only look at the order of stores because we 
-    ensure that the order of stores must be maintained.
-
-    Print a store and everything after it untill you encounter another store.
-    once you encounter another store,
-    """
+    for i in range(len(intermediateTrace)):
+        if intermediateTrace[i][1]==101:
+            break
+        recombinedTrace.append(intermediateTrace[i])
+        
     for i in range(0, len(storeSeqs)):
         storeToFind = storeSeqs[i]
         for j in range(len(intermediateTrace)):
             if intermediateTrace[j][0]==storeToFind:
                 recombinedTrace.append(intermediateTrace[j])
-                # print(intermediateTrace[j])
                 while j+1<len(intermediateTrace) and intermediateTrace[j+1][1]!=101:
                     recombinedTrace.append(intermediateTrace[j+1])
-                    # print("Int: ", intermediateTrace[j+1])
                     j+=1
-        
+    
+    c1 = 0
+    for t in recombinedTrace:
+        if t[1]==201:
+            c1 += 1
+    print(c1)
     time3 = time.time()
     print("Time taken to recombine individual threads: ", (time3-time2), " seconds.")
     return recombinedTrace, len(duras), len(mpbs), threadInfo, timeDura, timeMPB, totalMPB, totalDURA, failedMPB, failedDURA

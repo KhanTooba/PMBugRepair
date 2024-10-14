@@ -462,126 +462,6 @@ Number of DURAS fixed: 25
 Number of MPBs fixed: 14
 Number of DURAS failed to fix: 0
 Number of MPBs failed to fix: 0
-Total time taken to repair DURA bugs: 0.3091263771057129 seconds.
-Total time taken to repair MPB bugs: 1.8093674182891846 seconds.
-Number of sfences() added: 5
-Number of clflushopts() added: 17
-Total number of calls to the Z3 solver: 37
-Total time taken: 2.161987066268921 seconds.
-###########################################################################
-
-###########################################################################
-Adding MPA Repair Report for P-CLHT: 
-Number of MPAs fixed: 20
-Number of fences() added: 8
-Number of locks() added: 14
-Total number of calls to the Z3 solver: 15
-Total time taken to repair MPA bugs: 5.036787033081055 seconds.
-###########################################################################
-
-###########################################################################
-Adding DURA & MPB Repair Report for P-CLHT: 
-Number of DURAS fixed: 25
-Number of MPBs fixed: 14
-Number of DURAS failed to fix: 0
-Number of MPBs failed to fix: 0
-Total time taken to repair DURA bugs: 0.28223133087158203 seconds.
-Total time taken to repair MPB bugs: 1.745391607284546 seconds.
-Number of sfences() added: 5
-Number of clflushopts() added: 17
-Total number of calls to the Z3 solver: 37
-Total time taken: 2.067371129989624 seconds.
-###########################################################################
-
-###########################################################################
-Adding MPA Repair Report for P-CLHT: 
-Number of MPAs fixed: 20
-Number of fences() added: 8
-Number of locks() added: 14
-Total number of calls to the Z3 solver: 15
-Total time taken to repair MPA bugs: 5.041554927825928 seconds.
-###########################################################################
-
-###########################################################################
-Adding DURA & MPB Repair Report for CCEH: 
-Number of DURAS fixed: 16
-Number of MPBs fixed: 12
-Number of DURAS failed to fix: 0
-Number of MPBs failed to fix: 0
-Total time taken to repair DURA bugs: 0.25950026512145996 seconds.
-Total time taken to repair MPB bugs: 1.4851696491241455 seconds.
-Number of sfences() added: 9
-Number of clflushopts() added: 12
-Total number of calls to the Z3 solver: 31
-Total time taken: 1.7857658863067627 seconds.
-###########################################################################
-
-###########################################################################
-Adding DURA & MPB Repair Report for P-CLHT: 
-Number of DURAS fixed: 25
-Number of MPBs fixed: 14
-Number of DURAS failed to fix: 0
-Number of MPBs failed to fix: 0
-Total time taken to repair DURA bugs: 0.3129618167877197 seconds.
-Total time taken to repair MPB bugs: 1.818099021911621 seconds.
-Number of sfences() added: 5
-Number of clflushopts() added: 17
-Total number of calls to the Z3 solver: 37
-Total time taken: 2.17950701713562 seconds.
-###########################################################################
-
-###########################################################################
-Adding MPA Repair Report for P-CLHT: 
-Number of MPAs fixed: 20
-Number of fences() added: 8
-Number of locks() added: 14
-Total number of calls to the Z3 solver: 15
-Total time taken to repair MPA bugs: 4.784224033355713 seconds.
-###########################################################################
-
-###########################################################################
-Adding DURA & MPB Repair Report for CCEH: 
-Number of DURAS fixed: 16
-Number of MPBs fixed: 12
-Number of DURAS failed to fix: 0
-Number of MPBs failed to fix: 0
-Total time taken to repair DURA bugs: 0.24356555938720703 seconds.
-Total time taken to repair MPB bugs: 1.4649853706359863 seconds.
-Number of sfences() added: 9
-Number of clflushopts() added: 12
-Total number of calls to the Z3 solver: 31
-Total time taken: 1.7427411079406738 seconds.
-###########################################################################
-
-###########################################################################
-Adding DURA & MPB Repair Report for P-CLHT: 
-Number of DURAS fixed: 25
-Number of MPBs fixed: 14
-Number of DURAS failed to fix: 0
-Number of MPBs failed to fix: 0
-Total time taken to repair DURA bugs: 0.28112268447875977 seconds.
-Total time taken to repair MPB bugs: 1.7612550258636475 seconds.
-Number of sfences() added: 5
-Number of clflushopts() added: 17
-Total number of calls to the Z3 solver: 37
-Total time taken: 2.0820820331573486 seconds.
-###########################################################################
-
-###########################################################################
-Adding MPA Repair Report for P-CLHT: 
-Number of MPAs fixed: 20
-Number of fences() added: 8
-Number of locks() added: 14
-Total number of calls to the Z3 solver: 15
-Total time taken to repair MPA bugs: 5.061701774597168 seconds.
-###########################################################################
-
-###########################################################################
-Adding DURA & MPB Repair Report for P-CLHT: 
-Number of DURAS fixed: 25
-Number of MPBs fixed: 14
-Number of DURAS failed to fix: 0
-Number of MPBs failed to fix: 0
 Total time taken to repair DURA bugs: 0.27448487281799316 seconds.
 Total time taken to repair MPB bugs: 1.7103443145751953 seconds.
 Number of sfences() added: 5
@@ -600,61 +480,60 @@ Total time taken to repair MPA bugs: 4.928658962249756 seconds.
 ###########################################################################
 
 ###########################################################################
-Adding DURA & MPB Repair Report for CCEH: 
+Adding DURA & MPB Repair Report for Clevel_hashing: 
 Number of DURAS fixed: 16
-Number of MPBs fixed: 12
+Number of MPBs fixed: 26
 Number of DURAS failed to fix: 0
 Number of MPBs failed to fix: 0
-Total time taken to repair DURA bugs: 0.23897647857666016 seconds.
-Total time taken to repair MPB bugs: 1.4453964233398438 seconds.
-Number of sfences() added: 9
+Total time taken to repair DURA bugs: 1.1070725917816162 seconds.
+Total time taken to repair MPB bugs: 129.09322357177734 seconds.
+Number of sfences() added: 11
 Number of clflushopts() added: 12
-Total number of calls to the Z3 solver: 31
-Total time taken: 1.716609001159668 seconds.
+Total number of calls to the Z3 solver: 69
+Total time taken: 130.28308081626892 seconds.
 ###########################################################################
 
 ###########################################################################
-Adding DURA & MPB Repair Report for P-CLHT: 
-Number of DURAS fixed: 25
-Number of MPBs fixed: 14
-Number of DURAS failed to fix: 0
-Number of MPBs failed to fix: 0
-Total time taken to repair DURA bugs: 0.27180933952331543 seconds.
-Total time taken to repair MPB bugs: 1.6773710250854492 seconds.
-Number of sfences() added: 5
-Number of clflushopts() added: 17
-Total number of calls to the Z3 solver: 37
-Total time taken: 1.9916698932647705 seconds.
+Adding MPA Repair Report for Clevel_hashing: 
+Number of MPAs fixed: 18
+Number of MPAs failed: 0
+Number of fences() added: 7
+Number of locks() added: 7
+Total number of calls to the Z3 solver: 18
+Total time taken to repair MPA bugs: 58.813847064971924 seconds.
 ###########################################################################
 
 ###########################################################################
-Adding MPA Repair Report for P-CLHT: 
-Number of MPAs fixed: 20
-Number of fences() added: 8
-Number of locks() added: 14
-Total number of calls to the Z3 solver: 15
-Total time taken to repair MPA bugs: 4.734147787094116 seconds.
+Adding MPA Repair Report for Clevel_hashing: 
+Number of MPAs fixed: 18
+Number of MPAs failed: 0
+Number of fences() added: 7
+Number of locks() added: 9
+Total number of calls to the Z3 solver: 19
+Total time taken to repair MPA bugs: 52.00599718093872 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding DURA & MPB Repair Report for CCEH: 
 Number of DURAS fixed: 16
 Number of MPBs fixed: 12
-Number of DURAS failed to fix: 16
-Number of MPBs failed to fix: 12
-Total time taken to repair DURA bugs: 0 seconds.
-Total time taken to repair MPB bugs: 0 seconds.
-Number of sfences() added: 0
-Number of clflushopts() added: 0
-Total number of calls to the Z3 solver: 0
-Total time taken: 0.0006117820739746094 seconds.
+Number of DURAS failed to fix: 0
+Number of MPBs failed to fix: 0
+Total time taken to repair DURA bugs: 0.23529911041259766 seconds.
+Total time taken to repair MPB bugs: 2.7406773567199707 seconds.
+Number of sfences() added: 6
+Number of clflushopts() added: 11
+Total number of calls to the Z3 solver: 52
+Total time taken: 3.011841058731079 seconds.
 ###########################################################################
 
 ###########################################################################
 Adding MPA Repair Report for CCEH: 
-Number of MPAs fixed: 0
-Number of fences() added: 0
-Number of locks() added: 0
-Total number of calls to the Z3 solver: 0
-Total time taken to repair MPA bugs: 0.000640869140625 seconds.
+Number of MPAs fixed: 17
+Number of MPAs failed: 0
+Number of fences() added: 4
+Number of locks() added: 12
+Total number of calls to the Z3 solver: 10
+Total time taken to repair MPA bugs: 3.0461928844451904 seconds.
 ###########################################################################
+

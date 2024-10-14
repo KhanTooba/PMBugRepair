@@ -21,6 +21,10 @@ def parseTraceHelper(elements, index):
         traceParsed.append(102)
     elif "FENCE" in elements[0]:
         traceParsed.append(103)
+    elif "tx_begin" in elements[0]:
+        traceParsed.append(201)
+    elif "tx_commit" in elements[0]:
+        traceParsed.append(202)
 
     traceParsed.append(elements[1].strip().replace("'",""))
     traceParsed.append(elements[2].strip().replace("'",""))
@@ -62,7 +66,6 @@ def parseTrace(file):
         # print(modifiedElements)
         trace.append(modifiedElements)
         counter += 1
-    print(trace[0])
     # print("Returning from parceTrace.py")
     return trace
 
@@ -85,13 +88,16 @@ def generateBugConstraints(inputFileName):
     cons = []
     mpas = []
     i = 0
+    transact = -1
+
     while i<length:
+
         if trace[i][1]==101:
-            # print(trace[i])
             for j in range(i+1, length):
-                # print(trace[i], trace[j])
+
                 if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]!=trace[j][-2] and trace[i][-1]!=trace[j][-1]:
                     if [str(trace[i][-1]), str(trace[j][-1])] not in mpas and [str(trace[j][-1]), str(trace[i][-1])] not in mpas:
+                        # print(trace[i], trace[j])
                         first = firstOcc[trace[i][-1]][-1]
                         second = firstOcc[trace[j][-1]][-1]
                         bugCount += 1
@@ -110,12 +116,13 @@ if __name__ == "__main__":
     inputPath = "../../results/outputs/"           #"_output.txt"
     outputPath = "../../results/bugs/"             #memcached
     
+    print("\n\nPrinting all MPA Bug Details.")
     for b in benchmarks:
         inputFile = inputPath+b+"_formatted_output.txt"
         outputFile = outputPath+b+"_2.txt"
         bugs = generateBugConstraints(inputFile)
         f = open(outputFile, "w")
-        print(b, len(bugs), "\n\n")
+        print(b, len(bugs))
         for bug in bugs:
             f.write(str(bug)+"\n")
         f.close()

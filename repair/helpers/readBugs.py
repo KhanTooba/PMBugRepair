@@ -14,7 +14,7 @@ def readBugs(name, trace, inf):
         elif t[-1] not in index.keys():
             index[t[-1]] = t[0]
 
-
+    # print(index)
     bugs = []
     lines = []
     for line in open(name):
@@ -22,14 +22,19 @@ def readBugs(name, trace, inf):
     i = 0
     while i<(len(lines)):
         line = lines[i]
+        # print(line)
         i += 1
-        if "DURA" in line:
+        if "DURA" in str(line):
+            # print("DURA")
             try:
                 if "pt__" in str(line):
-                    data = index[str(line).split("[")[1].replace("pt__", "").strip()]
+                    # print(str(line).split("[")[1].replace("pt__", "").strip())
+                    data = index[str(line).split("[")[1].replace("pt__", "").replace("]", "").strip()]
                 else:
-                    data = index[str(line).split("[")[1].replace("pt_", "").strip()]
-                bugs.append(Int("pt_"+str(data.replace("]", "")))<inf)
+                    # print(str(line).split("[")[1].replace("pt_", "").strip())
+                    data = index[str(line).split("[")[1].replace("pt_", "").replace("]", "").strip()]
+                # print(data, Int("pt_"+str(data))<inf)
+                bugs.append(Int("pt_"+str(data))<inf)
                 totalDURA += 1
             except:
                 totalDURA += 1
@@ -43,11 +48,11 @@ def readBugs(name, trace, inf):
                     first = index[str(line).split(";")[0].replace("MPB: [pt_", "").strip()]
 
                 if "pt__" in str(str(line).split(";")[1]):
-                    second = index[str(line).split(";")[1].replace("pt__", "").strip()]
+                    second = index[str(line).split(";")[1].replace("pt__", "").replace("]", "").strip()]
                 else:
-                    second = index[str(line).split(";")[1].replace("pt_", "").strip()]
-                second = second.replace("]", "")
+                    second = index[str(line).split(";")[1].replace("pt_", "").replace("]", "").strip()]
                 
+                # print(first, second)
                 bugs.append(Int("pt_"+str(first))<Int("pt_"+str(second)))
                 totalMPB += 1
             except:
@@ -71,7 +76,7 @@ def readMPAs(name, trace):
             index[t[-1][1:]] = t[0]
         elif t[-1] not in index.keys():
             index[t[-1]] = t[0]
-    print(index)
+    # print(index)
     bugs = []
     writes, reads = [], []
     lines = []
@@ -80,13 +85,13 @@ def readMPAs(name, trace):
     
     i = 0
     while i<(len(lines)):
-        print(lines[i])
+        # print(lines[i])
         line = lines[i]
         i += 1
         data = line.split("[")[1].replace("]", "").split(";")
         first = data[0].replace("pc_", "").strip()
         second = data[1].replace("pc_", "").strip()
-        print(first, second)
+        # print(first, second)
         if first in index.keys() and second in index.keys():
             bugs.append(And(Int("pc_"+str(index[first]))<Int("pc_"+str(index[second])), 
                             Int("pt_"+str(index[first]))>Int("pc_"+str(index[second]))))
