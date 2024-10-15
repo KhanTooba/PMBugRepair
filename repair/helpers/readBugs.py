@@ -91,19 +91,49 @@ def readMPAs(name, trace):
         data = line.split("[")[1].replace("]", "").split(";")
         first = data[0].replace("pc_", "").strip()
         second = data[1].replace("pc_", "").strip()
-        # print(first, second)
-        if first in index.keys() and second in index.keys():
-            bugs.append(And(Int("pc_"+str(index[first]))<Int("pc_"+str(index[second])), 
-                            Int("pt_"+str(index[first]))>Int("pc_"+str(index[second]))))
-            bugInfos[str(index[first])+"-"+str(index[second])] = [firstOcc[first], firstOcc[second]]
-            if firstOcc[first][0] not in writes:
-                writes.append(firstOcc[first][0])
-            if firstOcc[second][0] not in reads:
-                reads.append(firstOcc[second][0])
+        found = -1
+        for t in trace:
+            if t[-1]==first:
+                for j in trace:
+                    if found==1:
+                        break
+                    if j[-1]==second and j[-2]!=t[-2]:
+                        bugs.append(And(Int("pc_"+str(t[0]))<Int("pc_"+str(j[0])), 
+                            Int("pt_"+str(t[0]))>Int("pc_"+str(j[0]))))
+                        bugInfos[str(t[0])+"-"+str(j[0])] = [t, j]
+                        if t[0] not in writes:
+                            writes.append(t[0])
+                        if j[0] not in reads:
+                            reads.append(j[0])
                         
-            totalMPA += 1
-        else:
+                        totalMPA += 1
+                        found = 1
+                        break
+
+        if found==-1:
             totalMPA += 1
             failedMPA += 1
-
     return bugs, totalMPA, failedMPA, bugInfos, writes, reads
+    # while i<(len(lines)):
+    #     # print(lines[i])
+    #     line = lines[i]
+    #     i += 1
+    #     data = line.split("[")[1].replace("]", "").split(";")
+    #     first = data[0].replace("pc_", "").strip()
+    #     second = data[1].replace("pc_", "").strip()
+    #     # print(first, second)
+    #     if first in index.keys() and second in index.keys():
+    #         bugs.append(And(Int("pc_"+str(index[first]))<Int("pc_"+str(index[second])), 
+    #                         Int("pt_"+str(index[first]))>Int("pc_"+str(index[second]))))
+    #         bugInfos[str(index[first])+"-"+str(index[second])] = [firstOcc[first], firstOcc[second]]
+    #         if firstOcc[first][0] not in writes:
+    #             writes.append(firstOcc[first][0])
+    #         if firstOcc[second][0] not in reads:
+    #             reads.append(firstOcc[second][0])
+                        
+    #         totalMPA += 1
+    #     else:
+    #         totalMPA += 1
+    #         failedMPA += 1
+
+    # return bugs, totalMPA, failedMPA, bugInfos, writes, reads

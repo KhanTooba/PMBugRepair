@@ -4,8 +4,8 @@ from z3 import *
 Just a collection of helper functions universally called.
 """
 
-benchmarks = ["Clevel_hashing"]
-# , "memcached", "CCEH",  "P-CLHT", "fastFair", "array", "doublyList", "dqueue", 
+benchmarks = ["memcached"]
+# "Clevel_hashing" , "memcached", "CCEH",  "P-CLHT", "fastFair", "array", "doublyList", "dqueue", 
 #                   "graph", "hash", "heap", "list_1", "list", "motivatingExample", 
 #                   "priorityQueue", "queue_1", "queue_2", "queue", "set", "skipLists", 
 #                   "stack", "stack_1"]
@@ -79,6 +79,7 @@ def getIndividualThreads(trace, threadCount):
             if trace[j][-2]==i:
                 currentThread.append(trace[j])
         indiThreads.append(currentThread)
+        print("LENGTH OF THREAD: ", i, " : ", len(currentThread))
 
     return indiThreads
 
@@ -116,3 +117,44 @@ def processTransactions(trace):
             traceToReturn.append(trace[i])
 
     return traceToReturn
+
+def readScopes(path):
+    f = open(path)
+    bugs = set()
+    for line in f:
+        if "DURA" in str(line):
+            b = str(line).replace("DURA:[ pt_", "").split("_")[0:-1]
+            bugs.add('_'.join(str(x) for x in b).strip())
+
+        elif "MPB" in str(line):
+            bug = str(line).replace("MPB: [pt_", "").replace("]", "").split(";")
+            b1 = bug[0].split("_")[:-1]
+            b2 = bug[1].split("_")[1:-1]
+            bugs.add('_'.join(str(x) for x in b1).strip())
+            bugs.add('_'.join(str(x) for x in b2).strip())
+
+        elif "MPA" in str(line):
+            bug = str(line).replace("MPA: [pc_", "").replace("]", "").split(";")
+            b1 = bug[0].split("_")[:-1]
+            b2 = bug[1].split("_")[1:-1]
+            bugs.add('_'.join(str(x) for x in b1).strip())
+            bugs.add('_'.join(str(x) for x in b2).strip())
+        
+    return bugs
+
+def getRelevantTrace(trace, fileName):
+    inputPath = "../results/bugs/" 
+    bugs = list(readScopes(inputPath+fileName+"_1.txt"))
+    bugs.extend(list(readScopes(inputPath+fileName+"_2.txt")))
+    # for bug in set(bugs):
+    #     print(bug)
+    finalTrace = []
+    for t in trace:
+        lineDetails = t[-1].split("_")[:-1]
+        scope = '_'.join(str(x) for x in lineDetails).strip()
+        if scope in bugs:
+            finalTrace.append(t)
+    
+    # for t in finalTrace:
+    #     print(t)
+    return finalTrace

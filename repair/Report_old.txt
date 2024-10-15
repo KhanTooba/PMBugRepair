@@ -537,3 +537,78 @@ Total number of calls to the Z3 solver: 10
 Total time taken to repair MPA bugs: 3.0461928844451904 seconds.
 ###########################################################################
 
+###########################################################################
+Adding DURA & MPB Repair Report for memcached: 
+Number of DURAS fixed: 56
+Number of MPBs fixed: 54
+Number of DURAS failed to fix: 0
+Number of MPBs failed to fix: 1
+Total time taken to repair DURA bugs: 20.563053131103516 seconds.
+Total time taken to repair MPB bugs: 970.9108254909515 seconds.
+Number of sfences() added: 10
+Number of clflushopts() added: 48
+Total number of calls to the Z3 solver: 336
+Total time taken: 992.1741502285004 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for memcached: 
+Number of DURAS fixed: 5
+Number of MPBs fixed: 5
+Number of DURAS failed to fix: 5
+Number of MPBs failed to fix: 5
+Total time taken to repair DURA bugs: 0 seconds.
+Total time taken to repair MPB bugs: 0 seconds.
+Number of sfences() added: 0
+Number of clflushopts() added: 0
+Total number of calls to the Z3 solver: 0
+Total time taken: 0.26802897453308105 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for memcached: 
+Number of DURAS fixed: 11
+Number of MPBs fixed: 9
+Number of DURAS failed to fix: 0
+Number of MPBs failed to fix: 0
+Total time taken to repair DURA bugs: 2.5019524097442627 seconds.
+Total time taken to repair MPB bugs: 85.88957667350769 seconds.
+Number of sfences() added: 3
+Number of clflushopts() added: 9
+Total number of calls to the Z3 solver: 59
+Total time taken: 88.69645595550537 seconds.
+###########################################################################
+
+###########################################################################
+Adding DURA & MPB Repair Report for memcached: 
+Number of DURAS fixed: 11
+Number of MPBs fixed: 9
+Number of DURAS failed to fix: 0
+Number of MPBs failed to fix: 0
+Total time taken to repair DURA bugs: 1.0130164623260498 seconds.
+Total time taken to repair MPB bugs: 25.986093521118164 seconds.
+Number of sfences() added: 4
+Number of clflushopts() added: 9
+Total number of calls to the Z3 solver: 39
+Total time taken: 27.093981981277466 seconds.
+###########################################################################
+
+###########################################################################
+Adding MPA Repair Report for memcached: 
+Number of MPAs fixed: 6
+Number of MPAs failed: 0
+Number of fences() added: 4
+Number of locks() added: 4
+Total number of calls to the Z3 solver: 5
+Total time taken to repair MPA bugs: 53.444185972213745 seconds.
+###########################################################################
+###########################################################################
+Adding MPA Repair Report for memcached: 
+Number of MPAs fixed: 6
+Number of MPAs failed: 0
+Number of fences() added: 5
+Number of locks() added: 11
+Total number of calls to the Z3 solver: 7
+Total time taken to repair MPA bugs: 83.60049986839294 seconds.
+###########################################################################
+
