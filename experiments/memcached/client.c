@@ -288,7 +288,7 @@ void *write_data(void *arg, int sockfd, struct sockaddr_in server_addr) {
         error("Connection to server failed");
     }
 
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 2; ++i) {
         char key[BUFFER_SIZE];
         char value[BUFFER_SIZE];
         snprintf(key, sizeof(key), "key%d", i+1);
