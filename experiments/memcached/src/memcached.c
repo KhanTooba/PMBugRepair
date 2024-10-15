@@ -549,12 +549,12 @@ conn *conn_new(const int sfd, enum conn_states init_state,
         c->msgsize = MSG_LIST_INITIAL;
         c->hdrsize = 0;
 
-        c->rbuf = (char *)malloc((size_t)c->rsize);
-        c->wbuf = (char *)malloc((size_t)c->wsize);
-        c->ilist = (item **)malloc(sizeof(item *) * c->isize);
-        c->suffixlist = (char **)malloc(sizeof(char *) * c->suffixsize);
-        c->iov = (struct iovec *)malloc(sizeof(struct iovec) * c->iovsize);
-        c->msglist = (struct msghdr *)malloc(sizeof(struct msghdr) * c->msgsize);
+        c->rbuf = (char *)pmalloc((size_t)c->rsize);
+        c->wbuf = (char *)pmalloc((size_t)c->wsize);
+        c->ilist = (item **)pmalloc(sizeof(item *) * c->isize);
+        c->suffixlist = (char **)pmalloc(sizeof(char *) * c->suffixsize);
+        c->iov = (struct iovec *)pmalloc(sizeof(struct iovec) * c->iovsize);
+        c->msglist = (struct msghdr *)pmalloc(sizeof(struct msghdr) * c->msgsize);
 
         if (c->rbuf == 0 || c->wbuf == 0 || c->ilist == 0 || c->iov == 0 ||
                 c->msglist == 0 || c->suffixlist == 0) {
@@ -2803,7 +2803,7 @@ static int _store_item_copy_data(int comm, item *old_it, item *new_it, item *add
             }
         } else {
 #ifdef PSLAB
-            if (new_it->it_flags & ITEM_PSLAB) {
+            if (1){//printf("Entered if 1\n");//new_it->it_flags & ITEM_PSLAB) {
                 pmem_memcpy_nodrain(ITEM_data(new_it), ITEM_data(old_it), old_it->nbytes);
                 pmem_memcpy_nodrain(ITEM_data(new_it) + old_it->nbytes - 2 /* CRLF */, ITEM_data(add_it), add_it->nbytes);
                 return 0;
@@ -2821,7 +2821,7 @@ static int _store_item_copy_data(int comm, item *old_it, item *new_it, item *add
             }
         } else {
 #ifdef PSLAB
-            if (new_it->it_flags & ITEM_PSLAB) {
+            if (1){//printf("Entered if 2\n");//new_it->it_flags & ITEM_PSLAB){
                 pmem_memcpy_nodrain(ITEM_data(new_it), ITEM_data(add_it), add_it->nbytes);
                 pmem_memcpy_nodrain(ITEM_data(new_it) + add_it->nbytes - 2 /* CRLF */, ITEM_data(old_it), old_it->nbytes);
                 return 0;
@@ -6937,7 +6937,7 @@ int main (int argc, char **argv) {
                     break;
                 }
                 size_t len = strlen(settings.inter) + strlen(optarg) + 2;
-                char *p = malloc(len);
+                char *p = pmalloc(len);
                 if (p == NULL) {
                     fprintf(stderr, "Failed to allocate memory\n");
                     return 1;
@@ -7910,7 +7910,7 @@ fprintf(stderr, "pslab_size=%ld", pslab_size);
 
         if (portnumber_filename != NULL) {
             len = strlen(portnumber_filename)+4+1;
-            temp_portnumber_filename = malloc(len);
+            temp_portnumber_filename = pmalloc(len);
             snprintf(temp_portnumber_filename,
                      len,
                      "%s.lck", portnumber_filename);

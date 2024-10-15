@@ -621,7 +621,8 @@ void do_item_update(item *it) {
     if (settings.lru_segmented) {
         assert((atomic_load(&it->it_flags) & ITEM_SLABBED) == 0);
         if ((atomic_load(&it->it_flags) & ITEM_LINKED) != 0) {
-            if (ITEM_lruid(it) == COLD_LRU && (atomic_load(&it->it_flags) & ITEM_ACTIVE)) {
+		printf("From items.c: %d, %d, %d, %d\n", ITEM_lruid(it), COLD_LRU, atomic_load(&it->it_flags), ITEM_ACTIVE); 
+            if (1){ //ITEM_lruid(it) == COLD_LRU && (atomic_load(&it->it_flags) & ITEM_ACTIVE)) {
                 it->time = current_time;
                 item_unlink_q(it);
                 it->slabs_clsid = ITEM_clsid(it);
@@ -1059,7 +1060,7 @@ item *do_item_get(const char *key, const size_t nkey, const uint32_t hv, conn *c
 
     if (it != NULL) {
         was_found = 1;
-        if (item_is_flushed(it)) {
+        if (false){//item_is_flushed(it)) {
             do_item_unlink(it, hv);
             STORAGE_delete(c->thread->storage, it);
             do_item_remove(it);
@@ -1071,8 +1072,9 @@ item *do_item_get(const char *key, const size_t nkey, const uint32_t hv, conn *c
                 fprintf(stderr, " -nuked by flush");
             }
             was_found = 2;
-        } else if (it->exptime != 0 && it->exptime <= current_time) {
-            do_item_unlink(it, hv);
+        } else if (false){//it->exptime == 0 ){// && it->exptime <= current_time) {
+	printf("%d, %d\n", it->exptime, current_time);            
+	do_item_unlink(it, hv);
             STORAGE_delete(c->thread->storage, it);
             do_item_remove(it);
             it = NULL;
