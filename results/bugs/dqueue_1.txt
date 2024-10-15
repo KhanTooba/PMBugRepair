@@ -1,26 +1,24 @@
-pt_newNode_66 < 9999
-pt_newNode_66 < pt_deque_print_195
-pt_deque_push_back_102 < 9999
-pt_deque_push_back_103 < 9999
-pt_deque_push_back_103 < pt_deque_print_196
-pt_deque_pop_front_119 < 9999
-pt_deque_pop_front_119 < pt_deque_pop_back_143
-pt_deque_pop_front_121 < 9999
-pt_deque_pop_front_126 < 9999
-pt_deque_pop_front_126 < pt_deque_pop_back_145
-pt_deque_push_back_102 < pt_deque_pop_back_145
-pt_deque_push_front_86 < 9999
-pt_deque_push_front_86 < pt_deque_pop_front_121
-pt_deque_push_front_87 < 9999
-pt_deque_pop_back_143 < 9999
-pt_deque_pop_back_145 < 9999
-pt_deque_pop_back_145 < pt_deque_pop_back_145
-pt_deque_pop_back_150 < 9999
-pt_deque_pop_back_143 < pt_deque_pop_front_119
-pt_deque_pop_front_121 < pt_deque_pop_front_121
-pt_deque_print_195 < 9999
-pt_deque_print_196 < 9999
-pt_deque_print_195 < pt_deque_print_195
-pt_deque_print_196 < pt_deque_print_196
-pt_deque_clear_173 < 9999
-pt_deque_clear_173 < pt_deque_clear_173
+DURA:[ pt_newNode_66]
+MPB: [pt_newNode_66; pt_deque_print_195]
+DURA:[ pt_deque_push_back_102]
+DURA:[ pt_deque_push_back_103]
+MPB: [pt_deque_push_back_103; pt_deque_print_196]
+DURA:[ pt_deque_pop_front_119]
+MPB: [pt_deque_pop_front_119; pt_deque_pop_back_143]
+DURA:[ pt_deque_pop_front_121]
+DURA:[ pt_deque_pop_front_126]
+MPB: [pt_deque_pop_front_126; pt_deque_pop_back_145]
+MPB: [pt_deque_push_back_102; pt_deque_pop_back_145]
+DURA:[ pt_deque_push_front_86]
+MPB: [pt_deque_push_front_86; pt_deque_pop_front_121]
+DURA:[ pt_deque_push_front_87]
+DURA:[ pt_deque_pop_back_143]
+DURA:[ pt_deque_pop_back_145]
+MPB: [pt_deque_pop_back_145; pt_deque_pop_back_145]
+DURA:[ pt_deque_pop_back_150]
+MPB: [pt_deque_pop_back_143; pt_deque_pop_front_119]
+MPB: [pt_deque_pop_front_121; pt_deque_pop_front_121]
+MPB: [pt_deque_push_front_87; pt_deque_pop_back_145]
+DURA:[ pt_deque_print_195]
+DURA:[ pt_deque_print_196]
+DURA:[ pt_deque_clear_173]

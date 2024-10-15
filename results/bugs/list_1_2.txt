@@ -1,32 +1,25 @@
-And(pc_insert_107 < pc_search_151,
-    pt_insert_107 > pc_search_151)
-And(pc_insert_107 < pc_insert_after_274,
-    pt_insert_107 > pc_insert_after_274)
-And(pc_insert_107 < pc_display_220,
-    pt_insert_107 > pc_display_220)
-And(pc_insert_108 < pc_search_155,
-    pt_insert_108 > pc_search_155)
-And(pc_insert_108 < pc_insert_after_282,
-    pt_insert_108 > pc_insert_after_282)
-And(pc_insert_108 < pc_insert_after_277,
-    pt_insert_108 > pc_insert_after_277)
-And(pc_insert_108 < pc_reverse_236,
-    pt_insert_108 > pc_reverse_236)
-And(pc_insert_108 < pc_display_221,
-    pt_insert_108 > pc_display_221)
-And(pc_insert_108 < pc_clear_191,
-    pt_insert_108 > pc_clear_191)
-And(pc_reverse_236 < pc_display_221,
-    pt_reverse_236 > pc_display_221)
-And(pc_reverse_236 < pc_clear_191,
-    pt_reverse_236 > pc_clear_191)
-And(pc_reverse_237 < pc_reverse_236,
-    pt_reverse_237 > pc_reverse_236)
-And(pc_reverse_237 < pc_display_221,
-    pt_reverse_237 > pc_display_221)
-And(pc_reverse_237 < pc_clear_191,
-    pt_reverse_237 > pc_clear_191)
-And(pc_reverse_236 < pc_insert_after_277,
-    pt_reverse_236 > pc_insert_after_277)
-And(pc_reverse_237 < pc_insert_after_277,
-    pt_reverse_237 > pc_insert_after_277)
+MPA: [pc_insert_107; pc_search_151]
+MPA: [pc_insert_107; pc_insert_after_274]
+MPA: [pc_insert_107; pc_display_220]
+MPA: [pc_insert_108; pc_search_155]
+MPA: [pc_insert_108; pc_insert_after_282]
+MPA: [pc_insert_108; pc_insert_after_277]
+MPA: [pc_insert_108; pc_display_221]
+MPA: [pc_insert_108; pc_clear_191]
+MPA: [pc_insert_after_282; pc_insert_after_277]
+MPA: [pc_insert_after_282; pc_display_221]
+MPA: [pc_insert_after_282; pc_clear_191]
+MPA: [pc_insert_after_277; pc_reverse_236]
+MPA: [pc_reverse_236; pc_insert_after_282]
+MPA: [pc_reverse_236; pc_display_221]
+MPA: [pc_reverse_236; pc_clear_191]
+MPA: [pc_reverse_237; pc_insert_after_282]
+MPA: [pc_reverse_237; pc_insert_after_277]
+MPA: [pc_reverse_237; pc_display_221]
+MPA: [pc_reverse_237; pc_clear_191]
+MPA: [pc_reverse_237; pc_reverse_236]
+MPA: [pc_insert_after_274; pc_display_220]
+MPA: [pc_insert_after_277; pc_display_221]
+MPA: [pc_insert_after_277; pc_clear_191]
+MPA: [pc_insert_after_278; pc_display_221]
+MPA: [pc_insert_after_278; pc_clear_191]

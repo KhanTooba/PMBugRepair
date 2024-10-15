@@ -1,6 +1,3 @@
-And(pc_enqueue_22 < pc_dequeue_46,
-    pt_enqueue_22 > pc_dequeue_46)
-And(pc_enqueue_23 < pc_dequeue_47,
-    pt_enqueue_23 > pc_dequeue_47)
-And(pc_enqueue_30 < pc_dequeue_47,
-    pt_enqueue_30 > pc_dequeue_47)
+MPA: [pc_enqueue_22; pc_dequeue_46]
+MPA: [pc_enqueue_23; pc_dequeue_47]
+MPA: [pc_enqueue_30; pc_dequeue_47]

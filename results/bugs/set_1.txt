@@ -1,20 +1,20 @@
-pt_newNode_56 < 9999
-pt_newNode_56 < pt_set_insert_74
-pt_set_insert_83 < 9999
-pt_set_insert_83 < pt_set_insert_78
-pt_set_insert_74 < 9999
-pt_set_insert_74 < pt_set_insert_74
-pt_set_insert_78 < 9999
-pt_set_insert_78 < pt_set_insert_78
-pt_set_remove_96 < 9999
-pt_set_remove_98 < 9999
-pt_set_remove_98 < pt_set_remove_111
-pt_set_remove_96 < pt_set_insert_74
-pt_set_remove_111 < 9999
-pt_set_remove_111 < pt_set_insert_78
-pt_set_print_163 < 9999
-pt_set_print_164 < 9999
-pt_set_print_164 < pt_set_print_164
-pt_set_print_163 < pt_set_print_163
-pt_set_clear_142 < 9999
-pt_set_clear_142 < pt_set_clear_142
+DURA:[ pt_newNode_56]
+MPB: [pt_newNode_56; pt_set_insert_74]
+DURA:[ pt_set_insert_83]
+DURA:[ pt_set_insert_74]
+MPB: [pt_set_insert_74; pt_set_insert_74]
+DURA:[ pt_set_insert_78]
+MPB: [pt_set_insert_83; pt_set_insert_78]
+MPB: [pt_set_insert_78; pt_set_insert_78]
+DURA:[ pt_set_remove_96]
+DURA:[ pt_set_remove_98]
+MPB: [pt_set_remove_98; pt_set_remove_111]
+MPB: [pt_set_remove_96; pt_set_insert_74]
+DURA:[ pt_set_remove_111]
+MPB: [pt_set_remove_111; pt_set_insert_78]
+DURA:[ pt_set_print_163]
+DURA:[ pt_set_print_164]
+MPB: [pt_set_print_164; pt_set_print_164]
+MPB: [pt_set_print_163; pt_set_print_163]
+DURA:[ pt_set_clear_142]
+MPB: [pt_set_clear_142; pt_set_clear_142]

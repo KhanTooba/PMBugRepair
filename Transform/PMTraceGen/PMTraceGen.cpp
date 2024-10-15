@@ -171,20 +171,18 @@ namespace pminv {
       }
 
 	    init(F);
-//	GetUniqueID(F);
-//	    insertFlush(F);
-//      insertFence(F);
-//      insertTransactions(F);
 
       // Chao: the following lines are taken from 'PMSetUniqueID' pass
       
+
       SetInstUniqueID(F);
       InsertDummyBeginEnd(F);
       LLVM_DEBUG(dbgs() << "Function: " << F.getName() << " BlockSize: " << F.getBasicBlockList().size() << "\n");
-	GetUniqueID(F);
-            insertFlush(F);
+      GetUniqueID(F);
+      insertFlush(F);
       insertFence(F);
       insertTransactions(F);
+      
       // Chao: the remaining lines are taken from 'PMTraceGen' pass
       
 //      GetUniqueID(F);
@@ -315,7 +313,8 @@ namespace pminv {
     IRBuilder<> Builder(Context);
     FunctionType *FenceFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt32Ty(Context),
-                                                    Type::getInt32Ty(Context)}, false);
+                                                    Type::getInt32Ty(Context), 
+                                                    Type::getInt8PtrTy(Context)}, false);
     FunctionCallee FenceFunc = F.getParent()->getOrInsertFunction("__fence", FenceFuncType);
 
     for (BasicBlock &BB : F) {
@@ -334,8 +333,10 @@ namespace pminv {
                   LineLoc = llvm::ConstantInt::get(i32_type, 0);
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
+                Builder.SetInsertPoint(&I); 
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
+                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc, ScopeConstant});
             }
           }          
         }
@@ -352,12 +353,14 @@ namespace pminv {
     FunctionType *FlushFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt8PtrTy(Context), 
                                                     Type::getInt64Ty(Context),Type::getInt32Ty(Context),
-                                                    Type::getInt32Ty(Context)}, false);
+                                                    Type::getInt32Ty(Context), 
+                                                    Type::getInt8PtrTy(Context)}, false);
     FunctionCallee FlushFunc = F.getParent()->getOrInsertFunction("__flush", FlushFuncType);
 
     FunctionType *FenceFuncType = FunctionType::get(Type::getVoidTy(Context), //{VoidPtrTy}, false); 
                                                     {Type::getInt32Ty(Context),
-                                                    Type::getInt32Ty(Context)}, false);
+                                                    Type::getInt32Ty(Context), 
+                                                    Type::getInt8PtrTy(Context)}, false);
     FunctionCallee FenceFunc = F.getParent()->getOrInsertFunction("__fence", FenceFuncType);
 
     for (BasicBlock &BB : F) {
@@ -392,8 +395,10 @@ namespace pminv {
                   LineLoc = llvm::ConstantInt::get(i32_type, 0);
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
+                Builder.SetInsertPoint(&I); 
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc, ScopeConstant});
             } 
           
             else if (calledFunc->getName().find("pmem_persist")!=std::string::npos ||
@@ -424,10 +429,12 @@ namespace pminv {
                   LineLoc = llvm::ConstantInt::get(i32_type, 0);
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
+                Builder.SetInsertPoint(&I); 
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc, ScopeConstant});
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
+                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc, ScopeConstant});
             } 
 
             else if (calledFunc->getName().find("pmemobj_persist")!=std::string::npos) {
@@ -453,10 +460,12 @@ namespace pminv {
                   LineLoc = llvm::ConstantInt::get(i32_type, 0);
                   ColLoc = llvm::ConstantInt::get(i32_type, 0);
                 }
+                Builder.SetInsertPoint(&I); 
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc});
+                Builder.CreateCall(FlushFunc, {argData, argLen64, LineLoc, ColLoc, ScopeConstant});
                 Builder.SetInsertPoint(&I);
-                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc});
+                Builder.CreateCall(FenceFunc, {LineLoc, ColLoc, ScopeConstant});
             }
 	        }          
         }
@@ -489,47 +498,59 @@ namespace pminv {
 
     for (BasicBlock &BB : F) {
       for (Instruction &I : BB) {
-
         if (CallInst *callInst = dyn_cast<CallInst>(&I)) {
-	        if (const Function *calledFunc = callInst->getCalledFunction()) {
-            if (calledFunc->getName().find("manual")!=std::string::npos){ 
-		            outs()<<"Transaction print: "<<calledFunc->getName()<<"\n";
-                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
+         if (const Function *calledFunc = callInst->getCalledFunction()) {
+		        llvm::Constant *LineLoc, *ColLoc;
+            if (I.getDebugLoc().get() != nullptr) {
+              LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
+              ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
+            }
+            else {
+              LineLoc = llvm::ConstantInt::get(i32_type, 0);
+              ColLoc = llvm::ConstantInt::get(i32_type, 0);
+            }
+            if (calledFunc->getName().find("pmemobj_tx_begin")!=std::string::npos){ 
                 Builder.SetInsertPoint(&I);   
-                llvm::Constant *LineLoc, *ColLoc;
-                if (I.getDebugLoc().get() != nullptr) {
-                  LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
-                  ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
-                }
-                else {
-                  LineLoc = llvm::ConstantInt::get(i32_type, 0);
-                  ColLoc = llvm::ConstantInt::get(i32_type, 0);
-                }
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(beginFunc, {LineLoc, ColLoc, ScopeConstant});
-            } 
-
-            if (calledFunc->getName().find("commit")!=std::string::npos){ 
-		            outs()<<calledFunc->getName()<<"\n";
+            }
+            else if (calledFunc->getName().find("pmemobj_tx_commit")!=std::string::npos) {
+			          Builder.SetInsertPoint(&I); 
                 llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
-                Builder.SetInsertPoint(&I);   
-                llvm::Constant *LineLoc, *ColLoc;
-                if (I.getDebugLoc().get() != nullptr) {
-                  LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
-                  ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
-                }
-                else {
-                  LineLoc = llvm::ConstantInt::get(i32_type, 0);
-                  ColLoc = llvm::ConstantInt::get(i32_type, 0);
-                }
                 Builder.SetInsertPoint(&I);
                 Builder.CreateCall(commitFunc, {LineLoc, ColLoc, ScopeConstant});
-            } 
+            }
+         }
+        } 
+        else if (auto *invokeInst = dyn_cast<InvokeInst>(&I)) {
+          if (Function *calledFunc = invokeInst->getCalledFunction()) {
+            llvm::Constant *LineLoc, *ColLoc;
+            if (I.getDebugLoc().get() != nullptr) {
+              LineLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getLine());
+              ColLoc = llvm::ConstantInt::get(i32_type, I.getDebugLoc().getCol());
+            }
+            else {
+              LineLoc = llvm::ConstantInt::get(i32_type, 0);
+              ColLoc = llvm::ConstantInt::get(i32_type, 0);
+            }
+            if (calledFunc->getName().find("pmemobj_tx_begin")!=std::string::npos) {
+			          Builder.SetInsertPoint(&I); 
+                llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
+                Builder.SetInsertPoint(&I);
+                Builder.CreateCall(beginFunc, {LineLoc, ColLoc, ScopeConstant});
+            }
+            else if (calledFunc->getName().find("pmemobj_tx_commit")!=std::string::npos) {
+                Builder.SetInsertPoint(&I);  
+			          llvm::Constant *ScopeConstant = getOrCreateGlobalStringPtr(&Builder, StringRef(InstToSubProgramName[&I]));
+                Builder.SetInsertPoint(&I);
+                Builder.CreateCall(commitFunc, {LineLoc, ColLoc, ScopeConstant});
+            }
+          } 
           }          
         }
       }
-    }
-}      
+    }      
     void InstruDepMap(Function &F) {
       
       IRBuilder<> builder(F.getContext());
@@ -689,34 +710,25 @@ namespace pminv {
     }
     */
 
-    llvm::Constant * getOrCreateGlobalStringPtr(IRBuilder<> *builder,StringRef name) {
+  llvm::Constant * getOrCreateGlobalStringPtr(IRBuilder<> *builder,StringRef name) {
       static std::map<StringRef,llvm::Constant*> N2C;
       static std::map<StringRef,llvm::Constant*>::iterator N2C_it;
+
       N2C_it = N2C.find(name);
       llvm::Constant *sc;
-//      outs()<<name<<"\n";
-	if (name.empty() || name[0] != '\0'){
-	llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
-                return llvm::Constant::getNullValue(ptrType);
-
-	}
-
-      	try{
-      	if (N2C_it != N2C.end()) {
-        	sc = N2C_it->second;
-      	} 
-      	else {
-		outs()<<"For: "<<name<<"\n";
-        	sc = builder->CreateGlobalStringPtr(name);
-		 outs()<<"Call succeded.\n";
-        	N2C [ name ]  = sc;
-      	}
-      	return sc;
-	}
-	catch(...){
-		llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
-        	return llvm::Constant::getNullValue(ptrType);
-	}
+      if (name.empty() || name[0] == '\0' || !std::is_same<decltype(name), llvm::StringRef>::value){
+        llvm::Type *ptrType = llvm::Type::getInt8PtrTy(builder->getContext());
+        return llvm::Constant::getNullValue(ptrType);
+      }
+      if (N2C_it != N2C.end()) {
+        sc = N2C_it->second;
+      } 
+      else 
+      {
+        sc = builder->CreateGlobalStringPtr(name);
+		    N2C [ name ]  = sc;
+      }
+      return sc;
     }
    
 void printInstructionDetails(llvm::Instruction *inst) {

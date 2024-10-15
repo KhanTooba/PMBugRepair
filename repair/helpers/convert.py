@@ -19,6 +19,10 @@ def parseTraceHelper(elements, index):
         traceParsed.append(102)
     elif "FENCE" in elements[0]:
         traceParsed.append(103)
+    elif "tx_begin" in elements[0]:
+        traceParsed.append(201)
+    elif "tx_commit" in elements[0]:
+        traceParsed.append(202)
     
     traceParsed.append(elements[1].strip())
     traceParsed.append(elements[2].strip())
@@ -81,37 +85,52 @@ def generateBugConstraints(inputFileName):
     length = len(trace)
     mpbs, duras = [], []
     store = 0
+    transact = -1
 
     for i in range(length):
         # print(trace[i])
+        if trace[i][1]==201:
+            transact = i
+        elif trace[i][1]==202:
+            transact = -1
+        
         if trace[i][1]==101:
-            if str(trace[i][-1]) not in duras:
-                bugs.append(Int("pt_"+str(trace[i][-1]))<inf)
+            if str(trace[i][-1]) not in duras and transact==-1:
+                bugs.append("DURA:[ pt_"+str(trace[i][-1])+"]")
                 duras.append(str(trace[i][-1]))
-            
+            transactInsideLoop = transact
             for j in range(i+1, length):
+                if trace[j][1]==201:
+                    transactInsideLoop = j
+                elif trace[j][1]==202:
+                    # print("Committing: ", trace[j])
+                    transactInsideLoop = -1
                 if trace[j][1]==101 and trace[i][2]==trace[j][3] and trace[i][-2]==trace[j][-2]:
-                    if str(trace[i][-1]) not in mpbs:
+                    if str(trace[i][-1]) not in mpbs and (transact==transactInsideLoop or (transact==-1 and transactInsideLoop!=-1)):
+                    # not (transact==-1 and transactInsideLoop!=-1) and transact!=transactInsideLoop:
+                        # print(transact, transactInsideLoop, i , j)
                         first = "pt_"+str(trace[i][-1])
                         second = "pt_"+str(trace[j][-1])
-                        bugs.append(Int(first)<Int(second))
+                        # print(first, second)
+                        bugs.append("MPB: ["+first+"; "+second+"]")
                         mpbs.append(str(trace[i][-1]))
+                        # return 1/0
                         break
 
-    # print("Number of bugs detected: ", len(bugs))
-    for b in bugs:
-        print(b)
+    
     return bugs
 
 if __name__ == "__main__":
     inputPath = "../../results/outputs/"           #"_output.txt"
     outputPath = "../../results/bugs/"             #memcached
    
+    print("\n\nPrinting all DURA and MPB Bug Details.")
     for b in benchmarks:
         inputFile = inputPath+b+"_formatted_output.txt"
         outputFile = outputPath+b+"_1.txt"
         bugs = generateBugConstraints(inputFile)
         f = open(outputFile, "w")
+        print(b, len(bugs))
         for bug in bugs:
             f.write(str(bug)+"\n")
         f.close()

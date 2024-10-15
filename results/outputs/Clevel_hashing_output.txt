@@ -1,0 +1,1620 @@
+FUNC_BEGIN_1: main 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj9pool_base6createERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_mj 1; <Thread ID:139888889608256>
+Adding addr: 0x7f3840000000 to 0x7f3a40000000; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj11transaction6manualC2IJEEERNS0_9pool_baseEDpRT_ 1; <Thread ID:139888889608256>
+Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0660 Size: 1 ID: 1127 @Ln,Col: 195,11 Scope: swap<bool>; <Thread ID:139888889608256>
+Store: 0x7f38403c05d0 Size: 8 ID: 1132 @Ln,Col: 61,46 Scope: compound_pool_ptr; <Thread ID:139888889608256>
+Store: 0x7f38403c05e0 Size: 8 ID: 1135 @Ln,Col: 75,30 Scope: p; <Thread ID:139888889608256>
+DEP: SrcID: 1132 DestID: 1135; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c05d8 Size: 8 ID: 1192 @Ln,Col: 285,22 Scope: clevel_hash; <Thread ID:139888889608256>
+Load: 0x7f38403c05d8 Size: 8 ID: 1198 @Ln,Col: 58,18 Scope: operator<<<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0630 Size: 8 ID: 1277 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 1280 @Ln,Col: 294,45 Scope: clevel_hash; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj15make_persistentINS0_12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES5_NS4_13string_hasherESt8equal_toIS5_ELm12EE12level_bucketEJEEENSt9enable_ifIXntsr6detail17is_first_arg_sameINS0_15allocation_flagEDpT0_EE5valueENS_6detail15pp_if_not_arrayIT_E4typeEE4typeEDpOSD_ 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj15make_persistentINS0_12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES5_NS4_13string_hasherESt8equal_toIS5_ELm12EE12level_bucketEJEEENSt9enable_ifIXntsr6detail17is_first_arg_sameINS0_15allocation_flagEDpT0_EE5valueENS_6detail15pp_if_not_arrayIT_E4typeEE4typeEDpOSD_ 1; <Thread ID:139888889608256>
+Load: 0x7f38403c05d8 Size: 8 ID: 1329 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj15make_persistentIA_NS0_12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES5_NS4_13string_hasherESt8equal_toIS5_ELm12EE6bucketEEENS_6detail11pp_if_arrayIT_E4typeEmNS0_15allocation_flagE 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj14persistent_ptrIA_NS0_12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES5_NS4_13string_hasherESt8equal_toIS5_ELm12EE6bucketEEaSEOSC_ 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj14persistent_ptrIA_NS0_12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES5_NS4_13string_hasherESt8equal_toIS5_ELm12EE6bucketEEaSEOSC_ 1; <Thread ID:139888889608256>
+Load: 0x7f38403c05d8 Size: 8 ID: 1384 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c06e0 Size: 8 ID: 1449 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+Store: 0x7f38403c06e8 Size: 8 ID: 1496 @Ln,Col: 99,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c0650 Size: 8 ID: 1498 @Ln,Col: 300,22 Scope: clevel_hash; <Thread ID:139888889608256>
+DEP: SrcID: 1496 DestID: 1498; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj15make_persistentINS0_12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES5_NS4_13string_hasherESt8equal_toIS5_ELm12EE12level_bucketEJEEENSt9enable_ifIXntsr6detail17is_first_arg_sameINS0_15allocation_flagEDpT0_EE5valueENS_6detail15pp_if_not_arrayIT_E4typeEE4typeEDpOSD_ 2; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj15make_persistentINS0_12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES5_NS4_13string_hasherESt8equal_toIS5_ELm12EE12level_bucketEJEEENSt9enable_ifIXntsr6detail17is_first_arg_sameINS0_15allocation_flagEDpT0_EE5valueENS_6detail15pp_if_not_arrayIT_E4typeEE4typeEDpOSD_ 2; <Thread ID:139888889608256>
+Load: 0x7f38403c05d8 Size: 8 ID: 1619 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj15make_persistentIA_NS0_12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES5_NS4_13string_hasherESt8equal_toIS5_ELm12EE6bucketEEENS_6detail11pp_if_arrayIT_E4typeEmNS0_15allocation_flagE 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj14persistent_ptrIA_NS0_12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES5_NS4_13string_hasherESt8equal_toIS5_ELm12EE6bucketEEaSEOSC_ 2; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj14persistent_ptrIA_NS0_12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES5_NS4_13string_hasherESt8equal_toIS5_ELm12EE6bucketEEaSEOSC_ 2; <Thread ID:139888889608256>
+Load: 0x7f38403c05d8 Size: 8 ID: 1673 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0760 Size: 8 ID: 1739 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 1783 @Ln,Col: 305,11 Scope: clevel_hash; <Thread ID:139888889608256>
+Store: 0x7f38403c0768 Size: 8 ID: 1786 @Ln,Col: 107,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c0658 Size: 8 ID: 1788 @Ln,Col: 306,21 Scope: clevel_hash; <Thread ID:139888889608256>
+DEP: SrcID: 1786 DestID: 1788; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0660 Size: 1 ID: 1804 @Ln,Col: 195,11 Scope: swap<bool>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pISt6atomicIbEEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c05f0 Size: 1 ID: 1816 @Ln,Col: 397,2 Scope: store; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIlEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIlEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c05e8 Size: 8 ID: 1833 @Ln,Col: 195,11 Scope: swap<long>; <Thread ID:139888889608256>
+Load: 0x7f38403c0628 Size: 8 ID: 1924 @Ln,Col: 163,16 Scope: joinable; <Thread ID:139888889608256>
+Store: 0x7f38403c0628 Size: 8 ID: 1937 @Ln,Col: 194,11 Scope: swap<std::thread::id>; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 1944 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 1945 @Ln,Col: 314,32 Scope: clevel_hash; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 1979 @Ln,Col: 314,32 Scope: clevel_hash; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 2033 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 2040 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c2450 Size: 8 ID: 2071 @Ln,Col: 314,22 Scope: clevel_hash; <Thread ID:139888889608256>
+Store: 0x7f38403c0550 Size: 8 ID: 2399 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c0558 Size: 8 ID: 2401 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 2399 DestID: 2401; <Thread ID:139888889608256>
+Load: 0x7f38403c0550 Size: 8 ID: 2445 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+DEP: SrcID: 2401 DestID: 2445; <Thread ID:139888889608256>
+Load: 0x7f38403c0558 Size: 8 ID: 2452 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+DEP: SrcID: 2401 DestID: 2452; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6resizeEv 1; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18173 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c05f0 Size: 1 ID: 18187 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE14set_thread_numEm 1; <Thread ID:139888889608256>
+Load: 0x7f38403c05e0 Size: 8 ID: 5666 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c05e0 Size: 8 ID: 7053 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+Store: 0x7f38403c05f8 Size: 8 ID: 7390 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c0600 Size: 8 ID: 7392 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 7390 DestID: 7392; <Thread ID:139888889608256>
+Load: 0x7f38403c05e0 Size: 8 ID: 7394 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Store: 0x7f38403c0608 Size: 8 ID: 7729 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c0610 Size: 8 ID: 7731 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 7729 DestID: 7731; <Thread ID:139888889608256>
+Load: 0x7f38403c05e0 Size: 8 ID: 7733 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Store: 0x7f38403c0618 Size: 8 ID: 8068 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c0620 Size: 8 ID: 8070 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 8068 DestID: 8070; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE14set_thread_numEm 1; <Thread ID:139888889608256>
+Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE8capacityEv 1; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 8074 @Ln,Col: 412,19 Scope: capacity; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8078 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0658 Size: 8 ID: 8123 @Ln,Col: 0,0 Scope: capacity; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 8126 @Ln,Col: 425,31 Scope: capacity; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8129 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0760 Size: 8 ID: 8157 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0768 Size: 8 ID: 8123 @Ln,Col: 0,0 Scope: capacity; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 8126 @Ln,Col: 425,31 Scope: capacity; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8129 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06e0 Size: 8 ID: 8157 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE8capacityEv 1; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 2; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 2; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8202 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 1; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8225 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8232 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj11transaction6manualC2IJEEERNS0_9pool_baseEDpRT_ 1; <Thread ID:139888889608256>
+Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 3; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0950 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 1; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0958 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0958 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0958 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0958 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0958 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 1; <Thread ID:139888889608256>
+Store: 0x7f38403c096f Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 3; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 4; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0978 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 2; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 2; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 2; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0980 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0980 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0980 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 2; <Thread ID:139888889608256>
+Load: 0x7f38403c0980 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0980 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 2; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 2; <Thread ID:139888889608256>
+Store: 0x7f38403c0997 Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 2; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 2; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 4; <Thread ID:139888889608256>
+Store: 0x7f38403c08e0 Size: 8 ID: 22656 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c08e8 Size: 8 ID: 22658 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 22656 DestID: 22658; <Thread ID:139888889608256>
+Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8275 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8281 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e8 Size: 8 ID: 8312 @Ln,Col: 997,47 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 8343 @Ln,Col: 1032,20 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 2; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 2; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22748 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0658 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0768 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0760 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840ad36d0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad36d8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad36e0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad36e8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad36f0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad36f8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad3700 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad3708 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840ae4790 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae4798 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae47a0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae47a8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae47b0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae47b8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae47c0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae47c8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06e0 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403d46d0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d46d8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d46e0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d46e8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d46f0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d46f8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d4700 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d4708 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403e5790 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e5798 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e57a0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e57a8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e57b0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e57b8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e57c0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e57c8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 23981 @Ln,Col: 969,14 Scope: find; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9200 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+Load: 0x7f38403c0660 Size: 1 ID: 9329 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9333 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 9334 @Ln,Col: 1064,28 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9366 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 5; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 5; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 6; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 6; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 2; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8202 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 3; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 3; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8225 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8232 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 2; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj11transaction6manualC2IJEEERNS0_9pool_baseEDpRT_ 1; <Thread ID:139888889608256>
+Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 7; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c09d0 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 3; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 3; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 3; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c09d8 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c09d8 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c09d8 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 3; <Thread ID:139888889608256>
+Load: 0x7f38403c09d8 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c09d8 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 3; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 3; <Thread ID:139888889608256>
+Store: 0x7f38403c09ef Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 3; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 3; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 7; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 8; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c09f8 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 4; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 4; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 4; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0a00 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0a00 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0a00 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 4; <Thread ID:139888889608256>
+Load: 0x7f38403c0a00 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0a00 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 4; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 4; <Thread ID:139888889608256>
+Store: 0x7f38403c0a17 Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 4; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 4; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 8; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Store: 0x7f38403c08e0 Size: 8 ID: 22656 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c08e8 Size: 8 ID: 22658 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 22656 DestID: 22658; <Thread ID:139888889608256>
+Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 2; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8275 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8281 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e8 Size: 8 ID: 8312 @Ln,Col: 997,47 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 8343 @Ln,Col: 1032,20 Scope: generic_insert; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 2; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 4; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 4; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22748 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0658 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0768 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0760 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840adc9d0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc9d8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc9e0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc9e8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc9f0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc9f8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adca00 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adca08 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840aed310 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aed318 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aed320 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aed328 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aed330 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aed338 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aed340 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aed348 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06e0 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403dd9d0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd9d8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd9e0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd9e8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd9f0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd9f8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dda00 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dda08 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403fe310 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fe318 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fe320 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fe328 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fe330 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fe338 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fe340 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fe348 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 23981 @Ln,Col: 969,14 Scope: find; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 2; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9200 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9329 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9333 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 9334 @Ln,Col: 1064,28 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9366 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 2; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 9; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 9; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 10; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 10; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 3; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8202 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 5; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 5; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8225 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8232 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 3; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj11transaction6manualC2IJEEERNS0_9pool_baseEDpRT_ 1; <Thread ID:139888889608256>
+Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 11; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0a50 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 5; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 5; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 5; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0a58 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0a58 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0a58 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 5; <Thread ID:139888889608256>
+Load: 0x7f38403c0a58 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0a58 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 5; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 5; <Thread ID:139888889608256>
+Store: 0x7f38403c0a6f Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 5; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 5; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 11; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 12; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0a78 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 6; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 6; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 6; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0a80 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0a80 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0a80 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 6; <Thread ID:139888889608256>
+Load: 0x7f38403c0a80 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0a80 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 6; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 6; <Thread ID:139888889608256>
+Store: 0x7f38403c0a97 Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 6; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 6; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 12; <Thread ID:139888889608256>
+Store: 0x7f38403c08e0 Size: 8 ID: 22656 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c08e8 Size: 8 ID: 22658 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 22656 DestID: 22658; <Thread ID:139888889608256>
+Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 3; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8275 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8281 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e8 Size: 8 ID: 8312 @Ln,Col: 997,47 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 8343 @Ln,Col: 1032,20 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 3; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 6; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 6; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22748 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0658 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0768 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0760 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840adecd0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adecd8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adece0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adece8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adecf0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adecf8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aded00 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aded08 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840aea610 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea618 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea620 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea628 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea630 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea638 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea640 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea648 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06e0 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403cfcd0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403cfcd8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403cfce0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403cfce8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403cfcf0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403cfcf8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403cfd00 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403cfd08 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403fb610 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fb618 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fb620 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fb628 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fb630 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fb638 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fb640 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fb648 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 23981 @Ln,Col: 969,14 Scope: find; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 3; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9200 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+Load: 0x7f38403c0660 Size: 1 ID: 9329 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9333 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 9334 @Ln,Col: 1064,28 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9366 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 3; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 13; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 13; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 14; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 14; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 4; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8202 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 7; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 7; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8225 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8232 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 4; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj11transaction6manualC2IJEEERNS0_9pool_baseEDpRT_ 1; <Thread ID:139888889608256>
+Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 15; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0ad0 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 7; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 7; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 7; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0ad8 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0ad8 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0ad8 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 7; <Thread ID:139888889608256>
+Load: 0x7f38403c0ad8 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0ad8 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 7; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 7; <Thread ID:139888889608256>
+Store: 0x7f38403c0aef Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 7; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 7; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 15; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 16; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0af8 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 8; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 8; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 8; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0b00 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0b00 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0b00 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 8; <Thread ID:139888889608256>
+Load: 0x7f38403c0b00 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0b00 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 8; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 8; <Thread ID:139888889608256>
+Store: 0x7f38403c0b17 Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 8; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 8; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 16; <Thread ID:139888889608256>
+Store: 0x7f38403c08e0 Size: 8 ID: 22656 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c08e8 Size: 8 ID: 22658 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 22656 DestID: 22658; <Thread ID:139888889608256>
+Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 4; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8275 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8281 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e8 Size: 8 ID: 8312 @Ln,Col: 997,47 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 8343 @Ln,Col: 1032,20 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 4; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 8; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 8; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22748 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0658 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0768 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0760 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840ae0110 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae0118 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae0120 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae0128 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae0130 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae0138 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae0140 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae0148 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840ae9450 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae9458 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae9460 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae9468 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae9470 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae9478 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae9480 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae9488 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06e0 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403e1110 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e1118 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e1120 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e1128 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e1130 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e1138 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e1140 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e1148 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403fa450 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fa458 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fa460 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fa468 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fa470 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fa478 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fa480 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fa488 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 23981 @Ln,Col: 969,14 Scope: find; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 4; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9200 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9329 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9333 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 9334 @Ln,Col: 1064,28 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9366 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 4; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 17; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 17; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 18; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 18; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 5; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8202 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 9; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 9; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8225 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8232 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 5; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj11transaction6manualC2IJEEERNS0_9pool_baseEDpRT_ 1; <Thread ID:139888889608256>
+Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 19; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0b50 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 9; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 9; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 9; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0b58 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0b58 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0b58 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 9; <Thread ID:139888889608256>
+Load: 0x7f38403c0b58 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0b58 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 9; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 9; <Thread ID:139888889608256>
+Store: 0x7f38403c0b6f Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 9; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 9; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 19; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 20; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0b78 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 10; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 10; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 10; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0b80 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0b80 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0b80 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 10; <Thread ID:139888889608256>
+Load: 0x7f38403c0b80 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0b80 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 10; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 10; <Thread ID:139888889608256>
+Store: 0x7f38403c0b97 Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 10; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 10; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 20; <Thread ID:139888889608256>
+Store: 0x7f38403c08e0 Size: 8 ID: 22656 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c08e8 Size: 8 ID: 22658 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 22656 DestID: 22658; <Thread ID:139888889608256>
+Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 5; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8275 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8281 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e8 Size: 8 ID: 8312 @Ln,Col: 997,47 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 8343 @Ln,Col: 1032,20 Scope: generic_insert; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 5; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 10; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 10; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22748 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0658 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0768 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0760 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840ad4710 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad4718 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad4720 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad4728 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad4730 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad4738 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad4740 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad4748 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840aea150 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea158 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea160 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea168 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea170 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea178 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea180 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aea188 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06e0 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c5710 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c5718 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c5720 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c5728 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c5730 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c5738 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c5740 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c5748 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403eb150 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403eb158 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403eb160 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403eb168 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403eb170 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403eb178 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403eb180 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403eb188 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 23981 @Ln,Col: 969,14 Scope: find; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 5; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9200 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9329 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9333 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 9334 @Ln,Col: 1064,28 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9366 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 5; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 21; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 21; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 22; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 22; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 6; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8202 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 11; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 11; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8225 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8232 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 6; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj11transaction6manualC2IJEEERNS0_9pool_baseEDpRT_ 1; <Thread ID:139888889608256>
+Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 23; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0bd0 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 11; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 11; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 11; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0bd8 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0bd8 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0bd8 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 11; <Thread ID:139888889608256>
+Load: 0x7f38403c0bd8 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0bd8 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 11; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 11; <Thread ID:139888889608256>
+Store: 0x7f38403c0bef Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 11; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 11; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 23; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 24; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0bf8 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 12; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 12; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 12; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0c00 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0c00 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0c00 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 12; <Thread ID:139888889608256>
+Load: 0x7f38403c0c00 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0c00 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 12; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 12; <Thread ID:139888889608256>
+Store: 0x7f38403c0c17 Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 12; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 12; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 24; <Thread ID:139888889608256>
+Store: 0x7f38403c08e0 Size: 8 ID: 22656 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c08e8 Size: 8 ID: 22658 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 22656 DestID: 22658; <Thread ID:139888889608256>
+Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 6; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8275 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8281 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e8 Size: 8 ID: 8312 @Ln,Col: 997,47 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 8343 @Ln,Col: 1032,20 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 6; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 12; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 12; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22748 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0658 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0768 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0760 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840adf490 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adf498 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adf4a0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adf4a8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adf4b0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adf4b8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adf4c0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adf4c8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840ae42d0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae42d8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae42e0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae42e8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae42f0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae42f8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae4300 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae4308 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06e0 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403e0490 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e0498 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e04a0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e04a8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e04b0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e04b8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e04c0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403e04c8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403f52d0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403f52d8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403f52e0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403f52e8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403f52f0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403f52f8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403f5300 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403f5308 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 23981 @Ln,Col: 969,14 Scope: find; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 6; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9200 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+Load: 0x7f38403c0660 Size: 1 ID: 9329 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9333 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 9334 @Ln,Col: 1064,28 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9366 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 6; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 25; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 25; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 26; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 26; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 7; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8202 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 13; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 13; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8225 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8232 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 7; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj11transaction6manualC2IJEEERNS0_9pool_baseEDpRT_ 1; <Thread ID:139888889608256>
+Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 27; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0c50 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 13; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 13; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 13; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0c58 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0c58 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0c58 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 13; <Thread ID:139888889608256>
+Load: 0x7f38403c0c58 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0c58 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 13; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 13; <Thread ID:139888889608256>
+Store: 0x7f38403c0c6f Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 13; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 13; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 27; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 28; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0c78 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 14; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 14; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 14; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0c80 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0c80 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0c80 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 14; <Thread ID:139888889608256>
+Load: 0x7f38403c0c80 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0c80 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 14; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 14; <Thread ID:139888889608256>
+Store: 0x7f38403c0c97 Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 14; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 14; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 28; <Thread ID:139888889608256>
+Store: 0x7f38403c08e0 Size: 8 ID: 22656 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c08e8 Size: 8 ID: 22658 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 22656 DestID: 22658; <Thread ID:139888889608256>
+Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 7; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8275 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8281 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e8 Size: 8 ID: 8312 @Ln,Col: 997,47 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 8343 @Ln,Col: 1032,20 Scope: generic_insert; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 7; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 14; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 14; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22748 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0658 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0768 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0760 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840adc790 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc798 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc7a0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc7a8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc7b0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc7b8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc7c0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adc7c8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840ae91d0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae91d8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae91e0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae91e8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae91f0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae91f8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae9200 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ae9208 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06e0 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403dd790 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd798 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd7a0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd7a8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd7b0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd7b8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd7c0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dd7c8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403ea1d0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403ea1d8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403ea1e0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403ea1e8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403ea1f0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403ea1f8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403ea200 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403ea208 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 23981 @Ln,Col: 969,14 Scope: find; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 7; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9200 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9329 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9333 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 9334 @Ln,Col: 1064,28 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9366 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 7; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 29; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 29; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 30; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 30; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 8; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8202 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 15; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 15; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8225 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8232 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 8; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj11transaction6manualC2IJEEERNS0_9pool_baseEDpRT_ 1; <Thread ID:139888889608256>
+Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 31; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0cd0 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 15; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 15; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 15; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0cd8 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0cd8 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0cd8 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 15; <Thread ID:139888889608256>
+Load: 0x7f38403c0cd8 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0cd8 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 15; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 15; <Thread ID:139888889608256>
+Store: 0x7f38403c0cef Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 15; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 15; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 31; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 32; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0cf8 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 16; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 16; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 16; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0d00 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0d00 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0d00 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 16; <Thread ID:139888889608256>
+Load: 0x7f38403c0d00 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0d00 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 16; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 16; <Thread ID:139888889608256>
+Store: 0x7f38403c0d17 Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 16; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 16; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 32; <Thread ID:139888889608256>
+Store: 0x7f38403c08e0 Size: 8 ID: 22656 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c08e8 Size: 8 ID: 22658 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 22656 DestID: 22658; <Thread ID:139888889608256>
+Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 8; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8275 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8281 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e8 Size: 8 ID: 8312 @Ln,Col: 997,47 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 8343 @Ln,Col: 1032,20 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 8; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 16; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 16; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22748 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0658 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0768 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0760 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840adbbd0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adbbd8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adbbe0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adbbe8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adbbf0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adbbf8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adbc00 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840adbc08 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840aeb790 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb798 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb7a0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb7a8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb7b0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb7b8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb7c0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb7c8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06e0 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403dcbd0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dcbd8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dcbe0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dcbe8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dcbf0 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dcbf8 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dcc00 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403dcc08 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403fc790 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc798 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc7a0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc7a8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc7b0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc7b8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc7c0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc7c8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 23981 @Ln,Col: 969,14 Scope: find; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 8; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9200 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9329 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9333 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 9334 @Ln,Col: 1064,28 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9366 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 8; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 33; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 33; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 34; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 34; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 9; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8202 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 17; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 17; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8225 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8232 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 9; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj11transaction6manualC2IJEEERNS0_9pool_baseEDpRT_ 1; <Thread ID:139888889608256>
+Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 35; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0d50 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 17; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 17; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 17; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0d58 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0d58 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0d58 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 17; <Thread ID:139888889608256>
+Load: 0x7f38403c0d58 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0d58 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 17; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 17; <Thread ID:139888889608256>
+Store: 0x7f38403c0d6f Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 17; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 17; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 35; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 36; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pIbEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0d78 Size: 1 ID: 15916 @Ln,Col: 193,20 Scope: construct<const char *, unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 18; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 18; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE13check_pmem_txEv 18; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0d80 Size: 8 ID: 11233 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0d80 Size: 8 ID: 11244 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+Store: 0x7f38403c0d80 Size: 8 ID: 11248 @Ln,Col: 0,0 Scope: allocate; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 18; <Thread ID:139888889608256>
+Load: 0x7f38403c0d80 Size: 8 ID: 11434 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Store: 0x7f38403c0d80 Size: 8 ID: 11457 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 18; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txIcEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental5arrayIcLm24EE5rangeEmm 18; <Thread ID:139888889608256>
+Store: 0x7f38403c0d97 Size: 1 ID: 11506 @Ln,Col: 2315,13 Scope: assign_sso_data<const char *, void>; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEE10initializeIJRPKcS8_EEEPcDpOT_ 18; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental12basic_stringIcSt11char_traitsIcEEC2EPKcm 18; <Thread ID:139888889608256>
+FUNC_END: _ZN12_GLOBAL__N_118polymorphic_stringC2ERKS0_ 36; <Thread ID:139888889608256>
+Store: 0x7f38403c08e0 Size: 8 ID: 22656 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c08e8 Size: 8 ID: 22658 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 22656 DestID: 22658; <Thread ID:139888889608256>
+Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE26allocate_KV_move_constructERNS0_9pool_baseERNS0_14persistent_ptrISt4pairIKS4_S4_EEEPKv 9; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 8275 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 8281 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e8 Size: 8 ID: 8312 @Ln,Col: 997,47 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 8343 @Ln,Col: 1032,20 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 9; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 18; <Thread ID:139888889608256>
+FUNC_END: _ZNK12_GLOBAL__N_113string_hasherclERKNS_18polymorphic_stringE 18; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22748 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0658 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0768 Size: 8 ID: 22811 @Ln,Col: 0,0 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22821 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 22850 @Ln,Col: 777,14 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0760 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840ad1e10 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad1e18 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad1e20 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad1e28 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad1e30 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad1e38 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad1e40 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840ad1e48 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0750 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0758 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f3840aeb0d0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb0d8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb0e0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb0e8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb0f0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb0f8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb100 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f3840aeb108 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 22882 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06e0 Size: 8 ID: 22916 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 22939 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 22950 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403d2e10 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d2e18 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d2e20 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d2e28 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d2e30 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d2e38 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d2e40 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403d2e48 Size: 8 ID: 23113 @Ln,Col: 795,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c06d0 Size: 8 ID: 23450 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c06d8 Size: 8 ID: 23456 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403fc0d0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc0d8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc0e0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc0e8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc0f0 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc0f8 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc100 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403fc108 Size: 8 ID: 23631 @Ln,Col: 880,9 Scope: find; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 23981 @Ln,Col: 969,14 Scope: find; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE4findERNS0_9pool_baseERKS4_tRmRNS_6detail17compound_pool_ptrISt4pairISB_S4_EEEPPSI_SD_RlbmRNSF_INS8_10level_metaEEE 9; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9200 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+Load: 0x7f38403c0660 Size: 1 ID: 9329 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 9333 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 9334 @Ln,Col: 1064,28 Scope: generic_insert; <Thread ID:139888889608256>
+Load: 0x7f38403c0660 Size: 1 ID: 9366 @Ln,Col: 128,16 Scope: operator bool; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE6insertEOSt4pairIKS4_S4_Emm 9; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj11transaction6manualC2IJEEERNS0_9pool_baseEDpRT_ 1; <Thread ID:139888889608256>
+Transaction begins. @Ln,Col: 110,8 Scope: manual<>; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE14set_thread_numEm 2; <Thread ID:139888889608256>
+Load: 0x7f38403c05e0 Size: 8 ID: 5666 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0608 Size: 8 ID: 6122 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0610 Size: 8 ID: 6127 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0850 Size: 8 ID: 6163 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0858 Size: 8 ID: 6170 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0608 Size: 8 ID: 6392 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0610 Size: 8 ID: 6397 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0850 Size: 8 ID: 6431 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0858 Size: 8 ID: 6438 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 6660 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 6665 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08d0 Size: 8 ID: 6699 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08d8 Size: 8 ID: 6706 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c05e0 Size: 8 ID: 7036 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0608 Size: 8 ID: 6122 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0610 Size: 8 ID: 6127 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0860 Size: 8 ID: 6163 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0868 Size: 8 ID: 6170 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0608 Size: 8 ID: 6392 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0610 Size: 8 ID: 6397 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0860 Size: 8 ID: 6431 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0868 Size: 8 ID: 6438 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 6660 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 6665 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e0 Size: 8 ID: 6699 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e8 Size: 8 ID: 6706 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 6747 @Ln,Col: 288,17 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 6752 @Ln,Col: 293,20 Scope: get; <Thread ID:139888889608256>
+Load: 0x7f38403c08e0 Size: 8 ID: 6787 @Ln,Col: 185,63 Scope: persistent_ptr_base; <Thread ID:139888889608256>
+Load: 0x7f38403c08e8 Size: 8 ID: 6790 @Ln,Col: 185,63 Scope: persistent_ptr_base; <Thread ID:139888889608256>
+Load: 0x7f38403c0d78 Size: 1 ID: 6889 @Ln,Col: 119,15 Scope: ~polymorphic_string; <Thread ID:139888889608256>
+Load: 0x7f38403c0d80 Size: 8 ID: 6897 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0d50 Size: 1 ID: 6936 @Ln,Col: 119,15 Scope: ~polymorphic_string; <Thread ID:139888889608256>
+Load: 0x7f38403c0d58 Size: 8 ID: 6944 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05e0 Size: 8 ID: 7036 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c05f8 Size: 8 ID: 5686 @Ln,Col: 185,63 Scope: persistent_ptr_base; <Thread ID:139888889608256>
+Load: 0x7f38403c0600 Size: 8 ID: 5689 @Ln,Col: 185,63 Scope: persistent_ptr_base; <Thread ID:139888889608256>
+Load: 0x7f38403c0608 Size: 8 ID: 5830 @Ln,Col: 185,63 Scope: persistent_ptr_base; <Thread ID:139888889608256>
+Load: 0x7f38403c0610 Size: 8 ID: 5833 @Ln,Col: 185,63 Scope: persistent_ptr_base; <Thread ID:139888889608256>
+Load: 0x7f38403c0618 Size: 8 ID: 5974 @Ln,Col: 185,63 Scope: persistent_ptr_base; <Thread ID:139888889608256>
+Load: 0x7f38403c0620 Size: 8 ID: 5977 @Ln,Col: 185,63 Scope: persistent_ptr_base; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+FUNC_BEGIN_1: _ZN4pmem6detail21conditional_add_to_txINS_3obj1pImEEEEvPKT_m 1; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Store: 0x7f38403c05e0 Size: 8 ID: 7053 @Ln,Col: 195,11 Scope: swap<unsigned long>; <Thread ID:139888889608256>
+Store: 0x7f38403c05f8 Size: 8 ID: 7390 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c0600 Size: 8 ID: 7392 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 7390 DestID: 7392; <Thread ID:139888889608256>
+Load: 0x7f38403c05e0 Size: 8 ID: 7394 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Store: 0x7f38403c0608 Size: 8 ID: 7729 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c0610 Size: 8 ID: 7731 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 7729 DestID: 7731; <Thread ID:139888889608256>
+Load: 0x7f38403c05e0 Size: 8 ID: 7733 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Store: 0x7f38403c0618 Size: 8 ID: 8068 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+Store: 0x7f38403c0620 Size: 8 ID: 8070 @Ln,Col: 206,13 Scope: operator=; <Thread ID:139888889608256>
+DEP: SrcID: 8068 DestID: 8070; <Thread ID:139888889608256>
+FUNC_END: _ZN4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE14set_thread_numEm 2; <Thread ID:139888889608256>
+Transaction Commits. @Ln,Col: 355,3 Scope: commit; <Thread ID:139888889608256>
+Load: 0x7f38403c05f0 Size: 1 ID: 19315 @Ln,Col: 419,9 Scope: load; <Thread ID:139888858281728>
+Load: 0x7f38403c05d0 Size: 8 ID: 18207 @Ln,Col: 1439,20 Scope: resize; <Thread ID:139888858281728>
+DEP: SrcID: 18187 DestID: 18207; <Thread ID:139888858281728>
+DEP: SrcID: 19315 DestID: 18207; <Thread ID:139888858281728>
+FUNC_BEGIN_1: _ZNK4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE8capacityEv 2; <Thread ID:139888889608256>
+Load: 0x7f38403c05d0 Size: 8 ID: 8074 @Ln,Col: 412,19 Scope: capacity; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8078 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0658 Size: 8 ID: 8123 @Ln,Col: 0,0 Scope: capacity; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 8126 @Ln,Col: 425,31 Scope: capacity; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8129 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0760 Size: 8 ID: 8157 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c0768 Size: 8 ID: 8123 @Ln,Col: 0,0 Scope: capacity; <Thread ID:139888889608256>
+Load: 0x7f38403c0650 Size: 8 ID: 8126 @Ln,Col: 425,31 Scope: capacity; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 8129 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+Load: 0x7f38403c06e0 Size: 8 ID: 8157 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888889608256>
+FUNC_END: _ZNK4pmem3obj12experimental11clevel_hashIN12_GLOBAL__N_118polymorphic_stringES4_NS3_13string_hasherESt8equal_toIS4_ELm12EE8capacityEv 2; <Thread ID:139888889608256>
+Load: 0x7f38403c0630 Size: 8 ID: 18220 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0658 Size: 8 ID: 18266 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0650 Size: 8 ID: 18270 @Ln,Col: 1447,37 Scope: resize; <Thread ID:139888858281728>
+Load: 0x7f38403c0630 Size: 8 ID: 18282 @Ln,Col: 128,16 Scope: operator unsigned long; <Thread ID:139888858281728>
+Load: 0x7f38403c0768 Size: 8 ID: 18312 @Ln,Col: 0,0 Scope: resize; <Thread ID:139888858281728>

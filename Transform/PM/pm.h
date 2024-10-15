@@ -17,8 +17,8 @@ extern "C" {
   void  __pmc_free   (void *block);
 
 //Tooba's addition:
-  void __fence(int line, int col);
-  void __flush(void* ptr, long int size, int line, int col);
+  void __fence(int line, int col, const char* scope);
+  void __flush(void* ptr, long int size, int line, int col, const char* scope);
 
   //void __pmc_memAdd(long long int k, long long int size) ;
   //void __pmc_memRemove(long long int k);

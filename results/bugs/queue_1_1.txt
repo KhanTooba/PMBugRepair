@@ -1,10 +1,10 @@
-pt_enqueue_21 < 9999
-pt_enqueue_21 < pt_dequeue_45
-pt_enqueue_22 < 9999
-pt_enqueue_22 < pt_dequeue_46
-pt_enqueue_29 < 9999
-pt_enqueue_29 < pt_dequeue_46
-pt_dequeue_45 < 9999
-pt_dequeue_45 < pt_dequeue_45
-pt_dequeue_46 < 9999
-pt_dequeue_46 < pt_dequeue_46
+DURA:[ pt_enqueue_21]
+MPB: [pt_enqueue_21; pt_dequeue_45]
+DURA:[ pt_enqueue_22]
+MPB: [pt_enqueue_22; pt_dequeue_46]
+DURA:[ pt_enqueue_29]
+MPB: [pt_enqueue_29; pt_dequeue_46]
+DURA:[ pt_dequeue_45]
+MPB: [pt_dequeue_45; pt_dequeue_45]
+DURA:[ pt_dequeue_46]
+MPB: [pt_dequeue_46; pt_dequeue_46]

@@ -1,40 +1,40 @@
-pt_insert_key_507 < 9999
-pt_insert_key_508 < 9999
-pt_insert_key_510 < 9999
-pt_insert_key_510 < pt_insert_key_526
-pt_insert_key_564 < 9999
-pt_insert_key_564 < pt_count_188
-pt_count_188 < 9999
-pt_count_188 < pt_count_188
-pt_count_190 < 9999
-pt_count_190 < pt_insert_key_526
-pt_insert_key_517 < 9999
-pt_insert_key_517 < pt_insert_key_526
-pt_insert_key_525 < 9999
-pt_insert_key_526 < 9999
-pt_insert_key_526 < pt_insert_key_544
-pt_insert_key_527 < 9999
-pt_insert_key_527 < pt_insert_key_525
-pt_insert_key_555 < 9999
-pt_insert_key_556 < 9999
-pt_insert_key_557 < 9999
-pt_insert_key_525 < pt_insert_key_525
-pt_insert_key_544 < 9999
-pt_insert_key_544 < pt_insert_key_526
-pt_insert_key_545 < 9999
-pt_insert_key_546 < 9999
-pt_insert_key_546 < pt_count_190
-pt_insert_key_545 < pt_insert_key_525
-pt_linear_search_772 < 9999
-pt_linear_search_772 < pt_linear_search_772
-pt_linear_search_781 < 9999
-pt_linear_search_781 < pt_linear_search_781
-pt_linear_search_782 < 9999
-pt_linear_search_782 < pt_linear_search_782
-pt_linear_search_783 < 9999
-pt_linear_search_783 < pt_count_190
-pt_linear_search_784 < 9999
-pt_linear_search_784 < pt_linear_search_782
-pt_linear_search_773 < 9999
-pt_linear_search_774 < 9999
-pt_linear_search_774 < pt_linear_search_772
+DURA:[ pt_insert_key_507]
+DURA:[ pt_insert_key_508]
+DURA:[ pt_insert_key_510]
+MPB: [pt_insert_key_510; pt_insert_key_526]
+DURA:[ pt_insert_key_564]
+MPB: [pt_insert_key_564; pt_count_188]
+DURA:[ pt_count_188]
+MPB: [pt_count_188; pt_count_188]
+DURA:[ pt_count_190]
+MPB: [pt_count_190; pt_insert_key_526]
+DURA:[ pt_insert_key_517]
+MPB: [pt_insert_key_517; pt_insert_key_526]
+DURA:[ pt_insert_key_525]
+DURA:[ pt_insert_key_526]
+MPB: [pt_insert_key_526; pt_insert_key_544]
+DURA:[ pt_insert_key_527]
+MPB: [pt_insert_key_527; pt_insert_key_525]
+DURA:[ pt_insert_key_555]
+DURA:[ pt_insert_key_556]
+DURA:[ pt_insert_key_557]
+MPB: [pt_insert_key_525; pt_insert_key_525]
+DURA:[ pt_insert_key_544]
+MPB: [pt_insert_key_544; pt_insert_key_526]
+DURA:[ pt_insert_key_545]
+DURA:[ pt_insert_key_546]
+MPB: [pt_insert_key_546; pt_count_190]
+MPB: [pt_insert_key_545; pt_insert_key_525]
+DURA:[ pt_linear_search_772]
+MPB: [pt_linear_search_772; pt_linear_search_772]
+DURA:[ pt_linear_search_781]
+MPB: [pt_linear_search_781; pt_linear_search_783]
+DURA:[ pt_linear_search_782]
+MPB: [pt_linear_search_782; pt_insert_key_525]
+DURA:[ pt_linear_search_783]
+DURA:[ pt_linear_search_784]
+MPB: [pt_linear_search_783; pt_linear_search_783]
+MPB: [pt_linear_search_784; pt_insert_key_525]
+DURA:[ pt_linear_search_773]
+DURA:[ pt_linear_search_774]
+MPB: [pt_linear_search_774; pt_linear_search_772]

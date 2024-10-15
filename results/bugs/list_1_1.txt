@@ -1,21 +1,23 @@
-pt_insert_107 < 9999
-pt_insert_107 < pt_search_151
-pt_insert_108 < 9999
-pt_insert_108 < pt_insert_after_277
-pt_search_151 < 9999
-pt_search_155 < 9999
-pt_insert_after_274 < 9999
-pt_insert_after_282 < 9999
-pt_insert_after_276 < 9999
-pt_insert_after_277 < 9999
-pt_insert_after_278 < 9999
-pt_reverse_236 < 9999
-pt_reverse_236 < pt_reverse_236
-pt_reverse_237 < 9999
-pt_reverse_237 < pt_reverse_236
-pt_display_220 < 9999
-pt_display_221 < 9999
-pt_display_221 < pt_display_221
-pt_display_220 < pt_display_220
-pt_clear_191 < 9999
-pt_clear_191 < pt_clear_191
+DURA:[ pt_insert_107]
+MPB: [pt_insert_107; pt_search_151]
+DURA:[ pt_insert_108]
+DURA:[ pt_search_151]
+DURA:[ pt_search_155]
+MPB: [pt_insert_108; pt_insert_after_282]
+DURA:[ pt_insert_after_274]
+DURA:[ pt_insert_after_282]
+MPB: [pt_insert_after_282; pt_insert_after_282]
+DURA:[ pt_insert_after_276]
+DURA:[ pt_insert_after_277]
+MPB: [pt_insert_after_277; pt_reverse_236]
+DURA:[ pt_insert_after_278]
+DURA:[ pt_reverse_236]
+DURA:[ pt_reverse_237]
+MPB: [pt_reverse_236; pt_reverse_236]
+MPB: [pt_reverse_237; pt_reverse_236]
+MPB: [pt_insert_after_274; pt_insert_after_274]
+DURA:[ pt_display_220]
+DURA:[ pt_display_221]
+MPB: [pt_display_221; pt_display_221]
+DURA:[ pt_clear_191]
+MPB: [pt_clear_191; pt_clear_191]

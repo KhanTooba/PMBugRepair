@@ -1,25 +1,25 @@
-pt_createQueue_84 < 9999
-pt_createQueue_84 < pt_isEmpty_91
-pt_enqueue_101 < 9999
-pt_enqueue_101 < pt_enqueue_101
-pt_enqueue_102 < 9999
-pt_enqueue_102 < pt_enqueue_101
-pt_enqueue_104 < 9999
-pt_enqueue_104 < pt_enqueue_101
-pt_enqueue_105 < 9999
-pt_enqueue_105 < pt_enqueue_101
-pt_isEmpty_91 < 9999
-pt_isEmpty_91 < pt_dequeue_122
-pt_dequeue_122 < 9999
-pt_dequeue_122 < pt_dequeue_124
-pt_dequeue_123 < 9999
-pt_dequeue_123 < pt_front_147
-pt_dequeue_124 < 9999
-pt_dequeue_124 < pt_dequeue_126
-pt_dequeue_126 < 9999
-pt_dequeue_126 < pt_isEmpty_91
-pt_front_147 < 9999
-pt_front_147 < pt_isEmpty_91
-pt_printQueue_163 < 9999
-pt_printQueue_166 < 9999
-pt_printQueue_167 < 9999
+DURA:[ pt_createQueue_84]
+MPB: [pt_createQueue_84; pt_isEmpty_91]
+DURA:[ pt_enqueue_101]
+MPB: [pt_enqueue_101; pt_enqueue_101]
+DURA:[ pt_enqueue_102]
+MPB: [pt_enqueue_102; pt_enqueue_101]
+DURA:[ pt_enqueue_104]
+MPB: [pt_enqueue_104; pt_enqueue_101]
+DURA:[ pt_enqueue_105]
+MPB: [pt_enqueue_105; pt_enqueue_101]
+DURA:[ pt_isEmpty_91]
+MPB: [pt_isEmpty_91; pt_dequeue_122]
+DURA:[ pt_dequeue_122]
+MPB: [pt_dequeue_122; pt_dequeue_124]
+DURA:[ pt_dequeue_123]
+MPB: [pt_dequeue_123; pt_front_147]
+DURA:[ pt_dequeue_124]
+MPB: [pt_dequeue_124; pt_dequeue_126]
+DURA:[ pt_dequeue_126]
+MPB: [pt_dequeue_126; pt_isEmpty_91]
+DURA:[ pt_front_147]
+MPB: [pt_front_147; pt_isEmpty_91]
+DURA:[ pt_printQueue_163]
+DURA:[ pt_printQueue_166]
+DURA:[ pt_printQueue_167]
