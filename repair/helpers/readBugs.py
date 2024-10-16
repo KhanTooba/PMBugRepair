@@ -52,9 +52,9 @@ def readBugs(name, trace, inf):
                 else:
                     second = index[str(line).split(";")[1].replace("pt_", "").replace("]", "").strip()]
                 
-                # print(first, second)
-                bugs.append(Int("pt_"+str(first))<Int("pt_"+str(second)))
-                totalMPB += 1
+                if first!=second and int(first)<int(second):
+                    bugs.append(Int("pt_"+str(first))<Int("pt_"+str(second)))
+                    totalMPB += 1
             except:
                 totalMPB += 1
                 failedMPB += 1
@@ -79,6 +79,7 @@ def readMPAs(name, trace):
     # print(index)
     bugs = []
     writes, reads = [], []
+    all_bugs = []
     lines = []
     for line in open(name):
         lines.append(line.replace("\n", "").strip())
@@ -93,11 +94,10 @@ def readMPAs(name, trace):
         second = data[1].replace("pc_", "").strip()
         found = -1
         for t in trace:
-            if t[-1]==first:
+            if t[-1]==first and t[1]==101:
                 for j in trace:
-                    if found==1:
-                        break
-                    if j[-1]==second and j[-2]!=t[-2]:
+                    if j[-1]==second and j[1]==101 and j[-2]!=t[-2] and [t[-1], j[-1]] not in all_bugs and [j[-1], t[-1]] not in all_bugs:
+                        all_bugs.append([t[-1], j[-1]])
                         bugs.append(And(Int("pc_"+str(t[0]))<Int("pc_"+str(j[0])), 
                             Int("pt_"+str(t[0]))>Int("pc_"+str(j[0]))))
                         bugInfos[str(t[0])+"-"+str(j[0])] = [t, j]

@@ -1,235 +1,160 @@
 Local variables initialized.
-[2, 101, '0x7ffe679d1580', '-1', '0', '_0']
-Number of bugs to be repaired:  381
-And(pc_52 < pc_143, pt_52 > pc_143)
-And(pc_52 < pc_156, pt_52 > pc_156)
-And(pc_52 < pc_158, pt_52 > pc_158)
-And(pc_53 < pc_147, pt_53 > pc_147)
-And(pc_53 < pc_111, pt_53 > pc_111)
-And(pc_53 < pc_105, pt_53 > pc_105)
-And(pc_54 < pc_97, pt_54 > pc_97)
-And(pc_56 < pc_153, pt_56 > pc_153)
-And(pc_56 < pc_154, pt_56 > pc_154)
-And(pc_56 < pc_159, pt_56 > pc_159)
-And(pc_56 < pc_160, pt_56 > pc_160)
-And(pc_56 < pc_165, pt_56 > pc_165)
-And(pc_56 < pc_167, pt_56 > pc_167)
-And(pc_56 < pc_92, pt_56 > pc_92)
-And(pc_56 < pc_93, pt_56 > pc_93)
-And(pc_56 < pc_94, pt_56 > pc_94)
-And(pc_56 < pc_98, pt_56 > pc_98)
-And(pc_56 < pc_99, pt_56 > pc_99)
-And(pc_56 < pc_104, pt_56 > pc_104)
-And(pc_56 < pc_74, pt_56 > pc_74)
-And(pc_57 < pc_145, pt_57 > pc_145)
-And(pc_57 < pc_150, pt_57 > pc_150)
-And(pc_57 < pc_152, pt_57 > pc_152)
-And(pc_57 < pc_160, pt_57 > pc_160)
-And(pc_57 < pc_99, pt_57 > pc_99)
-And(pc_57 < pc_60, pt_57 > pc_60)
-And(pc_57 < pc_63, pt_57 > pc_63)
-And(pc_57 < pc_65, pt_57 > pc_65)
-And(pc_57 < pc_66, pt_57 > pc_66)
-And(pc_57 < pc_68, pt_57 > pc_68)
-And(pc_57 < pc_72, pt_57 > pc_72)
-And(pc_57 < pc_73, pt_57 > pc_73)
-And(pc_57 < pc_75, pt_57 > pc_75)
-And(pc_57 < pc_76, pt_57 > pc_76)
-And(pc_57 < pc_255, pt_57 > pc_255)
-And(pc_57 < pc_80, pt_57 > pc_80)
-And(pc_57 < pc_82, pt_57 > pc_82)
-And(pc_57 < pc_83, pt_57 > pc_83)
-And(pc_57 < pc_86, pt_57 > pc_86)
-And(pc_57 < pc_90, pt_57 > pc_90)
-And(pc_57 < pc_107, pt_57 > pc_107)
-And(pc_57 < pc_109, pt_57 > pc_109)
-And(pc_58 < pc_145, pt_58 > pc_145)
-And(pc_58 < pc_160, pt_58 > pc_160)
-And(pc_58 < pc_99, pt_58 > pc_99)
-And(pc_58 < pc_68, pt_58 > pc_68)
-And(pc_58 < pc_76, pt_58 > pc_76)
-And(pc_58 < pc_81, pt_58 > pc_81)
-And(pc_58 < pc_86, pt_58 > pc_86)
-And(pc_59 < pc_144, pt_59 > pc_144)
-And(pc_59 < pc_160, pt_59 > pc_160)
-And(pc_59 < pc_99, pt_59 > pc_99)
-And(pc_59 < pc_71, pt_59 > pc_71)
-And(pc_59 < pc_76, pt_59 > pc_76)
-And(pc_59 < pc_86, pt_59 > pc_86)
-And(pc_60 < pc_145, pt_60 > pc_145)
-And(pc_60 < pc_150, pt_60 > pc_150)
-And(pc_60 < pc_152, pt_60 > pc_152)
-And(pc_60 < pc_160, pt_60 > pc_160)
-And(pc_60 < pc_99, pt_60 > pc_99)
-And(pc_60 < pc_63, pt_60 > pc_63)
-And(pc_60 < pc_65, pt_60 > pc_65)
-And(pc_60 < pc_66, pt_60 > pc_66)
-And(pc_60 < pc_68, pt_60 > pc_68)
-And(pc_60 < pc_72, pt_60 > pc_72)
-And(pc_60 < pc_73, pt_60 > pc_73)
-And(pc_60 < pc_75, pt_60 > pc_75)
-And(pc_60 < pc_76, pt_60 > pc_76)
-And(pc_60 < pc_255, pt_60 > pc_255)
-And(pc_60 < pc_80, pt_60 > pc_80)
-And(pc_60 < pc_82, pt_60 > pc_82)
-And(pc_60 < pc_83, pt_60 > pc_83)
-And(pc_60 < pc_86, pt_60 > pc_86)
-And(pc_60 < pc_90, pt_60 > pc_90)
-And(pc_60 < pc_107, pt_60 > pc_107)
-And(pc_60 < pc_109, pt_60 > pc_109)
-And(pc_61 < pc_149, pt_61 > pc_149)
-And(pc_62 < pc_160, pt_62 > pc_160)
-And(pc_62 < pc_99, pt_62 > pc_99)
-And(pc_62 < pc_68, pt_62 > pc_68)
-And(pc_62 < pc_76, pt_62 > pc_76)
-And(pc_62 < pc_86, pt_62 > pc_86)
-And(pc_63 < pc_145, pt_63 > pc_145)
-And(pc_63 < pc_150, pt_63 > pc_150)
-And(pc_63 < pc_152, pt_63 > pc_152)
-And(pc_63 < pc_160, pt_63 > pc_160)
-And(pc_63 < pc_99, pt_63 > pc_99)
-And(pc_63 < pc_65, pt_63 > pc_65)
-And(pc_63 < pc_66, pt_63 > pc_66)
-And(pc_63 < pc_68, pt_63 > pc_68)
-And(pc_63 < pc_72, pt_63 > pc_72)
-And(pc_63 < pc_73, pt_63 > pc_73)
-And(pc_63 < pc_75, pt_63 > pc_75)
-And(pc_63 < pc_76, pt_63 > pc_76)
-And(pc_63 < pc_255, pt_63 > pc_255)
-And(pc_63 < pc_80, pt_63 > pc_80)
-And(pc_63 < pc_82, pt_63 > pc_82)
-And(pc_63 < pc_83, pt_63 > pc_83)
-And(pc_63 < pc_86, pt_63 > pc_86)
-And(pc_63 < pc_90, pt_63 > pc_90)
-And(pc_63 < pc_107, pt_63 > pc_107)
-And(pc_63 < pc_109, pt_63 > pc_109)
-And(pc_65 < pc_145, pt_65 > pc_145)
-And(pc_65 < pc_150, pt_65 > pc_150)
-And(pc_65 < pc_152, pt_65 > pc_152)
-And(pc_65 < pc_160, pt_65 > pc_160)
-And(pc_65 < pc_99, pt_65 > pc_99)
-And(pc_65 < pc_66, pt_65 > pc_66)
-And(pc_65 < pc_68, pt_65 > pc_68)
-And(pc_65 < pc_72, pt_65 > pc_72)
-And(pc_65 < pc_73, pt_65 > pc_73)
-And(pc_65 < pc_75, pt_65 > pc_75)
-And(pc_65 < pc_76, pt_65 > pc_76)
-And(pc_65 < pc_255, pt_65 > pc_255)
-And(pc_65 < pc_80, pt_65 > pc_80)
-And(pc_65 < pc_82, pt_65 > pc_82)
-And(pc_65 < pc_83, pt_65 > pc_83)
-And(pc_65 < pc_86, pt_65 > pc_86)
-And(pc_65 < pc_90, pt_65 > pc_90)
-And(pc_65 < pc_107, pt_65 > pc_107)
-And(pc_65 < pc_109, pt_65 > pc_109)
-And(pc_66 < pc_145, pt_66 > pc_145)
-And(pc_66 < pc_150, pt_66 > pc_150)
-And(pc_66 < pc_152, pt_66 > pc_152)
-And(pc_66 < pc_160, pt_66 > pc_160)
-And(pc_66 < pc_99, pt_66 > pc_99)
-And(pc_66 < pc_68, pt_66 > pc_68)
-And(pc_66 < pc_72, pt_66 > pc_72)
-And(pc_66 < pc_73, pt_66 > pc_73)
-And(pc_66 < pc_75, pt_66 > pc_75)
-And(pc_66 < pc_76, pt_66 > pc_76)
-And(pc_66 < pc_255, pt_66 > pc_255)
-And(pc_66 < pc_80, pt_66 > pc_80)
-And(pc_66 < pc_82, pt_66 > pc_82)
-And(pc_66 < pc_83, pt_66 > pc_83)
-And(pc_66 < pc_86, pt_66 > pc_86)
-And(pc_66 < pc_90, pt_66 > pc_90)
-And(pc_66 < pc_107, pt_66 > pc_107)
-And(pc_66 < pc_109, pt_66 > pc_109)
-And(pc_68 < pc_145, pt_68 > pc_145)
-And(pc_68 < pc_160, pt_68 > pc_160)
-And(pc_68 < pc_99, pt_68 > pc_99)
-And(pc_68 < pc_76, pt_68 > pc_76)
-And(pc_68 < pc_81, pt_68 > pc_81)
-And(pc_68 < pc_86, pt_68 > pc_86)
-And(pc_68 < pc_150, pt_68 > pc_150)
-And(pc_68 < pc_152, pt_68 > pc_152)
-And(pc_68 < pc_72, pt_68 > pc_72)
-And(pc_68 < pc_73, pt_68 > pc_73)
-And(pc_68 < pc_75, pt_68 > pc_75)
-And(pc_68 < pc_255, pt_68 > pc_255)
-And(pc_68 < pc_80, pt_68 > pc_80)
-And(pc_68 < pc_82, pt_68 > pc_82)
-And(pc_68 < pc_83, pt_68 > pc_83)
-And(pc_68 < pc_90, pt_68 > pc_90)
-And(pc_68 < pc_107, pt_68 > pc_107)
-And(pc_68 < pc_109, pt_68 > pc_109)
-And(pc_71 < pc_144, pt_71 > pc_144)
-And(pc_71 < pc_160, pt_71 > pc_160)
-And(pc_71 < pc_99, pt_71 > pc_99)
-And(pc_71 < pc_76, pt_71 > pc_76)
-And(pc_71 < pc_86, pt_71 > pc_86)
-And(pc_72 < pc_145, pt_72 > pc_145)
-And(pc_72 < pc_150, pt_72 > pc_150)
-And(pc_72 < pc_152, pt_72 > pc_152)
-And(pc_72 < pc_160, pt_72 > pc_160)
-And(pc_72 < pc_99, pt_72 > pc_99)
-And(pc_72 < pc_73, pt_72 > pc_73)
-And(pc_72 < pc_75, pt_72 > pc_75)
-And(pc_72 < pc_76, pt_72 > pc_76)
-And(pc_72 < pc_255, pt_72 > pc_255)
-And(pc_72 < pc_80, pt_72 > pc_80)
-And(pc_72 < pc_82, pt_72 > pc_82)
-And(pc_72 < pc_83, pt_72 > pc_83)
-And(pc_72 < pc_86, pt_72 > pc_86)
-And(pc_72 < pc_90, pt_72 > pc_90)
-And(pc_72 < pc_107, pt_72 > pc_107)
-And(pc_72 < pc_109, pt_72 > pc_109)
-And(pc_73 < pc_145, pt_73 > pc_145)
-And(pc_73 < pc_150, pt_73 > pc_150)
-And(pc_73 < pc_152, pt_73 > pc_152)
-And(pc_73 < pc_160, pt_73 > pc_160)
-And(pc_73 < pc_99, pt_73 > pc_99)
-And(pc_73 < pc_75, pt_73 > pc_75)
-And(pc_73 < pc_76, pt_73 > pc_76)
-And(pc_73 < pc_255, pt_73 > pc_255)
-And(pc_73 < pc_80, pt_73 > pc_80)
-And(pc_73 < pc_82, pt_73 > pc_82)
-And(pc_73 < pc_83, pt_73 > pc_83)
-And(pc_73 < pc_86, pt_73 > pc_86)
-And(pc_73 < pc_90, pt_73 > pc_90)
-And(pc_73 < pc_107, pt_73 > pc_107)
-And(pc_73 < pc_109, pt_73 > pc_109)
-And(pc_74 < pc_153, pt_74 > pc_153)
-And(pc_74 < pc_154, pt_74 > pc_154)
-And(pc_74 < pc_159, pt_74 > pc_159)
-And(pc_74 < pc_160, pt_74 > pc_160)
-And(pc_74 < pc_165, pt_74 > pc_165)
-And(pc_74 < pc_167, pt_74 > pc_167)
-And(pc_74 < pc_92, pt_74 > pc_92)
-And(pc_74 < pc_93, pt_74 > pc_93)
-And(pc_74 < pc_94, pt_74 > pc_94)
-And(pc_74 < pc_98, pt_74 > pc_98)
-And(pc_74 < pc_99, pt_74 > pc_99)
-And(pc_74 < pc_104, pt_74 > pc_104)
-And(pc_75 < pc_145, pt_75 > pc_145)
-And(pc_75 < pc_150, pt_75 > pc_150)
-And(pc_75 < pc_152, pt_75 > pc_152)
-And(pc_75 < pc_160, pt_75 > pc_160)
-And(pc_75 < pc_99, pt_75 > pc_99)
-And(pc_75 < pc_76, pt_75 > pc_76)
-And(pc_75 < pc_255, pt_75 > pc_255)
-And(pc_75 < pc_80, pt_75 > pc_80)
-And(pc_75 < pc_82, pt_75 > pc_82)
-And(pc_75 < pc_83, pt_75 > pc_83)
-And(pc_75 < pc_86, pt_75 > pc_86)
-And(pc_75 < pc_90, pt_75 > pc_90)
-And(pc_75 < pc_107, pt_75 > pc_107)
-And(pc_75 < pc_109, pt_75 > pc_109)
-And(pc_76 < pc_145, pt_76 > pc_145)
-And(pc_76 < pc_160, pt_76 > pc_160)
-And(pc_76 < pc_99, pt_76 > pc_99)
-And(pc_76 < pc_81, pt_76 > pc_81)
-And(pc_76 < pc_86, pt_76 > pc_86)
-And(pc_76 < pc_150, pt_76 > pc_150)
-And(pc_76 < pc_152, pt_76 > pc_152)
-And(pc_76 < pc_255, pt_76 > pc_255)
-And(pc_76 < pc_80, pt_76 > pc_80)
-And(pc_76 < pc_82, pt_76 > pc_82)
-And(pc_76 < pc_83, pt_76 > pc_83)
-And(pc_76 < pc_90, pt_76 > pc_90)
-And(pc_76 < pc_107, pt_76 > pc_107)
+Number of bugs to be repaired:  6
+And(pc_54 < pc_33, pt_54 > pc_33)
+And(pc_91 < pc_8, pt_91 > pc_8)
+And(pc_181 < pc_246, pt_181 > pc_246)
+And(pc_431 < pc_226, pt_431 > pc_226)
+And(pc_121 < pc_605, pt_121 > pc_605)
+And(pc_431 < pc_221, pt_431 > pc_221)
+{33, 226, 8, 246, 221, 605} {431, 181, 54, 121, 91}
+Set Size:  6
+6 [And(pc_54 < pc_33, pt_54 > pc_33), And(pc_91 < pc_8, pt_91 > pc_8), And(pc_181 < pc_246, pt_181 > pc_246), And(pc_431 < pc_226, pt_431 > pc_226), And(pc_121 < pc_605, pt_121 > pc_605), And(pc_431 < pc_221, pt_431 > pc_221)]
+
+############################################################################
+Iteration:  1
+Thread IDs:  3
+LENGTH OF THREAD:  1  :  565
+LENGTH OF THREAD:  0  :  507
+LENGTH OF THREAD:  2  :  106
+Ranges: 0 1179
+Values to be assigned in that range: 1178
+Completed building constraints.
+Number of constraints:  3539
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_91 < pc_8, pt_91 > pc_8)
+8 91 -1 -1
+Prinitng stats:  -1 -1 [33, 226, 605, 8, 246, 221] [54, 91, 181, 431, 121]
+Adding very restricted lock for write. 8
+Adding locks for read and taking fence within lock. 91
+Found insertion point for second lock:  89
+Adding fence because another thread started.
+Time taken:  50.55660009384155  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  2
+Thread IDs:  3
+LENGTH OF THREAD:  1  :  567
+LENGTH OF THREAD:  0  :  510
+LENGTH OF THREAD:  2  :  106
+Ranges: 0 1184
+Values to be assigned in that range: 1183
+Completed building constraints.
+Number of constraints:  3567
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_181 < pc_246, pt_181 > pc_246)
+181 246 -1 -1
+Prinitng stats:  -1 -1 [33, 226, 605, 8, 246, 221] [54, 91, 181, 431, 121]
+Adding locks for write. 181
+Found insertion point for first lock:  184 185 [181, 101, '0x7fa634192f38', '0x7fa634192f37', '2', 'do_item_update_624'] ['Lock_2', 105, 'M1', -1, '2', 'do_item_update_624_x']
+Adding fence because new scope started.
+Adding unlock: ['UnLock_2', 106, 'M1', -1, '2', 'do_item_update_624_x']
+Adding very restricted lock for read. 246
+Time taken:  101.02110314369202  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  3
+Thread IDs:  3
+LENGTH OF THREAD:  1  :  567
+LENGTH OF THREAD:  0  :  512
+LENGTH OF THREAD:  2  :  109
+Ranges: 0 1189
+Values to be assigned in that range: 1188
+Completed building constraints.
+Number of constraints:  3612
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_431 < pc_226, pt_431 > pc_226)
+226 431 -1 -1
+Prinitng stats:  -1 -1 [33, 226, 605, 8, 246, 221] [54, 91, 181, 431, 121]
+Adding very restricted lock for write. 226
+Adding locks for read and taking fence within lock. 431
+Found insertion point for second lock:  439
+Adding fence because another thread started.
+Time taken:  146.57472681999207  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  4
+Thread IDs:  3
+LENGTH OF THREAD:  1  :  570
+LENGTH OF THREAD:  0  :  514
+LENGTH OF THREAD:  2  :  109
+Ranges: 0 1194
+Values to be assigned in that range: 1193
+Completed building constraints.
+Number of constraints:  3679
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_121 < pc_605, pt_121 > pc_605)
+121 605 -1 -1
+Prinitng stats:  -1 -1 [33, 226, 605, 8, 246, 221] [54, 91, 181, 431, 121]
+Adding locks for write. 121
+Found insertion point for first lock:  124 125 [121, 101, '0x7fa634192f37', '0x7fa634192f37', '0', 'do_item_get_1097'] ['Lock_6', 105, 'M1', -1, '0', 'do_item_get_1097_x']
+Adding fence because another thread started.
+Adding unlock: ['UnLock_6', 106, 'M1', -1, '0', 'do_item_get_1097_x']
+Adding very restricted lock for read. 605
+Time taken:  157.06140303611755  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  5
+Thread IDs:  3
+LENGTH OF THREAD:  1  :  572
+LENGTH OF THREAD:  0  :  517
+LENGTH OF THREAD:  2  :  109
+Ranges: 0 1199
+Values to be assigned in that range: 1198
+Completed building constraints.
+Number of constraints:  3755
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_54 < pc_33, pt_54 > pc_33)
+33 54 -1 -1
+Prinitng stats:  -1 -1 [33, 226, 605, 8, 246, 221] [54, 91, 181, 431, 121]
+Adding very restricted lock for write. 33
+Adding locks for read and taking fence within lock. 54
+Found insertion point for second lock:  54
+Adding fence because new scope started.
+Time taken:  13.829456806182861  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  6
+Thread IDs:  3
+LENGTH OF THREAD:  1  :  575
+LENGTH OF THREAD:  0  :  519
+LENGTH OF THREAD:  2  :  109
+Ranges: 0 1204
+Values to be assigned in that range: 1203
+Completed building constraints.
+Number of constraints:  3853
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_431 < pc_221, pt_431 > pc_221)
+[431, 101, '0x7fa634192f99', '0x7fa634192f78', '1', '_store_item_copy_data_2808'] 431
+221 431 -1 -1
+Prinitng stats:  -1 449 [33, 226, 605, 8, 246, 221] [54, 91, 181, 431, 121]
+Adding very restricted lock for write. 221
+Time taken:  82.87592911720276  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  7
+Thread IDs:  3
+LENGTH OF THREAD:  1  :  575
+LENGTH OF THREAD:  0  :  521
+LENGTH OF THREAD:  2  :  109
+Ranges: 0 1206
+Values to be assigned in that range: 1205
+Completed building constraints.
+Number of constraints:  3902
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.45656800270080566  seconds.
+
+############################################################################
+
+Total number of iterations:  7

@@ -25,6 +25,13 @@ def getLoc():
     all_Locs = count_lines(["../experiments/P-CLHT/src/clht_lb_res.c",
                             "../experiments/P-CLHT/src/clht_gc.c"])
     listOfFiles['P-CLHT'] = [sum(all_Locs), count_lines(["../results/outputs/P-CLHT_output.txt"])[0]]
+
+    listOfFiles['Clevel_hashing'] = count_lines(["../experiments/ClevelHashing/test/src/clevel_hash_ycsb.cpp",
+                                           "../results/outputs/Clevel_hashing_output.txt"])
+    
+    all_Locs = count_lines(["../experiments/memcached/src/memcached.c",
+                            "../experiments/memcached/src/items.c"])
+    listOfFiles['memcached'] = [sum(all_Locs), count_lines(["../results/outputs/memcached_output.txt"])[0]]
     
     return listOfFiles
 
@@ -47,34 +54,22 @@ def processSubset2(name, subset):
     #         "Repair time in Step 2", "#Calls in step 1", "#Calls in step 2", 
     #         "#Lock", "#sfence()", "#clflushopt()"]
 
-    # f = open("Report.txt", "a")
-    # f.write("###########################################################################\n")
-    # f.write("Adding DURA & MPB Repair Report for "+str(fileName)+": \n")
-    # f.write("Number of DURAS fixed: "+str(totalDURA)+"\n")
-    # f.write("Number of MPBs fixed: "+str(totalMPB)+"\n")
-    # f.write("Number of DURAS failed to fix: "+str(failedDURA)+"\n")
-    # f.write("Number of MPBs failed to fix: "+str(failedMPB)+"\n")
-    # f.write("Total time taken to repair DURA bugs: "+str(timeDURA)+" seconds.\n")
-    # f.write("Total time taken to repair MPB bugs: "+str(timeMPB)+" seconds.\n")
-    # f.write("Number of sfences() added: "+str(num_fence)+"\n")
-    # f.write("Number of clflushopts() added: "+str(num_flush)+"\n")
-    # f.write("Total number of calls to the Z3 solver: "+str(num_solverCalls)+"\n")
-    # f.write("Total time taken: "+str(timeTaken)+" seconds.\n")
-    # f.write("###########################################################################\n\n")
-    # f.close()
     data = []
     dura = str(subset[0]).split(" ")[-1]
-    mpbFail = str(subset[1]).split(" ")[-1]
+    mpb = str(subset[1]).split(" ")[-1]
+    mpbFail = str(subset[3]).split(" ")[-1]
     duraFail = str(subset[2]).split(" ")[-1]
-    t_dura = str(subset[3]).split(" ")[-2]
-    t_mpb = str(subset[4]).split(" ")[-2]
-    num_sfence = float(str(subset[5]).split(" ")[-1]) + float(str(subset[13]).split(" ")[-1])
-    num_flush = str(subset[6]).split(" ")[-1]
-    num_calls_1 = float(str(subset[7]).split(" ")[-1]) 
-    mpa = str(subset[12]).split(" ")[-1]
-    num_locks = str(subset[14]).split(" ")[-1]
-    t_mpa = str(subset[16]).split(" ")[-2]
-    num_calls_2 = float(str(subset[15]).split(" ")[-1])
+    t_dura = str(subset[4]).split(" ")[-2]
+    t_mpb = str(subset[5]).split(" ")[-2]
+    num_sfence = float(str(subset[6]).split(" ")[-1]) + float(str(subset[16]).split(" ")[-1])
+    num_flush = str(subset[7]).split(" ")[-1]
+    num_calls_1 = float(str(subset[8]).split(" ")[-1]) 
+    
+    mpa = str(subset[14]).split(" ")[-1]
+    mpaFailed = str(subset[15]).split(" ")[-1]
+    num_locks = str(subset[17]).split(" ")[-1]
+    t_mpa = str(subset[19]).split(" ")[-2]
+    num_calls_2 = float(str(subset[18]).split(" ")[-1])
 
     data = [name, int(dura), int(mpb), int(mpa), float(f"{float(t_dura)+float(t_mpb):.4f}"), 
             float(f"{float(t_mpa):.4f}"), int(num_calls_1), int(num_calls_2), int(num_locks), 
@@ -103,8 +98,10 @@ def processFile(file, locDetails):
     benchmarks[name] = subset
 
     for key in benchmarks.keys():
-        dataToSend1.append(processSubset1(key, locDetails))
-        dataToSend2.append(processSubset2(key, benchmarks[key]))
+        print(key, len(benchmarks[key]))
+        if len(benchmarks[key])>14:
+            dataToSend1.append(processSubset1(key, locDetails))
+            dataToSend2.append(processSubset2(key, benchmarks[key]))
 
     return dataToSend1, dataToSend2
 

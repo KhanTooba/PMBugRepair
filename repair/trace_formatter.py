@@ -175,11 +175,11 @@ def removeDuplicates(trace):
 if __name__ == "__main__":
     inputFileName = sys.argv[1]
     outputFileName = sys.argv[2]
-    fileName = inputFileName.split("/")[-1].split("_")[0]
-    print(fileName)
+    fileName = inputFileName.split("/")[-1].split("_")[:-1]
+    name = '_'.join(str(x) for x in fileName).strip()
     trace, dependencies, loads = fileReader(inputFileName)
     print(len(trace))
-    trace = getRelevantTrace(trace, fileName)
+    trace = getRelevantTrace(trace, name)
     print(len(trace))
     print("Read.", len(trace))
     threads = getThreads(trace)

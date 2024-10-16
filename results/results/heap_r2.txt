@@ -1,824 +1,1575 @@
 Local variables initialized.
-[2, 101, '0x1b170a0', '-1', '0', 'createHeap_93']
-Number of bugs to be repaired:  168
-And(pc_2 < pc_16, pt_2 > pc_16)
-And(pc_2 < pc_26, pt_2 > pc_26)
-And(pc_2 < pc_31, pt_2 > pc_31)
-And(pc_2 < pc_34, pt_2 > pc_34)
-And(pc_2 < pc_39, pt_2 > pc_39)
-And(pc_2 < pc_298, pt_2 > pc_298)
-And(pc_2 < pc_301, pt_2 > pc_301)
-And(pc_2 < pc_310, pt_2 > pc_310)
-And(pc_2 < pc_316, pt_2 > pc_316)
-And(pc_2 < pc_322, pt_2 > pc_322)
-And(pc_2 < pc_325, pt_2 > pc_325)
-And(pc_2 < pc_330, pt_2 > pc_330)
-And(pc_2 < pc_381, pt_2 > pc_381)
-And(pc_4 < pc_8, pt_4 > pc_8)
-And(pc_6 < pc_8, pt_6 > pc_8)
-And(pc_6 < pc_11, pt_6 > pc_11)
-And(pc_6 < pc_14, pt_6 > pc_14)
-And(pc_6 < pc_290, pt_6 > pc_290)
-And(pc_6 < pc_294, pt_6 > pc_294)
-And(pc_6 < pc_296, pt_6 > pc_296)
-And(pc_6 < pc_301, pt_6 > pc_301)
-And(pc_6 < pc_307, pt_6 > pc_307)
-And(pc_6 < pc_310, pt_6 > pc_310)
-And(pc_6 < pc_316, pt_6 > pc_316)
-And(pc_6 < pc_379, pt_6 > pc_379)
-And(pc_8 < pc_11, pt_8 > pc_11)
-And(pc_8 < pc_14, pt_8 > pc_14)
-And(pc_8 < pc_290, pt_8 > pc_290)
-And(pc_8 < pc_294, pt_8 > pc_294)
-And(pc_8 < pc_296, pt_8 > pc_296)
-And(pc_8 < pc_301, pt_8 > pc_301)
-And(pc_8 < pc_307, pt_8 > pc_307)
-And(pc_8 < pc_310, pt_8 > pc_310)
-And(pc_8 < pc_316, pt_8 > pc_316)
-And(pc_8 < pc_379, pt_8 > pc_379)
-And(pc_11 < pc_14, pt_11 > pc_14)
-And(pc_11 < pc_290, pt_11 > pc_290)
-And(pc_11 < pc_294, pt_11 > pc_294)
-And(pc_11 < pc_296, pt_11 > pc_296)
-And(pc_11 < pc_301, pt_11 > pc_301)
-And(pc_11 < pc_307, pt_11 > pc_307)
-And(pc_11 < pc_310, pt_11 > pc_310)
-And(pc_11 < pc_316, pt_11 > pc_316)
-And(pc_11 < pc_379, pt_11 > pc_379)
-And(pc_14 < pc_290, pt_14 > pc_290)
-And(pc_14 < pc_294, pt_14 > pc_294)
-And(pc_14 < pc_296, pt_14 > pc_296)
-And(pc_14 < pc_301, pt_14 > pc_301)
-And(pc_14 < pc_307, pt_14 > pc_307)
-And(pc_14 < pc_310, pt_14 > pc_310)
-And(pc_14 < pc_316, pt_14 > pc_316)
-And(pc_14 < pc_379, pt_14 > pc_379)
-And(pc_16 < pc_26, pt_16 > pc_26)
-And(pc_16 < pc_31, pt_16 > pc_31)
-And(pc_16 < pc_34, pt_16 > pc_34)
-And(pc_16 < pc_39, pt_16 > pc_39)
-And(pc_16 < pc_298, pt_16 > pc_298)
-And(pc_16 < pc_301, pt_16 > pc_301)
-And(pc_16 < pc_310, pt_16 > pc_310)
-And(pc_16 < pc_316, pt_16 > pc_316)
-And(pc_16 < pc_322, pt_16 > pc_322)
+Number of bugs to be repaired:  178
+And(pc_2 < pc_331, pt_2 > pc_331)
+And(pc_2 < pc_334, pt_2 > pc_334)
+And(pc_5 < pc_11, pt_5 > pc_11)
+And(pc_5 < pc_16, pt_5 > pc_16)
+And(pc_5 < pc_21, pt_5 > pc_21)
+And(pc_9 < pc_11, pt_9 > pc_11)
+And(pc_9 < pc_18, pt_9 > pc_18)
+And(pc_9 < pc_21, pt_9 > pc_21)
+And(pc_9 < pc_300, pt_9 > pc_300)
+And(pc_9 < pc_304, pt_9 > pc_304)
+And(pc_9 < pc_306, pt_9 > pc_306)
+And(pc_9 < pc_308, pt_9 > pc_308)
+And(pc_9 < pc_311, pt_9 > pc_311)
+And(pc_9 < pc_319, pt_9 > pc_319)
+And(pc_9 < pc_325, pt_9 > pc_325)
+And(pc_9 < pc_403, pt_9 > pc_403)
+And(pc_9 < pc_406, pt_9 > pc_406)
+And(pc_11 < pc_27, pt_11 > pc_27)
+And(pc_11 < pc_28, pt_11 > pc_28)
+And(pc_11 < pc_300, pt_11 > pc_300)
+And(pc_11 < pc_304, pt_11 > pc_304)
+And(pc_11 < pc_306, pt_11 > pc_306)
+And(pc_11 < pc_308, pt_11 > pc_308)
+And(pc_11 < pc_311, pt_11 > pc_311)
+And(pc_11 < pc_319, pt_11 > pc_319)
+And(pc_11 < pc_325, pt_11 > pc_325)
+And(pc_11 < pc_403, pt_11 > pc_403)
+And(pc_11 < pc_406, pt_11 > pc_406)
+And(pc_11 < pc_26, pt_11 > pc_26)
+And(pc_16 < pc_27, pt_16 > pc_27)
+And(pc_16 < pc_28, pt_16 > pc_28)
+And(pc_16 < pc_300, pt_16 > pc_300)
+And(pc_16 < pc_304, pt_16 > pc_304)
+And(pc_16 < pc_306, pt_16 > pc_306)
+And(pc_16 < pc_308, pt_16 > pc_308)
+And(pc_16 < pc_311, pt_16 > pc_311)
+And(pc_16 < pc_319, pt_16 > pc_319)
 And(pc_16 < pc_325, pt_16 > pc_325)
-And(pc_16 < pc_330, pt_16 > pc_330)
-And(pc_16 < pc_381, pt_16 > pc_381)
-And(pc_16 < pc_574, pt_16 > pc_574)
-And(pc_26 < pc_31, pt_26 > pc_31)
-And(pc_26 < pc_34, pt_26 > pc_34)
-And(pc_26 < pc_39, pt_26 > pc_39)
-And(pc_26 < pc_298, pt_26 > pc_298)
-And(pc_26 < pc_301, pt_26 > pc_301)
-And(pc_26 < pc_310, pt_26 > pc_310)
-And(pc_26 < pc_316, pt_26 > pc_316)
-And(pc_26 < pc_322, pt_26 > pc_322)
-And(pc_26 < pc_325, pt_26 > pc_325)
-And(pc_26 < pc_330, pt_26 > pc_330)
-And(pc_26 < pc_381, pt_26 > pc_381)
-And(pc_26 < pc_574, pt_26 > pc_574)
-And(pc_31 < pc_34, pt_31 > pc_34)
-And(pc_31 < pc_39, pt_31 > pc_39)
-And(pc_31 < pc_298, pt_31 > pc_298)
-And(pc_31 < pc_301, pt_31 > pc_301)
-And(pc_31 < pc_310, pt_31 > pc_310)
-And(pc_31 < pc_316, pt_31 > pc_316)
-And(pc_31 < pc_322, pt_31 > pc_322)
-And(pc_31 < pc_325, pt_31 > pc_325)
-And(pc_31 < pc_330, pt_31 > pc_330)
-And(pc_31 < pc_381, pt_31 > pc_381)
-And(pc_31 < pc_574, pt_31 > pc_574)
-And(pc_34 < pc_39, pt_34 > pc_39)
-And(pc_34 < pc_298, pt_34 > pc_298)
-And(pc_34 < pc_301, pt_34 > pc_301)
-And(pc_34 < pc_310, pt_34 > pc_310)
-And(pc_34 < pc_316, pt_34 > pc_316)
-And(pc_34 < pc_322, pt_34 > pc_322)
-And(pc_34 < pc_325, pt_34 > pc_325)
-And(pc_34 < pc_330, pt_34 > pc_330)
-And(pc_34 < pc_381, pt_34 > pc_381)
-And(pc_34 < pc_574, pt_34 > pc_574)
-And(pc_39 < pc_298, pt_39 > pc_298)
-And(pc_39 < pc_301, pt_39 > pc_301)
-And(pc_39 < pc_310, pt_39 > pc_310)
-And(pc_39 < pc_316, pt_39 > pc_316)
-And(pc_39 < pc_322, pt_39 > pc_322)
-And(pc_39 < pc_325, pt_39 > pc_325)
-And(pc_39 < pc_330, pt_39 > pc_330)
-And(pc_39 < pc_381, pt_39 > pc_381)
-And(pc_39 < pc_574, pt_39 > pc_574)
-And(pc_290 < pc_294, pt_290 > pc_294)
-And(pc_290 < pc_296, pt_290 > pc_296)
-And(pc_290 < pc_301, pt_290 > pc_301)
-And(pc_290 < pc_307, pt_290 > pc_307)
-And(pc_290 < pc_310, pt_290 > pc_310)
-And(pc_290 < pc_316, pt_290 > pc_316)
-And(pc_290 < pc_379, pt_290 > pc_379)
-And(pc_294 < pc_296, pt_294 > pc_296)
-And(pc_294 < pc_301, pt_294 > pc_301)
-And(pc_294 < pc_307, pt_294 > pc_307)
-And(pc_294 < pc_310, pt_294 > pc_310)
-And(pc_294 < pc_316, pt_294 > pc_316)
-And(pc_294 < pc_379, pt_294 > pc_379)
-And(pc_296 < pc_301, pt_296 > pc_301)
-And(pc_296 < pc_307, pt_296 > pc_307)
-And(pc_296 < pc_310, pt_296 > pc_310)
-And(pc_296 < pc_316, pt_296 > pc_316)
-And(pc_296 < pc_379, pt_296 > pc_379)
-And(pc_298 < pc_301, pt_298 > pc_301)
-And(pc_298 < pc_310, pt_298 > pc_310)
-And(pc_298 < pc_316, pt_298 > pc_316)
-And(pc_298 < pc_322, pt_298 > pc_322)
-And(pc_298 < pc_325, pt_298 > pc_325)
-And(pc_298 < pc_330, pt_298 > pc_330)
-And(pc_298 < pc_381, pt_298 > pc_381)
-And(pc_298 < pc_574, pt_298 > pc_574)
-And(pc_301 < pc_310, pt_301 > pc_310)
-And(pc_301 < pc_316, pt_301 > pc_316)
-And(pc_301 < pc_322, pt_301 > pc_322)
-And(pc_301 < pc_325, pt_301 > pc_325)
-And(pc_301 < pc_330, pt_301 > pc_330)
-And(pc_301 < pc_381, pt_301 > pc_381)
-And(pc_301 < pc_574, pt_301 > pc_574)
-And(pc_301 < pc_307, pt_301 > pc_307)
-And(pc_301 < pc_379, pt_301 > pc_379)
-And(pc_307 < pc_310, pt_307 > pc_310)
-And(pc_307 < pc_316, pt_307 > pc_316)
-And(pc_307 < pc_379, pt_307 > pc_379)
-And(pc_310 < pc_316, pt_310 > pc_316)
-And(pc_310 < pc_379, pt_310 > pc_379)
-And(pc_310 < pc_322, pt_310 > pc_322)
-And(pc_310 < pc_325, pt_310 > pc_325)
-And(pc_310 < pc_330, pt_310 > pc_330)
-And(pc_310 < pc_381, pt_310 > pc_381)
-And(pc_310 < pc_574, pt_310 > pc_574)
-And(pc_316 < pc_379, pt_316 > pc_379)
-And(pc_316 < pc_322, pt_316 > pc_322)
-And(pc_316 < pc_325, pt_316 > pc_325)
-And(pc_316 < pc_330, pt_316 > pc_330)
-And(pc_316 < pc_381, pt_316 > pc_381)
-And(pc_316 < pc_574, pt_316 > pc_574)
-And(pc_322 < pc_325, pt_322 > pc_325)
-And(pc_322 < pc_330, pt_322 > pc_330)
-And(pc_322 < pc_381, pt_322 > pc_381)
-And(pc_322 < pc_574, pt_322 > pc_574)
-And(pc_325 < pc_330, pt_325 > pc_330)
-And(pc_325 < pc_381, pt_325 > pc_381)
-And(pc_325 < pc_574, pt_325 > pc_574)
-And(pc_330 < pc_381, pt_330 > pc_381)
-And(pc_330 < pc_574, pt_330 > pc_574)
-And(pc_381 < pc_574, pt_381 > pc_574)
-{379, 574} {2, 4, 6, 8, 11, 14, 16, 26, 31, 34, 290, 294, 39, 296, 298, 301, 307, 310, 316, 322, 325, 330, 381}
-Set Size:  10
-10 [And(pc_2 < pc_16, pt_2 > pc_16), And(pc_2 < pc_26, pt_2 > pc_26), And(pc_2 < pc_31, pt_2 > pc_31), And(pc_2 < pc_34, pt_2 > pc_34), And(pc_2 < pc_39, pt_2 > pc_39), And(pc_2 < pc_298, pt_2 > pc_298), And(pc_2 < pc_301, pt_2 > pc_301), And(pc_2 < pc_310, pt_2 > pc_310), And(pc_2 < pc_316, pt_2 > pc_316), And(pc_2 < pc_322, pt_2 > pc_322)]
+And(pc_16 < pc_403, pt_16 > pc_403)
+And(pc_16 < pc_406, pt_16 > pc_406)
+And(pc_18 < pc_28, pt_18 > pc_28)
+And(pc_18 < pc_300, pt_18 > pc_300)
+And(pc_18 < pc_304, pt_18 > pc_304)
+And(pc_18 < pc_306, pt_18 > pc_306)
+And(pc_18 < pc_308, pt_18 > pc_308)
+And(pc_18 < pc_311, pt_18 > pc_311)
+And(pc_18 < pc_319, pt_18 > pc_319)
+And(pc_18 < pc_325, pt_18 > pc_325)
+And(pc_18 < pc_403, pt_18 > pc_403)
+And(pc_18 < pc_406, pt_18 > pc_406)
+And(pc_21 < pc_331, pt_21 > pc_331)
+And(pc_21 < pc_334, pt_21 > pc_334)
+And(pc_21 < pc_596, pt_21 > pc_596)
+And(pc_21 < pc_30, pt_21 > pc_30)
+And(pc_21 < pc_35, pt_21 > pc_35)
+And(pc_21 < pc_38, pt_21 > pc_38)
+And(pc_21 < pc_317, pt_21 > pc_317)
+And(pc_21 < pc_339, pt_21 > pc_339)
+And(pc_21 < pc_43, pt_21 > pc_43)
+And(pc_30 < pc_458, pt_30 > pc_458)
+And(pc_30 < pc_460, pt_30 > pc_460)
+And(pc_30 < pc_596, pt_30 > pc_596)
+And(pc_30 < pc_77, pt_30 > pc_77)
+And(pc_30 < pc_79, pt_30 > pc_79)
+And(pc_30 < pc_447, pt_30 > pc_447)
+And(pc_30 < pc_464, pt_30 > pc_464)
+And(pc_30 < pc_83, pt_30 > pc_83)
+And(pc_35 < pc_458, pt_35 > pc_458)
+And(pc_35 < pc_460, pt_35 > pc_460)
+And(pc_35 < pc_596, pt_35 > pc_596)
+And(pc_35 < pc_83, pt_35 > pc_83)
+And(pc_38 < pc_458, pt_38 > pc_458)
+And(pc_38 < pc_460, pt_38 > pc_460)
+And(pc_38 < pc_596, pt_38 > pc_596)
+And(pc_38 < pc_77, pt_38 > pc_77)
+And(pc_38 < pc_447, pt_38 > pc_447)
+And(pc_38 < pc_464, pt_38 > pc_464)
+And(pc_38 < pc_83, pt_38 > pc_83)
+And(pc_43 < pc_458, pt_43 > pc_458)
+And(pc_43 < pc_460, pt_43 > pc_460)
+And(pc_43 < pc_596, pt_43 > pc_596)
+And(pc_43 < pc_447, pt_43 > pc_447)
+And(pc_43 < pc_464, pt_43 > pc_464)
+And(pc_300 < pc_21, pt_300 > pc_21)
+And(pc_300 < pc_438, pt_300 > pc_438)
+And(pc_300 < pc_439, pt_300 > pc_439)
+And(pc_300 < pc_440, pt_300 > pc_440)
+And(pc_300 < pc_442, pt_300 > pc_442)
+And(pc_300 < pc_448, pt_300 > pc_448)
+And(pc_300 < pc_453, pt_300 > pc_453)
+And(pc_300 < pc_528, pt_300 > pc_528)
+And(pc_300 < pc_529, pt_300 > pc_529)
+And(pc_304 < pc_21, pt_304 > pc_21)
+And(pc_304 < pc_439, pt_304 > pc_439)
+And(pc_304 < pc_440, pt_304 > pc_440)
+And(pc_304 < pc_442, pt_304 > pc_442)
+And(pc_304 < pc_448, pt_304 > pc_448)
+And(pc_304 < pc_453, pt_304 > pc_453)
+And(pc_304 < pc_528, pt_304 > pc_528)
+And(pc_304 < pc_529, pt_304 > pc_529)
+And(pc_306 < pc_21, pt_306 > pc_21)
+And(pc_306 < pc_440, pt_306 > pc_440)
+And(pc_306 < pc_442, pt_306 > pc_442)
+And(pc_306 < pc_448, pt_306 > pc_448)
+And(pc_306 < pc_453, pt_306 > pc_453)
+And(pc_306 < pc_528, pt_306 > pc_528)
+And(pc_306 < pc_529, pt_306 > pc_529)
+And(pc_308 < pc_458, pt_308 > pc_458)
+And(pc_308 < pc_460, pt_308 > pc_460)
+And(pc_308 < pc_596, pt_308 > pc_596)
+And(pc_308 < pc_73, pt_308 > pc_73)
+And(pc_308 < pc_77, pt_308 > pc_77)
+And(pc_308 < pc_79, pt_308 > pc_79)
+And(pc_308 < pc_447, pt_308 > pc_447)
+And(pc_308 < pc_464, pt_308 > pc_464)
+And(pc_311 < pc_458, pt_311 > pc_458)
+And(pc_311 < pc_460, pt_311 > pc_460)
+And(pc_311 < pc_596, pt_311 > pc_596)
+And(pc_311 < pc_21, pt_311 > pc_21)
+And(pc_311 < pc_440, pt_311 > pc_440)
+And(pc_311 < pc_448, pt_311 > pc_448)
+And(pc_311 < pc_453, pt_311 > pc_453)
+And(pc_311 < pc_528, pt_311 > pc_528)
+And(pc_311 < pc_529, pt_311 > pc_529)
+And(pc_311 < pc_73, pt_311 > pc_73)
+And(pc_311 < pc_77, pt_311 > pc_77)
+And(pc_311 < pc_79, pt_311 > pc_79)
+And(pc_311 < pc_447, pt_311 > pc_447)
+And(pc_311 < pc_464, pt_311 > pc_464)
+And(pc_317 < pc_11, pt_317 > pc_11)
+And(pc_317 < pc_18, pt_317 > pc_18)
+And(pc_317 < pc_402, pt_317 > pc_402)
+And(pc_317 < pc_438, pt_317 > pc_438)
+And(pc_317 < pc_439, pt_317 > pc_439)
+And(pc_317 < pc_448, pt_317 > pc_448)
+And(pc_317 < pc_453, pt_317 > pc_453)
+And(pc_317 < pc_528, pt_317 > pc_528)
+And(pc_317 < pc_529, pt_317 > pc_529)
+And(pc_319 < pc_21, pt_319 > pc_21)
+And(pc_319 < pc_440, pt_319 > pc_440)
+And(pc_319 < pc_453, pt_319 > pc_453)
+And(pc_319 < pc_528, pt_319 > pc_528)
+And(pc_319 < pc_529, pt_319 > pc_529)
+And(pc_319 < pc_458, pt_319 > pc_458)
+And(pc_319 < pc_460, pt_319 > pc_460)
+And(pc_319 < pc_596, pt_319 > pc_596)
+And(pc_319 < pc_83, pt_319 > pc_83)
+And(pc_319 < pc_73, pt_319 > pc_73)
+And(pc_319 < pc_77, pt_319 > pc_77)
+And(pc_319 < pc_79, pt_319 > pc_79)
+And(pc_319 < pc_464, pt_319 > pc_464)
+And(pc_325 < pc_21, pt_325 > pc_21)
+And(pc_325 < pc_440, pt_325 > pc_440)
+And(pc_325 < pc_528, pt_325 > pc_528)
+And(pc_325 < pc_529, pt_325 > pc_529)
+And(pc_325 < pc_458, pt_325 > pc_458)
+And(pc_325 < pc_460, pt_325 > pc_460)
+And(pc_325 < pc_596, pt_325 > pc_596)
+And(pc_325 < pc_83, pt_325 > pc_83)
+And(pc_331 < pc_460, pt_331 > pc_460)
+And(pc_331 < pc_596, pt_331 > pc_596)
+And(pc_331 < pc_447, pt_331 > pc_447)
+And(pc_331 < pc_464, pt_331 > pc_464)
+And(pc_334 < pc_596, pt_334 > pc_596)
+And(pc_334 < pc_447, pt_334 > pc_447)
+And(pc_334 < pc_464, pt_334 > pc_464)
+And(pc_339 < pc_596, pt_339 > pc_596)
+And(pc_403 < pc_440, pt_403 > pc_440)
+And(pc_403 < pc_21, pt_403 > pc_21)
+And(pc_403 < pc_529, pt_403 > pc_529)
+And(pc_406 < pc_458, pt_406 > pc_458)
+And(pc_406 < pc_460, pt_406 > pc_460)
+And(pc_406 < pc_596, pt_406 > pc_596)
+And(pc_406 < pc_464, pt_406 > pc_464)
+And(pc_406 < pc_73, pt_406 > pc_73)
+And(pc_406 < pc_77, pt_406 > pc_77)
+And(pc_406 < pc_79, pt_406 > pc_79)
+And(pc_406 < pc_83, pt_406 > pc_83)
+{528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596} {2, 5, 9, 11, 16, 18, 403, 21, 406, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339}
+Set Size:  6
+6 [And(pc_2 < pc_331, pt_2 > pc_331), And(pc_2 < pc_334, pt_2 > pc_334), And(pc_5 < pc_11, pt_5 > pc_11), And(pc_5 < pc_16, pt_5 > pc_16), And(pc_5 < pc_21, pt_5 > pc_21), And(pc_9 < pc_11, pt_9 > pc_11)]
 
 ############################################################################
 Iteration:  1
-Number of threads:  340
-576 576 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  271
+LENGTH OF THREAD:  1  :  279
+LENGTH OF THREAD:  0  :  48
+Ranges: 0 599
+Values to be assigned in that range: 598
 Completed building constraints.
-Number of constraints:  1567
-Solving:
+Number of constraints:  1840
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_16, pt_2 > pc_16)
-2 16
-Prinitng stats:  -1 -1
+Now, we will repair:  And(pc_2 < pc_331, pt_2 > pc_331)
+2 331 -1 -1
+Prinitng stats:  -1 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
 Adding locks for write. 2
-Found insertion point for first lock:  0 1 [2, 101, '0x1b170a0', '-1', 28, 'createHeap_93'] ['Lock_0', 105, 'M1', -1, 28, 'createHeap_93_x']
-Adding fence because another thread started.
-Adding unlock: ['UnLock_0', 106, 'M1', -1, 28, 'createHeap_93_x']
-Adding locks for read and taking fence within lock. 16
-Found insertion point for second lock:  14
-Adding fence because another thread started.
-Time taken:  4.450855255126953  seconds.
+Found insertion point for first lock:  0 1 [2, 101, '0x1c7c0a0', '-1', '0', 'createHeap_93'] ['Lock_0', 105, 'M1', -1, '0', 'createHeap_93_x']
+Adding fence because new scope started.
+Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'createHeap_93_x']
+Adding locks for read and taking fence within lock. 331
+Found insertion point for second lock:  329
+Adding fence because new scope started.
+Time taken:  0.6368699073791504  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  2
-Number of threads:  340
-582 582 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  274
+LENGTH OF THREAD:  1  :  279
+LENGTH OF THREAD:  0  :  51
+Ranges: 0 605
+Values to be assigned in that range: 604
 Completed building constraints.
-Number of constraints:  1609
-Solving:
+Number of constraints:  1870
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_26, pt_2 > pc_26)
-2 26
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 26
-Found insertion point for second lock:  30
-Adding fence because another thread started.
-Time taken:  5.1427321434021  seconds.
+Now, we will repair:  And(pc_2 < pc_334, pt_2 > pc_334)
+[2, 101, '0x1c7c0a0', '-1', '0', 'createHeap_93'] 2
+2 334 -1 -1
+Prinitng stats:  0 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 334
+Found insertion point for second lock:  338
+Adding fence because new scope started.
+Time taken:  0.42714810371398926  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  3
-Number of threads:  340
-585 585 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  277
+LENGTH OF THREAD:  1  :  279
+LENGTH OF THREAD:  0  :  51
+Ranges: 0 608
+Values to be assigned in that range: 607
 Completed building constraints.
-Number of constraints:  1635
-Solving:
+Number of constraints:  1891
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_31, pt_2 > pc_31)
-2 31
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 31
-Found insertion point for second lock:  38
-Adding fence because another thread started.
-Time taken:  10.816891193389893  seconds.
+Now, we will repair:  And(pc_5 < pc_11, pt_5 > pc_11)
+5 11 -1 -1
+Prinitng stats:  -1 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for write. 5
+Found insertion point for first lock:  6 7 [5, 101, '0x1c7c0a8', '0x1c7c0a0', '0', 'createHeap_94'] ['Lock_3', 105, 'M1', -1, '0', 'createHeap_94_x']
+Adding fence because new scope started.
+Adding unlock: ['UnLock_3', 106, 'M1', -1, '0', 'createHeap_94_x']
+Adding locks for read and taking fence within lock. 11
+Found insertion point for second lock:  12
+Adding fence because new scope started.
+Time taken:  1.0868241786956787  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  4
-Number of threads:  340
-588 588 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  277
+LENGTH OF THREAD:  1  :  282
+LENGTH OF THREAD:  0  :  54
+Ranges: 0 614
+Values to be assigned in that range: 613
 Completed building constraints.
-Number of constraints:  1663
-Solving:
+Number of constraints:  1945
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_34, pt_2 > pc_34)
-2 34
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 34
-Found insertion point for second lock:  44
-Adding fence because another thread started.
-Time taken:  20.405360221862793  seconds.
+Now, we will repair:  And(pc_9 < pc_11, pt_9 > pc_11)
+[11, 101, '0x1c7c0ac', '0x1c7c0ac', '1', 'insertHeap_111'] 11
+9 11 -1 -1
+Prinitng stats:  -1 15 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for write. 9
+Found insertion point for first lock:  13 14 [9, 101, '0x1c7c0ac', '0x1c7c0a8', '0', 'createHeap_95'] ['Lock_5', 105, 'M1', -1, '0', 'createHeap_95_x']
+Adding fence because new scope started.
+Adding unlock: ['UnLock_5', 106, 'M1', -1, '0', 'createHeap_95_x']
+Time taken:  0.707880973815918  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  5
-Number of threads:  340
-591 591 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  277
+LENGTH OF THREAD:  1  :  282
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 617
+Values to be assigned in that range: 616
 Completed building constraints.
-Number of constraints:  1697
-Solving:
+Number of constraints:  1978
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_39, pt_2 > pc_39)
-2 39
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 39
-Found insertion point for second lock:  52
-Adding fence because another thread started.
-Time taken:  9.917047262191772  seconds.
+Now, we will repair:  And(pc_5 < pc_16, pt_5 > pc_16)
+[5, 101, '0x1c7c0a8', '0x1c7c0a0', '0', 'createHeap_94'] 5
+5 16 -1 -1
+Prinitng stats:  6 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 16
+Found insertion point for second lock:  26
+Adding fence because new scope started.
+Time taken:  1.159367322921753  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  6
-Number of threads:  340
-594 594 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  277
+LENGTH OF THREAD:  1  :  285
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 620
+Values to be assigned in that range: 619
 Completed building constraints.
-Number of constraints:  1981
-Solving:
+Number of constraints:  2015
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_301, pt_2 > pc_301)
-2 301
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 301
-Found insertion point for second lock:  317
-Adding fence because another thread started.
-Time taken:  11.317854166030884  seconds.
+Now, we will repair:  And(pc_5 < pc_21, pt_5 > pc_21)
+[5, 101, '0x1c7c0a8', '0x1c7c0a0', '0', 'createHeap_94'] 5
+5 21 -1 -1
+Prinitng stats:  6 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 21
+Found insertion point for second lock:  34
+Adding fence because new scope started.
+Time taken:  0.5926110744476318  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  7
-Number of threads:  340
-597 597 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  277
+LENGTH OF THREAD:  1  :  288
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 623
+Values to be assigned in that range: 622
 Completed building constraints.
-Number of constraints:  2024
-Solving:
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_298, pt_2 > pc_298)
-2 298
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 298
-Found insertion point for second lock:  314
-Adding fence because another thread started.
-Time taken:  41.907692670822144  seconds.
+Number of constraints:  2056
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.2254171371459961  seconds.
 
 ############################################################################
+6 [And(pc_9 < pc_18, pt_9 > pc_18), And(pc_9 < pc_21, pt_9 > pc_21), And(pc_9 < pc_300, pt_9 > pc_300), And(pc_9 < pc_304, pt_9 > pc_304), And(pc_9 < pc_306, pt_9 > pc_306), And(pc_9 < pc_308, pt_9 > pc_308)]
 
 ############################################################################
 Iteration:  8
-Number of threads:  340
-600 600 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  277
+LENGTH OF THREAD:  1  :  288
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 623
+Values to be assigned in that range: 622
 Completed building constraints.
-Number of constraints:  2068
-Solving:
+Number of constraints:  2056
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_310, pt_2 > pc_310)
-2 310
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 310
-Found insertion point for second lock:  332
-Adding fence because another thread started.
-Time taken:  42.77817988395691  seconds.
+Now, we will repair:  And(pc_9 < pc_300, pt_9 > pc_300)
+[9, 101, '0x1c7c0ac', '0x1c7c0a8', '0', 'createHeap_95'] 9
+9 300 -1 -1
+Prinitng stats:  13 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 300
+Found insertion point for second lock:  316
+Adding fence because new scope started.
+Time taken:  0.8460221290588379  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  9
-Number of threads:  340
-603 603 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  280
+LENGTH OF THREAD:  1  :  288
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 626
+Values to be assigned in that range: 625
 Completed building constraints.
-Number of constraints:  2119
-Solving:
+Number of constraints:  2101
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_316, pt_2 > pc_316)
-2 316
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 316
-Found insertion point for second lock:  341
-Adding fence because another thread started.
-Time taken:  18.32453989982605  seconds.
+Now, we will repair:  And(pc_9 < pc_18, pt_9 > pc_18)
+[9, 101, '0x1c7c0ac', '0x1c7c0a8', '0', 'createHeap_95'] 9
+9 18 -1 -1
+Prinitng stats:  13 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 18
+Found insertion point for second lock:  31
+Adding fence because new scope started.
+Time taken:  1.1239540576934814  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  10
-Number of threads:  340
-606 606 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  280
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 629
+Values to be assigned in that range: 628
 Completed building constraints.
-Number of constraints:  2174
-Solving:
+Number of constraints:  2150
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_322, pt_2 > pc_322)
-2 322
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 322
-Found insertion point for second lock:  350
-Adding fence because another thread started.
-Time taken:  32.65950274467468  seconds.
+Now, we will repair:  And(pc_9 < pc_304, pt_9 > pc_304)
+[9, 101, '0x1c7c0ac', '0x1c7c0a8', '0', 'createHeap_95'] 9
+9 304 -1 -1
+Prinitng stats:  13 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 304
+Found insertion point for second lock:  326
+Adding fence because new scope started.
+Time taken:  2.070652723312378  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  11
-Number of threads:  340
-609 609 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  283
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 632
+Values to be assigned in that range: 631
 Completed building constraints.
-Number of constraints:  2230
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.1932206153869629  seconds.
+Number of constraints:  2203
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_9 < pc_306, pt_9 > pc_306)
+[9, 101, '0x1c7c0ac', '0x1c7c0a8', '0', 'createHeap_95'] 9
+9 306 -1 -1
+Prinitng stats:  13 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 306
+Found insertion point for second lock:  331
+Adding fence because new scope started.
+Time taken:  1.2324039936065674  seconds.
 
 ############################################################################
-10 [And(pc_2 < pc_325, pt_2 > pc_325), And(pc_2 < pc_330, pt_2 > pc_330), And(pc_2 < pc_381, pt_2 > pc_381), And(pc_4 < pc_8, pt_4 > pc_8), And(pc_6 < pc_8, pt_6 > pc_8), And(pc_6 < pc_11, pt_6 > pc_11), And(pc_6 < pc_14, pt_6 > pc_14), And(pc_6 < pc_290, pt_6 > pc_290), And(pc_6 < pc_294, pt_6 > pc_294), And(pc_6 < pc_296, pt_6 > pc_296)]
 
 ############################################################################
 Iteration:  12
-Number of threads:  340
-609 609 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  286
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 635
+Values to be assigned in that range: 634
 Completed building constraints.
-Number of constraints:  2230
-Solving:
+Number of constraints:  2260
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_325, pt_2 > pc_325)
-2 325
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 325
-Found insertion point for second lock:  356
-Adding fence because another thread started.
-Time taken:  19.010865449905396  seconds.
+Now, we will repair:  And(pc_9 < pc_308, pt_9 > pc_308)
+[9, 101, '0x1c7c0ac', '0x1c7c0a8', '0', 'createHeap_95'] 9
+9 308 -1 -1
+Prinitng stats:  13 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 308
+Found insertion point for second lock:  336
+Adding fence because new scope started.
+Time taken:  2.153765916824341  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  13
-Number of threads:  340
-612 612 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  289
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 638
+Values to be assigned in that range: 637
 Completed building constraints.
-Number of constraints:  2292
-Solving:
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_330, pt_2 > pc_330)
-2 330
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 330
-Found insertion point for second lock:  364
-Adding fence because another thread started.
-Time taken:  4.96966814994812  seconds.
+Number of constraints:  2321
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.3032670021057129  seconds.
 
 ############################################################################
+6 [And(pc_9 < pc_311, pt_9 > pc_311), And(pc_9 < pc_319, pt_9 > pc_319), And(pc_9 < pc_325, pt_9 > pc_325), And(pc_9 < pc_403, pt_9 > pc_403), And(pc_9 < pc_406, pt_9 > pc_406), And(pc_11 < pc_27, pt_11 > pc_27)]
 
 ############################################################################
 Iteration:  14
-Number of threads:  340
-615 615 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  289
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 638
+Values to be assigned in that range: 637
 Completed building constraints.
-Number of constraints:  2404
-Solving:
+Number of constraints:  2321
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_381, pt_2 > pc_381)
-2 381
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 381
-Found insertion point for second lock:  418
-Found fence at  [412, 103, '0', '-1', 338, 'insertHeap_123_x']
-Time taken:  12.134531736373901  seconds.
+Now, we will repair:  And(pc_9 < pc_311, pt_9 > pc_311)
+[9, 101, '0x1c7c0ac', '0x1c7c0a8', '0', 'createHeap_95'] 9
+9 311 -1 -1
+Prinitng stats:  13 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 311
+Found insertion point for second lock:  342
+Adding fence because new scope started.
+Time taken:  1.4787821769714355  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  15
-Number of threads:  340
-617 617 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  292
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 641
+Values to be assigned in that range: 640
 Completed building constraints.
-Number of constraints:  2496
-Solving:
+Number of constraints:  2386
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_4 < pc_8, pt_4 > pc_8)
-We found a common lock
-Removing:  ['UnLock_0', 106, 'M1', -1, 28, 'createHeap_93_x']
-Removing:  ['Lock_0', 105, 'M1', -1, 28, 'createHeap_93_x']
-4 8
-Prinitng stats:  -1 -1
-Adding locks for write. 4
-Found insertion point for first lock:  3 4 [4, 101, '0x1b170a8', '-1', 30, 'createHeap_94'] ['Lock_14', 105, 'M1', -1, 30, 'createHeap_94_x']
-Adding fence because another thread started.
-Adding unlock: ['UnLock_14', 106, 'M1', -1, 30, 'createHeap_94_x']
-Adding locks for read and taking fence within lock. 8
-Found insertion point for second lock:  7
-Adding fence because another thread started.
-Time taken:  6.982977867126465  seconds.
+Now, we will repair:  And(pc_9 < pc_319, pt_9 > pc_319)
+[9, 101, '0x1c7c0ac', '0x1c7c0a8', '0', 'createHeap_95'] 9
+9 319 -1 -1
+Prinitng stats:  13 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 319
+Found insertion point for second lock:  353
+Adding fence because new scope started.
+Time taken:  1.5124318599700928  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  16
-Number of threads:  340
-621 621 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  295
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 644
+Values to be assigned in that range: 643
 Completed building constraints.
-Number of constraints:  2572
-Solving:
+Number of constraints:  2455
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_325, pt_2 > pc_325)
-2 325
-Prinitng stats:  -1 360
-Adding locks for write. 2
-Found insertion point for first lock:  0 1 [2, 101, '0x1b170a0', '-1', 28, 'createHeap_93'] ['Lock_16', 105, 'M1', -1, 28, 'createHeap_93_x']
-Adding unlock: ['UnLock_16', 106, 'M1', -1, 28, 'createHeap_93_x']
-Time taken:  21.23475217819214  seconds.
+Now, we will repair:  And(pc_9 < pc_325, pt_9 > pc_325)
+[9, 101, '0x1c7c0ac', '0x1c7c0a8', '0', 'createHeap_95'] 9
+9 325 -1 -1
+Prinitng stats:  13 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 325
+Found insertion point for second lock:  362
+Adding fence because new scope started.
+Time taken:  4.5713958740234375  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  17
-Number of threads:  340
-623 623 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  298
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 647
+Values to be assigned in that range: 646
 Completed building constraints.
-Number of constraints:  2643
-Solving:
+Number of constraints:  2528
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_6 < pc_8, pt_6 > pc_8)
-6 8
-Prinitng stats:  -1 12
-Adding locks for write. 6
-Found insertion point for first lock:  10 11 [6, 101, '0x1b170ac', '-1', 52, 'createHeap_95'] ['Lock_17', 105, 'M1', -1, 52, 'createHeap_95_x']
-Adding fence because another thread started.
-Adding unlock: ['UnLock_17', 106, 'M1', -1, 52, 'createHeap_95_x']
-Time taken:  23.8443341255188  seconds.
+Now, we will repair:  And(pc_9 < pc_403, pt_9 > pc_403)
+[9, 101, '0x1c7c0ac', '0x1c7c0a8', '0', 'createHeap_95'] 9
+9 403 -1 -1
+Prinitng stats:  13 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 403
+Found insertion point for second lock:  449
+Adding fence because new scope started.
+Time taken:  1.2337942123413086  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  18
-Number of threads:  340
-626 626 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  301
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 650
+Values to be assigned in that range: 649
 Completed building constraints.
-Number of constraints:  2722
-Solving:
+Number of constraints:  2605
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_6 < pc_11, pt_6 > pc_11)
-6 11
-Prinitng stats:  10 -1
-Adding locks for read and taking fence within lock. 11
-Found insertion point for second lock:  21
-Adding fence because another thread started.
-Time taken:  3.734117031097412  seconds.
+Now, we will repair:  And(pc_11 < pc_27, pt_11 > pc_27)
+[11, 101, '0x1c7c0ac', '0x1c7c0ac', '1', 'insertHeap_111'] 11
+11 27 -1 -1
+Prinitng stats:  18 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 27
+Time taken:  1.4146418571472168  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  19
-Number of threads:  340
-629 629 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  303
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 652
+Values to be assigned in that range: 651
 Completed building constraints.
-Number of constraints:  2806
-Solving:
+Number of constraints:  2682
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_6 < pc_14, pt_6 > pc_14)
-6 14
-Prinitng stats:  10 -1
-Adding locks for read and taking fence within lock. 14
-Found insertion point for second lock:  27
-Adding fence because another thread started.
-Time taken:  9.172374486923218  seconds.
+Now, we will repair:  And(pc_9 < pc_406, pt_9 > pc_406)
+[9, 101, '0x1c7c0ac', '0x1c7c0a8', '0', 'createHeap_95'] 9
+9 406 -1 -1
+Prinitng stats:  13 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 406
+Found insertion point for second lock:  457
+Adding fence because new scope started.
+Time taken:  1.3271689414978027  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  20
-Number of threads:  340
-632 632 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  306
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 655
+Values to be assigned in that range: 654
 Completed building constraints.
-Number of constraints:  2893
-Solving:
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_6 < pc_290, pt_6 > pc_290)
-6 290
-Prinitng stats:  10 -1
-Adding locks for read and taking fence within lock. 290
-Found insertion point for second lock:  321
-Adding fence because another thread started.
-Time taken:  34.34626126289368  seconds.
+Number of constraints:  2767
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.35986924171447754  seconds.
 
 ############################################################################
+6 [And(pc_11 < pc_28, pt_11 > pc_28), And(pc_11 < pc_300, pt_11 > pc_300), And(pc_11 < pc_304, pt_11 > pc_304), And(pc_11 < pc_306, pt_11 > pc_306), And(pc_11 < pc_308, pt_11 > pc_308), And(pc_11 < pc_311, pt_11 > pc_311)]
 
 ############################################################################
 Iteration:  21
-Number of threads:  340
-635 635 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  306
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 655
+Values to be assigned in that range: 654
 Completed building constraints.
-Number of constraints:  2986
-Solving:
+Number of constraints:  2767
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_6 < pc_294, pt_6 > pc_294)
-6 294
-Prinitng stats:  10 -1
-Adding locks for read and taking fence within lock. 294
-Found insertion point for second lock:  328
-Adding fence because another thread started.
-Time taken:  15.222238302230835  seconds.
+Now, we will repair:  And(pc_11 < pc_28, pt_11 > pc_28)
+[11, 101, '0x1c7c0ac', '0x1c7c0ac', '1', 'insertHeap_111'] 11
+11 28 -1 -1
+Prinitng stats:  18 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 28
+Time taken:  1.148587942123413  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  22
-Number of threads:  340
-638 638 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  308
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 657
+Values to be assigned in that range: 656
 Completed building constraints.
-Number of constraints:  3081
-Solving:
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_6 < pc_296, pt_6 > pc_296)
-6 296
-Prinitng stats:  10 -1
-Adding locks for read and taking fence within lock. 296
-Found insertion point for second lock:  333
-Adding fence because another thread started.
-Time taken:  9.359285354614258  seconds.
+Number of constraints:  2852
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.43366193771362305  seconds.
 
 ############################################################################
+6 [And(pc_11 < pc_319, pt_11 > pc_319), And(pc_11 < pc_325, pt_11 > pc_325), And(pc_11 < pc_403, pt_11 > pc_403), And(pc_11 < pc_406, pt_11 > pc_406), And(pc_11 < pc_26, pt_11 > pc_26), And(pc_16 < pc_27, pt_16 > pc_27)]
 
 ############################################################################
 Iteration:  23
-Number of threads:  340
-641 641 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  308
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 657
+Values to be assigned in that range: 656
 Completed building constraints.
-Number of constraints:  3180
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.5515346527099609  seconds.
+Number of constraints:  2852
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_11 < pc_26, pt_11 > pc_26)
+[11, 101, '0x1c7c0ac', '0x1c7c0ac', '1', 'insertHeap_111'] 11
+11 26 -1 -1
+Prinitng stats:  18 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 26
+Time taken:  1.482466220855713  seconds.
 
 ############################################################################
-10 [And(pc_6 < pc_301, pt_6 > pc_301), And(pc_6 < pc_307, pt_6 > pc_307), And(pc_6 < pc_310, pt_6 > pc_310), And(pc_6 < pc_316, pt_6 > pc_316), And(pc_6 < pc_379, pt_6 > pc_379), And(pc_8 < pc_11, pt_8 > pc_11), And(pc_8 < pc_14, pt_8 > pc_14), And(pc_8 < pc_290, pt_8 > pc_290), And(pc_8 < pc_294, pt_8 > pc_294), And(pc_8 < pc_296, pt_8 > pc_296)]
 
 ############################################################################
 Iteration:  24
-Number of threads:  340
-641 641 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  310
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 659
+Values to be assigned in that range: 658
 Completed building constraints.
-Number of constraints:  3180
-Solving:
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_6 < pc_307, pt_6 > pc_307)
-6 307
-Prinitng stats:  10 -1
-Adding locks for read and taking fence within lock. 307
-Found insertion point for second lock:  353
-Adding fence because another thread started.
-Time taken:  5.70254921913147  seconds.
+Number of constraints:  2941
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.431718111038208  seconds.
 
 ############################################################################
+6 [And(pc_16 < pc_28, pt_16 > pc_28), And(pc_16 < pc_300, pt_16 > pc_300), And(pc_16 < pc_304, pt_16 > pc_304), And(pc_16 < pc_306, pt_16 > pc_306), And(pc_16 < pc_308, pt_16 > pc_308), And(pc_16 < pc_311, pt_16 > pc_311)]
 
 ############################################################################
 Iteration:  25
-Number of threads:  340
-644 644 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  310
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 659
+Values to be assigned in that range: 658
 Completed building constraints.
-Number of constraints:  3284
-Solving:
+Number of constraints:  2941
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.41666507720947266  seconds.
+Time taken:  0.4850020408630371  seconds.
 
 ############################################################################
-10 [And(pc_8 < pc_301, pt_8 > pc_301), And(pc_8 < pc_307, pt_8 > pc_307), And(pc_8 < pc_310, pt_8 > pc_310), And(pc_8 < pc_316, pt_8 > pc_316), And(pc_8 < pc_379, pt_8 > pc_379), And(pc_11 < pc_14, pt_11 > pc_14), And(pc_11 < pc_290, pt_11 > pc_290), And(pc_11 < pc_294, pt_11 > pc_294), And(pc_11 < pc_296, pt_11 > pc_296), And(pc_11 < pc_301, pt_11 > pc_301)]
+6 [And(pc_16 < pc_319, pt_16 > pc_319), And(pc_16 < pc_325, pt_16 > pc_325), And(pc_16 < pc_403, pt_16 > pc_403), And(pc_16 < pc_406, pt_16 > pc_406), And(pc_18 < pc_28, pt_18 > pc_28), And(pc_18 < pc_300, pt_18 > pc_300)]
 
 ############################################################################
 Iteration:  26
-Number of threads:  340
-644 644 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  310
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 659
+Values to be assigned in that range: 658
 Completed building constraints.
-Number of constraints:  3284
-Solving:
+Number of constraints:  2941
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.35905003547668457  seconds.
+Time taken:  0.43825793266296387  seconds.
 
 ############################################################################
-10 [And(pc_11 < pc_307, pt_11 > pc_307), And(pc_11 < pc_310, pt_11 > pc_310), And(pc_11 < pc_316, pt_11 > pc_316), And(pc_11 < pc_379, pt_11 > pc_379), And(pc_14 < pc_290, pt_14 > pc_290), And(pc_14 < pc_294, pt_14 > pc_294), And(pc_14 < pc_296, pt_14 > pc_296), And(pc_14 < pc_301, pt_14 > pc_301), And(pc_14 < pc_307, pt_14 > pc_307), And(pc_14 < pc_310, pt_14 > pc_310)]
+6 [And(pc_18 < pc_304, pt_18 > pc_304), And(pc_18 < pc_306, pt_18 > pc_306), And(pc_18 < pc_308, pt_18 > pc_308), And(pc_18 < pc_311, pt_18 > pc_311), And(pc_18 < pc_319, pt_18 > pc_319), And(pc_18 < pc_325, pt_18 > pc_325)]
 
 ############################################################################
 Iteration:  27
-Number of threads:  340
-644 644 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  310
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 659
+Values to be assigned in that range: 658
 Completed building constraints.
-Number of constraints:  3284
-Solving:
+Number of constraints:  2941
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.343599796295166  seconds.
+Time taken:  0.4443068504333496  seconds.
 
 ############################################################################
-10 [And(pc_14 < pc_316, pt_14 > pc_316), And(pc_14 < pc_379, pt_14 > pc_379), And(pc_16 < pc_26, pt_16 > pc_26), And(pc_16 < pc_31, pt_16 > pc_31), And(pc_16 < pc_34, pt_16 > pc_34), And(pc_16 < pc_39, pt_16 > pc_39), And(pc_16 < pc_298, pt_16 > pc_298), And(pc_16 < pc_301, pt_16 > pc_301), And(pc_16 < pc_310, pt_16 > pc_310), And(pc_16 < pc_316, pt_16 > pc_316)]
+6 [And(pc_18 < pc_403, pt_18 > pc_403), And(pc_18 < pc_406, pt_18 > pc_406), And(pc_21 < pc_331, pt_21 > pc_331), And(pc_21 < pc_334, pt_21 > pc_334), And(pc_21 < pc_596, pt_21 > pc_596), And(pc_21 < pc_30, pt_21 > pc_30)]
 
 ############################################################################
 Iteration:  28
-Number of threads:  340
-644 644 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  310
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  57
+Ranges: 0 659
+Values to be assigned in that range: 658
 Completed building constraints.
-Number of constraints:  3284
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.4520747661590576  seconds.
+Number of constraints:  2941
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_21 < pc_596, pt_21 > pc_596)
+[21, 101, '0x1c7c0a0', '0x1c7c0ac', '1', 'insertHeap_120'] 21
+21 596 -1 -1
+Prinitng stats:  37 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 596
+Time taken:  7.9115800857543945  seconds.
 
 ############################################################################
-10 [And(pc_16 < pc_322, pt_16 > pc_322), And(pc_16 < pc_325, pt_16 > pc_325), And(pc_16 < pc_330, pt_16 > pc_330), And(pc_16 < pc_381, pt_16 > pc_381), And(pc_16 < pc_574, pt_16 > pc_574), And(pc_26 < pc_31, pt_26 > pc_31), And(pc_26 < pc_34, pt_26 > pc_34), And(pc_26 < pc_39, pt_26 > pc_39), And(pc_26 < pc_298, pt_26 > pc_298), And(pc_26 < pc_301, pt_26 > pc_301)]
 
 ############################################################################
 Iteration:  29
-Number of threads:  340
-644 644 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  310
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 661
+Values to be assigned in that range: 660
 Completed building constraints.
-Number of constraints:  3284
-Solving:
+Number of constraints:  3034
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_16 < pc_574, pt_16 > pc_574)
-16 574
-Prinitng stats:  32 -1
-Adding very restricted lock for read. 574
-['Lock_24', 105, 'M1', -1, 339, 'destroyHeap_102_x']
-[574, 101, '0x1b170a0', '0x1b170a0', 339, 'destroyHeap_102']
-['UnLock_24', 106, 'M1', -1, 339, 'destroyHeap_102_x']
-[575, 102, '0x1b170a0', '-1', 339, 'destroyHeap_102_x']
-Time taken:  5.105045557022095  seconds.
+Now, we will repair:  And(pc_21 < pc_30, pt_21 > pc_30)
+[21, 101, '0x1c7c0a0', '0x1c7c0ac', '1', 'insertHeap_120'] 21
+21 30 -1 -1
+Prinitng stats:  37 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 30
+Found insertion point for second lock:  55
+Adding fence because new scope started.
+Time taken:  18.7877459526062  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  30
-Number of threads:  340
-646 646 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  313
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 664
+Values to be assigned in that range: 663
 Completed building constraints.
-Number of constraints:  3385
-Solving:
+Number of constraints:  3135
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.38333916664123535  seconds.
+Time taken:  0.5262079238891602  seconds.
 
 ############################################################################
-10 [And(pc_26 < pc_310, pt_26 > pc_310), And(pc_26 < pc_316, pt_26 > pc_316), And(pc_26 < pc_322, pt_26 > pc_322), And(pc_26 < pc_325, pt_26 > pc_325), And(pc_26 < pc_330, pt_26 > pc_330), And(pc_26 < pc_381, pt_26 > pc_381), And(pc_26 < pc_574, pt_26 > pc_574), And(pc_31 < pc_34, pt_31 > pc_34), And(pc_31 < pc_39, pt_31 > pc_39), And(pc_31 < pc_298, pt_31 > pc_298)]
+6 [And(pc_21 < pc_35, pt_21 > pc_35), And(pc_21 < pc_38, pt_21 > pc_38), And(pc_21 < pc_317, pt_21 > pc_317), And(pc_21 < pc_339, pt_21 > pc_339), And(pc_21 < pc_43, pt_21 > pc_43), And(pc_30 < pc_458, pt_30 > pc_458)]
 
 ############################################################################
 Iteration:  31
-Number of threads:  340
-646 646 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  313
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 664
+Values to be assigned in that range: 663
 Completed building constraints.
-Number of constraints:  3385
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.6389105319976807  seconds.
+Number of constraints:  3135
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_21 < pc_35, pt_21 > pc_35)
+[21, 101, '0x1c7c0a0', '0x1c7c0ac', '1', 'insertHeap_120'] 21
+21 35 -1 -1
+Prinitng stats:  37 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 35
+Found insertion point for second lock:  63
+Adding fence because new scope started.
+Time taken:  1.550847053527832  seconds.
 
 ############################################################################
-10 [And(pc_31 < pc_301, pt_31 > pc_301), And(pc_31 < pc_310, pt_31 > pc_310), And(pc_31 < pc_316, pt_31 > pc_316), And(pc_31 < pc_322, pt_31 > pc_322), And(pc_31 < pc_325, pt_31 > pc_325), And(pc_31 < pc_330, pt_31 > pc_330), And(pc_31 < pc_381, pt_31 > pc_381), And(pc_31 < pc_574, pt_31 > pc_574), And(pc_34 < pc_39, pt_34 > pc_39), And(pc_34 < pc_298, pt_34 > pc_298)]
 
 ############################################################################
 Iteration:  32
-Number of threads:  340
-646 646 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  316
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 667
+Values to be assigned in that range: 666
 Completed building constraints.
-Number of constraints:  3385
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.3596787452697754  seconds.
+Number of constraints:  3240
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_21 < pc_38, pt_21 > pc_38)
+[21, 101, '0x1c7c0a0', '0x1c7c0ac', '1', 'insertHeap_120'] 21
+21 38 -1 -1
+Prinitng stats:  37 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 38
+Found insertion point for second lock:  69
+Adding fence because new scope started.
+Time taken:  2.412517786026001  seconds.
 
 ############################################################################
-10 [And(pc_34 < pc_301, pt_34 > pc_301), And(pc_34 < pc_310, pt_34 > pc_310), And(pc_34 < pc_316, pt_34 > pc_316), And(pc_34 < pc_322, pt_34 > pc_322), And(pc_34 < pc_325, pt_34 > pc_325), And(pc_34 < pc_330, pt_34 > pc_330), And(pc_34 < pc_381, pt_34 > pc_381), And(pc_34 < pc_574, pt_34 > pc_574), And(pc_39 < pc_298, pt_39 > pc_298), And(pc_39 < pc_301, pt_39 > pc_301)]
 
 ############################################################################
 Iteration:  33
-Number of threads:  340
-646 646 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  319
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 670
+Values to be assigned in that range: 669
 Completed building constraints.
-Number of constraints:  3385
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.3726630210876465  seconds.
+Number of constraints:  3349
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_21 < pc_43, pt_21 > pc_43)
+[21, 101, '0x1c7c0a0', '0x1c7c0ac', '1', 'insertHeap_120'] 21
+21 43 -1 -1
+Prinitng stats:  37 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 43
+Found insertion point for second lock:  77
+Adding fence because new scope started.
+Time taken:  33.08464694023132  seconds.
 
 ############################################################################
-10 [And(pc_39 < pc_310, pt_39 > pc_310), And(pc_39 < pc_316, pt_39 > pc_316), And(pc_39 < pc_322, pt_39 > pc_322), And(pc_39 < pc_325, pt_39 > pc_325), And(pc_39 < pc_330, pt_39 > pc_330), And(pc_39 < pc_381, pt_39 > pc_381), And(pc_39 < pc_574, pt_39 > pc_574), And(pc_290 < pc_294, pt_290 > pc_294), And(pc_290 < pc_296, pt_290 > pc_296), And(pc_290 < pc_301, pt_290 > pc_301)]
 
 ############################################################################
 Iteration:  34
-Number of threads:  340
-646 646 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  322
+LENGTH OF THREAD:  1  :  291
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 673
+Values to be assigned in that range: 672
 Completed building constraints.
-Number of constraints:  3385
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.3777153491973877  seconds.
+Number of constraints:  3462
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_30 < pc_458, pt_30 > pc_458)
+[30, 101, '0x1c7c0a0', '0x1c7c120', '2', 'insertHeap_123'] 30
+30 458 -1 -1
+Prinitng stats:  55 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 458
+Time taken:  1.6691808700561523  seconds.
 
 ############################################################################
-10 [And(pc_290 < pc_307, pt_290 > pc_307), And(pc_290 < pc_310, pt_290 > pc_310), And(pc_290 < pc_316, pt_290 > pc_316), And(pc_290 < pc_379, pt_290 > pc_379), And(pc_294 < pc_296, pt_294 > pc_296), And(pc_294 < pc_301, pt_294 > pc_301), And(pc_294 < pc_307, pt_294 > pc_307), And(pc_294 < pc_310, pt_294 > pc_310), And(pc_294 < pc_316, pt_294 > pc_316), And(pc_294 < pc_379, pt_294 > pc_379)]
 
 ############################################################################
 Iteration:  35
-Number of threads:  340
-646 646 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  322
+LENGTH OF THREAD:  1  :  293
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 675
+Values to be assigned in that range: 674
 Completed building constraints.
-Number of constraints:  3385
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.35732078552246094  seconds.
+Number of constraints:  3575
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_21 < pc_317, pt_21 > pc_317)
+[21, 101, '0x1c7c0a0', '0x1c7c0ac', '1', 'insertHeap_120'] 21
+21 317 -1 -1
+Prinitng stats:  37 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 317
+Found insertion point for second lock:  369
+Adding fence because new scope started.
+Time taken:  15.323259115219116  seconds.
 
 ############################################################################
-10 [And(pc_296 < pc_301, pt_296 > pc_301), And(pc_296 < pc_307, pt_296 > pc_307), And(pc_296 < pc_310, pt_296 > pc_310), And(pc_296 < pc_316, pt_296 > pc_316), And(pc_296 < pc_379, pt_296 > pc_379), And(pc_298 < pc_301, pt_298 > pc_301), And(pc_298 < pc_310, pt_298 > pc_310), And(pc_298 < pc_316, pt_298 > pc_316), And(pc_298 < pc_322, pt_298 > pc_322), And(pc_298 < pc_325, pt_298 > pc_325)]
 
 ############################################################################
 Iteration:  36
-Number of threads:  340
-646 646 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  325
+LENGTH OF THREAD:  1  :  293
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 678
+Values to be assigned in that range: 677
 Completed building constraints.
-Number of constraints:  3385
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.34780001640319824  seconds.
+Number of constraints:  3696
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_21 < pc_339, pt_21 > pc_339)
+[21, 101, '0x1c7c0a0', '0x1c7c0ac', '1', 'insertHeap_120'] 21
+21 339 -1 -1
+Prinitng stats:  37 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding locks for read and taking fence within lock. 339
+Found insertion point for second lock:  406
+Adding fence because new scope started.
+Time taken:  3.9977972507476807  seconds.
 
 ############################################################################
-10 [And(pc_298 < pc_330, pt_298 > pc_330), And(pc_298 < pc_381, pt_298 > pc_381), And(pc_298 < pc_574, pt_298 > pc_574), And(pc_301 < pc_310, pt_301 > pc_310), And(pc_301 < pc_316, pt_301 > pc_316), And(pc_301 < pc_322, pt_301 > pc_322), And(pc_301 < pc_325, pt_301 > pc_325), And(pc_301 < pc_330, pt_301 > pc_330), And(pc_301 < pc_381, pt_301 > pc_381), And(pc_301 < pc_574, pt_301 > pc_574)]
 
 ############################################################################
 Iteration:  37
-Number of threads:  340
-646 646 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  293
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 681
+Values to be assigned in that range: 680
 Completed building constraints.
-Number of constraints:  3385
-Solving:
+Number of constraints:  3821
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.35405993461608887  seconds.
+Time taken:  1.0955369472503662  seconds.
 
 ############################################################################
-10 [And(pc_301 < pc_307, pt_301 > pc_307), And(pc_301 < pc_379, pt_301 > pc_379), And(pc_307 < pc_310, pt_307 > pc_310), And(pc_307 < pc_316, pt_307 > pc_316), And(pc_307 < pc_379, pt_307 > pc_379), And(pc_310 < pc_316, pt_310 > pc_316), And(pc_310 < pc_379, pt_310 > pc_379), And(pc_310 < pc_322, pt_310 > pc_322), And(pc_310 < pc_325, pt_310 > pc_325), And(pc_310 < pc_330, pt_310 > pc_330)]
+6 [And(pc_30 < pc_460, pt_30 > pc_460), And(pc_30 < pc_596, pt_30 > pc_596), And(pc_30 < pc_77, pt_30 > pc_77), And(pc_30 < pc_79, pt_30 > pc_79), And(pc_30 < pc_447, pt_30 > pc_447), And(pc_30 < pc_464, pt_30 > pc_464)]
 
 ############################################################################
 Iteration:  38
-Number of threads:  340
-646 646 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  293
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 681
+Values to be assigned in that range: 680
 Completed building constraints.
-Number of constraints:  3385
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.3492860794067383  seconds.
+Number of constraints:  3821
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_30 < pc_77, pt_30 > pc_77)
+[30, 101, '0x1c7c0a0', '0x1c7c120', '2', 'insertHeap_123'] 30
+30 77 -1 -1
+Prinitng stats:  55 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 77
+Time taken:  4.559203147888184  seconds.
 
 ############################################################################
-10 [And(pc_310 < pc_381, pt_310 > pc_381), And(pc_310 < pc_574, pt_310 > pc_574), And(pc_316 < pc_379, pt_316 > pc_379), And(pc_316 < pc_322, pt_316 > pc_322), And(pc_316 < pc_325, pt_316 > pc_325), And(pc_316 < pc_330, pt_316 > pc_330), And(pc_316 < pc_381, pt_316 > pc_381), And(pc_316 < pc_574, pt_316 > pc_574), And(pc_322 < pc_325, pt_322 > pc_325), And(pc_322 < pc_330, pt_322 > pc_330)]
 
 ############################################################################
 Iteration:  39
-Number of threads:  340
-646 646 10
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  295
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 683
+Values to be assigned in that range: 682
 Completed building constraints.
-Number of constraints:  3385
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.33632373809814453  seconds.
+Number of constraints:  3946
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_30 < pc_79, pt_30 > pc_79)
+[30, 101, '0x1c7c0a0', '0x1c7c120', '2', 'insertHeap_123'] 30
+30 79 -1 -1
+Prinitng stats:  55 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 79
+Time taken:  8.748926162719727  seconds.
 
 ############################################################################
-8 [And(pc_322 < pc_381, pt_322 > pc_381), And(pc_322 < pc_574, pt_322 > pc_574), And(pc_325 < pc_330, pt_325 > pc_330), And(pc_325 < pc_381, pt_325 > pc_381), And(pc_325 < pc_574, pt_325 > pc_574), And(pc_330 < pc_381, pt_330 > pc_381), And(pc_330 < pc_574, pt_330 > pc_574), And(pc_381 < pc_574, pt_381 > pc_574)]
 
 ############################################################################
 Iteration:  40
-Number of threads:  340
-646 646 8
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  297
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 685
+Values to be assigned in that range: 684
 Completed building constraints.
-Number of constraints:  3385
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.3274836540222168  seconds.
+Number of constraints:  4075
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_30 < pc_460, pt_30 > pc_460)
+[30, 101, '0x1c7c0a0', '0x1c7c120', '2', 'insertHeap_123'] 30
+30 460 -1 -1
+Prinitng stats:  55 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 460
+Time taken:  9.209447860717773  seconds.
 
 ############################################################################
 
-Total number of iterations:  40
+############################################################################
+Iteration:  41
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  299
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 687
+Values to be assigned in that range: 686
+Completed building constraints.
+Number of constraints:  4208
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_30 < pc_464, pt_30 > pc_464)
+[30, 101, '0x1c7c0a0', '0x1c7c120', '2', 'insertHeap_123'] 30
+30 464 -1 -1
+Prinitng stats:  55 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 464
+Time taken:  6.629719018936157  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  42
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  301
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 689
+Values to be assigned in that range: 688
+Completed building constraints.
+Number of constraints:  4345
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_30 < pc_447, pt_30 > pc_447)
+[30, 101, '0x1c7c0a0', '0x1c7c120', '2', 'insertHeap_123'] 30
+30 447 -1 -1
+Prinitng stats:  55 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 447
+Time taken:  9.80498194694519  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  43
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  303
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 691
+Values to be assigned in that range: 690
+Completed building constraints.
+Number of constraints:  4486
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.7920050621032715  seconds.
+
+############################################################################
+6 [And(pc_30 < pc_83, pt_30 > pc_83), And(pc_35 < pc_458, pt_35 > pc_458), And(pc_35 < pc_460, pt_35 > pc_460), And(pc_35 < pc_596, pt_35 > pc_596), And(pc_35 < pc_83, pt_35 > pc_83), And(pc_38 < pc_458, pt_38 > pc_458)]
+
+############################################################################
+Iteration:  44
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  303
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 691
+Values to be assigned in that range: 690
+Completed building constraints.
+Number of constraints:  4486
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_35 < pc_83, pt_35 > pc_83)
+[35, 101, '0x1c7c0a0', '0x1c7c120', '2', 'insertHeap_124'] 35
+35 83 -1 -1
+Prinitng stats:  63 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 83
+Time taken:  11.952451229095459  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  45
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  305
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 693
+Values to be assigned in that range: 692
+Completed building constraints.
+Number of constraints:  4631
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.5663251876831055  seconds.
+
+############################################################################
+6 [And(pc_38 < pc_460, pt_38 > pc_460), And(pc_38 < pc_596, pt_38 > pc_596), And(pc_38 < pc_77, pt_38 > pc_77), And(pc_38 < pc_447, pt_38 > pc_447), And(pc_38 < pc_464, pt_38 > pc_464), And(pc_38 < pc_83, pt_38 > pc_83)]
+
+############################################################################
+Iteration:  46
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  305
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 693
+Values to be assigned in that range: 692
+Completed building constraints.
+Number of constraints:  4631
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.692931890487671  seconds.
+
+############################################################################
+6 [And(pc_43 < pc_458, pt_43 > pc_458), And(pc_43 < pc_460, pt_43 > pc_460), And(pc_43 < pc_596, pt_43 > pc_596), And(pc_43 < pc_447, pt_43 > pc_447), And(pc_43 < pc_464, pt_43 > pc_464), And(pc_300 < pc_21, pt_300 > pc_21)]
+
+############################################################################
+Iteration:  47
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  305
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 693
+Values to be assigned in that range: 692
+Completed building constraints.
+Number of constraints:  4631
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.3446838855743408  seconds.
+
+############################################################################
+6 [And(pc_300 < pc_438, pt_300 > pc_438), And(pc_300 < pc_439, pt_300 > pc_439), And(pc_300 < pc_440, pt_300 > pc_440), And(pc_300 < pc_442, pt_300 > pc_442), And(pc_300 < pc_448, pt_300 > pc_448), And(pc_300 < pc_453, pt_300 > pc_453)]
+
+############################################################################
+Iteration:  48
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  305
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 693
+Values to be assigned in that range: 692
+Completed building constraints.
+Number of constraints:  4631
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_300 < pc_448, pt_300 > pc_448)
+[300, 101, '0x1c7c0ac', '0x1c7c0ac', '2', 'isEmpty_175'] 300
+300 448 -1 -1
+Prinitng stats:  343 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 448
+Time taken:  8.510913848876953  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  49
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  307
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 695
+Values to be assigned in that range: 694
+Completed building constraints.
+Number of constraints:  4780
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_300 < pc_453, pt_300 > pc_453)
+[300, 101, '0x1c7c0ac', '0x1c7c0ac', '2', 'isEmpty_175'] 300
+300 453 -1 -1
+Prinitng stats:  343 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 453
+Time taken:  23.827277183532715  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  50
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  309
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 697
+Values to be assigned in that range: 696
+Completed building constraints.
+Number of constraints:  4933
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_300 < pc_438, pt_300 > pc_438)
+[300, 101, '0x1c7c0ac', '0x1c7c0ac', '2', 'isEmpty_175'] 300
+300 438 -1 -1
+Prinitng stats:  343 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 438
+Time taken:  11.1756751537323  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  51
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  311
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 699
+Values to be assigned in that range: 698
+Completed building constraints.
+Number of constraints:  5090
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_300 < pc_440, pt_300 > pc_440)
+[300, 101, '0x1c7c0ac', '0x1c7c0ac', '2', 'isEmpty_175'] 300
+300 440 -1 -1
+Prinitng stats:  343 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 440
+Time taken:  20.854614973068237  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  52
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  313
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 701
+Values to be assigned in that range: 700
+Completed building constraints.
+Number of constraints:  5251
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_300 < pc_442, pt_300 > pc_442)
+[300, 101, '0x1c7c0ac', '0x1c7c0ac', '2', 'isEmpty_175'] 300
+300 442 -1 -1
+Prinitng stats:  343 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 442
+Time taken:  34.63183307647705  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  53
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  315
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 703
+Values to be assigned in that range: 702
+Completed building constraints.
+Number of constraints:  5416
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_300 < pc_439, pt_300 > pc_439)
+[300, 101, '0x1c7c0ac', '0x1c7c0ac', '2', 'isEmpty_175'] 300
+300 439 -1 -1
+Prinitng stats:  343 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 439
+Time taken:  29.11957287788391  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  54
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  317
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 705
+Values to be assigned in that range: 704
+Completed building constraints.
+Number of constraints:  5585
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.279750108718872  seconds.
+
+############################################################################
+6 [And(pc_300 < pc_528, pt_300 > pc_528), And(pc_300 < pc_529, pt_300 > pc_529), And(pc_304 < pc_21, pt_304 > pc_21), And(pc_304 < pc_439, pt_304 > pc_439), And(pc_304 < pc_440, pt_304 > pc_440), And(pc_304 < pc_442, pt_304 > pc_442)]
+
+############################################################################
+Iteration:  55
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  317
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 705
+Values to be assigned in that range: 704
+Completed building constraints.
+Number of constraints:  5585
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_300 < pc_528, pt_300 > pc_528)
+[300, 101, '0x1c7c0ac', '0x1c7c0ac', '2', 'isEmpty_175'] 300
+300 528 -1 -1
+Prinitng stats:  343 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 528
+Time taken:  29.584480047225952  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  56
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  319
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 707
+Values to be assigned in that range: 706
+Completed building constraints.
+Number of constraints:  5758
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_300 < pc_529, pt_300 > pc_529)
+[300, 101, '0x1c7c0ac', '0x1c7c0ac', '2', 'isEmpty_175'] 300
+300 529 -1 -1
+Prinitng stats:  343 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 529
+Time taken:  8.303815126419067  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  57
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  321
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 709
+Values to be assigned in that range: 708
+Completed building constraints.
+Number of constraints:  5935
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.4263050556182861  seconds.
+
+############################################################################
+6 [And(pc_304 < pc_448, pt_304 > pc_448), And(pc_304 < pc_453, pt_304 > pc_453), And(pc_304 < pc_528, pt_304 > pc_528), And(pc_304 < pc_529, pt_304 > pc_529), And(pc_306 < pc_21, pt_306 > pc_21), And(pc_306 < pc_440, pt_306 > pc_440)]
+
+############################################################################
+Iteration:  58
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  321
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 709
+Values to be assigned in that range: 708
+Completed building constraints.
+Number of constraints:  5935
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.4507908821105957  seconds.
+
+############################################################################
+6 [And(pc_306 < pc_442, pt_306 > pc_442), And(pc_306 < pc_448, pt_306 > pc_448), And(pc_306 < pc_453, pt_306 > pc_453), And(pc_306 < pc_528, pt_306 > pc_528), And(pc_306 < pc_529, pt_306 > pc_529), And(pc_308 < pc_458, pt_308 > pc_458)]
+
+############################################################################
+Iteration:  59
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  321
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 709
+Values to be assigned in that range: 708
+Completed building constraints.
+Number of constraints:  5935
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.4467668533325195  seconds.
+
+############################################################################
+6 [And(pc_308 < pc_460, pt_308 > pc_460), And(pc_308 < pc_596, pt_308 > pc_596), And(pc_308 < pc_73, pt_308 > pc_73), And(pc_308 < pc_77, pt_308 > pc_77), And(pc_308 < pc_79, pt_308 > pc_79), And(pc_308 < pc_447, pt_308 > pc_447)]
+
+############################################################################
+Iteration:  60
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  321
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 709
+Values to be assigned in that range: 708
+Completed building constraints.
+Number of constraints:  5935
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_308 < pc_73, pt_308 > pc_73)
+[308, 101, '0x1c7c0a0', '0x1c7c0ac', '2', 'extractMin_148'] 308
+73 308 -1 -1
+Prinitng stats:  -1 360 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for write. 73
+Time taken:  10.116649866104126  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  61
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  323
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 711
+Values to be assigned in that range: 710
+Completed building constraints.
+Number of constraints:  6116
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.4404652118682861  seconds.
+
+############################################################################
+6 [And(pc_308 < pc_464, pt_308 > pc_464), And(pc_311 < pc_458, pt_311 > pc_458), And(pc_311 < pc_460, pt_311 > pc_460), And(pc_311 < pc_596, pt_311 > pc_596), And(pc_311 < pc_21, pt_311 > pc_21), And(pc_311 < pc_440, pt_311 > pc_440)]
+
+############################################################################
+Iteration:  62
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  323
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 711
+Values to be assigned in that range: 710
+Completed building constraints.
+Number of constraints:  6116
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.5116419792175293  seconds.
+
+############################################################################
+6 [And(pc_311 < pc_448, pt_311 > pc_448), And(pc_311 < pc_453, pt_311 > pc_453), And(pc_311 < pc_528, pt_311 > pc_528), And(pc_311 < pc_529, pt_311 > pc_529), And(pc_311 < pc_73, pt_311 > pc_73), And(pc_311 < pc_77, pt_311 > pc_77)]
+
+############################################################################
+Iteration:  63
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  323
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 711
+Values to be assigned in that range: 710
+Completed building constraints.
+Number of constraints:  6116
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.5004658699035645  seconds.
+
+############################################################################
+6 [And(pc_311 < pc_79, pt_311 > pc_79), And(pc_311 < pc_447, pt_311 > pc_447), And(pc_311 < pc_464, pt_311 > pc_464), And(pc_317 < pc_11, pt_317 > pc_11), And(pc_317 < pc_18, pt_317 > pc_18), And(pc_317 < pc_402, pt_317 > pc_402)]
+
+############################################################################
+Iteration:  64
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  323
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 711
+Values to be assigned in that range: 710
+Completed building constraints.
+Number of constraints:  6116
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_317 < pc_402, pt_317 > pc_402)
+[317, 101, '0x1c7c0ac', '0x1c7c120', '2', 'extractMin_150'] 317
+317 402 -1 -1
+Prinitng stats:  377 -1 [528, 529, 402, 26, 27, 28, 438, 439, 440, 442, 447, 448, 453, 73, 458, 460, 77, 79, 464, 83, 596] [2, 5, 9, 11, 16, 18, 21, 30, 35, 38, 43, 300, 304, 306, 308, 311, 317, 319, 325, 331, 334, 339, 403, 406]
+Adding very restricted lock for read. 402
+Time taken:  10.442537069320679  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  65
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  325
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 713
+Values to be assigned in that range: 712
+Completed building constraints.
+Number of constraints:  6301
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.5041382312774658  seconds.
+
+############################################################################
+6 [And(pc_317 < pc_438, pt_317 > pc_438), And(pc_317 < pc_439, pt_317 > pc_439), And(pc_317 < pc_448, pt_317 > pc_448), And(pc_317 < pc_453, pt_317 > pc_453), And(pc_317 < pc_528, pt_317 > pc_528), And(pc_317 < pc_529, pt_317 > pc_529)]
+
+############################################################################
+Iteration:  66
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  325
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 713
+Values to be assigned in that range: 712
+Completed building constraints.
+Number of constraints:  6301
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.5438117980957031  seconds.
+
+############################################################################
+6 [And(pc_319 < pc_21, pt_319 > pc_21), And(pc_319 < pc_440, pt_319 > pc_440), And(pc_319 < pc_453, pt_319 > pc_453), And(pc_319 < pc_528, pt_319 > pc_528), And(pc_319 < pc_529, pt_319 > pc_529), And(pc_319 < pc_458, pt_319 > pc_458)]
+
+############################################################################
+Iteration:  67
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  325
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 713
+Values to be assigned in that range: 712
+Completed building constraints.
+Number of constraints:  6301
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.563690185546875  seconds.
+
+############################################################################
+6 [And(pc_319 < pc_460, pt_319 > pc_460), And(pc_319 < pc_596, pt_319 > pc_596), And(pc_319 < pc_83, pt_319 > pc_83), And(pc_319 < pc_73, pt_319 > pc_73), And(pc_319 < pc_77, pt_319 > pc_77), And(pc_319 < pc_79, pt_319 > pc_79)]
+
+############################################################################
+Iteration:  68
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  325
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 713
+Values to be assigned in that range: 712
+Completed building constraints.
+Number of constraints:  6301
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.5937280654907227  seconds.
+
+############################################################################
+6 [And(pc_319 < pc_464, pt_319 > pc_464), And(pc_325 < pc_21, pt_325 > pc_21), And(pc_325 < pc_440, pt_325 > pc_440), And(pc_325 < pc_528, pt_325 > pc_528), And(pc_325 < pc_529, pt_325 > pc_529), And(pc_325 < pc_458, pt_325 > pc_458)]
+
+############################################################################
+Iteration:  69
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  325
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 713
+Values to be assigned in that range: 712
+Completed building constraints.
+Number of constraints:  6301
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.5370879173278809  seconds.
+
+############################################################################
+6 [And(pc_325 < pc_460, pt_325 > pc_460), And(pc_325 < pc_596, pt_325 > pc_596), And(pc_325 < pc_83, pt_325 > pc_83), And(pc_331 < pc_460, pt_331 > pc_460), And(pc_331 < pc_596, pt_331 > pc_596), And(pc_331 < pc_447, pt_331 > pc_447)]
+
+############################################################################
+Iteration:  70
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  325
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 713
+Values to be assigned in that range: 712
+Completed building constraints.
+Number of constraints:  6301
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.5684001445770264  seconds.
+
+############################################################################
+6 [And(pc_331 < pc_464, pt_331 > pc_464), And(pc_334 < pc_596, pt_334 > pc_596), And(pc_334 < pc_447, pt_334 > pc_447), And(pc_334 < pc_464, pt_334 > pc_464), And(pc_339 < pc_596, pt_339 > pc_596), And(pc_403 < pc_440, pt_403 > pc_440)]
+
+############################################################################
+Iteration:  71
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  325
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 713
+Values to be assigned in that range: 712
+Completed building constraints.
+Number of constraints:  6301
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.5957601070404053  seconds.
+
+############################################################################
+6 [And(pc_403 < pc_21, pt_403 > pc_21), And(pc_403 < pc_529, pt_403 > pc_529), And(pc_406 < pc_458, pt_406 > pc_458), And(pc_406 < pc_460, pt_406 > pc_460), And(pc_406 < pc_596, pt_406 > pc_596), And(pc_406 < pc_464, pt_406 > pc_464)]
+
+############################################################################
+Iteration:  72
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  325
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 713
+Values to be assigned in that range: 712
+Completed building constraints.
+Number of constraints:  6301
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.751777172088623  seconds.
+
+############################################################################
+4 [And(pc_406 < pc_73, pt_406 > pc_73), And(pc_406 < pc_77, pt_406 > pc_77), And(pc_406 < pc_79, pt_406 > pc_79), And(pc_406 < pc_83, pt_406 > pc_83)]
+
+############################################################################
+Iteration:  73
+Thread IDs:  3
+LENGTH OF THREAD:  2  :  328
+LENGTH OF THREAD:  1  :  325
+LENGTH OF THREAD:  0  :  59
+Ranges: 0 713
+Values to be assigned in that range: 712
+Completed building constraints.
+Number of constraints:  6301
+Model was unsat. This means all bugs have been repaired.
+Time taken:  1.6498680114746094  seconds.
+
+############################################################################
+
+Total number of iterations:  73

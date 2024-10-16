@@ -1,996 +1,2143 @@
 Returning from parceTrace.py
 Completed parsing.
 Local variables initialized.
-Number of bugs detected:  49
+Number of bugs detected:  45
 pt_2 < 9999
-pt_2 < pt_516
+pt_2 < pt_3
 pt_3 < 9999
-pt_3 < pt_512
+pt_3 < pt_4
 pt_4 < 9999
-pt_4 < pt_511
+pt_4 < pt_5
 pt_5 < 9999
-pt_5 < pt_7
+pt_5 < pt_8
 pt_7 < 9999
-pt_7 < pt_9
+pt_7 < pt_8
+pt_8 < 9999
+pt_8 < pt_9
 pt_9 < 9999
-pt_9 < pt_31
-pt_10 < 9999
-pt_10 < pt_36
-pt_19 < 9999
-pt_19 < pt_21
+pt_9 < pt_302
+pt_17 < 9999
+pt_17 < pt_302
+pt_21 < 9999
+pt_21 < pt_302
 pt_23 < 9999
-pt_23 < pt_25
-pt_25 < 9999
-pt_25 < pt_27
-pt_29 < 9999
-pt_29 < pt_47
+pt_23 < pt_302
+pt_27 < 9999
+pt_27 < pt_302
 pt_279 < 9999
 pt_279 < pt_282
 pt_282 < 9999
 pt_282 < pt_283
 pt_283 < 9999
-pt_283 < pt_287
+pt_283 < pt_284
 pt_284 < 9999
-pt_284 < pt_286
+pt_284 < pt_302
 pt_286 < 9999
-pt_286 < pt_289
+pt_286 < pt_302
 pt_291 < 9999
-pt_291 < pt_293
-pt_293 < 9999
-pt_293 < pt_298
-pt_298 < 9999
-pt_298 < pt_311
-pt_303 < 9999
-pt_303 < pt_305
-pt_305 < 9999
-pt_305 < pt_307
-pt_309 < 9999
-pt_309 < pt_312
-pt_357 < 9999
-pt_357 < pt_360
-pt_358 < 9999
-pt_358 < pt_361
-pt_546 < 9999
-Number of threads:  3
+pt_291 < pt_292
+pt_292 < 9999
+pt_297 < 9999
+pt_302 < 9999
+pt_302 < pt_304
+pt_304 < 9999
+pt_308 < 9999
+pt_369 < 9999
+pt_369 < pt_370
+pt_370 < 9999
+pt_370 < pt_556
+pt_556 < 9999
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  39
+LENGTH OF THREAD:  1  :  270
+LENGTH OF THREAD:  2  :  246
+Number of threads: 3
+[2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
 ################################################################################################
 Working on Thread: 0 (Length of thread :  39 ): 
+45
 Repairing for bug: pt_2 < 9999
 Before append: 39
 Bug found:  pt_2 pt_2
-Adding: ['2_0', 102, "'0x1b170a0'", -1, 0, 'createHeap_93_x']
+Adding: ['2_0', 102, "'0x1c7c0a0'", -1, 0, 'createHeap_93_x']
 Constraint added: pc_2 == pc_2_0 - 1
 Adding: ['2_1', 103, '0', -1, 0, 'createHeap_93_x']
 Removing: pt_2 < 9999
 ####################################################################################
-Repairing for bug: pt_3 < 9999
+Repairing for bug: pt_2 < pt_3
+MPB Bug found: pt_2 < pt_3
 Before append: 41
+Fence found. 2_1
+Fence count: 1
+After append: 42
+The bug flag is: 1
+Did not continue for: 2
+Did not continue for: 3
+The number of assertions: 165
+The number of blocking constraint will be:  4
+Blocking constraints: [[2, '2_1'], [3, '2_1'], [2, '2_Fence_0'], [3, '2_Fence_0']]
+Bug is: Not(pt_2 < pt_3)
+Num: 168
+ITERATION:  1
+Not(And(pc_2 > pc_2_1,
+        pc_3 > pc_2_1,
+        pc_2 > pc_2_Fence_0,
+        pc_3 > pc_2_Fence_0))
+Num: 169
+ITERATION:  2
+Not(And(pc_2 > pc_2_1,
+        pc_3 > pc_2_1,
+        pc_2 < pc_2_Fence_0,
+        pc_3 < pc_2_Fence_0))
+Num: 170
+ITERATION:  3
+Not(And(pc_2 < pc_2_1,
+        pc_3 < pc_2_1,
+        pc_2 < pc_2_Fence_0,
+        pc_3 < pc_2_Fence_0))
+Num: 171
+ITERATION:  4
+Not(And(pc_2 < pc_2_1,
+        pc_3 < pc_2_1,
+        pc_2 > pc_2_Fence_0,
+        pc_3 > pc_2_Fence_0))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_2 <= pc_2_1),
+            Not(pc_3 <= pc_2_1),
+            Not(pc_2 <= pc_2_Fence_0),
+            Not(pc_3 <= pc_2_Fence_0))),
+    Not(And(Not(pc_2 <= pc_2_1),
+            Not(pc_3 <= pc_2_1),
+            Not(pc_2_Fence_0 <= pc_2),
+            Not(pc_2_Fence_0 <= pc_3))),
+    Not(And(Not(pc_2_1 <= pc_2),
+            Not(pc_2_1 <= pc_3),
+            Not(pc_2_Fence_0 <= pc_2),
+            Not(pc_2_Fence_0 <= pc_3))),
+    Not(And(Not(pc_2_1 <= pc_2),
+            Not(pc_2_1 <= pc_3),
+            Not(pc_2 <= pc_2_Fence_0),
+            Not(pc_3 <= pc_2_Fence_0))))
+Removing: pt_2 < pt_3
+####################################################################################
+Repairing for bug: pt_3 < 9999
+Before append: 42
 Bug found:  pt_3 pt_3
-Adding: ['3_0', 102, "'0x1b170a8'", -1, 0, 'createHeap_94_x']
+Adding: ['3_0', 102, "'0x1c7c0a8'", -1, 0, 'createHeap_94_x']
 Constraint added: pc_3 == pc_3_0 - 1
 Adding: ['3_1', 103, '0', -1, 0, 'createHeap_94_x']
 Removing: pt_3 < 9999
 ####################################################################################
+Repairing for bug: pt_3 < pt_4
+MPB Bug found: pt_3 < pt_4
+Before append: 44
+Fence found. 3_1
+Fence count: 1
+After append: 45
+The bug flag is: 1
+Did not continue for: 3
+Did not continue for: 4
+The number of assertions: 171
+The number of blocking constraint will be:  4
+Blocking constraints: [[3, '3_1'], [4, '3_1'], [3, '3_Fence_1'], [4, '3_Fence_1']]
+Bug is: Not(pt_3 < pt_4)
+Num: 175
+ITERATION:  1
+Not(And(pc_3 < pc_3_1,
+        pc_4 < pc_3_1,
+        pc_3 < pc_3_Fence_1,
+        pc_4 < pc_3_Fence_1))
+Num: 176
+ITERATION:  2
+Not(And(pc_3 < pc_3_1,
+        pc_4 < pc_3_1,
+        pc_3 > pc_3_Fence_1,
+        pc_4 > pc_3_Fence_1))
+Num: 177
+ITERATION:  3
+Not(And(pc_3 > pc_3_1,
+        pc_4 > pc_3_1,
+        pc_3 > pc_3_Fence_1,
+        pc_4 > pc_3_Fence_1))
+Num: 178
+ITERATION:  4
+Not(And(pc_3 > pc_3_1,
+        pc_4 > pc_3_1,
+        pc_3 < pc_3_Fence_1,
+        pc_4 < pc_3_Fence_1))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_3_1 <= pc_3),
+            Not(pc_3_1 <= pc_4),
+            Not(pc_3_Fence_1 <= pc_3),
+            Not(pc_3_Fence_1 <= pc_4))),
+    Not(And(Not(pc_3_1 <= pc_3),
+            Not(pc_3_1 <= pc_4),
+            Not(pc_3 <= pc_3_Fence_1),
+            Not(pc_4 <= pc_3_Fence_1))),
+    Not(And(Not(pc_3 <= pc_3_1),
+            Not(pc_4 <= pc_3_1),
+            Not(pc_3 <= pc_3_Fence_1),
+            Not(pc_4 <= pc_3_Fence_1))),
+    Not(And(Not(pc_3 <= pc_3_1),
+            Not(pc_4 <= pc_3_1),
+            Not(pc_3_Fence_1 <= pc_3),
+            Not(pc_3_Fence_1 <= pc_4))))
+Removing: pt_3 < pt_4
+####################################################################################
 Repairing for bug: pt_4 < 9999
-Before append: 43
+Before append: 45
 Bug found:  pt_4 pt_4
-Adding: ['4_0', 102, "'0x1b170ac'", -1, 0, 'createHeap_95_x']
+Adding: ['4_0', 102, "'0x1c7c0ac'", -1, 0, 'createHeap_95_x']
 Constraint added: pc_4 == pc_4_0 - 1
+Adding: ['4_1', 103, '0', -1, 0, 'createHeap_95_x']
 Removing: pt_4 < 9999
 ####################################################################################
-Repairing for bug: pt_5 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_5 < pt_7
-MPB Bug found: pt_5 < pt_7
-Before append: 44
-After append: 44
+Repairing for bug: pt_4 < pt_5
+MPB Bug found: pt_4 < pt_5
+Before append: 47
+After append: 47
 The bug flag is: -1
-The number of assertions: 165
+Did not continue for: 4
+The number of assertions: 173
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_5 < pt_7)
-Num: 170
+Bug is: Not(pt_4 < pt_5)
+Num: 178
 ITERATION:  1
 Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: False
-Repair not found.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
+####################################################################################
+Repairing for bug: pt_5 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_5 < pt_8
+MPB Bug found: pt_5 < pt_8
+Before append: 47
+After append: 47
+The bug flag is: -1
+The number of assertions: 171
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_5 < pt_8)
+Num: 176
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
 ####################################################################################
 Repairing for bug: pt_7 < 9999
-Before append: 44
+Before append: 47
 ####################################################################################
-Repairing for bug: pt_7 < pt_9
-MPB Bug found: pt_7 < pt_9
-Before append: 44
-After append: 44
+Repairing for bug: pt_7 < pt_8
+MPB Bug found: pt_7 < pt_8
+Before append: 47
+After append: 47
 The bug flag is: -1
-The number of assertions: 165
+The number of assertions: 171
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_7 < pt_9)
+Bug is: Not(pt_7 < pt_8)
+Num: 176
+ITERATION:  1
+Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
+####################################################################################
+Repairing for bug: pt_8 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_8 < pt_9
+MPB Bug found: pt_8 < pt_9
+Before append: 47
+After append: 47
+The bug flag is: -1
+The number of assertions: 171
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_8 < pt_9)
+Num: 176
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
 ####################################################################################
 Repairing for bug: pt_9 < 9999
-Before append: 44
+Before append: 47
 ####################################################################################
-Repairing for bug: pt_9 < pt_31
-MPB Bug found: pt_9 < pt_31
-Before append: 44
-After append: 44
+Repairing for bug: pt_9 < pt_302
+MPB Bug found: pt_9 < pt_302
+Before append: 47
+After append: 47
 The bug flag is: -1
-The number of assertions: 165
+The number of assertions: 171
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_9 < pt_31)
+Bug is: Not(pt_9 < pt_302)
+Num: 176
+ITERATION:  1
+Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
 ####################################################################################
-Repairing for bug: pt_10 < 9999
-Before append: 44
+Repairing for bug: pt_17 < 9999
+Before append: 47
 ####################################################################################
-Repairing for bug: pt_10 < pt_36
-MPB Bug found: pt_10 < pt_36
-Before append: 44
-After append: 44
+Repairing for bug: pt_17 < pt_302
+MPB Bug found: pt_17 < pt_302
+Before append: 47
+After append: 47
 The bug flag is: -1
-The number of assertions: 165
+The number of assertions: 171
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_10 < pt_36)
+Bug is: Not(pt_17 < pt_302)
+Num: 176
+ITERATION:  1
+Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
 ####################################################################################
-Repairing for bug: pt_19 < 9999
-Before append: 44
+Repairing for bug: pt_21 < 9999
+Before append: 47
 ####################################################################################
-Repairing for bug: pt_19 < pt_21
-MPB Bug found: pt_19 < pt_21
-Before append: 44
-After append: 44
+Repairing for bug: pt_21 < pt_302
+MPB Bug found: pt_21 < pt_302
+Before append: 47
+After append: 47
 The bug flag is: -1
-The number of assertions: 165
+The number of assertions: 171
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_19 < pt_21)
+Bug is: Not(pt_21 < pt_302)
+Num: 176
+ITERATION:  1
+Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
 ####################################################################################
 Repairing for bug: pt_23 < 9999
-Before append: 44
+Before append: 47
 ####################################################################################
-Repairing for bug: pt_23 < pt_25
-MPB Bug found: pt_23 < pt_25
-Before append: 44
-After append: 44
+Repairing for bug: pt_23 < pt_302
+MPB Bug found: pt_23 < pt_302
+Before append: 47
+After append: 47
 The bug flag is: -1
-The number of assertions: 165
+The number of assertions: 171
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_23 < pt_25)
+Bug is: Not(pt_23 < pt_302)
+Num: 176
+ITERATION:  1
+Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
 ####################################################################################
-Repairing for bug: pt_25 < 9999
-Before append: 44
+Repairing for bug: pt_27 < 9999
+Before append: 47
 ####################################################################################
-Repairing for bug: pt_25 < pt_27
-MPB Bug found: pt_25 < pt_27
-Before append: 44
-After append: 44
+Repairing for bug: pt_27 < pt_302
+MPB Bug found: pt_27 < pt_302
+Before append: 47
+After append: 47
 The bug flag is: -1
-The number of assertions: 165
+The number of assertions: 171
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_25 < pt_27)
+Bug is: Not(pt_27 < pt_302)
+Num: 176
+ITERATION:  1
+Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_29 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_29 < pt_47
-MPB Bug found: pt_29 < pt_47
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_29 < pt_47)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
 ####################################################################################
 Repairing for bug: pt_279 < 9999
-Before append: 44
+Before append: 47
 ####################################################################################
 Repairing for bug: pt_279 < pt_282
 MPB Bug found: pt_279 < pt_282
-Before append: 44
-After append: 44
+Before append: 47
+After append: 47
 The bug flag is: -1
-The number of assertions: 165
+The number of assertions: 171
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_279 < pt_282)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_282 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_282 < pt_283
-MPB Bug found: pt_282 < pt_283
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_282 < pt_283)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_283 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_283 < pt_287
-MPB Bug found: pt_283 < pt_287
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_283 < pt_287)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_284 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_284 < pt_286
-MPB Bug found: pt_284 < pt_286
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_284 < pt_286)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_286 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_286 < pt_289
-MPB Bug found: pt_286 < pt_289
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_286 < pt_289)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_291 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_291 < pt_293
-MPB Bug found: pt_291 < pt_293
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_291 < pt_293)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_293 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_293 < pt_298
-MPB Bug found: pt_293 < pt_298
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_293 < pt_298)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_298 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_298 < pt_311
-MPB Bug found: pt_298 < pt_311
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_298 < pt_311)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_303 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_303 < pt_305
-MPB Bug found: pt_303 < pt_305
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_303 < pt_305)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_305 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_305 < pt_307
-MPB Bug found: pt_305 < pt_307
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_305 < pt_307)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_309 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_309 < pt_312
-MPB Bug found: pt_309 < pt_312
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_309 < pt_312)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_357 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_357 < pt_360
-MPB Bug found: pt_357 < pt_360
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_357 < pt_360)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_358 < 9999
-Before append: 44
-####################################################################################
-Repairing for bug: pt_358 < pt_361
-MPB Bug found: pt_358 < pt_361
-Before append: 44
-After append: 44
-The bug flag is: -1
-The number of assertions: 165
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_358 < pt_361)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_546 < 9999
-Before append: 44
-Bug found:  pt_546 pt_546
-Adding: ['546_0', 102, "'0x1b170a0'", -1, 0, 'destroyHeap_102_x']
-Constraint added: pc_546 == pc_546_0 - 1
-Removing: pt_546 < 9999
-####################################################################################
-Time taken to repair thread  0 :  1.275641918182373  seconds.
-################################################################################################
-################################################################################################
-Working on Thread: 1 (Length of thread :  262 ): 
-Repairing for bug: pt_2 < pt_516
-MPB Bug found: pt_2 < pt_516
-Before append: 262
-After append: 262
-The bug flag is: -1
-The number of assertions: 1047
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_2 < pt_516)
-Num: 1049
+Num: 176
 ITERATION:  1
 Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: False
-Repair not found.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
 ####################################################################################
-Repairing for bug: pt_3 < pt_512
-MPB Bug found: pt_3 < pt_512
-Before append: 262
-After append: 262
+Repairing for bug: pt_282 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_282 < pt_283
+MPB Bug found: pt_282 < pt_283
+Before append: 47
+After append: 47
 The bug flag is: -1
-The number of assertions: 1047
+The number of assertions: 171
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_3 < pt_512)
+Bug is: Not(pt_282 < pt_283)
+Num: 176
+ITERATION:  1
+Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
 ####################################################################################
-Repairing for bug: pt_4 < pt_511
-MPB Bug found: pt_4 < pt_511
-Before append: 262
-After append: 262
+Repairing for bug: pt_283 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_283 < pt_284
+MPB Bug found: pt_283 < pt_284
+Before append: 47
+After append: 47
 The bug flag is: -1
-The number of assertions: 1047
+The number of assertions: 171
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_4 < pt_511)
+Bug is: Not(pt_283 < pt_284)
+Num: 176
+ITERATION:  1
+Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
+####################################################################################
+Repairing for bug: pt_284 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_284 < pt_302
+MPB Bug found: pt_284 < pt_302
+Before append: 47
+After append: 47
+The bug flag is: -1
+The number of assertions: 171
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_284 < pt_302)
+Num: 176
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
+####################################################################################
+Repairing for bug: pt_286 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_286 < pt_302
+MPB Bug found: pt_286 < pt_302
+Before append: 47
+After append: 47
+The bug flag is: -1
+The number of assertions: 171
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_286 < pt_302)
+Num: 176
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
+####################################################################################
+Repairing for bug: pt_291 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_291 < pt_292
+MPB Bug found: pt_291 < pt_292
+Before append: 47
+After append: 47
+The bug flag is: -1
+The number of assertions: 171
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_291 < pt_292)
+Num: 176
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
+####################################################################################
+Repairing for bug: pt_292 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_297 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_302 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_302 < pt_304
+MPB Bug found: pt_302 < pt_304
+Before append: 47
+After append: 47
+The bug flag is: -1
+The number of assertions: 171
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_302 < pt_304)
+Num: 176
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
+####################################################################################
+Repairing for bug: pt_304 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_308 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_369 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_369 < pt_370
+MPB Bug found: pt_369 < pt_370
+Before append: 47
+After append: 47
+The bug flag is: -1
+The number of assertions: 171
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_369 < pt_370)
+Num: 176
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
+####################################################################################
+Repairing for bug: pt_370 < 9999
+Before append: 47
+####################################################################################
+Repairing for bug: pt_370 < pt_556
+MPB Bug found: pt_370 < pt_556
+Before append: 47
+After append: 47
+The bug flag is: -1
+Did not continue for: 556
+The number of assertions: 173
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_370 < pt_556)
+Num: 178
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+47 [2, 101, "'0x1c7c0a0'", '-1', 0, 'createHeap_93']
+####################################################################################
+Repairing for bug: pt_556 < 9999
+Before append: 47
+Bug found:  pt_556 pt_556
+Adding: ['556_0', 102, "'0x1c7c0a0'", -1, 0, 'destroyHeap_102_x']
+Constraint added: pc_556 == pc_556_0 - 1
+Removing: pt_556 < 9999
+####################################################################################
+Time taken to repair thread  0 :  2.665518045425415  seconds.
+################################################################################################
+[5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
+################################################################################################
+Working on Thread: 1 (Length of thread :  270 ): 
+45
+Repairing for bug: pt_2 < 9999
+Before append: 270
+####################################################################################
+Repairing for bug: pt_2 < pt_3
+MPB Bug found: pt_2 < pt_3
+Before append: 270
+After append: 270
+The bug flag is: -1
+The number of assertions: 1079
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_2 < pt_3)
+Num: 1081
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+270 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_3 < 9999
+Before append: 270
+####################################################################################
+Repairing for bug: pt_3 < pt_4
+MPB Bug found: pt_3 < pt_4
+Before append: 270
+After append: 270
+The bug flag is: -1
+The number of assertions: 1079
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_3 < pt_4)
+Num: 1081
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+270 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_4 < 9999
+Before append: 270
+####################################################################################
+Repairing for bug: pt_4 < pt_5
+MPB Bug found: pt_4 < pt_5
+Before append: 270
+After append: 270
+The bug flag is: -1
+Did not continue for: 5
+The number of assertions: 1079
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_4 < pt_5)
+Num: 1081
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+270 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
 ####################################################################################
 Repairing for bug: pt_5 < 9999
-Before append: 262
+Before append: 270
 Bug found:  pt_5 pt_5
-Adding: ['5_0', 102, "'0x1b170ac'", -1, 1, 'insertHeap_111_x']
+Adding: ['5_0', 102, "'0x1c7c0ac'", -1, 1, 'insertHeap_111_x']
 Constraint added: pc_5 == pc_5_0 - 1
 Adding: ['5_1', 103, '0', -1, 1, 'insertHeap_111_x']
 Removing: pt_5 < 9999
 ####################################################################################
+Repairing for bug: pt_5 < pt_8
+MPB Bug found: pt_5 < pt_8
+Before append: 272
+Fence found. 5_1
+Fence count: 1
+After append: 273
+The bug flag is: 1
+Did not continue for: 5
+Did not continue for: 8
+The number of assertions: 1089
+The number of blocking constraint will be:  4
+Blocking constraints: [[5, '5_1'], [8, '5_1'], [5, '5_Fence_2'], [8, '5_Fence_2']]
+Bug is: Not(pt_5 < pt_8)
+Num: 1092
+ITERATION:  1
+Not(And(pc_5 > pc_5_1,
+        pc_8 > pc_5_1,
+        pc_5 < pc_5_Fence_2,
+        pc_8 < pc_5_Fence_2))
+Num: 1093
+ITERATION:  2
+Not(And(pc_5 > pc_5_1,
+        pc_8 > pc_5_1,
+        pc_5 > pc_5_Fence_2,
+        pc_8 > pc_5_Fence_2))
+Num: 1094
+ITERATION:  3
+Not(And(pc_5 < pc_5_1,
+        pc_8 < pc_5_1,
+        pc_5 < pc_5_Fence_2,
+        pc_8 < pc_5_Fence_2))
+Num: 1095
+ITERATION:  4
+Not(And(pc_5 < pc_5_1,
+        pc_8 < pc_5_1,
+        pc_5 > pc_5_Fence_2,
+        pc_8 > pc_5_Fence_2))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_5 <= pc_5_1),
+            Not(pc_8 <= pc_5_1),
+            Not(pc_5_Fence_2 <= pc_5),
+            Not(pc_5_Fence_2 <= pc_8))),
+    Not(And(Not(pc_5 <= pc_5_1),
+            Not(pc_8 <= pc_5_1),
+            Not(pc_5 <= pc_5_Fence_2),
+            Not(pc_8 <= pc_5_Fence_2))),
+    Not(And(Not(pc_5_1 <= pc_5),
+            Not(pc_5_1 <= pc_8),
+            Not(pc_5_Fence_2 <= pc_5),
+            Not(pc_5_Fence_2 <= pc_8))),
+    Not(And(Not(pc_5_1 <= pc_5),
+            Not(pc_5_1 <= pc_8),
+            Not(pc_5 <= pc_5_Fence_2),
+            Not(pc_8 <= pc_5_Fence_2))))
+Removing: pt_5 < pt_8
+####################################################################################
 Repairing for bug: pt_7 < 9999
-Before append: 264
+Before append: 273
 Bug found:  pt_7 pt_7
-Adding: ['7_0', 102, "'0x1b170ac'", -1, 1, 'insertHeap_118_x']
+Adding: ['7_0', 102, "'0x1c7c0ac'", -1, 1, 'insertHeap_118_x']
 Constraint added: pc_7 == pc_7_0 - 1
 Adding: ['7_1', 103, '0', -1, 1, 'insertHeap_118_x']
 Removing: pt_7 < 9999
 ####################################################################################
+Repairing for bug: pt_7 < pt_8
+MPB Bug found: pt_7 < pt_8
+Before append: 275
+Fence found. 7_1
+Fence count: 1
+After append: 276
+The bug flag is: 1
+Did not continue for: 7
+Did not continue for: 8
+The number of assertions: 1095
+The number of blocking constraint will be:  4
+Blocking constraints: [[7, '7_1'], [8, '7_1'], [7, '7_Fence_3'], [8, '7_Fence_3']]
+Bug is: Not(pt_7 < pt_8)
+Num: 1099
+ITERATION:  1
+Not(And(pc_7 > pc_7_1,
+        pc_8 > pc_7_1,
+        pc_7 > pc_7_Fence_3,
+        pc_8 > pc_7_Fence_3))
+Num: 1100
+ITERATION:  2
+Not(And(pc_7 > pc_7_1,
+        pc_8 > pc_7_1,
+        pc_7 < pc_7_Fence_3,
+        pc_8 < pc_7_Fence_3))
+Num: 1101
+ITERATION:  3
+Not(And(pc_7 < pc_7_1,
+        pc_8 < pc_7_1,
+        pc_7 > pc_7_Fence_3,
+        pc_8 > pc_7_Fence_3))
+Num: 1102
+ITERATION:  4
+Not(And(pc_7 < pc_7_1,
+        pc_8 < pc_7_1,
+        pc_7 < pc_7_Fence_3,
+        pc_8 < pc_7_Fence_3))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_7 <= pc_7_1),
+            Not(pc_8 <= pc_7_1),
+            Not(pc_7 <= pc_7_Fence_3),
+            Not(pc_8 <= pc_7_Fence_3))),
+    Not(And(Not(pc_7 <= pc_7_1),
+            Not(pc_8 <= pc_7_1),
+            Not(pc_7_Fence_3 <= pc_7),
+            Not(pc_7_Fence_3 <= pc_8))),
+    Not(And(Not(pc_7_1 <= pc_7),
+            Not(pc_7_1 <= pc_8),
+            Not(pc_7 <= pc_7_Fence_3),
+            Not(pc_8 <= pc_7_Fence_3))),
+    Not(And(Not(pc_7_1 <= pc_7),
+            Not(pc_7_1 <= pc_8),
+            Not(pc_7_Fence_3 <= pc_7),
+            Not(pc_7_Fence_3 <= pc_8))))
+Removing: pt_7 < pt_8
+####################################################################################
+Repairing for bug: pt_8 < 9999
+Before append: 276
+Bug found:  pt_8 pt_8
+Adding: ['8_0', 102, "'0x1c7c0ac'", -1, 1, 'insertHeap_119_x']
+Constraint added: pc_8 == pc_8_0 - 1
+Removing: pt_8 < 9999
+####################################################################################
+Repairing for bug: pt_8 < pt_9
+MPB Bug found: pt_8 < pt_9
+Before append: 277
+Fence found. 5_1
+Fence count: 1
+After append: 278
+The bug flag is: 1
+Did not continue for: 8
+Did not continue for: 9
+The number of assertions: 1099
+The number of blocking constraint will be:  4
+Blocking constraints: [[8, '5_1'], [9, '5_1'], [8, '8_Fence_4'], [9, '8_Fence_4']]
+Bug is: Not(pt_8 < pt_9)
+Num: 1104
+ITERATION:  1
+Not(And(pc_8 > pc_5_1,
+        pc_9 > pc_5_1,
+        pc_8 > pc_8_Fence_4,
+        pc_9 > pc_8_Fence_4))
+Num: 1105
+ITERATION:  2
+Not(And(pc_8 < pc_5_1,
+        pc_9 < pc_5_1,
+        pc_8 > pc_8_Fence_4,
+        pc_9 > pc_8_Fence_4))
+Num: 1106
+ITERATION:  3
+Not(And(pc_8 < pc_5_1,
+        pc_9 < pc_5_1,
+        pc_8 < pc_8_Fence_4,
+        pc_9 < pc_8_Fence_4))
+Num: 1107
+ITERATION:  4
+Not(And(pc_8 > pc_5_1,
+        pc_9 > pc_5_1,
+        pc_8 < pc_8_Fence_4,
+        pc_9 < pc_8_Fence_4))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_8 <= pc_5_1),
+            Not(pc_9 <= pc_5_1),
+            Not(pc_8 <= pc_8_Fence_4),
+            Not(pc_9 <= pc_8_Fence_4))),
+    Not(And(Not(pc_5_1 <= pc_8),
+            Not(pc_5_1 <= pc_9),
+            Not(pc_8 <= pc_8_Fence_4),
+            Not(pc_9 <= pc_8_Fence_4))),
+    Not(And(Not(pc_5_1 <= pc_8),
+            Not(pc_5_1 <= pc_9),
+            Not(pc_8_Fence_4 <= pc_8),
+            Not(pc_8_Fence_4 <= pc_9))),
+    Not(And(Not(pc_8 <= pc_5_1),
+            Not(pc_9 <= pc_5_1),
+            Not(pc_8_Fence_4 <= pc_8),
+            Not(pc_8_Fence_4 <= pc_9))))
+Removing: pt_8 < pt_9
+####################################################################################
 Repairing for bug: pt_9 < 9999
-Before append: 266
+Before append: 278
 Bug found:  pt_9 pt_9
-Adding: ['9_0', 102, "'0x1b170ac'", -1, 1, 'insertHeap_119_x']
+Adding: ['9_0', 102, "'0x1c7c0a0'", -1, 1, 'insertHeap_120_x']
 Constraint added: pc_9 == pc_9_0 - 1
 Removing: pt_9 < 9999
 ####################################################################################
-Repairing for bug: pt_10 < 9999
-Before append: 267
-Bug found:  pt_10 pt_10
-Adding: ['10_0', 102, "'0x1b170a0'", -1, 1, 'insertHeap_120_x']
-Constraint added: pc_10 == pc_10_0 - 1
-Removing: pt_10 < 9999
-####################################################################################
-Repairing for bug: pt_19 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_19 < pt_21
-MPB Bug found: pt_19 < pt_21
-Before append: 268
-After append: 268
+Repairing for bug: pt_9 < pt_302
+MPB Bug found: pt_9 < pt_302
+Before append: 279
+After append: 279
 The bug flag is: -1
-The number of assertions: 1059
+Did not continue for: 9
+The number of assertions: 1099
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_19 < pt_21)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_23 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_23 < pt_25
-MPB Bug found: pt_23 < pt_25
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_23 < pt_25)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_25 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_25 < pt_27
-MPB Bug found: pt_25 < pt_27
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_25 < pt_27)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_29 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_29 < pt_47
-MPB Bug found: pt_29 < pt_47
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_29 < pt_47)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_279 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_279 < pt_282
-MPB Bug found: pt_279 < pt_282
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_279 < pt_282)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_282 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_282 < pt_283
-MPB Bug found: pt_282 < pt_283
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_282 < pt_283)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_283 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_283 < pt_287
-MPB Bug found: pt_283 < pt_287
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_283 < pt_287)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_284 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_284 < pt_286
-MPB Bug found: pt_284 < pt_286
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_284 < pt_286)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_286 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_286 < pt_289
-MPB Bug found: pt_286 < pt_289
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_286 < pt_289)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_291 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_291 < pt_293
-MPB Bug found: pt_291 < pt_293
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_291 < pt_293)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_293 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_293 < pt_298
-MPB Bug found: pt_293 < pt_298
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_293 < pt_298)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_298 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_298 < pt_311
-MPB Bug found: pt_298 < pt_311
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_298 < pt_311)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_303 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_303 < pt_305
-MPB Bug found: pt_303 < pt_305
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_303 < pt_305)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_305 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_305 < pt_307
-MPB Bug found: pt_305 < pt_307
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_305 < pt_307)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_309 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_309 < pt_312
-MPB Bug found: pt_309 < pt_312
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_309 < pt_312)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_357 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_357 < pt_360
-MPB Bug found: pt_357 < pt_360
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_357 < pt_360)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_358 < 9999
-Before append: 268
-####################################################################################
-Repairing for bug: pt_358 < pt_361
-MPB Bug found: pt_358 < pt_361
-Before append: 268
-After append: 268
-The bug flag is: -1
-The number of assertions: 1059
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_358 < pt_361)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Time taken to repair thread  1 :  4.689944505691528  seconds.
-################################################################################################
-################################################################################################
-Working on Thread: 2 (Length of thread :  244 ): 
-Repairing for bug: pt_2 < pt_516
-MPB Bug found: pt_2 < pt_516
-Before append: 244
-After append: 244
-The bug flag is: -1
-The number of assertions: 975
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_2 < pt_516)
-Num: 977
+Bug is: Not(pt_9 < pt_302)
+Num: 1105
 ITERATION:  1
 Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: False
-Repair not found.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
 ####################################################################################
-Repairing for bug: pt_3 < pt_512
-MPB Bug found: pt_3 < pt_512
-Before append: 244
-After append: 244
+Repairing for bug: pt_17 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_17 < pt_302
+MPB Bug found: pt_17 < pt_302
+Before append: 279
+After append: 279
 The bug flag is: -1
-The number of assertions: 975
+The number of assertions: 1097
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_3 < pt_512)
+Bug is: Not(pt_17 < pt_302)
+Num: 1103
+ITERATION:  1
+Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
 ####################################################################################
-Repairing for bug: pt_4 < pt_511
-MPB Bug found: pt_4 < pt_511
-Before append: 244
-After append: 244
+Repairing for bug: pt_21 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_21 < pt_302
+MPB Bug found: pt_21 < pt_302
+Before append: 279
+After append: 279
 The bug flag is: -1
-The number of assertions: 975
+The number of assertions: 1097
 The number of blocking constraint will be:  0
 Blocking constraints: []
-Bug is: Not(pt_4 < pt_511)
+Bug is: Not(pt_21 < pt_302)
+Num: 1103
+ITERATION:  1
+Not(And)
 Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_5 < pt_7
-MPB Bug found: pt_5 < pt_7
-Before append: 244
-After append: 244
-The bug flag is: -1
-The number of assertions: 975
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_5 < pt_7)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_7 < pt_9
-MPB Bug found: pt_7 < pt_9
-Before append: 244
-After append: 244
-The bug flag is: -1
-The number of assertions: 975
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_7 < pt_9)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_9 < pt_31
-MPB Bug found: pt_9 < pt_31
-Before append: 244
-After append: 244
-The bug flag is: -1
-The number of assertions: 975
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_9 < pt_31)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_10 < pt_36
-MPB Bug found: pt_10 < pt_36
-Before append: 244
-After append: 244
-The bug flag is: -1
-The number of assertions: 975
-The number of blocking constraint will be:  0
-Blocking constraints: []
-Bug is: Not(pt_10 < pt_36)
-Not running blocking constraint generation because already unsat.
-SAIS: True
-Repair not found.
-####################################################################################
-Repairing for bug: pt_19 < 9999
-Before append: 244
-Bug found:  pt_19 pt_19
-Adding: ['19_0', 102, "'0x1b170a0'", -1, 2, 'insertHeap_123_x']
-Constraint added: pc_19 == pc_19_0 - 1
-Adding: ['19_1', 103, '0', -1, 2, 'insertHeap_123_x']
-Removing: pt_19 < 9999
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
 ####################################################################################
 Repairing for bug: pt_23 < 9999
-Before append: 246
-Bug found:  pt_23 pt_23
-Adding: ['23_0', 102, "'0x1b170a0'", -1, 2, 'insertHeap_124_x']
-Constraint added: pc_23 == pc_23_0 - 1
-Adding: ['23_1', 103, '0', -1, 2, 'insertHeap_124_x']
-Removing: pt_23 < 9999
+Before append: 279
 ####################################################################################
-Repairing for bug: pt_25 < 9999
-Before append: 248
-Bug found:  pt_25 pt_25
-Adding: ['25_0', 102, "'0x1b170a0'", -1, 2, 'insertHeap_125_x']
-Constraint added: pc_25 == pc_25_0 - 1
-Removing: pt_25 < 9999
+Repairing for bug: pt_23 < pt_302
+MPB Bug found: pt_23 < pt_302
+Before append: 279
+After append: 279
+The bug flag is: -1
+The number of assertions: 1097
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_23 < pt_302)
+Num: 1103
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
 ####################################################################################
-Repairing for bug: pt_29 < 9999
-Before append: 249
-Bug found:  pt_29 pt_29
-Adding: ['29_0', 102, "'0x1b170a0'", -1, 2, 'insertHeap_126_x']
-Constraint added: pc_29 == pc_29_0 - 1
-Removing: pt_29 < 9999
+Repairing for bug: pt_27 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_27 < pt_302
+MPB Bug found: pt_27 < pt_302
+Before append: 279
+After append: 279
+The bug flag is: -1
+The number of assertions: 1097
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_27 < pt_302)
+Num: 1103
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
 ####################################################################################
 Repairing for bug: pt_279 < 9999
-Before append: 250
-Bug found:  pt_279 pt_279
-Adding: ['279_0', 102, "'0x1b170ac'", -1, 2, 'isEmpty_175_x']
-Constraint added: pc_279 == pc_279_0 - 1
-Removing: pt_279 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_279 < pt_282
+MPB Bug found: pt_279 < pt_282
+Before append: 279
+After append: 279
+The bug flag is: -1
+The number of assertions: 1097
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_279 < pt_282)
+Num: 1103
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
 ####################################################################################
 Repairing for bug: pt_282 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_282 < pt_283
+MPB Bug found: pt_282 < pt_283
+Before append: 279
+After append: 279
+The bug flag is: -1
+The number of assertions: 1097
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_282 < pt_283)
+Num: 1103
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_283 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_283 < pt_284
+MPB Bug found: pt_283 < pt_284
+Before append: 279
+After append: 279
+The bug flag is: -1
+The number of assertions: 1097
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_283 < pt_284)
+Num: 1103
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_284 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_284 < pt_302
+MPB Bug found: pt_284 < pt_302
+Before append: 279
+After append: 279
+The bug flag is: -1
+The number of assertions: 1097
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_284 < pt_302)
+Num: 1103
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_286 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_286 < pt_302
+MPB Bug found: pt_286 < pt_302
+Before append: 279
+After append: 279
+The bug flag is: -1
+The number of assertions: 1097
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_286 < pt_302)
+Num: 1103
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_291 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_291 < pt_292
+MPB Bug found: pt_291 < pt_292
+Before append: 279
+After append: 279
+The bug flag is: -1
+The number of assertions: 1097
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_291 < pt_292)
+Num: 1103
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_292 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_297 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_302 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_302 < pt_304
+MPB Bug found: pt_302 < pt_304
+Before append: 279
+After append: 279
+The bug flag is: -1
+The number of assertions: 1097
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_302 < pt_304)
+Num: 1103
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_304 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_308 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_369 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_369 < pt_370
+MPB Bug found: pt_369 < pt_370
+Before append: 279
+After append: 279
+The bug flag is: -1
+The number of assertions: 1097
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_369 < pt_370)
+Num: 1103
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_370 < 9999
+Before append: 279
+####################################################################################
+Repairing for bug: pt_370 < pt_556
+MPB Bug found: pt_370 < pt_556
+Before append: 279
+After append: 279
+The bug flag is: -1
+The number of assertions: 1097
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_370 < pt_556)
+Num: 1103
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+279 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_556 < 9999
+Before append: 279
+####################################################################################
+Time taken to repair thread  1 :  24.09438991546631  seconds.
+################################################################################################
+[11, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 2, 'insertHeap_111']
+################################################################################################
+Working on Thread: 2 (Length of thread :  246 ): 
+45
+Repairing for bug: pt_2 < 9999
+Before append: 246
+####################################################################################
+Repairing for bug: pt_2 < pt_3
+MPB Bug found: pt_2 < pt_3
+Before append: 246
+After append: 246
+The bug flag is: -1
+The number of assertions: 983
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_2 < pt_3)
+Num: 985
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+246 [11, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 2, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_3 < 9999
+Before append: 246
+####################################################################################
+Repairing for bug: pt_3 < pt_4
+MPB Bug found: pt_3 < pt_4
+Before append: 246
+After append: 246
+The bug flag is: -1
+The number of assertions: 983
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_3 < pt_4)
+Num: 985
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+246 [11, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 2, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_4 < 9999
+Before append: 246
+####################################################################################
+Repairing for bug: pt_4 < pt_5
+MPB Bug found: pt_4 < pt_5
+Before append: 246
+After append: 246
+The bug flag is: -1
+The number of assertions: 983
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_4 < pt_5)
+Num: 985
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+246 [11, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 2, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_5 < 9999
+Before append: 246
+####################################################################################
+Repairing for bug: pt_5 < pt_8
+MPB Bug found: pt_5 < pt_8
+Before append: 246
+After append: 246
+The bug flag is: -1
+The number of assertions: 983
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_5 < pt_8)
+Num: 985
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+246 [11, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 2, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_7 < 9999
+Before append: 246
+####################################################################################
+Repairing for bug: pt_7 < pt_8
+MPB Bug found: pt_7 < pt_8
+Before append: 246
+After append: 246
+The bug flag is: -1
+The number of assertions: 983
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_7 < pt_8)
+Num: 985
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+246 [11, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 2, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_8 < 9999
+Before append: 246
+####################################################################################
+Repairing for bug: pt_8 < pt_9
+MPB Bug found: pt_8 < pt_9
+Before append: 246
+After append: 246
+The bug flag is: -1
+The number of assertions: 983
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_8 < pt_9)
+Num: 985
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+246 [11, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 2, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_9 < 9999
+Before append: 246
+####################################################################################
+Repairing for bug: pt_9 < pt_302
+MPB Bug found: pt_9 < pt_302
+Before append: 246
+After append: 246
+The bug flag is: -1
+Did not continue for: 302
+The number of assertions: 983
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_9 < pt_302)
+Num: 985
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+246 [11, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 2, 'insertHeap_111']
+####################################################################################
+Repairing for bug: pt_17 < 9999
+Before append: 246
+Bug found:  pt_17 pt_17
+Adding: ['17_0', 102, "'0x1c7c0a0'", -1, 2, 'insertHeap_123_x']
+Constraint added: pc_17 == pc_17_0 - 1
+Adding: ['17_1', 103, '0', -1, 2, 'insertHeap_123_x']
+Removing: pt_17 < 9999
+####################################################################################
+Repairing for bug: pt_17 < pt_302
+MPB Bug found: pt_17 < pt_302
+Before append: 248
+Fence found. 17_1
+Fence count: 1
+After append: 249
+The bug flag is: 1
+Did not continue for: 17
+Did not continue for: 302
+The number of assertions: 993
+The number of blocking constraint will be:  4
+Blocking constraints: [[17, '17_1'], [302, '17_1'], [17, '17_Fence_5'], [302, '17_Fence_5']]
+Bug is: Not(pt_17 < pt_302)
+Num: 996
+ITERATION:  1
+Not(And(pc_17 > pc_17_1,
+        pc_302 > pc_17_1,
+        pc_17 > pc_17_Fence_5,
+        pc_302 > pc_17_Fence_5))
+Num: 997
+ITERATION:  2
+Not(And(pc_17 < pc_17_1,
+        pc_302 < pc_17_1,
+        pc_17 > pc_17_Fence_5,
+        pc_302 > pc_17_Fence_5))
+Num: 998
+ITERATION:  3
+Not(And(pc_17 < pc_17_1,
+        pc_302 < pc_17_1,
+        pc_17 < pc_17_Fence_5,
+        pc_302 < pc_17_Fence_5))
+Num: 999
+ITERATION:  4
+Not(And(pc_17 > pc_17_1,
+        pc_302 > pc_17_1,
+        pc_17 < pc_17_Fence_5,
+        pc_302 < pc_17_Fence_5))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_17 <= pc_17_1),
+            Not(pc_302 <= pc_17_1),
+            Not(pc_17 <= pc_17_Fence_5),
+            Not(pc_302 <= pc_17_Fence_5))),
+    Not(And(Not(pc_17_1 <= pc_17),
+            Not(pc_17_1 <= pc_302),
+            Not(pc_17 <= pc_17_Fence_5),
+            Not(pc_302 <= pc_17_Fence_5))),
+    Not(And(Not(pc_17_1 <= pc_17),
+            Not(pc_17_1 <= pc_302),
+            Not(pc_17_Fence_5 <= pc_17),
+            Not(pc_17_Fence_5 <= pc_302))),
+    Not(And(Not(pc_17 <= pc_17_1),
+            Not(pc_302 <= pc_17_1),
+            Not(pc_17_Fence_5 <= pc_17),
+            Not(pc_17_Fence_5 <= pc_302))))
+Removing: pt_17 < pt_302
+####################################################################################
+Repairing for bug: pt_21 < 9999
+Before append: 249
+Bug found:  pt_21 pt_21
+Adding: ['21_0', 102, "'0x1c7c0a0'", -1, 2, 'insertHeap_124_x']
+Constraint added: pc_21 == pc_21_0 - 1
+Removing: pt_21 < 9999
+####################################################################################
+Repairing for bug: pt_21 < pt_302
+MPB Bug found: pt_21 < pt_302
+Before append: 250
+Fence count: 0
+After append: 251
+The bug flag is: 1
+Did not continue for: 21
+Did not continue for: 302
+The number of assertions: 996
+The number of blocking constraint will be:  2
+Blocking constraints: [[21, '21_Fence_6'], [302, '21_Fence_6']]
+Bug is: Not(pt_21 < pt_302)
+Num: 1000
+ITERATION:  1
+Not(And(pc_21 > pc_21_Fence_6, pc_302 > pc_21_Fence_6))
+Num: 1001
+ITERATION:  2
+Not(And(pc_21 < pc_21_Fence_6, pc_302 < pc_21_Fence_6))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_21 <= pc_21_Fence_6),
+            Not(pc_302 <= pc_21_Fence_6))),
+    Not(And(Not(pc_21_Fence_6 <= pc_21),
+            Not(pc_21_Fence_6 <= pc_302))))
+Removing: pt_21 < pt_302
+####################################################################################
+Repairing for bug: pt_23 < 9999
 Before append: 251
+Bug found:  pt_23 pt_23
+Adding: ['23_0', 102, "'0x1c7c0a0'", -1, 2, 'insertHeap_125_x']
+Constraint added: pc_23 == pc_23_0 - 1
+Removing: pt_23 < 9999
+####################################################################################
+Repairing for bug: pt_23 < pt_302
+MPB Bug found: pt_23 < pt_302
+Before append: 252
+Fence count: 0
+After append: 253
+The bug flag is: 1
+Did not continue for: 23
+Did not continue for: 302
+The number of assertions: 1001
+The number of blocking constraint will be:  2
+Blocking constraints: [[23, '23_Fence_7'], [302, '23_Fence_7']]
+Bug is: Not(pt_23 < pt_302)
+Num: 1006
+ITERATION:  1
+Not(And(pc_23 > pc_23_Fence_7, pc_302 > pc_23_Fence_7))
+Num: 1007
+ITERATION:  2
+Not(And(pc_23 < pc_23_Fence_7, pc_302 < pc_23_Fence_7))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_23 <= pc_23_Fence_7),
+            Not(pc_302 <= pc_23_Fence_7))),
+    Not(And(Not(pc_23_Fence_7 <= pc_23),
+            Not(pc_23_Fence_7 <= pc_302))))
+Removing: pt_23 < pt_302
+####################################################################################
+Repairing for bug: pt_27 < 9999
+Before append: 253
+Bug found:  pt_27 pt_27
+Adding: ['27_0', 102, "'0x1c7c0a0'", -1, 2, 'insertHeap_126_x']
+Constraint added: pc_27 == pc_27_0 - 1
+Removing: pt_27 < 9999
+####################################################################################
+Repairing for bug: pt_27 < pt_302
+MPB Bug found: pt_27 < pt_302
+Before append: 254
+Fence count: 0
+After append: 255
+The bug flag is: 1
+Did not continue for: 27
+Did not continue for: 302
+The number of assertions: 1005
+The number of blocking constraint will be:  2
+Blocking constraints: [[27, '27_Fence_8'], [302, '27_Fence_8']]
+Bug is: Not(pt_27 < pt_302)
+Num: 1011
+ITERATION:  1
+Not(And(pc_27 > pc_27_Fence_8, pc_302 > pc_27_Fence_8))
+Num: 1012
+ITERATION:  2
+Not(And(pc_27 < pc_27_Fence_8, pc_302 < pc_27_Fence_8))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_27 <= pc_27_Fence_8),
+            Not(pc_302 <= pc_27_Fence_8))),
+    Not(And(Not(pc_27_Fence_8 <= pc_27),
+            Not(pc_27_Fence_8 <= pc_302))))
+Removing: pt_27 < pt_302
+####################################################################################
+Repairing for bug: pt_279 < 9999
+Before append: 255
+Bug found:  pt_279 pt_279
+Adding: ['279_0', 102, "'0x1c7c0ac'", -1, 2, 'isEmpty_175_x']
+Constraint added: pc_279 == pc_279_0 - 1
+Adding: ['279_1', 103, '0', -1, 2, 'isEmpty_175_x']
+Removing: pt_279 < 9999
+####################################################################################
+Repairing for bug: pt_279 < pt_282
+MPB Bug found: pt_279 < pt_282
+Before append: 257
+Fence found. 279_1
+Fence count: 1
+After append: 258
+The bug flag is: 1
+Did not continue for: 279
+Did not continue for: 282
+The number of assertions: 1011
+The number of blocking constraint will be:  4
+Blocking constraints: [[279, '279_1'], [282, '279_1'], [279, '279_Fence_9'], [282, '279_Fence_9']]
+Bug is: Not(pt_279 < pt_282)
+Num: 1018
+ITERATION:  1
+Not(And(pc_279 < pc_279_1,
+        pc_282 < pc_279_1,
+        pc_279 > pc_279_Fence_9,
+        pc_282 > pc_279_Fence_9))
+Num: 1019
+ITERATION:  2
+Not(And(pc_279 > pc_279_1,
+        pc_282 > pc_279_1,
+        pc_279 > pc_279_Fence_9,
+        pc_282 > pc_279_Fence_9))
+Num: 1020
+ITERATION:  3
+Not(And(pc_279 < pc_279_1,
+        pc_282 < pc_279_1,
+        pc_279 < pc_279_Fence_9,
+        pc_282 < pc_279_Fence_9))
+Num: 1021
+ITERATION:  4
+Not(And(pc_279 > pc_279_1,
+        pc_282 > pc_279_1,
+        pc_279 < pc_279_Fence_9,
+        pc_282 < pc_279_Fence_9))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_279_1 <= pc_279),
+            Not(pc_279_1 <= pc_282),
+            Not(pc_279 <= pc_279_Fence_9),
+            Not(pc_282 <= pc_279_Fence_9))),
+    Not(And(Not(pc_279 <= pc_279_1),
+            Not(pc_282 <= pc_279_1),
+            Not(pc_279 <= pc_279_Fence_9),
+            Not(pc_282 <= pc_279_Fence_9))),
+    Not(And(Not(pc_279_1 <= pc_279),
+            Not(pc_279_1 <= pc_282),
+            Not(pc_279_Fence_9 <= pc_279),
+            Not(pc_279_Fence_9 <= pc_282))),
+    Not(And(Not(pc_279 <= pc_279_1),
+            Not(pc_282 <= pc_279_1),
+            Not(pc_279_Fence_9 <= pc_279),
+            Not(pc_279_Fence_9 <= pc_282))))
+Removing: pt_279 < pt_282
+####################################################################################
+Repairing for bug: pt_282 < 9999
+Before append: 258
 Bug found:  pt_282 pt_282
-Adding: ['282_0', 102, "'0x1b170ac'", -1, 2, 'extractMin_137_x']
+Adding: ['282_0', 102, "'0x1c7c0ac'", -1, 2, 'extractMin_137_x']
 Constraint added: pc_282 == pc_282_0 - 1
 Removing: pt_282 < 9999
 ####################################################################################
+Repairing for bug: pt_282 < pt_283
+MPB Bug found: pt_282 < pt_283
+Before append: 259
+Fence found. 17_1
+Fence count: 1
+After append: 260
+The bug flag is: 1
+Did not continue for: 282
+Did not continue for: 283
+The number of assertions: 1015
+The number of blocking constraint will be:  4
+Blocking constraints: [[282, '17_1'], [283, '17_1'], [282, '282_Fence_10'], [283, '282_Fence_10']]
+Bug is: Not(pt_282 < pt_283)
+Num: 1023
+ITERATION:  1
+Not(And(pc_282 > pc_17_1,
+        pc_283 > pc_17_1,
+        pc_282 < pc_282_Fence_10,
+        pc_283 < pc_282_Fence_10))
+Num: 1024
+ITERATION:  2
+Not(And(pc_282 > pc_17_1,
+        pc_283 > pc_17_1,
+        pc_282 > pc_282_Fence_10,
+        pc_283 > pc_282_Fence_10))
+Num: 1025
+ITERATION:  3
+Not(And(pc_282 < pc_17_1,
+        pc_283 < pc_17_1,
+        pc_282 < pc_282_Fence_10,
+        pc_283 < pc_282_Fence_10))
+Num: 1026
+ITERATION:  4
+Not(And(pc_282 < pc_17_1,
+        pc_283 < pc_17_1,
+        pc_282 > pc_282_Fence_10,
+        pc_283 > pc_282_Fence_10))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_282 <= pc_17_1),
+            Not(pc_283 <= pc_17_1),
+            Not(pc_282_Fence_10 <= pc_282),
+            Not(pc_282_Fence_10 <= pc_283))),
+    Not(And(Not(pc_282 <= pc_17_1),
+            Not(pc_283 <= pc_17_1),
+            Not(pc_282 <= pc_282_Fence_10),
+            Not(pc_283 <= pc_282_Fence_10))),
+    Not(And(Not(pc_17_1 <= pc_282),
+            Not(pc_17_1 <= pc_283),
+            Not(pc_282_Fence_10 <= pc_282),
+            Not(pc_282_Fence_10 <= pc_283))),
+    Not(And(Not(pc_17_1 <= pc_282),
+            Not(pc_17_1 <= pc_283),
+            Not(pc_282 <= pc_282_Fence_10),
+            Not(pc_283 <= pc_282_Fence_10))))
+Removing: pt_282 < pt_283
+####################################################################################
 Repairing for bug: pt_283 < 9999
-Before append: 252
+Before append: 260
 Bug found:  pt_283 pt_283
-Adding: ['283_0', 102, "'0x1b170ac'", -1, 2, 'extractMin_141_x']
+Adding: ['283_0', 102, "'0x1c7c0ac'", -1, 2, 'extractMin_141_x']
 Constraint added: pc_283 == pc_283_0 - 1
 Removing: pt_283 < 9999
 ####################################################################################
+Repairing for bug: pt_283 < pt_284
+MPB Bug found: pt_283 < pt_284
+Before append: 261
+Fence found. 21_Fence_6
+Fence found. 279_1
+Fence found. 27_Fence_8
+Fence count: 3
+After append: 261
+The bug flag is: 1
+Did not continue for: 283
+Did not continue for: 284
+The number of assertions: 1019
+The number of blocking constraint will be:  6
+Blocking constraints: [[283, '21_Fence_6'], [284, '21_Fence_6'], [283, '279_1'], [284, '279_1'], [283, '27_Fence_8'], [284, '27_Fence_8']]
+Bug is: Not(pt_283 < pt_284)
+Num: 1028
+ITERATION:  1
+Not(And(pc_283 > pc_21_Fence_6,
+        pc_284 > pc_21_Fence_6,
+        pc_283 > pc_279_1,
+        pc_284 > pc_279_1,
+        pc_283 > pc_27_Fence_8,
+        pc_284 > pc_27_Fence_8))
+Num: 1029
+ITERATION:  2
+Not(And(pc_283 > pc_21_Fence_6,
+        pc_284 > pc_21_Fence_6,
+        pc_283 < pc_279_1,
+        pc_284 < pc_279_1,
+        pc_283 > pc_27_Fence_8,
+        pc_284 > pc_27_Fence_8))
+Num: 1030
+ITERATION:  3
+Not(And(pc_283 > pc_21_Fence_6,
+        pc_284 > pc_21_Fence_6,
+        pc_283 < pc_279_1,
+        pc_284 < pc_279_1,
+        pc_283 < pc_27_Fence_8,
+        pc_284 < pc_27_Fence_8))
+Num: 1031
+ITERATION:  4
+Not(And(pc_283 > pc_21_Fence_6,
+        pc_284 > pc_21_Fence_6,
+        pc_283 > pc_279_1,
+        pc_284 > pc_279_1,
+        pc_283 < pc_27_Fence_8,
+        pc_284 < pc_27_Fence_8))
+Num: 1032
+ITERATION:  5
+Not(And(pc_283 < pc_21_Fence_6,
+        pc_284 < pc_21_Fence_6,
+        pc_283 < pc_279_1,
+        pc_284 < pc_279_1,
+        pc_283 < pc_27_Fence_8,
+        pc_284 < pc_27_Fence_8))
+Num: 1033
+ITERATION:  6
+Not(And(pc_283 < pc_21_Fence_6,
+        pc_284 < pc_21_Fence_6,
+        pc_283 < pc_279_1,
+        pc_284 < pc_279_1,
+        pc_283 > pc_27_Fence_8,
+        pc_284 > pc_27_Fence_8))
+Num: 1034
+ITERATION:  7
+Not(And(pc_283 < pc_21_Fence_6,
+        pc_284 < pc_21_Fence_6,
+        pc_283 > pc_279_1,
+        pc_284 > pc_279_1,
+        pc_283 < pc_27_Fence_8,
+        pc_284 < pc_27_Fence_8))
+Num: 1035
+ITERATION:  8
+Not(And(pc_283 < pc_21_Fence_6,
+        pc_284 < pc_21_Fence_6,
+        pc_283 > pc_279_1,
+        pc_284 > pc_279_1,
+        pc_283 > pc_27_Fence_8,
+        pc_284 > pc_27_Fence_8))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_283 <= pc_21_Fence_6),
+            Not(pc_284 <= pc_21_Fence_6),
+            Not(pc_283 <= pc_279_1),
+            Not(pc_284 <= pc_279_1),
+            Not(pc_283 <= pc_27_Fence_8),
+            Not(pc_284 <= pc_27_Fence_8))),
+    Not(And(Not(pc_283 <= pc_21_Fence_6),
+            Not(pc_284 <= pc_21_Fence_6),
+            Not(pc_279_1 <= pc_283),
+            Not(pc_279_1 <= pc_284),
+            Not(pc_283 <= pc_27_Fence_8),
+            Not(pc_284 <= pc_27_Fence_8))),
+    Not(And(Not(pc_283 <= pc_21_Fence_6),
+            Not(pc_284 <= pc_21_Fence_6),
+            Not(pc_279_1 <= pc_283),
+            Not(pc_279_1 <= pc_284),
+            Not(pc_27_Fence_8 <= pc_283),
+            Not(pc_27_Fence_8 <= pc_284))),
+    Not(And(Not(pc_283 <= pc_21_Fence_6),
+            Not(pc_284 <= pc_21_Fence_6),
+            Not(pc_283 <= pc_279_1),
+            Not(pc_284 <= pc_279_1),
+            Not(pc_27_Fence_8 <= pc_283),
+            Not(pc_27_Fence_8 <= pc_284))),
+    Not(And(Not(pc_21_Fence_6 <= pc_283),
+            Not(pc_21_Fence_6 <= pc_284),
+            Not(pc_279_1 <= pc_283),
+            Not(pc_279_1 <= pc_284),
+            Not(pc_27_Fence_8 <= pc_283),
+            Not(pc_27_Fence_8 <= pc_284))),
+    Not(And(Not(pc_21_Fence_6 <= pc_283),
+            Not(pc_21_Fence_6 <= pc_284),
+            Not(pc_279_1 <= pc_283),
+            Not(pc_279_1 <= pc_284),
+            Not(pc_283 <= pc_27_Fence_8),
+            Not(pc_284 <= pc_27_Fence_8))),
+    Not(And(Not(pc_21_Fence_6 <= pc_283),
+            Not(pc_21_Fence_6 <= pc_284),
+            Not(pc_283 <= pc_279_1),
+            Not(pc_284 <= pc_279_1),
+            Not(pc_27_Fence_8 <= pc_283),
+            Not(pc_27_Fence_8 <= pc_284))),
+    Not(And(Not(pc_21_Fence_6 <= pc_283),
+            Not(pc_21_Fence_6 <= pc_284),
+            Not(pc_283 <= pc_279_1),
+            Not(pc_284 <= pc_279_1),
+            Not(pc_283 <= pc_27_Fence_8),
+            Not(pc_284 <= pc_27_Fence_8))))
+Removing: pt_283 < pt_284
+####################################################################################
 Repairing for bug: pt_284 < 9999
-Before append: 253
+Before append: 261
 Bug found:  pt_284 pt_284
-Adding: ['284_0', 102, "'0x1b170a0'", -1, 2, 'extractMin_148_x']
+Adding: ['284_0', 102, "'0x1c7c0a0'", -1, 2, 'extractMin_148_x']
 Constraint added: pc_284 == pc_284_0 - 1
 Removing: pt_284 < 9999
 ####################################################################################
+Repairing for bug: pt_284 < pt_302
+MPB Bug found: pt_284 < pt_302
+Before append: 262
+Fence found. 282_Fence_10
+Fence found. 17_1
+Fence found. 23_Fence_7
+Fence count: 3
+After append: 262
+The bug flag is: 1
+Did not continue for: 284
+Did not continue for: 302
+The number of assertions: 1021
+The number of blocking constraint will be:  6
+Blocking constraints: [[284, '282_Fence_10'], [302, '282_Fence_10'], [284, '17_1'], [302, '17_1'], [284, '23_Fence_7'], [302, '23_Fence_7']]
+Bug is: Not(pt_284 < pt_302)
+Num: 1031
+ITERATION:  1
+Not(And(pc_284 > pc_282_Fence_10,
+        pc_302 > pc_282_Fence_10,
+        pc_284 > pc_17_1,
+        pc_302 > pc_17_1,
+        pc_284 > pc_23_Fence_7,
+        pc_302 > pc_23_Fence_7))
+Num: 1032
+ITERATION:  2
+Not(And(pc_284 < pc_282_Fence_10,
+        pc_302 < pc_282_Fence_10,
+        pc_284 > pc_17_1,
+        pc_302 > pc_17_1,
+        pc_284 > pc_23_Fence_7,
+        pc_302 > pc_23_Fence_7))
+Num: 1033
+ITERATION:  3
+Not(And(pc_284 > pc_282_Fence_10,
+        pc_302 > pc_282_Fence_10,
+        pc_284 > pc_17_1,
+        pc_302 > pc_17_1,
+        pc_284 < pc_23_Fence_7,
+        pc_302 < pc_23_Fence_7))
+Num: 1034
+ITERATION:  4
+Not(And(pc_284 < pc_282_Fence_10,
+        pc_302 < pc_282_Fence_10,
+        pc_284 > pc_17_1,
+        pc_302 > pc_17_1,
+        pc_284 < pc_23_Fence_7,
+        pc_302 < pc_23_Fence_7))
+Num: 1035
+ITERATION:  5
+Not(And(pc_284 > pc_282_Fence_10,
+        pc_302 > pc_282_Fence_10,
+        pc_284 < pc_17_1,
+        pc_302 < pc_17_1,
+        pc_284 > pc_23_Fence_7,
+        pc_302 > pc_23_Fence_7))
+Num: 1036
+ITERATION:  6
+Not(And(pc_284 > pc_282_Fence_10,
+        pc_302 > pc_282_Fence_10,
+        pc_284 < pc_17_1,
+        pc_302 < pc_17_1,
+        pc_284 < pc_23_Fence_7,
+        pc_302 < pc_23_Fence_7))
+Num: 1037
+ITERATION:  7
+Not(And(pc_284 < pc_282_Fence_10,
+        pc_302 < pc_282_Fence_10,
+        pc_284 < pc_17_1,
+        pc_302 < pc_17_1,
+        pc_284 > pc_23_Fence_7,
+        pc_302 > pc_23_Fence_7))
+Num: 1038
+ITERATION:  8
+Not(And(pc_284 < pc_282_Fence_10,
+        pc_302 < pc_282_Fence_10,
+        pc_284 < pc_17_1,
+        pc_302 < pc_17_1,
+        pc_284 < pc_23_Fence_7,
+        pc_302 < pc_23_Fence_7))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_284 <= pc_282_Fence_10),
+            Not(pc_302 <= pc_282_Fence_10),
+            Not(pc_284 <= pc_17_1),
+            Not(pc_302 <= pc_17_1),
+            Not(pc_284 <= pc_23_Fence_7),
+            Not(pc_302 <= pc_23_Fence_7))),
+    Not(And(Not(pc_282_Fence_10 <= pc_284),
+            Not(pc_282_Fence_10 <= pc_302),
+            Not(pc_284 <= pc_17_1),
+            Not(pc_302 <= pc_17_1),
+            Not(pc_284 <= pc_23_Fence_7),
+            Not(pc_302 <= pc_23_Fence_7))),
+    Not(And(Not(pc_284 <= pc_282_Fence_10),
+            Not(pc_302 <= pc_282_Fence_10),
+            Not(pc_284 <= pc_17_1),
+            Not(pc_302 <= pc_17_1),
+            Not(pc_23_Fence_7 <= pc_284),
+            Not(pc_23_Fence_7 <= pc_302))),
+    Not(And(Not(pc_282_Fence_10 <= pc_284),
+            Not(pc_282_Fence_10 <= pc_302),
+            Not(pc_284 <= pc_17_1),
+            Not(pc_302 <= pc_17_1),
+            Not(pc_23_Fence_7 <= pc_284),
+            Not(pc_23_Fence_7 <= pc_302))),
+    Not(And(Not(pc_284 <= pc_282_Fence_10),
+            Not(pc_302 <= pc_282_Fence_10),
+            Not(pc_17_1 <= pc_284),
+            Not(pc_17_1 <= pc_302),
+            Not(pc_284 <= pc_23_Fence_7),
+            Not(pc_302 <= pc_23_Fence_7))),
+    Not(And(Not(pc_284 <= pc_282_Fence_10),
+            Not(pc_302 <= pc_282_Fence_10),
+            Not(pc_17_1 <= pc_284),
+            Not(pc_17_1 <= pc_302),
+            Not(pc_23_Fence_7 <= pc_284),
+            Not(pc_23_Fence_7 <= pc_302))),
+    Not(And(Not(pc_282_Fence_10 <= pc_284),
+            Not(pc_282_Fence_10 <= pc_302),
+            Not(pc_17_1 <= pc_284),
+            Not(pc_17_1 <= pc_302),
+            Not(pc_284 <= pc_23_Fence_7),
+            Not(pc_302 <= pc_23_Fence_7))),
+    Not(And(Not(pc_282_Fence_10 <= pc_284),
+            Not(pc_282_Fence_10 <= pc_302),
+            Not(pc_17_1 <= pc_284),
+            Not(pc_17_1 <= pc_302),
+            Not(pc_23_Fence_7 <= pc_284),
+            Not(pc_23_Fence_7 <= pc_302))))
+Removing: pt_284 < pt_302
+####################################################################################
 Repairing for bug: pt_286 < 9999
-Before append: 254
+Before append: 262
 Bug found:  pt_286 pt_286
-Adding: ['286_0', 102, "'0x1b170a0'", -1, 2, 'extractMin_149_x']
+Adding: ['286_0', 102, "'0x1c7c0a0'", -1, 2, 'extractMin_149_x']
 Constraint added: pc_286 == pc_286_0 - 1
 Removing: pt_286 < 9999
 ####################################################################################
+Repairing for bug: pt_286 < pt_302
+MPB Bug found: pt_286 < pt_302
+Before append: 263
+Fence found. 279_1
+Fence found. 27_Fence_8
+Fence count: 2
+After append: 263
+The bug flag is: 1
+Did not continue for: 286
+Did not continue for: 302
+The number of assertions: 1021
+The number of blocking constraint will be:  4
+Blocking constraints: [[286, '279_1'], [302, '279_1'], [286, '27_Fence_8'], [302, '27_Fence_8']]
+Bug is: Not(pt_286 < pt_302)
+Num: 1032
+ITERATION:  1
+Not(And(pc_286 < pc_279_1,
+        pc_302 < pc_279_1,
+        pc_286 < pc_27_Fence_8,
+        pc_302 < pc_27_Fence_8))
+Num: 1033
+ITERATION:  2
+Not(And(pc_286 > pc_279_1,
+        pc_302 > pc_279_1,
+        pc_286 < pc_27_Fence_8,
+        pc_302 < pc_27_Fence_8))
+Num: 1034
+ITERATION:  3
+Not(And(pc_286 < pc_279_1,
+        pc_302 < pc_279_1,
+        pc_286 > pc_27_Fence_8,
+        pc_302 > pc_27_Fence_8))
+Num: 1035
+ITERATION:  4
+Not(And(pc_286 > pc_279_1,
+        pc_302 > pc_279_1,
+        pc_286 > pc_27_Fence_8,
+        pc_302 > pc_27_Fence_8))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_279_1 <= pc_286),
+            Not(pc_279_1 <= pc_302),
+            Not(pc_27_Fence_8 <= pc_286),
+            Not(pc_27_Fence_8 <= pc_302))),
+    Not(And(Not(pc_286 <= pc_279_1),
+            Not(pc_302 <= pc_279_1),
+            Not(pc_27_Fence_8 <= pc_286),
+            Not(pc_27_Fence_8 <= pc_302))),
+    Not(And(Not(pc_279_1 <= pc_286),
+            Not(pc_279_1 <= pc_302),
+            Not(pc_286 <= pc_27_Fence_8),
+            Not(pc_302 <= pc_27_Fence_8))),
+    Not(And(Not(pc_286 <= pc_279_1),
+            Not(pc_302 <= pc_279_1),
+            Not(pc_286 <= pc_27_Fence_8),
+            Not(pc_302 <= pc_27_Fence_8))))
+Removing: pt_286 < pt_302
+####################################################################################
 Repairing for bug: pt_291 < 9999
-Before append: 255
+Before append: 263
 Bug found:  pt_291 pt_291
-Adding: ['291_0', 102, "'0x1b170ac'", -1, 2, 'extractMin_150_x']
+Adding: ['291_0', 102, "'0x1c7c0ac'", -1, 2, 'extractMin_150_x']
 Constraint added: pc_291 == pc_291_0 - 1
 Removing: pt_291 < 9999
 ####################################################################################
-Repairing for bug: pt_293 < 9999
-Before append: 256
-Bug found:  pt_293 pt_293
-Adding: ['293_0', 102, "'0x1b170ac'", -1, 2, 'heapify_186_x']
-Constraint added: pc_293 == pc_293_0 - 1
-Removing: pt_293 < 9999
+Repairing for bug: pt_291 < pt_292
+MPB Bug found: pt_291 < pt_292
+Before append: 264
+Fence found. 279_Fence_9
+Fence found. 21_Fence_6
+Fence found. 17_1
+Fence count: 3
+After append: 264
+The bug flag is: 1
+Did not continue for: 291
+Did not continue for: 292
+The number of assertions: 1025
+The number of blocking constraint will be:  6
+Blocking constraints: [[291, '279_Fence_9'], [292, '279_Fence_9'], [291, '21_Fence_6'], [292, '21_Fence_6'], [291, '17_1'], [292, '17_1']]
+Bug is: Not(pt_291 < pt_292)
+Num: 1037
+ITERATION:  1
+Not(And(pc_291 > pc_279_Fence_9,
+        pc_292 > pc_279_Fence_9,
+        pc_291 > pc_21_Fence_6,
+        pc_292 > pc_21_Fence_6,
+        pc_291 > pc_17_1,
+        pc_292 > pc_17_1))
+Num: 1038
+ITERATION:  2
+Not(And(pc_291 < pc_279_Fence_9,
+        pc_292 < pc_279_Fence_9,
+        pc_291 > pc_21_Fence_6,
+        pc_292 > pc_21_Fence_6,
+        pc_291 > pc_17_1,
+        pc_292 > pc_17_1))
+Num: 1039
+ITERATION:  3
+Not(And(pc_291 < pc_279_Fence_9,
+        pc_292 < pc_279_Fence_9,
+        pc_291 < pc_21_Fence_6,
+        pc_292 < pc_21_Fence_6,
+        pc_291 > pc_17_1,
+        pc_292 > pc_17_1))
+Num: 1040
+ITERATION:  4
+Not(And(pc_291 > pc_279_Fence_9,
+        pc_292 > pc_279_Fence_9,
+        pc_291 < pc_21_Fence_6,
+        pc_292 < pc_21_Fence_6,
+        pc_291 > pc_17_1,
+        pc_292 > pc_17_1))
+Num: 1041
+ITERATION:  5
+Not(And(pc_291 > pc_279_Fence_9,
+        pc_292 > pc_279_Fence_9,
+        pc_291 > pc_21_Fence_6,
+        pc_292 > pc_21_Fence_6,
+        pc_291 < pc_17_1,
+        pc_292 < pc_17_1))
+Num: 1042
+ITERATION:  6
+Not(And(pc_291 < pc_279_Fence_9,
+        pc_292 < pc_279_Fence_9,
+        pc_291 > pc_21_Fence_6,
+        pc_292 > pc_21_Fence_6,
+        pc_291 < pc_17_1,
+        pc_292 < pc_17_1))
+Num: 1043
+ITERATION:  7
+Not(And(pc_291 > pc_279_Fence_9,
+        pc_292 > pc_279_Fence_9,
+        pc_291 < pc_21_Fence_6,
+        pc_292 < pc_21_Fence_6,
+        pc_291 < pc_17_1,
+        pc_292 < pc_17_1))
+Num: 1044
+ITERATION:  8
+Not(And(pc_291 < pc_279_Fence_9,
+        pc_292 < pc_279_Fence_9,
+        pc_291 < pc_21_Fence_6,
+        pc_292 < pc_21_Fence_6,
+        pc_291 < pc_17_1,
+        pc_292 < pc_17_1))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_291 <= pc_279_Fence_9),
+            Not(pc_292 <= pc_279_Fence_9),
+            Not(pc_291 <= pc_21_Fence_6),
+            Not(pc_292 <= pc_21_Fence_6),
+            Not(pc_291 <= pc_17_1),
+            Not(pc_292 <= pc_17_1))),
+    Not(And(Not(pc_279_Fence_9 <= pc_291),
+            Not(pc_279_Fence_9 <= pc_292),
+            Not(pc_291 <= pc_21_Fence_6),
+            Not(pc_292 <= pc_21_Fence_6),
+            Not(pc_291 <= pc_17_1),
+            Not(pc_292 <= pc_17_1))),
+    Not(And(Not(pc_279_Fence_9 <= pc_291),
+            Not(pc_279_Fence_9 <= pc_292),
+            Not(pc_21_Fence_6 <= pc_291),
+            Not(pc_21_Fence_6 <= pc_292),
+            Not(pc_291 <= pc_17_1),
+            Not(pc_292 <= pc_17_1))),
+    Not(And(Not(pc_291 <= pc_279_Fence_9),
+            Not(pc_292 <= pc_279_Fence_9),
+            Not(pc_21_Fence_6 <= pc_291),
+            Not(pc_21_Fence_6 <= pc_292),
+            Not(pc_291 <= pc_17_1),
+            Not(pc_292 <= pc_17_1))),
+    Not(And(Not(pc_291 <= pc_279_Fence_9),
+            Not(pc_292 <= pc_279_Fence_9),
+            Not(pc_291 <= pc_21_Fence_6),
+            Not(pc_292 <= pc_21_Fence_6),
+            Not(pc_17_1 <= pc_291),
+            Not(pc_17_1 <= pc_292))),
+    Not(And(Not(pc_279_Fence_9 <= pc_291),
+            Not(pc_279_Fence_9 <= pc_292),
+            Not(pc_291 <= pc_21_Fence_6),
+            Not(pc_292 <= pc_21_Fence_6),
+            Not(pc_17_1 <= pc_291),
+            Not(pc_17_1 <= pc_292))),
+    Not(And(Not(pc_291 <= pc_279_Fence_9),
+            Not(pc_292 <= pc_279_Fence_9),
+            Not(pc_21_Fence_6 <= pc_291),
+            Not(pc_21_Fence_6 <= pc_292),
+            Not(pc_17_1 <= pc_291),
+            Not(pc_17_1 <= pc_292))),
+    Not(And(Not(pc_279_Fence_9 <= pc_291),
+            Not(pc_279_Fence_9 <= pc_292),
+            Not(pc_21_Fence_6 <= pc_291),
+            Not(pc_21_Fence_6 <= pc_292),
+            Not(pc_17_1 <= pc_291),
+            Not(pc_17_1 <= pc_292))))
+Removing: pt_291 < pt_292
 ####################################################################################
-Repairing for bug: pt_298 < 9999
-Before append: 257
-Bug found:  pt_298 pt_298
-Adding: ['298_0', 102, "'0x1b170ac'", -1, 2, 'heapify_189_x']
-Constraint added: pc_298 == pc_298_0 - 1
-Removing: pt_298 < 9999
+Repairing for bug: pt_292 < 9999
+Before append: 264
+Bug found:  pt_292 pt_292
+Adding: ['292_0', 102, "'0x1c7c0ac'", -1, 2, 'heapify_186_x']
+Constraint added: pc_292 == pc_292_0 - 1
+Removing: pt_292 < 9999
 ####################################################################################
-Repairing for bug: pt_303 < 9999
-Before append: 258
-Bug found:  pt_303 pt_303
-Adding: ['303_0', 102, "'0x1b170a0'", -1, 2, 'heapify_193_x']
-Constraint added: pc_303 == pc_303_0 - 1
-Removing: pt_303 < 9999
+Repairing for bug: pt_297 < 9999
+Before append: 265
+Bug found:  pt_297 pt_297
+Adding: ['297_0', 102, "'0x1c7c0ac'", -1, 2, 'heapify_189_x']
+Constraint added: pc_297 == pc_297_0 - 1
+Removing: pt_297 < 9999
 ####################################################################################
-Repairing for bug: pt_305 < 9999
-Before append: 259
-Bug found:  pt_305 pt_305
-Adding: ['305_0', 102, "'0x1b170a0'", -1, 2, 'heapify_194_x']
-Constraint added: pc_305 == pc_305_0 - 1
-Removing: pt_305 < 9999
+Repairing for bug: pt_302 < 9999
+Before append: 266
+Bug found:  pt_302 pt_302
+Adding: ['302_0', 102, "'0x1c7c0a0'", -1, 2, 'heapify_193_x']
+Constraint added: pc_302 == pc_302_0 - 1
+Removing: pt_302 < 9999
 ####################################################################################
-Repairing for bug: pt_309 < 9999
-Before append: 260
-Bug found:  pt_309 pt_309
-Adding: ['309_0', 102, "'0x1b170a0'", -1, 2, 'heapify_195_x']
-Constraint added: pc_309 == pc_309_0 - 1
-Removing: pt_309 < 9999
+Repairing for bug: pt_302 < pt_304
+MPB Bug found: pt_302 < pt_304
+Before append: 267
+Fence found. 17_Fence_5
+Fence found. 279_1
+Fence count: 2
+After append: 267
+The bug flag is: 1
+Did not continue for: 302
+Did not continue for: 304
+The number of assertions: 1029
+The number of blocking constraint will be:  4
+Blocking constraints: [[302, '17_Fence_5'], [304, '17_Fence_5'], [302, '279_1'], [304, '279_1']]
+Bug is: Not(pt_302 < pt_304)
+Num: 1044
+ITERATION:  1
+Not(And(pc_302 > pc_17_Fence_5,
+        pc_304 > pc_17_Fence_5,
+        pc_302 > pc_279_1,
+        pc_304 > pc_279_1))
+Num: 1045
+ITERATION:  2
+Not(And(pc_302 < pc_17_Fence_5,
+        pc_304 < pc_17_Fence_5,
+        pc_302 > pc_279_1,
+        pc_304 > pc_279_1))
+Num: 1046
+ITERATION:  3
+Not(And(pc_302 > pc_17_Fence_5,
+        pc_304 > pc_17_Fence_5,
+        pc_302 < pc_279_1,
+        pc_304 < pc_279_1))
+Num: 1047
+ITERATION:  4
+Not(And(pc_302 < pc_17_Fence_5,
+        pc_304 < pc_17_Fence_5,
+        pc_302 < pc_279_1,
+        pc_304 < pc_279_1))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_302 <= pc_17_Fence_5),
+            Not(pc_304 <= pc_17_Fence_5),
+            Not(pc_302 <= pc_279_1),
+            Not(pc_304 <= pc_279_1))),
+    Not(And(Not(pc_17_Fence_5 <= pc_302),
+            Not(pc_17_Fence_5 <= pc_304),
+            Not(pc_302 <= pc_279_1),
+            Not(pc_304 <= pc_279_1))),
+    Not(And(Not(pc_302 <= pc_17_Fence_5),
+            Not(pc_304 <= pc_17_Fence_5),
+            Not(pc_279_1 <= pc_302),
+            Not(pc_279_1 <= pc_304))),
+    Not(And(Not(pc_17_Fence_5 <= pc_302),
+            Not(pc_17_Fence_5 <= pc_304),
+            Not(pc_279_1 <= pc_302),
+            Not(pc_279_1 <= pc_304))))
+Removing: pt_302 < pt_304
 ####################################################################################
-Repairing for bug: pt_357 < 9999
-Before append: 261
-Bug found:  pt_357 pt_357
-Adding: ['357_0', 102, "'0x1b170ac'", -1, 2, 'printHeap_204_x']
-Constraint added: pc_357 == pc_357_0 - 1
-Removing: pt_357 < 9999
+Repairing for bug: pt_304 < 9999
+Before append: 267
+Bug found:  pt_304 pt_304
+Adding: ['304_0', 102, "'0x1c7c0a0'", -1, 2, 'heapify_194_x']
+Constraint added: pc_304 == pc_304_0 - 1
+Removing: pt_304 < 9999
 ####################################################################################
-Repairing for bug: pt_358 < 9999
-Before append: 262
-Bug found:  pt_358 pt_358
-Adding: ['358_0', 102, "'0x1b170a0'", -1, 2, 'printHeap_205_x']
-Constraint added: pc_358 == pc_358_0 - 1
-Removing: pt_358 < 9999
+Repairing for bug: pt_308 < 9999
+Before append: 268
+Bug found:  pt_308 pt_308
+Adding: ['308_0', 102, "'0x1c7c0a0'", -1, 2, 'heapify_195_x']
+Constraint added: pc_308 == pc_308_0 - 1
+Removing: pt_308 < 9999
 ####################################################################################
-Time taken to repair thread  2 :  1.9061791896820068  seconds.
+Repairing for bug: pt_369 < 9999
+Before append: 269
+Bug found:  pt_369 pt_369
+Adding: ['369_0', 102, "'0x1c7c0ac'", -1, 2, 'printHeap_204_x']
+Constraint added: pc_369 == pc_369_0 - 1
+Removing: pt_369 < 9999
+####################################################################################
+Repairing for bug: pt_369 < pt_370
+MPB Bug found: pt_369 < pt_370
+Before append: 270
+Fence found. 279_Fence_9
+Fence found. 282_Fence_10
+Fence count: 2
+After append: 270
+The bug flag is: 1
+Did not continue for: 369
+Did not continue for: 370
+The number of assertions: 1035
+The number of blocking constraint will be:  4
+Blocking constraints: [[369, '279_Fence_9'], [370, '279_Fence_9'], [369, '282_Fence_10'], [370, '282_Fence_10']]
+Bug is: Not(pt_369 < pt_370)
+Num: 1053
+ITERATION:  1
+Not(And(pc_369 > pc_279_Fence_9,
+        pc_370 > pc_279_Fence_9,
+        pc_369 < pc_282_Fence_10,
+        pc_370 < pc_282_Fence_10))
+Num: 1054
+ITERATION:  2
+Not(And(pc_369 > pc_279_Fence_9,
+        pc_370 > pc_279_Fence_9,
+        pc_369 > pc_282_Fence_10,
+        pc_370 > pc_282_Fence_10))
+Num: 1055
+ITERATION:  3
+Not(And(pc_369 < pc_279_Fence_9,
+        pc_370 < pc_279_Fence_9,
+        pc_369 > pc_282_Fence_10,
+        pc_370 > pc_282_Fence_10))
+Num: 1056
+ITERATION:  4
+Not(And(pc_369 < pc_279_Fence_9,
+        pc_370 < pc_279_Fence_9,
+        pc_369 < pc_282_Fence_10,
+        pc_370 < pc_282_Fence_10))
+Not running blocking constraint generation because already unsat.
+SAIS: And(Not(And(Not(pc_369 <= pc_279_Fence_9),
+            Not(pc_370 <= pc_279_Fence_9),
+            Not(pc_282_Fence_10 <= pc_369),
+            Not(pc_282_Fence_10 <= pc_370))),
+    Not(And(Not(pc_369 <= pc_279_Fence_9),
+            Not(pc_370 <= pc_279_Fence_9),
+            Not(pc_369 <= pc_282_Fence_10),
+            Not(pc_370 <= pc_282_Fence_10))),
+    Not(And(Not(pc_279_Fence_9 <= pc_369),
+            Not(pc_279_Fence_9 <= pc_370),
+            Not(pc_369 <= pc_282_Fence_10),
+            Not(pc_370 <= pc_282_Fence_10))),
+    Not(And(Not(pc_279_Fence_9 <= pc_369),
+            Not(pc_279_Fence_9 <= pc_370),
+            Not(pc_282_Fence_10 <= pc_369),
+            Not(pc_282_Fence_10 <= pc_370))))
+Removing: pt_369 < pt_370
+####################################################################################
+Repairing for bug: pt_370 < 9999
+Before append: 270
+Bug found:  pt_370 pt_370
+Adding: ['370_0', 102, "'0x1c7c0a0'", -1, 2, 'printHeap_205_x']
+Constraint added: pc_370 == pc_370_0 - 1
+Removing: pt_370 < 9999
+####################################################################################
+Repairing for bug: pt_370 < pt_556
+MPB Bug found: pt_370 < pt_556
+Before append: 271
+After append: 271
+The bug flag is: -1
+Did not continue for: 370
+The number of assertions: 1034
+The number of blocking constraint will be:  0
+Blocking constraints: []
+Bug is: Not(pt_370 < pt_556)
+Num: 1053
+ITERATION:  1
+Not(And)
+Not running blocking constraint generation because already unsat.
+271 ['17_1', 103, '0', -1, 2, 'insertHeap_123_x']
+####################################################################################
+Repairing for bug: pt_556 < 9999
+Before append: 271
+####################################################################################
+Time taken to repair thread  2 :  64.08979415893555  seconds.
 ################################################################################################
 Beginning the recombination.
-Time taken to recombine individual threads:  0.007830619812011719  seconds.
+0
+0
+Time taken to recombine individual threads:  0.012749910354614258  seconds.

@@ -1,325 +1,603 @@
 Local variables initialized.
-[2, 101, '0x1894e08', '-1', '0', 'createQueue_84']
-Number of bugs to be repaired:  39
+Number of bugs to be repaired:  41
 And(pc_2 < pc_5, pt_2 > pc_5)
+And(pc_2 < pc_7, pt_2 > pc_7)
 And(pc_2 < pc_11, pt_2 > pc_11)
-And(pc_2 < pc_188, pt_2 > pc_188)
-And(pc_2 < pc_190, pt_2 > pc_190)
-And(pc_2 < pc_194, pt_2 > pc_194)
-And(pc_2 < pc_198, pt_2 > pc_198)
-And(pc_2 < pc_205, pt_2 > pc_205)
-And(pc_2 < pc_485, pt_2 > pc_485)
+And(pc_2 < pc_207, pt_2 > pc_207)
+And(pc_2 < pc_209, pt_2 > pc_209)
+And(pc_2 < pc_213, pt_2 > pc_213)
+And(pc_2 < pc_218, pt_2 > pc_218)
+And(pc_2 < pc_221, pt_2 > pc_221)
+And(pc_2 < pc_520, pt_2 > pc_520)
 And(pc_5 < pc_11, pt_5 > pc_11)
-And(pc_7 < pc_5, pt_7 > pc_5)
+And(pc_7 < pc_10, pt_7 > pc_10)
 And(pc_7 < pc_11, pt_7 > pc_11)
-And(pc_7 < pc_188, pt_7 > pc_188)
-And(pc_7 < pc_190, pt_7 > pc_190)
-And(pc_7 < pc_194, pt_7 > pc_194)
-And(pc_7 < pc_198, pt_7 > pc_198)
-And(pc_7 < pc_205, pt_7 > pc_205)
-And(pc_7 < pc_485, pt_7 > pc_485)
-And(pc_11 < pc_194, pt_11 > pc_194)
-And(pc_11 < pc_488, pt_11 > pc_488)
+And(pc_7 < pc_238, pt_7 > pc_238)
+And(pc_7 < pc_239, pt_7 > pc_239)
+And(pc_7 < pc_241, pt_7 > pc_241)
+And(pc_7 < pc_244, pt_7 > pc_244)
+And(pc_7 < pc_246, pt_7 > pc_246)
+And(pc_7 < pc_567, pt_7 > pc_567)
+And(pc_11 < pc_19, pt_11 > pc_19)
+And(pc_11 < pc_213, pt_11 > pc_213)
+And(pc_11 < pc_524, pt_11 > pc_524)
 And(pc_14 < pc_5, pt_14 > pc_5)
-And(pc_14 < pc_11, pt_14 > pc_11)
-And(pc_188 < pc_190, pt_188 > pc_190)
-And(pc_188 < pc_194, pt_188 > pc_194)
-And(pc_188 < pc_198, pt_188 > pc_198)
-And(pc_188 < pc_205, pt_188 > pc_205)
-And(pc_188 < pc_485, pt_188 > pc_485)
-And(pc_190 < pc_194, pt_190 > pc_194)
-And(pc_190 < pc_198, pt_190 > pc_198)
-And(pc_190 < pc_205, pt_190 > pc_205)
-And(pc_190 < pc_485, pt_190 > pc_485)
-And(pc_192 < pc_205, pt_192 > pc_205)
-And(pc_192 < pc_487, pt_192 > pc_487)
-And(pc_194 < pc_198, pt_194 > pc_198)
-And(pc_194 < pc_205, pt_194 > pc_205)
-And(pc_194 < pc_485, pt_194 > pc_485)
-And(pc_194 < pc_488, pt_194 > pc_488)
-And(pc_198 < pc_205, pt_198 > pc_205)
-And(pc_198 < pc_485, pt_198 > pc_485)
-And(pc_205 < pc_485, pt_205 > pc_485)
-{488, 485, 487} {192, 2, 194, 5, 198, 7, 11, 205, 14, 188, 190}
-Set Size:  10
-10 [And(pc_2 < pc_5, pt_2 > pc_5), And(pc_2 < pc_11, pt_2 > pc_11), And(pc_2 < pc_188, pt_2 > pc_188), And(pc_2 < pc_190, pt_2 > pc_190), And(pc_2 < pc_194, pt_2 > pc_194), And(pc_2 < pc_198, pt_2 > pc_198), And(pc_2 < pc_205, pt_2 > pc_205), And(pc_2 < pc_485, pt_2 > pc_485), And(pc_5 < pc_11, pt_5 > pc_11), And(pc_7 < pc_5, pt_7 > pc_5)]
+And(pc_207 < pc_239, pt_207 > pc_239)
+And(pc_207 < pc_241, pt_207 > pc_241)
+And(pc_207 < pc_244, pt_207 > pc_244)
+And(pc_207 < pc_246, pt_207 > pc_246)
+And(pc_207 < pc_567, pt_207 > pc_567)
+And(pc_209 < pc_241, pt_209 > pc_241)
+And(pc_209 < pc_244, pt_209 > pc_244)
+And(pc_209 < pc_246, pt_209 > pc_246)
+And(pc_209 < pc_567, pt_209 > pc_567)
+And(pc_211 < pc_246, pt_211 > pc_246)
+And(pc_211 < pc_568, pt_211 > pc_568)
+And(pc_213 < pc_244, pt_213 > pc_244)
+And(pc_213 < pc_246, pt_213 > pc_246)
+And(pc_213 < pc_567, pt_213 > pc_567)
+And(pc_213 < pc_14, pt_213 > pc_14)
+And(pc_213 < pc_569, pt_213 > pc_569)
+And(pc_218 < pc_246, pt_218 > pc_246)
+And(pc_218 < pc_567, pt_218 > pc_567)
+And(pc_221 < pc_567, pt_221 > pc_567)
+{520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569} {2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221}
+Set Size:  6
+6 [And(pc_2 < pc_5, pt_2 > pc_5), And(pc_2 < pc_7, pt_2 > pc_7), And(pc_2 < pc_11, pt_2 > pc_11), And(pc_2 < pc_207, pt_2 > pc_207), And(pc_2 < pc_209, pt_2 > pc_209), And(pc_2 < pc_213, pt_2 > pc_213)]
 
 ############################################################################
 Iteration:  1
-Number of threads:  82
-651 651 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  46
+LENGTH OF THREAD:  1  :  309
+LENGTH OF THREAD:  2  :  296
+Ranges: 0 652
+Values to be assigned in that range: 651
 Completed building constraints.
-Number of constraints:  1836
-Solving:
+Number of constraints:  1973
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
-2 5
-Prinitng stats:  -1 -1
+2 5 -1 -1
+Prinitng stats:  -1 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
 Adding locks for write. 2
-Found insertion point for first lock:  0 1 [2, 101, '0x1894e08', '-1', 18, 'createQueue_84'] ['Lock_0', 105, 'M1', -1, 18, 'createQueue_84_x']
-Adding fence because another thread started.
-Adding unlock: ['UnLock_0', 106, 'M1', -1, 18, 'createQueue_84_x']
+Found insertion point for first lock:  0 1 [2, 101, '0xe65e08', '-1', '0', 'createQueue_84'] ['Lock_0', 105, 'M1', -1, '0', 'createQueue_84_x']
+Adding fence because new scope started.
+Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'createQueue_84_x']
 Adding locks for read and taking fence within lock. 5
 Found insertion point for second lock:  3
-Adding fence because another thread started.
-Time taken:  2.260620594024658  seconds.
+Adding fence because new scope started.
+Time taken:  4.767303943634033  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  2
-Number of threads:  82
-657 657 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  312
+LENGTH OF THREAD:  2  :  296
+Ranges: 0 658
+Values to be assigned in that range: 657
 Completed building constraints.
-Number of constraints:  1876
-Solving:
+Number of constraints:  2003
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_188, pt_2 > pc_188)
-2 188
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 188
-Found insertion point for second lock:  192
-Adding fence because another thread started.
-Time taken:  2.25234055519104  seconds.
+Now, we will repair:  And(pc_2 < pc_11, pt_2 > pc_11)
+[2, 101, '0xe65e08', '-1', '0', 'createQueue_84'] 2
+2 11 -1 -1
+Prinitng stats:  0 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding locks for read and taking fence within lock. 11
+Found insertion point for second lock:  15
+Adding fence because new scope started.
+Time taken:  18.011685132980347  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  3
-Number of threads:  82
-660 660 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  312
+LENGTH OF THREAD:  2  :  299
+Ranges: 0 661
+Values to be assigned in that range: 660
 Completed building constraints.
-Number of constraints:  1899
-Solving:
+Number of constraints:  2024
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_190, pt_2 > pc_190)
-2 190
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 190
-Found insertion point for second lock:  197
-Adding fence because another thread started.
-Time taken:  2.606881856918335  seconds.
+Now, we will repair:  And(pc_2 < pc_7, pt_2 > pc_7)
+[2, 101, '0xe65e08', '-1', '0', 'createQueue_84'] 2
+2 7 -1 -1
+Prinitng stats:  0 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding locks for read and taking fence within lock. 7
+Found insertion point for second lock:  11
+Adding fence because new scope started.
+Time taken:  1.5222501754760742  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  4
-Number of threads:  82
-663 663 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  315
+LENGTH OF THREAD:  2  :  299
+Ranges: 0 664
+Values to be assigned in that range: 663
 Completed building constraints.
-Number of constraints:  1926
-Solving:
+Number of constraints:  2049
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_11, pt_2 > pc_11)
-2 11
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 11
-Found insertion point for second lock:  15
-Adding fence because another thread started.
-Time taken:  5.199700593948364  seconds.
+Now, we will repair:  And(pc_2 < pc_207, pt_2 > pc_207)
+[2, 101, '0xe65e08', '-1', '0', 'createQueue_84'] 2
+2 207 -1 -1
+Prinitng stats:  0 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding locks for read and taking fence within lock. 207
+Found insertion point for second lock:  217
+Adding fence because new scope started.
+Time taken:  2.848489999771118  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  5
-Number of threads:  82
-666 666 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  318
+LENGTH OF THREAD:  2  :  299
+Ranges: 0 667
+Values to be assigned in that range: 666
 Completed building constraints.
-Number of constraints:  1958
-Solving:
+Number of constraints:  2078
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_194, pt_2 > pc_194)
-2 194
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 194
-Found insertion point for second lock:  207
-Adding fence because another thread started.
-Time taken:  6.019976615905762  seconds.
+Now, we will repair:  And(pc_2 < pc_209, pt_2 > pc_209)
+[2, 101, '0xe65e08', '-1', '0', 'createQueue_84'] 2
+2 209 -1 -1
+Prinitng stats:  0 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding locks for read and taking fence within lock. 209
+Found insertion point for second lock:  222
+Adding fence because new scope started.
+Time taken:  1.1841089725494385  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  6
-Number of threads:  82
-669 669 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  321
+LENGTH OF THREAD:  2  :  299
+Ranges: 0 670
+Values to be assigned in that range: 669
 Completed building constraints.
-Number of constraints:  1995
-Solving:
+Number of constraints:  2111
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_198, pt_2 > pc_198)
-2 198
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 198
-Found insertion point for second lock:  214
-Adding fence because another thread started.
-Time taken:  3.211149215698242  seconds.
+Now, we will repair:  And(pc_2 < pc_213, pt_2 > pc_213)
+[2, 101, '0xe65e08', '-1', '0', 'createQueue_84'] 2
+2 213 -1 -1
+Prinitng stats:  0 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding locks for read and taking fence within lock. 213
+Found insertion point for second lock:  229
+Adding fence because new scope started.
+Time taken:  1.2400801181793213  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  7
-Number of threads:  82
-672 672 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  324
+LENGTH OF THREAD:  2  :  299
+Ranges: 0 673
+Values to be assigned in that range: 672
 Completed building constraints.
-Number of constraints:  2039
-Solving:
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_205, pt_2 > pc_205)
-2 205
-Prinitng stats:  0 -1
-Adding locks for read and taking fence within lock. 205
-Found insertion point for second lock:  224
-Adding fence because another thread started.
-Time taken:  2.8053483963012695  seconds.
+Number of constraints:  2148
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.23222708702087402  seconds.
 
 ############################################################################
+6 [And(pc_2 < pc_218, pt_2 > pc_218), And(pc_2 < pc_221, pt_2 > pc_221), And(pc_2 < pc_520, pt_2 > pc_520), And(pc_5 < pc_11, pt_5 > pc_11), And(pc_7 < pc_10, pt_7 > pc_10), And(pc_7 < pc_11, pt_7 > pc_11)]
 
 ############################################################################
 Iteration:  8
-Number of threads:  82
-675 675 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  324
+LENGTH OF THREAD:  2  :  299
+Ranges: 0 673
+Values to be assigned in that range: 672
 Completed building constraints.
-Number of constraints:  2360
-Solving:
+Number of constraints:  2148
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_485, pt_2 > pc_485)
-2 485
-Prinitng stats:  0 -1
-Adding very restricted lock for read. 485
-['Lock_8', 105, 'M1', -1, 81, 'printQueue_163_x']
-[485, 101, '0x1894e00', '0x1894e00', 81, 'printQueue_163']
-['UnLock_8', 106, 'M1', -1, 81, 'printQueue_163_x']
-[486, 102, '0x1894e00', '-1', 81, 'printQueue_163_x']
-Time taken:  2.9672036170959473  seconds.
+Now, we will repair:  And(pc_2 < pc_218, pt_2 > pc_218)
+[2, 101, '0xe65e08', '-1', '0', 'createQueue_84'] 2
+2 218 -1 -1
+Prinitng stats:  0 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding locks for read and taking fence within lock. 218
+Found insertion point for second lock:  237
+Adding fence because new scope started.
+Time taken:  2.5163779258728027  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  9
-Number of threads:  82
-677 677 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  327
+LENGTH OF THREAD:  2  :  299
+Ranges: 0 676
+Values to be assigned in that range: 675
 Completed building constraints.
-Number of constraints:  2401
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.1968836784362793  seconds.
+Number of constraints:  2189
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_2 < pc_221, pt_2 > pc_221)
+[2, 101, '0xe65e08', '-1', '0', 'createQueue_84'] 2
+2 221 -1 -1
+Prinitng stats:  0 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding locks for read and taking fence within lock. 221
+Found insertion point for second lock:  243
+Adding fence because new scope started.
+Time taken:  0.5134658813476562  seconds.
 
 ############################################################################
-10 [And(pc_7 < pc_11, pt_7 > pc_11), And(pc_7 < pc_188, pt_7 > pc_188), And(pc_7 < pc_190, pt_7 > pc_190), And(pc_7 < pc_194, pt_7 > pc_194), And(pc_7 < pc_198, pt_7 > pc_198), And(pc_7 < pc_205, pt_7 > pc_205), And(pc_7 < pc_485, pt_7 > pc_485), And(pc_11 < pc_194, pt_11 > pc_194), And(pc_11 < pc_488, pt_11 > pc_488), And(pc_14 < pc_5, pt_14 > pc_5)]
 
 ############################################################################
 Iteration:  10
-Number of threads:  82
-677 677 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  330
+LENGTH OF THREAD:  2  :  299
+Ranges: 0 679
+Values to be assigned in that range: 678
 Completed building constraints.
-Number of constraints:  2401
-Solving:
+Number of constraints:  2234
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_14 < pc_5, pt_14 > pc_5)
-5 14
-Prinitng stats:  6 -1
-Adding locks for read and taking fence within lock. 14
-Found insertion point for second lock:  21
-Adding fence because another thread started.
-Time taken:  2.733786106109619  seconds.
+Now, we will repair:  And(pc_2 < pc_520, pt_2 > pc_520)
+[2, 101, '0xe65e08', '-1', '0', 'createQueue_84'] 2
+2 520 -1 -1
+Prinitng stats:  0 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding very restricted lock for read. 520
+Time taken:  0.7672088146209717  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  11
-Number of threads:  82
-680 680 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  332
+LENGTH OF THREAD:  2  :  299
+Ranges: 0 681
+Values to be assigned in that range: 680
 Completed building constraints.
-Number of constraints:  2624
-Solving:
+Number of constraints:  2279
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_11 < pc_488, pt_11 > pc_488)
-11 488
-Prinitng stats:  15 -1
-Adding very restricted lock for read. 488
-['Lock_10', 105, 'M1', -1, 81, 'printQueue_167_x']
-[488, 101, '0x7fe7680041a8', '0x7fe768002b08', 81, 'printQueue_167']
-['UnLock_10', 106, 'M1', -1, 81, 'printQueue_167_x']
-[489, 102, '0x7fe7680041a8', '-1', 81, 'printQueue_167_x']
-Time taken:  2.8047444820404053  seconds.
+Now, we will repair:  And(pc_7 < pc_10, pt_7 > pc_10)
+[7, 101, '0xe65e08', '0xe65e08', '1', 'enqueue_102'] 7
+7 10 -1 -1
+Prinitng stats:  11 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding very restricted lock for read. 10
+Time taken:  0.6037430763244629  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  12
-Number of threads:  82
-682 682 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  332
+LENGTH OF THREAD:  2  :  301
+Ranges: 0 683
+Values to be assigned in that range: 682
 Completed building constraints.
-Number of constraints:  2673
-Solving:
+Number of constraints:  2328
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.2547276020050049  seconds.
+Time taken:  0.2695479393005371  seconds.
 
 ############################################################################
-10 [And(pc_14 < pc_11, pt_14 > pc_11), And(pc_188 < pc_190, pt_188 > pc_190), And(pc_188 < pc_194, pt_188 > pc_194), And(pc_188 < pc_198, pt_188 > pc_198), And(pc_188 < pc_205, pt_188 > pc_205), And(pc_188 < pc_485, pt_188 > pc_485), And(pc_190 < pc_194, pt_190 > pc_194), And(pc_190 < pc_198, pt_190 > pc_198), And(pc_190 < pc_205, pt_190 > pc_205), And(pc_190 < pc_485, pt_190 > pc_485)]
+6 [And(pc_7 < pc_238, pt_7 > pc_238), And(pc_7 < pc_239, pt_7 > pc_239), And(pc_7 < pc_241, pt_7 > pc_241), And(pc_7 < pc_244, pt_7 > pc_244), And(pc_7 < pc_246, pt_7 > pc_246), And(pc_7 < pc_567, pt_7 > pc_567)]
 
 ############################################################################
 Iteration:  13
-Number of threads:  82
-682 682 10
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  332
+LENGTH OF THREAD:  2  :  301
+Ranges: 0 683
+Values to be assigned in that range: 682
 Completed building constraints.
-Number of constraints:  2673
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.24842166900634766  seconds.
+Number of constraints:  2328
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_7 < pc_238, pt_7 > pc_238)
+[7, 101, '0xe65e08', '0xe65e08', '1', 'enqueue_102'] 7
+7 238 -1 -1
+Prinitng stats:  11 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding very restricted lock for read. 238
+Time taken:  0.6970832347869873  seconds.
 
 ############################################################################
-9 [And(pc_192 < pc_205, pt_192 > pc_205), And(pc_192 < pc_487, pt_192 > pc_487), And(pc_194 < pc_198, pt_194 > pc_198), And(pc_194 < pc_205, pt_194 > pc_205), And(pc_194 < pc_485, pt_194 > pc_485), And(pc_194 < pc_488, pt_194 > pc_488), And(pc_198 < pc_205, pt_198 > pc_205), And(pc_198 < pc_485, pt_198 > pc_485), And(pc_205 < pc_485, pt_205 > pc_485)]
 
 ############################################################################
 Iteration:  14
-Number of threads:  82
-682 682 9
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  332
+LENGTH OF THREAD:  2  :  303
+Ranges: 0 685
+Values to be assigned in that range: 684
 Completed building constraints.
-Number of constraints:  2673
-Solving:
+Number of constraints:  2381
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_192 < pc_205, pt_192 > pc_205)
-192 205
-Prinitng stats:  -1 227
-Adding locks for write. 192
-Found insertion point for first lock:  208 209 [192, 101, '0x7fe768002b00', '0x7fe768002b00', 66, 'dequeue_123'] ['Lock_11', 105, 'M1', -1, 66, 'dequeue_123_x']
-Adding fence because another thread started.
-Adding unlock: ['UnLock_11', 106, 'M1', -1, 66, 'dequeue_123_x']
-Time taken:  3.069607734680176  seconds.
+Now, we will repair:  And(pc_7 < pc_239, pt_7 > pc_239)
+[7, 101, '0xe65e08', '0xe65e08', '1', 'enqueue_102'] 7
+7 239 -1 -1
+Prinitng stats:  11 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding very restricted lock for read. 239
+Time taken:  0.9832751750946045  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  15
-Number of threads:  82
-685 685 9
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  332
+LENGTH OF THREAD:  2  :  305
+Ranges: 0 687
+Values to be assigned in that range: 686
 Completed building constraints.
-Number of constraints:  2732
-Solving:
+Number of constraints:  2438
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_192 < pc_487, pt_192 > pc_487)
-192 487
-Prinitng stats:  208 -1
-Adding very restricted lock for read. 487
-['Lock_12', 105, 'M1', -1, 81, 'printQueue_166_x']
-[487, 101, '0x7fe7680041a0', '0x7fe768002b00', 81, 'printQueue_166']
-['UnLock_12', 106, 'M1', -1, 81, 'printQueue_166_x']
-['Lock_10', 105, 'M1', -1, 81, 'printQueue_167_x']
-Time taken:  7.5201332569122314  seconds.
+Now, we will repair:  And(pc_7 < pc_241, pt_7 > pc_241)
+[7, 101, '0xe65e08', '0xe65e08', '1', 'enqueue_102'] 7
+7 241 -1 -1
+Prinitng stats:  11 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding very restricted lock for read. 241
+Time taken:  0.8594729900360107  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  16
-Number of threads:  82
-687 687 9
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  332
+LENGTH OF THREAD:  2  :  307
+Ranges: 0 689
+Values to be assigned in that range: 688
 Completed building constraints.
-Number of constraints:  2789
-Solving:
-Model was unsat. This means all bugs have been repaired.
-Time taken:  0.30271434783935547  seconds.
+Number of constraints:  2499
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_7 < pc_244, pt_7 > pc_244)
+[7, 101, '0xe65e08', '0xe65e08', '1', 'enqueue_102'] 7
+7 244 -1 -1
+Prinitng stats:  11 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding very restricted lock for read. 244
+Time taken:  0.595754861831665  seconds.
 
 ############################################################################
 
-Total number of iterations:  16
+############################################################################
+Iteration:  17
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  332
+LENGTH OF THREAD:  2  :  309
+Ranges: 0 691
+Values to be assigned in that range: 690
+Completed building constraints.
+Number of constraints:  2564
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_7 < pc_567, pt_7 > pc_567)
+[7, 101, '0xe65e08', '0xe65e08', '1', 'enqueue_102'] 7
+7 567 -1 -1
+Prinitng stats:  11 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding very restricted lock for read. 567
+Time taken:  0.7989881038665771  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  18
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  332
+LENGTH OF THREAD:  2  :  311
+Ranges: 0 693
+Values to be assigned in that range: 692
+Completed building constraints.
+Number of constraints:  2633
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_7 < pc_246, pt_7 > pc_246)
+[7, 101, '0xe65e08', '0xe65e08', '1', 'enqueue_102'] 7
+7 246 -1 -1
+Prinitng stats:  11 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding very restricted lock for read. 246
+Time taken:  0.7497479915618896  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  19
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  332
+LENGTH OF THREAD:  2  :  313
+Ranges: 0 695
+Values to be assigned in that range: 694
+Completed building constraints.
+Number of constraints:  2706
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.3518819808959961  seconds.
+
+############################################################################
+6 [And(pc_11 < pc_19, pt_11 > pc_19), And(pc_11 < pc_213, pt_11 > pc_213), And(pc_11 < pc_524, pt_11 > pc_524), And(pc_14 < pc_5, pt_14 > pc_5), And(pc_207 < pc_239, pt_207 > pc_239), And(pc_207 < pc_241, pt_207 > pc_241)]
+
+############################################################################
+Iteration:  20
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  332
+LENGTH OF THREAD:  2  :  313
+Ranges: 0 695
+Values to be assigned in that range: 694
+Completed building constraints.
+Number of constraints:  2706
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_11 < pc_524, pt_11 > pc_524)
+[11, 101, '0xe65e08', '0xe65e08', '2', 'enqueue_104'] 11
+11 524 -1 -1
+Prinitng stats:  20 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding very restricted lock for read. 524
+Time taken:  0.6734709739685059  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  21
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  334
+LENGTH OF THREAD:  2  :  313
+Ranges: 0 697
+Values to be assigned in that range: 696
+Completed building constraints.
+Number of constraints:  2783
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_11 < pc_19, pt_11 > pc_19)
+[11, 101, '0xe65e08', '0xe65e08', '2', 'enqueue_104'] 11
+11 19 -1 -1
+Prinitng stats:  20 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding very restricted lock for read. 19
+Time taken:  3.3329761028289795  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  22
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  336
+LENGTH OF THREAD:  2  :  313
+Ranges: 0 699
+Values to be assigned in that range: 698
+Completed building constraints.
+Number of constraints:  2864
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_14 < pc_5, pt_14 > pc_5)
+[5, 101, '0xe65e08', '0xe65e08', '1', 'enqueue_101'] 5
+5 14 -1 -1
+Prinitng stats:  6 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding locks for read and taking fence within lock. 14
+Found insertion point for second lock:  26
+Adding fence because new scope started.
+Time taken:  2.0123729705810547  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  23
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  336
+LENGTH OF THREAD:  2  :  316
+Ranges: 0 702
+Values to be assigned in that range: 701
+Completed building constraints.
+Number of constraints:  2953
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.4381089210510254  seconds.
+
+############################################################################
+6 [And(pc_207 < pc_244, pt_207 > pc_244), And(pc_207 < pc_246, pt_207 > pc_246), And(pc_207 < pc_567, pt_207 > pc_567), And(pc_209 < pc_241, pt_209 > pc_241), And(pc_209 < pc_244, pt_209 > pc_244), And(pc_209 < pc_246, pt_209 > pc_246)]
+
+############################################################################
+Iteration:  24
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  336
+LENGTH OF THREAD:  2  :  316
+Ranges: 0 702
+Values to be assigned in that range: 701
+Completed building constraints.
+Number of constraints:  2953
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.44687914848327637  seconds.
+
+############################################################################
+6 [And(pc_209 < pc_567, pt_209 > pc_567), And(pc_211 < pc_246, pt_211 > pc_246), And(pc_211 < pc_568, pt_211 > pc_568), And(pc_213 < pc_244, pt_213 > pc_244), And(pc_213 < pc_246, pt_213 > pc_246), And(pc_213 < pc_567, pt_213 > pc_567)]
+
+############################################################################
+Iteration:  25
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  336
+LENGTH OF THREAD:  2  :  316
+Ranges: 0 702
+Values to be assigned in that range: 701
+Completed building constraints.
+Number of constraints:  2953
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_211 < pc_568, pt_211 > pc_568)
+211 568 -1 -1
+Prinitng stats:  -1 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding locks for write. 211
+Found insertion point for first lock:  234 235 [211, 101, '0x7f02280028c0', '0x7f02280028c0', '1', 'dequeue_123'] ['Lock_20', 105, 'M1', -1, '1', 'dequeue_123_x']
+Adding fence because new scope started.
+Adding unlock: ['UnLock_20', 106, 'M1', -1, '1', 'dequeue_123_x']
+Adding very restricted lock for read. 568
+Time taken:  6.541653871536255  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  26
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  339
+LENGTH OF THREAD:  2  :  318
+Ranges: 0 707
+Values to be assigned in that range: 706
+Completed building constraints.
+Number of constraints:  3139
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.6318180561065674  seconds.
+
+############################################################################
+5 [And(pc_213 < pc_14, pt_213 > pc_14), And(pc_213 < pc_569, pt_213 > pc_569), And(pc_218 < pc_246, pt_218 > pc_246), And(pc_218 < pc_567, pt_218 > pc_567), And(pc_221 < pc_567, pt_221 > pc_567)]
+
+############################################################################
+Iteration:  27
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  339
+LENGTH OF THREAD:  2  :  318
+Ranges: 0 707
+Values to be assigned in that range: 706
+Completed building constraints.
+Number of constraints:  3139
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_213 < pc_569, pt_213 > pc_569)
+[213, 101, '0xe65e00', '0xe65e00', '1', 'dequeue_124'] 213
+213 569 -1 -1
+Prinitng stats:  239 -1 [520, 10, 524, 238, 239, 241, 19, 244, 246, 567, 568, 569] [2, 5, 7, 11, 14, 207, 209, 211, 213, 218, 221]
+Adding very restricted lock for read. 569
+Time taken:  1.9540579319000244  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  28
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  49
+LENGTH OF THREAD:  1  :  339
+LENGTH OF THREAD:  2  :  320
+Ranges: 0 709
+Values to be assigned in that range: 708
+Completed building constraints.
+Number of constraints:  3236
+Model was unsat. This means all bugs have been repaired.
+Time taken:  0.5207459926605225  seconds.
+
+############################################################################
+
+Total number of iterations:  28

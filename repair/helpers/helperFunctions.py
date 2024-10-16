@@ -4,7 +4,7 @@ from z3 import *
 Just a collection of helper functions universally called.
 """
 
-benchmarks = ["memcached"]
+benchmarks = ["skipLists"]
 # "Clevel_hashing" , "memcached", "CCEH",  "P-CLHT", "fastFair", "array", "doublyList", "dqueue", 
 #                   "graph", "hash", "heap", "list_1", "list", "motivatingExample", 
 #                   "priorityQueue", "queue_1", "queue_2", "queue", "set", "skipLists", 
@@ -68,11 +68,14 @@ def print_UNSATCORE(solver):
         for c in s.unsat_core():
             print(dict_solver[str(c)], c)
 
-def getIndividualThreads(trace, threadCount):
+def getIndividualThreads(trace, threadCountParam):
+    threadCount = set()
+    for t in trace:
+        threadCount.add(t[-2])
     #Function to seperate out individual threads from one monolithic trace.
     indiThreads = []
-    print("Thread IDs: ", threadCount)
-    for i in threadCount:
+    print("Thread IDs: ", len(threadCount))
+    for i in list(threadCount):
         currentThread = []
         for j in range(len(trace)):
             # print(trace[j])

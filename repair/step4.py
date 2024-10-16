@@ -92,6 +92,7 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
     lockedWrite = -1
     transactFirst, transactSecond = -1, -1
     transact = -1
+    # print(first, second)
     for i in range(len(trace)):
         # print(trace[i])
         if trace[i][1]==201:
@@ -111,17 +112,17 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
         
         elif trace[i][0]==int(second) and transact!=-1:
             transactSecond = transact
-            break
+            # break
 
         elif trace[i][0]==int(first) and currentLock!=-1:
             lockedWrite = currentLock
-            print(trace[i], first)
+            # print(trace[i], first, currentLock)
         
         elif trace[i][0]==int(second) and currentLock!=-1:
             lockedRead = currentLock
-            print(trace[i], second)
-            break
-    
+            # print(trace[i], second, currentLock)
+            # break
+    print(lockedRead, lockedWrite)
     currentLock = -1
     for i in range(len(trace)):
         if trace[i][1]==105:
@@ -161,7 +162,7 @@ def appendTraceWithLocks(trace, consToRepair, writes, reads, bugInfos):
    
     traceIndex = 0
     insertedUnlock = False
-    print(first, second, transactFirst, transactSecond)
+    # print(first, second, transactFirst, transactSecond)
     print("Prinitng stats: ",lockedWrite, lockedRead, reads, writes)
     if int(first) in writes and lockedWrite==-1:
         # Add lock and unlock statements before store and right after sfence of first
@@ -386,6 +387,7 @@ def addLocks(trace, reads, writes, transactCons, bugCons, bugInfos):
     """
     cons = []
     pcs = []
+    # print(reads, writes)
     
     openLock = -1
     for i in range(len(trace)-1):
@@ -396,7 +398,8 @@ def addLocks(trace, reads, writes, transactCons, bugCons, bugInfos):
             openLock = -1
         elif openLock!=-1:
             cons.append(Int("pc_"+str(trace[i-1][0])) < Int("pc_"+str(trace[i][0])))
-
+    
+    # print(cons)
     thread_counts = set()
     for t in trace:
         thread_counts.add(t[-2])
@@ -419,26 +422,37 @@ def addLocks(trace, reads, writes, transactCons, bugCons, bugInfos):
   
 
         if trace[i][1]==101: #Do this for all STORES
-            if int(trace[i][0]) in writes:
                 cons.append(Int("pt_"+str(trace[i][0]))>=Int("pc_"+str(trace[i][0]))) 
+                # print(Int("pt_"+str(trace[i][0]))>=Int("pc_"+str(trace[i][0]))) 
                 # Persistent time begins at the time of STOREs
                 for j in range(i+1, len(trace)):
                         if trace[j][1]==103 and trace[j][-2]==trace[i][-2]:
-                            cons.append((Int("pt_"+str(trace[i][0]))<=Int("pc_"+str(trace[j][0]))))
+                            cons.append(Int("pt_"+str(trace[i][0]))<=Int("pc_"+str(trace[j][0])))
+                            # print(Int("pt_"+str(trace[i][0]))<=Int("pc_"+str(trace[j][0])))
                             break
-
+        # else:
+        #     print(i, trace[i])
         if trace[i][1]==105:
             lock = trace[i][0]
             unlock = "UnLock_"+str(trace[i][0]).split("_")[1]
             cons.append(Int("pc_"+lock)<Int("pc_"+unlock))
             for j in range(0, len(trace)): # No lock or unlock should occur within a lock-unlock pair
-                if (trace[j][1]==105 and trace[j][0]!=lock) or (trace[j][1]==106 and trace[j][0]!=unlock) :
-                    cons.append(Or(Int("pc_"+str(trace[j][0]))<Int("pc_"+lock), 
-                                   Int("pc_"+str(trace[j][0]))>Int("pc_"+unlock)))
+                if (trace[j][1]==105 and trace[j][0]!=lock): # or (trace[j][1]==106 and trace[j][0]!=unlock) :
+                    tobelocked = trace[j][0]
+                    tobeunlocked = "UnLock_"+str(trace[j][0]).split("_")[1]
+                    c1 = And(Int("pc_"+tobelocked)<Int("pc_"+lock), 
+                            Int("pc_"+tobeunlocked)<Int("pc_"+lock))
+                    c2 = And(Int("pc_"+tobelocked)>Int("pc_"+unlock), 
+                             Int("pc_"+tobeunlocked)>Int("pc_"+unlock))
+                    cons.append(Or(c1, c2))
+                    # print(Or(c1, c2))
+                    # cons.append(Or(Int("pc_"+str(trace[j][0]))<Int("pc_"+lock), 
+                    #                Int("pc_"+str(trace[j][0]))>Int("pc_"+unlock)))
+                    # print(Or(Int("pc_"+str(trace[j][0]))<Int("pc_"+lock), 
+                    #                Int("pc_"+str(trace[j][0]))>Int("pc_"+unlock)))
 
     cons.append(Distinct(pcs))
     print("Values to be assigned in that range:", len(pcs))
-    
     print("Completed building constraints.\nNumber of constraints: ", len(cons))
     
     solver = Solver()
@@ -449,6 +463,7 @@ def addLocks(trace, reads, writes, transactCons, bugCons, bugInfos):
     solver.add(Or(bugCons))
 
     if solver.check()==sat:
+        model = solver.model()
         num_solverCalls += 1
         print("A violation is found. Let us see which bug was being violated in this trace.")
         model = solver.model()
@@ -543,7 +558,7 @@ def generateRepair(inputFileName, name):
     iterCount = 0
     print(set(reads), set(writes))
     
-    setSize = 6
+    setSize = len(bugCons)
     print("Set Size: ", setSize)
     for i in range(0, len(bugCons), setSize):
         start = i

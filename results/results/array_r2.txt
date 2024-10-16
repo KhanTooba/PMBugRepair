@@ -1,65 +1,75 @@
 Local variables initialized.
-[2, 101, '0xbc6850', '-1', '0', 'insert_117']
-Number of bugs to be repaired:  2
-And(pc_2 < pc_7, pt_2 > pc_7)
+Number of bugs to be repaired:  3
+And(pc_2 < pc_5, pt_2 > pc_5)
 And(pc_2 < pc_18, pt_2 > pc_18)
-{18, 7} {2}
-Set Size:  10
-2 [And(pc_2 < pc_7, pt_2 > pc_7), And(pc_2 < pc_18, pt_2 > pc_18)]
+And(pc_5 < pc_18, pt_5 > pc_18)
+{18} {2, 5}
+Set Size:  6
+3 [And(pc_2 < pc_5, pt_2 > pc_5), And(pc_2 < pc_18, pt_2 > pc_18), And(pc_5 < pc_18, pt_5 > pc_18)]
 
 ############################################################################
 Iteration:  1
-Number of threads:  10
-26 26 2
+Thread IDs:  5
+LENGTH OF THREAD:  2  :  3
+LENGTH OF THREAD:  3  :  3
+LENGTH OF THREAD:  0  :  5
+LENGTH OF THREAD:  1  :  5
+LENGTH OF THREAD:  4  :  10
+Ranges: 0 27
+Values to be assigned in that range: 26
 Completed building constraints.
-Number of constraints:  75
-Solving:
+Number of constraints:  78
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_7, pt_2 > pc_7)
-2 7
-Prinitng stats:  -1 -1
+Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
+2 5 -1 -1
+Prinitng stats:  -1 -1 [18] [2, 5]
 Adding locks for write. 2
-Found insertion point for first lock:  0 1 [2, 101, '0xbc6850', '-1', 8, 'insert_117'] ['Lock_0', 105, 'M1', -1, 8, 'insert_117_x']
-Adding fence because encountered second before fence.
-Adding unlock: ['UnLock_0', 106, 'M1', -1, 8, 'insert_117_x']
-Adding very restricted lock for read. 7
-['Lock_1', 105, 'M1', -1, 8, 'get_152_x']
-[7, 101, '0xbc6854', '0xbc6850', 8, 'get_152']
-['UnLock_1', 106, 'M1', -1, 8, 'get_152_x']
-[8, 102, '0xbc6854', '-1', 8, 'get_152_x']
-Time taken:  0.023416757583618164  seconds.
+Found insertion point for first lock:  0 1 [2, 101, '0x1a1c850', '-1', '0', 'insert_117'] ['Lock_0', 105, 'M1', -1, '0', 'insert_117_x']
+Adding fence because new scope started.
+Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'insert_117_x']
+Adding locks for read and taking fence within lock. 5
+Found insertion point for second lock:  3
+Adding fence because new scope started.
+Time taken:  0.02840399742126465  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  2
-Number of threads:  10
-31 31 2
+Thread IDs:  5
+LENGTH OF THREAD:  2  :  3
+LENGTH OF THREAD:  3  :  3
+LENGTH OF THREAD:  0  :  8
+LENGTH OF THREAD:  1  :  8
+LENGTH OF THREAD:  4  :  10
+Ranges: 0 33
+Values to be assigned in that range: 32
 Completed building constraints.
-Number of constraints:  105
-Solving:
+Number of constraints:  108
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_18, pt_2 > pc_18)
-2 18
-Prinitng stats:  0 -1
+Now, we will repair:  And(pc_5 < pc_18, pt_5 > pc_18)
+[5, 101, '0x1a1c854', '0x1a1c850', '1', 'get_152'] 5
+5 18 -1 -1
+Prinitng stats:  6 -1 [18] [2, 5]
 Adding very restricted lock for read. 18
-['Lock_2', 105, 'M1', -1, 9, 'display_233_x']
-[18, 101, '0xbc6850', '0xbc6850', 9, 'display_233']
-['UnLock_2', 106, 'M1', -1, 9, 'display_233_x']
-[19, 102, '0xbc6850', '-1', 9, 'display_233_x']
-Time taken:  0.024224042892456055  seconds.
+Time taken:  0.03284716606140137  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  3
-Number of threads:  10
-33 33 2
+Thread IDs:  5
+LENGTH OF THREAD:  2  :  3
+LENGTH OF THREAD:  3  :  3
+LENGTH OF THREAD:  0  :  8
+LENGTH OF THREAD:  1  :  8
+LENGTH OF THREAD:  4  :  12
+Ranges: 0 35
+Values to be assigned in that range: 34
 Completed building constraints.
-Number of constraints:  122
-Solving:
+Number of constraints:  125
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.024576187133789062  seconds.
+Time taken:  0.034194231033325195  seconds.
 
 ############################################################################
 

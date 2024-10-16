@@ -75,20 +75,6 @@ def parseTrace(file):
     print("Returning from parceTrace.py")
     return trace, infoToSend
 
-def getIndividualThreads(trace):
-    #Function to seperate out individual threads from one monolithic trace.
-    indiThreads = []
-    print("Number of threads: ", num_threads)
-    for i in range(num_threads):
-        currentThread = []
-        for j in range(len(trace)):
-            # print(trace[j])
-            if trace[j][-2]==i:
-                currentThread.append(trace[j])
-        indiThreads.append(currentThread)
-
-    return indiThreads
-
 def constructConstraint(i, j, s):
     a, b = 0, 0
     for s_i in s:
@@ -202,8 +188,10 @@ def repairMPB(thread, bug, previousConstraints):
         2. This constraint must be sent to the future bug repair calls
         3. This constraint needs to be added to the
     """
-
+    # print(str(bug).split("<")[0].replace(" ", ""))
+    # print(str(bug).split("<")[1].replace(" ", ""))
     for i in range(length):
+        # print(thread[i])
         # print("pt_"+str(thread[i][1]))
         if thread[i][1]==101 and "pt_"+str(thread[i][0])==str(bug).split("<")[0].replace(" ", ""):
             # print(i)
@@ -339,14 +327,15 @@ def repairMPB(thread, bug, previousConstraints):
         #(STORE(&x)->CLFLUSHOPT(&x))->.........->SFENCE()
     
     repairedThread = thread
-    print(len(sais))
-    if len(sais)==0 or simplify(And(sais))==False:
+    # print(len(sais))
+    if len(sais)==0 or simplify(And(sais))==False or "Not(And)" in str(simplify(And(sais))):
         print(len(thread), thread[0])
         return thread, constraintsToReturn, -1
     
     s.add(simplify(And(sais)))
     print("SAIS:", simplify(And(sais)))
-    constraintsToReturn.append(simplify(And(sais)))
+    # if simplify(And(sais))!=False:
+    #     constraintsToReturn.append(simplify(And(sais)))
 
     if s.check()==sat:
         model = s.model()
@@ -372,16 +361,16 @@ def repairThread(thread, bugs, transactCons):
     # print(transactCons)
     timeDura = 0
     timeMPB = 0
+    print(len(bugs))
     for b in bugs:
-        # if b in fixedBugs:
-        #     continue
         print("Repairing for bug:", b)
         if str(inf) in str(b): # and "pt_70" in str(b):
             t1 = time.time()
             thread, cons_1, success = repairDURA(thread, b, cons)
             if success==1:
-                bugs.remove(b)
+                # bugs.remove(b)
                 print("Removing:", b)
+                fixedBugs.append(b)
             timeDura += time.time()-t1
             
             for constraint in cons_1:
@@ -393,13 +382,14 @@ def repairThread(thread, bugs, transactCons):
             thread, cons_1, success = repairMPB(thread, b, cons)
             if success==1:
                 print("Removing:", b)
-                bugs.remove(b)
+                # bugs.remove(b)
+                fixedBugs.append(b)
             timeMPB += time.time()-t1
             for constraint in cons_1:
                 cons.append(constraint)
         
         print("####################################################################################")
-        fixedBugs.append(b)
+        
 
     return thread, timeDura, timeMPB, bugs
 
@@ -440,15 +430,18 @@ def addConstraints(inputFileName, name):
     # print("\n\n")
     time1 = time.time()
     time2 = time1
-    indiThreads = getIndividualThreads(trace) #seperated out the threads
+    indiThreads = getIndividualThreads(trace, num_threads) #seperated out the threads
     repaired_threads = []
     # print(len(indiThreads))
-    for i in range(num_threads):
+    i = 0
+    print("Number of threads:", len(indiThreads))
+    for indiThread in indiThreads:
         # print(len(indiThreads[i]))
+        print(indiThread[0])
         print("################################################################################################")
-        print("Working on Thread:", i, "(Length of thread : ", len(indiThreads[i]), "): ")
-        transactCons = getTransactionConstraints(indiThreads[i])
-        threadreturned, t1, t2, bugs = repairThread(indiThreads[i], bugs, transactCons)
+        print("Working on Thread:", i, "(Length of thread : ", len(indiThread), "): ")
+        transactCons = getTransactionConstraints(indiThread)
+        threadreturned, t1, t2, bugs = repairThread(indiThread, bugs, transactCons)
 
         repaired_threads.append(threadreturned)
         timeDura += t1
@@ -457,6 +450,7 @@ def addConstraints(inputFileName, name):
         print("Time taken to repair thread ", i, ": ", (time2-time1), " seconds.")
         print("################################################################################################")
         time1 = time2
+        i += 1
     
     """
     Finally, now we need to recombine the repaired threads
@@ -479,7 +473,7 @@ def addConstraints(inputFileName, name):
         if intermediateTrace[i][1]==101:
             break
         recombinedTrace.append(intermediateTrace[i])
-        
+
     for i in range(0, len(storeSeqs)):
         storeToFind = storeSeqs[i]
         for j in range(len(intermediateTrace)):
@@ -517,8 +511,8 @@ if __name__ == "__main__":
     f = open("Report.txt", "a")
     f.write("###########################################################################\n")
     f.write("Adding DURA & MPB Repair Report for "+str(fileName)+": \n")
-    f.write("Number of DURAS fixed: "+str(totalDURA)+"\n")
-    f.write("Number of MPBs fixed: "+str(totalMPB)+"\n")
+    f.write("Number of DURAS fixed: "+str(totalDURA-failedDURA)+"\n")
+    f.write("Number of MPBs fixed: "+str(totalMPB-failedMPB)+"\n")
     f.write("Number of DURAS failed to fix: "+str(failedDURA)+"\n")
     f.write("Number of MPBs failed to fix: "+str(failedMPB)+"\n")
     f.write("Total time taken to repair DURA bugs: "+str(timeDURA)+" seconds.\n")
