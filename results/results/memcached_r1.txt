@@ -636,7 +636,7 @@ Adding: ['25_0', 102, "'0x7fa634192f98'", -1, 0, 'do_item_link_q_427_x']
 Constraint added: pc_25 == pc_25_0 - 1
 Removing: pt_25 < 9999
 ####################################################################################
-Time taken to repair thread  0 :  138.5240979194641  seconds.
+Time taken to repair thread  0 :  135.16842412948608  seconds.
 ################################################################################################
 [6, 101, "'0x7fa634192f10'", "'0x7fa634192f97'", 1, 'do_slabs_alloc_413']
 ################################################################################################
@@ -795,7 +795,7 @@ Not running blocking constraint generation because already unsat.
 Repairing for bug: pt_25 < 9999
 Before append: 565
 ####################################################################################
-Time taken to repair thread  1 :  6.343030214309692  seconds.
+Time taken to repair thread  1 :  6.3123779296875  seconds.
 ################################################################################################
 [79, 101, "'0x7fa634192f38'", "'0x7fa634192f98'", 2, 'do_item_unlink_q_456']
 ################################################################################################
@@ -954,9 +954,9 @@ Not running blocking constraint generation because already unsat.
 Repairing for bug: pt_25 < 9999
 Before append: 106
 ####################################################################################
-Time taken to repair thread  2 :  3.3815486431121826  seconds.
+Time taken to repair thread  2 :  3.569218873977661  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.05322432518005371  seconds.
+Time taken to recombine individual threads:  0.054093122482299805  seconds.

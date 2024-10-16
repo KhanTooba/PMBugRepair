@@ -57,7 +57,7 @@ Not running blocking constraint generation because already unsat.
 Repairing for bug: pt_402 < 9999
 Before append: 104
 ####################################################################################
-Time taken to repair thread  0 :  0.47893524169921875  seconds.
+Time taken to repair thread  0 :  0.47668981552124023  seconds.
 ################################################################################################
 [4, 101, "'0x7f8090001ae0'", '-1', 1, 'insert_17']
 ################################################################################################
@@ -93,7 +93,7 @@ Not running blocking constraint generation because already unsat.
 Repairing for bug: pt_402 < 9999
 Before append: 100
 ####################################################################################
-Time taken to repair thread  1 :  0.43263983726501465  seconds.
+Time taken to repair thread  1 :  0.43514108657836914  seconds.
 ################################################################################################
 [202, 101, "'0x7f8090002d40'", "'0x7f8088000d40'", 2, 'main_20']
 ################################################################################################
@@ -186,9 +186,9 @@ Constraint added: pc_402 == pc_402_0 - 1
 Adding: ['402_1', 103, '0', -1, 2, 'main_28_x']
 Removing: pt_402 < 9999
 ####################################################################################
-Time taken to repair thread  2 :  6.668849945068359  seconds.
+Time taken to repair thread  2 :  6.894221067428589  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.008192062377929688  seconds.
+Time taken to recombine individual threads:  0.008320808410644531  seconds.

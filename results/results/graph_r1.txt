@@ -582,7 +582,7 @@ Constraint added: pc_820 == pc_820_0 - 1
 Adding: ['820_1', 103, '0', -1, 0, 'destroyGraph_65_x']
 Removing: pt_820 < 9999
 ####################################################################################
-Time taken to repair thread  0 :  14.15614914894104  seconds.
+Time taken to repair thread  0 :  14.344497919082642  seconds.
 ################################################################################################
 [34, 101, "'0x1b92a98'", "'0x1b92a98'", 1, 'addEdge_80']
 ################################################################################################
@@ -2058,7 +2058,7 @@ Not running blocking constraint generation because already unsat.
 Repairing for bug: pt_820 < 9999
 Before append: 384
 ####################################################################################
-Time taken to repair thread  1 :  122.76081705093384  seconds.
+Time taken to repair thread  1 :  122.99014925956726  seconds.
 ################################################################################################
 [35, 101, "'0x1b92a98'", "'0x1b92a98'", 2, 'addEdge_80']
 ################################################################################################
@@ -2406,9 +2406,9 @@ Not running blocking constraint generation because already unsat.
 Repairing for bug: pt_820 < 9999
 Before append: 351
 ####################################################################################
-Time taken to repair thread  2 :  8.762970924377441  seconds.
+Time taken to repair thread  2 :  8.617224931716919  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.02868819236755371  seconds.
+Time taken to recombine individual threads:  0.028509855270385742  seconds.

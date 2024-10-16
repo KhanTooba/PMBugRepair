@@ -4,24 +4,24 @@ And(pc_2 < pc_5, pt_2 > pc_5)
 And(pc_2 < pc_18, pt_2 > pc_18)
 And(pc_5 < pc_18, pt_5 > pc_18)
 {18} {2, 5}
-Set Size:  6
+Set Size:  3
 3 [And(pc_2 < pc_5, pt_2 > pc_5), And(pc_2 < pc_18, pt_2 > pc_18), And(pc_5 < pc_18, pt_5 > pc_18)]
 
 ############################################################################
 Iteration:  1
 Thread IDs:  5
-LENGTH OF THREAD:  2  :  3
 LENGTH OF THREAD:  3  :  3
-LENGTH OF THREAD:  0  :  5
-LENGTH OF THREAD:  1  :  5
 LENGTH OF THREAD:  4  :  10
+LENGTH OF THREAD:  1  :  5
+LENGTH OF THREAD:  2  :  3
+LENGTH OF THREAD:  0  :  5
 Ranges: 0 27
 Values to be assigned in that range: 26
 Completed building constraints.
-Number of constraints:  78
+Number of constraints:  108
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_5, pt_2 > pc_5)
-2 5 -1 -1
+-1 -1
 Prinitng stats:  -1 -1 [18] [2, 5]
 Adding locks for write. 2
 Found insertion point for first lock:  0 1 [2, 101, '0x1a1c850', '-1', '0', 'insert_117'] ['Lock_0', 105, 'M1', -1, '0', 'insert_117_x']
@@ -30,46 +30,45 @@ Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'insert_117_x']
 Adding locks for read and taking fence within lock. 5
 Found insertion point for second lock:  3
 Adding fence because new scope started.
-Time taken:  0.02840399742126465  seconds.
+Time taken:  0.03170585632324219  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  2
 Thread IDs:  5
-LENGTH OF THREAD:  2  :  3
 LENGTH OF THREAD:  3  :  3
-LENGTH OF THREAD:  0  :  8
-LENGTH OF THREAD:  1  :  8
 LENGTH OF THREAD:  4  :  10
+LENGTH OF THREAD:  1  :  8
+LENGTH OF THREAD:  2  :  3
+LENGTH OF THREAD:  0  :  8
 Ranges: 0 33
 Values to be assigned in that range: 32
 Completed building constraints.
-Number of constraints:  108
+Number of constraints:  136
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_5 < pc_18, pt_5 > pc_18)
-[5, 101, '0x1a1c854', '0x1a1c850', '1', 'get_152'] 5
-5 18 -1 -1
+-1 6
 Prinitng stats:  6 -1 [18] [2, 5]
 Adding very restricted lock for read. 18
-Time taken:  0.03284716606140137  seconds.
+Time taken:  0.03590798377990723  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  3
 Thread IDs:  5
-LENGTH OF THREAD:  2  :  3
 LENGTH OF THREAD:  3  :  3
-LENGTH OF THREAD:  0  :  8
-LENGTH OF THREAD:  1  :  8
 LENGTH OF THREAD:  4  :  12
+LENGTH OF THREAD:  1  :  8
+LENGTH OF THREAD:  2  :  3
+LENGTH OF THREAD:  0  :  8
 Ranges: 0 35
 Values to be assigned in that range: 34
 Completed building constraints.
-Number of constraints:  125
+Number of constraints:  149
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.034194231033325195  seconds.
+Time taken:  0.03813290596008301  seconds.
 
 ############################################################################
 

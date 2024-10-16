@@ -449,7 +449,7 @@ Adding: ['111_0', 102, "'0x7f38403c05d0'", -1, 0, 'generic_insert_1064_x']
 Constraint added: pc_111 == pc_111_0 - 1
 Removing: pt_111 < 9999
 ####################################################################################
-Time taken to repair thread  0 :  185.28580498695374  seconds.
+Time taken to repair thread  0 :  184.93944787979126  seconds.
 ################################################################################################
 [21, 101, "'0x7f38403c05f0'", "'0x7f38403c05f0'", 1, 'load_419']
 ################################################################################################
@@ -638,9 +638,9 @@ Not running blocking constraint generation because already unsat.
 Repairing for bug: pt_111 < 9999
 Before append: 136
 ####################################################################################
-Time taken to repair thread  1 :  1.6557738780975342  seconds.
+Time taken to repair thread  1 :  1.685265064239502  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.02002406120300293  seconds.
+Time taken to recombine individual threads:  0.02404189109802246  seconds.

@@ -991,7 +991,7 @@ Adding: ['79_0', 102, "'0x7f0818253088'", -1, 0, 'clht_gc_free_236_x']
 Constraint added: pc_79 == pc_79_0 - 1
 Removing: pt_79 < 9999
 ####################################################################################
-Time taken to repair thread  0 :  2.5869219303131104  seconds.
+Time taken to repair thread  0 :  2.675028085708618  seconds.
 ################################################################################################
 [22, 101, "'0x7f0818253098'", "'0x7f0818253098'", 1, 'clht_gc_thread_init_51']
 ################################################################################################
@@ -1232,7 +1232,7 @@ Not running blocking constraint generation because already unsat.
 Repairing for bug: pt_79 < 9999
 Before append: 31
 ####################################################################################
-Time taken to repair thread  1 :  0.6979982852935791  seconds.
+Time taken to repair thread  1 :  0.6871538162231445  seconds.
 ################################################################################################
 [23, 101, "'0x7f0818253098'", "'0x7f0818253098'", 2, 'clht_gc_thread_init_51']
 ################################################################################################
@@ -1473,9 +1473,9 @@ Not running blocking constraint generation because already unsat.
 Repairing for bug: pt_79 < 9999
 Before append: 31
 ####################################################################################
-Time taken to repair thread  2 :  0.6987497806549072  seconds.
+Time taken to repair thread  2 :  0.6847071647644043  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.0002930164337158203  seconds.
+Time taken to recombine individual threads:  0.0002799034118652344  seconds.

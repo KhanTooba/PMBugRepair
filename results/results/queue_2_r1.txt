@@ -137,7 +137,7 @@ Not(And)
 Not running blocking constraint generation because already unsat.
 36 [2, 101, "'0x1fcff20'", '-1', 0, 'enqueue_22']
 ####################################################################################
-Time taken to repair thread  0 :  0.40587401390075684  seconds.
+Time taken to repair thread  0 :  0.4060690402984619  seconds.
 ################################################################################################
 [31, 101, "'0x1fcff20'", "'0x1fcff20'", 1, 'dequeue_46']
 ################################################################################################
@@ -215,7 +215,7 @@ Not(And)
 Not running blocking constraint generation because already unsat.
 129 [31, 101, "'0x1fcff20'", "'0x1fcff20'", 1, 'dequeue_46']
 ####################################################################################
-Time taken to repair thread  1 :  1.1006109714508057  seconds.
+Time taken to repair thread  1 :  0.9928700923919678  seconds.
 ################################################################################################
 [33, 101, "'0x1fcffe0'", "'0x1fcff20'", 2, 'dequeue_46']
 ################################################################################################
@@ -281,9 +281,9 @@ Not(And)
 Not running blocking constraint generation because already unsat.
 125 [33, 101, "'0x1fcffe0'", "'0x1fcff20'", 2, 'dequeue_46']
 ####################################################################################
-Time taken to repair thread  2 :  1.8015801906585693  seconds.
+Time taken to repair thread  2 :  1.8006420135498047  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.0022766590118408203  seconds.
+Time taken to recombine individual threads:  0.0022628307342529297  seconds.

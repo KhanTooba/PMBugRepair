@@ -3,7 +3,7 @@ Number of bugs to be repaired:  2
 And(pc_2 < pc_110, pt_2 > pc_110)
 And(pc_5 < pc_111, pt_5 > pc_111)
 {110, 111} {2, 5}
-Set Size:  6
+Set Size:  2
 2 [And(pc_2 < pc_110, pt_2 > pc_110), And(pc_5 < pc_111, pt_5 > pc_111)]
 
 ############################################################################
@@ -14,17 +14,17 @@ LENGTH OF THREAD:  0  :  108
 Ranges: 0 209
 Values to be assigned in that range: 208
 Completed building constraints.
-Number of constraints:  627
+Number of constraints:  923
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_110, pt_2 > pc_110)
-2 110 -1 -1
+-1 -1
 Prinitng stats:  -1 -1 [110, 111] [2, 5]
 Adding locks for write. 2
 Found insertion point for first lock:  0 1 [2, 101, '0x7fd170002020', '-1', '0', 'push_50'] ['Lock_0', 105, 'M1', -1, '0', 'push_50_x']
 Adding fence because new scope started.
 Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'push_50_x']
 Adding very restricted lock for read. 110
-Time taken:  0.09659194946289062  seconds.
+Time taken:  0.132462739944458  seconds.
 
 ############################################################################
 
@@ -36,17 +36,17 @@ LENGTH OF THREAD:  0  :  111
 Ranges: 0 214
 Values to be assigned in that range: 213
 Completed building constraints.
-Number of constraints:  653
+Number of constraints:  947
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_5 < pc_111, pt_5 > pc_111)
-5 111 -1 -1
+-1 -1
 Prinitng stats:  -1 -1 [110, 111] [2, 5]
 Adding locks for write. 5
 Found insertion point for first lock:  6 7 [5, 101, '0x7fd170002028', '-1', '0', 'push_53'] ['Lock_2', 105, 'M1', -1, '0', 'push_53_x']
 Adding fence because new scope started.
 Adding unlock: ['UnLock_2', 106, 'M1', -1, '0', 'push_53_x']
 Adding very restricted lock for read. 111
-Time taken:  0.158966064453125  seconds.
+Time taken:  0.2165510654449463  seconds.
 
 ############################################################################
 
@@ -58,9 +58,9 @@ LENGTH OF THREAD:  0  :  114
 Ranges: 0 219
 Values to be assigned in that range: 218
 Completed building constraints.
-Number of constraints:  695
+Number of constraints:  979
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.07897281646728516  seconds.
+Time taken:  0.10559535026550293  seconds.
 
 ############################################################################
 

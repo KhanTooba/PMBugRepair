@@ -534,7 +534,7 @@ Adding: ['556_0', 102, "'0x1c7c0a0'", -1, 0, 'destroyHeap_102_x']
 Constraint added: pc_556 == pc_556_0 - 1
 Removing: pt_556 < 9999
 ####################################################################################
-Time taken to repair thread  0 :  2.665518045425415  seconds.
+Time taken to repair thread  0 :  2.571661949157715  seconds.
 ################################################################################################
 [5, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 1, 'insertHeap_111']
 ################################################################################################
@@ -1058,7 +1058,7 @@ Not running blocking constraint generation because already unsat.
 Repairing for bug: pt_556 < 9999
 Before append: 279
 ####################################################################################
-Time taken to repair thread  1 :  24.09438991546631  seconds.
+Time taken to repair thread  1 :  23.566858768463135  seconds.
 ################################################################################################
 [11, 101, "'0x1c7c0ac'", "'0x1c7c0ac'", 2, 'insertHeap_111']
 ################################################################################################
@@ -2135,9 +2135,9 @@ Not running blocking constraint generation because already unsat.
 Repairing for bug: pt_556 < 9999
 Before append: 271
 ####################################################################################
-Time taken to repair thread  2 :  64.08979415893555  seconds.
+Time taken to repair thread  2 :  62.377761125564575  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.012749910354614258  seconds.
+Time taken to recombine individual threads:  0.012667179107666016  seconds.
