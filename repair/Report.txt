@@ -484,12 +484,12 @@ Number of DURAS fixed: 6
 Number of MPBs fixed: 0
 Number of DURAS failed to fix: 0
 Number of MPBs failed to fix: 0
-Total time taken to repair DURA bugs: 3.364009141921997 seconds.
+Total time taken to repair DURA bugs: 3.3341150283813477 seconds.
 Total time taken to repair MPB bugs: 0 seconds.
 Number of sfences() added: 0
 Number of clflushopts() added: 6
 Total number of calls to the Z3 solver: 0
-Total time taken: 3.9575769901275635 seconds.
+Total time taken: 3.9261858463287354 seconds.
 ###########################################################################
 
 ###########################################################################
@@ -499,5 +499,6 @@ Number of MPAs failed: 0
 Number of fences() added: 1
 Number of locks() added: 2
 Total number of calls to the Z3 solver: 2
-Total time taken to repair MPA bugs: 5.764940023422241 seconds.
+Total time taken to repair MPA bugs: 5.849957704544067 seconds.
 ###########################################################################
+

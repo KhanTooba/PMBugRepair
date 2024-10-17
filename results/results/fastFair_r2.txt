@@ -487,3 +487,48 @@ Time taken:  2.1272530555725098  seconds.
 ############################################################################
 
 Total number of iterations:  20
+Local variables initialized.
+Number of bugs to be repaired:  1
+And(pc_2526 < pc_31, pt_2526 > pc_31)
+{31} {2526}
+Set Size:  1
+1 [And(pc_2526 < pc_31, pt_2526 > pc_31)]
+
+############################################################################
+Iteration:  1
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  1254
+LENGTH OF THREAD:  1  :  1441
+LENGTH OF THREAD:  2  :  1292
+Ranges: 0 3988
+Values to be assigned in that range: 3987
+Completed building constraints.
+Number of constraints:  19245
+A violation is found. Let us see which bug was being violated in this trace.
+Now, we will repair:  And(pc_2526 < pc_31, pt_2526 > pc_31)
+-1 -1
+Prinitng stats:  -1 -1 [31] [2526]
+Adding very restricted lock for write. 31
+Adding locks for read and taking fence within lock. 2526
+Found insertion point for second lock:  2524
+Adding fence because another thread started.
+Time taken:  3.0531797409057617  seconds.
+
+############################################################################
+
+############################################################################
+Iteration:  2
+Thread IDs:  3
+LENGTH OF THREAD:  0  :  1256
+LENGTH OF THREAD:  1  :  1441
+LENGTH OF THREAD:  2  :  1295
+Ranges: 0 3993
+Values to be assigned in that range: 3992
+Completed building constraints.
+Number of constraints:  19272
+Model was unsat. This means all bugs have been repaired.
+Time taken:  2.7839372158050537  seconds.
+
+############################################################################
+
+Total number of iterations:  2
