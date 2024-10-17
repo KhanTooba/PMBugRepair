@@ -84,6 +84,7 @@ def generateBugConstraints(inputFileName):
     bugs = []
     length = len(trace)
     mpbs, duras = [], []
+    addedBugs = []
     store = 0
     transact = -1
 
@@ -111,11 +112,19 @@ def generateBugConstraints(inputFileName):
                         # print(transact, transactInsideLoop, i , j)
                         first = "pt_"+str(trace[i][-1])
                         second = "pt_"+str(trace[j][-1])
-                        # print(first, second)
-                        bugs.append("MPB: ["+first+"; "+second+"]")
-                        mpbs.append(str(trace[i][-1]))
-                        # return 1/0
-                        break
+                        scope1 = '_'.join(str(x) for x in str(trace[i][-1]).split("_")[:-1]).strip()
+                        scope2 = '_'.join(str(x) for x in str(trace[j][-1]).split("_")[:-1]).strip()
+                        line1 = int(str(trace[i][-1]).split("_")[-1])
+                        line2 = int(str(trace[j][-1]).split("_")[-1])
+                        
+                        if (scope1!=scope2 or (scope1==scope2 and line1<line2)) and [first, second] not in addedBugs and [second, first] not in addedBugs:
+                            print(scope1, scope2, line1, line2)
+                            
+                            addedBugs.append([first, second])
+                            bugs.append("MPB: ["+first+"; "+second+"]")
+                            mpbs.append(str(trace[i][-1]))
+                            # return 1/0
+                            break
 
     
     return bugs

@@ -4,7 +4,7 @@ from z3 import *
 Just a collection of helper functions universally called.
 """
 
-benchmarks = ["skipLists"]
+benchmarks = ["fastFair"]
 # "Clevel_hashing" , "memcached", "CCEH",  "P-CLHT", "fastFair", "array", "doublyList", "dqueue", 
 #                   "graph", "hash", "heap", "list_1", "list", "motivatingExample", 
 #                   "priorityQueue", "queue_1", "queue_2", "queue", "set", "skipLists", 

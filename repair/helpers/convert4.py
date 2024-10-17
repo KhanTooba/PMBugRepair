@@ -106,8 +106,8 @@ def generateBugConstraints(inputFileName):
                             writes.append(firstOcc[trace[i][-1]][0])
                         if firstOcc[trace[j][-1]][0] not in reads:
                             reads.append(firstOcc[trace[j][-1]][0])
-
-                        bugCons.append("MPA: ["+"pc_"+str(first)+"; pc_"+str(second)+"]")
+                        if first!=second:
+                            bugCons.append("MPA: ["+"pc_"+str(first)+"; pc_"+str(second)+"]")
         i+= 1
     
     return bugCons

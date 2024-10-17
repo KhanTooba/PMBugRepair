@@ -299,6 +299,10 @@ def repairMPB(thread, bug, previousConstraints):
     iter1 = 1
     
     sais = []
+    if bugFlag==-1:
+        print(len(thread), thread[0])
+        return thread, constraintsToReturn, -1
+    
     while solver.check()==sat:
         num_solverCalls += 1
         print("Num:", len(solver.assertions()))

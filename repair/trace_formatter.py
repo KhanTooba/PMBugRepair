@@ -71,7 +71,8 @@ def fileReader(name):
             if source!="":
                 dependencies[dest] = source
             if source!="":
-                stmt = format_STOREs(str(row), r) # Added this only to get MPAs in CCEH. But, no real MPAs exist in CCEH. Hence, commenting out.
+                stmt = format_STOREs(str(row), r) 
+                # Added this only to get MPAs in CCEH. But, no real MPAs exist in CCEH. Hence, commenting out.
                 contents.append(stmt)
 
         if "Load" in str(row) or "Store" in str(row):
