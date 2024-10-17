@@ -451,7 +451,7 @@ def addLocks(trace, reads, writes, transactCons, bugCons, bugInfos):
                     # print(Or(Int("pc_"+str(trace[j][0]))<Int("pc_"+lock), 
                     #                Int("pc_"+str(trace[j][0]))>Int("pc_"+unlock)))
 
-    cons.append(Distinct(pcs))
+    # cons.append(Distinct(pcs))
     print("Values to be assigned in that range:", len(pcs))
     print("Completed building constraints.\nNumber of constraints: ", len(cons))
     

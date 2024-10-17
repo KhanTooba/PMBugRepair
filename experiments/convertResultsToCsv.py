@@ -17,7 +17,7 @@ def getLoc():
     for file in files:
         listOfFiles[file] = count_lines([directory+file+"/"+file+".h", 
                                          "../results/outputs/"+file+"_output.txt"])
-    listOfFiles['fastFair'] = count_lines(["../experiments/fastFair/btree.h",
+    listOfFiles['fastFair'] = count_lines(["../experiments/fastFair/src/btree.h",
                                            "../results/outputs/fastFair_output.txt"])
     listOfFiles['CCEH'] = count_lines(["../experiments/CCEH/src/CCEH.cpp",
                                            "../results/outputs/CCEH_output.txt"])
