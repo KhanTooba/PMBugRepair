@@ -24,7 +24,7 @@ clang++-10 -g -o btree_concurrent_mixed test_trace.bc -L$PMInvGen_DIR/PM -Wl,-rp
 # Step-4 Run the final executable and delete all .bc files
 #########################################################################
 sudo rm /mnt/pmfs/pool6
-sudo ./btree_concurrent_mixed -n 10 -i input.txt -t 4 -p /mnt/pmfs/pool6
+sudo ./btree_concurrent_mixed -n 50 -i input.txt -t 2 -p /mnt/pmfs/pool6
 rm *.bc *.ll a.out
 
 mv output.txt ../../results/outputs/fastFair_output.txt
