@@ -37,8 +37,8 @@
 #include <sys/wait.h>
 #include <emmintrin.h>
 //extern "C" {
-#include "clht_lb_res.h"
 #include "pm.h"
+#include "clht_lb_res.h"
 //}
 //#define CLHTDEBUG
 //#define CRASH_AFTER_SWAP_CLHT
@@ -451,7 +451,7 @@ bool clht_put(clht_t* h, clht_addr_t key, clht_val_t val)
             }
 
             LOCK_RLS(lock);
-            if (unlikely(resize))
+            if (1)//unlikely(resize))
             {
                 /* ht_resize_pes(h, 1); */
 				DEBUG_PRINT("Calling ht_status for key %ld\n", (long)key);
