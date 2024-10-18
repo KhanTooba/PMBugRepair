@@ -1,26 +1,21 @@
-# Variables
 EXEC=btree_concurrent_mixed
 OUTPUT_FILE=output.txt
 POOL_PATH=/mnt/pmfs/pool6
 THREADS=$(shell seq 2 2 32)
 
-# Default target
 all: clean run clean_bc
 
-# Step 1: Run the executable for each thread count from 2 to 32 in steps of 2
 run:
 	@for t in $(THREADS); do \
 		echo "Running with -t $$t"; \
 		sudo rm -f $(POOL_PATH); \
 		sudo ./$(EXEC) -n 50 -i input.txt -t $$t -p $(POOL_PATH); \
-		mv $(OUTPUT_FILE) output_$$t.txt; \
+		mv $(OUTPUT_FILE) fastFair_$$t.txt; \
 	done
 
-# Step 2: Clean up bitcode files and any intermediate output
 clean_bc:
 	rm -f *.bc *.ll a.out
 
-# Clean target to remove old files before running
 clean:
 	rm -f $(OUTPUT_FILE) output_*.txt
 	sudo rm -f $(POOL_PATH)
