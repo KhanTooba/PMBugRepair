@@ -26,3 +26,4 @@ done
 
 
 mv Report.txt Report_comparitiveAnalysis.txt
+mv ComparitiveResults.txt ../experiments/ComparitiveResults.txt
