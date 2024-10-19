@@ -37,7 +37,7 @@ def getLoc():
 
 def getFile():
     file = []
-    for line in open("../repair/Report.txt"):
+    for line in open("../repair/Report_final.txt"):
         file.append(str(line).replace("\n", ""))
     return file
 
@@ -45,8 +45,9 @@ def processSubset1(name, locDetails):
     # headers_1 = ["BenchmarkName", "LoC", "Trace Length", "#Loads", "#Stores", "#Threads", "#PM Vars"]
     data = []
     locDetail = locDetails[name]
+    loads, stores, pmvars = countLoadsStores("../results/outputs/"+name+"_output.txt")
 
-    data = [name, locDetail[0], locDetail[1], 0, 0, 2, 0]
+    data = [name, locDetail[0], locDetail[1], loads, stores, 2, pmvars]
     return data
 
 def processSubset2(name, subset):
@@ -75,6 +76,19 @@ def processSubset2(name, subset):
             float(f"{float(t_mpa):.4f}"), int(num_calls_1), int(num_calls_2), int(num_locks), 
             int(num_sfence), int(num_flush)]
     return data
+
+def countLoadsStores(file):
+    loads, stores, pmvars = 0, 0, []
+    for line in open(file):
+        if "Load:" in str(line):
+            loads += 1
+            add = str(line).split(" ")[1]
+            pmvars.append(add)
+        elif "Store:" in str(line):
+            stores += 1
+            add = str(line).split(" ")[1]
+            pmvars.append(add)
+    return loads, stores, len(set(pmvars))
 
 def processFile(file, locDetails):
     i = 0
