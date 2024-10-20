@@ -9,7 +9,7 @@ run:
 	@for t in $(THREADS); do \
 		echo "Running with -t $$t"; \
 		sudo rm -f $(POOL_PATH); \
-		sudo ./$(EXEC) -n 50 -i input.txt -t $$t -p $(POOL_PATH); \
+		sudo ./$(EXEC) -n 128 -i input.txt -t $$t -p $(POOL_PATH); \
 		mv $(OUTPUT_FILE) comparitive/fastFair_$$t.txt; \
 	done
 

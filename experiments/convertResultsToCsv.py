@@ -37,7 +37,7 @@ def getLoc():
 
 def getFile():
     file = []
-    for line in open("../repair/Report_final.txt"):
+    for line in open("../repair/Report.txt"):
         file.append(str(line).replace("\n", ""))
     return file
 
