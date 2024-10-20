@@ -28,7 +28,7 @@ Adding very restricted lock for write. 8
 Adding locks for read and taking fence within lock. 91
 Found insertion point for second lock:  89
 Adding fence because another thread started.
-Time taken:  0.39076757431030273  seconds.
+Time taken:  0.38691115379333496  seconds.
 
 ############################################################################
 
@@ -51,7 +51,7 @@ Found insertion point for first lock:  184 185 [181, 101, '0x7fa634192f38', '0x7
 Adding fence because new scope started.
 Adding unlock: ['UnLock_2', 106, 'M1', -1, '2', 'do_item_update_624_x']
 Adding very restricted lock for read. 246
-Time taken:  0.3951072692871094  seconds.
+Time taken:  0.38938117027282715  seconds.
 
 ############################################################################
 
@@ -73,7 +73,7 @@ Adding very restricted lock for write. 226
 Adding locks for read and taking fence within lock. 431
 Found insertion point for second lock:  439
 Adding fence because another thread started.
-Time taken:  0.42595791816711426  seconds.
+Time taken:  0.41944360733032227  seconds.
 
 ############################################################################
 
@@ -95,7 +95,7 @@ Adding very restricted lock for write. 33
 Adding locks for read and taking fence within lock. 54
 Found insertion point for second lock:  54
 Adding fence because new scope started.
-Time taken:  0.49035191535949707  seconds.
+Time taken:  0.48203611373901367  seconds.
 
 ############################################################################
 
@@ -118,7 +118,7 @@ Found insertion point for first lock:  129 130 [121, 101, '0x7fa634192f37', '0x7
 Adding fence because another thread started.
 Adding unlock: ['UnLock_8', 106, 'M1', -1, '0', 'do_item_get_1097_x']
 Adding very restricted lock for read. 605
-Time taken:  0.6724495887756348  seconds.
+Time taken:  0.6563799381256104  seconds.
 
 ############################################################################
 
@@ -137,7 +137,7 @@ Now, we will repair:  And(pc_431 < pc_221, pt_431 > pc_221)
 449 -1
 Prinitng stats:  -1 449 [33, 226, 605, 8, 246, 221] [54, 91, 181, 431, 121]
 Adding very restricted lock for write. 221
-Time taken:  0.6459145545959473  seconds.
+Time taken:  0.6346590518951416  seconds.
 
 ############################################################################
 
@@ -152,7 +152,7 @@ Values to be assigned in that range: 1205
 Completed building constraints.
 Number of constraints:  5646
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.5507495403289795  seconds.
+Time taken:  0.5437378883361816  seconds.
 
 ############################################################################
 

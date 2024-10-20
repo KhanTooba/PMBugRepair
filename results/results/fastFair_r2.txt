@@ -1,47 +1,45 @@
 Local variables initialized.
 Number of bugs to be repaired:  1
-And(pc_1831 < pc_7869, pt_1831 > pc_7869)
-{7869} {1831}
+And(pc_1831 < pc_7005, pt_1831 > pc_7005)
+{7005} {1831}
 Set Size:  1
-1 [And(pc_1831 < pc_7869, pt_1831 > pc_7869)]
+1 [And(pc_1831 < pc_7005, pt_1831 > pc_7005)]
 
 ############################################################################
 Iteration:  1
-Thread IDs:  4
+Thread IDs:  3
+LENGTH OF THREAD:  1  :  4843
 LENGTH OF THREAD:  0  :  4473
-LENGTH OF THREAD:  3  :  824
-LENGTH OF THREAD:  1  :  4052
-LENGTH OF THREAD:  2  :  4522
-Ranges: 0 13872
-Values to be assigned in that range: 13871
+LENGTH OF THREAD:  2  :  3705
+Ranges: 0 13022
+Values to be assigned in that range: 13021
 Completed building constraints.
-Number of constraints:  66512
+Number of constraints:  63095
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_1831 < pc_7869, pt_1831 > pc_7869)
+Now, we will repair:  And(pc_1831 < pc_7005, pt_1831 > pc_7005)
 -1 -1
-Prinitng stats:  -1 -1 [7869] [1831]
+Prinitng stats:  -1 -1 [7005] [1831]
 Adding locks for write. 1831
-Found insertion point for first lock:  1829 1830 [1831, 101, '0x7f8a80401998', '0x7f8a80401998', '0', 'linear_search_876'] ['Lock_0', 105, 'M1', -1, '0', 'linear_search_876_x']
+Found insertion point for first lock:  1829 1830 [1831, 101, '0x7f3fc0401998', '0x7f3fc0401998', '0', 'linear_search_876'] ['Lock_0', 105, 'M1', -1, '0', 'linear_search_876_x']
 Adding fence because new scope started.
 Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'linear_search_876_x']
-Adding very restricted lock for read. 7869
-Time taken:  21.259586811065674  seconds.
+Adding very restricted lock for read. 7005
+Time taken:  21.361782789230347  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  2
-Thread IDs:  4
+Thread IDs:  3
+LENGTH OF THREAD:  1  :  4845
 LENGTH OF THREAD:  0  :  4476
-LENGTH OF THREAD:  3  :  824
-LENGTH OF THREAD:  1  :  4054
-LENGTH OF THREAD:  2  :  4522
-Ranges: 0 13877
-Values to be assigned in that range: 13876
+LENGTH OF THREAD:  2  :  3705
+Ranges: 0 13027
+Values to be assigned in that range: 13026
 Completed building constraints.
-Number of constraints:  66539
+Number of constraints:  63122
 Model was unsat. This means all bugs have been repaired.
-Time taken:  19.748894453048706  seconds.
+Time taken:  19.69577407836914  seconds.
 
 ############################################################################
 

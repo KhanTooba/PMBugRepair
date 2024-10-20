@@ -78,7 +78,7 @@ Before append: 128
 Repairing for bug: pt_134 < 9999
 Before append: 128
 ####################################################################################
-Time taken to repair thread  0 :  0.4355509281158447  seconds.
+Time taken to repair thread  0 :  0.45545101165771484  seconds.
 ################################################################################################
 [4, 101, "'0x7f43a8000fe0'", '-1', 1, 'enqueue_21']
 ################################################################################################
@@ -194,9 +194,9 @@ Constraint added: pc_134 == pc_134_0 - 1
 Adding: ['134_1', 103, '0', -1, 1, 'dequeue_46_x']
 Removing: pt_134 < 9999
 ####################################################################################
-Time taken to repair thread  1 :  1.2387244701385498  seconds.
+Time taken to repair thread  1 :  1.3009071350097656  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.0014243125915527344  seconds.
+Time taken to recombine individual threads:  0.001466989517211914  seconds.

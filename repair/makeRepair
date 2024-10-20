@@ -1,5 +1,6 @@
 FOLDER = ../ThreadTrove
-l1 = $(shell find $(FOLDER) -maxdepth 1 -type d | sed 's|.*/||' | tail -n +2) P-CLHT CCEH fastFair Clevel_hashing memcached 
+l1 = memcached P-CLHT fastFair Clevel_hashing CCEH $(shell find $(FOLDER) -maxdepth 1 -type d | sed 's|.*/||' | tail -n +2)
+# P-CLHT CCEH fastFair Clevel_hashing memcached 
 # l1 = fastFair
 process_files:
 	@echo "Subfolders: $(l1)"

@@ -25,7 +25,7 @@ Found insertion point for first lock:  0 1 [2, 101, '0x7f43b0002c80', '-1', '0',
 Adding fence because new scope started.
 Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'enqueue_21_x']
 Adding very restricted lock for read. 138
-Time taken:  0.0889286994934082  seconds.
+Time taken:  0.0889432430267334  seconds.
 
 ############################################################################
 
@@ -47,7 +47,7 @@ Found insertion point for first lock:  5 6 [4, 101, '0x7f43b0002c88', '0x7f43b00
 Adding fence because new scope started.
 Adding unlock: ['UnLock_2', 106, 'M1', -1, '0', 'enqueue_22_x']
 Adding very restricted lock for read. 140
-Time taken:  0.08590340614318848  seconds.
+Time taken:  0.08599686622619629  seconds.
 
 ############################################################################
 
@@ -69,7 +69,7 @@ Found insertion point for first lock:  13 14 [9, 101, '0x7f43b0002c88', '-1', '1
 Adding fence because new scope started.
 Adding unlock: ['UnLock_4', 106, 'M1', -1, '1', 'enqueue_29_x']
 Adding very restricted lock for read. 177
-Time taken:  0.09077310562133789  seconds.
+Time taken:  0.09066033363342285  seconds.
 
 ############################################################################
 
@@ -83,7 +83,7 @@ Values to be assigned in that range: 275
 Completed building constraints.
 Number of constraints:  1372
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.09859180450439453  seconds.
+Time taken:  0.09835124015808105  seconds.
 
 ############################################################################
 

@@ -2,139 +2,114 @@ Returning from parceTrace.py
 Completed parsing.
 Local variables initialized.
 Number of bugs detected:  6
-pt_4491 < 9999
-pt_4520 < 9999
-pt_4522 < 9999
-pt_4523 < 9999
-pt_4524 < 9999
-pt_4721 < 9999
-Thread IDs:  4
+pt_4502 < 9999
+pt_4531 < 9999
+pt_4533 < 9999
+pt_4534 < 9999
+pt_4535 < 9999
+pt_4756 < 9999
+Thread IDs:  3
 LENGTH OF THREAD:  0  :  4473
-LENGTH OF THREAD:  1  :  4046
-LENGTH OF THREAD:  2  :  4522
-LENGTH OF THREAD:  3  :  824
-Number of threads: 4
-[2, 101, "'0x7f8a804014ec'", "'0x7f8a804014ec'", 0, 'insert_key_513']
+LENGTH OF THREAD:  1  :  4843
+LENGTH OF THREAD:  2  :  3699
+Number of threads: 3
+[2, 101, "'0x7f3fc04014ec'", "'0x7f3fc04014ec'", 0, 'insert_key_513']
 ################################################################################################
 Working on Thread: 0 (Length of thread :  4473 ): 
 6
-Repairing for bug: pt_4491 < 9999
+Repairing for bug: pt_4502 < 9999
 Before append: 4473
 ####################################################################################
-Repairing for bug: pt_4520 < 9999
+Repairing for bug: pt_4531 < 9999
 Before append: 4473
 ####################################################################################
-Repairing for bug: pt_4522 < 9999
+Repairing for bug: pt_4533 < 9999
 Before append: 4473
 ####################################################################################
-Repairing for bug: pt_4523 < 9999
+Repairing for bug: pt_4534 < 9999
 Before append: 4473
 ####################################################################################
-Repairing for bug: pt_4524 < 9999
+Repairing for bug: pt_4535 < 9999
 Before append: 4473
 ####################################################################################
-Repairing for bug: pt_4721 < 9999
+Repairing for bug: pt_4756 < 9999
 Before append: 4473
 ####################################################################################
-Time taken to repair thread  0 :  2.9115960597991943  seconds.
+Time taken to repair thread  0 :  2.8672940731048584  seconds.
 ################################################################################################
-[4475, 101, "'0x7f8a80401960'", "'0x7f8a80401960'", 1, 'linear_search_798']
+[4475, 101, "'0x7f3fc0401960'", "'0x7f3fc0401960'", 1, 'linear_search_798']
 ################################################################################################
-Working on Thread: 1 (Length of thread :  4046 ): 
+Working on Thread: 1 (Length of thread :  4843 ): 
 6
-Repairing for bug: pt_4491 < 9999
-Before append: 4046
-Bug found:  pt_4491 pt_4491
-Adding: ['4491_0', 102, "'0x7f8a80401750'", -1, 1, 'linear_search_816_x']
-Constraint added: pc_4491 == pc_4491_0 - 1
-Removing: pt_4491 < 9999
+Repairing for bug: pt_4502 < 9999
+Before append: 4843
 ####################################################################################
-Repairing for bug: pt_4520 < 9999
-Before append: 4047
-Bug found:  pt_4520 pt_4520
-Adding: ['4520_0', 102, "'0x7f8a80401828'", -1, 1, 'linear_search_817_x']
-Constraint added: pc_4520 == pc_4520_0 - 1
-Removing: pt_4520 < 9999
+Repairing for bug: pt_4531 < 9999
+Before append: 4843
 ####################################################################################
-Repairing for bug: pt_4522 < 9999
-Before append: 4048
-Bug found:  pt_4522 pt_4522
-Adding: ['4522_0', 102, "'0x7f8a80401830'", -1, 1, 'linear_search_818_x']
-Constraint added: pc_4522 == pc_4522_0 - 1
-Removing: pt_4522 < 9999
+Repairing for bug: pt_4533 < 9999
+Before append: 4843
 ####################################################################################
-Repairing for bug: pt_4523 < 9999
-Before append: 4049
-Bug found:  pt_4523 pt_4523
-Adding: ['4523_0', 102, "'0x7f8a8040172c'", -1, 1, 'linear_search_848_x']
-Constraint added: pc_4523 == pc_4523_0 - 1
-Removing: pt_4523 < 9999
+Repairing for bug: pt_4534 < 9999
+Before append: 4843
 ####################################################################################
-Repairing for bug: pt_4524 < 9999
-Before append: 4050
-Bug found:  pt_4524 pt_4524
-Adding: ['4524_0', 102, "'0x7f8a80401730'", -1, 1, 'linear_search_851_x']
-Constraint added: pc_4524 == pc_4524_0 - 1
-Removing: pt_4524 < 9999
+Repairing for bug: pt_4535 < 9999
+Before append: 4843
 ####################################################################################
-Repairing for bug: pt_4721 < 9999
-Before append: 4051
-Bug found:  pt_4721 pt_4721
-Adding: ['4721_0', 102, "'0x7f8a80401508'", -1, 1, 'linear_search_807_x']
-Constraint added: pc_4721 == pc_4721_0 - 1
-Removing: pt_4721 < 9999
+Repairing for bug: pt_4756 < 9999
+Before append: 4843
 ####################################################################################
-Time taken to repair thread  1 :  2.599503993988037  seconds.
+Time taken to repair thread  1 :  3.040712356567383  seconds.
 ################################################################################################
-[4555, 101, "'0x7f8a80401960'", "'0x7f8a80401960'", 2, 'linear_search_798']
+[4486, 101, "'0x7f3fc0401960'", "'0x7f3fc0401960'", 2, 'linear_search_798']
 ################################################################################################
-Working on Thread: 2 (Length of thread :  4522 ): 
+Working on Thread: 2 (Length of thread :  3699 ): 
 6
-Repairing for bug: pt_4491 < 9999
-Before append: 4522
+Repairing for bug: pt_4502 < 9999
+Before append: 3699
+Bug found:  pt_4502 pt_4502
+Adding: ['4502_0', 102, "'0x7f3fc0401750'", -1, 2, 'linear_search_816_x']
+Constraint added: pc_4502 == pc_4502_0 - 1
+Removing: pt_4502 < 9999
 ####################################################################################
-Repairing for bug: pt_4520 < 9999
-Before append: 4522
+Repairing for bug: pt_4531 < 9999
+Before append: 3700
+Bug found:  pt_4531 pt_4531
+Adding: ['4531_0', 102, "'0x7f3fc0401828'", -1, 2, 'linear_search_817_x']
+Constraint added: pc_4531 == pc_4531_0 - 1
+Removing: pt_4531 < 9999
 ####################################################################################
-Repairing for bug: pt_4522 < 9999
-Before append: 4522
+Repairing for bug: pt_4533 < 9999
+Before append: 3701
+Bug found:  pt_4533 pt_4533
+Adding: ['4533_0', 102, "'0x7f3fc0401830'", -1, 2, 'linear_search_818_x']
+Constraint added: pc_4533 == pc_4533_0 - 1
+Removing: pt_4533 < 9999
 ####################################################################################
-Repairing for bug: pt_4523 < 9999
-Before append: 4522
+Repairing for bug: pt_4534 < 9999
+Before append: 3702
+Bug found:  pt_4534 pt_4534
+Adding: ['4534_0', 102, "'0x7f3fc040172c'", -1, 2, 'linear_search_848_x']
+Constraint added: pc_4534 == pc_4534_0 - 1
+Removing: pt_4534 < 9999
 ####################################################################################
-Repairing for bug: pt_4524 < 9999
-Before append: 4522
+Repairing for bug: pt_4535 < 9999
+Before append: 3703
+Bug found:  pt_4535 pt_4535
+Adding: ['4535_0', 102, "'0x7f3fc0401730'", -1, 2, 'linear_search_851_x']
+Constraint added: pc_4535 == pc_4535_0 - 1
+Removing: pt_4535 < 9999
 ####################################################################################
-Repairing for bug: pt_4721 < 9999
-Before append: 4522
+Repairing for bug: pt_4756 < 9999
+Before append: 3704
+Bug found:  pt_4756 pt_4756
+Adding: ['4756_0', 102, "'0x7f3fc0401508'", -1, 2, 'linear_search_807_x']
+Constraint added: pc_4756 == pc_4756_0 - 1
+Removing: pt_4756 < 9999
 ####################################################################################
-Time taken to repair thread  2 :  2.8685362339019775  seconds.
-################################################################################################
-[6947, 101, "'0x7f6d004014e0'", "'0x7f8a80401960'", 3, 'linear_search_798']
-################################################################################################
-Working on Thread: 3 (Length of thread :  824 ): 
-6
-Repairing for bug: pt_4491 < 9999
-Before append: 824
-####################################################################################
-Repairing for bug: pt_4520 < 9999
-Before append: 824
-####################################################################################
-Repairing for bug: pt_4522 < 9999
-Before append: 824
-####################################################################################
-Repairing for bug: pt_4523 < 9999
-Before append: 824
-####################################################################################
-Repairing for bug: pt_4524 < 9999
-Before append: 824
-####################################################################################
-Repairing for bug: pt_4721 < 9999
-Before append: 824
-####################################################################################
-Time taken to repair thread  3 :  0.5609664916992188  seconds.
+Time taken to repair thread  2 :  2.3468894958496094  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  4.708568096160889  seconds.
+Time taken to recombine individual threads:  4.122794151306152  seconds.

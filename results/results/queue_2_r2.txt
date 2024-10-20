@@ -30,7 +30,7 @@ Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'enqueue_22_x']
 Adding locks for read and taking fence within lock. 38
 Found insertion point for second lock:  36
 Adding fence because new scope started.
-Time taken:  0.08737397193908691  seconds.
+Time taken:  0.1033015251159668  seconds.
 
 ############################################################################
 
@@ -53,7 +53,7 @@ Found insertion point for first lock:  7 8 [6, 101, '0x1fcff28', '0x1fcff20', '0
 Adding fence because new scope started.
 Adding unlock: ['UnLock_2', 106, 'M1', -1, '0', 'enqueue_23_x']
 Adding very restricted lock for read. 40
-Time taken:  0.08601689338684082  seconds.
+Time taken:  0.10205769538879395  seconds.
 
 ############################################################################
 
@@ -75,7 +75,7 @@ Adding locks for write. 10
 Found insertion point for first lock:  14 15 [10, 101, '0x1fcff28', '-1', '0', 'enqueue_30'] ['Lock_4', 105, 'M1', -1, '0', 'enqueue_30_x']
 Adding fence because new scope started.
 Adding unlock: ['UnLock_4', 106, 'M1', -1, '0', 'enqueue_30_x']
-Time taken:  0.09093165397644043  seconds.
+Time taken:  0.10731005668640137  seconds.
 
 ############################################################################
 
@@ -94,7 +94,7 @@ Now, we will repair:  And(pc_2 < pc_45, pt_2 > pc_45)
 -1 0
 Prinitng stats:  0 -1 [40, 45] [2, 6, 10, 38]
 Adding very restricted lock for read. 45
-Time taken:  0.09511995315551758  seconds.
+Time taken:  0.11154842376708984  seconds.
 
 ############################################################################
 
@@ -109,7 +109,7 @@ Values to be assigned in that range: 306
 Completed building constraints.
 Number of constraints:  1400
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.09407734870910645  seconds.
+Time taken:  0.11155891418457031  seconds.
 
 ############################################################################
 

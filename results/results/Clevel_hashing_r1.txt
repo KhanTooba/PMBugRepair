@@ -555,7 +555,7 @@ Adding: ['110_0', 102, "'0x7f38403c05d0'", -1, 0, 'generic_insert_1064_x']
 Constraint added: pc_110 == pc_110_0 - 1
 Removing: pt_110 < 9999
 ####################################################################################
-Time taken to repair thread  0 :  139.11094284057617  seconds.
+Time taken to repair thread  0 :  141.72718405723572  seconds.
 ################################################################################################
 [20, 101, "'0x7f38403c05f0'", "'0x7f38403c05f0'", 1, 'load_419']
 ################################################################################################
@@ -712,9 +712,9 @@ Bug is: Not(pt_107 < pt_110)
 Repairing for bug: pt_110 < 9999
 Before append: 136
 ####################################################################################
-Time taken to repair thread  1 :  1.0682799816131592  seconds.
+Time taken to repair thread  1 :  1.0717730522155762  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.013354063034057617  seconds.
+Time taken to recombine individual threads:  0.013026237487792969  seconds.
