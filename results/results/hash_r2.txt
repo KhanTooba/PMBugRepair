@@ -19,9 +19,9 @@ Set Size:  12
 ############################################################################
 Iteration:  1
 Thread IDs:  3
+LENGTH OF THREAD:  2  :  237
 LENGTH OF THREAD:  0  :  109
 LENGTH OF THREAD:  1  :  96
-LENGTH OF THREAD:  2  :  237
 Ranges: 0 443
 Values to be assigned in that range: 442
 Completed building constraints.
@@ -35,198 +35,180 @@ Found insertion point for first lock:  0 1 [2, 101, '0x7fdb680014b0', '-1', '0',
 Adding fence because new scope started.
 Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'insert_112_x']
 Adding very restricted lock for read. 9
-Time taken:  0.1442403793334961  seconds.
+Time taken:  0.170212984085083  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  2
 Thread IDs:  3
+LENGTH OF THREAD:  2  :  237
 LENGTH OF THREAD:  0  :  112
 LENGTH OF THREAD:  1  :  98
-LENGTH OF THREAD:  2  :  237
 Ranges: 0 448
 Values to be assigned in that range: 447
 Completed building constraints.
 Number of constraints:  2099
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_207, pt_2 > pc_207)
+Now, we will repair:  And(pc_2 < pc_201, pt_2 > pc_201)
 -1 0
 Prinitng stats:  0 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
-Adding very restricted lock for read. 207
-Time taken:  0.14295697212219238  seconds.
+Adding very restricted lock for read. 201
+Time taken:  0.17053675651550293  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  3
 Thread IDs:  3
+LENGTH OF THREAD:  2  :  237
 LENGTH OF THREAD:  0  :  112
-LENGTH OF THREAD:  1  :  98
-LENGTH OF THREAD:  2  :  239
+LENGTH OF THREAD:  1  :  100
 Ranges: 0 450
 Values to be assigned in that range: 449
 Completed building constraints.
 Number of constraints:  2112
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_201, pt_2 > pc_201)
--1 0
-Prinitng stats:  0 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
-Adding very restricted lock for read. 201
-Time taken:  0.1481926441192627  seconds.
+Now, we will repair:  And(pc_4 < pc_207, pt_4 > pc_207)
+-1 -1
+Prinitng stats:  -1 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
+Adding locks for write. 4
+Found insertion point for first lock:  5 6 [4, 101, '0x7fdb680014b4', '0x7fdb680014b0', '0', 'insert_113'] ['Lock_3', 105, 'M1', -1, '0', 'insert_113_x']
+Adding fence because new scope started.
+Adding unlock: ['UnLock_3', 106, 'M1', -1, '0', 'insert_113_x']
+Adding very restricted lock for read. 207
+Time taken:  0.1767740249633789  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  4
 Thread IDs:  3
-LENGTH OF THREAD:  0  :  112
-LENGTH OF THREAD:  1  :  100
 LENGTH OF THREAD:  2  :  239
-Ranges: 0 452
-Values to be assigned in that range: 451
+LENGTH OF THREAD:  0  :  115
+LENGTH OF THREAD:  1  :  100
+Ranges: 0 455
+Values to be assigned in that range: 454
 Completed building constraints.
-Number of constraints:  2127
+Number of constraints:  2148
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_2 < pc_205, pt_2 > pc_205)
--1 0
-Prinitng stats:  0 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
-Adding very restricted lock for read. 205
-Time taken:  0.14957141876220703  seconds.
+Now, we will repair:  And(pc_6 < pc_210, pt_6 > pc_210)
+-1 -1
+Prinitng stats:  -1 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
+Adding locks for write. 6
+Found insertion point for first lock:  10 11 [6, 101, '0x7fdb680014b8', '0x7fdb680014b4', '0', 'insert_114'] ['Lock_5', 105, 'M1', -1, '0', 'insert_114_x']
+Adding fence because new scope started.
+Adding unlock: ['UnLock_5', 106, 'M1', -1, '0', 'insert_114_x']
+Adding very restricted lock for read. 210
+Time taken:  0.18644189834594727  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  5
 Thread IDs:  3
-LENGTH OF THREAD:  0  :  112
-LENGTH OF THREAD:  1  :  102
-LENGTH OF THREAD:  2  :  239
-Ranges: 0 454
-Values to be assigned in that range: 453
+LENGTH OF THREAD:  2  :  241
+LENGTH OF THREAD:  0  :  118
+LENGTH OF THREAD:  1  :  100
+Ranges: 0 460
+Values to be assigned in that range: 459
 Completed building constraints.
-Number of constraints:  2144
+Number of constraints:  2192
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_4 < pc_207, pt_4 > pc_207)
-214 -1
-Prinitng stats:  -1 214 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
-Adding locks for write. 4
-Found insertion point for first lock:  5 6 [4, 101, '0x7fdb680014b4', '0x7fdb680014b0', '0', 'insert_113'] ['Lock_5', 105, 'M1', -1, '0', 'insert_113_x']
-Adding fence because new scope started.
-Adding unlock: ['UnLock_5', 106, 'M1', -1, '0', 'insert_113_x']
-Time taken:  0.16924548149108887  seconds.
+Now, we will repair:  And(pc_2 < pc_205, pt_2 > pc_205)
+-1 0
+Prinitng stats:  0 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
+Adding very restricted lock for read. 205
+Time taken:  0.2087552547454834  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  6
 Thread IDs:  3
-LENGTH OF THREAD:  0  :  115
+LENGTH OF THREAD:  2  :  241
+LENGTH OF THREAD:  0  :  118
 LENGTH OF THREAD:  1  :  102
-LENGTH OF THREAD:  2  :  239
-Ranges: 0 457
-Values to be assigned in that range: 456
+Ranges: 0 462
+Values to be assigned in that range: 461
 Completed building constraints.
-Number of constraints:  2167
+Number of constraints:  2215
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_4 < pc_10, pt_4 > pc_10)
 -1 5
 Prinitng stats:  5 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
 Adding very restricted lock for read. 10
-Time taken:  0.16456317901611328  seconds.
+Time taken:  0.20270109176635742  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  7
 Thread IDs:  3
-LENGTH OF THREAD:  0  :  115
+LENGTH OF THREAD:  2  :  241
+LENGTH OF THREAD:  0  :  118
 LENGTH OF THREAD:  1  :  104
-LENGTH OF THREAD:  2  :  239
-Ranges: 0 459
-Values to be assigned in that range: 458
+Ranges: 0 464
+Values to be assigned in that range: 463
 Completed building constraints.
-Number of constraints:  2188
+Number of constraints:  2240
 A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_6 < pc_210, pt_6 > pc_210)
--1 -1
-Prinitng stats:  -1 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
-Adding locks for write. 6
-Found insertion point for first lock:  10 11 [6, 101, '0x7fdb680014b8', '0x7fdb680014b4', '0', 'insert_114'] ['Lock_7', 105, 'M1', -1, '0', 'insert_114_x']
-Adding fence because new scope started.
-Adding unlock: ['UnLock_7', 106, 'M1', -1, '0', 'insert_114_x']
-Adding very restricted lock for read. 210
-Time taken:  0.1707611083984375  seconds.
+Now, we will repair:  And(pc_6 < pc_383, pt_6 > pc_383)
+-1 10
+Prinitng stats:  10 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
+Adding very restricted lock for read. 383
+Time taken:  0.20369338989257812  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  8
 Thread IDs:  3
+LENGTH OF THREAD:  2  :  243
 LENGTH OF THREAD:  0  :  118
 LENGTH OF THREAD:  1  :  104
-LENGTH OF THREAD:  2  :  241
-Ranges: 0 464
-Values to be assigned in that range: 463
+Ranges: 0 466
+Values to be assigned in that range: 465
 Completed building constraints.
-Number of constraints:  2240
+Number of constraints:  2267
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_191 < pc_202, pt_191 > pc_202)
 -1 -1
 Prinitng stats:  -1 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
 Adding locks for write. 191
-Found insertion point for first lock:  202 203 [191, 101, '0x7fdb68003030', '0x7fdb680014b0', '0', 'delete_from_hash_130'] ['Lock_9', 105, 'M1', -1, '0', 'delete_from_hash_130_x']
+Found insertion point for first lock:  202 203 [191, 101, '0x7fdb68003030', '0x7fdb680014b0', '0', 'delete_from_hash_130'] ['Lock_10', 105, 'M1', -1, '0', 'delete_from_hash_130_x']
 Adding fence because new scope started.
-Adding unlock: ['UnLock_9', 106, 'M1', -1, '0', 'delete_from_hash_130_x']
+Adding unlock: ['UnLock_10', 106, 'M1', -1, '0', 'delete_from_hash_130_x']
 Adding very restricted lock for read. 202
-Time taken:  0.1861107349395752  seconds.
+Time taken:  0.21810197830200195  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  9
 Thread IDs:  3
+LENGTH OF THREAD:  2  :  243
 LENGTH OF THREAD:  0  :  121
 LENGTH OF THREAD:  1  :  106
-LENGTH OF THREAD:  2  :  241
-Ranges: 0 469
-Values to be assigned in that range: 468
+Ranges: 0 471
+Values to be assigned in that range: 470
 Completed building constraints.
-Number of constraints:  2300
+Number of constraints:  2331
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_6 < pc_206, pt_6 > pc_206)
 -1 10
 Prinitng stats:  10 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
 Adding very restricted lock for read. 206
-Time taken:  0.2566657066345215  seconds.
+Time taken:  0.21292734146118164  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  10
 Thread IDs:  3
-LENGTH OF THREAD:  0  :  121
-LENGTH OF THREAD:  1  :  108
-LENGTH OF THREAD:  2  :  241
-Ranges: 0 471
-Values to be assigned in that range: 470
-Completed building constraints.
-Number of constraints:  2331
-A violation is found. Let us see which bug was being violated in this trace.
-Now, we will repair:  And(pc_6 < pc_383, pt_6 > pc_383)
--1 10
-Prinitng stats:  10 -1 [9, 10, 201, 202, 205, 206, 207, 210, 383] [2, 4, 6, 180, 191]
-Adding very restricted lock for read. 383
-Time taken:  0.22569894790649414  seconds.
-
-############################################################################
-
-############################################################################
-Iteration:  11
-Thread IDs:  3
-LENGTH OF THREAD:  0  :  121
-LENGTH OF THREAD:  1  :  108
 LENGTH OF THREAD:  2  :  243
+LENGTH OF THREAD:  0  :  121
+LENGTH OF THREAD:  1  :  108
 Ranges: 0 473
 Values to be assigned in that range: 472
 Completed building constraints.
@@ -239,23 +221,23 @@ Adding locks for write. 180
 Found insertion point for first lock:  191 192 [180, 101, '0x7fdb68003030', '0x7fdb680014b0', '0', 'get_162'] ['Lock_13', 105, 'M1', -1, '0', 'get_162_x']
 Adding fence because new scope started.
 Adding unlock: ['UnLock_13', 106, 'M1', -1, '0', 'get_162_x']
-Time taken:  0.31732916831970215  seconds.
+Time taken:  0.293118953704834  seconds.
 
 ############################################################################
 
 ############################################################################
-Iteration:  12
+Iteration:  11
 Thread IDs:  3
+LENGTH OF THREAD:  2  :  243
 LENGTH OF THREAD:  0  :  124
 LENGTH OF THREAD:  1  :  108
-LENGTH OF THREAD:  2  :  243
 Ranges: 0 476
 Values to be assigned in that range: 475
 Completed building constraints.
 Number of constraints:  2403
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.2871434688568115  seconds.
+Time taken:  0.26567602157592773  seconds.
 
 ############################################################################
 
-Total number of iterations:  12
+Total number of iterations:  11

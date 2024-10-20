@@ -24,7 +24,7 @@ Found insertion point for first lock:  0 1 [2, 101, '0x7fd170002020', '-1', '0',
 Adding fence because new scope started.
 Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'push_50_x']
 Adding very restricted lock for read. 110
-Time taken:  0.06502771377563477  seconds.
+Time taken:  0.0688176155090332  seconds.
 
 ############################################################################
 
@@ -46,7 +46,7 @@ Found insertion point for first lock:  6 7 [5, 101, '0x7fd170002028', '-1', '0',
 Adding fence because new scope started.
 Adding unlock: ['UnLock_2', 106, 'M1', -1, '0', 'push_53_x']
 Adding very restricted lock for read. 111
-Time taken:  0.06499671936035156  seconds.
+Time taken:  0.06352663040161133  seconds.
 
 ############################################################################
 
@@ -60,7 +60,7 @@ Values to be assigned in that range: 218
 Completed building constraints.
 Number of constraints:  978
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.06575942039489746  seconds.
+Time taken:  0.06463623046875  seconds.
 
 ############################################################################
 

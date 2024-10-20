@@ -42,7 +42,7 @@ Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'newNode_66_x']
 Adding locks for read and taking fence within lock. 25
 Found insertion point for second lock:  23
 Adding fence because new scope started.
-Time taken:  0.08507513999938965  seconds.
+Time taken:  0.10069704055786133  seconds.
 
 ############################################################################
 
@@ -63,7 +63,7 @@ Prinitng stats:  0 -1 [33, 259, 236, 238, 48, 52, 53] [2, 4, 25, 28, 30, 36, 39,
 Adding locks for read and taking fence within lock. 45
 Found insertion point for second lock:  49
 Adding fence because new scope started.
-Time taken:  0.0828242301940918  seconds.
+Time taken:  0.09761500358581543  seconds.
 
 ############################################################################
 
@@ -82,7 +82,7 @@ Now, we will repair:  And(pc_25 < pc_236, pt_25 > pc_236)
 -1 26
 Prinitng stats:  26 -1 [33, 259, 236, 238, 48, 52, 53] [2, 4, 25, 28, 30, 36, 39, 50, 45, 41]
 Adding very restricted lock for read. 236
-Time taken:  0.0837395191192627  seconds.
+Time taken:  0.09843230247497559  seconds.
 
 ############################################################################
 
@@ -101,7 +101,7 @@ Now, we will repair:  And(pc_25 < pc_52, pt_25 > pc_52)
 -1 26
 Prinitng stats:  26 -1 [33, 259, 236, 238, 48, 52, 53] [2, 4, 25, 28, 30, 36, 39, 50, 45, 41]
 Adding very restricted lock for read. 52
-Time taken:  0.08810973167419434  seconds.
+Time taken:  0.10399794578552246  seconds.
 
 ############################################################################
 
@@ -124,7 +124,7 @@ Found insertion point for first lock:  32 33 [28, 101, '0xcfa9e8', '0x7f91fc0045
 Adding fence because new scope started.
 Adding unlock: ['UnLock_5', 106, 'M1', -1, '1', 'deque_pop_front_121_x']
 Adding very restricted lock for read. 238
-Time taken:  0.09445786476135254  seconds.
+Time taken:  0.11019396781921387  seconds.
 
 ############################################################################
 
@@ -147,7 +147,7 @@ Found insertion point for first lock:  37 38 [30, 101, '0xcfaae0', '0xcfa9e8', '
 Adding fence because new scope started.
 Adding unlock: ['UnLock_7', 106, 'M1', -1, '1', 'deque_pop_front_126_x']
 Adding very restricted lock for read. 53
-Time taken:  0.10604166984558105  seconds.
+Time taken:  0.12450408935546875  seconds.
 
 ############################################################################
 
@@ -169,7 +169,7 @@ Adding locks for write. 36
 Found insertion point for first lock:  46 47 [36, 101, '0xcfae38', '0xcfaae0', '2', 'deque_push_back_103'] ['Lock_9', 105, 'M1', -1, '2', 'deque_push_back_103_x']
 Adding fence because another thread started.
 Adding unlock: ['UnLock_9', 106, 'M1', -1, '2', 'deque_push_back_103_x']
-Time taken:  0.11995387077331543  seconds.
+Time taken:  0.1401662826538086  seconds.
 
 ############################################################################
 
@@ -188,7 +188,7 @@ Now, we will repair:  And(pc_36 < pc_259, pt_36 > pc_259)
 -1 46
 Prinitng stats:  46 -1 [33, 259, 236, 238, 48, 52, 53] [2, 4, 25, 28, 30, 36, 39, 50, 45, 41]
 Adding very restricted lock for read. 259
-Time taken:  0.12461495399475098  seconds.
+Time taken:  0.14674663543701172  seconds.
 
 ############################################################################
 
@@ -210,7 +210,7 @@ Adding locks for write. 41
 Found insertion point for first lock:  54 55 [41, 101, '0xcfaba0', '0x7f91fc0045d8', '1', 'deque_push_front_87'] ['Lock_11', 105, 'M1', -1, '1', 'deque_push_front_87_x']
 Adding fence because new scope started.
 Adding unlock: ['UnLock_11', 106, 'M1', -1, '1', 'deque_push_front_87_x']
-Time taken:  0.1418139934539795  seconds.
+Time taken:  0.16351604461669922  seconds.
 
 ############################################################################
 
@@ -232,7 +232,7 @@ Adding very restricted lock for write. 33
 Adding locks for read and taking fence within lock. 39
 Found insertion point for second lock:  52
 Adding fence because new scope started.
-Time taken:  0.1374812126159668  seconds.
+Time taken:  0.1359577178955078  seconds.
 
 ############################################################################
 
@@ -254,7 +254,7 @@ Adding locks for write. 50
 Found insertion point for first lock:  74 75 [50, 101, '0xcfaad8', '0xcfa9f0', '1', 'deque_pop_back_150'] ['Lock_14', 105, 'M1', -1, '1', 'deque_pop_back_150_x']
 Adding fence because new scope started.
 Adding unlock: ['UnLock_14', 106, 'M1', -1, '1', 'deque_pop_back_150_x']
-Time taken:  0.18021130561828613  seconds.
+Time taken:  0.17836427688598633  seconds.
 
 ############################################################################
 
@@ -277,7 +277,7 @@ Found insertion point for first lock:  5 6 [4, 101, '0xcfaae0', '-1', '0', 'dequ
 Adding fence because new scope started.
 Adding unlock: ['UnLock_15', 106, 'M1', -1, '0', 'deque_push_back_102_x']
 Adding very restricted lock for read. 48
-Time taken:  0.1922013759613037  seconds.
+Time taken:  0.1893308162689209  seconds.
 
 ############################################################################
 
@@ -292,7 +292,7 @@ Values to be assigned in that range: 314
 Completed building constraints.
 Number of constraints:  1675
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.2122490406036377  seconds.
+Time taken:  0.21050357818603516  seconds.
 
 ############################################################################
 

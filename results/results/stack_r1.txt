@@ -127,7 +127,7 @@ Adding: ['103_0', 102, "'0x7fd170003998'", -1, 0, 'pop_67_x']
 Constraint added: pc_103 == pc_103_0 - 1
 Removing: pt_103 < 9999
 ####################################################################################
-Time taken to repair thread  0 :  1.6817529201507568  seconds.
+Time taken to repair thread  0 :  1.6753852367401123  seconds.
 ################################################################################################
 [4, 101, "'0x7fd168001310'", '-1', 1, 'push_50']
 ################################################################################################
@@ -167,9 +167,9 @@ Before append: 100
 Repairing for bug: pt_103 < 9999
 Before append: 100
 ####################################################################################
-Time taken to repair thread  1 :  0.20795774459838867  seconds.
+Time taken to repair thread  1 :  0.20576906204223633  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.000978708267211914  seconds.
+Time taken to recombine individual threads:  0.0009322166442871094  seconds.

@@ -23,7 +23,7 @@ Removing: pt_2 < 9999
 Repairing for bug: pt_3 < 9999
 Before append: 3
 ####################################################################################
-Time taken to repair thread  0 :  0.008099079132080078  seconds.
+Time taken to repair thread  0 :  0.00804281234741211  seconds.
 ################################################################################################
 [3, 101, "'0x1599850'", "'0x1599850'", 1, 'thread2_function_24']
 ################################################################################################
@@ -40,9 +40,9 @@ Constraint added: pc_3 == pc_3_0 - 1
 Adding: ['3_1', 103, '0', -1, 1, 'thread2_function_24_x']
 Removing: pt_3 < 9999
 ####################################################################################
-Time taken to repair thread  1 :  0.006477832794189453  seconds.
+Time taken to repair thread  1 :  0.006395101547241211  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  1.2636184692382812e-05  seconds.
+Time taken to recombine individual threads:  1.1920928955078125e-05  seconds.

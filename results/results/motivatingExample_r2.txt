@@ -8,8 +8,8 @@ Set Size:  1
 ############################################################################
 Iteration:  1
 Thread IDs:  2
-LENGTH OF THREAD:  0  :  3
 LENGTH OF THREAD:  1  :  6
+LENGTH OF THREAD:  0  :  3
 Ranges: 0 10
 Values to be assigned in that range: 9
 Completed building constraints.
@@ -23,21 +23,21 @@ Found insertion point for first lock:  0 1 [2, 101, '0x1599850', '-1', '0', 'thr
 Adding fence because new scope started.
 Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'thread1_function_18_x']
 Adding very restricted lock for read. 5
-Time taken:  0.014264345169067383  seconds.
+Time taken:  0.01648879051208496  seconds.
 
 ############################################################################
 
 ############################################################################
 Iteration:  2
 Thread IDs:  2
-LENGTH OF THREAD:  0  :  6
 LENGTH OF THREAD:  1  :  8
+LENGTH OF THREAD:  0  :  6
 Ranges: 0 15
 Values to be assigned in that range: 14
 Completed building constraints.
 Number of constraints:  55
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.012721776962280273  seconds.
+Time taken:  0.013233423233032227  seconds.
 
 ############################################################################
 
