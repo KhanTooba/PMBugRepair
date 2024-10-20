@@ -115,10 +115,6 @@ The number of assertions: 131
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < pt_32)
-Num: 136
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 36 [2, 101, "'0x1fcff20'", '-1', 0, 'enqueue_22']
 ####################################################################################
 Repairing for bug: pt_6 < pt_32
@@ -131,13 +127,9 @@ The number of assertions: 131
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_6 < pt_32)
-Num: 136
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 36 [2, 101, "'0x1fcff20'", '-1', 0, 'enqueue_22']
 ####################################################################################
-Time taken to repair thread  0 :  0.4060690402984619  seconds.
+Time taken to repair thread  0 :  0.25626111030578613  seconds.
 ################################################################################################
 [31, 101, "'0x1fcff20'", "'0x1fcff20'", 1, 'dequeue_46']
 ################################################################################################
@@ -155,10 +147,6 @@ The number of assertions: 499
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_3)
-Num: 501
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 125 [31, 101, "'0x1fcff20'", "'0x1fcff20'", 1, 'dequeue_46']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
@@ -193,10 +181,6 @@ The number of assertions: 509
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < pt_32)
-Num: 513
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 129 [31, 101, "'0x1fcff20'", "'0x1fcff20'", 1, 'dequeue_46']
 ####################################################################################
 Repairing for bug: pt_6 < pt_32
@@ -209,13 +193,9 @@ The number of assertions: 509
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_6 < pt_32)
-Num: 513
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 129 [31, 101, "'0x1fcff20'", "'0x1fcff20'", 1, 'dequeue_46']
 ####################################################################################
-Time taken to repair thread  1 :  0.9928700923919678  seconds.
+Time taken to repair thread  1 :  0.3786487579345703  seconds.
 ################################################################################################
 [33, 101, "'0x1fcffe0'", "'0x1fcff20'", 2, 'dequeue_46']
 ################################################################################################
@@ -233,10 +213,6 @@ The number of assertions: 499
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_3)
-Num: 501
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 125 [33, 101, "'0x1fcffe0'", "'0x1fcff20'", 2, 'dequeue_46']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
@@ -260,10 +236,6 @@ The number of assertions: 499
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < pt_32)
-Num: 501
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 125 [33, 101, "'0x1fcffe0'", "'0x1fcff20'", 2, 'dequeue_46']
 ####################################################################################
 Repairing for bug: pt_6 < pt_32
@@ -275,15 +247,11 @@ The number of assertions: 499
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_6 < pt_32)
-Num: 501
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 125 [33, 101, "'0x1fcffe0'", "'0x1fcff20'", 2, 'dequeue_46']
 ####################################################################################
-Time taken to repair thread  2 :  1.8006420135498047  seconds.
+Time taken to repair thread  2 :  0.3671553134918213  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.0022628307342529297  seconds.
+Time taken to recombine individual threads:  0.0018699169158935547  seconds.

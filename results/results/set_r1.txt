@@ -235,10 +235,6 @@ The number of assertions: 543
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_104 < pt_122)
-Num: 549
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 141 [2, 101, "'0x1538110'", '-1', 0, 'newNode_56']
 ####################################################################################
 Repairing for bug: pt_122 < 9999
@@ -267,7 +263,7 @@ Adding: ['1618_0', 102, "'0x1538388'", -1, 0, 'set_clear_142_x']
 Constraint added: pc_1618 == pc_1618_0 - 1
 Removing: pt_1618 < 9999
 ####################################################################################
-Time taken to repair thread  0 :  6.641324758529663  seconds.
+Time taken to repair thread  0 :  4.762322902679443  seconds.
 ################################################################################################
 [103, 101, "'0x1538560'", "'0x1538110'", 1, 'set_remove_96']
 ################################################################################################
@@ -285,10 +281,6 @@ The number of assertions: 3747
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_4)
-Num: 3749
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 937 [103, 101, "'0x1538560'", "'0x1538110'", 1, 'set_remove_96']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
@@ -306,10 +298,6 @@ The number of assertions: 3747
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_4 < pt_5)
-Num: 3749
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 937 [103, 101, "'0x1538560'", "'0x1538110'", 1, 'set_remove_96']
 ####################################################################################
 Repairing for bug: pt_5 < 9999
@@ -324,10 +312,6 @@ The number of assertions: 3747
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < pt_1599)
-Num: 3749
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 937 [103, 101, "'0x1538560'", "'0x1538110'", 1, 'set_remove_96']
 ####################################################################################
 Repairing for bug: pt_5 < pt_1599
@@ -339,10 +323,6 @@ The number of assertions: 3747
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_5 < pt_1599)
-Num: 3749
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 937 [103, 101, "'0x1538560'", "'0x1538110'", 1, 'set_remove_96']
 ####################################################################################
 Repairing for bug: pt_103 < 9999
@@ -377,16 +357,16 @@ Blocking constraints: [[104, '103_1'], [122, '103_1'], [104, '104_1'], [122, '10
 Bug is: Not(pt_104 < pt_122)
 Num: 3763
 ITERATION:  1
-Not(And(pc_104 < pc_103_1,
-        pc_122 < pc_103_1,
+Not(And(pc_104 > pc_103_1,
+        pc_122 > pc_103_1,
         pc_104 > pc_104_1,
         pc_122 > pc_104_1))
 Num: 3764
 ITERATION:  2
 Not(And(pc_104 > pc_103_1,
         pc_122 > pc_103_1,
-        pc_104 > pc_104_1,
-        pc_122 > pc_104_1))
+        pc_104 < pc_104_1,
+        pc_122 < pc_104_1))
 Num: 3765
 ITERATION:  3
 Not(And(pc_104 < pc_103_1,
@@ -395,27 +375,27 @@ Not(And(pc_104 < pc_103_1,
         pc_122 < pc_104_1))
 Num: 3766
 ITERATION:  4
-Not(And(pc_104 > pc_103_1,
-        pc_122 > pc_103_1,
-        pc_104 < pc_104_1,
-        pc_122 < pc_104_1))
+Not(And(pc_104 < pc_103_1,
+        pc_122 < pc_103_1,
+        pc_104 > pc_104_1,
+        pc_122 > pc_104_1))
 Not running blocking constraint generation because already unsat.
-SAIS: And(Not(And(Not(pc_103_1 <= pc_104),
-            Not(pc_103_1 <= pc_122),
+SAIS: And(Not(And(Not(pc_104 <= pc_103_1),
+            Not(pc_122 <= pc_103_1),
             Not(pc_104 <= pc_104_1),
             Not(pc_122 <= pc_104_1))),
     Not(And(Not(pc_104 <= pc_103_1),
             Not(pc_122 <= pc_103_1),
-            Not(pc_104 <= pc_104_1),
-            Not(pc_122 <= pc_104_1))),
+            Not(pc_104_1 <= pc_104),
+            Not(pc_104_1 <= pc_122))),
     Not(And(Not(pc_103_1 <= pc_104),
             Not(pc_103_1 <= pc_122),
             Not(pc_104_1 <= pc_104),
             Not(pc_104_1 <= pc_122))),
-    Not(And(Not(pc_104 <= pc_103_1),
-            Not(pc_122 <= pc_103_1),
-            Not(pc_104_1 <= pc_104),
-            Not(pc_104_1 <= pc_122))))
+    Not(And(Not(pc_103_1 <= pc_104),
+            Not(pc_103_1 <= pc_122),
+            Not(pc_104 <= pc_104_1),
+            Not(pc_122 <= pc_104_1))))
 Removing: pt_104 < pt_122
 ####################################################################################
 Repairing for bug: pt_122 < 9999
@@ -435,7 +415,7 @@ Before append: 943
 Repairing for bug: pt_1618 < 9999
 Before append: 943
 ####################################################################################
-Time taken to repair thread  1 :  66.14213013648987  seconds.
+Time taken to repair thread  1 :  47.38853311538696  seconds.
 ################################################################################################
 [124, 101, "'0x1538560'", "'0x1538110'", 2, 'set_remove_96']
 ################################################################################################
@@ -453,10 +433,6 @@ The number of assertions: 2231
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_4)
-Num: 2233
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 558 [124, 101, "'0x1538560'", "'0x1538110'", 2, 'set_remove_96']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
@@ -474,10 +450,6 @@ The number of assertions: 2231
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_4 < pt_5)
-Num: 2233
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 558 [124, 101, "'0x1538560'", "'0x1538110'", 2, 'set_remove_96']
 ####################################################################################
 Repairing for bug: pt_5 < 9999
@@ -492,10 +464,6 @@ The number of assertions: 2231
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < pt_1599)
-Num: 2233
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 558 [124, 101, "'0x1538560'", "'0x1538110'", 2, 'set_remove_96']
 ####################################################################################
 Repairing for bug: pt_5 < pt_1599
@@ -507,10 +475,6 @@ The number of assertions: 2231
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_5 < pt_1599)
-Num: 2233
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 558 [124, 101, "'0x1538560'", "'0x1538110'", 2, 'set_remove_96']
 ####################################################################################
 Repairing for bug: pt_103 < 9999
@@ -528,10 +492,6 @@ The number of assertions: 2231
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_104 < pt_122)
-Num: 2233
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 558 [124, 101, "'0x1538560'", "'0x1538110'", 2, 'set_remove_96']
 ####################################################################################
 Repairing for bug: pt_122 < 9999
@@ -546,9 +506,9 @@ Before append: 558
 Repairing for bug: pt_1618 < 9999
 Before append: 558
 ####################################################################################
-Time taken to repair thread  2 :  4.423643112182617  seconds.
+Time taken to repair thread  2 :  2.732822895050049  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.10982584953308105  seconds.
+Time taken to recombine individual threads:  0.06707048416137695  seconds.

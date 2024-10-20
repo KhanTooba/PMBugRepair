@@ -127,7 +127,7 @@ Adding: ['103_0', 102, "'0x7fd170003998'", -1, 0, 'pop_67_x']
 Constraint added: pc_103 == pc_103_0 - 1
 Removing: pt_103 < 9999
 ####################################################################################
-Time taken to repair thread  0 :  2.27412486076355  seconds.
+Time taken to repair thread  0 :  1.6817529201507568  seconds.
 ################################################################################################
 [4, 101, "'0x7fd168001310'", '-1', 1, 'push_50']
 ################################################################################################
@@ -145,10 +145,6 @@ The number of assertions: 399
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_102)
-Num: 401
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 100 [4, 101, "'0x7fd168001310'", '-1', 1, 'push_50']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
@@ -163,10 +159,6 @@ The number of assertions: 399
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < pt_103)
-Num: 401
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 100 [4, 101, "'0x7fd168001310'", '-1', 1, 'push_50']
 ####################################################################################
 Repairing for bug: pt_102 < 9999
@@ -175,9 +167,9 @@ Before append: 100
 Repairing for bug: pt_103 < 9999
 Before append: 100
 ####################################################################################
-Time taken to repair thread  1 :  0.7870972156524658  seconds.
+Time taken to repair thread  1 :  0.20795774459838867  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.0011339187622070312  seconds.
+Time taken to recombine individual threads:  0.000978708267211914  seconds.

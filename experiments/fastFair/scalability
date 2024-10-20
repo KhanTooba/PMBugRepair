@@ -1,7 +1,7 @@
 EXEC=btree_concurrent_mixed
 OUTPUT_FILE=output.txt
 POOL_PATH=/mnt/pmfs/pool6
-THREADS=$(shell seq 2 2 32)
+THREADS=$(shell seq 2 2 65)
 
 all: clean run clean_bc
 
@@ -10,7 +10,7 @@ run:
 		echo "Running with -t $$t"; \
 		sudo rm -f $(POOL_PATH); \
 		sudo ./$(EXEC) -n 50 -i input.txt -t $$t -p $(POOL_PATH); \
-		mv $(OUTPUT_FILE) fastFair_$$t.txt; \
+		mv $(OUTPUT_FILE) comparitive/fastFair_$$t.txt; \
 	done
 
 clean_bc:

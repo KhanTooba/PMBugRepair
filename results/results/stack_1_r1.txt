@@ -94,7 +94,7 @@ Before append: 9
 Repairing for bug: pt_47 < 9999
 Before append: 9
 ####################################################################################
-Time taken to repair thread  0 :  0.08522772789001465  seconds.
+Time taken to repair thread  0 :  0.058608055114746094  seconds.
 ################################################################################################
 [6, 101, "'0x7fa8f4000d40'", '-1', 1, 'stack_push_98']
 ################################################################################################
@@ -112,10 +112,6 @@ The number of assertions: 167
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_3)
-Num: 169
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 42 [6, 101, "'0x7fa8f4000d40'", '-1', 1, 'stack_push_98']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
@@ -137,7 +133,7 @@ Constraint added: pc_47 == pc_47_0 - 1
 Adding: ['47_1', 103, '0', -1, 1, 'stack_pop_118_x']
 Removing: pt_47 < 9999
 ####################################################################################
-Time taken to repair thread  1 :  0.1350719928741455  seconds.
+Time taken to repair thread  1 :  0.06907224655151367  seconds.
 ################################################################################################
 [8, 101, "'0x7fa8fc0024c0'", '-1', 2, 'stack_push_98']
 ################################################################################################
@@ -155,10 +151,6 @@ The number of assertions: 167
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_3)
-Num: 169
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 42 [8, 101, "'0x7fa8fc0024c0'", '-1', 2, 'stack_push_98']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
@@ -170,9 +162,9 @@ Before append: 42
 Repairing for bug: pt_47 < 9999
 Before append: 42
 ####################################################################################
-Time taken to repair thread  2 :  0.12158727645874023  seconds.
+Time taken to repair thread  2 :  0.06004977226257324  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.0002789497375488281  seconds.
+Time taken to recombine individual threads:  0.0002205371856689453  seconds.

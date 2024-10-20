@@ -558,7 +558,7 @@ def generateRepair(inputFileName, name):
     iterCount = 0
     print(set(reads), set(writes))
     
-    setSize = len(bugCons)
+    setSize = max(1, len(bugCons))
     print("Set Size: ", setSize)
     for i in range(0, len(bugCons), setSize):
         start = i

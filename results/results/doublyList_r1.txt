@@ -148,10 +148,6 @@ The number of assertions: 407
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_41 < pt_55)
-Num: 412
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 105 [2, 101, "'0xd919e0'", '-1', 0, 'newNode_66']
 ####################################################################################
 Repairing for bug: pt_42 < 9999
@@ -166,10 +162,6 @@ The number of assertions: 407
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_42 < pt_43)
-Num: 412
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 105 [2, 101, "'0xd919e0'", '-1', 0, 'newNode_66']
 ####################################################################################
 Repairing for bug: pt_43 < 9999
@@ -184,10 +176,6 @@ The number of assertions: 407
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_43 < pt_56)
-Num: 412
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 105 [2, 101, "'0xd919e0'", '-1', 0, 'newNode_66']
 ####################################################################################
 Repairing for bug: pt_4 < pt_56
@@ -200,10 +188,6 @@ The number of assertions: 409
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_4 < pt_56)
-Num: 414
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 105 [2, 101, "'0xd919e0'", '-1', 0, 'newNode_66']
 ####################################################################################
 Repairing for bug: pt_51 < 9999
@@ -218,10 +202,6 @@ The number of assertions: 407
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_51 < pt_52)
-Num: 412
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 105 [2, 101, "'0xd919e0'", '-1', 0, 'newNode_66']
 ####################################################################################
 Repairing for bug: pt_52 < 9999
@@ -242,10 +222,6 @@ The number of assertions: 407
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_56 < pt_57)
-Num: 412
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 105 [2, 101, "'0xd919e0'", '-1', 0, 'newNode_66']
 ####################################################################################
 Repairing for bug: pt_57 < 9999
@@ -272,7 +248,7 @@ Adding: ['481_0', 102, "'0x7f44c4002d68'", -1, 0, 'dll_clear_173_x']
 Constraint added: pc_481 == pc_481_0 - 1
 Removing: pt_481 < 9999
 ####################################################################################
-Time taken to repair thread  0 :  4.6816017627716064  seconds.
+Time taken to repair thread  0 :  2.2683017253875732  seconds.
 ################################################################################################
 [41, 101, "'0xd919e0'", "'0xd919e0'", 1, 'dll_remove_start_143']
 ################################################################################################
@@ -290,10 +266,6 @@ The number of assertions: 799
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_441)
-Num: 801
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 200 [41, 101, "'0xd919e0'", "'0xd919e0'", 1, 'dll_remove_start_143']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
@@ -308,10 +280,6 @@ The number of assertions: 799
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < pt_4)
-Num: 801
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 200 [41, 101, "'0xd919e0'", "'0xd919e0'", 1, 'dll_remove_start_143']
 ####################################################################################
 Repairing for bug: pt_4 < 9999
@@ -340,43 +308,43 @@ Blocking constraints: [[41, '41_1'], [55, '41_1'], [41, '41_Fence_2'], [55, '41_
 Bug is: Not(pt_41 < pt_55)
 Num: 812
 ITERATION:  1
-Not(And(pc_41 < pc_41_1,
-        pc_55 < pc_41_1,
+Not(And(pc_41 > pc_41_1,
+        pc_55 > pc_41_1,
         pc_41 > pc_41_Fence_2,
         pc_55 > pc_41_Fence_2))
 Num: 813
 ITERATION:  2
-Not(And(pc_41 > pc_41_1,
-        pc_55 > pc_41_1,
+Not(And(pc_41 < pc_41_1,
+        pc_55 < pc_41_1,
         pc_41 > pc_41_Fence_2,
         pc_55 > pc_41_Fence_2))
 Num: 814
 ITERATION:  3
-Not(And(pc_41 < pc_41_1,
-        pc_55 < pc_41_1,
-        pc_41 < pc_41_Fence_2,
-        pc_55 < pc_41_Fence_2))
-Num: 815
-ITERATION:  4
 Not(And(pc_41 > pc_41_1,
         pc_55 > pc_41_1,
         pc_41 < pc_41_Fence_2,
         pc_55 < pc_41_Fence_2))
+Num: 815
+ITERATION:  4
+Not(And(pc_41 < pc_41_1,
+        pc_55 < pc_41_1,
+        pc_41 < pc_41_Fence_2,
+        pc_55 < pc_41_Fence_2))
 Not running blocking constraint generation because already unsat.
-SAIS: And(Not(And(Not(pc_41_1 <= pc_41),
-            Not(pc_41_1 <= pc_55),
-            Not(pc_41 <= pc_41_Fence_2),
-            Not(pc_55 <= pc_41_Fence_2))),
-    Not(And(Not(pc_41 <= pc_41_1),
+SAIS: And(Not(And(Not(pc_41 <= pc_41_1),
             Not(pc_55 <= pc_41_1),
             Not(pc_41 <= pc_41_Fence_2),
             Not(pc_55 <= pc_41_Fence_2))),
     Not(And(Not(pc_41_1 <= pc_41),
             Not(pc_41_1 <= pc_55),
-            Not(pc_41_Fence_2 <= pc_41),
-            Not(pc_41_Fence_2 <= pc_55))),
+            Not(pc_41 <= pc_41_Fence_2),
+            Not(pc_55 <= pc_41_Fence_2))),
     Not(And(Not(pc_41 <= pc_41_1),
             Not(pc_55 <= pc_41_1),
+            Not(pc_41_Fence_2 <= pc_41),
+            Not(pc_41_Fence_2 <= pc_55))),
+    Not(And(Not(pc_41_1 <= pc_41),
+            Not(pc_41_1 <= pc_55),
             Not(pc_41_Fence_2 <= pc_41),
             Not(pc_41_Fence_2 <= pc_55))))
 Removing: pt_41 < pt_55
@@ -391,25 +359,56 @@ Removing: pt_42 < 9999
 Repairing for bug: pt_42 < pt_43
 MPB Bug found: pt_42 < pt_43
 Before append: 204
-Fence count: 0
+Fence found. 41_1
+Fence count: 1
 After append: 205
 The bug flag is: 1
 Did not continue for: 42
 Did not continue for: 43
-The number of assertions: 812
-The number of blocking constraint will be:  2
-Blocking constraints: [[42, '42_Fence_3'], [43, '42_Fence_3']]
+The number of assertions: 813
+The number of blocking constraint will be:  4
+Blocking constraints: [[42, '41_1'], [43, '41_1'], [42, '42_Fence_3'], [43, '42_Fence_3']]
 Bug is: Not(pt_42 < pt_43)
-Num: 816
-ITERATION:  1
-Not(And(pc_42 > pc_42_Fence_3, pc_43 > pc_42_Fence_3))
 Num: 817
+ITERATION:  1
+Not(And(pc_42 < pc_41_1,
+        pc_43 < pc_41_1,
+        pc_42 > pc_42_Fence_3,
+        pc_43 > pc_42_Fence_3))
+Num: 818
 ITERATION:  2
-Not(And(pc_42 < pc_42_Fence_3, pc_43 < pc_42_Fence_3))
+Not(And(pc_42 > pc_41_1,
+        pc_43 > pc_41_1,
+        pc_42 > pc_42_Fence_3,
+        pc_43 > pc_42_Fence_3))
+Num: 819
+ITERATION:  3
+Not(And(pc_42 > pc_41_1,
+        pc_43 > pc_41_1,
+        pc_42 < pc_42_Fence_3,
+        pc_43 < pc_42_Fence_3))
+Num: 820
+ITERATION:  4
+Not(And(pc_42 < pc_41_1,
+        pc_43 < pc_41_1,
+        pc_42 < pc_42_Fence_3,
+        pc_43 < pc_42_Fence_3))
 Not running blocking constraint generation because already unsat.
-SAIS: And(Not(And(Not(pc_42 <= pc_42_Fence_3),
+SAIS: And(Not(And(Not(pc_41_1 <= pc_42),
+            Not(pc_41_1 <= pc_43),
+            Not(pc_42 <= pc_42_Fence_3),
             Not(pc_43 <= pc_42_Fence_3))),
-    Not(And(Not(pc_42_Fence_3 <= pc_42),
+    Not(And(Not(pc_42 <= pc_41_1),
+            Not(pc_43 <= pc_41_1),
+            Not(pc_42 <= pc_42_Fence_3),
+            Not(pc_43 <= pc_42_Fence_3))),
+    Not(And(Not(pc_42 <= pc_41_1),
+            Not(pc_43 <= pc_41_1),
+            Not(pc_42_Fence_3 <= pc_42),
+            Not(pc_42_Fence_3 <= pc_43))),
+    Not(And(Not(pc_41_1 <= pc_42),
+            Not(pc_41_1 <= pc_43),
+            Not(pc_42_Fence_3 <= pc_42),
             Not(pc_42_Fence_3 <= pc_43))))
 Removing: pt_42 < pt_43
 ####################################################################################
@@ -448,14 +447,14 @@ Not(And(pc_43 > pc_43_1,
         pc_56 > pc_43_Fence_4))
 Num: 826
 ITERATION:  3
-Not(And(pc_43 > pc_43_1,
-        pc_56 > pc_43_1,
+Not(And(pc_43 < pc_43_1,
+        pc_56 < pc_43_1,
         pc_43 < pc_43_Fence_4,
         pc_56 < pc_43_Fence_4))
 Num: 827
 ITERATION:  4
-Not(And(pc_43 < pc_43_1,
-        pc_56 < pc_43_1,
+Not(And(pc_43 > pc_43_1,
+        pc_56 > pc_43_1,
         pc_43 < pc_43_Fence_4,
         pc_56 < pc_43_Fence_4))
 Not running blocking constraint generation because already unsat.
@@ -467,12 +466,12 @@ SAIS: And(Not(And(Not(pc_43_1 <= pc_43),
             Not(pc_56 <= pc_43_1),
             Not(pc_43 <= pc_43_Fence_4),
             Not(pc_56 <= pc_43_Fence_4))),
-    Not(And(Not(pc_43 <= pc_43_1),
-            Not(pc_56 <= pc_43_1),
-            Not(pc_43_Fence_4 <= pc_43),
-            Not(pc_43_Fence_4 <= pc_56))),
     Not(And(Not(pc_43_1 <= pc_43),
             Not(pc_43_1 <= pc_56),
+            Not(pc_43_Fence_4 <= pc_43),
+            Not(pc_43_Fence_4 <= pc_56))),
+    Not(And(Not(pc_43 <= pc_43_1),
+            Not(pc_56 <= pc_43_1),
             Not(pc_43_Fence_4 <= pc_43),
             Not(pc_43_Fence_4 <= pc_56))))
 Removing: pt_43 < pt_56
@@ -483,15 +482,11 @@ Before append: 208
 After append: 208
 The bug flag is: -1
 Did not continue for: 56
-The number of assertions: 817
+The number of assertions: 818
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_4 < pt_56)
-Num: 822
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
-208 ['43_1', 103, '0', -1, 1, 'dll_remove_start_150_x']
+208 [41, 101, "'0xd919e0'", "'0xd919e0'", 1, 'dll_remove_start_143']
 ####################################################################################
 Repairing for bug: pt_51 < 9999
 Before append: 208
@@ -505,11 +500,7 @@ The number of assertions: 815
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_51 < pt_52)
-Num: 820
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
-208 ['43_1', 103, '0', -1, 1, 'dll_remove_start_150_x']
+208 [41, 101, "'0xd919e0'", "'0xd919e0'", 1, 'dll_remove_start_143']
 ####################################################################################
 Repairing for bug: pt_52 < 9999
 Before append: 208
@@ -532,55 +523,128 @@ Repairing for bug: pt_56 < pt_57
 MPB Bug found: pt_56 < pt_57
 Before append: 210
 Fence found. 42_Fence_3
+Fence found. 41_Fence_2
 Fence found. 41_1
-Fence count: 2
+Fence count: 3
 After append: 210
 The bug flag is: 1
 Did not continue for: 56
 Did not continue for: 57
-The number of assertions: 823
-The number of blocking constraint will be:  4
-Blocking constraints: [[56, '42_Fence_3'], [57, '42_Fence_3'], [56, '41_1'], [57, '41_1']]
+The number of assertions: 825
+The number of blocking constraint will be:  6
+Blocking constraints: [[56, '42_Fence_3'], [57, '42_Fence_3'], [56, '41_Fence_2'], [57, '41_Fence_2'], [56, '41_1'], [57, '41_1']]
 Bug is: Not(pt_56 < pt_57)
-Num: 830
+Num: 832
 ITERATION:  1
-Not(And(pc_56 < pc_42_Fence_3,
-        pc_57 < pc_42_Fence_3,
+Not(And(pc_56 > pc_42_Fence_3,
+        pc_57 > pc_42_Fence_3,
+        pc_56 > pc_41_Fence_2,
+        pc_57 > pc_41_Fence_2,
         pc_56 > pc_41_1,
         pc_57 > pc_41_1))
-Num: 831
+Num: 833
 ITERATION:  2
 Not(And(pc_56 < pc_42_Fence_3,
         pc_57 < pc_42_Fence_3,
-        pc_56 < pc_41_1,
-        pc_57 < pc_41_1))
-Num: 832
+        pc_56 > pc_41_Fence_2,
+        pc_57 > pc_41_Fence_2,
+        pc_56 > pc_41_1,
+        pc_57 > pc_41_1))
+Num: 834
 ITERATION:  3
 Not(And(pc_56 > pc_42_Fence_3,
         pc_57 > pc_42_Fence_3,
-        pc_56 < pc_41_1,
-        pc_57 < pc_41_1))
-Num: 833
+        pc_56 < pc_41_Fence_2,
+        pc_57 < pc_41_Fence_2,
+        pc_56 > pc_41_1,
+        pc_57 > pc_41_1))
+Num: 835
 ITERATION:  4
 Not(And(pc_56 > pc_42_Fence_3,
         pc_57 > pc_42_Fence_3,
+        pc_56 < pc_41_Fence_2,
+        pc_57 < pc_41_Fence_2,
+        pc_56 < pc_41_1,
+        pc_57 < pc_41_1))
+Num: 836
+ITERATION:  5
+Not(And(pc_56 > pc_42_Fence_3,
+        pc_57 > pc_42_Fence_3,
+        pc_56 > pc_41_Fence_2,
+        pc_57 > pc_41_Fence_2,
+        pc_56 < pc_41_1,
+        pc_57 < pc_41_1))
+Num: 837
+ITERATION:  6
+Not(And(pc_56 < pc_42_Fence_3,
+        pc_57 < pc_42_Fence_3,
+        pc_56 < pc_41_Fence_2,
+        pc_57 < pc_41_Fence_2,
+        pc_56 < pc_41_1,
+        pc_57 < pc_41_1))
+Num: 838
+ITERATION:  7
+Not(And(pc_56 < pc_42_Fence_3,
+        pc_57 < pc_42_Fence_3,
+        pc_56 > pc_41_Fence_2,
+        pc_57 > pc_41_Fence_2,
+        pc_56 < pc_41_1,
+        pc_57 < pc_41_1))
+Num: 839
+ITERATION:  8
+Not(And(pc_56 < pc_42_Fence_3,
+        pc_57 < pc_42_Fence_3,
+        pc_56 < pc_41_Fence_2,
+        pc_57 < pc_41_Fence_2,
         pc_56 > pc_41_1,
         pc_57 > pc_41_1))
 Not running blocking constraint generation because already unsat.
-SAIS: And(Not(And(Not(pc_42_Fence_3 <= pc_56),
-            Not(pc_42_Fence_3 <= pc_57),
+SAIS: And(Not(And(Not(pc_56 <= pc_42_Fence_3),
+            Not(pc_57 <= pc_42_Fence_3),
+            Not(pc_56 <= pc_41_Fence_2),
+            Not(pc_57 <= pc_41_Fence_2),
             Not(pc_56 <= pc_41_1),
             Not(pc_57 <= pc_41_1))),
     Not(And(Not(pc_42_Fence_3 <= pc_56),
             Not(pc_42_Fence_3 <= pc_57),
+            Not(pc_56 <= pc_41_Fence_2),
+            Not(pc_57 <= pc_41_Fence_2),
+            Not(pc_56 <= pc_41_1),
+            Not(pc_57 <= pc_41_1))),
+    Not(And(Not(pc_56 <= pc_42_Fence_3),
+            Not(pc_57 <= pc_42_Fence_3),
+            Not(pc_41_Fence_2 <= pc_56),
+            Not(pc_41_Fence_2 <= pc_57),
+            Not(pc_56 <= pc_41_1),
+            Not(pc_57 <= pc_41_1))),
+    Not(And(Not(pc_56 <= pc_42_Fence_3),
+            Not(pc_57 <= pc_42_Fence_3),
+            Not(pc_41_Fence_2 <= pc_56),
+            Not(pc_41_Fence_2 <= pc_57),
             Not(pc_41_1 <= pc_56),
             Not(pc_41_1 <= pc_57))),
     Not(And(Not(pc_56 <= pc_42_Fence_3),
             Not(pc_57 <= pc_42_Fence_3),
+            Not(pc_56 <= pc_41_Fence_2),
+            Not(pc_57 <= pc_41_Fence_2),
             Not(pc_41_1 <= pc_56),
             Not(pc_41_1 <= pc_57))),
-    Not(And(Not(pc_56 <= pc_42_Fence_3),
-            Not(pc_57 <= pc_42_Fence_3),
+    Not(And(Not(pc_42_Fence_3 <= pc_56),
+            Not(pc_42_Fence_3 <= pc_57),
+            Not(pc_41_Fence_2 <= pc_56),
+            Not(pc_41_Fence_2 <= pc_57),
+            Not(pc_41_1 <= pc_56),
+            Not(pc_41_1 <= pc_57))),
+    Not(And(Not(pc_42_Fence_3 <= pc_56),
+            Not(pc_42_Fence_3 <= pc_57),
+            Not(pc_56 <= pc_41_Fence_2),
+            Not(pc_57 <= pc_41_Fence_2),
+            Not(pc_41_1 <= pc_56),
+            Not(pc_41_1 <= pc_57))),
+    Not(And(Not(pc_42_Fence_3 <= pc_56),
+            Not(pc_42_Fence_3 <= pc_57),
+            Not(pc_41_Fence_2 <= pc_56),
+            Not(pc_41_Fence_2 <= pc_57),
             Not(pc_56 <= pc_41_1),
             Not(pc_57 <= pc_41_1))))
 Removing: pt_56 < pt_57
@@ -601,7 +665,7 @@ Before append: 211
 Repairing for bug: pt_481 < 9999
 Before append: 211
 ####################################################################################
-Time taken to repair thread  1 :  14.862768173217773  seconds.
+Time taken to repair thread  1 :  10.525256872177124  seconds.
 ################################################################################################
 [44, 101, "'0xd91ad0'", "'0xd919e0'", 2, 'dll_remove_start_143']
 ################################################################################################
@@ -619,10 +683,6 @@ The number of assertions: 799
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_441)
-Num: 801
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 200 [44, 101, "'0xd91ad0'", "'0xd919e0'", 2, 'dll_remove_start_143']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
@@ -637,10 +697,6 @@ The number of assertions: 799
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < pt_4)
-Num: 801
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 200 [44, 101, "'0xd91ad0'", "'0xd919e0'", 2, 'dll_remove_start_143']
 ####################################################################################
 Repairing for bug: pt_4 < 9999
@@ -658,10 +714,6 @@ The number of assertions: 799
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_41 < pt_55)
-Num: 801
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 200 [44, 101, "'0xd91ad0'", "'0xd919e0'", 2, 'dll_remove_start_143']
 ####################################################################################
 Repairing for bug: pt_42 < 9999
@@ -676,10 +728,6 @@ The number of assertions: 799
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_42 < pt_43)
-Num: 801
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 200 [44, 101, "'0xd91ad0'", "'0xd919e0'", 2, 'dll_remove_start_143']
 ####################################################################################
 Repairing for bug: pt_43 < 9999
@@ -694,10 +742,6 @@ The number of assertions: 799
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_43 < pt_56)
-Num: 801
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 200 [44, 101, "'0xd91ad0'", "'0xd919e0'", 2, 'dll_remove_start_143']
 ####################################################################################
 Repairing for bug: pt_4 < pt_56
@@ -709,10 +753,6 @@ The number of assertions: 799
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_4 < pt_56)
-Num: 801
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 200 [44, 101, "'0xd91ad0'", "'0xd919e0'", 2, 'dll_remove_start_143']
 ####################################################################################
 Repairing for bug: pt_51 < 9999
@@ -738,30 +778,34 @@ Blocking constraints: [[51, '51_1'], [52, '51_1'], [51, '51_Fence_5'], [52, '51_
 Bug is: Not(pt_51 < pt_52)
 Num: 812
 ITERATION:  1
-Not(And(pc_51 < pc_51_1,
-        pc_52 < pc_51_1,
+Not(And(pc_51 > pc_51_1,
+        pc_52 > pc_51_1,
         pc_51 > pc_51_Fence_5,
         pc_52 > pc_51_Fence_5))
 Num: 813
 ITERATION:  2
 Not(And(pc_51 < pc_51_1,
         pc_52 < pc_51_1,
-        pc_51 < pc_51_Fence_5,
-        pc_52 < pc_51_Fence_5))
+        pc_51 > pc_51_Fence_5,
+        pc_52 > pc_51_Fence_5))
 Num: 814
 ITERATION:  3
-Not(And(pc_51 > pc_51_1,
-        pc_52 > pc_51_1,
+Not(And(pc_51 < pc_51_1,
+        pc_52 < pc_51_1,
         pc_51 < pc_51_Fence_5,
         pc_52 < pc_51_Fence_5))
 Num: 815
 ITERATION:  4
 Not(And(pc_51 > pc_51_1,
         pc_52 > pc_51_1,
-        pc_51 > pc_51_Fence_5,
-        pc_52 > pc_51_Fence_5))
+        pc_51 < pc_51_Fence_5,
+        pc_52 < pc_51_Fence_5))
 Not running blocking constraint generation because already unsat.
-SAIS: And(Not(And(Not(pc_51_1 <= pc_51),
+SAIS: And(Not(And(Not(pc_51 <= pc_51_1),
+            Not(pc_52 <= pc_51_1),
+            Not(pc_51 <= pc_51_Fence_5),
+            Not(pc_52 <= pc_51_Fence_5))),
+    Not(And(Not(pc_51_1 <= pc_51),
             Not(pc_51_1 <= pc_52),
             Not(pc_51 <= pc_51_Fence_5),
             Not(pc_52 <= pc_51_Fence_5))),
@@ -772,11 +816,7 @@ SAIS: And(Not(And(Not(pc_51_1 <= pc_51),
     Not(And(Not(pc_51 <= pc_51_1),
             Not(pc_52 <= pc_51_1),
             Not(pc_51_Fence_5 <= pc_51),
-            Not(pc_51_Fence_5 <= pc_52))),
-    Not(And(Not(pc_51 <= pc_51_1),
-            Not(pc_52 <= pc_51_1),
-            Not(pc_51 <= pc_51_Fence_5),
-            Not(pc_52 <= pc_51_Fence_5))))
+            Not(pc_51_Fence_5 <= pc_52))))
 Removing: pt_51 < pt_52
 ####################################################################################
 Repairing for bug: pt_52 < 9999
@@ -802,10 +842,6 @@ The number of assertions: 809
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_56 < pt_57)
-Num: 813
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 205 [44, 101, "'0xd91ad0'", "'0xd919e0'", 2, 'dll_remove_start_143']
 ####################################################################################
 Repairing for bug: pt_57 < 9999
@@ -820,9 +856,9 @@ Before append: 205
 Repairing for bug: pt_481 < 9999
 Before append: 205
 ####################################################################################
-Time taken to repair thread  2 :  5.215109825134277  seconds.
+Time taken to repair thread  2 :  3.6184167861938477  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.009136199951171875  seconds.
+Time taken to recombine individual threads:  0.006367206573486328  seconds.

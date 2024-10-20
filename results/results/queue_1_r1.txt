@@ -36,10 +36,6 @@ The number of assertions: 500
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_133)
-Num: 503
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 126 [2, 101, "'0x7f43b0002c80'", '-1', 0, 'enqueue_21']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
@@ -60,10 +56,6 @@ The number of assertions: 505
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < pt_134)
-Num: 509
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 128 [2, 101, "'0x7f43b0002c80'", '-1', 0, 'enqueue_21']
 ####################################################################################
 Repairing for bug: pt_6 < 9999
@@ -78,10 +70,6 @@ The number of assertions: 503
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_6 < pt_134)
-Num: 507
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 128 [2, 101, "'0x7f43b0002c80'", '-1', 0, 'enqueue_21']
 ####################################################################################
 Repairing for bug: pt_133 < 9999
@@ -90,7 +78,7 @@ Before append: 128
 Repairing for bug: pt_134 < 9999
 Before append: 128
 ####################################################################################
-Time taken to repair thread  0 :  0.8275570869445801  seconds.
+Time taken to repair thread  0 :  0.43752217292785645  seconds.
 ################################################################################################
 [4, 101, "'0x7f43a8000fe0'", '-1', 1, 'enqueue_21']
 ################################################################################################
@@ -109,10 +97,6 @@ The number of assertions: 499
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_2 < pt_133)
-Num: 501
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 125 [4, 101, "'0x7f43a8000fe0'", '-1', 1, 'enqueue_21']
 ####################################################################################
 Repairing for bug: pt_3 < 9999
@@ -128,10 +112,6 @@ The number of assertions: 499
 The number of blocking constraint will be:  0
 Blocking constraints: []
 Bug is: Not(pt_3 < pt_134)
-Num: 501
-ITERATION:  1
-Not(And)
-Not running blocking constraint generation because already unsat.
 125 [4, 101, "'0x7f43a8000fe0'", '-1', 1, 'enqueue_21']
 ####################################################################################
 Repairing for bug: pt_6 < 9999
@@ -157,10 +137,10 @@ Blocking constraints: [[6, '6_1'], [134, '6_1'], [6, '6_Fence_0'], [134, '6_Fenc
 Bug is: Not(pt_6 < pt_134)
 Num: 512
 ITERATION:  1
-Not(And(pc_6 < pc_6_1,
-        pc_134 < pc_6_1,
-        pc_6 < pc_6_Fence_0,
-        pc_134 < pc_6_Fence_0))
+Not(And(pc_6 > pc_6_1,
+        pc_134 > pc_6_1,
+        pc_6 > pc_6_Fence_0,
+        pc_134 > pc_6_Fence_0))
 Num: 513
 ITERATION:  2
 Not(And(pc_6 > pc_6_1,
@@ -169,33 +149,33 @@ Not(And(pc_6 > pc_6_1,
         pc_134 < pc_6_Fence_0))
 Num: 514
 ITERATION:  3
-Not(And(pc_6 > pc_6_1,
-        pc_134 > pc_6_1,
+Not(And(pc_6 < pc_6_1,
+        pc_134 < pc_6_1,
         pc_6 > pc_6_Fence_0,
         pc_134 > pc_6_Fence_0))
 Num: 515
 ITERATION:  4
 Not(And(pc_6 < pc_6_1,
         pc_134 < pc_6_1,
-        pc_6 > pc_6_Fence_0,
-        pc_134 > pc_6_Fence_0))
+        pc_6 < pc_6_Fence_0,
+        pc_134 < pc_6_Fence_0))
 Not running blocking constraint generation because already unsat.
-SAIS: And(Not(And(Not(pc_6_1 <= pc_6),
+SAIS: And(Not(And(Not(pc_6 <= pc_6_1),
+            Not(pc_134 <= pc_6_1),
+            Not(pc_6 <= pc_6_Fence_0),
+            Not(pc_134 <= pc_6_Fence_0))),
+    Not(And(Not(pc_6 <= pc_6_1),
+            Not(pc_134 <= pc_6_1),
+            Not(pc_6_Fence_0 <= pc_6),
+            Not(pc_6_Fence_0 <= pc_134))),
+    Not(And(Not(pc_6_1 <= pc_6),
             Not(pc_6_1 <= pc_134),
-            Not(pc_6_Fence_0 <= pc_6),
-            Not(pc_6_Fence_0 <= pc_134))),
-    Not(And(Not(pc_6 <= pc_6_1),
-            Not(pc_134 <= pc_6_1),
-            Not(pc_6_Fence_0 <= pc_6),
-            Not(pc_6_Fence_0 <= pc_134))),
-    Not(And(Not(pc_6 <= pc_6_1),
-            Not(pc_134 <= pc_6_1),
             Not(pc_6 <= pc_6_Fence_0),
             Not(pc_134 <= pc_6_Fence_0))),
     Not(And(Not(pc_6_1 <= pc_6),
             Not(pc_6_1 <= pc_134),
-            Not(pc_6 <= pc_6_Fence_0),
-            Not(pc_134 <= pc_6_Fence_0))))
+            Not(pc_6_Fence_0 <= pc_6),
+            Not(pc_6_Fence_0 <= pc_134))))
 Removing: pt_6 < pt_134
 ####################################################################################
 Repairing for bug: pt_133 < 9999
@@ -214,9 +194,9 @@ Constraint added: pc_134 == pc_134_0 - 1
 Adding: ['134_1', 103, '0', -1, 1, 'dequeue_46_x']
 Removing: pt_134 < 9999
 ####################################################################################
-Time taken to repair thread  1 :  2.6285691261291504  seconds.
+Time taken to repair thread  1 :  1.2616350650787354  seconds.
 ################################################################################################
 Beginning the recombination.
 0
 0
-Time taken to recombine individual threads:  0.001706838607788086  seconds.
+Time taken to recombine individual threads:  0.0014386177062988281  seconds.

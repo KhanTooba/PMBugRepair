@@ -14,7 +14,7 @@ LENGTH OF THREAD:  0  :  108
 Ranges: 0 209
 Values to be assigned in that range: 208
 Completed building constraints.
-Number of constraints:  923
+Number of constraints:  922
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_2 < pc_110, pt_2 > pc_110)
 -1 -1
@@ -24,7 +24,7 @@ Found insertion point for first lock:  0 1 [2, 101, '0x7fd170002020', '-1', '0',
 Adding fence because new scope started.
 Adding unlock: ['UnLock_0', 106, 'M1', -1, '0', 'push_50_x']
 Adding very restricted lock for read. 110
-Time taken:  0.132462739944458  seconds.
+Time taken:  0.06502771377563477  seconds.
 
 ############################################################################
 
@@ -36,7 +36,7 @@ LENGTH OF THREAD:  0  :  111
 Ranges: 0 214
 Values to be assigned in that range: 213
 Completed building constraints.
-Number of constraints:  947
+Number of constraints:  946
 A violation is found. Let us see which bug was being violated in this trace.
 Now, we will repair:  And(pc_5 < pc_111, pt_5 > pc_111)
 -1 -1
@@ -46,7 +46,7 @@ Found insertion point for first lock:  6 7 [5, 101, '0x7fd170002028', '-1', '0',
 Adding fence because new scope started.
 Adding unlock: ['UnLock_2', 106, 'M1', -1, '0', 'push_53_x']
 Adding very restricted lock for read. 111
-Time taken:  0.2165510654449463  seconds.
+Time taken:  0.06499671936035156  seconds.
 
 ############################################################################
 
@@ -58,9 +58,9 @@ LENGTH OF THREAD:  0  :  114
 Ranges: 0 219
 Values to be assigned in that range: 218
 Completed building constraints.
-Number of constraints:  979
+Number of constraints:  978
 Model was unsat. This means all bugs have been repaired.
-Time taken:  0.10559535026550293  seconds.
+Time taken:  0.06575942039489746  seconds.
 
 ############################################################################
 

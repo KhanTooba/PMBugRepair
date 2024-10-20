@@ -451,7 +451,7 @@ bool clht_put(clht_t* h, clht_addr_t key, clht_val_t val)
             }
 
             LOCK_RLS(lock);
-            if (1)//unlikely(resize))
+            if (unlikely(resize))
             {
                 /* ht_resize_pes(h, 1); */
 				DEBUG_PRINT("Calling ht_status for key %ld\n", (long)key);
