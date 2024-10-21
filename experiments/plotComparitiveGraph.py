@@ -19,6 +19,7 @@ def readTimes():
     return numThreads, step1, step4
 
 def plotLinearGraph(x, y1, y2):
+    plt.figure(figsize=(11, 6))
     plt.plot(x, y1, label='Time taken to repair DURA and MPB bugs', color='blue') 
     plt.plot(x, y2, label='Time taken to repair MPA bugs', color='green') 
 
@@ -35,6 +36,8 @@ def plotBarGraph(x, y1, y2):
     y1 = np.array(y1)
     y2 = np.array(y2)
     bar_width = 0.35
+
+    plt.figure(figsize=(11, 6))
     plt.bar(x - bar_width/2, y1, width=bar_width, label='Time taken to repair DURA and MPB bugs', color='blue')
     plt.bar(x + bar_width/2, y2, width=bar_width, label='Time taken to repair MPA bugs', color='green')  
 
