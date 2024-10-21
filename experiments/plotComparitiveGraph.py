@@ -10,7 +10,7 @@ def count_lines(path, filesList):
     return line_counts
 
 def readTimes():
-    numThreads = [i for i in range(2, 33, 2)]
+    numThreads = [i for i in range(2, 65, 2)]
     step1 = []
     step4 = []
     for line in open("ComparitiveResults.txt"):
@@ -19,8 +19,8 @@ def readTimes():
     return numThreads, step1, step4
 
 def plotLinearGraph(x, y1, y2):
-    plt.plot(x, y1, label='Time taken to repair DURA and MPB bugs', color='blue', marker='o')  # First series
-    plt.plot(x, y2, label='Time taken to repair MPA bugs', color='green', marker='x')  # Second series
+    plt.plot(x, y1, label='Time taken to repair DURA and MPB bugs', color='blue') 
+    plt.plot(x, y2, label='Time taken to repair MPA bugs', color='green') 
 
     plt.xlabel('Number of threads')
     plt.ylabel('Time taken to repair bugs')
@@ -50,7 +50,7 @@ def plotBarGraph(x, y1, y2):
 
 if __name__ == "__main__":
     path = "fastFair/comparitive/"
-    fileNames = ["fastFair_"+str(i)+".txt" for i in range(2, 33, 2)]
+    fileNames = ["fastFair_"+str(i)+".txt" for i in range(2, 65, 2)]
     locs = count_lines(path, fileNames)
     numThreads, step1, step4 = readTimes()
     plotLinearGraph(numThreads, step1, step4)
