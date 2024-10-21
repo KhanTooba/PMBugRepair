@@ -1,7 +1,7 @@
 mv Report.txt Report_original.txt
 touch ComparitiveResults.txt
 
-for i in $(seq 2 2 32); do
+for i in $(seq 2 2 65); do
     input_file="../experiments/fastFair/comparitive/fastFair_$i.txt"
     
     if [ -f "$input_file" ]; then
