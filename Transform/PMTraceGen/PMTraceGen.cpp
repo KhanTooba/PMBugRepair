@@ -368,8 +368,9 @@ namespace pminv {
 
         if (CallInst *callInst = dyn_cast<CallInst>(&I)) {
 	        if (const Function *calledFunc = callInst->getCalledFunction()) {
-            if (calledFunc->getName().find("clflush")!=std::string::npos || 
-                calledFunc->getName().find("simuFlushOpt")!=std::string::npos) {
+            if ((calledFunc->getName().find("clflush")!=std::string::npos || 
+                calledFunc->getName().find("simuFlushOpt")!=std::string::npos) && 
+		calledFunc->getName().find("clflush_new_hashtable")==std::string::npos) {
 
                 Value *argData = callInst->getArgOperand(0); 
                 Value *argLen = callInst->getArgOperand(1); 
