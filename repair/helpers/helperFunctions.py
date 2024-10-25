@@ -139,7 +139,7 @@ def readScopes(path):
         elif "MPA" in str(line):
             bug = str(line).replace("MPA: [pc_", "").replace("]", "").split(";")
             b1 = bug[0].split("_")[:-1]
-            b2 = bug[1].split("_")[1:-1]
+            b2 = bug[1].split("_")[0:-1]
             bugs.add('_'.join(str(x) for x in b1).strip())
             bugs.add('_'.join(str(x) for x in b2).strip())
         
@@ -149,8 +149,6 @@ def getRelevantTrace(trace, fileName):
     inputPath = "../results/bugs/" 
     bugs = list(readScopes(inputPath+fileName+"_1.txt"))
     bugs.extend(list(readScopes(inputPath+fileName+"_2.txt")))
-    # for bug in set(bugs):
-    #     print(bug)
     finalTrace = []
     for t in trace:
         lineDetails = t[-1].split("_")[:-1]
@@ -158,6 +156,11 @@ def getRelevantTrace(trace, fileName):
         if scope in bugs:
             finalTrace.append(t)
     
-    # for t in finalTrace:
-    #     print(t)
     return finalTrace
+
+def removeParentThread(trace):
+    traceToreturn = []
+    for t in trace:
+        if t[-2]!=0:
+            traceToreturn.append(t)
+    return traceToreturn

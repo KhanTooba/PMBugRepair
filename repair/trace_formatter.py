@@ -188,6 +188,10 @@ if __name__ == "__main__":
     trace = format(trace, threads, dependencies, loads)
     trace = removeDuplicates(trace)
     file = open(outputFileName, 'w')
+
+    print(trace[0])
+    trace = removeParentThread(trace) #Activated only for a few benchmarks like p-clht_old
+
     file.write("Threads: ["+str(threads)+"]\n")
     for t in trace:
         file.write(str(t)+"\n")

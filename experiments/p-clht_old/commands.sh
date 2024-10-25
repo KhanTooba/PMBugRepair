@@ -23,6 +23,7 @@ rm *.bc *.o *.ll
 
 ./example_executable 2 2
 rm /mnt/pmfs/pool9
+mv output.txt P-CLHT_output.txt
 #python3 cleanTrace.py output.txt cleanOutput.txt
 #cp cleanOutput.txt ../../results/outputs/P-CLHT_output.txt
 
