@@ -21,8 +21,8 @@ clang++-10 -g -O3 example_trace.bc clht_gc_trace.bc clht_lb_res_trace.bc sspfd.o
 
 rm *.bc *.o *.ll
 
-./example_executable 10 2
-
-python3 cleanTrace.py output.txt cleanOutput.txt
+./example_executable 2 2
+rm /mnt/pmfs/pool9
+#python3 cleanTrace.py output.txt cleanOutput.txt
 #cp cleanOutput.txt ../../results/outputs/P-CLHT_output.txt
 
