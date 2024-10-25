@@ -782,6 +782,8 @@ ht_resize_pes(clht_t* h, int is_increase, int by)
 
 	// atomically swap the root pointer
     // Presume the head of "h" contains the pointer (offset) to the hash table
+    uint64_t* h_value = h;           // Explicit load to force tracing
+    uint64_t ht_new_value = pmemobj_oid(ht_new).off;
     SWAP_U64((uint64_t*) h, (uint64_t) pmemobj_oid(ht_new).off);
     clflush((char *)h, sizeof(uint64_t), false, true);
 
