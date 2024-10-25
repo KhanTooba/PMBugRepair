@@ -446,6 +446,7 @@ def addConstraints(inputFileName, name):
         print("Working on Thread:", i, "(Length of thread : ", len(indiThread), "): ")
         transactCons = getTransactionConstraints(indiThread)
         threadreturned, t1, t2, bugs = repairThread(indiThread, bugs, transactCons)
+        print(len(threadreturned))
 
         repaired_threads.append(threadreturned)
         timeDura += t1
@@ -462,7 +463,7 @@ def addConstraints(inputFileName, name):
 
     print("Beginning the recombination.")
     intermediateTrace = []
-    for i in range(num_threads):
+    for i in range(len(repaired_threads)):
         for stmt in repaired_threads[i]:
             intermediateTrace.append(stmt)
     
@@ -470,7 +471,6 @@ def addConstraints(inputFileName, name):
     for t in intermediateTrace:
         if t[1]==201:
             c1 += 1
-    print(c1)
     recombinedTrace = []
 
     for i in range(len(intermediateTrace)):
@@ -491,7 +491,6 @@ def addConstraints(inputFileName, name):
     for t in recombinedTrace:
         if t[1]==201:
             c1 += 1
-    print(c1)
     time3 = time.time()
     print("Time taken to recombine individual threads: ", (time3-time2), " seconds.")
     return recombinedTrace, len(duras), len(mpbs), threadInfo, timeDura, timeMPB, totalMPB, totalDURA, failedMPB, failedDURA
