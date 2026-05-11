@@ -1,6 +1,6 @@
 # PMBugRepair
-
-## Ongoing work: Baseline version.
+# Paper: Symbolic Analysis for Repairing Persistent Memory Bugs in Concurrent Programs
+## [To Appear in: SANER 2026]
 
 To build the trace generator llvm opt pass: 
 ```
@@ -17,7 +17,7 @@ To generate traces for all benchmarks in the ThreadTrove folder:
 To generate traces for all RealWorld benchmarks (FastFair, and CCEH): 
 ```
 # Generate traces (Results will be saved in PMBugRepair/results/bcFiles/outputs): 
-    make -f realWorld -B
+    sudo sh makeRealWorld.sh
 ```
 
 To execute step1 (repair individual traces) and step 4 (repair MPA bugs) for all benchmarks in the ThreadTrove folder and realWorld benchmarks: 
@@ -35,13 +35,7 @@ Final Report will be saved in repair/Report.txt. This report contains stats for 
     python3 convertResultsToCsv.py
 ```
 
-## Updates:
-1. DURA, MPB and MPB bug repair has been added.
-2. Results verified on programs under ThreadTrove folder, CCEH, and FAST FAIR benchmark.
-3. Results pending for the P-CLHT, Memcached, and Clevel-hashing benchmarks.
-
-
-## Experimental Setup
+## FAQs (May help in Setting up benchmarks)
 ### 1. Memcached: [memcached_pmem](https://github.com/lenovo/memcached-pmem)
 #### Steps taken to install:
 ```
