@@ -1,5 +1,4 @@
-# PMBugRepair
-# Paper: Symbolic Analysis for Repairing Persistent Memory Bugs in Concurrent Programs
+# Symbolic Analysis for Repairing Persistent Memory Bugs in Concurrent Programs
 ## [To Appear in: SANER 2026]
 
 To build the trace generator llvm opt pass: 
